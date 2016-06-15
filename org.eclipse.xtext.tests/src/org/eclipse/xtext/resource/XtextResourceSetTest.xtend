@@ -135,7 +135,7 @@ abstract class AbstractXtextResourceSetTest extends AbstractResourceSetTest {
 		resource.URI = URI::createURI('foo')
 		
 		rs.resources += newArrayList(resource)
-		
+		System.err.println(rs.URIResourceMap)
 		assertEquals(1, rs.URIResourceMap.size)
 		
 		rs.resources.clear
@@ -306,6 +306,7 @@ class ResourceSetTest extends AbstractResourceSetTest {
 	
 }
 
+//UI Test?
 class XtextResourceSetTest extends AbstractXtextResourceSetTest {
 	
 	override protected createEmptyResourceSet() {
