@@ -30,6 +30,8 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.URIHandlerImpl;
 import org.eclipse.xtext.resource.XtextResourceSet;
+import org.eclipse.xtext.testing.GlobalRegistries;
+import org.eclipse.xtext.testing.GlobalRegistries.GlobalStateMemento;
 import org.eclipse.xtext.util.EmfFormatter;
 import org.eclipse.xtext.xbase.lib.Functions;
 import org.eclipse.xtext.xbase.lib.ListExtensions;
@@ -44,11 +46,17 @@ import com.google.common.collect.Lists;
  * @author Sebastian Zarnekow - Initial contribution and API
  */
 public abstract class AbstractPortableURIsTest extends URIHandlerImpl.PlatformSchemeAware {
+	
+	static {
+		GlobalRegistries.initializeDefaults();
+	}
 
 	private ResourceSet resourceSet;
+	private GlobalStateMemento globalStateMemento;
 
 	@Before
 	public void setUp() throws Exception {
+		globalStateMemento = GlobalRegistries.makeCopyOfGlobalState();
 		resourceSet = new XtextResourceSet();
 		resourceSet.getPackageRegistry().put(EcorePackage.eNS_URI, EcorePackage.eINSTANCE);
 		resourceSet.getPackageRegistry().put(GenModelPackage.eNS_URI, GenModelPackage.eINSTANCE);
@@ -61,6 +69,7 @@ public abstract class AbstractPortableURIsTest extends URIHandlerImpl.PlatformSc
 	
 	@After
 	public void tearDown() {
+		globalStateMemento.restoreGlobalState();
 		resourceSet = null;
 	}
 	
