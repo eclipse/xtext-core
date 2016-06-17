@@ -8,6 +8,8 @@ node {
 		stage 'Build'
 		sh "./gradlew build createLocalMavenRepo"
 		archive 'build/maven-repository/**/*.*'
+
+		step([$class: 'JUnitResultArchiver', testResults: '**/build/test-results/*.xml'])
 		
 		slackSend "Build Succeeded - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 		
