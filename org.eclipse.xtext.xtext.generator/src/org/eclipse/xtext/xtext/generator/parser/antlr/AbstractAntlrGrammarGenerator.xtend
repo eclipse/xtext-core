@@ -286,7 +286,7 @@ abstract class AbstractAntlrGrammarGenerator {
 			«IF it instanceof ParserRule && originalElement.datatypeRule»
 				«dataTypeEbnf(alternatives, true)»
 			«ELSE»
-				«ebnf(alternatives, options, true)»
+				«ebnf(alternatives, options, true, true)»
 			«ENDIF»
 		;
 		«compileFinally(options)»
@@ -300,14 +300,16 @@ abstract class AbstractAntlrGrammarGenerator {
 		''
 	}
 		
-	protected def String ebnf(AbstractElement it, AntlrOptions options, boolean supportActions) '''
-		«IF mustBeParenthesized»(
-			«ebnfPredicate(options)»«ebnf2(options, supportActions)»
-		)«ELSE»«ebnf2(options, supportActions)»«ENDIF»«cardinality»
+	protected def String ebnf(AbstractElement it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) '''
+		«IF mustBeParenthesized && avoidParentheses && cardinality === null»
+			«ebnfPredicate(options)»«ebnf2(options, supportActions, false)»
+		«ELSEIF mustBeParenthesized»(
+			«ebnfPredicate(options)»«ebnf2(options, supportActions, false)»
+		)«ELSE»«ebnf2(options, supportActions, avoidParentheses && cardinality == null)»«ENDIF»«cardinality»
 	'''
 	
 	protected def String ebnfPredicate(AbstractElement it, AntlrOptions options) '''
-		«IF predicated() || firstSetPredicated»(«IF predicated()»«predicatedElement.ebnf2(options, false)»«ELSE»«FOR e:firstSet SEPARATOR ' | '»«e.ebnf2(options, false)»«ENDFOR»«ENDIF»)=>«ENDIF»
+		«IF predicated() || firstSetPredicated»(«IF predicated()»«predicatedElement.ebnf2(options, false, true)»«ELSE»«val firstSet = firstSet»«FOR e:firstSet SEPARATOR ' | '»«e.ebnf2(options, false, firstSet.size === 1)»«ENDFOR»«ENDIF»)=>«ENDIF»
 	'''
 	
 	protected def String dataTypeEbnf(AbstractElement it, boolean supportActions) '''
@@ -323,15 +325,23 @@ abstract class AbstractAntlrGrammarGenerator {
 	protected dispatch def String dataTypeEbnf2(AbstractElement it, boolean supportActions) '''ERROR «eClass.name» not matched'''
 
 	protected dispatch def String dataTypeEbnf2(Alternatives it, boolean supportActions) '''
-		«FOR e:elements SEPARATOR '\n    |'»«e.dataTypeEbnf(supportActions)»«ENDFOR»
+		«FOR e:elements SEPARATOR '\n    |'»
+			«e.dataTypeEbnf(supportActions)»
+		«ENDFOR»
 	'''
 
 	protected dispatch def String dataTypeEbnf2(Group it, boolean supportActions) '''
-		«FOR e:elements»«e.dataTypeEbnf(supportActions)»«ENDFOR»
+		«FOR e:elements»
+			«e.dataTypeEbnf(supportActions)»
+		«ENDFOR»
 	'''
 	
 	protected dispatch def String dataTypeEbnf2(UnorderedGroup it, boolean supportActions) '''
-		(«FOR e:elements SEPARATOR '\n    |'»«e.dataTypeEbnf2(supportActions)»«ENDFOR»)*
+		(
+			«FOR e:elements SEPARATOR '\n    |'»
+				«e.dataTypeEbnf2(supportActions)»
+			«ENDFOR»
+		)*
 	'''
 	
 	protected dispatch def String dataTypeEbnf2(Keyword it, boolean supportActions) {
@@ -342,37 +352,45 @@ abstract class AbstractAntlrGrammarGenerator {
 		rule.ruleName
 	}
 	
-	protected dispatch def String ebnf2(AbstractElement it, AntlrOptions options, boolean supportActions) '''ERROR «eClass.name» not matched'''
+	protected dispatch def String ebnf2(AbstractElement it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) '''ERROR «eClass.name» not matched'''
 	
-	protected dispatch def String ebnf2(Alternatives it, AntlrOptions options, boolean supportActions) '''
-		«FOR element:elements SEPARATOR '\n    |'»«element.ebnf(options, supportActions)»«ENDFOR»
+	protected dispatch def String ebnf2(Alternatives it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) '''
+		«FOR element:elements SEPARATOR '\n    |'»
+			«element.ebnf(options, supportActions, false)»
+		«ENDFOR»
 	'''
 	
-	protected dispatch def String ebnf2(Group it, AntlrOptions options, boolean supportActions) '''
-		«FOR element:elements»«element.ebnf(options, supportActions)»«ENDFOR»
+	protected dispatch def String ebnf2(Group it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) '''
+		«FOR element:elements»
+			«element.ebnf(options, supportActions, avoidParentheses && elements.size === 1)»
+		«ENDFOR»
 	'''
 	
-	protected dispatch def String ebnf2(UnorderedGroup it, AntlrOptions options, boolean supportActions) '''
-		(«FOR element:elements SEPARATOR '\n    |'»«element.ebnf(options, supportActions)»«ENDFOR»)*
+	protected dispatch def String ebnf2(UnorderedGroup it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) '''
+		(
+			«FOR element:elements SEPARATOR '\n    |'»
+				«element.ebnf(options, supportActions, false)»
+			«ENDFOR»
+		)*
+	'''
+		
+	protected dispatch def String ebnf2(Assignment it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) '''
+		«terminal.assignmentEbnf(it, options, supportActions, avoidParentheses)»
 	'''
 	
-	protected dispatch def String ebnf2(Assignment it, AntlrOptions options, boolean supportActions) '''
-		«terminal.assignmentEbnf(it, options, supportActions)»
-	'''
-	
-	protected dispatch def String ebnf2(Action it, AntlrOptions options, boolean supportActions) {
+	protected dispatch def String ebnf2(Action it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		''
 	}
 	
-	protected dispatch def String ebnf2(Keyword it, AntlrOptions options, boolean supportActions) {
+	protected dispatch def String ebnf2(Keyword it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (combinedGrammar) "'" + value.toAntlrString + "'" else keywordHelper.getRuleName(value) 
 	}
 	
-	protected dispatch def String ebnf2(RuleCall it, AntlrOptions options, boolean supportActions) {
+	protected dispatch def String ebnf2(RuleCall it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		rule.ruleName
 	}
 	
-	protected dispatch def String ebnf2(EnumLiteralDeclaration it, AntlrOptions options, boolean supportActions) {
+	protected dispatch def String ebnf2(EnumLiteralDeclaration it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (combinedGrammar) "'" + literal.value.toAntlrString + "'" else keywordHelper.getRuleName(literal.value)
 	}
 	
@@ -381,7 +399,9 @@ abstract class AbstractAntlrGrammarGenerator {
 	}
 	
 	protected dispatch def String crossrefEbnf(Alternatives it, CrossReference ref, boolean supportActions) '''
-		«FOR element:elements SEPARATOR '\n    |'»«element.crossrefEbnf(ref, supportActions)»«ENDFOR»
+		«FOR element:elements SEPARATOR '\n    |'»
+			«element.crossrefEbnf(ref, supportActions)»
+		«ENDFOR»
 	'''
 	
 	protected dispatch def String crossrefEbnf(RuleCall it, CrossReference ref, boolean supportActions) {
@@ -405,23 +425,25 @@ abstract class AbstractAntlrGrammarGenerator {
 		}
 	}
 	
-	protected dispatch def String assignmentEbnf(Group it, Assignment assignment, AntlrOptions options, boolean supportActions) {
+	protected dispatch def String assignmentEbnf(Group it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		throw new IllegalStateException("assignmentEbnf is not supported for " + it)
 	}
 	
-	protected dispatch def String assignmentEbnf(Assignment it, Assignment assignment, AntlrOptions options, boolean supportActions) {
+	protected dispatch def String assignmentEbnf(Assignment it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		throw new IllegalStateException("assignmentEbnf is not supported for " + it)
 	}
 	
-	protected dispatch def String assignmentEbnf(Action it, Assignment assignment, AntlrOptions options, boolean supportActions) {
+	protected dispatch def String assignmentEbnf(Action it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		throw new IllegalStateException("assignmentEbnf is not supported for " + it)
 	}
 	
-	protected dispatch def String assignmentEbnf(Alternatives it, Assignment assignment, AntlrOptions options, boolean supportActions) '''
-		«FOR element:elements SEPARATOR '\n    |'»«element.assignmentEbnf(assignment, options, supportActions)»«ENDFOR»
+	protected dispatch def String assignmentEbnf(Alternatives it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) '''
+		«FOR element:elements SEPARATOR '\n    |'»
+			«element.assignmentEbnf(assignment, options, supportActions, false)»
+		«ENDFOR»
 	'''
 	
-	protected dispatch def String assignmentEbnf(RuleCall it, Assignment assignment, AntlrOptions options, boolean supportActions) {
+	protected dispatch def String assignmentEbnf(RuleCall it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		switch rule : rule {
 			EnumRule,
 			ParserRule,
@@ -432,12 +454,12 @@ abstract class AbstractAntlrGrammarGenerator {
 		}
 	}
 	
-	protected dispatch def String assignmentEbnf(CrossReference it, Assignment assignment, AntlrOptions options, boolean supportActions) {
+	protected dispatch def String assignmentEbnf(CrossReference it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		terminal.crossrefEbnf(it, supportActions)
 	}
 	
-	protected dispatch def String assignmentEbnf(AbstractElement it, Assignment assignment, AntlrOptions options, boolean supportActions) {
-		ebnf(options, supportActions)
+	protected dispatch def String assignmentEbnf(AbstractElement it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
+		ebnf(options, supportActions, avoidParentheses)
 	}
 	
 	def dispatch mustBeParenthesized(AbstractElement it) {

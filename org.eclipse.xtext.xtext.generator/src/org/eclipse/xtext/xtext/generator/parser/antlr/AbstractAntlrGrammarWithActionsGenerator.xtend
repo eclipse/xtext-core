@@ -132,14 +132,14 @@ abstract class AbstractAntlrGrammarWithActionsGenerator extends AbstractAntlrGra
 		}
 	}
 	
-	override protected _ebnf2(Group it, AntlrOptions options, boolean supportActions) {
+	override protected _ebnf2(Group it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (it.guardCondition === null)
-			super._ebnf2(it, options, supportActions)
+			super._ebnf2(it, options, supportActions, avoidParentheses)
 		else 
-			guardConditionToAntlr + "(" + super._ebnf2(it, options, supportActions) + ")"
+			guardConditionToAntlr + "(" + super._ebnf2(it, options, supportActions, true) + ")"
 	}
 	
-	override protected _ebnf2(UnorderedGroup it, AntlrOptions options, boolean supportActions) {
+	override protected _ebnf2(UnorderedGroup it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (supportActions) {
 			val mandatoryContent = elements.filter[!optionalCardinality].size
 			'''
@@ -156,7 +156,7 @@ abstract class AbstractAntlrGrammarWithActionsGenerator extends AbstractAntlrGra
 										getUnorderedGroupHelper().select(grammarAccess.«(originalElement as AbstractElement).gaRuleElementAccessor», «element.key»);
 									}
 			«««	Predicate {true}=> helps to workaround an issue in the Antlr grammar processing
-									({true}?=>(«element.value.ebnf2(options, supportActions)»))«IF element.value.multipleCardinality»+«ENDIF»
+									({true}?=>(«element.value.ebnf2(options, supportActions, true)»))«IF element.value.multipleCardinality»+«ENDIF»
 									{ 
 										getUnorderedGroupHelper().returnFromSelection(grammarAccess.«(originalElement as AbstractElement).gaRuleElementAccessor»);
 									}
@@ -172,18 +172,22 @@ abstract class AbstractAntlrGrammarWithActionsGenerator extends AbstractAntlrGra
 					}
 				'''
 		} else {
-			super._ebnf2(it, options, supportActions)	
+			super._ebnf2(it, options, supportActions, avoidParentheses)	
 		}
 	}
 	
-	override protected _ebnf2(RuleCall it, AntlrOptions options, boolean supportActions) {
-		super._ebnf2(it, options, supportActions) + getArgumentList(isPassCurrentIntoFragment, !supportActions)
+	override protected _ebnf2(RuleCall it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
+		super._ebnf2(it, options, supportActions, false) + getArgumentList(isPassCurrentIntoFragment, !supportActions)
 	}
 	
-	protected dispatch override String ebnf2(Assignment it, AntlrOptions options, boolean supportActions) '''
-		(
-			«super._ebnf2(it, options, supportActions)»
-		)
+	protected dispatch override String ebnf2(Assignment it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) '''
+		«IF avoidParentheses»
+			«super._ebnf2(it, options, supportActions, true)»
+		«ELSE»
+			(
+				«super._ebnf2(it, options, supportActions, true)»
+			)
+		«ENDIF»
 	'''
 	
 	override protected _dataTypeEbnf2(RuleCall it, boolean supportActions) {
@@ -194,14 +198,18 @@ abstract class AbstractAntlrGrammarWithActionsGenerator extends AbstractAntlrGra
 		super.crossrefEbnf(it, call, ref, supportActions) + call.getArgumentList(isPassCurrentIntoFragment, !supportActions)
 	}
 	
-	override protected _assignmentEbnf(RuleCall it, Assignment assignment, AntlrOptions options, boolean supportActions) {
-		super._assignmentEbnf(it, assignment, options, supportActions) + it.getArgumentList(isPassCurrentIntoFragment, !supportActions)
+	override protected _assignmentEbnf(RuleCall it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
+		super._assignmentEbnf(it, assignment, options, supportActions, false) + it.getArgumentList(isPassCurrentIntoFragment, !supportActions)
 	}
 	
-	protected dispatch override String assignmentEbnf(Alternatives it, Assignment assignment, AntlrOptions options, boolean supportActions) '''
-		(
-			«super._assignmentEbnf(it, assignment, options, supportActions)»
-		)
+	protected dispatch override String assignmentEbnf(Alternatives it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) '''
+		«IF avoidParentheses»
+			«super._assignmentEbnf(it, assignment, options, supportActions, true)»
+		«ELSE»
+			(
+				«super._assignmentEbnf(it, assignment, options, supportActions, true)»
+			)
+		«ENDIF»
 	'''
 	
 	protected def isPassCurrentIntoFragment() {

@@ -19,12 +19,12 @@ import org.eclipse.xtext.xtext.generator.parser.antlr.AntlrOptions
 import org.junit.Test
 
 class AntlrGeneratorFragmentTest extends AbstractXtextTests {
-	
+
 	override void setUp() throws Exception {
 		super.setUp()
 		with(XtextStandaloneSetup)
 	}
-	
+
 	@Test def void testDebugGrammar_01() {
 		'''
 			grammar com.foo.bar 
@@ -53,7 +53,7 @@ class AntlrGeneratorFragmentTest extends AbstractXtextTests {
 			;
 		''')
 	}
-	
+
 	@Test def void testDebugGrammar_Bug482677() {
 		'''
 			grammar com.foo.bar 
@@ -68,21 +68,19 @@ class AntlrGeneratorFragmentTest extends AbstractXtextTests {
 			
 			// Rule MyRule
 			ruleMyRule:
+				('a' | 'b' | 'c')=>
 				(
-					('a' | 'b' | 'c')=>
-					(
-						'a'
-						    |
-						'b'
-						    |
-						'c'
-					)
-					'd'
+					'a'
+					    |
+					'b'
+					    |
+					'c'
 				)
+				'd'
 			;
 		''')
 	}
-	
+
 	@Test def void testDebugGrammar_Bug482677_02() {
 		'''
 			grammar com.foo.bar 
@@ -113,7 +111,171 @@ class AntlrGeneratorFragmentTest extends AbstractXtextTests {
 			;
 		''')
 	}
+
+	@Test def void testDebugGrammar_Bug329125a() {
+		'''
+			grammar org.xtext.example.mydsl.Reduced hidden(WHITESPACE)
+			
+			generate reduced "http://www.xtext.org/example/mydsl/Reduced"
+			import "http://www.eclipse.org/emf/2002/Ecore"
+			
+			Document:
+				content+=Text+;
+			
+			Text:
+				elements+=(EntityReference | PlainText)+;
+			
+			PlainText:
+				{PlainText}
+				(SEMICOLON | AMPERSAND | IDENTIFIER);
+			
+			EntityReference:
+				AMPERSAND entity=IDENTIFIER SEMICOLON;
+			
+			terminal WHITESPACE:
+				(' ' | '\t' | '\r' | '\n')+;
+			
+			terminal SEMICOLON:
+				';';
+			
+			terminal IDENTIFIER:
+				('A'..'Z' | 'a'..'z') ('A'..'Z' | 'a'..'z' | '0'..'9')*;
+			
+			terminal AMPERSAND:
+				'&';
+			
+			terminal ANY_OTHER: .;
+		'''.asserTranslatesToDebugGrammar('''
+			grammar DebugInternalReduced;
+			
+			// Rule Document
+			ruleDocument:
+				ruleText
+				+
+			;
+			
+			// Rule Text
+			ruleText:
+				(
+					ruleEntityReference
+					    |
+					rulePlainText
+				)+
+			;
+			
+			// Rule PlainText
+			rulePlainText:
+				(
+					RULE_SEMICOLON
+					    |
+					RULE_AMPERSAND
+					    |
+					RULE_IDENTIFIER
+				)
+			;
+			
+			// Rule EntityReference
+			ruleEntityReference:
+				RULE_AMPERSAND
+				RULE_IDENTIFIER
+				RULE_SEMICOLON
+			;
+			
+			RULE_WHITESPACE : (' '|'\t'|'\r'|'\n')+ {skip();};
+			
+			RULE_SEMICOLON : ';';
+			
+			RULE_IDENTIFIER : ('A'..'Z'|'a'..'z') ('A'..'Z'|'a'..'z'|'0'..'9')*;
+			
+			RULE_AMPERSAND : '&';
+			
+			RULE_ANY_OTHER : .;
+		''')
+	}
 	
+	
+	
+	@Test def void testDebugGrammar_Bug329125b() {
+		'''
+			grammar org.xtext.example.mydsl.Reduced hidden(WHITESPACE)
+			
+			generate reduced "http://www.xtext.org/example/mydsl/Reduced"
+			import "http://www.eclipse.org/emf/2002/Ecore"
+			
+			Document:
+				content+=Text+;
+			
+			Text:
+				elements+=(EntityReference | PlainText)+;
+			
+			PlainText:
+				{PlainText}
+				(SEMICOLON | AMPERSAND | IDENTIFIER);
+			
+			EntityReference:
+				AMPERSAND entity=IDENTIFIER SEMICOLON;
+			
+			terminal WHITESPACE:
+				(' ' | '\t' | '\r' | '\n')+;
+			
+			terminal SEMICOLON:
+				';';
+			
+			terminal IDENTIFIER:
+				('A'..'Z' | 'a'..'z') ('A'..'Z' | 'a'..'z' | '0'..'9')*;
+			
+			terminal AMPERSAND:
+				'&';
+			
+			terminal ANY_OTHER: .;
+		'''.asserTranslatesToDebugGrammar('''
+			grammar DebugInternalReduced;
+			
+			// Rule Document
+			ruleDocument:
+				ruleText
+				+
+			;
+			
+			// Rule Text
+			ruleText:
+				(
+					ruleEntityReference
+					    |
+					rulePlainText
+				)+
+			;
+			
+			// Rule PlainText
+			rulePlainText:
+				(
+					RULE_SEMICOLON
+					    |
+					RULE_AMPERSAND
+					    |
+					RULE_IDENTIFIER
+				)
+			;
+			
+			// Rule EntityReference
+			ruleEntityReference:
+				RULE_AMPERSAND
+				RULE_IDENTIFIER
+				RULE_SEMICOLON
+			;
+			
+			RULE_WHITESPACE : (' '|'\t'|'\r'|'\n')+ {skip();};
+			
+			RULE_SEMICOLON : ';';
+			
+			RULE_IDENTIFIER : ('A'..'Z'|'a'..'z') ('A'..'Z'|'a'..'z'|'0'..'9')*;
+			
+			RULE_AMPERSAND : '&';
+			
+			RULE_ANY_OTHER : .;
+		''')
+	}
+
 	protected def void asserTranslatesToDebugGrammar(CharSequence xtextGrammar, String expectedDebugGrammar) {
 		val grammar = super.getModel(xtextGrammar.toString) as Grammar
 		val injector = Guice.createInjector(new DefaultGeneratorModule)
@@ -122,21 +284,21 @@ class AntlrGeneratorFragmentTest extends AbstractXtextTests {
 		injector.getInstance(AntlrDebugGrammarGenerator).generate(grammar, options, inMem)
 		assertEquals(expectedDebugGrammar, inMem.allFiles.values.head.toString)
 	}
-	
+
 	static class InMemFSA extends InMemoryFileSystemAccess implements IXtextGeneratorFileSystemAccess {
-		
+
 		override getPath() {
 			"./"
 		}
-		
+
 		override isOverwrite() {
 			true
 		}
-		
+
 		override initialize(Injector injector) {
 			injector.injectMembers(this)
 		}
-		
+
 	}
-	
+
 }

@@ -165,9 +165,9 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 		}
 	}
 	
-	override protected _ebnf2(Action it, AntlrOptions options, boolean supportActions) {
+	override protected _ebnf2(Action it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (!supportActions)
-			return super._ebnf2(it, options, supportActions)
+			return super._ebnf2(it, options, supportActions, avoidParentheses)
 		else '''
 			«IF options.backtrack»
 			{
@@ -182,14 +182,14 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 		'''
 	}
 	
-	override protected _ebnf2(Keyword it, AntlrOptions options, boolean supportActions) {
+	override protected _ebnf2(Keyword it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (!supportActions)
-			return super._ebnf2(it, options, supportActions)
+			return super._ebnf2(it, options, supportActions, avoidParentheses)
 		else if(assigned) '''
 			{
 				«markLeaf»
 			}
-			«containingAssignment.localVar(it)»=«super._ebnf2(it, options, supportActions)»
+			«containingAssignment.localVar(it)»=«super._ebnf2(it, options, supportActions, false)»
 			{
 				«doneLeaf(containingAssignment.localVar(it))»
 			}
@@ -198,33 +198,33 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 			{
 				«markLeaf»
 			}
-			«localVar»=«super._ebnf2(it, options, supportActions)»
+			«localVar»=«super._ebnf2(it, options, supportActions, false)»
 			{
 				«doneLeaf(localVar)»
 			}
 		'''
 	}
 	
-	override protected _ebnf2(EnumLiteralDeclaration it, AntlrOptions options, boolean supportActions) {
+	override protected _ebnf2(EnumLiteralDeclaration it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (!supportActions)
-			return super._ebnf2(it, options, supportActions)
+			return super._ebnf2(it, options, supportActions, avoidParentheses)
 		else '''
 			{
 				«markLeaf»
 			}
-			«localVar»=«super._ebnf2(it, options, supportActions)»
+			«localVar»=«super._ebnf2(it, options, supportActions, false)»
 			{
 				«doneLeaf(localVar)»
 			}
 		'''
 	}
 	
-	override protected _ebnf2(RuleCall it, AntlrOptions options, boolean supportActions) {
+	override protected _ebnf2(RuleCall it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (supportActions) {
 			switch rule {
 				EnumRule case assigned,
 				ParserRule case assigned: 
-					super._ebnf2(it, options, supportActions)
+					super._ebnf2(it, options, supportActions, avoidParentheses)
 				EnumRule, 
 				ParserRule case rule.originalElement.datatypeRule: '''
 					«IF options.backtrack»
@@ -235,7 +235,7 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 					{
 						«markComposite»
 					}
-					«super._ebnf2(it, options, supportActions)»
+					«super._ebnf2(it, options, supportActions, false)»
 					{
 						«doneComposite»
 					}
@@ -255,7 +255,7 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 						«ENDIF»
 						«markComposite»
 					}
-					«localVar»=«super._ebnf2(it, options, supportActions)»
+					«localVar»=«super._ebnf2(it, options, supportActions, false)»
 					{
 						$current = $«localVar».current;
 						«doneComposite»
@@ -265,16 +265,16 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 					{
 						«markLeaf»
 					}
-					«localVar»=«super._ebnf2(it, options, supportActions)»
+					«localVar»=«super._ebnf2(it, options, supportActions, false)»
 					{
 						«doneLeaf(localVar)»
 					}
 				'''
 				default: 
-					super._ebnf2(it, options, supportActions)
+					super._ebnf2(it, options, supportActions, avoidParentheses)
 			}
 		} else {
-			super._ebnf2(it, options, supportActions)
+			super._ebnf2(it, options, supportActions, avoidParentheses)
 		}
 	}
 	
@@ -308,7 +308,7 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 		}
 	}
 	
-	override protected _assignmentEbnf(CrossReference it, Assignment assignment, AntlrOptions options, boolean supportActions) {
+	override protected _assignmentEbnf(CrossReference it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (supportActions) '''
 			«IF options.backtrack»
 			{
@@ -321,14 +321,14 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 					$current = true;
 				}
 			}
-			«super._assignmentEbnf(it, assignment, options, supportActions)»'''
+			«super._assignmentEbnf(it, assignment, options, supportActions, false)»'''
 		else
-		super._assignmentEbnf(it, assignment, options, supportActions)
+		super._assignmentEbnf(it, assignment, options, supportActions, avoidParentheses)
 	}
 	
-	override protected _assignmentEbnf(AbstractElement it, Assignment assignment, AntlrOptions options, boolean supportActions) {
+	override protected _assignmentEbnf(AbstractElement it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (supportActions) '''
-			«super._assignmentEbnf(it, assignment, options, supportActions)»
+			«super._assignmentEbnf(it, assignment, options, supportActions, false)»
 			{
 				if (!$current) {
 					«associateWithSemanticElement»
@@ -337,10 +337,10 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 			}
 		'''
 		else
-			super._assignmentEbnf(it, assignment, options, supportActions)
+			super._assignmentEbnf(it, assignment, options, supportActions, avoidParentheses)
 	}
 	
-	override protected _assignmentEbnf(RuleCall it, Assignment assignment, AntlrOptions options, boolean supportActions) {
+	override protected _assignmentEbnf(RuleCall it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (supportActions) {
 			switch rule {
 				EnumRule,
@@ -348,7 +348,7 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 					{
 						«markComposite»
 					}
-					«assignment.localVar(it)»=«super._assignmentEbnf(it, assignment, options, supportActions)»
+					«assignment.localVar(it)»=«super._assignmentEbnf(it, assignment, options, supportActions, false)»
 					{
 						«doneComposite»
 						if(!$current) {
@@ -361,7 +361,7 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 					{
 						«markLeaf»
 					}
-					«assignment.localVar(it)»=«super._assignmentEbnf(it, assignment, options, supportActions)»
+					«assignment.localVar(it)»=«super._assignmentEbnf(it, assignment, options, supportActions, false)»
 					{
 						if(!$current) {
 							«associateWithSemanticElement»
@@ -376,7 +376,7 @@ class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator 
 					throw new IllegalStateException("assignmentEbnf is not supported for " + it)
 			}
 		} else {
-			super._assignmentEbnf(it, assignment, options, supportActions)
+			super._assignmentEbnf(it, assignment, options, supportActions, avoidParentheses)
 		}
 	}
 	
