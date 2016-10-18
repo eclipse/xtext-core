@@ -1,5 +1,5 @@
 if (!hasProperty('upstreamBranch'))
-	ext.upstreamBranch = 'master'
+	ext.upstreamBranch = 'milestone_2.11.0.beta1'
 def jenkinsRepo = { jobName -> "http://services.typefox.io/open-source/jenkins/job/$jobName/lastStableBuild/artifact/build/maven-repository/" }
 def jenkinsPipelineRepo = { jobName -> "http://services.typefox.io/open-source/jenkins/job/$jobName/job/$upstreamBranch/lastStableBuild/artifact/build/maven-repository/" }
 
