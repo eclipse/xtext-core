@@ -27,7 +27,7 @@ import static org.hamcrest.CoreMatchers.*
 class LspExtensionTest extends AbstractTestLangLanguageServerTest {
 	
 	@Rule
-    public ErrorCollector collector = new ErrorCollector();
+	public ErrorCollector collector = new ErrorCollector();
 	
 	
 	@Test def void testExtension() {
@@ -53,8 +53,8 @@ class LspExtensionTest extends AbstractTestLangLanguageServerTest {
 			collector.checkThat(message, startsWith('Built '));
 			val builtResources = Splitter.on('Built ').omitEmptyStrings.split(message);
 			collector.checkThat(builtResources.size, is(1));
-			collector.checkThat(builtResources.head, endsWith('/org.eclipse.xtext.ide.tests/test-data/test-project/mydoc.testlang'))
-		]
+			collector.checkThat(builtResources.head, endsWith('/org.eclipse.xtext.ide.tests/test-data/test-project/mydoc.testlang'));
+		];
 	}
 	
 }
