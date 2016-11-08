@@ -7,9 +7,11 @@
  */
 package org.eclipse.xtext.ide.tests.server;
 
+import com.google.common.base.Splitter;
 import com.google.common.collect.Iterables;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 import org.eclipse.lsp4j.DidOpenTextDocumentParams;
 import org.eclipse.lsp4j.TextDocumentItem;
 import org.eclipse.lsp4j.jsonrpc.services.ServiceEndpoints;
@@ -23,14 +25,21 @@ import org.eclipse.xtext.xbase.lib.ListExtensions;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.Pair;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.Matcher;
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ErrorCollector;
 
 /**
  * @author efftinge - Initial contribution and API
  */
 @SuppressWarnings("all")
 public class LspExtensionTest extends AbstractTestLangLanguageServerTest {
+  @Rule
+  public ErrorCollector collector = new ErrorCollector();
+  
   @Test
   public void testExtension() {
     try {
@@ -66,26 +75,29 @@ public class LspExtensionTest extends AbstractTestLangLanguageServerTest {
       CompletableFuture<TestLangLSPExtension.TextOfLineResult> _textOfLine = ext.getTextOfLine(_doubleArrow_1);
       final TestLangLSPExtension.TextOfLineResult result = _textOfLine.get();
       Assert.assertEquals("baz test", result.text);
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("BuildNotification [");
-      _builder.newLine();
-      _builder.append("  ");
-      _builder.append("message = \"Built file:///Users/efftinge/Documents/Eclipse/xtext-master/git/xtext-core/org.eclipse.xtext.ide.tests/test-data/test-project/mydoc.testlang\"");
-      _builder.newLine();
-      _builder.append("],BuildNotification [");
-      _builder.newLine();
-      _builder.append("  ");
-      _builder.append("message = \"Built file:///Users/efftinge/Documents/Eclipse/xtext-master/git/xtext-core/org.eclipse.xtext.ide.tests/test-data/test-project/mydoc.testlang\"");
-      _builder.newLine();
-      _builder.append("]");
-      String _string = _builder.toString();
       final Function1<Pair<String, Object>, Object> _function_2 = (Pair<String, Object> it) -> {
         return it.getValue();
       };
       List<Object> _map = ListExtensions.<Pair<String, Object>, Object>map(this.notifications, _function_2);
       Iterable<TestLangLSPExtension.BuildNotification> _filter = Iterables.<TestLangLSPExtension.BuildNotification>filter(_map, TestLangLSPExtension.BuildNotification.class);
-      String _join = IterableExtensions.join(_filter, ",");
-      Assert.assertEquals(_string, _join);
+      final Function1<TestLangLSPExtension.BuildNotification, String> _function_3 = (TestLangLSPExtension.BuildNotification it) -> {
+        return it.message;
+      };
+      Iterable<String> _map_1 = IterableExtensions.<TestLangLSPExtension.BuildNotification, String>map(_filter, _function_3);
+      final Consumer<String> _function_4 = (String message) -> {
+        Matcher<String> _startsWith = CoreMatchers.startsWith("Built ");
+        this.collector.<String>checkThat(message, _startsWith);
+        Splitter _on = Splitter.on("Built ");
+        Splitter _omitEmptyStrings = _on.omitEmptyStrings();
+        final Iterable<String> builtResources = _omitEmptyStrings.split(message);
+        int _size = IterableExtensions.size(builtResources);
+        Matcher<Integer> _is = CoreMatchers.<Integer>is(Integer.valueOf(1));
+        this.collector.<Integer>checkThat(Integer.valueOf(_size), _is);
+        String _head = IterableExtensions.<String>head(builtResources);
+        Matcher<String> _endsWith = CoreMatchers.endsWith("/org.eclipse.xtext.ide.tests/test-data/test-project/mydoc.testlang");
+        this.collector.<String>checkThat(_head, _endsWith);
+      };
+      _map_1.forEach(_function_4);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
