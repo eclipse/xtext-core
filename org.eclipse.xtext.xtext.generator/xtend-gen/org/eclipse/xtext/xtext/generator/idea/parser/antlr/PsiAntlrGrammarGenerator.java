@@ -436,10 +436,10 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
   }
   
   @Override
-  protected String _ebnf2(final Action it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final Action it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     String _xifexpression = null;
     if ((!supportActions)) {
-      return super._ebnf2(it, options, supportActions);
+      return super._ebnf2(it, options, supportActions, avoidParentheses);
     } else {
       StringConcatenation _builder = new StringConcatenation();
       {
@@ -476,10 +476,10 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
   }
   
   @Override
-  protected String _ebnf2(final Keyword it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final Keyword it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     String _xifexpression = null;
     if ((!supportActions)) {
-      return super._ebnf2(it, options, supportActions);
+      return super._ebnf2(it, options, supportActions, avoidParentheses);
     } else {
       String _xifexpression_1 = null;
       boolean _isAssigned = GrammarUtil.isAssigned(it);
@@ -497,7 +497,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
         String _localVar = this._grammarAccessExtensions.localVar(_containingAssignment, it);
         _builder.append(_localVar, "");
         _builder.append("=");
-        String __ebnf2 = super._ebnf2(it, options, supportActions);
+        String __ebnf2 = super._ebnf2(it, options, supportActions, false);
         _builder.append(__ebnf2, "");
         _builder.newLineIfNotEmpty();
         _builder.append("{");
@@ -524,7 +524,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
         String _localVar_2 = this._grammarAccessExtensions.localVar(it);
         _builder_1.append(_localVar_2, "");
         _builder_1.append("=");
-        String __ebnf2_1 = super._ebnf2(it, options, supportActions);
+        String __ebnf2_1 = super._ebnf2(it, options, supportActions, false);
         _builder_1.append(__ebnf2_1, "");
         _builder_1.newLineIfNotEmpty();
         _builder_1.append("{");
@@ -544,10 +544,10 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
   }
   
   @Override
-  protected String _ebnf2(final EnumLiteralDeclaration it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final EnumLiteralDeclaration it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     String _xifexpression = null;
     if ((!supportActions)) {
-      return super._ebnf2(it, options, supportActions);
+      return super._ebnf2(it, options, supportActions, avoidParentheses);
     } else {
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("{");
@@ -561,7 +561,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
       String _localVar = this._grammarAccessExtensions.localVar(it);
       _builder.append(_localVar, "");
       _builder.append("=");
-      String __ebnf2 = super._ebnf2(it, options, supportActions);
+      String __ebnf2 = super._ebnf2(it, options, supportActions, false);
       _builder.append(__ebnf2, "");
       _builder.newLineIfNotEmpty();
       _builder.append("{");
@@ -579,7 +579,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
   }
   
   @Override
-  protected String _ebnf2(final RuleCall it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final RuleCall it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     String _xifexpression = null;
     if (supportActions) {
       String _switchResult = null;
@@ -600,7 +600,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
         }
       }
       if (_matched) {
-        _switchResult = super._ebnf2(it, options, supportActions);
+        _switchResult = super._ebnf2(it, options, supportActions, avoidParentheses);
       }
       if (!_matched) {
         if (_rule instanceof EnumRule) {
@@ -638,7 +638,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
           _builder.newLineIfNotEmpty();
           _builder.append("}");
           _builder.newLine();
-          String __ebnf2 = super._ebnf2(it, options, supportActions);
+          String __ebnf2 = super._ebnf2(it, options, supportActions, false);
           _builder.append(__ebnf2, "");
           _builder.newLineIfNotEmpty();
           _builder.append("{");
@@ -699,7 +699,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
           String _localVar = this._grammarAccessExtensions.localVar(it);
           _builder_1.append(_localVar, "");
           _builder_1.append("=");
-          String __ebnf2_1 = super._ebnf2(it, options, supportActions);
+          String __ebnf2_1 = super._ebnf2(it, options, supportActions, false);
           _builder_1.append(__ebnf2_1, "");
           _builder_1.newLineIfNotEmpty();
           _builder_1.append("{");
@@ -734,7 +734,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
           String _localVar = this._grammarAccessExtensions.localVar(it);
           _builder_1.append(_localVar, "");
           _builder_1.append("=");
-          String __ebnf2_1 = super._ebnf2(it, options, supportActions);
+          String __ebnf2_1 = super._ebnf2(it, options, supportActions, false);
           _builder_1.append(__ebnf2_1, "");
           _builder_1.newLineIfNotEmpty();
           _builder_1.append("{");
@@ -750,11 +750,11 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
         }
       }
       if (!_matched) {
-        _switchResult = super._ebnf2(it, options, supportActions);
+        _switchResult = super._ebnf2(it, options, supportActions, avoidParentheses);
       }
       _xifexpression = _switchResult;
     } else {
-      _xifexpression = super._ebnf2(it, options, supportActions);
+      _xifexpression = super._ebnf2(it, options, supportActions, avoidParentheses);
     }
     return _xifexpression;
   }
@@ -839,7 +839,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
   }
   
   @Override
-  protected String _assignmentEbnf(final CrossReference it, final Assignment assignment, final AntlrOptions options, final boolean supportActions) {
+  protected String _assignmentEbnf(final CrossReference it, final Assignment assignment, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     String _xifexpression = null;
     if (supportActions) {
       StringConcatenation _builder = new StringConcatenation();
@@ -872,21 +872,21 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
       _builder.newLine();
       _builder.append("}");
       _builder.newLine();
-      String __assignmentEbnf = super._assignmentEbnf(it, assignment, options, supportActions);
+      String __assignmentEbnf = super._assignmentEbnf(it, assignment, options, supportActions, false);
       _builder.append(__assignmentEbnf, "");
       _xifexpression = _builder.toString();
     } else {
-      _xifexpression = super._assignmentEbnf(it, assignment, options, supportActions);
+      _xifexpression = super._assignmentEbnf(it, assignment, options, supportActions, avoidParentheses);
     }
     return _xifexpression;
   }
   
   @Override
-  protected String _assignmentEbnf(final AbstractElement it, final Assignment assignment, final AntlrOptions options, final boolean supportActions) {
+  protected String _assignmentEbnf(final AbstractElement it, final Assignment assignment, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     String _xifexpression = null;
     if (supportActions) {
       StringConcatenation _builder = new StringConcatenation();
-      String __assignmentEbnf = super._assignmentEbnf(it, assignment, options, supportActions);
+      String __assignmentEbnf = super._assignmentEbnf(it, assignment, options, supportActions, false);
       _builder.append(__assignmentEbnf, "");
       _builder.newLineIfNotEmpty();
       _builder.append("{");
@@ -908,13 +908,13 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
       _builder.newLine();
       _xifexpression = _builder.toString();
     } else {
-      _xifexpression = super._assignmentEbnf(it, assignment, options, supportActions);
+      _xifexpression = super._assignmentEbnf(it, assignment, options, supportActions, avoidParentheses);
     }
     return _xifexpression;
   }
   
   @Override
-  protected String _assignmentEbnf(final RuleCall it, final Assignment assignment, final AntlrOptions options, final boolean supportActions) {
+  protected String _assignmentEbnf(final RuleCall it, final Assignment assignment, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     String _xifexpression = null;
     if (supportActions) {
       String _switchResult = null;
@@ -941,7 +941,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
         String _localVar = this._grammarAccessExtensions.localVar(assignment, it);
         _builder.append(_localVar, "");
         _builder.append("=");
-        String __assignmentEbnf = super._assignmentEbnf(it, assignment, options, supportActions);
+        String __assignmentEbnf = super._assignmentEbnf(it, assignment, options, supportActions, false);
         _builder.append(__assignmentEbnf, "");
         _builder.newLineIfNotEmpty();
         _builder.append("{");
@@ -982,7 +982,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
           String _localVar_1 = this._grammarAccessExtensions.localVar(assignment, it);
           _builder_1.append(_localVar_1, "");
           _builder_1.append("=");
-          String __assignmentEbnf_1 = super._assignmentEbnf(it, assignment, options, supportActions);
+          String __assignmentEbnf_1 = super._assignmentEbnf(it, assignment, options, supportActions, false);
           _builder_1.append(__assignmentEbnf_1, "");
           _builder_1.newLineIfNotEmpty();
           _builder_1.append("{");
@@ -1019,7 +1019,7 @@ public class PsiAntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGen
       }
       _xifexpression = _switchResult;
     } else {
-      _xifexpression = super._assignmentEbnf(it, assignment, options, supportActions);
+      _xifexpression = super._assignmentEbnf(it, assignment, options, supportActions, avoidParentheses);
     }
     return _xifexpression;
   }

@@ -131,7 +131,7 @@ class AntlrContentAssistGrammarGenerator extends AbstractAntlrGrammarWithActions
 				int stackSize = keepStackSize();
 			}
 			:
-			«alternatives.ebnf(options, false)»
+			«alternatives.ebnf(options, false, true)»
 		;
 		finally {
 			restoreStackSize(stackSize);
@@ -146,7 +146,7 @@ class AntlrContentAssistGrammarGenerator extends AbstractAntlrGrammarWithActions
 				int stackSize = keepStackSize();
 			}
 		:
-			«alternatives.ebnf(options, false)»
+			«alternatives.ebnf(options, false, true)»
 		;
 		finally {
 			restoreStackSize(stackSize);
@@ -159,7 +159,7 @@ class AntlrContentAssistGrammarGenerator extends AbstractAntlrGrammarWithActions
 				int stackSize = keepStackSize();
 			}
 		:
-			«FOR element : elements SEPARATOR '\n|'»«element.ebnf(options, false)»«ENDFOR»
+			«FOR element : elements SEPARATOR '\n|'»«element.ebnf(options, false, false)»«ENDFOR»
 		;
 		finally {
 			restoreStackSize(stackSize);
@@ -172,7 +172,7 @@ class AntlrContentAssistGrammarGenerator extends AbstractAntlrGrammarWithActions
 				int stackSize = keepStackSize();
 			}
 		:
-			«terminal.assignmentEbnf(it, options, false)»
+			«terminal.assignmentEbnf(it, options, false, true)»
 		;
 		finally {
 			restoreStackSize(stackSize);
@@ -232,17 +232,17 @@ class AntlrContentAssistGrammarGenerator extends AbstractAntlrGrammarWithActions
 								«IF element.value.isMultipleCardinality»
 								(
 									{ before(grammarAccess.«element.value.originalElement.grammarElementAccess()»); }
-									(«element.value.ebnf2(options, false)»)
+									(«element.value.ebnf2(options, false, true)»)
 									{ after(grammarAccess.«element.value.originalElement.grammarElementAccess()»); }
 								)
 								(
 									{ before(grammarAccess.«element.value.originalElement.grammarElementAccess()»); }
-									((«element.value.ebnf2(options, false)»)=>«element.value.ebnf2(options, false)»)*
+									((«element.value.ebnf2(options, false, true)»)=>«element.value.ebnf2(options, false, false)»)*
 									{ after(grammarAccess.«element.value.originalElement.grammarElementAccess()»); }
 								)
 								«ELSE»
 									{ before(grammarAccess.«element.value.originalElement.grammarElementAccess()»); }
-									(«element.value.ebnf2(options, false)»)
+									(«element.value.ebnf2(options, false, true)»)
 									{ after(grammarAccess.«element.value.originalElement.grammarElementAccess()»); }
 								«ENDIF»
 							)
@@ -298,7 +298,7 @@ class AntlrContentAssistGrammarGenerator extends AbstractAntlrGrammarWithActions
 				int stackSize = keepStackSize();
 			}
 		:
-		«elements.get(index).ebnf(options, false)»
+		«elements.get(index).ebnf(options, false, false)»
 		;
 		finally {
 			restoreStackSize(stackSize);
@@ -309,24 +309,24 @@ class AntlrContentAssistGrammarGenerator extends AbstractAntlrGrammarWithActions
 		«ENDIF»
 	'''
 	
-	protected override ebnf(AbstractElement it, AntlrOptions options, boolean supportsActions) '''
+	protected override ebnf(AbstractElement it, AntlrOptions options, boolean supportsActions, boolean avoidParentheses) '''
 		«IF !isOptionalCardinality() && isMultipleCardinality()»
 			(
 				(
 					{ before(grammarAccess.«originalElement.grammarElementAccess»«paramConfig»); }
-					(«ebnf2(options, supportsActions)»)
+					(«ebnf2(options, supportsActions, true)»)
 					{ after(grammarAccess.«originalElement.grammarElementAccess»«paramConfig»); }
 				)
 				(
 					{ before(grammarAccess.«originalElement.grammarElementAccess»«paramConfig»); }
-					(«ebnf2(options, supportsActions)»)*
+					(«ebnf2(options, supportsActions, true)»)*
 					{ after(grammarAccess.«originalElement.grammarElementAccess»«paramConfig»); }
 				)
 			)
 		«ELSE»
 			(
 				{ before(grammarAccess.«originalElement.grammarElementAccess»«paramConfig»); }
-				«IF mustBeParenthesized()»(«ebnf2(options, supportsActions)»)«ELSE»«ebnf2(options, supportsActions)»«ENDIF»«cardinality»
+				«IF mustBeParenthesized()»(«ebnf2(options, supportsActions, true)»)«ELSE»«ebnf2(options, supportsActions, false)»«ENDIF»«cardinality»
 				{ after(grammarAccess.«originalElement.grammarElementAccess»«paramConfig»); }
 			)
 		«ENDIF»
@@ -338,15 +338,15 @@ class AntlrContentAssistGrammarGenerator extends AbstractAntlrGrammarWithActions
 		«ENDIF»
 	'''
 	
-	protected override dispatch assignmentEbnf(AbstractElement it, Assignment assignment, AntlrOptions options, boolean supportsActions) '''
+	protected override dispatch assignmentEbnf(AbstractElement it, Assignment assignment, AntlrOptions options, boolean supportsActions, boolean avoidParentheses) '''
 		(
 			{ before(grammarAccess.«originalElement.grammarElementAccess»); }
-			«ebnf(options, supportsActions)»
+			«ebnf(options, supportsActions, false)»
 			{ after(grammarAccess.«originalElement.grammarElementAccess»); }
 		)
 	'''
 	
-	protected override dispatch assignmentEbnf(CrossReference it, Assignment assignment, AntlrOptions options, boolean supportsActions) '''
+	protected override dispatch assignmentEbnf(CrossReference it, Assignment assignment, AntlrOptions options, boolean supportsActions, boolean avoidParentheses) '''
 		(
 			{ before(grammarAccess.«originalElement.grammarElementAccess»); }
 			«terminal.crossrefEbnf(it, supportsActions)»
@@ -354,7 +354,7 @@ class AntlrContentAssistGrammarGenerator extends AbstractAntlrGrammarWithActions
 		)
 	'''
 	
-	protected override dispatch assignmentEbnf(Alternatives it, Assignment assignment, AntlrOptions options, boolean supportsActions) '''
+	protected override dispatch assignmentEbnf(Alternatives it, Assignment assignment, AntlrOptions options, boolean supportsActions, boolean avoidParentheses) '''
 		(
 			{ before(grammarAccess.«originalElement.grammarElementAccess»); }
 			(«containingRule.contentAssistRuleName»__«originalElement.gaElementIdentifier»)
@@ -362,7 +362,7 @@ class AntlrContentAssistGrammarGenerator extends AbstractAntlrGrammarWithActions
 		)
 	'''
 	
-	protected override dispatch assignmentEbnf(RuleCall it, Assignment assignment, AntlrOptions options, boolean supportsActions) '''
+	protected override dispatch assignmentEbnf(RuleCall it, Assignment assignment, AntlrOptions options, boolean supportsActions, boolean avoidParentheses) '''
 		(
 			{ before(grammarAccess.«originalElement.grammarElementAccess»); }
 			«rule.ruleName»
@@ -393,23 +393,23 @@ class AntlrContentAssistGrammarGenerator extends AbstractAntlrGrammarWithActions
 		throw new IllegalArgumentException(it.name + " is not a datatype rule")
 	}
 	
-	override protected dispatch ebnf2(Alternatives it, AntlrOptions options, boolean supportActions) {
+	override protected dispatch ebnf2(Alternatives it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		'''«containingRule.contentAssistRuleName»__«originalElement.gaElementIdentifier»'''
 	}
 	
-	override protected dispatch ebnf2(Assignment it, AntlrOptions options, boolean supportActions) {
+	override protected dispatch ebnf2(Assignment it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		'''«containingRule.contentAssistRuleName»__«originalElement.gaElementIdentifier»'''
 	}
 	
-	override protected dispatch ebnf2(Group it, AntlrOptions options, boolean supportActions) {
+	override protected dispatch ebnf2(Group it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		'''«containingRule.contentAssistRuleName»__«originalElement.gaElementIdentifier»__0'''
 	}
 	
-	override protected dispatch ebnf2(UnorderedGroup it, AntlrOptions options, boolean supportActions) {
+	override protected dispatch ebnf2(UnorderedGroup it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		'''«containingRule.contentAssistRuleName»__«originalElement.gaElementIdentifier»'''
 	}
 	
-	override protected dispatch ebnf2(RuleCall it, AntlrOptions options, boolean supportActions) {
+	override protected dispatch ebnf2(RuleCall it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		rule.ruleName
 	}
 	

@@ -685,7 +685,7 @@ public abstract class AbstractAntlrGrammarGenerator {
       } else {
         _builder.append("\t");
         AbstractElement _alternatives_1 = it.getAlternatives();
-        String _ebnf = this.ebnf(_alternatives_1, options, true);
+        String _ebnf = this.ebnf(_alternatives_1, options, true, true);
         _builder.append(_ebnf, "\t");
         _builder.newLineIfNotEmpty();
       }
@@ -706,23 +706,32 @@ public abstract class AbstractAntlrGrammarGenerator {
     return "";
   }
   
-  protected String ebnf(final AbstractElement it, final AntlrOptions options, final boolean supportActions) {
+  protected String ebnf(final AbstractElement it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     StringConcatenation _builder = new StringConcatenation();
     {
-      boolean _mustBeParenthesized = this.mustBeParenthesized(it);
-      if (_mustBeParenthesized) {
-        _builder.append("(");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
+      if (((this.mustBeParenthesized(it) && avoidParentheses) && (it.getCardinality() == null))) {
         String _ebnfPredicate = this.ebnfPredicate(it, options);
-        _builder.append(_ebnfPredicate, "\t");
-        String _ebnf2 = this.ebnf2(it, options, supportActions);
-        _builder.append(_ebnf2, "\t");
+        _builder.append(_ebnfPredicate, "");
+        String _ebnf2 = this.ebnf2(it, options, supportActions, false);
+        _builder.append(_ebnf2, "");
         _builder.newLineIfNotEmpty();
-        _builder.append(")");
+        _builder.append("\t\t");
       } else {
-        String _ebnf2_1 = this.ebnf2(it, options, supportActions);
-        _builder.append(_ebnf2_1, "");
+        boolean _mustBeParenthesized = this.mustBeParenthesized(it);
+        if (_mustBeParenthesized) {
+          _builder.append("(");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t");
+          String _ebnfPredicate_1 = this.ebnfPredicate(it, options);
+          _builder.append(_ebnfPredicate_1, "\t");
+          String _ebnf2_1 = this.ebnf2(it, options, supportActions, false);
+          _builder.append(_ebnf2_1, "\t");
+          _builder.newLineIfNotEmpty();
+          _builder.append(")");
+        } else {
+          String _ebnf2_2 = this.ebnf2(it, options, supportActions, (avoidParentheses && Objects.equal(it.getCardinality(), null)));
+          _builder.append(_ebnf2_2, "");
+        }
       }
     }
     String _cardinality = it.getCardinality();
@@ -740,19 +749,21 @@ public abstract class AbstractAntlrGrammarGenerator {
           boolean _predicated = this._grammarAccessExtensions.predicated(it);
           if (_predicated) {
             AbstractElement _predicatedElement = this._grammarAccessExtensions.predicatedElement(it);
-            String _ebnf2 = this.ebnf2(_predicatedElement, options, false);
+            String _ebnf2 = this.ebnf2(_predicatedElement, options, false, true);
             _builder.append(_ebnf2, "");
           } else {
+            final List<AbstractElement> firstSet = AntlrGrammarGenUtil.getFirstSet(it);
             {
-              List<AbstractElement> _firstSet = AntlrGrammarGenUtil.getFirstSet(it);
               boolean _hasElements = false;
-              for(final AbstractElement e : _firstSet) {
+              for(final AbstractElement e : firstSet) {
                 if (!_hasElements) {
                   _hasElements = true;
                 } else {
                   _builder.appendImmediate(" | ", "");
                 }
-                String _ebnf2_1 = this.ebnf2(e, options, false);
+                int _size = firstSet.size();
+                boolean _tripleEquals = (_size == 1);
+                String _ebnf2_1 = this.ebnf2(e, options, false, _tripleEquals);
                 _builder.append(_ebnf2_1, "");
               }
             }
@@ -847,9 +858,9 @@ public abstract class AbstractAntlrGrammarGenerator {
         }
         String _dataTypeEbnf = this.dataTypeEbnf(e, supportActions);
         _builder.append(_dataTypeEbnf, "");
+        _builder.newLineIfNotEmpty();
       }
     }
-    _builder.newLineIfNotEmpty();
     return _builder.toString();
   }
   
@@ -860,15 +871,16 @@ public abstract class AbstractAntlrGrammarGenerator {
       for(final AbstractElement e : _elements) {
         String _dataTypeEbnf = this.dataTypeEbnf(e, supportActions);
         _builder.append(_dataTypeEbnf, "");
+        _builder.newLineIfNotEmpty();
       }
     }
-    _builder.newLineIfNotEmpty();
     return _builder.toString();
   }
   
   protected String _dataTypeEbnf2(final UnorderedGroup it, final boolean supportActions) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("(");
+    _builder.newLine();
     {
       EList<AbstractElement> _elements = it.getElements();
       boolean _hasElements = false;
@@ -876,14 +888,16 @@ public abstract class AbstractAntlrGrammarGenerator {
         if (!_hasElements) {
           _hasElements = true;
         } else {
-          _builder.appendImmediate("\n    |", "");
+          _builder.appendImmediate("\n    |", "\t");
         }
+        _builder.append("\t");
         String _dataTypeEbnf2 = this.dataTypeEbnf2(e, supportActions);
-        _builder.append(_dataTypeEbnf2, "");
+        _builder.append(_dataTypeEbnf2, "\t");
+        _builder.newLineIfNotEmpty();
       }
     }
     _builder.append(")*");
-    _builder.newLineIfNotEmpty();
+    _builder.newLine();
     return _builder.toString();
   }
   
@@ -907,7 +921,7 @@ public abstract class AbstractAntlrGrammarGenerator {
     return this._grammarAccessExtensions.ruleName(_rule);
   }
   
-  protected String _ebnf2(final AbstractElement it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final AbstractElement it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("ERROR ");
     EClass _eClass = it.eClass();
@@ -917,7 +931,7 @@ public abstract class AbstractAntlrGrammarGenerator {
     return _builder.toString();
   }
   
-  protected String _ebnf2(final Alternatives it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final Alternatives it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     StringConcatenation _builder = new StringConcatenation();
     {
       EList<AbstractElement> _elements = it.getElements();
@@ -928,30 +942,31 @@ public abstract class AbstractAntlrGrammarGenerator {
         } else {
           _builder.appendImmediate("\n    |", "");
         }
-        String _ebnf = this.ebnf(element, options, supportActions);
+        String _ebnf = this.ebnf(element, options, supportActions, false);
         _builder.append(_ebnf, "");
+        _builder.newLineIfNotEmpty();
       }
     }
-    _builder.newLineIfNotEmpty();
     return _builder.toString();
   }
   
-  protected String _ebnf2(final Group it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final Group it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     StringConcatenation _builder = new StringConcatenation();
     {
       EList<AbstractElement> _elements = it.getElements();
       for(final AbstractElement element : _elements) {
-        String _ebnf = this.ebnf(element, options, supportActions);
+        String _ebnf = this.ebnf(element, options, supportActions, (avoidParentheses && (it.getElements().size() == 1)));
         _builder.append(_ebnf, "");
+        _builder.newLineIfNotEmpty();
       }
     }
-    _builder.newLineIfNotEmpty();
     return _builder.toString();
   }
   
-  protected String _ebnf2(final UnorderedGroup it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final UnorderedGroup it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("(");
+    _builder.newLine();
     {
       EList<AbstractElement> _elements = it.getElements();
       boolean _hasElements = false;
@@ -959,31 +974,33 @@ public abstract class AbstractAntlrGrammarGenerator {
         if (!_hasElements) {
           _hasElements = true;
         } else {
-          _builder.appendImmediate("\n    |", "");
+          _builder.appendImmediate("\n    |", "\t");
         }
-        String _ebnf = this.ebnf(element, options, supportActions);
-        _builder.append(_ebnf, "");
+        _builder.append("\t");
+        String _ebnf = this.ebnf(element, options, supportActions, false);
+        _builder.append(_ebnf, "\t");
+        _builder.newLineIfNotEmpty();
       }
     }
     _builder.append(")*");
-    _builder.newLineIfNotEmpty();
+    _builder.newLine();
     return _builder.toString();
   }
   
-  protected String _ebnf2(final Assignment it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final Assignment it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     StringConcatenation _builder = new StringConcatenation();
     AbstractElement _terminal = it.getTerminal();
-    String _assignmentEbnf = this.assignmentEbnf(_terminal, it, options, supportActions);
+    String _assignmentEbnf = this.assignmentEbnf(_terminal, it, options, supportActions, avoidParentheses);
     _builder.append(_assignmentEbnf, "");
     _builder.newLineIfNotEmpty();
     return _builder.toString();
   }
   
-  protected String _ebnf2(final Action it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final Action it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     return "";
   }
   
-  protected String _ebnf2(final Keyword it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final Keyword it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     String _xifexpression = null;
     boolean _isCombinedGrammar = this.isCombinedGrammar();
     if (_isCombinedGrammar) {
@@ -998,12 +1015,12 @@ public abstract class AbstractAntlrGrammarGenerator {
     return _xifexpression;
   }
   
-  protected String _ebnf2(final RuleCall it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final RuleCall it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     AbstractRule _rule = it.getRule();
     return this._grammarAccessExtensions.ruleName(_rule);
   }
   
-  protected String _ebnf2(final EnumLiteralDeclaration it, final AntlrOptions options, final boolean supportActions) {
+  protected String _ebnf2(final EnumLiteralDeclaration it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     String _xifexpression = null;
     boolean _isCombinedGrammar = this.isCombinedGrammar();
     if (_isCombinedGrammar) {
@@ -1037,9 +1054,9 @@ public abstract class AbstractAntlrGrammarGenerator {
         }
         String _crossrefEbnf = this.crossrefEbnf(element, ref, supportActions);
         _builder.append(_crossrefEbnf, "");
+        _builder.newLineIfNotEmpty();
       }
     }
-    _builder.newLineIfNotEmpty();
     return _builder.toString();
   }
   
@@ -1085,19 +1102,19 @@ public abstract class AbstractAntlrGrammarGenerator {
     return _switchResult;
   }
   
-  protected String _assignmentEbnf(final Group it, final Assignment assignment, final AntlrOptions options, final boolean supportActions) {
+  protected String _assignmentEbnf(final Group it, final Assignment assignment, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     throw new IllegalStateException(("assignmentEbnf is not supported for " + it));
   }
   
-  protected String _assignmentEbnf(final Assignment it, final Assignment assignment, final AntlrOptions options, final boolean supportActions) {
+  protected String _assignmentEbnf(final Assignment it, final Assignment assignment, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     throw new IllegalStateException(("assignmentEbnf is not supported for " + it));
   }
   
-  protected String _assignmentEbnf(final Action it, final Assignment assignment, final AntlrOptions options, final boolean supportActions) {
+  protected String _assignmentEbnf(final Action it, final Assignment assignment, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     throw new IllegalStateException(("assignmentEbnf is not supported for " + it));
   }
   
-  protected String _assignmentEbnf(final Alternatives it, final Assignment assignment, final AntlrOptions options, final boolean supportActions) {
+  protected String _assignmentEbnf(final Alternatives it, final Assignment assignment, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     StringConcatenation _builder = new StringConcatenation();
     {
       EList<AbstractElement> _elements = it.getElements();
@@ -1108,15 +1125,15 @@ public abstract class AbstractAntlrGrammarGenerator {
         } else {
           _builder.appendImmediate("\n    |", "");
         }
-        String _assignmentEbnf = this.assignmentEbnf(element, assignment, options, supportActions);
+        String _assignmentEbnf = this.assignmentEbnf(element, assignment, options, supportActions, false);
         _builder.append(_assignmentEbnf, "");
+        _builder.newLineIfNotEmpty();
       }
     }
-    _builder.newLineIfNotEmpty();
     return _builder.toString();
   }
   
-  protected String _assignmentEbnf(final RuleCall it, final Assignment assignment, final AntlrOptions options, final boolean supportActions) {
+  protected String _assignmentEbnf(final RuleCall it, final Assignment assignment, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     String _switchResult = null;
     AbstractRule _rule = it.getRule();
     final AbstractRule rule = _rule;
@@ -1143,13 +1160,13 @@ public abstract class AbstractAntlrGrammarGenerator {
     return _switchResult;
   }
   
-  protected String _assignmentEbnf(final CrossReference it, final Assignment assignment, final AntlrOptions options, final boolean supportActions) {
+  protected String _assignmentEbnf(final CrossReference it, final Assignment assignment, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     AbstractElement _terminal = it.getTerminal();
     return this.crossrefEbnf(_terminal, it, supportActions);
   }
   
-  protected String _assignmentEbnf(final AbstractElement it, final Assignment assignment, final AntlrOptions options, final boolean supportActions) {
-    return this.ebnf(it, options, supportActions);
+  protected String _assignmentEbnf(final AbstractElement it, final Assignment assignment, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
+    return this.ebnf(it, options, supportActions, avoidParentheses);
   }
   
   protected boolean _mustBeParenthesized(final AbstractElement it) {
@@ -1202,28 +1219,28 @@ public abstract class AbstractAntlrGrammarGenerator {
     }
   }
   
-  protected String ebnf2(final AbstractElement it, final AntlrOptions options, final boolean supportActions) {
+  protected String ebnf2(final AbstractElement it, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     if (it instanceof Alternatives) {
-      return _ebnf2((Alternatives)it, options, supportActions);
+      return _ebnf2((Alternatives)it, options, supportActions, avoidParentheses);
     } else if (it instanceof Group) {
-      return _ebnf2((Group)it, options, supportActions);
+      return _ebnf2((Group)it, options, supportActions, avoidParentheses);
     } else if (it instanceof UnorderedGroup) {
-      return _ebnf2((UnorderedGroup)it, options, supportActions);
+      return _ebnf2((UnorderedGroup)it, options, supportActions, avoidParentheses);
     } else if (it instanceof Action) {
-      return _ebnf2((Action)it, options, supportActions);
+      return _ebnf2((Action)it, options, supportActions, avoidParentheses);
     } else if (it instanceof Assignment) {
-      return _ebnf2((Assignment)it, options, supportActions);
+      return _ebnf2((Assignment)it, options, supportActions, avoidParentheses);
     } else if (it instanceof EnumLiteralDeclaration) {
-      return _ebnf2((EnumLiteralDeclaration)it, options, supportActions);
+      return _ebnf2((EnumLiteralDeclaration)it, options, supportActions, avoidParentheses);
     } else if (it instanceof Keyword) {
-      return _ebnf2((Keyword)it, options, supportActions);
+      return _ebnf2((Keyword)it, options, supportActions, avoidParentheses);
     } else if (it instanceof RuleCall) {
-      return _ebnf2((RuleCall)it, options, supportActions);
+      return _ebnf2((RuleCall)it, options, supportActions, avoidParentheses);
     } else if (it != null) {
-      return _ebnf2(it, options, supportActions);
+      return _ebnf2(it, options, supportActions, avoidParentheses);
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
-        Arrays.<Object>asList(it, options, supportActions).toString());
+        Arrays.<Object>asList(it, options, supportActions, avoidParentheses).toString());
     }
   }
   
@@ -1240,24 +1257,24 @@ public abstract class AbstractAntlrGrammarGenerator {
     }
   }
   
-  protected String assignmentEbnf(final AbstractElement it, final Assignment assignment, final AntlrOptions options, final boolean supportActions) {
+  protected String assignmentEbnf(final AbstractElement it, final Assignment assignment, final AntlrOptions options, final boolean supportActions, final boolean avoidParentheses) {
     if (it instanceof Alternatives) {
-      return _assignmentEbnf((Alternatives)it, assignment, options, supportActions);
+      return _assignmentEbnf((Alternatives)it, assignment, options, supportActions, avoidParentheses);
     } else if (it instanceof Group) {
-      return _assignmentEbnf((Group)it, assignment, options, supportActions);
+      return _assignmentEbnf((Group)it, assignment, options, supportActions, avoidParentheses);
     } else if (it instanceof Action) {
-      return _assignmentEbnf((Action)it, assignment, options, supportActions);
+      return _assignmentEbnf((Action)it, assignment, options, supportActions, avoidParentheses);
     } else if (it instanceof Assignment) {
-      return _assignmentEbnf((Assignment)it, assignment, options, supportActions);
+      return _assignmentEbnf((Assignment)it, assignment, options, supportActions, avoidParentheses);
     } else if (it instanceof CrossReference) {
-      return _assignmentEbnf((CrossReference)it, assignment, options, supportActions);
+      return _assignmentEbnf((CrossReference)it, assignment, options, supportActions, avoidParentheses);
     } else if (it instanceof RuleCall) {
-      return _assignmentEbnf((RuleCall)it, assignment, options, supportActions);
+      return _assignmentEbnf((RuleCall)it, assignment, options, supportActions, avoidParentheses);
     } else if (it != null) {
-      return _assignmentEbnf(it, assignment, options, supportActions);
+      return _assignmentEbnf(it, assignment, options, supportActions, avoidParentheses);
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
-        Arrays.<Object>asList(it, assignment, options, supportActions).toString());
+        Arrays.<Object>asList(it, assignment, options, supportActions, avoidParentheses).toString());
     }
   }
   

@@ -204,7 +204,7 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 			super._dataTypeEbnf2(it, supportActions)
 	}
 	
-	protected override String _ebnf2(Action it, AntlrOptions options, boolean supportActions) {
+	protected override String _ebnf2(Action it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (supportActions) '''
 			«IF options.backtrack»
 			{
@@ -218,31 +218,31 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 			}
 		'''
 		else 
-			super._ebnf2(it, options, supportActions)
+			super._ebnf2(it, options, supportActions, avoidParentheses)
 	}
 	
-	protected override String _ebnf2(Keyword it, AntlrOptions options, boolean supportActions) {
+	protected override String _ebnf2(Keyword it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (!supportActions) 
-			super._ebnf2(it, options, supportActions)
+			super._ebnf2(it, options, supportActions, avoidParentheses)
 		else if (assigned) '''
-			«super._ebnf2(it, options, supportActions)»
+			«super._ebnf2(it, options, supportActions, false)»
 			{
 				«newLeafNode(containingAssignment.localVar(it))»
 			}
 		'''
 		else '''
-			«localVar»=«super._ebnf2(it, options, supportActions)»
+			«localVar»=«super._ebnf2(it, options, supportActions, false)»
 			{
 				«newLeafNode(localVar)»
 			}
 		'''
 	}
 	
-	override protected _ebnf2(EnumLiteralDeclaration it, AntlrOptions options, boolean supportActions) {
+	override protected _ebnf2(EnumLiteralDeclaration it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (!supportActions) 
-			super._ebnf2(it, options, supportActions)
+			super._ebnf2(it, options, supportActions, avoidParentheses)
 		else '''
-			«localVar»=«super._ebnf2(it, options, supportActions)»
+			«localVar»=«super._ebnf2(it, options, supportActions, false)»
 			{
 				$current = grammarAccess.«grammarElementAccess(originalElement)».getEnumLiteral().getInstance();
 				«newLeafNode(localVar)»
@@ -250,14 +250,14 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 		'''
 	}
 	
-	protected override String _ebnf2(RuleCall it, AntlrOptions options, boolean supportActions) {
+	protected override String _ebnf2(RuleCall it, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (!supportActions)
-			super._ebnf2(it, options, supportActions)
+			super._ebnf2(it, options, supportActions, avoidParentheses)
 		else
 			switch rule : rule {
 				EnumRule case assigned,
 				ParserRule case assigned: 
-					super._ebnf2(it, options, supportActions)
+					super._ebnf2(it, options, supportActions, avoidParentheses)
 				EnumRule, 
 				ParserRule case rule.originalElement.datatypeRule: '''
 					«IF options.backtrack»
@@ -268,7 +268,7 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 					{
 						«newCompositeNode»
 					}
-					«super._ebnf2(it, options, supportActions)»
+					«super._ebnf2(it, options, supportActions, false)»
 					{
 						afterParserOrEnumRuleCall();
 					}
@@ -287,20 +287,20 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 						«ENDIF»
 						«newCompositeNode»
 					}
-					«localVar»=«super._ebnf2(it, options, supportActions)»
+					«localVar»=«super._ebnf2(it, options, supportActions, false)»
 					{
 						$current = $«localVar».current;
 						afterParserOrEnumRuleCall();
 					}
 				'''
 				TerminalRule: '''
-					«localVar»=«super._ebnf2(it, options, supportActions)»
+					«localVar»=«super._ebnf2(it, options, supportActions, false)»
 					{
 						«newLeafNode(localVar)»
 					}
 				'''
 				default: 
-					super._ebnf2(it, options, supportActions)
+					super._ebnf2(it, options, supportActions, avoidParentheses)
 			}
 	}
 	
@@ -330,7 +330,7 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 			super.crossrefEbnf(it, call, ref, supportActions)
 	}
 	
-	override protected _assignmentEbnf(CrossReference it, Assignment assignment, AntlrOptions options, boolean supportActions) {
+	override protected _assignmentEbnf(CrossReference it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (supportActions) '''
 			«IF options.backtrack»
 			{
@@ -342,14 +342,14 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 					$current = «assignment.createModelElement»;
 				}
 			}
-			«super._assignmentEbnf(it, assignment, options, supportActions)»'''
+			«super._assignmentEbnf(it, assignment, options, supportActions, false)»'''
 		else
-			super._assignmentEbnf(it, assignment, options, supportActions)
+			super._assignmentEbnf(it, assignment, options, supportActions, avoidParentheses)
 	}
 
-	override protected _assignmentEbnf(AbstractElement it, Assignment assignment, AntlrOptions options, boolean supportActions) {
+	override protected _assignmentEbnf(AbstractElement it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (supportActions) '''
-			«assignment.localVar(it)»=«super._assignmentEbnf(it, assignment, options, supportActions)»
+			«assignment.localVar(it)»=«super._assignmentEbnf(it, assignment, options, supportActions, false)»
 			{
 				if ($current==null) {
 					$current = «assignment.createModelElement»;
@@ -361,10 +361,10 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 			}
 		'''
 		else
-			super._assignmentEbnf(it, assignment, options, supportActions)
+			super._assignmentEbnf(it, assignment, options, supportActions, avoidParentheses)
 	}
 	
-	protected override String _assignmentEbnf(RuleCall it, Assignment assignment, AntlrOptions options, boolean supportActions) {
+	protected override String _assignmentEbnf(RuleCall it, Assignment assignment, AntlrOptions options, boolean supportActions, boolean avoidParentheses) {
 		if (supportActions)
 			switch rule {
 				EnumRule,
@@ -372,7 +372,7 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 					{
 						«newCompositeNode»
 					}
-					«assignment.localVar(it)»=«super._assignmentEbnf(it, assignment, options, supportActions)»
+					«assignment.localVar(it)»=«super._assignmentEbnf(it, assignment, options, supportActions, false)»
 					{
 						if ($current==null) {
 							$current = «assignment.createModelElementForParent»;
@@ -386,7 +386,7 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 					}
 				'''
 				TerminalRule: '''
-					«assignment.localVar(it)»=«super._assignmentEbnf(it, assignment, options, supportActions)»
+					«assignment.localVar(it)»=«super._assignmentEbnf(it, assignment, options, supportActions, false)»
 					{
 						«newLeafNode(assignment.localVar(it))»
 					}
@@ -405,7 +405,7 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 					throw new IllegalStateException("assignmentEbnf is not supported for " + it)
 			}
 		else
-			super._assignmentEbnf(it, assignment, options, supportActions)
+			super._assignmentEbnf(it, assignment, options, supportActions, avoidParentheses)
 	}
 	
 	override protected isPassCurrentIntoFragment() {
