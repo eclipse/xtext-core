@@ -15,6 +15,7 @@ import org.eclipse.xtext.formatting2.regionaccess.ITextSegment;
 public class RegionTrace extends RuntimeException {
 
 	private static final long serialVersionUID = -6420580169021980120L;
+	private static final boolean IS_SKIP_DEBUG = Boolean.getBoolean("xtext.formatter.debug.skip");
 
 	private final ITextSegment region;
 
@@ -27,4 +28,11 @@ public class RegionTrace extends RuntimeException {
 		return region;
 	}
 
+	@Override
+	public synchronized Throwable fillInStackTrace() {
+		if (IS_SKIP_DEBUG) {
+			return this;
+		}
+		return super.fillInStackTrace();
+	}
 }
