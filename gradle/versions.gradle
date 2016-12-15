@@ -2,12 +2,12 @@
  * Base project version and versions of common dependencies.
  */
 
-version = '2.11.0-SNAPSHOT'
+version = '2.11.0.beta2'
 
 ext.versions = [
 	'xtext': version,
 	'xtext_bootstrap': '2.10.0',
-	'lsp4j': '0.1.0-SNAPSHOT',
+	'lsp4j': '0.1.0.M4',
 	'log4j': '1.2.16',
 	'equinoxCommon' : '3.6.0',
 	'equinoxRegistry' : '3.5.0.v20100503',
