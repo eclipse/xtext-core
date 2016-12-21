@@ -12,6 +12,10 @@ import com.google.common.collect.Iterables;
 import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.Multimap;
 import com.google.inject.Inject;
+import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -23,7 +27,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import org.apache.log4j.Logger;
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.lsp4j.CodeActionParams;
 import org.eclipse.lsp4j.CodeLens;
@@ -181,6 +184,16 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     if (_tripleEquals) {
       throw new IllegalArgumentException("Bad initialization request. rootPath must not be null.");
     }
+    String _rootPath_1 = params.getRootPath();
+    final Path rootPath = Paths.get(_rootPath_1);
+    if (((!Files.exists(rootPath)) || (!Files.isDirectory(rootPath)))) {
+      throw new IllegalArgumentException("Bad initialization request. rootPath does not exist or is not a directory.");
+    }
+    boolean _isWritable = Files.isWritable(rootPath);
+    boolean _not = (!_isWritable);
+    if (_not) {
+      throw new IllegalArgumentException("Bad initialization request. rootPath is not writable.");
+    }
     Map<String, Object> _extensionToFactoryMap = this.languagesRegistry.getExtensionToFactoryMap();
     boolean _isEmpty = _extensionToFactoryMap.isEmpty();
     if (_isEmpty) {
@@ -212,11 +225,10 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     ServerCapabilities _doubleArrow = ObjectExtensions.<ServerCapabilities>operator_doubleArrow(_serverCapabilities, _function);
     result.setCapabilities(_doubleArrow);
     final Function1<CancelIndicator, Object> _function_1 = (CancelIndicator cancelIndicator) -> {
-      String _rootPath_1 = params.getRootPath();
-      URI _createFileURI = URI.createFileURI(_rootPath_1);
-      String _path = this._uriExtensions.toPath(_createFileURI);
-      final URI rootURI = this._uriExtensions.toUri(_path);
-      final Procedure2<URI, Iterable<Issue>> _function_2 = (URI $0, Iterable<Issue> $1) -> {
+      URI _uri = rootPath.toUri();
+      String _string = _uri.toString();
+      final org.eclipse.emf.common.util.URI rootURI = org.eclipse.emf.common.util.URI.createURI(_string);
+      final Procedure2<org.eclipse.emf.common.util.URI, Iterable<Issue>> _function_2 = (org.eclipse.emf.common.util.URI $0, Iterable<Issue> $1) -> {
         this.publishDiagnostics($0, $1);
       };
       this.workspaceManager.initialize(rootURI, _function_2, cancelIndicator);
@@ -256,7 +268,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     final Function1<CancelIndicator, Object> _function = (CancelIndicator cancelIndicator) -> {
       TextDocumentItem _textDocument = params.getTextDocument();
       String _uri = _textDocument.getUri();
-      URI _uri_1 = this._uriExtensions.toUri(_uri);
+      org.eclipse.emf.common.util.URI _uri_1 = this._uriExtensions.toUri(_uri);
       TextDocumentItem _textDocument_1 = params.getTextDocument();
       int _version = _textDocument_1.getVersion();
       TextDocumentItem _textDocument_2 = params.getTextDocument();
@@ -272,7 +284,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     final Function1<CancelIndicator, Object> _function = (CancelIndicator cancelIndicator) -> {
       VersionedTextDocumentIdentifier _textDocument = params.getTextDocument();
       String _uri = _textDocument.getUri();
-      URI _uri_1 = this._uriExtensions.toUri(_uri);
+      org.eclipse.emf.common.util.URI _uri_1 = this._uriExtensions.toUri(_uri);
       VersionedTextDocumentIdentifier _textDocument_1 = params.getTextDocument();
       int _version = _textDocument_1.getVersion();
       List<TextDocumentContentChangeEvent> _contentChanges = params.getContentChanges();
@@ -293,7 +305,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     final Function1<CancelIndicator, Object> _function = (CancelIndicator cancelIndicator) -> {
       TextDocumentIdentifier _textDocument = params.getTextDocument();
       String _uri = _textDocument.getUri();
-      URI _uri_1 = this._uriExtensions.toUri(_uri);
+      org.eclipse.emf.common.util.URI _uri_1 = this._uriExtensions.toUri(_uri);
       this.workspaceManager.didClose(_uri_1, cancelIndicator);
       return null;
     };
@@ -307,19 +319,19 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
   @Override
   public void didChangeWatchedFiles(final DidChangeWatchedFilesParams params) {
     final Function1<CancelIndicator, Object> _function = (CancelIndicator cancelIndicator) -> {
-      final ArrayList<URI> dirtyFiles = CollectionLiterals.<URI>newArrayList();
-      final ArrayList<URI> deletedFiles = CollectionLiterals.<URI>newArrayList();
+      final ArrayList<org.eclipse.emf.common.util.URI> dirtyFiles = CollectionLiterals.<org.eclipse.emf.common.util.URI>newArrayList();
+      final ArrayList<org.eclipse.emf.common.util.URI> deletedFiles = CollectionLiterals.<org.eclipse.emf.common.util.URI>newArrayList();
       List<FileEvent> _changes = params.getChanges();
       for (final FileEvent fileEvent : _changes) {
         FileChangeType _type = fileEvent.getType();
         boolean _tripleEquals = (_type == FileChangeType.Deleted);
         if (_tripleEquals) {
           String _uri = fileEvent.getUri();
-          URI _uri_1 = this._uriExtensions.toUri(_uri);
+          org.eclipse.emf.common.util.URI _uri_1 = this._uriExtensions.toUri(_uri);
           deletedFiles.add(_uri_1);
         } else {
           String _uri_2 = fileEvent.getUri();
-          URI _uri_3 = this._uriExtensions.toUri(_uri_2);
+          org.eclipse.emf.common.util.URI _uri_3 = this._uriExtensions.toUri(_uri_2);
           dirtyFiles.add(_uri_3);
         }
       }
@@ -342,7 +354,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
   
   private LanguageClient client;
   
-  private void publishDiagnostics(final URI uri, final Iterable<? extends Issue> issues) {
+  private void publishDiagnostics(final org.eclipse.emf.common.util.URI uri, final Iterable<? extends Issue> issues) {
     PublishDiagnosticsParams _publishDiagnosticsParams = new PublishDiagnosticsParams();
     final Procedure1<PublishDiagnosticsParams> _function = (PublishDiagnosticsParams it) -> {
       String _path = this._uriExtensions.toPath(uri);
@@ -424,7 +436,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
       final LanguageServerImpl.BufferedCancelIndicator cancelIndicator = new LanguageServerImpl.BufferedCancelIndicator(origialCancelIndicator);
       TextDocumentIdentifier _textDocument = params.getTextDocument();
       String _uri = _textDocument.getUri();
-      final URI uri = this._uriExtensions.toUri(_uri);
+      final org.eclipse.emf.common.util.URI uri = this._uriExtensions.toUri(_uri);
       final IResourceServiceProvider resourceServiceProvider = this.languagesRegistry.getResourceServiceProvider(uri);
       ContentAssistService _get = null;
       if (resourceServiceProvider!=null) {
@@ -448,7 +460,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     final Function1<CancelIndicator, List<? extends Location>> _function = (CancelIndicator cancelIndicator) -> {
       TextDocumentIdentifier _textDocument = params.getTextDocument();
       String _uri = _textDocument.getUri();
-      final URI uri = this._uriExtensions.toUri(_uri);
+      final org.eclipse.emf.common.util.URI uri = this._uriExtensions.toUri(_uri);
       final IResourceServiceProvider resourceServiceProvider = this.languagesRegistry.getResourceServiceProvider(uri);
       DocumentSymbolService _get = null;
       if (resourceServiceProvider!=null) {
@@ -474,7 +486,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     final Function1<CancelIndicator, List<? extends Location>> _function = (CancelIndicator cancelIndicator) -> {
       TextDocumentIdentifier _textDocument = params.getTextDocument();
       String _uri = _textDocument.getUri();
-      final URI uri = this._uriExtensions.toUri(_uri);
+      final org.eclipse.emf.common.util.URI uri = this._uriExtensions.toUri(_uri);
       final IResourceServiceProvider resourceServiceProvider = this.languagesRegistry.getResourceServiceProvider(uri);
       DocumentSymbolService _get = null;
       if (resourceServiceProvider!=null) {
@@ -511,7 +523,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     final Function1<CancelIndicator, List<? extends SymbolInformation>> _function = (CancelIndicator cancelIndicator) -> {
       TextDocumentIdentifier _textDocument = params.getTextDocument();
       String _uri = _textDocument.getUri();
-      final URI uri = this._uriExtensions.toUri(_uri);
+      final org.eclipse.emf.common.util.URI uri = this._uriExtensions.toUri(_uri);
       final IResourceServiceProvider resourceServiceProvider = this.languagesRegistry.getResourceServiceProvider(uri);
       DocumentSymbolService _get = null;
       if (resourceServiceProvider!=null) {
@@ -544,7 +556,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     final Function1<CancelIndicator, Hover> _function = (CancelIndicator cancelIndicator) -> {
       TextDocumentIdentifier _textDocument = params.getTextDocument();
       String _uri = _textDocument.getUri();
-      final URI uri = this._uriExtensions.toUri(_uri);
+      final org.eclipse.emf.common.util.URI uri = this._uriExtensions.toUri(_uri);
       final IResourceServiceProvider resourceServiceProvider = this.languagesRegistry.getResourceServiceProvider(uri);
       HoverService _get = null;
       if (resourceServiceProvider!=null) {
@@ -575,7 +587,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     final Function1<CancelIndicator, SignatureHelp> _function = (CancelIndicator cancelIndicator) -> {
       TextDocumentIdentifier _textDocument = position.getTextDocument();
       String _uri = _textDocument.getUri();
-      final URI uri = this._uriExtensions.toUri(_uri);
+      final org.eclipse.emf.common.util.URI uri = this._uriExtensions.toUri(_uri);
       final IResourceServiceProvider serviceProvider = this.languagesRegistry.getResourceServiceProvider(uri);
       ISignatureHelpService _get = null;
       if (serviceProvider!=null) {
@@ -600,7 +612,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     final Function1<CancelIndicator, List<? extends DocumentHighlight>> _function = (CancelIndicator cancelIndicator) -> {
       TextDocumentIdentifier _textDocument = position.getTextDocument();
       String _uri = _textDocument.getUri();
-      final URI uri = this._uriExtensions.toUri(_uri);
+      final org.eclipse.emf.common.util.URI uri = this._uriExtensions.toUri(_uri);
       final IResourceServiceProvider serviceProvider = this.languagesRegistry.getResourceServiceProvider(uri);
       IDocumentHighlightService _get = null;
       if (serviceProvider!=null) {
@@ -640,7 +652,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     final Function1<CancelIndicator, List<? extends TextEdit>> _function = (CancelIndicator cancelIndicator) -> {
       TextDocumentIdentifier _textDocument = params.getTextDocument();
       String _uri = _textDocument.getUri();
-      final URI uri = this._uriExtensions.toUri(_uri);
+      final org.eclipse.emf.common.util.URI uri = this._uriExtensions.toUri(_uri);
       final IResourceServiceProvider resourceServiceProvider = this.languagesRegistry.getResourceServiceProvider(uri);
       FormattingService _get = null;
       if (resourceServiceProvider!=null) {
@@ -669,7 +681,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     final Function1<CancelIndicator, List<? extends TextEdit>> _function = (CancelIndicator cancelIndicator) -> {
       TextDocumentIdentifier _textDocument = params.getTextDocument();
       String _uri = _textDocument.getUri();
-      final URI uri = this._uriExtensions.toUri(_uri);
+      final org.eclipse.emf.common.util.URI uri = this._uriExtensions.toUri(_uri);
       final IResourceServiceProvider resourceServiceProvider = this.languagesRegistry.getResourceServiceProvider(uri);
       FormattingService _get = null;
       if (resourceServiceProvider!=null) {
@@ -826,9 +838,9 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
     @Override
     public <T extends Object> CompletableFuture<T> doRead(final String uri, final Function<ILanguageServerAccess.Context, T> function) {
       final Function1<CancelIndicator, T> _function = (CancelIndicator cancelIndicator) -> {
-        URI _uri = LanguageServerImpl.this._uriExtensions.toUri(uri);
+        org.eclipse.emf.common.util.URI _uri = LanguageServerImpl.this._uriExtensions.toUri(uri);
         final Function2<Document, XtextResource, T> _function_1 = (Document document, XtextResource resource) -> {
-          URI _uRI = resource.getURI();
+          org.eclipse.emf.common.util.URI _uRI = resource.getURI();
           boolean _isDocumentOpen = LanguageServerImpl.this.workspaceManager.isDocumentOpen(_uRI);
           final ILanguageServerAccess.Context ctx = new ILanguageServerAccess.Context(resource, document, _isDocumentOpen, cancelIndicator);
           return function.apply(ctx);
@@ -858,7 +870,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
       };
       Iterable<IResourceDescription.Delta> _filter = IterableExtensions.<IResourceDescription.Delta>filter(deltas, _function);
       final Function1<IResourceDescription.Delta, String> _function_1 = (IResourceDescription.Delta it) -> {
-        URI _uri = it.getUri();
+        org.eclipse.emf.common.util.URI _uri = it.getUri();
         return _uri.toString();
       };
       Iterable<String> _map = IterableExtensions.<IResourceDescription.Delta, String>map(_filter, _function_1);
@@ -870,7 +882,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
             if ((_resource instanceof XtextResource)) {
               Resource _resource_1 = ctx.getResource();
               final XtextResource resource = ((XtextResource) _resource_1);
-              URI _uRI = resource.getURI();
+              org.eclipse.emf.common.util.URI _uRI = resource.getURI();
               final IResourceServiceProvider serviceProvider = this.languagesRegistry.getResourceServiceProvider(_uRI);
               IColoringService _get = null;
               if (serviceProvider!=null) {
@@ -883,7 +895,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
                 boolean _isNullOrEmpty = IterableExtensions.isNullOrEmpty(coloringInfos);
                 boolean _not = (!_isNullOrEmpty);
                 if (_not) {
-                  URI _uRI_1 = resource.getURI();
+                  org.eclipse.emf.common.util.URI _uRI_1 = resource.getURI();
                   final String uri = _uRI_1.toString();
                   ColoringParams _coloringParams = new ColoringParams(uri, coloringInfos);
                   ((LanguageClientExtensions)this.client).updateColoring(_coloringParams);

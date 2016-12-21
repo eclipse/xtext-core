@@ -10,6 +10,8 @@ package org.eclipse.xtext.ide.server
 import com.google.common.collect.LinkedListMultimap
 import com.google.common.collect.Multimap
 import com.google.inject.Inject
+import java.nio.file.Files
+import java.nio.file.Paths
 import java.util.Collections
 import java.util.List
 import java.util.Map
@@ -110,6 +112,13 @@ import org.eclipse.xtext.validation.Issue
 		if (params.rootPath === null) {
 			throw new IllegalArgumentException("Bad initialization request. rootPath must not be null.")
 		}
+		val rootPath = Paths.get(params.rootPath)
+		if (!Files.exists(rootPath) || !Files.isDirectory(rootPath)) {
+			throw new IllegalArgumentException("Bad initialization request. rootPath does not exist or is not a directory.")
+		}
+		if (!Files.isWritable(rootPath)) {
+			throw new IllegalArgumentException("Bad initialization request. rootPath is not writable.")
+		}
 		if (languagesRegistry.extensionToFactoryMap.isEmpty) {
 			throw new IllegalStateException("No Xtext languages have been registered. Please make sure you have added the languages's setup class in '/META-INF/services/org.eclipse.xtext.ISetup'")
 		}
@@ -134,7 +143,7 @@ import org.eclipse.xtext.validation.Issue
 		]
 
 		requestManager.runWrite [ cancelIndicator |
-			val rootURI = URI.createFileURI(params.rootPath).toPath.toUri
+			val rootURI = URI.createURI(rootPath.toUri.toString)
 			workspaceManager.initialize(rootURI, [this.publishDiagnostics($0, $1)], cancelIndicator)
 			return null
 		]
