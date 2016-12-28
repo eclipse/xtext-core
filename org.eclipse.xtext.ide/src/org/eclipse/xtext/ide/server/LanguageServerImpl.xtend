@@ -81,6 +81,7 @@ import org.eclipse.xtext.resource.XtextResource
 import org.eclipse.xtext.util.CancelIndicator
 import org.eclipse.xtext.util.internal.Log
 import org.eclipse.xtext.validation.Issue
+import com.google.common.collect.Lists
 
 /**
  * @author Sven Efftinge - Initial contribution and API
@@ -430,7 +431,7 @@ import org.eclipse.xtext.validation.Issue
 				if (length === 0 || resource.contents.isEmpty) {
 				    return emptyList
 				}
-				return formatterService.format(resource, document, offset, length)
+				return Lists.newArrayList(formatterService.format(resource, document, offset, length))
 			]  
 		]
 	}
@@ -446,7 +447,7 @@ import org.eclipse.xtext.validation.Issue
 			return workspaceManager.doRead(uri) [ document, resource |
 				val offset = document.getOffSet(params.range.start)
 				val length = document.getOffSet(params.range.end) - offset
-				return formatterService.format(resource, document, offset, length)
+				return Lists.newArrayList(formatterService.format(resource, document, offset, length))
 			]  
 		]
 	}

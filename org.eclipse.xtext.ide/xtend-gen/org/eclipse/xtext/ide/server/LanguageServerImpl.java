@@ -10,6 +10,7 @@ package org.eclipse.xtext.ide.server;
 import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.LinkedListMultimap;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.inject.Inject;
 import java.util.ArrayList;
@@ -657,7 +658,8 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
         if (((length == 0) || resource.getContents().isEmpty())) {
           return CollectionLiterals.<TextEdit>emptyList();
         }
-        return formatterService.format(resource, document, offset, length);
+        List<TextEdit> _format = formatterService.format(resource, document, offset, length);
+        return Lists.<TextEdit>newArrayList(_format);
       };
       return this.workspaceManager.<List<? extends TextEdit>>doRead(uri, _function_1);
     };
@@ -679,7 +681,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
       if ((formatterService == null)) {
         return Collections.<TextEdit>emptyList();
       }
-      final Function2<Document, XtextResource, List<TextEdit>> _function_1 = (Document document, XtextResource resource) -> {
+      final Function2<Document, XtextResource, ArrayList<TextEdit>> _function_1 = (Document document, XtextResource resource) -> {
         Range _range = params.getRange();
         Position _start = _range.getStart();
         final int offset = document.getOffSet(_start);
@@ -687,7 +689,8 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
         Position _end = _range_1.getEnd();
         int _offSet = document.getOffSet(_end);
         final int length = (_offSet - offset);
-        return formatterService.format(resource, document, offset, length);
+        List<TextEdit> _format = formatterService.format(resource, document, offset, length);
+        return Lists.<TextEdit>newArrayList(_format);
       };
       return this.workspaceManager.<List<? extends TextEdit>>doRead(uri, _function_1);
     };
