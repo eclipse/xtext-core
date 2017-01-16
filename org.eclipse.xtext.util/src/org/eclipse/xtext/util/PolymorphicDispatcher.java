@@ -22,6 +22,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.google.common.base.Function;
+import com.google.common.base.Joiner;
 import com.google.common.base.Predicate;
 
 /**
@@ -224,13 +225,12 @@ public class PolymorphicDispatcher<RT> {
 		for (int i = 0; i < paramTypes1.size(); i++) {
 			final Class<?> class1 = paramTypes1.get(i);
 			final Class<?> class2 = paramTypes2.get(i);
-
-			if (class1.equals(class2))
-				continue;
-			if (class1.isAssignableFrom(class2) || Void.class.equals(class2))
-				return -1;
-			if (class2.isAssignableFrom(class1) || Void.class.equals(class1))
-				return 1;
+			
+			int distance1 = getMaxDistanceToObject(class1);
+			int distance2 = getMaxDistanceToObject(class2);
+			if (distance1 != distance2) {
+				return distance1 - distance2;
+			}
 		}
 
 		// sort by declaring class (more specific comes first).
@@ -243,7 +243,28 @@ public class PolymorphicDispatcher<RT> {
 
 		// sort by target
 		final int compareTo = ((Integer) targets.indexOf(o2.target)).compareTo(targets.indexOf(o1.target));
-		return compareTo;
+		if (compareTo != 0) {
+			return compareTo;
+		}
+
+		return 0;
+	}
+	
+	protected int getMaxDistanceToObject(Class<?> type) {
+		if (type == Void.class) {
+			return Integer.MAX_VALUE;
+		}
+		if (type == null || type.isPrimitive() || type == Object.class) {
+			return 0;
+		}
+		int maxDistance = 1 + getMaxDistanceToObject(type.getSuperclass());
+		Class<?>[] ifaces = type.getInterfaces();
+		for (Class<?> iface : ifaces) {
+			int result = 1 + getMaxDistanceToObject(iface);
+			if (result > maxDistance)
+				maxDistance = result;
+		}
+		return maxDistance;
 	}
 
 	private final SimpleCache<List<Class<?>>, List<MethodDesc>> cache =
@@ -310,7 +331,8 @@ public class PolymorphicDispatcher<RT> {
 	}
 
 	protected RT handleAmbigousMethods(List<MethodDesc> result, Object... params) {
-		throw new IllegalStateException("Ambiguous methods " + result + " for params " + Arrays.toString(params));
+		String joined = Joiner.on("\n  ").join(result);
+		throw new IllegalStateException("Ambiguous methods:\n  " + joined + "\nfor params " + Arrays.toString(params));
 	}
 
 	/**
