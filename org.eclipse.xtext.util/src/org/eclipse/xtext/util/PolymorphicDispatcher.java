@@ -353,7 +353,23 @@ public class PolymorphicDispatcher<RT> {
 		Collections.sort(cachedDescriptors, new Comparator<MethodDesc>() {
 			@Override
 			public int compare(MethodDesc o1, MethodDesc o2) {
-				return PolymorphicDispatcher.this.compare(o1, o2);
+				int compare = PolymorphicDispatcher.this.compare(o1, o2);
+				if (compare != 0) {
+					return compare;
+				}
+				Class<?>[] p1 = o1.getParameterTypes();
+				Class<?>[] p2 = o2.getParameterTypes();
+				int to = Math.min(p1.length, p2.length);
+
+				for (int i = 0; i < to; i++) {
+					final String n1 = p1[i].getName();
+					final String n2 = p2[i].getName();
+					compare = n1.compareTo(n2);
+					if (compare != 0) {
+						return compare;
+					}
+				}
+				return compare;
 			}
 		});
 		return cachedDescriptors;
