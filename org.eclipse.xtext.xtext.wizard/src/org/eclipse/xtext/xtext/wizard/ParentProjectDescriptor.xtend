@@ -154,7 +154,7 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 			}
 			
 			sourceSets.all {
-				resources.exclude '**/*.g', '**/*.xtext', '**/*.mwe2', '**/*.xtend', '**/*._trace'
+				resources.exclude '**/*.g', '**/*.mwe2', '**/*.xtend', '**/*._trace'
 			}
 		«ELSE»
 			sourceSets {
