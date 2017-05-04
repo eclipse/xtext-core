@@ -228,16 +228,10 @@ public class TextReplacerContext implements ITextReplacerContext {
 			request.getExceptionHandler().accept(exception);
 			return;
 		}
-		if (!isInRequestedRange(replacement)) {
+		if (!isInRequestedRange(replacement) ||
+			(!request.allowIdentityEdits() && isIdentityEdit(replacement)) ||
+			(!isInUndefinedRegion(replacement) && request.isFormatUndefinedHiddenRegionsOnly())) {
 			return;
-		}
-		if (!isInUndefinedRegion(replacement)) {
-			if (request.isFormatUndefinedHiddenRegionsOnly()) {
-				return;
-			}
-			if (!request.allowIdentityEdits() && isIdentityEdit(replacement)) {
-				return;
-			}
 		}
 		try {
 			replacements.add(replacement);
