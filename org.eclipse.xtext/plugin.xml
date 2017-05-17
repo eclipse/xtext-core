@@ -22,6 +22,11 @@
        class = "org.eclipse.xtext.XtextPackage"
        genModel = "org/eclipse/xtext/Xtext.genmodel" /> 
   </extension>
-
-
+  <extension
+       point="org.eclipse.emf.ecore.extension_parser">
+    <parser
+       class="org.eclipse.xtext.resource.impl.BinaryGrammarResourceFactoryImpl"
+       type="xtextbin">
+    </parser>
+  </extension>
 </plugin>
