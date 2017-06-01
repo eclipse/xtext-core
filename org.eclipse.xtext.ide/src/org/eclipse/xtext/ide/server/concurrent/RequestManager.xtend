@@ -24,8 +24,8 @@ import org.eclipse.xtext.util.CancelIndicator
  * @since 2.11
  */
 class RequestManager {
-    
-    static val LOGGER = Logger.getLogger(RequestManager)
+
+	static val LOGGER = Logger.getLogger(RequestManager)
 
 	val final MAX_PERMITS = Integer.MAX_VALUE
 
@@ -43,7 +43,6 @@ class RequestManager {
 		executorService.shutdown()
 	}
 
-
 	/**
 	 * <p>
 	 * The given <i>write request</i> will be run first when <i>all running requests</i> completed.
@@ -58,22 +57,21 @@ class RequestManager {
 	 */
 	def <V> CompletableFuture<V> runWrite((CancelIndicator)=>V writeRequest) {
 		try {
-    		semaphore.acquire(MAX_PERMITS)
+			semaphore.acquire(MAX_PERMITS)
 			val result = writeRequest.apply([
 				return false
 			])
 			return CompletableFuture.completedFuture(result);
 		} catch (Throwable t) {
-            if (isCancelException(t)) {
-            	LOGGER.info("request cancelled.")
-            	throw new CancellationException()
-            }
-            throw t
+			if (isCancelException(t)) {
+				LOGGER.info("request cancelled.")
+				throw new CancellationException()
+			}
+			throw t
 		} finally {
 			semaphore.release(MAX_PERMITS)
 		}
 	}
-
 
 	/**
 	 * <p>
@@ -87,33 +85,33 @@ class RequestManager {
 	 * </p>
 	 */
 	def <V> CompletableFuture<V> runRead((CancelIndicator)=>V readRequest) {
+		semaphore.acquire(1)
 		return CompletableFutures.computeAsync(executorService) [
 			val cancelIndicator = new RequestCancelIndicator(it)
 			cancelIndicators += cancelIndicator
-			semaphore.acquire(1)
 			try {
-    			cancelIndicator.checkCanceled
+				cancelIndicator.checkCanceled
 				return readRequest.apply [
 					cancelIndicator.checkCanceled
 					return false
 				]
 			} catch (Throwable t) {
-	            if (isCancelException(t)) {
-	            	LOGGER.info("request cancelled.")
-	            	throw new CancellationException()
-	            }
-	            throw t
+				if (isCancelException(t)) {
+					LOGGER.info("request cancelled.")
+					throw new CancellationException()
+				}
+				throw t
 			} finally {
 				cancelIndicators -= cancelIndicator
 				semaphore.release(1)
 			}
 		]
 	}
-	
+
 	protected def boolean isCancelException(Throwable t) {
-        if(t === null) return false;
-        val cause = if (t instanceof CompletionException) t.cause else t
-        return operationCanceledManager.isOperationCanceledException(cause);
-    }
+		if(t === null) return false;
+		val cause = if(t instanceof CompletionException) t.cause else t
+		return operationCanceledManager.isOperationCanceledException(cause);
+	}
 
 }
