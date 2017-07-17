@@ -51,9 +51,11 @@ import org.eclipse.lsp4j.TextDocumentSyncKind
 import org.eclipse.lsp4j.TextEdit
 import org.eclipse.lsp4j.WorkspaceSymbolParams
 import org.eclipse.lsp4j.jsonrpc.Endpoint
+import org.eclipse.lsp4j.jsonrpc.ResponseErrorException
 import org.eclipse.lsp4j.jsonrpc.json.JsonRpcMethod
 import org.eclipse.lsp4j.jsonrpc.json.JsonRpcMethodProvider
 import org.eclipse.lsp4j.jsonrpc.messages.Either
+import org.eclipse.lsp4j.jsonrpc.messages.ResponseErrorCode
 import org.eclipse.lsp4j.jsonrpc.services.ServiceEndpoints
 import org.eclipse.lsp4j.services.LanguageClient
 import org.eclipse.lsp4j.services.LanguageClientAware
@@ -527,12 +529,21 @@ import org.eclipse.xtext.validation.Issue
 	ILanguageServerAccess access = new ILanguageServerAccess () {
 		
 		override <T> doRead(String uri, Function<Context, T> function) {
+			try {
 				requestManager.runRead [ cancelIndicator |
 					workspaceManager.doRead(uri.toUri) [ document, resource |
 						val ctx = new Context(resource, document, workspaceManager.isDocumentOpen(resource.URI), cancelIndicator)
 						return function.apply(ctx)
 					]
 				]
+			} catch (ResponseErrorException exception) {
+				switch exception.responseError.code {
+					case ResponseErrorCode.serverNotInitialized.value:
+						throw new IllegalStateException(exception.message, exception)
+					default:
+						throw exception
+				}
+			}
 		}
 		
 		override addBuildListener(IBuildListener listener) {
