@@ -123,17 +123,19 @@ public interface ILanguageServerAccess {
   }
   
   /**
-   * provides read access to a fully resolved resource and Document.
+   * Provides read access to a fully resolved resource and Document.
+   * 
+   * @throws IllegalStateException if the language server is not initialized yet
    */
   public abstract <T extends Object> CompletableFuture<T> doRead(final String uri, final Function<ILanguageServerAccess.Context, T> function);
   
   /**
-   * registers a build listener on the this language server
+   * Registers a build listener on the this language server.
    */
   public abstract void addBuildListener(final ILanguageServerAccess.IBuildListener listener);
   
   /**
-   * returns the language client facade. It usually also implements Endpoint, which can be used to
+   * Returns the language client facade. It usually also implements Endpoint, which can be used to
    * call non-standard extensions to the LSP.
    */
   public abstract LanguageClient getLanguageClient();

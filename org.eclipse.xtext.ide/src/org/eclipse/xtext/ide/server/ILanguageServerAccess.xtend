@@ -33,7 +33,9 @@ interface ILanguageServerAccess {
 	}
 
 	/**
-	 * provides read access to a fully resolved resource and Document.
+	 * Provides read access to a fully resolved resource and Document.
+	 * 
+	 * @throws IllegalStateException if the language server is not initialized yet
 	 */
 	def <T> CompletableFuture<T> doRead(String uri, Function<Context, T> function)
 	
@@ -42,12 +44,12 @@ interface ILanguageServerAccess {
 	}
 
 	/**
-	 * registers a build listener on the this language server
+	 * Registers a build listener on the this language server.
 	 */
 	def void addBuildListener(IBuildListener listener)
 	
 	/**
-	 * returns the language client facade. It usually also implements Endpoint, which can be used to
+	 * Returns the language client facade. It usually also implements Endpoint, which can be used to
 	 * call non-standard extensions to the LSP.
 	 */
 	def LanguageClient getLanguageClient();

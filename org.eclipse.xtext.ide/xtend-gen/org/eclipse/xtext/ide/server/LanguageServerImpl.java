@@ -69,9 +69,11 @@ import org.eclipse.lsp4j.TextEdit;
 import org.eclipse.lsp4j.WorkspaceEdit;
 import org.eclipse.lsp4j.WorkspaceSymbolParams;
 import org.eclipse.lsp4j.jsonrpc.Endpoint;
+import org.eclipse.lsp4j.jsonrpc.ResponseErrorException;
 import org.eclipse.lsp4j.jsonrpc.json.JsonRpcMethod;
 import org.eclipse.lsp4j.jsonrpc.json.JsonRpcMethodProvider;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
+import org.eclipse.lsp4j.jsonrpc.messages.ResponseErrorCode;
 import org.eclipse.lsp4j.jsonrpc.services.ServiceEndpoints;
 import org.eclipse.lsp4j.services.LanguageClient;
 import org.eclipse.lsp4j.services.LanguageClientAware;
@@ -775,15 +777,34 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
   private ILanguageServerAccess access = new ILanguageServerAccess() {
     @Override
     public <T extends Object> CompletableFuture<T> doRead(final String uri, final Function<ILanguageServerAccess.Context, T> function) {
-      final Function1<CancelIndicator, T> _function = (CancelIndicator cancelIndicator) -> {
-        final Function2<Document, XtextResource, T> _function_1 = (Document document, XtextResource resource) -> {
-          boolean _isDocumentOpen = LanguageServerImpl.this.workspaceManager.isDocumentOpen(resource.getURI());
-          final ILanguageServerAccess.Context ctx = new ILanguageServerAccess.Context(resource, document, _isDocumentOpen, cancelIndicator);
-          return function.apply(ctx);
+      CompletableFuture<T> _xtrycatchfinallyexpression = null;
+      try {
+        final Function1<CancelIndicator, T> _function = (CancelIndicator cancelIndicator) -> {
+          final Function2<Document, XtextResource, T> _function_1 = (Document document, XtextResource resource) -> {
+            boolean _isDocumentOpen = LanguageServerImpl.this.workspaceManager.isDocumentOpen(resource.getURI());
+            final ILanguageServerAccess.Context ctx = new ILanguageServerAccess.Context(resource, document, _isDocumentOpen, cancelIndicator);
+            return function.apply(ctx);
+          };
+          return LanguageServerImpl.this.workspaceManager.<T>doRead(LanguageServerImpl.this._uriExtensions.toUri(uri), _function_1);
         };
-        return LanguageServerImpl.this.workspaceManager.<T>doRead(LanguageServerImpl.this._uriExtensions.toUri(uri), _function_1);
-      };
-      return LanguageServerImpl.this.requestManager.<T>runRead(_function);
+        _xtrycatchfinallyexpression = LanguageServerImpl.this.requestManager.<T>runRead(_function);
+      } catch (final Throwable _t) {
+        if (_t instanceof ResponseErrorException) {
+          final ResponseErrorException exception = (ResponseErrorException)_t;
+          int _code = exception.getResponseError().getCode();
+          boolean _matched = false;
+          int _value = ResponseErrorCode.serverNotInitialized.getValue();
+          if (Objects.equal(_code, _value)) {
+            _matched=true;
+            String _message = exception.getMessage();
+            throw new IllegalStateException(_message, exception);
+          }
+          throw exception;
+        } else {
+          throw Exceptions.sneakyThrow(_t);
+        }
+      }
+      return _xtrycatchfinallyexpression;
     }
     
     @Override

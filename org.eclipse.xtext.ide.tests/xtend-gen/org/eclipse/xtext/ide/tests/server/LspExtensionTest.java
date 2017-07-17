@@ -7,9 +7,13 @@
  */
 package org.eclipse.xtext.ide.tests.server;
 
+import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.lsp4j.DidOpenTextDocumentParams;
 import org.eclipse.lsp4j.TextDocumentItem;
+import org.eclipse.lsp4j.jsonrpc.ResponseErrorException;
+import org.eclipse.lsp4j.jsonrpc.messages.ResponseErrorCode;
 import org.eclipse.lsp4j.jsonrpc.services.ServiceEndpoints;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.ide.tests.server.AbstractTestLangLanguageServerTest;
@@ -69,6 +73,37 @@ public class LspExtensionTest extends AbstractTestLangLanguageServerTest {
       Assert.assertEquals(2, IterableExtensions.size(Iterables.<TestLangLSPExtension.BuildNotification>filter(ListExtensions.<Pair<String, Object>, Object>map(this.notifications, _function_2), TestLangLSPExtension.BuildNotification.class)));
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
+    }
+  }
+  
+  @Test
+  public void testMissingInitialize() {
+    try {
+      final String fileURI = this.writeFile("mydoc.testlang", "");
+      final TestLangLSPExtension ext = ServiceEndpoints.<TestLangLSPExtension>toServiceObject(this.languageServer, TestLangLSPExtension.class);
+      TestLangLSPExtension.TextOfLineParam _textOfLineParam = new TestLangLSPExtension.TextOfLineParam();
+      final Procedure1<TestLangLSPExtension.TextOfLineParam> _function = (TestLangLSPExtension.TextOfLineParam it) -> {
+        it.uri = fileURI;
+        it.line = 1;
+      };
+      TestLangLSPExtension.TextOfLineParam _doubleArrow = ObjectExtensions.<TestLangLSPExtension.TextOfLineParam>operator_doubleArrow(_textOfLineParam, _function);
+      ext.getTextOfLine(_doubleArrow).get();
+      Assert.fail("Expected an exception");
+    } catch (final Throwable _t) {
+      if (_t instanceof Exception) {
+        final Exception exception = (Exception)_t;
+        Throwable t = exception;
+        while (((t instanceof InvocationTargetException) || Objects.equal(t.getClass(), RuntimeException.class))) {
+          t = t.getCause();
+        }
+        Assert.assertTrue((t instanceof IllegalStateException));
+        Throwable _cause = t.getCause();
+        Assert.assertTrue((_cause instanceof ResponseErrorException));
+        Throwable _cause_1 = t.getCause();
+        Assert.assertEquals(ResponseErrorCode.serverNotInitialized.getValue(), ((ResponseErrorException) _cause_1).getResponseError().getCode());
+      } else {
+        throw Exceptions.sneakyThrow(_t);
+      }
     }
   }
 }
