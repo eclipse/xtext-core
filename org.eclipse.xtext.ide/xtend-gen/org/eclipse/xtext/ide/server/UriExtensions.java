@@ -8,6 +8,7 @@
 package org.eclipse.xtext.ide.server;
 
 import com.google.inject.Singleton;
+import java.net.URLDecoder;
 import java.nio.file.FileSystemNotFoundException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -33,15 +34,19 @@ public class UriExtensions {
   
   public String toPath(final java.net.URI uri) {
     try {
-      final Path path = Paths.get(uri);
-      return path.toUri().toString();
-    } catch (final Throwable _t) {
-      if (_t instanceof FileSystemNotFoundException) {
-        final FileSystemNotFoundException e = (FileSystemNotFoundException)_t;
-        return uri.toString();
-      } else {
-        throw Exceptions.sneakyThrow(_t);
+      try {
+        final Path path = Paths.get(uri.getPath());
+        return URLDecoder.decode(path.toUri().toString(), "UTF-8");
+      } catch (final Throwable _t) {
+        if (_t instanceof FileSystemNotFoundException) {
+          final FileSystemNotFoundException e = (FileSystemNotFoundException)_t;
+          return uri.toString();
+        } else {
+          throw Exceptions.sneakyThrow(_t);
+        }
       }
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
     }
   }
 }

@@ -11,6 +11,8 @@ import com.google.inject.Singleton
 import java.nio.file.FileSystemNotFoundException
 import java.nio.file.Paths
 import org.eclipse.emf.common.util.URI
+import java.net.URLDecoder
+import java.io.File
 
 /**
  * @author kosyakov - Initial contribution and API
@@ -31,8 +33,8 @@ class UriExtensions {
 
 	def String toPath(java.net.URI uri) {
 		try {
-			val path = Paths.get(uri)
-			return path.toUri.toString
+			val path = Paths.get(uri.path)
+			return URLDecoder.decode(path.toUri.toString, "UTF-8");
 		} catch (FileSystemNotFoundException e) {
 			return uri.toString
 		}
