@@ -11,6 +11,7 @@ import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -138,18 +139,45 @@ public class FormatterTestHelper {
 	protected void assertReplacementsAreInRegion(List<ITextReplacement> rep, Collection<ITextRegion> regions,
 			String doc) {
 		Set<ITextReplacement> invalid = Sets.newHashSet();
-		ALLOWED: for (ITextRegion allowed : regions)
-			for (ITextReplacement r : rep) {
-				if (allowed.contains(r))
+		ALLOWED: for (ITextRegion region : regions) {
+			Iterator<ITextReplacement> iterator = rep.iterator();
+			while (iterator.hasNext()) {
+				ITextReplacement replacement = iterator.next();
+				if (region.contains(replacement) || doIntersect(region, replacement))
 					continue ALLOWED;
-				invalid.add(r);
+				
+				if(!iterator.hasNext())
+					invalid.add(replacement);
 			}
+		}
+		
 		if (!invalid.isEmpty()) {
 			String visualized = new TextRegionsToString().addAllReplacements(invalid).toString();
 			fail("One or more TextReplacements are outside of the allowed region. Region: " + regions, visualized);
 		}
 	}
 
+	private boolean doIntersect(ITextRegion allowed, ITextReplacement replacement) {
+		int allowedOffset = allowed.getOffset();
+		int replacementOffset = replacement.getEndOffset();
+
+		if(allowedOffset == replacementOffset) {
+			return true;
+		}
+		else if(allowedOffset < replacementOffset) {
+			if(replacementOffset < (allowedOffset + allowed.getLength())) {
+				return true;
+			}
+		}
+		else { // if(allowedOffset > replacementOffset)
+			if(allowedOffset < (replacementOffset + replacement.getLength())) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
 	protected IFormatter2 createFormatter(FormatterTestRequest request) {
 		checkNotNull(formatter, "There is a Guice Binding missing for " + IFormatter2.class.getName());
 		return formatter.get();

@@ -181,12 +181,34 @@ public class TextReplacerContext implements ITextReplacerContext {
 
 	protected boolean isInRequestedRange(ITextReplacement repl) {
 		Collection<ITextRegion> regions = document.getRequest().getRegions();
-		if (regions.isEmpty())
+		if(regions.isEmpty())
 			return true;
-		for (org.eclipse.xtext.util.ITextRegion region : regions)
-			if (region.getOffset() <= repl.getOffset()
-					&& region.getOffset() + region.getLength() >= repl.getEndOffset())
+		for(ITextRegion allowed : regions) {
+			if(allowed.contains(repl) || doIntersect(allowed, repl)) {
 				return true;
+			}
+		}
+		return false;
+	}
+	
+	private boolean doIntersect(ITextRegion allowed, ITextReplacement replacement) {
+		int allowedOffset = allowed.getOffset();
+		int replacementOffset = replacement.getEndOffset();
+
+		if(allowedOffset == replacementOffset) {
+			return true;
+		}
+		else if(allowedOffset < replacementOffset) {
+			if(replacementOffset < (allowedOffset + allowed.getLength())) {
+				return true;
+			}
+		}
+		else { // if(allowedOffset > replacementOffset)
+			if(allowedOffset < (replacementOffset + replacement.getLength())) {
+				return true;
+			}
+		}
+		
 		return false;
 	}
 
