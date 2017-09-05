@@ -11,6 +11,7 @@ import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -19,6 +20,7 @@ import org.eclipse.xtext.formatting2.FormatterRequest;
 import org.eclipse.xtext.formatting2.IFormatter2;
 import org.eclipse.xtext.formatting2.debug.TextRegionAccessToString;
 import org.eclipse.xtext.formatting2.debug.TextRegionsToString;
+import org.eclipse.xtext.formatting2.internal.TextReplacerContext;
 import org.eclipse.xtext.formatting2.regionaccess.IHiddenRegion;
 import org.eclipse.xtext.formatting2.regionaccess.ITextRegionAccess;
 import org.eclipse.xtext.formatting2.regionaccess.ITextReplacement;
@@ -138,12 +140,17 @@ public class FormatterTestHelper {
 	protected void assertReplacementsAreInRegion(List<ITextReplacement> rep, Collection<ITextRegion> regions,
 			String doc) {
 		Set<ITextReplacement> invalid = Sets.newHashSet();
-		ALLOWED: for (ITextRegion allowed : regions)
-			for (ITextReplacement r : rep) {
-				if (allowed.contains(r))
+		ALLOWED: for (ITextRegion region : regions) {
+			Iterator<ITextReplacement> iterator = rep.iterator();
+			while (iterator.hasNext()) {
+				ITextReplacement replacement = iterator.next();
+				if (region.contains(replacement) || TextReplacerContext.doIntersect(region, replacement))
 					continue ALLOWED;
-				invalid.add(r);
+				
+				invalid.add(replacement);
 			}
+		}
+		
 		if (!invalid.isEmpty()) {
 			String visualized = new TextRegionsToString().addAllReplacements(invalid).toString();
 			fail("One or more TextReplacements are outside of the allowed region. Region: " + regions, visualized);
