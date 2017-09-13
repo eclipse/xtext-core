@@ -8,13 +8,8 @@
 package org.eclipse.xtext.ide.server;
 
 import com.google.inject.Singleton;
-import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.FileSystemNotFoundException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.regex.Pattern;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.xtext.xbase.lib.Exceptions;
 
 /**
  * @author kosyakov - Initial contribution and API
@@ -23,39 +18,60 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 @Singleton
 @SuppressWarnings("all")
 public class UriExtensions {
+  /**
+   * Pattern for the {@code file:/} scheme.
+   */
+  private final static Pattern FILE_SCHEME_1_PATTERN = Pattern.compile("^file:\\/[^\\/].*");
+  
+  /**
+   * Pattern for the {@code file://} scheme.
+   */
+  private final static Pattern FILE_SCHEME_2_PATTERN = Pattern.compile("^file:\\/\\/[^\\/].*");
+  
+  /**
+   * Converts a URI (given as a string) into an EMF URI.
+   * 
+   * <p>
+   * If the argument URI has a {@code file} scheme, it makes sure that the {@code file} scheme
+   * is followed by three forward-slashes. Leaves other schemes untouched.
+   */
   public URI toUri(final String pathWithScheme) {
-    String path = URI.createURI(pathWithScheme).path();
-    return URI.createURI(this.toPath(path));
-  }
-  
-  public String toPath(final URI uri) {
-    return URI.createURI(this.toPath(uri.path())).toString();
-  }
-  
-  public String toPath(final java.net.URI uri) {
-    return this.toPath(uri.getPath());
+    return URI.createURI(this.adjustURI(pathWithScheme));
   }
   
   /**
-   * We need to check if current path represents directory in file system
-   * and need to add trailing slash if path represents directory.
+   * Converts the EMF URI argument into a string path.
    */
-  private String toPath(final String uri) {
-    try {
-      try {
-        final Path path = Paths.get(uri);
-        return URLDecoder.decode(path.toUri().toString(), StandardCharsets.UTF_8.name());
-      } catch (final Throwable _t) {
-        if (_t instanceof FileSystemNotFoundException) {
-          final FileSystemNotFoundException e = (FileSystemNotFoundException)_t;
-          return uri;
-        } else {
-          throw Exceptions.sneakyThrow(_t);
-        }
+  public String toPath(final URI uri) {
+    return this.adjustURI(uri.toString());
+  }
+  
+  /**
+   * Converts the {@code java.net} URI argument into a string path.
+   */
+  public String toPath(final java.net.URI uri) {
+    return this.toPath(URI.createURI(uri.toString()));
+  }
+  
+  /**
+   * Ensures that the {@code file} URI scheme is followed by three (forward) slashes.
+   * Returns with the argument if the URI does not start with a {@code file} scheme.
+   */
+  private String adjustURI(final String uri) {
+    String _xifexpression = null;
+    boolean _matches = UriExtensions.FILE_SCHEME_1_PATTERN.matcher(uri).matches();
+    if (_matches) {
+      _xifexpression = uri.replaceFirst("file:/", "file:///");
+    } else {
+      String _xifexpression_1 = null;
+      boolean _matches_1 = UriExtensions.FILE_SCHEME_2_PATTERN.matcher(uri).matches();
+      if (_matches_1) {
+        _xifexpression_1 = uri.replaceFirst("file://", "file:///");
+      } else {
+        _xifexpression_1 = uri;
       }
-    } catch (Throwable _e) {
-      throw Exceptions.sneakyThrow(_e);
+      _xifexpression = _xifexpression_1;
     }
+    return _xifexpression;
   }
 }
-
