@@ -54,17 +54,17 @@ public class ChangeSerializerTestHelper {
   
   public void operator_tripleEquals(final Collection<IEmfResourceChange> actual, final CharSequence expected) {
     final String actualString = new TextDocumentChangeToString().add(actual).toString();
-    Assert.assertEquals(expected.toString().trim(), actualString.trim());
+    Assert.assertEquals(expected.toString().trim().replaceAll("\r\n", "\n"), actualString.trim().replaceAll("\r\n", "\n"));
   }
   
   public void operator_tripleEquals(final ITextRegionAccess actual, final CharSequence expected) {
     final String actualString = new TextRegionAccessToString().withRegionAccess(actual).hideColumnExplanation().toString();
-    Assert.assertEquals(expected.toString().trim(), actualString.trim());
+    Assert.assertEquals(expected.toString().trim().replaceAll("\r\n", "\n"), actualString.trim().replaceAll("\r\n", "\n"));
   }
   
   public void operator_add(final InMemoryURIHandler handler, final Pair<String, String> file) {
     final InMemoryURIHandler.InMemFile f = handler.getInMemoryFile(URI.createURI(file.getKey()));
-    f.setContents(file.getValue().getBytes());
+    f.setContents(file.getValue().replaceAll("\r\n", "\n").getBytes());
     f.setExists(true);
   }
   
