@@ -40,17 +40,17 @@ class ChangeSerializerTestHelper {
 
 	def void ===(Collection<IEmfResourceChange> actual, CharSequence expected) {
 		val actualString = new TextDocumentChangeToString().add(actual).toString
-		Assert.assertEquals(expected.toString.trim, actualString.trim)
+		Assert.assertEquals(expected.toString.trim.replaceAll("\r\n","\n"), actualString.trim.replaceAll("\r\n","\n"))
 	}
 
 	def void ===(ITextRegionAccess actual, CharSequence expected) {
 		val actualString = new TextRegionAccessToString().withRegionAccess(actual).hideColumnExplanation().toString
-		Assert.assertEquals(expected.toString.trim, actualString.trim)
+		Assert.assertEquals(expected.toString.trim.replaceAll("\r\n","\n"), actualString.trim.replaceAll("\r\n","\n"))
 	}
 
 	def void +=(InMemoryURIHandler handler, Pair<String, String> file) {
 		val f = handler.getInMemoryFile(URI.createURI(file.key))
-		f.contents = file.value.bytes
+		f.contents = file.value.replaceAll("\r\n","\n").bytes
 		f.exists = true
 	}
 
