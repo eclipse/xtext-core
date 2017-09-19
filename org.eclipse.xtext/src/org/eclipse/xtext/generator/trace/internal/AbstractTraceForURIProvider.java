@@ -214,13 +214,22 @@ public abstract class AbstractTraceForURIProvider<SomeFile, Trace extends Abstra
 	@Override
 	public Trace getTraceToTarget(final AbsoluteURI absoluteSourceResource, IProjectConfig project) {
 		final SomeFile sourceFile = asFile(absoluteSourceResource, project);
-		return getTraceToTarget(sourceFile, absoluteSourceResource, getProjectConfig(sourceFile));
+		IProjectConfig sourceProjectConfig = getProjectConfig(sourceFile);
+		if (sourceProjectConfig != null) {
+			return getTraceToTarget(sourceFile, absoluteSourceResource, sourceProjectConfig);
+		} else {
+			return null;
+		}
 	}
 
 	@Override
 	public Trace getTraceToTarget(SourceRelativeURI srcRelativeSourceResource, IProjectConfig project) {
 		final SomeFile sourceFile = asFile(srcRelativeSourceResource, project);
-		return getTraceToTarget(sourceFile, getAbsoluteLocation(sourceFile), project);
+		if (project != null) {
+			return getTraceToTarget(sourceFile, getAbsoluteLocation(sourceFile), project);
+		} else {
+			return null;
+		}
 	}
 	
 	public Trace getTraceToTarget(final SomeFile sourceFile, final AbsoluteURI absoluteSourceResource, final IProjectConfig projectConfig) {
