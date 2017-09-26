@@ -7,6 +7,7 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.server
 
+import static org.eclipse.xtext.diagnostics.Severity.*
 import com.google.common.collect.LinkedListMultimap
 import com.google.common.collect.Multimap
 import com.google.inject.Inject
@@ -180,7 +181,7 @@ import org.eclipse.xtext.ide.server.commands.ExecutableCommandRegistry
 	@Deprecated
 	private def URI deprecatedToBaseDir(InitializeParams params) {
 		if (params.rootPath !== null) {
-			return URI.createFileURI(params.rootPath).toPath.toUri
+			return URI.createFileURI(params.rootPath).toUriString.toUri
 		}
 		return null
 	}
@@ -282,8 +283,8 @@ import org.eclipse.xtext.ide.server.commands.ExecutableCommandRegistry
 
 	private def void publishDiagnostics(URI uri, Iterable<? extends Issue> issues) {
 		val diagnostics = new PublishDiagnosticsParams => [
-			it.uri = toPath(uri)
-			it.diagnostics = issues.map[toDiagnostic].toList
+			it.uri = toUriString(uri)
+			it.diagnostics = issues.filter[severity !== IGNORE].map[toDiagnostic].toList
 		]
 		client.publishDiagnostics(diagnostics)
 	}
