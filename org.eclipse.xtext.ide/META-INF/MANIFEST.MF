@@ -42,6 +42,7 @@ Export-Package: org.eclipse.xtext.ide;x-friends:="org.eclipse.xtend.ide",
  org.eclipse.xtext.ide.server.formatting,
  org.eclipse.xtext.ide.server.hover,
  org.eclipse.xtext.ide.server.occurrences,
+ org.eclipse.xtext.ide.server.rename,
  org.eclipse.xtext.ide.server.signatureHelp,
  org.eclipse.xtext.ide.server.symbol,
  org.eclipse.xtext.ide.util
