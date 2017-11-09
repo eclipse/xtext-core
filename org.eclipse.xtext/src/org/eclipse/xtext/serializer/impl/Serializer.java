@@ -52,7 +52,11 @@ public class Serializer implements ISerializer {
 
 	@Override
 	public String serialize(EObject obj) {
-		return serialize(obj, SaveOptions.defaultOptions());
+		if (obj == null) {
+			throw new IllegalArgumentException("serialize(EObject obj) must not be called with null as argument.");
+		} else {
+			return serialize(obj, SaveOptions.defaultOptions());
+		}
 	}
 
 	@Inject(optional = true)
@@ -130,6 +134,10 @@ public class Serializer implements ISerializer {
 	}
 
 	public ITextRegionAccess serializeToRegions(EObject obj) {
+		if (obj == null) {
+			throw new IllegalArgumentException(
+					"serializeToRegions(EObject obj) must not be called with null as argument.");
+		}
 		ISerializationContext context = getIContext(obj);
 		TextRegionAccessBuilder builder = textRegionBuilderProvider.get();
 		ISerializationDiagnostic.Acceptor errors = ISerializationDiagnostic.EXCEPTION_THROWING_ACCEPTOR;
@@ -168,6 +176,10 @@ public class Serializer implements ISerializer {
 
 	@Override
 	public String serialize(EObject obj, SaveOptions options) {
+		if (obj == null || options == null) {
+			throw new IllegalArgumentException(
+					"serialize(EObject obj, SaveOptions options) must not be called with null as any argument.");
+		}
 		try {
 			if (formatter2Provider != null) {
 				StringBuilder builder = new StringBuilder();
@@ -185,6 +197,10 @@ public class Serializer implements ISerializer {
 
 	@Override
 	public void serialize(EObject obj, Writer writer, SaveOptions options) throws IOException {
+		if (obj == null || writer == null || options == null) {
+			throw new IllegalArgumentException(
+					"serialize(EObject obj, SaveOptions options) must not be called with null as any argument.");
+		}
 		if (formatter2Provider != null) {
 			serialize(obj, (Appendable) writer, options);
 			writer.flush();
