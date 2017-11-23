@@ -25,9 +25,9 @@ import org.eclipse.xtext.util.XtextSwitch;
 
 public class TerminalRuleToLexerBody extends XtextSwitch<String>{
 
-	private final StringBuilder result;
+	protected final StringBuilder result;
 
-	private TerminalRuleToLexerBody() {
+	protected TerminalRuleToLexerBody() {
 		this.result = new StringBuilder();
 	}
 
