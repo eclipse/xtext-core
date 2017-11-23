@@ -554,7 +554,7 @@ import org.eclipse.lsp4j.WorkspaceEdit
 	
 	override executeCommand(ExecuteCommandParams params) {
 		return requestManager.runRead[ cancelIndicator |
-			this.commandRegistry.executeCommand(params, this.access, cancelIndicator)
+			this.commandRegistry.executeCommand(params, this.access, cancelIndicator) ?: new Object()
 		]
 	}
 
