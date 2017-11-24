@@ -831,7 +831,15 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
   @Override
   public CompletableFuture<Object> executeCommand(final ExecuteCommandParams params) {
     final Function1<CancelIndicator, Object> _function = (CancelIndicator cancelIndicator) -> {
-      return this.commandRegistry.executeCommand(params, this.access, cancelIndicator);
+      Object _elvis = null;
+      Object _executeCommand = this.commandRegistry.executeCommand(params, this.access, cancelIndicator);
+      if (_executeCommand != null) {
+        _elvis = _executeCommand;
+      } else {
+        Object _object = new Object();
+        _elvis = _object;
+      }
+      return _elvis;
     };
     return this.requestManager.<Object>runRead(_function);
   }
