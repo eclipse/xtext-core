@@ -9,11 +9,15 @@ package org.eclipse.xtext.xtext.generator;
 
 import com.google.inject.Inject;
 import java.io.File;
+import org.eclipse.xtend2.lib.StringConcatenationClient;
 import org.eclipse.xtext.util.Files;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xtext.generator.AbstractXtextGeneratorFragment;
 import org.eclipse.xtext.xtext.generator.CodeConfig;
+import org.eclipse.xtext.xtext.generator.IXtextGeneratorLanguage;
+import org.eclipse.xtext.xtext.generator.model.GuiceModuleAccess;
 import org.eclipse.xtext.xtext.generator.model.IXtextGeneratorFileSystemAccess;
+import org.eclipse.xtext.xtext.generator.model.TypeReference;
 import org.eclipse.xtext.xtext.generator.parser.antlr.Antlr4ToolFacade;
 import org.eclipse.xtext.xtext.generator.parser.antlr.AntlrOptions;
 import org.eclipse.xtext.xtext.generator.parser.antlr.CodebuffAntlrGrammarGenerator;
@@ -40,9 +44,25 @@ public class CodebuffGrammarGeneratorFragment extends AbstractXtextGeneratorFrag
   @Inject
   private CodeConfig codeConfig;
   
+  @Inject
+  private IXtextGeneratorLanguage language;
+  
   @Override
   public void generate() {
     try {
+      GuiceModuleAccess.BindingFactory _bindingFactory = new GuiceModuleAccess.BindingFactory();
+      StringConcatenationClient _client = new StringConcatenationClient() {
+        @Override
+        protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+          _builder.append("binder.bind(String.class).annotatedWith(Names.named(\"COMMENTRULE\")).toInstance(\"RULE_SL_COMMENT\");");
+        }
+      };
+      _bindingFactory.addConfiguredBinding(
+        "CodeBuff", _client).contributeTo(this.language.getRuntimeGenModule());
+      GuiceModuleAccess.BindingFactory _bindingFactory_1 = new GuiceModuleAccess.BindingFactory();
+      TypeReference _typeReference = new TypeReference("org.eclipse.xtext.ui.editor.formatting.IContentFormatterFactory");
+      TypeReference _typeReference_1 = new TypeReference("org.eclipse.xtext.ui.editor.formatting.codebuff.CodebuffContentFormatterFactory");
+      _bindingFactory_1.addTypeToType(_typeReference, _typeReference_1).contributeTo(this.language.getEclipsePluginGenModule());
       final IXtextGeneratorFileSystemAccess fsa = this.getProjectConfig().getRuntime().getSrcGen();
       AntlrOptions _antlrOptions = new AntlrOptions();
       this.generator.generate(this.getGrammar(), _antlrOptions, fsa);
