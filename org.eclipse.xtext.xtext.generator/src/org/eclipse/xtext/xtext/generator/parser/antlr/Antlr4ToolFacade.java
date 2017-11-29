@@ -10,15 +10,27 @@ package org.eclipse.xtext.xtext.generator.parser.antlr;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.tools.JavaCompiler;
+import javax.tools.JavaFileObject;
+import javax.tools.StandardJavaFileManager;
+import javax.tools.ToolProvider;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.WrappedException;
+
+import com.google.common.collect.Lists;
+import com.google.common.io.Files;
 
 public class Antlr4ToolFacade {
 
@@ -32,9 +44,12 @@ public class Antlr4ToolFacade {
 		this.loader = loader;
 	}
 
-	private String downloadURL = "http://www.antlr.org/download/antlr-4.7-complete.jar";
+	private String downloadURL = "http://www.antlr.org/download/antlr-4.5.3-complete.jar";
 	private boolean askBeforeDownload = true;
-
+	
+	public static final String ANTLR4GEN = "antlr4gen";
+	public static final String TARGETFOLDER = ANTLR4GEN + "/target/";
+	
 	public void setAskBeforeDownload(boolean shouldAsk) {
 		this.askBeforeDownload = shouldAsk;
 	}
@@ -43,7 +58,7 @@ public class Antlr4ToolFacade {
 		this.downloadURL = downloadURL;
 	}
 
-	private String downloadTo = "./antlr-4.7-complete.jar";
+	private String downloadTo = "./antlr-4.5.3-complete.jar";
 
 	public void setDownloadTo(String path) {
 		this.downloadTo = path;
@@ -53,10 +68,6 @@ public class Antlr4ToolFacade {
 		return new File(downloadTo);
 	}
 
-	/**
-	 * @noreference This method is not intended to be referenced by clients.
-	 * @since 2.4
-	 */
 	protected String getToolRunnerClassName() {
 		return className;
 	}
@@ -143,23 +154,57 @@ public class Antlr4ToolFacade {
 			ClassLoader myLoader = initializedClassLoader();
 			Thread.currentThread().setContextClassLoader(myLoader);
 			Class<?> class1 = myLoader.loadClass(className);
-			
+
 			if (class1 == null)
 				throw getNoClassFoundException();
 
-			Object[] args = new Object[] { new String[] { grammarFullPath } };
+			Object[] args = new Object[] { new String[] { grammarFullPath, "-o", ANTLR4GEN + "/src-gen/", "-package", "org.antlr.codebuff" } };
 			Constructor<?> constructor = class1.getConstructor(new Class[] { String[].class });
 			Object newInstance = constructor.newInstance(args);
+			log.info("Loading AntLR 4 grammar.");
 			Method loadGrammar = class1.getMethod("loadGrammar", new Class[] { String.class });
 			Object grammar = loadGrammar.invoke(newInstance, grammarFullPath);
 			Method process = class1.getMethod("process", new Class[] { grammar.getClass(), boolean.class });
-			process.invoke(newInstance, grammar, true);
+			log.info("Generate AntLR 4 parser.");
+			//process.invoke(newInstance, grammar, true);
+			// Compile to code to target folder!
+			JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+			File src_gen_folder = new File("./" + ANTLR4GEN + "/src-gen/");
+			ArrayList<File> filesToCompile = Lists.newArrayList();
+			for (File child : src_gen_folder.listFiles(new FilenameFilter() {
 
+				@Override
+				public boolean accept(File dir, String name) {
+					return name.endsWith("java");
+				}
+			})) {
+				filesToCompile.add(child);
+			}
+			StandardJavaFileManager fileManager = compiler.getStandardFileManager(null, null, null);
+			Iterable<? extends JavaFileObject> javaFileObjectsFromFiles = fileManager
+					.getJavaFileObjectsFromFiles(filesToCompile);
+			List<String> optionList = new ArrayList<String>();
+			// set compiler's classpath to be same as the runtime's
+			optionList.addAll(Arrays.asList("-classpath",
+					System.getProperty("java.class.path") + ":" + file().getAbsolutePath(), "-d", TARGETFOLDER));
+			log.info("Compile AntLR 4 Parser.");
+			compiler.getTask(null, fileManager, null, optionList, null, javaFileObjectsFromFiles).call();
+			fileManager.close();
+			for( File child : src_gen_folder.listFiles(new FilenameFilter() {
+
+				@Override
+				public boolean accept(File dir, String name) {
+					return name.endsWith("tokens");
+				}
+			})) {
+				Files.copy(child, new File(TARGETFOLDER + "/org/antlr/codebuff/" + child.getName()));
+			}
 		} catch (Exception e) {
 			throw new WrappedException(e);
 		} finally {
 			Thread.currentThread().setContextClassLoader(contextClassLoader);
 		}
+
 	}
 
 	public boolean isWorkable() {

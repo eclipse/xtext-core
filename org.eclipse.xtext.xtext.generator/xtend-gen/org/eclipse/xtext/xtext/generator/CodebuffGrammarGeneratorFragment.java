@@ -8,6 +8,7 @@
 package org.eclipse.xtext.xtext.generator;
 
 import com.google.inject.Inject;
+import java.io.File;
 import org.eclipse.xtext.xtext.generator.AbstractXtextGeneratorFragment;
 import org.eclipse.xtext.xtext.generator.CodeConfig;
 import org.eclipse.xtext.xtext.generator.model.IXtextGeneratorFileSystemAccess;
@@ -15,6 +16,7 @@ import org.eclipse.xtext.xtext.generator.parser.antlr.Antlr4ToolFacade;
 import org.eclipse.xtext.xtext.generator.parser.antlr.AntlrOptions;
 import org.eclipse.xtext.xtext.generator.parser.antlr.CodebuffAntlrGrammarGenerator;
 import org.eclipse.xtext.xtext.generator.parser.antlr.CodebuffGrammarNaming;
+import org.eclipse.xtext.xtext.generator.parser.antlr.CodebuffToolFacade;
 
 /**
  * @author Holger Schill - Initial contribution and API
@@ -28,6 +30,9 @@ public class CodebuffGrammarGeneratorFragment extends AbstractXtextGeneratorFrag
   private Antlr4ToolFacade antlrTool;
   
   @Inject
+  private CodebuffToolFacade codebuffTool;
+  
+  @Inject
   private CodebuffGrammarNaming naming;
   
   @Inject
@@ -39,9 +44,16 @@ public class CodebuffGrammarGeneratorFragment extends AbstractXtextGeneratorFrag
     AntlrOptions _antlrOptions = new AntlrOptions();
     this.generator.generate(this.getGrammar(), _antlrOptions, fsa);
     String _path = fsa.getPath();
-    String _plus = (_path + "/");
-    String _grammarFileName = this.naming.getParserGrammar(this.getGrammar()).getGrammarFileName();
-    final String fileName = (_plus + _grammarFileName);
-    this.antlrTool.runWithEncodingAndParams(fileName, this.codeConfig.getEncoding());
+    final File file = new File(_path);
+    final IXtextGeneratorFileSystemAccess root = this.getProjectConfig().getRuntime().getRoot();
+    boolean _exists = file.exists();
+    if (_exists) {
+      String _absolutePath = file.getAbsolutePath();
+      String _plus = (_absolutePath + "/");
+      String _grammarFileName = this.naming.getParserGrammar(this.getGrammar()).getGrammarFileName();
+      final String fileName = (_plus + _grammarFileName);
+      this.antlrTool.runWithEncodingAndParams(fileName, this.codeConfig.getEncoding());
+      this.codebuffTool.initializeCodebuff();
+    }
   }
 }

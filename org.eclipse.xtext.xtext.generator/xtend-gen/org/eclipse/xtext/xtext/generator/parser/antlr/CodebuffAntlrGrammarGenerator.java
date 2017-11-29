@@ -41,12 +41,14 @@ public class CodebuffAntlrGrammarGenerator extends AbstractAntlrGrammarGenerator
   
   @Override
   protected CharSequence compileParserHeader(final Grammar it, final AntlrOptions options) {
-    return "";
+    StringConcatenation _builder = new StringConcatenation();
+    return _builder;
   }
   
   @Override
   protected CharSequence compileLexerHeader(final Grammar it, final AntlrOptions options) {
-    return "";
+    StringConcatenation _builder = new StringConcatenation();
+    return _builder;
   }
   
   @Override

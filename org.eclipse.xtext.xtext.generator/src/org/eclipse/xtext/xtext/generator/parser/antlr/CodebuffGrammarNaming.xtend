@@ -24,4 +24,8 @@ class CodebuffGrammarNaming extends GrammarNaming {
 	override protected getGrammarNamePrefix(Grammar it) {
 		"Codebuff"
 	}
+	
+	override  AntlrGrammar getParserGrammar(Grammar it) {
+		new Antlr4Grammar(internalParserPackage, '''«grammarNamePrefix»«IF !combinedGrammar»Parser«ENDIF»''')
+	}
 }

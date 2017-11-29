@@ -7,8 +7,11 @@
  */
 package org.eclipse.xtext.xtext.generator.parser.antlr;
 
+import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.xtext.generator.model.TypeReference;
+import org.eclipse.xtext.xtext.generator.parser.antlr.Antlr4Grammar;
+import org.eclipse.xtext.xtext.generator.parser.antlr.AntlrGrammar;
 import org.eclipse.xtext.xtext.generator.parser.antlr.GrammarNaming;
 
 /**
@@ -29,5 +32,21 @@ public class CodebuffGrammarNaming extends GrammarNaming {
   @Override
   protected String getGrammarNamePrefix(final Grammar it) {
     return "Codebuff";
+  }
+  
+  @Override
+  public AntlrGrammar getParserGrammar(final Grammar it) {
+    String _internalParserPackage = this.getInternalParserPackage(it);
+    StringConcatenation _builder = new StringConcatenation();
+    String _grammarNamePrefix = this.getGrammarNamePrefix(it);
+    _builder.append(_grammarNamePrefix);
+    {
+      boolean _isCombinedGrammar = this.isCombinedGrammar(it);
+      boolean _not = (!_isCombinedGrammar);
+      if (_not) {
+        _builder.append("Parser");
+      }
+    }
+    return new Antlr4Grammar(_internalParserPackage, _builder.toString());
   }
 }

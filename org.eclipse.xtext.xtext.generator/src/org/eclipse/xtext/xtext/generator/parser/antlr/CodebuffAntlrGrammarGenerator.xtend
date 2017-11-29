@@ -27,13 +27,12 @@ class CodebuffAntlrGrammarGenerator extends AbstractAntlrGrammarGenerator {
 		""
 	}
 
-	override protected compileParserHeader(Grammar it, AntlrOptions options) {
-		""
-	}
+	override protected compileParserHeader(Grammar it, AntlrOptions options) '''
+	'''
+	
 
-	override protected compileLexerHeader(Grammar it, AntlrOptions options) {
-		""
-	}
+	override protected compileLexerHeader(Grammar it, AntlrOptions options) '''
+	'''
 	
 	protected override String ebnfPredicate(AbstractElement it, AntlrOptions options) ''''''
 	
