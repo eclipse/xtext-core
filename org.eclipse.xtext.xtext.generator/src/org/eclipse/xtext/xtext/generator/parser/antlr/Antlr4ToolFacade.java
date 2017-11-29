@@ -34,6 +34,12 @@ import com.google.common.io.Files;
 
 public class Antlr4ToolFacade {
 
+	private static final String TARGETTOCOPYTOKENSTO = "/org/antlr/codebuff/";
+
+	private static final String SRC_GEN = "/src-gen/";
+
+	private static final String ORG_ANTLR_CODEBUFF = "org.antlr.codebuff";
+
 	private final static Logger log = Logger.getLogger(Antlr4ToolFacade.class);
 
 	public final static String className = "org.antlr.v4.Tool";
@@ -158,18 +164,21 @@ public class Antlr4ToolFacade {
 			if (class1 == null)
 				throw getNoClassFoundException();
 
-			Object[] args = new Object[] { new String[] { grammarFullPath, "-o", ANTLR4GEN + "/src-gen/", "-package", "org.antlr.codebuff" } };
+			Object[] args = new Object[] { new String[] { grammarFullPath, "-o", ANTLR4GEN + SRC_GEN, "-package", ORG_ANTLR_CODEBUFF } };
 			Constructor<?> constructor = class1.getConstructor(new Class[] { String[].class });
 			Object newInstance = constructor.newInstance(args);
 			log.info("Loading AntLR 4 grammar.");
 			Method loadGrammar = class1.getMethod("loadGrammar", new Class[] { String.class });
 			Object grammar = loadGrammar.invoke(newInstance, grammarFullPath);
-			Method process = class1.getMethod("process", new Class[] { grammar.getClass(), boolean.class });
+			//Method process = class1.getMethod("process", new Class[] { grammar.getClass(), boolean.class });
+			Method process = class1.getMethod("processGrammarsOnCommandLine");
+			
 			log.info("Generate AntLR 4 parser.");
 			//process.invoke(newInstance, grammar, true);
+			process.invoke(newInstance);
 			// Compile to code to target folder!
 			JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-			File src_gen_folder = new File("./" + ANTLR4GEN + "/src-gen/");
+			File src_gen_folder = new File("./" + ANTLR4GEN + SRC_GEN);
 			ArrayList<File> filesToCompile = Lists.newArrayList();
 			for (File child : src_gen_folder.listFiles(new FilenameFilter() {
 
@@ -197,7 +206,7 @@ public class Antlr4ToolFacade {
 					return name.endsWith("tokens");
 				}
 			})) {
-				Files.copy(child, new File(TARGETFOLDER + "/org/antlr/codebuff/" + child.getName()));
+				Files.copy(child, new File(TARGETFOLDER + TARGETTOCOPYTOKENSTO + child.getName()));
 			}
 		} catch (Exception e) {
 			throw new WrappedException(e);

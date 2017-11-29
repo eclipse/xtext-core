@@ -33,12 +33,12 @@ class CodebuffGrammarGeneratorFragment extends AbstractXtextGeneratorFragment {
 		val file = new File(fsa.path)
 		val root = projectConfig.runtime.root
 		
-//		val antlr4gen = new File(root.path + "/antlr4gen/");
-//		if(antlr4gen.exists)
-//			Files.cleanFolder(antlr4gen,null,true,true)
-//		antlr4gen.mkdir
-//		new File(root.path + "/antlr4gen/target/").mkdirs;
-//		new File(root.path + "/antlr4gen/src-gen/").mkdirs
+		val antlr4gen = new File(root.path + "/antlr4gen/");
+		if(antlr4gen.exists)
+			Files.cleanFolder(antlr4gen,null,true,true)
+		antlr4gen.mkdir
+		new File(root.path + "/antlr4gen/target/").mkdirs;
+		new File(root.path + "/antlr4gen/src-gen/").mkdirs
 		if (file.exists) {
 			val fileName = file.absolutePath + "/" + naming.getParserGrammar(grammar).grammarFileName
 			antlrTool.runWithEncodingAndParams(fileName, codeConfig.encoding)
