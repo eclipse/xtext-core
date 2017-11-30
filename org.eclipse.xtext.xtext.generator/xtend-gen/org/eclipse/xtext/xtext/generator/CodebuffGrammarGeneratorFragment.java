@@ -55,10 +55,12 @@ public class CodebuffGrammarGeneratorFragment extends AbstractXtextGeneratorFrag
         @Override
         protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
           _builder.append("binder.bind(String.class).annotatedWith(Names.named(\"COMMENTRULE\")).toInstance(\"RULE_SL_COMMENT\");");
+          _builder.newLine();
+          _builder.append("binder.bind(int.class).annotatedWith(Names.named(\"INDENT\")).toInstance(4);");
+          _builder.newLine();
         }
       };
-      _bindingFactory.addConfiguredBinding(
-        "CodeBuff", _client).contributeTo(this.language.getRuntimeGenModule());
+      _bindingFactory.addConfiguredBinding("CodeBuff", _client).contributeTo(this.language.getRuntimeGenModule());
       GuiceModuleAccess.BindingFactory _bindingFactory_1 = new GuiceModuleAccess.BindingFactory();
       TypeReference _typeReference = new TypeReference("org.eclipse.xtext.ui.editor.formatting.IContentFormatterFactory");
       TypeReference _typeReference_1 = new TypeReference("org.eclipse.xtext.ui.editor.formatting.codebuff.CodebuffContentFormatterFactory");

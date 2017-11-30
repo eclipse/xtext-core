@@ -31,11 +31,14 @@ class CodebuffGrammarGeneratorFragment extends AbstractXtextGeneratorFragment {
 	@Inject IXtextGeneratorLanguage language
 
 	override generate() {
-		new GuiceModuleAccess.BindingFactory().
-			addConfiguredBinding(
-				"CodeBuff", '''binder.bind(String.class).annotatedWith(Names.named("COMMENTRULE")).toInstance("RULE_SL_COMMENT");''').
-			contributeTo(language.runtimeGenModule)
-		new GuiceModuleAccess.BindingFactory().addTypeToType(new TypeReference("org.eclipse.xtext.ui.editor.formatting.IContentFormatterFactory"),new TypeReference("org.eclipse.xtext.ui.editor.formatting.codebuff.CodebuffContentFormatterFactory")).contributeTo(language.eclipsePluginGenModule)
+		new GuiceModuleAccess.BindingFactory().addConfiguredBinding("CodeBuff", '''
+			binder.bind(String.class).annotatedWith(Names.named("COMMENTRULE")).toInstance("RULE_SL_COMMENT");
+			binder.bind(int.class).annotatedWith(Names.named("INDENT")).toInstance(4);
+		''').contributeTo(language.runtimeGenModule)
+		new GuiceModuleAccess.BindingFactory().addTypeToType(
+			new TypeReference("org.eclipse.xtext.ui.editor.formatting.IContentFormatterFactory"),
+			new TypeReference("org.eclipse.xtext.ui.editor.formatting.codebuff.CodebuffContentFormatterFactory")).
+			contributeTo(language.eclipsePluginGenModule)
 		val fsa = projectConfig.runtime.srcGen
 		generator.generate(grammar, new AntlrOptions(), fsa)
 		val file = new File(fsa.path)
