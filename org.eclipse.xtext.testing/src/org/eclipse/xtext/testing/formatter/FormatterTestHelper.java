@@ -20,6 +20,7 @@ import org.eclipse.xtext.formatting2.FormatterRequest;
 import org.eclipse.xtext.formatting2.IFormatter2;
 import org.eclipse.xtext.formatting2.debug.TextRegionAccessToString;
 import org.eclipse.xtext.formatting2.debug.TextRegionsToString;
+import org.eclipse.xtext.formatting2.internal.TextReplacerContext;
 import org.eclipse.xtext.formatting2.regionaccess.IHiddenRegion;
 import org.eclipse.xtext.formatting2.regionaccess.ITextRegionAccess;
 import org.eclipse.xtext.formatting2.regionaccess.ITextReplacement;
@@ -143,11 +144,10 @@ public class FormatterTestHelper {
 			Iterator<ITextReplacement> iterator = rep.iterator();
 			while (iterator.hasNext()) {
 				ITextReplacement replacement = iterator.next();
-				if (region.contains(replacement) || doIntersect(region, replacement))
+				if (region.contains(replacement) || TextReplacerContext.doIntersect(region, replacement))
 					continue ALLOWED;
 				
-				if(!iterator.hasNext())
-					invalid.add(replacement);
+				invalid.add(replacement);
 			}
 		}
 		
@@ -157,27 +157,6 @@ public class FormatterTestHelper {
 		}
 	}
 
-	private boolean doIntersect(ITextRegion allowed, ITextReplacement replacement) {
-		int allowedOffset = allowed.getOffset();
-		int replacementOffset = replacement.getEndOffset();
-
-		if(allowedOffset == replacementOffset) {
-			return true;
-		}
-		else if(allowedOffset < replacementOffset) {
-			if(replacementOffset < (allowedOffset + allowed.getLength())) {
-				return true;
-			}
-		}
-		else { // if(allowedOffset > replacementOffset)
-			if(allowedOffset < (replacementOffset + replacement.getLength())) {
-				return true;
-			}
-		}
-		
-		return false;
-	}
-	
 	protected IFormatter2 createFormatter(FormatterTestRequest request) {
 		checkNotNull(formatter, "There is a Guice Binding missing for " + IFormatter2.class.getName());
 		return formatter.get();

@@ -191,14 +191,11 @@ public class TextReplacerContext implements ITextReplacerContext {
 		return false;
 	}
 	
-	private boolean doIntersect(ITextRegion allowed, ITextReplacement replacement) {
+	public static boolean doIntersect(ITextRegion allowed, ITextReplacement replacement) {
 		int allowedOffset = allowed.getOffset();
 		int replacementOffset = replacement.getEndOffset();
 
-		if(allowedOffset == replacementOffset) {
-			return true;
-		}
-		else if(allowedOffset < replacementOffset) {
+		if(allowedOffset < replacementOffset) {
 			if(replacementOffset < (allowedOffset + allowed.getLength())) {
 				return true;
 			}

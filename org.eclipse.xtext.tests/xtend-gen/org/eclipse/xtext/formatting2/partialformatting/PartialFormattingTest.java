@@ -131,47 +131,6 @@ public class PartialFormattingTest {
       PartialFormattingTest.TestFormatter _testFormatter = new PartialFormattingTest.TestFormatter();
       it.setFormatter(_testFormatter);
       Collection<ITextRegion> _regions = it.getRequest().getRegions();
-      TextRegion _textRegion = new TextRegion((offset - 1), (length + 1));
-      _regions.add(_textRegion);
-      it.setExpectation(expected);
-    };
-    this._genericFormatterTester.assertFormatted(_function);
-  }
-  
-  @Test
-  public void testFormatting2() {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("unit unitname {");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("source : /a/b/c/;");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("output : /d/e/f/;");
-    _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
-    final String expected = _builder.toString();
-    StringConcatenation _builder_1 = new StringConcatenation();
-    _builder_1.append("unit unitname {");
-    _builder_1.newLine();
-    _builder_1.append("\t\t");
-    _builder_1.append("source : /a/b/c/;");
-    _builder_1.newLine();
-    _builder_1.append("\t");
-    _builder_1.append("output : /d/e/f/;");
-    _builder_1.newLine();
-    _builder_1.append("}");
-    _builder_1.newLine();
-    final String source = _builder_1.toString();
-    final String part = "\t\tsource : /a/b/c/;";
-    final int offset = source.indexOf(part);
-    final int length = part.length();
-    final Procedure1<GenericFormatterTestRequest> _function = (GenericFormatterTestRequest it) -> {
-      it.setToBeFormatted(source);
-      PartialFormattingTest.TestFormatter _testFormatter = new PartialFormattingTest.TestFormatter();
-      it.setFormatter(_testFormatter);
-      Collection<ITextRegion> _regions = it.getRequest().getRegions();
       TextRegion _textRegion = new TextRegion(offset, length);
       _regions.add(_textRegion);
       it.setExpectation(expected);

@@ -31,37 +31,6 @@ class PartialFormattingTest {
 
 	@Test
 	def void testFormatting1() {
-		val expected = '''
-		unit unitname {
-			source : /a/b/c/;
-			output : /d/e/f/;
-		}
-		'''.toString
-		
-		val source = '''
-		unit unitname {
-				source : /a/b/c/;
-			output : /d/e/f/;
-		}
-		'''.toString
-		
-		val part = "		source : /a/b/c/;"
-		val offset = source.indexOf(part)
-		val length = part.length
-		
-		assertFormatted[
-			toBeFormatted = source
-
-			formatter = new TestFormatter()
-			
-			request.regions += new TextRegion(offset-1, length+1)
-			
-			expectation = expected
-		]
-	}
-	
-	@Test
-	def void testFormatting2() {
 		
 		val expected = '''
 		unit unitname {
@@ -80,7 +49,6 @@ class PartialFormattingTest {
 		val offset = source.indexOf(part)
 		val length = part.length
 		
-		// does not work
 		assertFormatted [
 			toBeFormatted = source
 
