@@ -131,8 +131,8 @@ import com.google.common.collect.Lists;
  * </p>
  * 
  * <p>
- * The methods {@code regionForFeature()} and {@code regionForKeyword} are extension methods: {link
- * ITextRegionAccess#regionForFeature(EObject, EStructuralFeature)} and {link
+ * The methods {@code regionForFeature()} and {@code regionForKeyword} are extension methods: {@link
+ * ITextRegionAccess#regionForFeature(EObject, EStructuralFeature)} and {@link
  * ITextRegionAccess#regionForKeyword(EObject, String)}. They return an {@link ISemanticRegion}.
  * </p>
  * 
