@@ -538,6 +538,7 @@ class XtextGeneratorTemplates {
 			public class «activator.simpleName» extends «'org.eclipse.ui.plugin.AbstractUIPlugin'.typeRef» {
 			
 				public static final String PLUGIN_ID = "«projectConfig.eclipsePlugin.name»";
+				private static final String PLUGIN_ID_XTEXT_IDE = "org.eclipse.xtext.ide";
 				«FOR lang : langConfigs»
 					public static final String «lang.grammar.name.toUpperCase.replaceAll('\\.', '_')» = "«lang.grammar.name»";
 				«ENDFOR»
@@ -578,9 +579,16 @@ class XtextGeneratorTemplates {
 				protected «Injector» createInjector(String language) {
 					try {
 						«Module» runtimeModule = getRuntimeModule(language);
+						«Module» ideModule = getIdeModule(language);
 						«Module» sharedStateModule = getSharedStateModule();
 						«Module» uiModule = getUiModule(language);
-						«Module» mergedModule = «Modules2».mixin(runtimeModule, sharedStateModule, uiModule);
+						«Module» mergedModule = null;
+						if (ideModule != null) {
+							mergedModule = «Modules2».mixin(runtimeModule, ideModule, sharedStateModule, uiModule);
+						} else {
+							// backward compatibility
+							mergedModule = «Modules2».mixin(runtimeModule, sharedStateModule, uiModule);
+						}
 						return «Guice».createInjector(mergedModule);
 					} catch (Exception e) {
 						logger.error("Failed to create injector for " + language);
@@ -598,6 +606,16 @@ class XtextGeneratorTemplates {
 					throw new IllegalArgumentException(grammar);
 				}
 				
+				protected com.google.inject.Module getIdeModule(String grammar) {
+					«FOR lang : langConfigs»
+						if («lang.grammar.name.toUpperCase.replaceAll('\\.', '_')».equals(grammar)) {
+							// check for Xtext >= 2.11
+							return («'org.eclipse.core.runtime.Platform'.typeRef».getBundle(PLUGIN_ID_XTEXT_IDE) != null) ? new «getGenericIdeModule(lang.grammar)»() : null;
+						}
+					«ENDFOR»
+					throw new IllegalArgumentException(grammar);
+				}
+
 				protected «Module» getUiModule(String grammar) {
 					«FOR lang : langConfigs»
 						if («lang.grammar.name.toUpperCase.replaceAll('\\.', '_')».equals(grammar)) {
