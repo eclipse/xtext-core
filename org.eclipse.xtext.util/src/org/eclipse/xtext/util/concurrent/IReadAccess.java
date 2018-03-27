@@ -14,7 +14,27 @@ package org.eclipse.xtext.util.concurrent;
  */
 public interface IReadAccess<P> {
 	
+	/**
+	 * @deprecated use {@link #readOnly(Object, IUnitOfWork)} instead.
+	 */
+	@Deprecated
 	<T> T readOnly(IUnitOfWork<T,P> work);
+	
+	/**
+	 * @return Whether the {@code work} was processed or not
+	 * @since 2.14
+	 */
+	boolean readOnly(IUnitOfWork.Void<P> work);
+	
+	/**
+	 * Performs a unit of work safely.
+	 * 
+	 * @return The result of performing the unit of {@code work}, or
+	 * {@code defaultValue} if the parameter for the unit of {@code work} was null
+	 * 
+	 * @since 2.14
+	 */
+	<T> T readOnly(T defaultValue, IUnitOfWork<T,P> work);
 	
 	/**
 	 * Cancels all cancelable readers before executing the {@link IUnitOfWork}.
@@ -24,6 +44,26 @@ public interface IReadAccess<P> {
 	 * @see CancelableUnitOfWork
 	 */
 	interface Priority<P> {
+		/**
+		 * @deprecated use {@link #priorityReadOnly(Object, IUnitOfWork)} instead
+		 */
+		@Deprecated
 		<T> T priorityReadOnly(IUnitOfWork<T,P> work);
+		
+		/**
+		 * @return Whether the {@code work} was processed or not
+		 * @since 2.14
+		 */
+		boolean priorityReadOnly(IUnitOfWork.Void<P> work);
+		
+		/**
+		 * Performs a unit of work safely.
+		 * 
+		 * @return The result of performing the unit of {@code work}, or
+		 * {@code defaultValue} if the parameter for the unit of {@code work} was null
+		 * 
+		 * @since 2.14
+		 */
+		<T> T priorityReadOnly(T defaultValue, IUnitOfWork<T,P> work);
 	}
 }

@@ -12,12 +12,13 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.WrappedException;
+import org.eclipse.xtext.util.concurrent.IUnitOfWork.Void;
 
 /**
  * @author Sven Efftinge - Initial contribution and API
  * @author Jan Koehnlein
  */
-public abstract class AbstractReadWriteAcces<P> implements IReadAccess<P> {
+public abstract class AbstractReadWriteAcces<P> implements IReadAccess<P>, IWriteAccess<P> {
 
 	private static Logger log = Logger.getLogger(AbstractReadWriteAcces.class);
 
@@ -54,11 +55,12 @@ public abstract class AbstractReadWriteAcces<P> implements IReadAccess<P> {
 		}
 	};
 
-	@Override
-	public <T> T readOnly(IUnitOfWork<T, P> work) {
+	protected <T> T internalReadOnly(IUnitOfWork<T, P> work, boolean returnDefault, T defaultValue) {
 		acquireReadLock();
 		try {
 			P state = getState();
+			if (returnDefault && state == null) return defaultValue;
+
 			beforeReadOnly(state, work);
 			T exec = work.exec(state);
 			afterReadOnly(state, exec, work);
@@ -71,13 +73,33 @@ public abstract class AbstractReadWriteAcces<P> implements IReadAccess<P> {
 			releaseReadLock();
 		}
 	}
+	
+	@Deprecated
+	@Override
+	public <T> T readOnly(IUnitOfWork<T, P> work) {
+		return internalReadOnly(work, false, null);
+	}
+	
+	@Override
+	public boolean readOnly(Void<P> work) {
+		Object success = readOnly(Boolean.FALSE, work);
+		// Void always returns null
+		return success == null;
+	}
+	
+	@Override
+	public <T> T readOnly(T defaultValue, IUnitOfWork<T, P> work) {
+		return internalReadOnly(work, true, defaultValue);
+	}
 
-	public <T> T modify(IUnitOfWork<T, P> work) {
+	protected <T> T internalModify(IUnitOfWork<T, P> work, boolean returnDefault, T defaultValue) {
 		acquireWriteLock();
 		P state = null;
 		T exec = null;
 		try {
 			state = getState();
+			if (returnDefault && state == null) return defaultValue;
+
 			beforeModify(state, work);
 			exec = work.exec(state);
 			return exec;
@@ -96,6 +118,24 @@ public abstract class AbstractReadWriteAcces<P> implements IReadAccess<P> {
 		}
 	}
 
+	@Deprecated
+	@Override
+	public <T> T modify(IUnitOfWork<T, P> work) {
+		return internalModify(work, false, null);
+	}
+	
+	@Override
+	public boolean modify(Void<P> work) {
+		Object success = modify(Boolean.FALSE, work);
+		// Void.exec() always returns null
+		return success == null;
+	}
+	
+	@Override
+	public <T> T modify(T defaultValue, IUnitOfWork<T, P> work) {
+		return internalModify(work, true, defaultValue);
+	}
+	
 	/**
 	 * Upgrades a read transaction to a write transaction, executes the work then downgrades to a read transaction
 	 * again.
