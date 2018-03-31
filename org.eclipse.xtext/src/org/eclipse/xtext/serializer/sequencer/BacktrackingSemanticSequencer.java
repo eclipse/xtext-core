@@ -40,6 +40,7 @@ import org.eclipse.xtext.util.Pair;
 import org.eclipse.xtext.util.Tuples;
 import org.eclipse.xtext.util.formallang.Nfa;
 import org.eclipse.xtext.util.formallang.NfaUtil;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.ArrayListMultimap;
@@ -435,7 +436,7 @@ public class BacktrackingSemanticSequencer extends AbstractSemanticSequencer {
 			else if (ele instanceof Action)
 				feeder.accept((Action) ele, (EObject) ti.getValue(), (ICompositeNode) ti.getNode());
 			else if (ele instanceof Keyword)
-				feeder.accept((Keyword) ele, ti.getValue(), ti.getIndex(), (ILeafNode) ti.getNode());
+				feeder.accept((Keyword) ele, ti.getValue(), ti.getIndex(), ti.getNode() == null || ti.getNode() instanceof ILeafNode ? (ILeafNode)ti.getNode() : IterableExtensions.findFirst(ti.getNode().getLeafNodes(), x->x.getGrammarElement() == ele));
 		} else {
 			if (ele instanceof RuleCall)
 				feeder.accept((RuleCall) ele, ti.getValue(), ti.getNode());
