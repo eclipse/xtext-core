@@ -7,7 +7,6 @@
  */
 package org.eclipse.xtext.ide.tests.server;
 
-import com.google.common.base.CharMatcher;
 import com.google.common.base.StandardSystemProperty;
 import com.google.inject.Inject;
 import java.io.File;
@@ -251,7 +250,7 @@ public class UriExtensionsTest {
     File directory = this.createTempDir("some name with whitespaces").toFile();
     Assert.assertTrue(directory.exists());
     Assert.assertTrue(directory.isDirectory());
-    Assert.assertTrue(CharMatcher.whitespace().matchesAnyOf(directory.getName()));
+    Assert.assertTrue(directory.getName().contains(" "));
     String _absolutePath = directory.getAbsolutePath();
     String _plus = (_absolutePath + "/");
     URI uri = this._uriExtensions.toUri(this._uriExtensions.toUriString(URI.createFileURI(_plus)));

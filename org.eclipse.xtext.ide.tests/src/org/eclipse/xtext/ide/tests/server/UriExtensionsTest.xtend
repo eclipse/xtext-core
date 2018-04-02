@@ -270,7 +270,7 @@ class UriExtensionsTest {
 		var directory = createTempDir('some name with whitespaces').toFile;
 		assertTrue(directory.exists)
 		assertTrue(directory.directory)
-		assertTrue(CharMatcher.whitespace.matchesAnyOf(directory.name));
+		assertTrue(directory.name.contains(' '));
 		var uri = createFileURI(directory.absolutePath + "/").toUriString.toUri
 		assertTrue(uri.isPrefix)
 	}
