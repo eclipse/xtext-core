@@ -1599,6 +1599,9 @@ public class XtextGeneratorTemplates {
         _builder.append(_name, "\t");
         _builder.append("\";");
         _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("private static final String PLUGIN_ID_XTEXT_IDE = \"org.eclipse.xtext.ide\";");
+        _builder.newLine();
         {
           for(final IXtextGeneratorLanguage lang : langConfigs) {
             _builder.append("\t");
@@ -1752,6 +1755,10 @@ public class XtextGeneratorTemplates {
         _builder.newLineIfNotEmpty();
         _builder.append("\t\t\t");
         _builder.append(com.google.inject.Module.class, "\t\t\t");
+        _builder.append(" ideModule = getIdeModule(language);");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t\t");
+        _builder.append(com.google.inject.Module.class, "\t\t\t");
         _builder.append(" sharedStateModule = getSharedStateModule();");
         _builder.newLineIfNotEmpty();
         _builder.append("\t\t\t");
@@ -1760,10 +1767,30 @@ public class XtextGeneratorTemplates {
         _builder.newLineIfNotEmpty();
         _builder.append("\t\t\t");
         _builder.append(com.google.inject.Module.class, "\t\t\t");
-        _builder.append(" mergedModule = ");
-        _builder.append(Modules2.class, "\t\t\t");
+        _builder.append(" mergedModule = null;");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t\t");
+        _builder.append("if (ideModule != null) {");
+        _builder.newLine();
+        _builder.append("\t\t\t\t");
+        _builder.append("mergedModule = ");
+        _builder.append(Modules2.class, "\t\t\t\t");
+        _builder.append(".mixin(runtimeModule, ideModule, sharedStateModule, uiModule);");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t\t");
+        _builder.append("} else {");
+        _builder.newLine();
+        _builder.append("\t\t\t\t");
+        _builder.append("// backward compatibility");
+        _builder.newLine();
+        _builder.append("\t\t\t\t");
+        _builder.append("mergedModule = ");
+        _builder.append(Modules2.class, "\t\t\t\t");
         _builder.append(".mixin(runtimeModule, sharedStateModule, uiModule);");
         _builder.newLineIfNotEmpty();
+        _builder.append("\t\t\t");
+        _builder.append("}");
+        _builder.newLine();
         _builder.append("\t\t\t");
         _builder.append("return ");
         _builder.append(Guice.class, "\t\t\t");
@@ -1823,10 +1850,8 @@ public class XtextGeneratorTemplates {
         _builder.append("\t");
         _builder.newLine();
         _builder.append("\t");
-        _builder.append("protected ");
-        _builder.append(com.google.inject.Module.class, "\t");
-        _builder.append(" getUiModule(String grammar) {");
-        _builder.newLineIfNotEmpty();
+        _builder.append("protected com.google.inject.Module getIdeModule(String grammar) {");
+        _builder.newLine();
         {
           for(final IXtextGeneratorLanguage lang_2 : langConfigs) {
             _builder.append("\t\t");
@@ -1837,8 +1862,47 @@ public class XtextGeneratorTemplates {
             _builder.newLineIfNotEmpty();
             _builder.append("\t\t");
             _builder.append("\t");
+            _builder.append("// check for Xtext >= 2.11");
+            _builder.newLine();
+            _builder.append("\t\t");
+            _builder.append("\t");
+            _builder.append("return (");
+            TypeReference _typeRef_3 = TypeReference.typeRef("org.eclipse.core.runtime.Platform");
+            _builder.append(_typeRef_3, "\t\t\t");
+            _builder.append(".getBundle(PLUGIN_ID_XTEXT_IDE) != null) ? new ");
+            TypeReference _genericIdeModule = XtextGeneratorTemplates.this.naming.getGenericIdeModule(lang_2.getGrammar());
+            _builder.append(_genericIdeModule, "\t\t\t");
+            _builder.append("() : null;");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t\t");
+            _builder.append("}");
+            _builder.newLine();
+          }
+        }
+        _builder.append("\t\t");
+        _builder.append("throw new IllegalArgumentException(grammar);");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("}");
+        _builder.newLine();
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("protected ");
+        _builder.append(com.google.inject.Module.class, "\t");
+        _builder.append(" getUiModule(String grammar) {");
+        _builder.newLineIfNotEmpty();
+        {
+          for(final IXtextGeneratorLanguage lang_3 : langConfigs) {
+            _builder.append("\t\t");
+            _builder.append("if (");
+            String _replaceAll_3 = lang_3.getGrammar().getName().toUpperCase().replaceAll("\\.", "_");
+            _builder.append(_replaceAll_3, "\t\t");
+            _builder.append(".equals(grammar)) {");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t\t");
+            _builder.append("\t");
             _builder.append("return new ");
-            TypeReference _eclipsePluginModule = XtextGeneratorTemplates.this.naming.getEclipsePluginModule(lang_2.getGrammar());
+            TypeReference _eclipsePluginModule = XtextGeneratorTemplates.this.naming.getEclipsePluginModule(lang_3.getGrammar());
             _builder.append(_eclipsePluginModule, "\t\t\t");
             _builder.append("(this);");
             _builder.newLineIfNotEmpty();
@@ -1862,8 +1926,8 @@ public class XtextGeneratorTemplates {
         _builder.newLineIfNotEmpty();
         _builder.append("\t\t");
         _builder.append("return new ");
-        TypeReference _typeRef_3 = TypeReference.typeRef("org.eclipse.xtext.ui.shared.SharedStateModule");
-        _builder.append(_typeRef_3, "\t\t");
+        TypeReference _typeRef_4 = TypeReference.typeRef("org.eclipse.xtext.ui.shared.SharedStateModule");
+        _builder.append(_typeRef_4, "\t\t");
         _builder.append("();");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");

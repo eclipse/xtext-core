@@ -39,6 +39,10 @@ package class ImplicitFragment extends AbstractStubGeneratingFragment {
 			projectConfig.runtime.manifest.importedPackages.add('org.apache.log4j')
 		}
 		
+		if (projectConfig.genericIde.manifest !== null) {
+			projectConfig.genericIde.manifest.exportedPackages += grammar.genericIdeBasePackage
+		}
+
 		if (projectConfig.eclipsePlugin.manifest !== null) {
 			projectConfig.eclipsePlugin.manifest.requiredBundles.addAll(#[
 				'org.eclipse.xtext.ui', 'org.eclipse.xtext.ui.shared', 'org.eclipse.ui.editors', 'org.eclipse.ui'

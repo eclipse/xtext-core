@@ -57,9 +57,16 @@ class ImplicitFragment extends AbstractStubGeneratingFragment {
       }
       this.getProjectConfig().getRuntime().getManifest().getImportedPackages().add("org.apache.log4j");
     }
-    ManifestAccess _manifest_1 = this.getProjectConfig().getEclipsePlugin().getManifest();
+    ManifestAccess _manifest_1 = this.getProjectConfig().getGenericIde().getManifest();
     boolean _tripleNotEquals_1 = (_manifest_1 != null);
     if (_tripleNotEquals_1) {
+      Set<String> _exportedPackages = this.getProjectConfig().getGenericIde().getManifest().getExportedPackages();
+      String _genericIdeBasePackage = this.naming.getGenericIdeBasePackage(this.getGrammar());
+      _exportedPackages.add(_genericIdeBasePackage);
+    }
+    ManifestAccess _manifest_2 = this.getProjectConfig().getEclipsePlugin().getManifest();
+    boolean _tripleNotEquals_2 = (_manifest_2 != null);
+    if (_tripleNotEquals_2) {
       this.getProjectConfig().getEclipsePlugin().getManifest().getRequiredBundles().addAll(
         Collections.<String>unmodifiableList(CollectionLiterals.<String>newArrayList("org.eclipse.xtext.ui", "org.eclipse.xtext.ui.shared", "org.eclipse.ui.editors", "org.eclipse.ui")));
       boolean _isGenerateXtendStub_1 = this.isGenerateXtendStub();
@@ -73,8 +80,8 @@ class ImplicitFragment extends AbstractStubGeneratingFragment {
       this.getProjectConfig().getEclipsePlugin().getManifest().getImportedPackages().add("org.apache.log4j");
     }
     PluginXmlAccess _pluginXml = this.getProjectConfig().getEclipsePlugin().getPluginXml();
-    boolean _tripleNotEquals_2 = (_pluginXml != null);
-    if (_tripleNotEquals_2) {
+    boolean _tripleNotEquals_3 = (_pluginXml != null);
+    if (_tripleNotEquals_3) {
       List<CharSequence> _entries = this.getProjectConfig().getEclipsePlugin().getPluginXml().getEntries();
       CharSequence _implicitPluginXmlEnties = this.getImplicitPluginXmlEnties(this.getGrammar());
       _entries.add(_implicitPluginXmlEnties);
