@@ -7,6 +7,7 @@ version = '2.14.0.RC1'
 ext.versions = [
 	'xtext': version,
 	'xtext_bootstrap': '2.13.0',
+	'xtend_bootstrap': '2.14.0-SNAPSHOT',
 	'gradle_plugins': '0.1.0',
 	'xtext_gradle_plugin': '1.0.20',
 	'lsp4j': '0.4.0-SNAPSHOT',
