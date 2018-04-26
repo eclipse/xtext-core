@@ -1,5 +1,7 @@
 # Eclipse Xtext Core Framework
 
+This is just a demo change, dont merge
+
 This repository contains the platform-independent language framework of Xtext.
 
 ## How To Build
