@@ -2,11 +2,11 @@
  * Base project version and versions of common dependencies.
  */
 
-version = '2.14.0-SNAPSHOT'
+version = '2.14.0'
 
 ext.versions = [
 	'xtext': version,
-	'xtext_bootstrap': '2.13.0',
+	'xtext_bootstrap': '2.14.0.RC1',
 	'gradle_plugins': '0.1.0',
 	'xtext_gradle_plugin': '1.0.20',
 	'lsp4j': '0.4.0', // dont forget to adapt IdeProjectDescriptor + Tests
