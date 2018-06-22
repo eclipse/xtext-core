@@ -21,6 +21,7 @@ import org.eclipse.xtext.nodemodel.ILeafNode;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.nodemodel.SyntaxErrorMessage;
 
+import com.google.common.base.Preconditions;
 import com.google.common.collect.Interner;
 import com.google.common.collect.Maps;
 
@@ -338,6 +339,9 @@ public class NodeModelBuilder {
 	}
 	
 	public void replaceAndTransferLookAhead(INode oldNode, INode newRootNode) {
+		if (!(oldNode instanceof RootNode)) {
+			Preconditions.checkArgument(newRootNode.getTotalLength() == oldNode.getTotalLength(), "Length of new node doesn't match old node");
+		}
 		AbstractNode newNode = ((CompositeNode) newRootNode).basicGetFirstChild();
 		replaceWithoutChildren((AbstractNode) oldNode, newNode);
 		if (oldNode instanceof ICompositeNode && newNode instanceof CompositeNode) {
@@ -346,7 +350,7 @@ public class NodeModelBuilder {
 		}
 		ICompositeNode root = newNode.getRootNode();
 		BidiTreeIterator<AbstractNode> iterator = ((AbstractNode) root).basicIterator();
-		int offset = 0;
+		int offset = oldNode.getTotalOffset();
 		while(iterator.hasNext()) {
 			AbstractNode node = iterator.next();
 			if (node instanceof LeafNode) {
