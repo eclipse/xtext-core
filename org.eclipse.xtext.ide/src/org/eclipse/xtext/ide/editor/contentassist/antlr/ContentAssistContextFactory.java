@@ -414,23 +414,28 @@ public class ContentAssistContextFactory implements Function<ContentAssistContex
 			// found
 			while (startingNode.getSyntaxErrorMessage() != null) {
 				INode nodeBefore = startingNode.getPreviousSibling();
-				if (nodeBefore.getSyntaxErrorMessage() != null) {
+				if (nodeBefore != null && nodeBefore.getSyntaxErrorMessage() != null) {
 					startingNode = nodeBefore;
 				} else {
 					break;
 				}
 			}
-			return getNodeTextUpToCompletionOffset(startingNode);
+			return getNodeTextUpToCompletionOffset(startingNode, true);
 		}
 		StringBuilder result = new StringBuilder(prefixNode.getTotalLength());
 		doComputePrefix((ICompositeNode) prefixNode, result);
 		return result.toString();
 	}
 
-	public String getNodeTextUpToCompletionOffset(INode currentNode) {
+	public String getNodeTextUpToCompletionOffset(INode currentNode, boolean pseudoPrefix) {
 		int startOffset = currentNode.getOffset();
 		int length = completionOffset - startOffset;
-		String nodeText = currentNode.getRootNode().getText().substring(startOffset, startOffset + length);
+		String nodeText = null;
+		if (pseudoPrefix) {
+			nodeText = currentNode.getRootNode().getText().substring(startOffset, startOffset + length);
+		} else {
+			nodeText = ((ILeafNode) currentNode).getText();
+		}
 		String trimmedNodeText = length > nodeText.length() ? nodeText : nodeText.substring(0, length);
 		try {
 			String text = document.substring(startOffset, startOffset + trimmedNodeText.length());
@@ -465,7 +470,7 @@ public class ContentAssistContextFactory implements Function<ContentAssistContex
 						result.append(iter.next().getText());
 					}
 					hiddens.clear();
-					result.append(getNodeTextUpToCompletionOffset(leaf));
+					result.append(getNodeTextUpToCompletionOffset(leaf, false));
 					if (leafRegion.getOffset() + leafRegion.getLength() > completionOffset)
 						return false;
 				}
