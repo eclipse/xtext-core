@@ -12,6 +12,9 @@ repositories {
 		name 'xtend-bootstrap'
 		url "$JENKINS_URL/job/xtend-bootstrap/lastStableBuild/artifact/build-result/maven-repository/"
 	}
+	// maven {
+	// 	url 'http://services.typefox.io/open-source/jenkins/job/xtext-lib/job/sz_bom/lastSuccessfulBuild/artifact/build/maven-repository/'
+	// }
 }
 
 configurations {
