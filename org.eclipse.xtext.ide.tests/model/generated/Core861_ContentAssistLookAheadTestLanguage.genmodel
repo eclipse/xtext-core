@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2016, 2017 TypeFox GmbH (http://www.typefox.io) and others.&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html"
+    modelDirectory="/org.eclipse.xtext.ide.tests/testlang-src-gen" modelPluginID="org.eclipse.xtext.ide.tests"
+    forceOverwrite="true" modelName="Core861_ContentAssistLookAheadTestLanguage" updateClasspath="false"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" complianceLevel="6.0"
+    copyrightFields="false" runtimeVersion="2.12" usedGenPackages="platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+  <genPackages prefix="Core861_contentAssistLookAheadTestLanguage" basePackage="org.eclipse.xtext.ide.tests.testlanguage"
+      disposableProviderFactory="true" fileExtensions="contentAssistLookAheadTestLanguage"
+      ecorePackage="Core861_ContentAssistLookAheadTestLanguage.ecore#/">
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//Member">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Core861_ContentAssistLookAheadTestLanguage.ecore#//Member/annotations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Core861_ContentAssistLookAheadTestLanguage.ecore#//Member/modifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Core861_ContentAssistLookAheadTestLanguage.ecore#//Member/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Core861_ContentAssistLookAheadTestLanguage.ecore#//Member/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//FieldDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Core861_ContentAssistLookAheadTestLanguage.ecore#//FieldDecl/initVal"/>
+    </genClasses>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//MethodDecl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Core861_ContentAssistLookAheadTestLanguage.ecore#//MethodDecl/decls"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Core861_ContentAssistLookAheadTestLanguage.ecore#//MethodDecl/statements"/>
+    </genClasses>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//Type"/>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//Statement"/>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//AssignmentStatement"/>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//FeatureCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Core861_ContentAssistLookAheadTestLanguage.ecore#//FeatureCall/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Core861_ContentAssistLookAheadTestLanguage.ecore#//Annotation/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Core861_ContentAssistLookAheadTestLanguage.ecore#//Annotation/values"/>
+    </genClasses>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//IntType"/>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//TypeRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Core861_ContentAssistLookAheadTestLanguage.ecore#//TypeRef/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//Return"/>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//Assignment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Core861_ContentAssistLookAheadTestLanguage.ecore#//Assignment/feature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Core861_ContentAssistLookAheadTestLanguage.ecore#//Assignment/rhs"/>
+    </genClasses>
+    <genClasses ecoreClass="Core861_ContentAssistLookAheadTestLanguage.ecore#//MemberCall">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Core861_ContentAssistLookAheadTestLanguage.ecore#//MemberCall/owner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Core861_ContentAssistLookAheadTestLanguage.ecore#//MemberCall/member"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

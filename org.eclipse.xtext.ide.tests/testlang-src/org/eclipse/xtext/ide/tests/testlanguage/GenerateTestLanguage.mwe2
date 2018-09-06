@@ -115,5 +115,22 @@ Workflow {
 				generateStub = true
 			}
 		}
+		language = StandardLanguage {
+			name = "org.eclipse.xtext.ide.tests.testlanguage.Core861_ContentAssistLookAheadTestLanguage"
+			fileExtensions = "contentAssistLookAheadTestLanguage"
+
+			generator = {
+				generateStub = false
+			}
+			serializer = {
+				generateStub = false
+			}
+			validator = {
+				// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
+			}
+			junitSupport = {
+				generateStub = false
+			}
+		}
 	}
 }
