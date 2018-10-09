@@ -10,6 +10,8 @@ package org.eclipse.xtext.util.concurrent;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+import org.eclipse.xtext.util.CancelIndicator;
+
 /**
  * @author Sven Efftinge - Initial contribution and API
  * @author Jan Koehnlein - Separated read and write access
@@ -42,6 +44,25 @@ public interface IWriteAccess<State> {
 		IUnitOfWork<Result, State> work,
 		Supplier<? extends Result> defaultResult
 	) {
+		// Some implementations rely on the type of {@code work}
+		if (work instanceof CancelableUnitOfWork<?, ?>) {
+			return modify(new CancelableUnitOfWork<Result, State>() {
+				@Override
+				public void setCancelIndicator(CancelIndicator cancelIndicator) {
+					super.setCancelIndicator(cancelIndicator);
+					((CancelableUnitOfWork<Result, State>) work).setCancelIndicator(cancelIndicator);
+				}
+
+				@Override
+				public Result exec(State state, CancelIndicator cancelIndicator) throws Exception {
+					if (state == null) {
+						return defaultResult.get();
+					}
+					return work.exec(state);
+				}
+			});
+		}
+
 		return modify((state) -> {
 			if (state == null) {
 				return defaultResult.get();
@@ -60,11 +81,7 @@ public interface IWriteAccess<State> {
 	 * @since 2.15
 	 */
 	default <Result> Result tryModify(IUnitOfWork<Result, State> work) {
-		return modify((state) -> {
-			if (state == null) return null;
-
-			return work.exec(state);
-		});
+		return tryModify(work, () -> null);
 	}
 
 	/**

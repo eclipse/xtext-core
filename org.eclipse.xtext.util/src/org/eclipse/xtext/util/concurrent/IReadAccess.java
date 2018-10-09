@@ -11,6 +11,8 @@ package org.eclipse.xtext.util.concurrent;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+import org.eclipse.xtext.util.CancelIndicator;
+
 /**
  * @author Sven Efftinge - Initial contribution and API
  * @author Jan Koehnlein - Separated read and write access
@@ -43,6 +45,25 @@ public interface IReadAccess<State> {
 		IUnitOfWork<Result, State> work,
 		Supplier<? extends Result> defaultResult
 	) {
+		// Some implementations rely on the type of {@code work}
+		if (work instanceof CancelableUnitOfWork<?, ?>) {
+			return readOnly(new CancelableUnitOfWork<Result, State>() {
+				@Override
+				public void setCancelIndicator(CancelIndicator cancelIndicator) {
+					super.setCancelIndicator(cancelIndicator);
+					((CancelableUnitOfWork<Result, State>) work).setCancelIndicator(cancelIndicator);
+				}
+
+				@Override
+				public Result exec(State state, CancelIndicator cancelIndicator) throws Exception {
+					if (state == null) {
+						return defaultResult.get();
+					}
+					return work.exec(state);
+				}
+			});
+		}
+
 		return readOnly((state) -> {
 			if (state == null) {
 				return defaultResult.get();
@@ -61,11 +82,7 @@ public interface IReadAccess<State> {
 	 * @since 2.15
 	 */
 	default <Result> Result tryReadOnly(IUnitOfWork<Result, State> work) {
-		return readOnly((state) -> {
-			if (state == null) return null;
-
-			return work.exec(state);
-		});
+		return tryReadOnly(work, () -> null);
 	}
 
 	/**
@@ -126,6 +143,25 @@ public interface IReadAccess<State> {
 			IUnitOfWork<Result, State> work,
 			Supplier<? extends Result> defaultResult
 		) {
+			// Some implementations rely on the type of {@code work}
+			if (work instanceof CancelableUnitOfWork<?, ?>) {
+				return priorityReadOnly(new CancelableUnitOfWork<Result, State>() {
+					@Override
+					public void setCancelIndicator(CancelIndicator cancelIndicator) {
+						super.setCancelIndicator(cancelIndicator);
+						((CancelableUnitOfWork<Result, State>) work).setCancelIndicator(cancelIndicator);
+					}
+
+					@Override
+					public Result exec(State state, CancelIndicator cancelIndicator) throws Exception {
+						if (state == null) {
+							return defaultResult.get();
+						}
+						return work.exec(state);
+					}
+				});
+			}
+
 			return priorityReadOnly((state) -> {
 				if (state == null) {
 					return defaultResult.get();
@@ -147,11 +183,7 @@ public interface IReadAccess<State> {
 		 * @see CancelableUnitOfWork
 		 */
 		default <Result> Result tryPriorityReadOnly(IUnitOfWork<Result, State> work) {
-			return priorityReadOnly((state) -> {
-				if (state == null) return null;
-
-				return work.exec(state);
-			});
+			return tryPriorityReadOnly(work, () -> null);
 		}
 
 		/**
