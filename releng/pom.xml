@@ -31,7 +31,7 @@
 		</repository>
 		<repository>
 			<id>maven2</id>
-			<url>${JENKINS_URL}/job/xtext-lib/job/master/lastStableBuild/artifact/build/maven-repository</url>
+			<url>${JENKINS_URL}/job/xtext-lib/job/milestone_2.16.0.M1/lastStableBuild/artifact/build/maven-repository</url>
 		</repository>
 	</repositories>
 
