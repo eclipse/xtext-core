@@ -23,6 +23,7 @@ public interface IReadAccess<State> {
 	 * Gets a read-only copy of the State and executes {@code work} on it.
 	 * 
 	 * WARNING: the State passed to {@code work} can be null.
+	 * e.g. when reading from a read-only zip/jar entry
 	 * 
 	 * @param work Work to execute on the State
 	 * 
