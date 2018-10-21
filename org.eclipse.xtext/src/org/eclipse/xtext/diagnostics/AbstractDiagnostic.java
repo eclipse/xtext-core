@@ -50,12 +50,28 @@ public abstract class AbstractDiagnostic implements Diagnostic {
 		}
 		return 0;
 	}
+	
+	public int getEndColumn() {
+		INode node = getNode();
+		if (node != null) {
+			LineAndColumn lineAndColumn = NodeModelUtils.getLineAndColumn(node, getOffset()+getLength());
+			return lineAndColumn.getColumn();
+		}
+		return 0;
+	}
 
 	@Override
 	public int getLine() {
 		INode node = getNode();
 		if (node != null)
 			return node.getStartLine();
+		return -1;
+	}
+	
+	public int getEndLine() {
+		INode node = getNode();
+		if (node != null)
+			return node.getEndLine();
 		return -1;
 	}
 

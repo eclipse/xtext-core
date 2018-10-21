@@ -49,6 +49,17 @@ public class DiagnosticConverterImpl implements IDiagnosticConverter {
 		 */
 		public Integer offset;
 		public Integer length;
+		
+		/**
+		 * 1-based line number.
+		 * @since 2.19
+		 */
+		public Integer endLineNumber;
+		/**
+		 * 1-based column.
+		 * @since 2.19
+		 */
+		public Integer endColumn;
 	}
 	
 	@Override
@@ -59,7 +70,10 @@ public class DiagnosticConverterImpl implements IDiagnosticConverter {
 		issue.setLineNumber(diagnostic.getLine());
 		issue.setColumn(diagnostic.getColumn());
 		issue.setMessage(diagnostic.getMessage());
-
+		// set default value
+		issue.setEndColumn(-1);
+		
+		
 		if (diagnostic instanceof org.eclipse.xtext.diagnostics.Diagnostic) {
 			org.eclipse.xtext.diagnostics.Diagnostic xtextDiagnostic = (org.eclipse.xtext.diagnostics.Diagnostic) diagnostic;
 			issue.setOffset(xtextDiagnostic.getOffset());
@@ -70,6 +84,9 @@ public class DiagnosticConverterImpl implements IDiagnosticConverter {
 			issue.setUriToProblem(castedDiagnostic.getUriToProblem());
 			issue.setCode(castedDiagnostic.getCode());
 			issue.setData(castedDiagnostic.getData());
+			issue.setEndLineNumber(castedDiagnostic.getEndLine());
+			issue.setEndColumn(castedDiagnostic.getEndColumn());
+			
 		}
 		issue.setType(CheckType.FAST);
 		acceptor.accept(issue);
@@ -83,13 +100,17 @@ public class DiagnosticConverterImpl implements IDiagnosticConverter {
 			return;
 		IssueImpl issue = new Issue.IssueImpl();
 		issue.setSeverity(severity);
-		
+		// set default value
+		issue.setColumn(-1);
+		issue.setEndColumn(-1);
 		IssueLocation locationData = getLocationData(diagnostic);
 		if (locationData != null) {
 			issue.setLineNumber(locationData.lineNumber);
 			issue.setColumn(locationData.column);
 			issue.setOffset(locationData.offset);
 			issue.setLength(locationData.length);
+			issue.setEndLineNumber(locationData.endLineNumber);
+			issue.setEndColumn(locationData.endColumn);
 		}
 		final EObject causer = getCauser(diagnostic);
 		if (causer != null)
@@ -196,6 +217,9 @@ public class DiagnosticConverterImpl implements IDiagnosticConverter {
 					LineAndColumn lineAndColumn = NodeModelUtils.getLineAndColumn(parserNode, castedDiagnostic.getOffset());
 					result.lineNumber = lineAndColumn.getLine();
 					result.column = lineAndColumn.getColumn();
+					LineAndColumn endLineAndColumn = NodeModelUtils.getLineAndColumn(parserNode, castedDiagnostic.getOffset() + castedDiagnostic.getLength());
+					result.endLineNumber = endLineAndColumn.getLine();
+					result.endColumn = endLineAndColumn.getColumn();
 				}
 				result.offset = castedDiagnostic.getOffset();
 				result.length = castedDiagnostic.getLength();
@@ -244,6 +268,8 @@ public class DiagnosticConverterImpl implements IDiagnosticConverter {
 		result.column = 1;
 		result.offset = 0;
 		result.length = 0;
+		result.endLineNumber = 1;
+		result.endColumn = 1;
 		return result;
 	}
 
@@ -254,6 +280,8 @@ public class DiagnosticConverterImpl implements IDiagnosticConverter {
 		result.offset = nodeRegion.getOffset();
 		result.column = NodeModelUtils.getLineAndColumn(node, result.offset).getColumn();
 		result.length = nodeRegion.getLength();
+		result.endLineNumber = nodeRegion.getEndLineNumber();
+		result.endColumn = NodeModelUtils.getLineAndColumn(node, result.offset + result.length).getColumn();
 		return result;
 	}
 

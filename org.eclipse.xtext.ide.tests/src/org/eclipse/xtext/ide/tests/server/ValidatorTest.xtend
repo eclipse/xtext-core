@@ -38,6 +38,7 @@ class ValidatorTest extends AbstractTestLangLanguageServerTest {
 		assertEquals(1, range.end.line)
 		assertEquals(1, range.end.character)
 	}
+
 	@Test
 	def void testMultilineDiagnostic_02() {
 		'MyType1.testlang'.writeFile('''

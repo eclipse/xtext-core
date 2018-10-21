@@ -104,6 +104,8 @@ import org.eclipse.xtext.util.internal.Log
 import org.eclipse.xtext.validation.Issue
 
 import static org.eclipse.xtext.diagnostics.Severity.*
+import org.eclipse.xtext.validation.Issue.IssueExtension
+import org.eclipse.lsp4j.Position
 
 /**
  * @author Sven Efftinge - Initial contribution and API
@@ -319,19 +321,13 @@ import static org.eclipse.xtext.diagnostics.Severity.*
 		initialized.thenAccept([
 			val diagnostics = new PublishDiagnosticsParams => [
 				it.uri = toUriString(uri)
-				if (issues.isEmpty) {
-					diagnostics = #[]
-				} else {
-					diagnostics = workspaceManager.doRead(uri) [document, resource|
-						issues.filter[severity !== IGNORE].map[toDiagnostic(document, it)].toList
-					]
-				}
+				it.diagnostics = issues.filter[severity !== IGNORE].map[toDiagnostic].toList
 			]
 			client.publishDiagnostics(diagnostics)
 		])
 	}
 
-	private def Diagnostic toDiagnostic(Document document, Issue issue) {
+	private def Diagnostic toDiagnostic(Issue issue) {
 		new Diagnostic => [
 			code = issue.code
 			severity = switch issue.severity {
@@ -341,11 +337,33 @@ import static org.eclipse.xtext.diagnostics.Severity.*
 				default: DiagnosticSeverity.Hint
 			}
 			message = issue.message
-			val start = document.getPosition(issue.offset)
-			val end = document.getPosition(issue.offset+issue.length)
+			val lineNumber = (issue.lineNumber ?: 1) - 1
+			val column = if ((issue.column ?: -1) == -1) {
+				0
+			} else {
+				issue.column - 1
+			}
+			val length = (issue.length ?: 0)
+			
+			val endLineNumber = if (issue instanceof IssueExtension) {
+				(issue.endLineNumber ?: 1) - 1
+			} else {
+				lineNumber
+			}
+			
+			val endColumn = if (issue instanceof IssueExtension) {
+				if ((issue.endColumn ?: -1) == -1) {
+					0
+				} else {
+					issue.endColumn - 1
+				}
+			} else {
+				column + length
+			}
+			
 			range = new Range(
-				start,
-				end
+				new Position(lineNumber, column),
+				new Position(endLineNumber, endColumn)
 			)
 		]
 	}
