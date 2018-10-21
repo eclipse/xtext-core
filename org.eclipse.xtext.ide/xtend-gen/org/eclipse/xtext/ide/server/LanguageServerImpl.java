@@ -561,14 +561,22 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
         _elvis = Integer.valueOf(1);
       }
       final int lineNumber = ((_elvis).intValue() - 1);
+      int _xifexpression = (int) 0;
       Integer _elvis_1 = null;
       Integer _column = issue.getColumn();
       if (_column != null) {
         _elvis_1 = _column;
       } else {
-        _elvis_1 = Integer.valueOf(1);
+        _elvis_1 = Integer.valueOf((-1));
       }
-      final int column = ((_elvis_1).intValue() - 1);
+      boolean _equals = ((_elvis_1).intValue() == (-1));
+      if (_equals) {
+        _xifexpression = 0;
+      } else {
+        Integer _column_1 = issue.getColumn();
+        _xifexpression = ((_column_1).intValue() - 1);
+      }
+      final int column = _xifexpression;
       Integer _elvis_2 = null;
       Integer _length = issue.getLength();
       if (_length != null) {
@@ -577,8 +585,44 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
         _elvis_2 = Integer.valueOf(0);
       }
       final Integer length = _elvis_2;
+      int _xifexpression_1 = (int) 0;
+      if ((issue instanceof Issue.IssueExtension)) {
+        Integer _elvis_3 = null;
+        Integer _endLineNumber = ((Issue.IssueExtension)issue).getEndLineNumber();
+        if (_endLineNumber != null) {
+          _elvis_3 = _endLineNumber;
+        } else {
+          _elvis_3 = Integer.valueOf(1);
+        }
+        _xifexpression_1 = ((_elvis_3).intValue() - 1);
+      } else {
+        _xifexpression_1 = lineNumber;
+      }
+      final int endLineNumber = _xifexpression_1;
+      int _xifexpression_2 = (int) 0;
+      if ((issue instanceof Issue.IssueExtension)) {
+        int _xifexpression_3 = (int) 0;
+        Integer _elvis_4 = null;
+        Integer _endColumn = ((Issue.IssueExtension)issue).getEndColumn();
+        if (_endColumn != null) {
+          _elvis_4 = _endColumn;
+        } else {
+          _elvis_4 = Integer.valueOf((-1));
+        }
+        boolean _equals_1 = ((_elvis_4).intValue() == (-1));
+        if (_equals_1) {
+          _xifexpression_3 = 0;
+        } else {
+          Integer _endColumn_1 = ((Issue.IssueExtension)issue).getEndColumn();
+          _xifexpression_3 = ((_endColumn_1).intValue() - 1);
+        }
+        _xifexpression_2 = _xifexpression_3;
+      } else {
+        _xifexpression_2 = (column + (length).intValue());
+      }
+      final int endColumn = _xifexpression_2;
       Position _position = new Position(lineNumber, column);
-      Position _position_1 = new Position(lineNumber, (column + (length).intValue()));
+      Position _position_1 = new Position(endLineNumber, endColumn);
       Range _range = new Range(_position, _position_1);
       it.setRange(_range);
     };

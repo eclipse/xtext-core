@@ -105,6 +105,7 @@ import org.eclipse.xtext.util.internal.Log
 import org.eclipse.xtext.validation.Issue
 
 import static org.eclipse.xtext.diagnostics.Severity.*
+import org.eclipse.xtext.validation.Issue.IssueExtension
 
 /**
  * @author Sven Efftinge - Initial contribution and API
@@ -337,11 +338,32 @@ import static org.eclipse.xtext.diagnostics.Severity.*
 			}
 			message = issue.message
 			val lineNumber = (issue.lineNumber ?: 1) - 1
-			val column = (issue.column ?: 1) - 1
+			val column = if ((issue.column ?: -1) == -1) {
+				0
+			} else {
+				issue.column - 1
+			}
 			val length = (issue.length ?: 0)
+			
+			val endLineNumber = if (issue instanceof IssueExtension) {
+				(issue.endLineNumber ?: 1) - 1
+			} else {
+				lineNumber
+			}
+			
+			val endColumn = if (issue instanceof IssueExtension) {
+				if ((issue.endColumn ?: -1) == -1) {
+					0
+				} else {
+					issue.endColumn - 1
+				}
+			} else {
+				column + length
+			}
+			
 			range = new Range(
 				new Position(lineNumber, column),
-				new Position(lineNumber, column + length)
+				new Position(endLineNumber, endColumn)
 			)
 		]
 	}

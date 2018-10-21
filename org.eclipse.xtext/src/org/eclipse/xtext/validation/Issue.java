@@ -18,6 +18,25 @@ import org.eclipse.xtext.diagnostics.Severity;
  */
 public interface Issue {
 
+	/**
+	 * @author Christian Dietrich - Initial contribution and API
+	 * @since 2.19
+	 */
+	interface IssueExtension {
+		/**
+		 * Returns the column in the end line of the issue. It's not the virtual column but literally
+		 * the character offset in the column, e.g. tab ('\t') counts as one character.
+		 * The first char in a line has column number 1, the number is one-based.
+		 * 
+		 * If no column information is available, returns -1.
+		 */
+		Integer getEndColumn();
+		/**
+		 * Returns the one-based end line number of the issue.
+		 */
+		Integer getEndLineNumber();
+	}
+
 	String CODE_KEY = "CODE_KEY";
 	String URI_KEY = "URI_KEY";
 	/**
@@ -66,11 +85,11 @@ public interface Issue {
 	 */
 	String[] getData();
 
-	static class IssueImpl implements Issue {
+	static class IssueImpl implements Issue, IssueExtension {
 		
 		private static Logger LOG = Logger.getLogger(IssueImpl.class);
 
-		private Integer length, lineNumber, offset, column;
+		private Integer length, lineNumber, offset, column, endLineNumber, endColumn;
 		private String code, message;
 		private boolean isSyntaxError = false;
 		private URI uriToProblem;
@@ -198,5 +217,22 @@ public interface Issue {
 			result.append(" line : ").append(getLineNumber()).append(" column : ").append(getColumn()).append(")");
 			return result.toString();
 		}
+
+		public Integer getEndLineNumber() {
+			return endLineNumber;
+		}
+
+		public void setEndLineNumber(Integer endLineNumber) {
+			this.endLineNumber = endLineNumber;
+		}
+
+		public Integer getEndColumn() {
+			return endColumn;
+		}
+
+		public void setEndColumn(Integer endColumn) {
+			this.endColumn = endColumn;
+		}
+
 	}
 }
