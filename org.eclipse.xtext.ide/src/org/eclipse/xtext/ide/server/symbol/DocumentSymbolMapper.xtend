@@ -62,7 +62,7 @@ class DocumentSymbolMapper {
 	 * Provides {@link DocumentSymbol#detail detail} for a {@link DocumentSymbol document symbol}.
 	 * <p>
 	 * Always returns with an empty string by default.
-	 * 
+	 *
 	 * @see DocumentSymbol#detail
 	 */
 	@Beta
@@ -77,7 +77,7 @@ class DocumentSymbolMapper {
 
 	/**
 	 * Provides a human-readable name for the document symbol.
-	 * 
+	 *
 	 * @see DocumentSymbol#name
 	 */
 	@Beta
@@ -96,14 +96,14 @@ class DocumentSymbolMapper {
 		}
 
 		protected def String getName(QualifiedName qualifiedName) {
-			return qualifiedName?.toString;
+			return qualifiedName?.lastSegment;
 		}
 
 	}
 
 	/**
 	 * Provides the {@link SymbolKind symbol kind} information for the document symbol.
-	 * 
+	 *
 	 * @see DocumentSymbol#kind
 	 */
 	@Beta
@@ -125,7 +125,7 @@ class DocumentSymbolMapper {
 
 	/**
 	 * Provides {@link DocumentSymbol#range range} and {@link DocumentSymbol#selectionRange selection range} for a document symbol.
-	 * 
+	 *
 	 * @see DocumentSymbol#range
 	 * @see DocumentSymbol#selectionRange
 	 */
@@ -155,7 +155,7 @@ class DocumentSymbolMapper {
 
 	/**
 	 * Determines whether a document symbol can be marked as {@link DocumentSymbol#deprecated deprecated}.
-	 * 
+	 *
 	 * @see DocumentSymbol#deprecated
 	 */
 	@Beta
