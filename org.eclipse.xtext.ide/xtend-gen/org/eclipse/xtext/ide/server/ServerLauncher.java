@@ -56,10 +56,17 @@ public class ServerLauncher {
   @Inject
   private LanguageServerImpl languageServer;
   
+  /**
+   * @since 2.16
+   */
+  protected LanguageServerImpl getLanguageServer() {
+    return this.languageServer;
+  }
+  
   public void start(final LaunchArgs it) {
     try {
       InputOutput.<String>println("Xtext Language Server is starting.");
-      final Launcher<LanguageClient> launcher = Launcher.<LanguageClient>createLauncher(this.languageServer, LanguageClient.class, it.getIn(), it.getOut(), it.isValidate(), it.getTrace());
+      final Launcher<LanguageClient> launcher = this.createLauncher(it);
       this.languageServer.connect(launcher.getRemoteProxy());
       final Future<Void> future = launcher.startListening();
       InputOutput.<String>println("Xtext Language Server has been started.");
@@ -69,6 +76,13 @@ public class ServerLauncher {
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
+  }
+  
+  /**
+   * @since 2.16
+   */
+  protected Launcher<LanguageClient> createLauncher(final LaunchArgs it) {
+    return Launcher.<LanguageClient>createLauncher(this.languageServer, LanguageClient.class, it.getIn(), it.getOut(), it.isValidate(), it.getTrace());
   }
   
   public static LaunchArgs createLaunchArgs(final String prefix, final String[] args) {

@@ -44,15 +44,29 @@ class ServerLauncher {
 
 	@Inject LanguageServerImpl languageServer
 
+	/**
+	 * @since 2.16
+	 */
+	protected def LanguageServerImpl getLanguageServer() {
+		languageServer
+	}
+
 	def void start(LaunchArgs it) {
 		println("Xtext Language Server is starting.")
-		val launcher = Launcher.createLauncher(languageServer, LanguageClient, in, out, validate, trace)
+		val launcher = createLauncher(it)
 		languageServer.connect(launcher.remoteProxy)
 		val future = launcher.startListening
 		println("Xtext Language Server has been started.")
 		while (!future.done) {
 			Thread.sleep(10_000l)
 		}
+	}
+	
+	/**
+	 * @since 2.16
+	 */
+	protected def Launcher<LanguageClient> createLauncher(LaunchArgs it) {
+		Launcher.createLauncher(languageServer, LanguageClient, in, out, validate, trace)
 	}
 
 	def static LaunchArgs createLaunchArgs(String prefix, String[] args) {
