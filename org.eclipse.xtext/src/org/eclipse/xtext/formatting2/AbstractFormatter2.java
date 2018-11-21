@@ -216,10 +216,11 @@ public abstract class AbstractFormatter2 implements IFormatter2 {
 			if (ruleName.startsWith("ML"))
 				return new MultilineCommentReplacer(comment, '*');
 			if (ruleName.startsWith("SL")) {
-				if (comment.getLineRegions().get(0).getIndentation().getLength() > 0)
+				if (comment.getLineRegions().get(0).getIndentation().getLength() > 0) {
 					return new SinglelineDocCommentReplacer(comment, "//");
-				else
-					return new SinglelineCodeCommentReplacer(comment, "//");
+				}
+
+				return new SinglelineCodeCommentReplacer(comment, "//");
 			}
 		}
 		String elementName = new GrammarElementTitleSwitch().showQualified().showRule().doSwitch(grammarElement);

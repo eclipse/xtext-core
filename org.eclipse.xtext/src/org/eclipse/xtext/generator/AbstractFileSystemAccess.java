@@ -74,9 +74,9 @@ public abstract class AbstractFileSystemAccess implements IFileSystemAccess, IFi
 			public String apply(OutputConfiguration from) {
 				if (currentSource == null) {
 					return from.getOutputDirectory();
-				} else {
-					return from.getOutputDirectory(currentSource);
 				}
+
+				return from.getOutputDirectory(currentSource);
 			}
 		});
 	}
@@ -119,10 +119,11 @@ public abstract class AbstractFileSystemAccess implements IFileSystemAccess, IFi
 	 * @since 2.3
 	 */
 	protected CharSequence postProcess(String fileName, String outputConfiguration, CharSequence content) {
-		if (postProcessor != null)
+		if (postProcessor != null) {
 			return postProcessor.postProcess(getURI(fileName, outputConfiguration), content);
-		else
-			return content;
+		}
+
+		return content;
 	}
 
 	/**
@@ -131,8 +132,9 @@ public abstract class AbstractFileSystemAccess implements IFileSystemAccess, IFi
 	protected CharSequence postProcess(String fileName, String outputConfiguration, CharSequence content, String charset) {
 		if (postProcessor instanceof IFilePostProcessorExtension) {
 			return ((IFilePostProcessorExtension)postProcessor).postProcess(getURI(fileName, outputConfiguration), content, Charset.forName(charset));
-		} else
-			return postProcess(fileName, outputConfiguration, content);
+		}
+
+		return postProcess(fileName, outputConfiguration, content);
 	}
 	
 	/**

@@ -48,35 +48,36 @@ public abstract class AbstractHiddenRegion extends AbstractTextSegment implement
 		List<IHiddenRegionPart> parts = getParts();
 		if (parts.isEmpty()) {
 			return Collections.<ITextSegment>singletonList(this);
-		} else {
-			ITextSegment lastWhitespace = null;
-			List<ITextSegment> result = Lists.newArrayList();
-			for (IHiddenRegionPart part : parts) {
-				if (part instanceof IWhitespace) {
-					if (lastWhitespace == null) {
-						result.add(part);
-						lastWhitespace = part;
-					} else {
-						int mergedLength = lastWhitespace.getLength() + part.getLength();
-						lastWhitespace = new TextSegment(access, lastWhitespace.getOffset(), mergedLength);
-						result.set(result.size() - 1, lastWhitespace);
-					}
-				} else if (part instanceof IComment) {
-					if (lastWhitespace == null) {
-						result.add(new TextSegment(access, part.getOffset(), 0));
-					} else {
-						lastWhitespace = null;
-					}
-					if (includeComments) {
-						result.add(part);
-					}
+		}
+
+		ITextSegment lastWhitespace = null;
+		List<ITextSegment> result = Lists.newArrayList();
+		for (IHiddenRegionPart part : parts) {
+			if (part instanceof IWhitespace) {
+				if (lastWhitespace == null) {
+					result.add(part);
+					lastWhitespace = part;
+				} else {
+					int mergedLength = lastWhitespace.getLength() + part.getLength();
+					lastWhitespace = new TextSegment(access, lastWhitespace.getOffset(), mergedLength);
+					result.set(result.size() - 1, lastWhitespace);
+				}
+			} else if (part instanceof IComment) {
+				if (lastWhitespace == null) {
+					result.add(new TextSegment(access, part.getOffset(), 0));
+				} else {
+					lastWhitespace = null;
+				}
+				if (includeComments) {
+					result.add(part);
 				}
 			}
-			if (lastWhitespace == null) {
-				result.add(new TextSegment(access, getEndOffset(), 0));
-			}
-			return ImmutableList.copyOf(result);
 		}
+
+		if (lastWhitespace == null) {
+			result.add(new TextSegment(access, getEndOffset(), 0));
+		}
+		return ImmutableList.copyOf(result);
 	}
 
 	@Override
@@ -119,12 +120,13 @@ public abstract class AbstractHiddenRegion extends AbstractTextSegment implement
 	@Override
 	public int getOffset() {
 		if (hiddens.isEmpty()) {
-			if (previous != null)
+			if (previous != null) {
 				return previous.getOffset() + previous.getLength();
+			}
 			return 0;
-		} else {
-			return hiddens.get(0).getOffset();
 		}
+
+		return hiddens.get(0).getOffset();
 	}
 
 	@Override

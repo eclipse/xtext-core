@@ -79,8 +79,9 @@ public abstract class AbstractGenericModule implements Module {
 				properties.load(in);
 				Names.bindProperties(binder, properties);
 				return properties;
-			} else
-				return null;
+			}
+
+			return null;
 		} catch (IOException e) {
 			return null;
 		}
