@@ -3,7 +3,7 @@ description = 'Platform-independent component for creating new Xtext projects.'
 
 dependencies {
 	compile project(':org.eclipse.xtext')
-	optional "args4j:args4j:$versions.args4j"
+	compile "args4j:args4j:$versions.args4j"
 }
 
 sourceSets.main.resources.srcDir 'resources'
@@ -11,3 +11,10 @@ sourceSets.main.resources.srcDir 'resources'
 sourcesJar {
 	exclude '**/gradlew/**'
 }
+
+apply plugin: 'application'
+mainClassName = "org.eclipse.xtext.xtext.wizard.cli.CliProjectsCreatorMain"
+applicationName = 'createXtextProject'
+
+
+ 
