@@ -10,7 +10,5 @@ ext.versions = [
 	'gradle_plugins': '0.1.0',
 	'xtext_gradle_plugin': '2.0.2',
 	'dependency_management_plugin' : '1.0.6.RELEASE',
-	'args4j': '2.33',
-	'jdtCore': '3.13.102',
-	'guice': '3.0'
+	'args4j': '2.33'
 ]

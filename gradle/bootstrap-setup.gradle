@@ -12,9 +12,6 @@ repositories {
 		name 'xtend-bootstrap'
 		url "$JENKINS_URL/job/xtend-bootstrap/lastStableBuild/artifact/build-result/maven-repository/"
 	}
-	// maven {
-	// 	url 'http://services.typefox.io/open-source/jenkins/job/xtext-lib/job/sz_bom/lastSuccessfulBuild/artifact/build/maven-repository/'
-	// }
 }
 
 configurations {
@@ -24,8 +21,9 @@ configurations {
 			eachDependency {
 				if (requested.group == 'org.eclipse.xtext' || requested.group == 'org.eclipse.xtend')
 					useVersion(versions.xtext_bootstrap)
-				if (requested.group == 'com.google.inject' && requested.name == 'guice')
-					useVersion(versions.guice)
+// This should be obsolete now
+//				if (requested.group == 'com.google.inject' && requested.name == 'guice')
+//					useVersion(versions.guice)
 			}
 		}
 		exclude group: 'asm'
