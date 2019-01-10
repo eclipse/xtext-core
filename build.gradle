@@ -28,7 +28,7 @@ subprojects {
 	version = rootProject.version
 	
 	apply plugin: 'java'
-	apply plugin: "io.spring.dependency-management"
+	apply plugin: 'io.spring.dependency-management'
 	dependencyManagement {
 		imports {
 			mavenBom "org.eclipse.xtext:xtext-dev-bom:$project.version"

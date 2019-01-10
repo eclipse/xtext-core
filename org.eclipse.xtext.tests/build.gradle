@@ -5,13 +5,13 @@ dependencies {
 	compile project(':org.eclipse.xtext.xtext.generator')
 	compile project(':org.eclipse.xtext.xtext.wizard')
 	compile project(':org.eclipse.xtext.testlanguages')
-	compile "junit:junit"
-	compile "org.eclipse.emf:org.eclipse.emf.common"
-	compile "org.eclipse.emf:org.eclipse.emf.ecore.xmi"
+	compile 'junit:junit'
+	compile 'org.eclipse.emf:org.eclipse.emf.common'
+	compile 'org.eclipse.emf:org.eclipse.emf.ecore.xmi'
 	optional files('lib/simple.jar')
 	// The MWE2 workflow depends on emf-gen, so we have to include it in the test dependencies
 	testCompile sourceSets.mwe2.output
-	testCompile "args4j:args4j"
+	testCompile 'args4j:args4j'
 }
 
 sourceSets.test {

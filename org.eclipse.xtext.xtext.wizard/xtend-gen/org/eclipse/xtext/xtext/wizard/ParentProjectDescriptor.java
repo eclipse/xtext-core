@@ -154,7 +154,7 @@ public class ParentProjectDescriptor extends ProjectDescriptor {
       _builder.append("\'");
       _builder.newLineIfNotEmpty();
       _builder.append("\t\t");
-      _builder.append("classpath \"io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE\"");
+      _builder.append("classpath \'io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE\'");
       _builder.newLine();
       _builder.append("\t");
       _builder.append("}");
@@ -200,7 +200,7 @@ public class ParentProjectDescriptor extends ProjectDescriptor {
       _builder.append("apply plugin: \'java\'");
       _builder.newLine();
       _builder.append("\t");
-      _builder.append("apply plugin: \"io.spring.dependency-management\"");
+      _builder.append("apply plugin: \'io.spring.dependency-management\'");
       _builder.newLine();
       _builder.append("\t");
       _builder.append("dependencyManagement {");

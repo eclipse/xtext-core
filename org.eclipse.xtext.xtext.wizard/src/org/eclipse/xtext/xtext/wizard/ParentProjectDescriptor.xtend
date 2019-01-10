@@ -85,7 +85,7 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 					}
 					dependencies {
 						classpath 'org.xtext:xtext-gradle-plugin:«config.xtextVersion.xtextGradlePluginVersion»'
-						classpath "io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE"
+						classpath 'io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE'
 					}
 				}
 				
@@ -101,7 +101,7 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 					}
 					
 					apply plugin: 'java'
-					apply plugin: "io.spring.dependency-management"
+					apply plugin: 'io.spring.dependency-management'
 					dependencyManagement {
 						imports {
 							mavenBom "org.eclipse.xtext:xtext-dev-bom:«config.xtextVersion»"
