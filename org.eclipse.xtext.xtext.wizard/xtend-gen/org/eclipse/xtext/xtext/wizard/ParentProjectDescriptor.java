@@ -209,7 +209,7 @@ public class ParentProjectDescriptor extends ProjectDescriptor {
       _builder.append("imports {");
       _builder.newLine();
       _builder.append("\t\t\t");
-      _builder.append("mavenBom \"org.eclipse.xtext:xtext-dev.bom:");
+      _builder.append("mavenBom \"org.eclipse.xtext:xtext-dev-bom:");
       XtextVersion _xtextVersion_1 = this.getConfig().getXtextVersion();
       _builder.append(_xtextVersion_1, "\t\t\t");
       _builder.append("\"");
@@ -670,7 +670,7 @@ public class ParentProjectDescriptor extends ProjectDescriptor {
       _builder.append("<groupId>org.eclipse.xtext</groupId>");
       _builder.newLine();
       _builder.append("\t\t\t");
-      _builder.append("<artifactId>xtext-dev.bom</artifactId>");
+      _builder.append("<artifactId>xtext-dev-bom</artifactId>");
       _builder.newLine();
       _builder.append("\t\t\t");
       _builder.append("<version>${xtextVersion}</version>");

@@ -31,7 +31,7 @@ subprojects {
 	apply plugin: "io.spring.dependency-management"
 	dependencyManagement {
 		imports {
-			mavenBom "org.eclipse.xtext:xtext-dev.bom:$project.version"
+			mavenBom "org.eclipse.xtext:xtext-dev-bom:$project.version"
 		}
 	}
 	if (findProperty('compileXtend') == 'true') {

@@ -29,7 +29,7 @@
 		<dependencies>
 			<dependency>
 				<groupId>org.eclipse.xtext</groupId>
-				<artifactId>xtext-dev.bom</artifactId>
+				<artifactId>xtext-dev-bom</artifactId>
 				<version>${xtextVersion}</version>
 				<type>pom</type>
 				<scope>import</scope>

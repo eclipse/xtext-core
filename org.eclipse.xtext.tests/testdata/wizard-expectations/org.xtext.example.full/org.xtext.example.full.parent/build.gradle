@@ -18,7 +18,7 @@ subprojects {
 	apply plugin: "io.spring.dependency-management"
 	dependencyManagement {
 		imports {
-			mavenBom "org.eclipse.xtext:xtext-dev.bom:unspecified"
+			mavenBom "org.eclipse.xtext:xtext-dev-bom:unspecified"
 		}
 	}
 	apply plugin: 'org.xtext.xtend'

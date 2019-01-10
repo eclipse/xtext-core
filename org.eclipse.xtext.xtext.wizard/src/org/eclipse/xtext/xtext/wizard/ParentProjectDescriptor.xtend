@@ -104,7 +104,7 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 					apply plugin: "io.spring.dependency-management"
 					dependencyManagement {
 						imports {
-							mavenBom "org.eclipse.xtext:xtext-dev.bom:«config.xtextVersion»"
+							mavenBom "org.eclipse.xtext:xtext-dev-bom:«config.xtextVersion»"
 						}
 					}
 					apply plugin: 'org.xtext.xtend'
@@ -239,7 +239,7 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 					<dependencies>
 						<dependency>
 							<groupId>org.eclipse.xtext</groupId>
-							<artifactId>xtext-dev.bom</artifactId>
+							<artifactId>xtext-dev-bom</artifactId>
 							<version>${xtextVersion}</version>
 							<type>pom</type>
 							<scope>import</scope>
