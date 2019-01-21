@@ -65,13 +65,13 @@ public @interface RepeatedTest {
 		/**
 		 * Encapsulates the logic for tests that should be executed in a tight loop.
 		 */
-		private static class RepeatedTestStatement extends Statement {
+		public static class RepeatedTestStatement extends Statement {
 			private final int times;
 			private final Statement statement;
 			private final boolean quiet;
 			private final Description description;
 
-			RepeatedTestStatement(int times, Statement statement, Description description, boolean quiet) {
+			public RepeatedTestStatement(int times, Statement statement, Description description, boolean quiet) {
 				this.times = times;
 				this.statement = statement;
 				this.description = description;
