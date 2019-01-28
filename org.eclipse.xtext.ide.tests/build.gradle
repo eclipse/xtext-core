@@ -29,4 +29,25 @@ task generateTestLanguages(type: XtextGeneratorTask) {
 	workflow = file('testlang-src/org/eclipse/xtext/ide/tests/testlanguage/GenerateTestLanguage.mwe2')
 	inputs.file 'testlang-src/org/eclipse/xtext/ide/tests/testlanguage/TestLanguage.xtext'
 	outputs.dir 'testlang-src-gen'
+	dependsOn 'processTestResources'
+}
+
+tasks.getByName('compileTestJava') {
+	mustRunAfter 'generateTestLanguages'
+}
+
+tasks.getByName('compileJava') {
+	mustRunAfter 'generateTestLanguages'
+}
+
+if (tasks.findByName('generateTestXtext')) {
+	tasks.getByName('generateTestXtext') {
+		mustRunAfter 'generateTestLanguages'
+	}
+}
+
+if (tasks.findByName('generateXtext')) {
+	tasks.getByName('generateXtext') {
+		mustRunAfter 'generateTestLanguages'
+	}
 }

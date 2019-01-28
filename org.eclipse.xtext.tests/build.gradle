@@ -38,7 +38,29 @@ sourcesJar.from sourceSets.mwe2.allSource
 task generateTestLanguages(type: XtextGeneratorTask) {
 	workflow = file('src/org/eclipse/xtext/GenerateAllTestLanguages.mwe2')
 	outputs.dir 'src-gen'
+	dependsOn 'processTestResources'
 }
+
+tasks.getByName('compileTestJava') {
+	mustRunAfter 'generateTestLanguages'
+}
+
+tasks.getByName('compileJava') {
+	mustRunAfter 'generateTestLanguages'
+}
+
+if (tasks.findByName('generateTestXtext')) {
+	tasks.getByName('generateTestXtext') {
+		mustRunAfter 'generateTestLanguages'
+	}
+}
+
+if (tasks.findByName('generateXtext')) {
+	tasks.getByName('generateXtext') {
+		mustRunAfter 'generateTestLanguages'
+	}
+}
+
 
 test {
 	exclude 'org.eclipse.xtext.serializer.contextFinderTest.NestedTypeRecursiveTest.class'

@@ -14,4 +14,26 @@ sourceSets.mwe2.runtimeClasspath += processResources.outputs.files
 task generateTestLanguages(type: XtextGeneratorTask) {
 	workflow = file('src/org/eclipse/xtext/testlanguages/GenerateTestLanguages.mwe2')
 	outputs.dir 'src-gen'
+	dependsOn 'processTestResources'
 }
+
+tasks.getByName('compileTestJava') {
+	mustRunAfter 'generateTestLanguages'
+}
+
+tasks.getByName('compileJava') {
+	mustRunAfter 'generateTestLanguages'
+}
+
+if (tasks.findByName('generateTestXtext')) {
+	tasks.getByName('generateTestXtext') {
+		mustRunAfter 'generateTestLanguages'
+	}
+}
+
+if (tasks.findByName('generateXtext')) {
+	tasks.getByName('generateXtext') {
+		mustRunAfter 'generateTestLanguages'
+	}
+}
+
