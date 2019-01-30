@@ -146,13 +146,15 @@ public class RuleNames {
 			String uniqueName = name;
 			String antlrRuleName;
 			if (names.containsKey(name)) {
+				names.put(name, rule);
 				name = qualifiedName;
 				uniqueName = getInheritedUniqueName(rule, usedUniqueNames);
 				antlrRuleName = getInheritedAntlrRuleName(rule, usedAntlrNames);
 			} else {
+				names.put(name, rule);
 				antlrRuleName = getDefaultAntlrRuleName(rule);
 			}
-			names.put(name, rule);
+
 			if (!usedUniqueNames.add(uniqueName)) {
 				throw new IllegalStateException(uniqueName);
 			}
