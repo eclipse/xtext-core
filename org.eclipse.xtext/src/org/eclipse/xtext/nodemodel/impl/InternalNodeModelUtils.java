@@ -140,7 +140,8 @@ public class InternalNodeModelUtils {
 
 	private static int[] getLineBreakOffsets(INode rootNode) {
 		if (rootNode instanceof RootNode) {
-			return ((RootNode) rootNode).basicGetLineBreakOffsets();
+			int[] lineBreakOffsets = ((RootNode) rootNode).basicGetLineBreakOffsets();
+			return (lineBreakOffsets != null) ? lineBreakOffsets : new int[] {};
 		} else {
 			String text = rootNode.getText();
 			return computeLineBreaks(text);
