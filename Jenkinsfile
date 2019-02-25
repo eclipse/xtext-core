@@ -1,6 +1,7 @@
 node {
 	properties([
 		[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', numToKeepStr: '15']]
+, pipelineTriggers([upstream(threshold: 'SUCCESS', upstreamProjects: 'xtext-lib/' + URLEncoder.encode("$BRANCH_NAME", "UTF-8"))])
 	])
 	
 	stage('Checkout') {
