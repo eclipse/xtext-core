@@ -11,6 +11,8 @@ import com.google.inject.Inject
 import java.util.List
 import org.eclipse.lsp4j.ClientCapabilities
 import org.eclipse.lsp4j.DidChangeTextDocumentParams
+import org.eclipse.lsp4j.Position
+import org.eclipse.lsp4j.Range
 import org.eclipse.lsp4j.SemanticHighlightingCapabilities
 import org.eclipse.lsp4j.TextDocumentClientCapabilities
 import org.eclipse.lsp4j.TextDocumentContentChangeEvent
@@ -20,8 +22,8 @@ import org.junit.Before
 import org.junit.Test
 
 import static org.junit.Assert.*
-import org.eclipse.lsp4j.Range
-import org.eclipse.lsp4j.Position
+
+import static extension org.eclipse.xtext.util.Strings.*
 
 class SemanticHighlightingTest extends AbstractTestLangLanguageServerTest {
 
@@ -168,7 +170,7 @@ class SemanticHighlightingTest extends AbstractTestLangLanguageServerTest {
 		val actual = entry.value.sortWith[left, right|left.line - right.line].map[it -> scopes].map [
 			toExpectation
 		].join('\n');
-		assertEquals(expected, actual);
+		assertEquals(expected.toUnixLineSeparator, actual);
 	}
 
 }

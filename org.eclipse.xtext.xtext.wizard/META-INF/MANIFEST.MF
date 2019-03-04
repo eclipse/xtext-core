@@ -13,5 +13,7 @@ Export-Package: org.eclipse.xtext.xtext.wizard;x-friends:="org.eclipse.xtext.tes
 Require-Bundle: org.eclipse.xtext.xbase.lib;bundle-version="2.19.0",
  org.eclipse.xtend.lib;resolution:=optional,
  org.eclipse.xtext.util,
- org.eclipse.emf.ecore;bundle-version="2.10.2"
+ org.eclipse.emf.ecore;bundle-version="2.10.2",
+ org.kohsuke.args4j;resolution:=optional
 Automatic-Module-Name: org.eclipse.xtext.xtext.wizard
+Import-Package: org.apache.log4j;version="1.2.15"

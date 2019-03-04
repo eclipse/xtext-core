@@ -15,6 +15,7 @@ import org.junit.Test
 
 import static org.junit.Assert.*
 import org.eclipse.lsp4j.TextDocumentContentChangeEvent
+import static extension org.eclipse.xtext.util.Strings.toUnixLineSeparator
 
 /**
  * @author efftinge - Initial contribution and API
@@ -145,7 +146,7 @@ class DocumentTest {
         assertEquals('bbb', new Document(1, '''
         aaa
         bbb
-        ccc''').getLineContent(1));
+        ccc'''.toUnixLineSeparator).getLineContent(1));
     }
 
     @Test def void testGetLineCount_empty() {

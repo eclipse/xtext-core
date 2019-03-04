@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.eclipse.xtext</groupId>
+	<artifactId>xtext-core</artifactId>
+	<version>2.19.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>org.eclipse.xtext.util</module>
+		<module>org.eclipse.xtext</module>
+		<module>org.eclipse.xtext.ide</module>
+		<module>org.eclipse.xtext.xtext.generator</module>
+		<module>org.eclipse.xtext.xtext.ide</module>
+		<module>org.eclipse.xtext.xtext.wizard</module>
+		<module>org.eclipse.xtext.testing</module>
+		<module>org.eclipse.xtext.testlanguages</module>
+		<module>org.eclipse.xtext.testlanguages.ide</module>
+ 		<module>org.eclipse.xtext.tests</module>
+		<module>org.eclipse.xtext.ide.tests</module>
+		<!-- TODO include in build, but clearify how to do it right -->
+		<!-- <module>org.eclipse.xtext.xtext.bootstrap</module> -->
+	</modules>
+</project>

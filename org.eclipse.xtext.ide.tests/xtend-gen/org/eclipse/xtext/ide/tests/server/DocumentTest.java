@@ -14,6 +14,7 @@ import org.eclipse.lsp4j.TextDocumentContentChangeEvent;
 import org.eclipse.lsp4j.TextEdit;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.ide.server.Document;
+import org.eclipse.xtext.util.Strings;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
@@ -216,7 +217,8 @@ public class DocumentTest {
     _builder.append("bbb");
     _builder.newLine();
     _builder.append("ccc");
-    Assert.assertEquals("bbb", new Document(Integer.valueOf(1), _builder.toString()).getLineContent(1));
+    String _unixLineSeparator = Strings.toUnixLineSeparator(_builder);
+    Assert.assertEquals("bbb", new Document(Integer.valueOf(1), _unixLineSeparator).getLineContent(1));
   }
   
   @Test

@@ -10,6 +10,7 @@ package org.eclipse.xtext.testing;
 import java.util.Map;
 import org.eclipse.lsp4j.InitializeParams;
 import org.eclipse.xtend.lib.annotations.Accessors;
+import org.eclipse.xtext.util.Strings;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 import org.eclipse.xtext.xbase.lib.Pure;
@@ -25,6 +26,10 @@ public class TextDocumentConfiguration {
   
   private Procedure1<? super InitializeParams> initializer;
   
+  public void setModel(final String model) {
+    this.model = Strings.toUnixLineSeparator(model);
+  }
+  
   @Pure
   public Map<String, CharSequence> getFilesInScope() {
     return this.filesInScope;
@@ -37,10 +42,6 @@ public class TextDocumentConfiguration {
   @Pure
   public String getModel() {
     return this.model;
-  }
-  
-  public void setModel(final String model) {
-    this.model = model;
   }
   
   @Pure
