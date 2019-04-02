@@ -277,22 +277,36 @@ public abstract class TestProjectDescriptor extends ProjectDescriptor {
           _builder.append("\t\t\t");
           _builder.append("<extraRequirements>");
           _builder.newLine();
-          _builder.append("\t\t");
-          _builder.append("\t\t\t\t");
-          _builder.append("<!-- to get the org.eclipse.osgi.compatibility.state plugin");
-          _builder.newLine();
-          _builder.append("\t\t");
-          _builder.append("\t\t\t\t");
-          _builder.append("if the target platform is Luna or later.");
-          _builder.newLine();
-          _builder.append("\t\t");
-          _builder.append("\t\t\t\t");
-          _builder.append("(backward compatible with kepler and previous versions)");
-          _builder.newLine();
-          _builder.append("\t\t");
-          _builder.append("\t\t\t\t");
-          _builder.append("see https://bugs.eclipse.org/bugs/show_bug.cgi?id=492149 -->");
-          _builder.newLine();
+          {
+            boolean _needsUiHarness = this.needsUiHarness();
+            if (_needsUiHarness) {
+              _builder.append("\t\t");
+              _builder.append("\t\t\t\t");
+              _builder.append("<!-- to get the org.eclipse.osgi.compatibility.state plugin");
+              _builder.newLine();
+              _builder.append("\t\t");
+              _builder.append("\t\t\t\t");
+              _builder.append("if the target platform is Luna or later.");
+              _builder.newLine();
+              _builder.append("\t\t");
+              _builder.append("\t\t\t\t");
+              _builder.append("(backward compatible with kepler and previous versions)");
+              _builder.newLine();
+              _builder.append("\t\t");
+              _builder.append("\t\t\t\t");
+              _builder.append("see https://bugs.eclipse.org/bugs/show_bug.cgi?id=492149 -->");
+              _builder.newLine();
+            } else {
+              _builder.append("\t\t");
+              _builder.append("\t\t\t\t");
+              _builder.append("<!-- workaround for missing javax.annotation in tycho version");
+              _builder.newLine();
+              _builder.append("\t\t");
+              _builder.append("\t\t\t\t");
+              _builder.append("&lt;= 1.3.0. can be removed with tycho 1.4.0 -->");
+              _builder.newLine();
+            }
+          }
           _builder.append("\t\t");
           _builder.append("\t\t\t\t");
           _builder.append("<requirement>");

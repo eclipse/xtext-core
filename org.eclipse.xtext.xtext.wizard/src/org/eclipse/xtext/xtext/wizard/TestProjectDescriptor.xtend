@@ -116,10 +116,15 @@ abstract class TestProjectDescriptor extends ProjectDescriptor {
 								<configuration>
 									<dependency-resolution>
 										<extraRequirements>
-											<!-- to get the org.eclipse.osgi.compatibility.state plugin
-											if the target platform is Luna or later.
-											(backward compatible with kepler and previous versions)
-											see https://bugs.eclipse.org/bugs/show_bug.cgi?id=492149 -->
+											«IF needsUiHarness»
+												<!-- to get the org.eclipse.osgi.compatibility.state plugin
+												if the target platform is Luna or later.
+												(backward compatible with kepler and previous versions)
+												see https://bugs.eclipse.org/bugs/show_bug.cgi?id=492149 -->
+											«ELSE»
+												<!-- workaround for missing javax.annotation in tycho version
+												&lt;= 1.3.0. can be removed with tycho 1.4.0 -->
+											«ENDIF»
 											<requirement>
 												<type>eclipse-feature</type>
 												<id>org.eclipse.rcp</id>
