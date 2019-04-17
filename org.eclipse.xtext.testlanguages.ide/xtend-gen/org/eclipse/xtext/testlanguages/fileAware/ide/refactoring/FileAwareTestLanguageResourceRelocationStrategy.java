@@ -23,6 +23,11 @@ public class FileAwareTestLanguageResourceRelocationStrategy implements IResourc
   }
   
   @Override
+  public boolean requiresLiveScopeResourceIndexing(final ResourceRelocationContext context) {
+    return true;
+  }
+  
+  @Override
   public void applyChange(final ResourceRelocationContext context) {
     final Function1<ResourceRelocationChange, Boolean> _function = (ResourceRelocationChange it) -> {
       return Boolean.valueOf(this.canHandle(it));

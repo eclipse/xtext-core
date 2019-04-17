@@ -14,7 +14,11 @@ class FileAwareTestLanguageResourceRelocationStrategy implements IResourceReloca
 	def boolean canHandle(ResourceRelocationChange change) {
 		resourceServiceProvider.canHandle(change.fromURI)
 	}
-		
+	
+	override requiresLiveScopeResourceIndexing(ResourceRelocationContext context) {
+		true
+	}
+	
 	override applyChange(ResourceRelocationContext context) {
 		context.changes.filter[ canHandle ].forEach [ change | 
 			context.addModification(change) [ resource |

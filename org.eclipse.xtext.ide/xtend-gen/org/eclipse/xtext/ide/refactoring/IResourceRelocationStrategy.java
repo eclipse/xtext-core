@@ -30,4 +30,15 @@ import org.eclipse.xtext.ide.refactoring.ResourceRelocationContext;
 @SuppressWarnings("all")
 public interface IResourceRelocationStrategy {
   public abstract void applyChange(final ResourceRelocationContext context);
+  
+  /**
+   * If possible refactoring operations may rely on persisted index data for reduced memory consumption,
+   * which is the case in the Eclipse IDE. By overloading this method client implementations may
+   * explicitly demand for live scope resource indexing.
+   * 
+   * @since 2.18
+   */
+  public default boolean requiresLiveScopeResourceIndexing(final ResourceRelocationContext context) {
+    return false;
+  }
 }
