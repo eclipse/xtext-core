@@ -1,6 +1,7 @@
 node {
 	properties([
 		[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', numToKeepStr: '15']]
+		, pipelineTriggers([upstream(threshold: 'SUCCESS', upstreamProjects: 'xtext-lib/milestone_2.18.0.M2')])
 	])
 	
 	stage('Checkout') {
