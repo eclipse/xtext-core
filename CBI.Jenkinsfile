@@ -57,6 +57,7 @@ spec:
 
   // https://jenkins.io/doc/book/pipeline/syntax/#triggers
   triggers {
+    upstream(upstreamProjects: 'xtext-lib/milestone_2.18.0.M3', threshold: hudson.model.Result.SUCCESS)
     pollSCM('H/5 * * * *')
   }
   

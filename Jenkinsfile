@@ -7,6 +7,10 @@ pipeline {
     timeout(time: 30, unit: 'MINUTES')
   }
 
+  triggers {
+    upstream(upstreamProjects: 'xtext-lib/milestone_2.18.0.M3', threshold: hudson.model.Result.SUCCESS)
+  }
+
   tools { 
     maven 'M3'
   }
