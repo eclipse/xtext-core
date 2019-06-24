@@ -15,12 +15,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.URIConverter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -30,26 +32,55 @@ import org.eclipse.xtext.resource.XtextResourceSet;
 
 /**
  * @author mark.christiaens - Initial contribution and API
- * 
+ *
  * @since 2.3
  * @noextend This class is not intended to be subclassed by clients.
  * @noinstantiate This class is not intended to be instantiated by clients.
  */
 public class SerializationUtil {
 	public static final int KIB = 1024;
-	
-	public static void fillIdToEObjectMap(Resource resource, List<EObject> map) {
-		TreeIterator<EObject> allContents = EcoreUtil.getAllContents(resource, false);  
-				
+
+	public static void fillListWithAllEObjects(Resource resource, List<EObject> map) {
+		TreeIterator<EObject> allContents = EcoreUtil.getAllContents(resource, false);
+
+		if (allContents.hasNext()) {
+			EObject root = allContents.next();
+			fillListWithAllEObjects(root, map);
+		}
+	}
+
+	public static void fillListWithAllEObjects(EObject eObject, List<EObject> map) {
+		if (eObject.eContainingFeature() == null || !eObject.eContainingFeature().isTransient()) {
+			map.add(eObject);
+			EList<EObject> eContents = eObject.eContents();
+
+			for (EObject child : eContents) {
+				fillListWithAllEObjects(child, map);
+			}
+		}
+	}
+
+	/**
+	 * Basically a copy of {@link #fillListWithAllEObjects(Resource, List)}, but for efficiency we need an
+	 * implementation for Map and List
+	 */
+	public static void fillIdToEObjectMap(Resource resource, Map<EObject, Integer> map) {
+		TreeIterator<EObject> allContents = EcoreUtil.getAllContents(resource, false);
+
 		if (allContents.hasNext()) {
 			EObject root = allContents.next();
 			fillIdToEObjectMap(root, map);
 		}
 	}
 
-	public static void fillIdToEObjectMap(EObject eObject, List<EObject> map) {
-		if (eObject.eContainingFeature() == null || !eObject.eContainingFeature().isTransient()) {
-			map.add(eObject);
+	/**
+	 * Basically a copy of {@link #fillListWithAllEObjects(EObject, List)}, but for efficiency we need an implementation
+	 * for Map and List
+	 */
+	public static void fillIdToEObjectMap(EObject eObject, Map<EObject, Integer> map) {
+		EStructuralFeature containingFeature = eObject.eContainingFeature();
+		if (containingFeature == null || !containingFeature.isTransient()) {
+			map.put(eObject, map.size());
 			EList<EObject> eContents = eObject.eContents();
 
 			for (EObject child : eContents) {
@@ -83,7 +114,7 @@ public class SerializationUtil {
 			throws UnsupportedEncodingException, IOException {
 		InputStreamReader inputStreamReader = new InputStreamReader(inputStream, encoding);
 
-		StringBuilder sb = new StringBuilder (); 
+		StringBuilder sb = new StringBuilder ();
 		char[] buffer = new char[128 * KIB];
 
 		int n = inputStreamReader.read(buffer);
@@ -95,23 +126,23 @@ public class SerializationUtil {
 
 		return sb.toString();
 	}
-	
+
 	public static byte [] getCompleteContent(InputStream inputStream)
 			throws IOException {
 		byte[] buffer = new byte[128 * KIB];
-		int nextFreePos = 0; 
+		int nextFreePos = 0;
 		int n = inputStream.read(buffer, nextFreePos, buffer.length - nextFreePos);
 		while (n != -1) {
-			nextFreePos += n; 
+			nextFreePos += n;
 			if (nextFreePos >= buffer.length) {
-				buffer = copyOf(buffer, buffer.length*2); 
+				buffer = copyOf(buffer, buffer.length*2);
 			}
 			n = inputStream.read(buffer, nextFreePos, buffer.length - nextFreePos);
 		}
-		
-		return copyOf(buffer, nextFreePos);  
+
+		return copyOf(buffer, nextFreePos);
 	}
-	
+
 	static byte[] copyOf(byte[] original, int newLength) {
         byte[] copy = new byte[newLength];
         System.arraycopy(original, 0, copy, 0,
@@ -130,7 +161,7 @@ public class SerializationUtil {
 			SerializationUtil.writeStringArray(out, syntaxErrorMessage.getIssueData());
 		}
 	}
-	
+
 	public static SyntaxErrorMessage readSyntaxErrorMessage(DataInputStream in, DeserializationConversionContext context)
 			throws IOException {
 		boolean isNull = in.readBoolean();
@@ -188,10 +219,10 @@ public class SerializationUtil {
 	}
 
 	public static final void writeString(DataOutputStream out, String s) throws IOException {
-		boolean isNull = s == null; 
-		
-		out.writeBoolean(isNull); 
-		
+		boolean isNull = s == null;
+
+		out.writeBoolean(isNull);
+
 		if (!isNull) {
 			out.writeUTF(s);
 		}
@@ -199,20 +230,20 @@ public class SerializationUtil {
 
 	public static final String readString(DataInputStream in) throws IOException {
 		boolean isNull = in.readBoolean();
-	
+
 		if (isNull) {
 			return null;
 		}
-	
+
 		String string = in.readUTF();
-	
+
 		return string;
 	}
 
 	public static void writeStringArray(DataOutputStream out, String[] ss) throws IOException {
 		out.writeBoolean(ss == null);
 		if (ss != null) {
-			writeInt(out, ss.length, true); 
+			writeInt(out, ss.length, true);
 			for (String data : ss) {
 				writeString(out, data);
 			}
@@ -222,19 +253,19 @@ public class SerializationUtil {
 	public static String[] readStringArray(DataInputStream in) throws IOException {
 		boolean isIssueDataNull = in.readBoolean();
 		String[] result = null;
-	
+
 		if (!isIssueDataNull) {
-			int issueDataLength = readInt(in, true); 
+			int issueDataLength = readInt(in, true);
 			result = new String[issueDataLength];
-	
+
 			for (int i = 0; i < issueDataLength; ++i) {
 				result[i] = readString(in);
 			}
 		}
-	
+
 		return result;
 	}
-	
+
 	public static void tryClose(Closeable stream, Logger logger) throws IOException {
 		if (stream != null) {
 			try {

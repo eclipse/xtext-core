@@ -10,6 +10,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 
 import org.eclipse.xtext.nodemodel.ICompositeNode;
 import org.eclipse.xtext.nodemodel.serialization.DeserializationConversionContext;
@@ -46,9 +47,9 @@ public class SerializableNodeModel {
 	 * @noreference This method is not intended to be referenced by clients.
 	 */
 	public void writeObjectData(DataOutputStream out, SerializationConversionContext scc) throws IOException {
-		String[] grammarIdToURIMap = scc.getGrammarIdToURIMap();
+		List<String> grammarIdToURIMap = scc.getGrammarIdToURIMap();
 
-		out.writeInt(grammarIdToURIMap.length);
+		out.writeInt(grammarIdToURIMap.size());
 		for (String string : grammarIdToURIMap) {
 			out.writeUTF(string);
 		}

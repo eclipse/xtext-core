@@ -7,7 +7,9 @@
 package org.eclipse.xtext.nodemodel.serialization;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -17,13 +19,17 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.resource.XtextResource;
 
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 
 /**
  * @author mark.christiaens - Initial contribution and API
- * 
+ *
  * @since 2.3
  */
 public class DeserializationConversionContext {
+
+	private static final Map<URI, Map<URI, EObject>> CACHE = Maps.newHashMap();
+
 	private EObject[] grammarIdToGrammarElementMap;
 
 	final private List<EObject> idToEObjectMap;
@@ -43,12 +49,23 @@ public class DeserializationConversionContext {
 	}
 
 	public void setGrammarIdToURIMap(String[] grammarIdToURIMap) {
-		grammarIdToGrammarElementMap = new EObject[grammarIdToURIMap.length];
+		URI grammarUri = grammarAccess.getGrammar().eResource().getURI();
 
+		Map<URI, EObject> grammarCache = CACHE.get(grammarUri);
+		if (grammarCache == null) {
+			grammarCache = new HashMap<>();
+			CACHE.put(grammarUri, grammarCache);
+		}
+
+		grammarIdToGrammarElementMap = new EObject[grammarIdToURIMap.length];
 		ResourceSet grammarResourceSet = grammarAccess.getGrammar().eResource().getResourceSet();
 		for (int grammarId = 0; grammarId < grammarIdToURIMap.length; ++grammarId) {
 			URI uri = URI.createURI(grammarIdToURIMap[grammarId], true);
-			EObject grammarElement = grammarResourceSet.getEObject(uri, true);
+			EObject grammarElement = grammarCache.get(uri);
+			if (grammarElement == null) {
+				grammarElement = grammarResourceSet.getEObject(uri, true);
+				grammarCache.put(uri, grammarElement);
+			}
 
 			if (grammarElement == null) {
 				throw new IllegalStateException(
@@ -73,7 +90,7 @@ public class DeserializationConversionContext {
 	}
 
 	public void fillIdToEObjectMap(Resource resource) {
-		SerializationUtil.fillIdToEObjectMap(resource, idToEObjectMap);
+		SerializationUtil.fillListWithAllEObjects(resource, idToEObjectMap);
 	}
 
 	public EObject getSemanticObject(int id) {

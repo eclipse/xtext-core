@@ -13,7 +13,10 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EFactory;
@@ -48,11 +51,19 @@ public class SerializationUtilTest extends Assert {
 		rootObject.eSet(ref1, someTypeObject1);
 		rootObject.eSet(ref2, someTypeObject2);
 
-		List<EObject> map = new ArrayList<>();
+		List<EObject> list = new ArrayList<>();
+		SerializationUtil.fillListWithAllEObjects(rootObject, list);
+		assertTrue(list.contains(rootObject));
+		assertTrue(list.contains(someTypeObject1));
+		assertFalse(list.contains(someTypeObject2));
+		assertEquals(2, list.size());
+
+		Map<EObject, Integer> map = new HashMap<>();
 		SerializationUtil.fillIdToEObjectMap(rootObject, map);
-		assertTrue(map.contains(rootObject));
-		assertTrue(map.contains(someTypeObject1));
-		assertFalse(map.contains(someTypeObject2));
+		Set<EObject> keys = map.keySet();
+		assertTrue(keys.contains(rootObject));
+		assertTrue(keys.contains(someTypeObject1));
+		assertFalse(keys.contains(someTypeObject2));
 		assertEquals(2, map.size());
 	}
 

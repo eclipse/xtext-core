@@ -7,7 +7,9 @@
 package org.eclipse.xtext.nodemodel.serialization;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.IdentityHashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
@@ -27,9 +29,9 @@ public class SerializationConversionContext {
 	final private Map<EObject, Integer> eObjectToIdMap;
 
 	public SerializationConversionContext(XtextResource resource) {
-		grammarElementToIdMap = new IdentityHashMap<EObject, Integer>();
-		grammarIdToURIMap = new ArrayList<String>();
-		eObjectToIdMap = new IdentityHashMap<EObject, Integer>();
+		grammarElementToIdMap = new IdentityHashMap<EObject, Integer>(100);
+		grammarIdToURIMap = new ArrayList<String>(100);
+		eObjectToIdMap = new IdentityHashMap<EObject, Integer>(1000);
 
 		fillEObjectToIdMap(resource);
 		fillGrammarElementToIdMap(resource);
@@ -47,13 +49,7 @@ public class SerializationConversionContext {
 	}
 
 	protected void fillEObjectToIdMap(Resource resource) {
-		ArrayList<EObject> idToEObjectMap = new ArrayList<EObject>();
-
-		SerializationUtil.fillIdToEObjectMap(resource, idToEObjectMap);
-
-		for (int id = 0; id < idToEObjectMap.size(); ++id) {
-			eObjectToIdMap.put(idToEObjectMap.get(id), id);
-		}
+		SerializationUtil.fillIdToEObjectMap(resource, eObjectToIdMap);
 	}
 
 	protected void fillGrammarElementToIdMap(XtextResource r) {
@@ -68,16 +64,17 @@ public class SerializationConversionContext {
 		Integer id = eObjectToIdMap.get(eObject);
 
 		if (id == null) {
-			throw new IllegalArgumentException("Tryin to fetch an EMF object that does not exist (no longer) with id: "
+			throw new IllegalArgumentException("Trying to fetch an EMF object that does not exist (no longer) with id: "
 					+ id);
 		}
 
 		return id;
 	}
 
-	public String[] getGrammarIdToURIMap() {
-		String[] map = grammarIdToURIMap.toArray(new String[grammarIdToURIMap.size()]);
-
-		return map;
+	/**
+	 * Returns an unmodifiable view on the grammarIdToURIMap
+	 */
+	public List<String> getGrammarIdToURIMap() {
+		return Collections.unmodifiableList(grammarIdToURIMap);
 	}
 }
