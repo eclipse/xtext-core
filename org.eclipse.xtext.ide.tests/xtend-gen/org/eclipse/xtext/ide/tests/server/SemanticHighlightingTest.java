@@ -28,6 +28,7 @@ import org.eclipse.lsp4j.VersionedTextDocumentIdentifier;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.ide.server.UriExtensions;
 import org.eclipse.xtext.ide.tests.server.AbstractTestLangLanguageServerTest;
+import org.eclipse.xtext.util.Strings;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
@@ -315,6 +316,6 @@ public class SemanticHighlightingTest extends AbstractTestLangLanguageServerTest
       return this.toExpectation(it);
     };
     final String actual = IterableExtensions.join(ListExtensions.<Pair<SemanticHighlightingInformation, List<List<String>>>, String>map(ListExtensions.<SemanticHighlightingInformation, Pair<SemanticHighlightingInformation, List<List<String>>>>map(IterableExtensions.<SemanticHighlightingInformation>sortWith(entry.getValue(), _function_1), _function_2), _function_3), "\n");
-    this.assertEquals(expected, actual);
+    this.assertEquals(Strings.toUnixLineSeparator(expected), actual);
   }
 }

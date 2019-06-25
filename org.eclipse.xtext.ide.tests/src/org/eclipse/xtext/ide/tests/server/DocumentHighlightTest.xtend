@@ -7,139 +7,193 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.tests.server
 
-import org.eclipse.lsp4j.DocumentHighlight
-import org.eclipse.lsp4j.DocumentHighlightKind
 import org.eclipse.lsp4j.Position
-import org.eclipse.xtext.ide.server.occurrences.IDocumentHighlightService
+import org.eclipse.lsp4j.Range
+import org.eclipse.lsp4j.TextEdit
+import org.eclipse.xtext.ide.server.Document
 import org.junit.Test
 
+import static org.junit.Assert.*
+import org.eclipse.lsp4j.TextDocumentContentChangeEvent
+import static extension org.eclipse.xtext.util.Strings.toUnixLineSeparator
+
 /**
- * Class for testing the {@link DocumentHighlightService document highlight
- * service} behavior through the language server.
- * 
- * <p>
- * The string representation of on single {@link DocumentHighlight highlight}
- * instance is represented with the below pattern:
- * 
- * <pre>
- * R|W|T [{d}+, {d}+] .. [{d}+, {d}+]
- * </pre>
- * 
- * where the first character describes the {@link DocumentHighlightKind kind} of
- * the document highlight. If missing, then the value is {@code NaN}. The values
- * between the first square brackets are the start {@link Position#getLine()
- * line} and the (zero-based) {@link Position#getCharacter() character offset}
- * in the line. The second square brackets contains the end position of the
- * selection and described with the same semantics as the first start range.
- * Multiple highlight instances are separated by the {@code |} ("pipe")
- * character.
- * 
- * @author akos.kitta - Initial contribution and API
- * 
- * @see DocumentHighlight
- * @see IDocumentHighlightService
+ * @author efftinge - Initial contribution and API
  */
-class DocumentHighlightTest extends AbstractTestLangLanguageServerTest {
+class DocumentTest {
+    
+    @Test def void testOffSet() {
+        new Document(1, '''
+            hello world
+            foo
+            bar
+        '''.normalize) => [
+            assertEquals(0, getOffSet(position(0,0)))
+            assertEquals(11, getOffSet(position(0,11)))
+            try {
+                getOffSet(position(0, 12))
+                fail()
+            } catch (IndexOutOfBoundsException e) {
+                //expected
+            }
+            assertEquals(12, getOffSet(position(1,0)))
+            assertEquals(13, getOffSet(position(1,1)))
+            assertEquals(14, getOffSet(position(1,2)))
+            assertEquals(16, getOffSet(position(2,0)))
+            assertEquals(19, getOffSet(position(2,3)))
+        ]
+    }
+    
+    @Test def void testOffSet_empty() {
+        new Document(1, "") => [
+            assertEquals(0, getOffSet(position(0,0)))
+            try {
+                getOffSet(position(0, 12))
+                fail()
+            } catch (IndexOutOfBoundsException e) {
+                //expected
+            }
+        ]
+    }
+    
+    @Test def void testUpdate_01() {
+        new Document(1, '''
+            hello world
+            foo
+            bar
+        '''.normalize) => [
+            assertEquals('''
+                hello world
+                bar
+            '''.normalize, applyTextDocumentChanges(#[
+                change(position(1,0), position(2,0), "")
+            ]).contents)
+        ]
+    }
+    
+    @Test def void testUpdate_02() {
+        new Document(1, '''
+            hello world
+            foo
+            bar
+        '''.normalize) => [
+            assertEquals('''
+                hello world
+                future
+                bar
+            '''.normalize, applyTextDocumentChanges(#[
+                change(position(1,1), position(1,3), "uture")
+            ]).contents)
+        ]
+    }
+    
+    @Test def void testUpdate_03() {
+        new Document(1, '''
+            hello world
+            foo
+            bar'''.normalize) => [
+            assertEquals('', applyTextDocumentChanges(#[
+                change(position(0,0), position(2,3), "")
+            ]).contents)
+        ]
+    }
+    
+    @Test def void testApplyTextDocumentChanges_04() {
+        new Document(1, '''
+            foo
+            bar
+        '''.normalize).applyTextDocumentChanges(#[
+                change(position(0,3), position(0,3), "b"),
+                change(position(0,4), position(0,4), "a"),
+                change(position(0,5), position(0,5), "r")
+            ])
+        => [
+            assertEquals('''
+                foobar
+                bar
+            '''.normalize, contents)
+            assertEquals(2, version)
+        ]
+    }
+    
+    @Test def void testUpdate_nonIncrementalChange() {
+        new Document(1, '''
+            hello world
+            foo
+            bar'''.normalize) => [
+            assertEquals(' foo ', applyChanges(#[
+                textEdit(null, null, " foo ")
+            ]).contents)
+        ]
+    }
+    
+    @Test(expected=IndexOutOfBoundsException) def void testGetLineContent_negative() {
+        new Document(1, '').getLineContent(-1);
+    }
 
-	@Test
-	def void singleLineNoOccurrences_SelectionBeforeWriteSiteMethodName() {
-		testDocumentHighlight[
-			model = '''type A { op foo() { } }''';
-			column = '''type A { op'''.length;
-			expectedDocumentHighlight = '';
-		];
-	}
-	
-	@Test
-	def void singleLineNoOccurrences_SelectionAfterWriteSiteMethodName() {
-		testDocumentHighlight[
-			model = '''type A { op foo() { } }''';
-			column = '''type A { op foo('''.length;
-			expectedDocumentHighlight = '';
-		];
-	}
+    @Test(expected=IndexOutOfBoundsException) def void testGetLineContent_exceeds() {
+        new Document(1, '''
+        aaa
+        bbb
+        ccc''').getLineContent(3);
+    }
 
-	@Test
-	def void singleLineSingleOccurrence() {
-		testDocumentHighlight[
-			model = '''type A { op foo() { } }''';
-			column = '''type A { op fo'''.length;
-			expectedDocumentHighlight = 'W [[0, 12] .. [0, 15]]';
-		];
-	}
+    @Test def void testGetLineContent_empty() {
+        assertEquals('', new Document(1, '').getLineContent(0));
+    }
 
-	@Test
-	def void singleLineSingleOccurrenceWithVariable() {
-		testDocumentHighlight[
-			model = '''type A { int foo op foo() { } }''';
-			column = '''type A { int fo'''.length;
-			expectedDocumentHighlight = 'W [[0, 13] .. [0, 16]]';
-		];
-	}
+    @Test def void testGetLineContent() {
+        assertEquals('bbb', new Document(1, '''
+        aaa
+        bbb
+        ccc'''.toUnixLineSeparator).getLineContent(1));
+    }
 
-	@Test
-	def void singleLineSingleOccurrenceWithMultipleTypes() {
-		testDocumentHighlight[
-			model = '''type A { op foo() { } } type B { op foo() { } }''';
-			column = '''type A { op fo'''.length;
-			expectedDocumentHighlight = 'W [[0, 12] .. [0, 15]]';
-		];
-	}
+    @Test def void testGetLineCount_empty() {
+        assertEquals(1, new Document(1, '').lineCount);
+    }
 
-	@Test
-	def void singleLineMultipleOccurrences_SelectionOnReadSite() {
-		testDocumentHighlight[
-			model = '''type A { op foo() { } op bar() { foo(10) } }''';
-			line = 0;
-			column = '''type A { op foo() { } op bar() { fo'''.length;
-			expectedDocumentHighlight = 'W [[0, 12] .. [0, 15]] | R [[0, 33] .. [0, 36]]';
-		];
-	}
+    @Test def void testGetLineCount_single() {
+        assertEquals(1, new Document(1, 'aaa bbb ccc').lineCount);
+    }
 
-	@Test
-	def void singleLineMultipleOccurrences_SelectionOnWriteSite() {
-		testDocumentHighlight[
-			model = '''type A { op foo() { } op bar() { foo(10) } }''';
-			line = 0;
-			column = '''type A { op fo'''.length;
-			expectedDocumentHighlight = 'W [[0, 12] .. [0, 15]] | R [[0, 33] .. [0, 36]]';
-		];
-	}
+    @Test def void testGetLineCount_multi() {
+        assertEquals(3, new Document(1, '''
+        aaa
+        bbb
+        ccc''').lineCount);
+    }
 
-	@Test
-	def void multipleLinesMultipleOccurrences_WithHorizontalTabs() {
-		testDocumentHighlight[
-//			This snippet contains horizontal tabs for code indentation
-			model = '''
-			type A {
-				op foo() { }
-				op bar() {
-					foo(10)
-				}
-			}''';
-			line = 1;
-			// Same as above, horizontal tabs for code indentation
-			column = '''	op fo'''.length;
-			expectedDocumentHighlight = 'W [[1, 4] .. [1, 7]] | R [[3, 2] .. [3, 5]]';
-		];
-	}
-
-	@Test
-	def void multipleLinesMultipleOccurrences_WithWhitespaces() {
-		testDocumentHighlight[
-//			This snippet contains spaces for code indentation
-			model = '''
-			type A {
-			    op foo() { }
-			    op bar() {
-			        foo(10)
-			    }
-			}''';
-			line = 1;
-			// Same as above, spaces for code indentation
-			column = '''    op fo'''.length;
-			expectedDocumentHighlight = 'W [[1, 7] .. [1, 10]] | R [[3, 8] .. [3, 11]]';
-		];
-	}
-
+    private def change(Position startPos, Position endPos, String newText) {
+        new TextDocumentContentChangeEvent => [
+              if (startPos !== null) {
+                  range = new Range => [
+                      start = startPos
+                      end = endPos
+                  ]
+              }
+              it.text = newText
+            ]
+    }
+    
+    private def textEdit(Position startPos, Position endPos, String newText) {
+        new TextEdit => [
+              if (startPos !== null) {
+                  range = new Range => [
+                      start = startPos
+                      end = endPos
+                  ]
+              }
+              it.newText = newText
+            ]
+    }
+    
+    private def normalize(CharSequence s) {
+        return s.toString.replaceAll("\r", "")
+    }
+    
+    private def position(int l, int c) {
+        new Position => [line=l character=c]
+    }
+    
 }
