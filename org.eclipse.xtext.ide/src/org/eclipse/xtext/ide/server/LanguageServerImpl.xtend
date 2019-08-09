@@ -520,9 +520,12 @@ import static org.eclipse.xtext.diagnostics.Severity.*
 			val service2 = serviceProvider?.get(ICodeActionService2);
 			if (service === null && service2 === null)
 				return emptyList
-			
-			return workspaceManager.doRead(uri) [doc, resource |
+			return access.doRead(params.textDocument.uri) [
+				context|
 				val result = newArrayList
+				val doc = context.document
+				val resourceSet = access.newLiveScopeResourceSet(uri)
+				val resource = resourceSet.getResource(uri, true) as XtextResource
 				result += service?.getCodeActions(doc, resource, params, cancelIndicator) ?: emptyList
 				result += service2?.getCodeActions(new ICodeActionService2.Options() => [ o |
 					o.document = doc
@@ -532,7 +535,7 @@ import static org.eclipse.xtext.diagnostics.Severity.*
 				   	o.cancelIndicator = cancelIndicator
 			   	]) ?: emptyList
 				return result
-			]
+			].get
 		]
 	}
 

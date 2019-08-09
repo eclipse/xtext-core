@@ -788,59 +788,67 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
   @Override
   public CompletableFuture<List<Either<Command, CodeAction>>> codeAction(final CodeActionParams params) {
     final Function1<CancelIndicator, List<Either<Command, CodeAction>>> _function = (CancelIndicator cancelIndicator) -> {
-      final URI uri = this._uriExtensions.toUri(params.getTextDocument().getUri());
-      final IResourceServiceProvider serviceProvider = this.languagesRegistry.getResourceServiceProvider(uri);
-      ICodeActionService _get = null;
-      if (serviceProvider!=null) {
-        _get=serviceProvider.<ICodeActionService>get(ICodeActionService.class);
+      try {
+        final URI uri = this._uriExtensions.toUri(params.getTextDocument().getUri());
+        final IResourceServiceProvider serviceProvider = this.languagesRegistry.getResourceServiceProvider(uri);
+        ICodeActionService _get = null;
+        if (serviceProvider!=null) {
+          _get=serviceProvider.<ICodeActionService>get(ICodeActionService.class);
+        }
+        final ICodeActionService service = _get;
+        ICodeActionService2 _get_1 = null;
+        if (serviceProvider!=null) {
+          _get_1=serviceProvider.<ICodeActionService2>get(ICodeActionService2.class);
+        }
+        final ICodeActionService2 service2 = _get_1;
+        if (((service == null) && (service2 == null))) {
+          return CollectionLiterals.<Either<Command, CodeAction>>emptyList();
+        }
+        final Function<ILanguageServerAccess.Context, ArrayList<Either<Command, CodeAction>>> _function_1 = (ILanguageServerAccess.Context context) -> {
+          final ArrayList<Either<Command, CodeAction>> result = CollectionLiterals.<Either<Command, CodeAction>>newArrayList();
+          final Document doc = context.getDocument();
+          final ResourceSet resourceSet = this.access.newLiveScopeResourceSet(uri);
+          Resource _resource = resourceSet.getResource(uri, true);
+          final XtextResource resource = ((XtextResource) _resource);
+          List<Either<Command, CodeAction>> _elvis = null;
+          List<Either<Command, CodeAction>> _codeActions = null;
+          if (service!=null) {
+            _codeActions=service.getCodeActions(doc, resource, params, cancelIndicator);
+          }
+          if (_codeActions != null) {
+            _elvis = _codeActions;
+          } else {
+            List<Either<Command, CodeAction>> _emptyList = CollectionLiterals.<Either<Command, CodeAction>>emptyList();
+            _elvis = _emptyList;
+          }
+          Iterables.<Either<Command, CodeAction>>addAll(result, _elvis);
+          List<Either<Command, CodeAction>> _elvis_1 = null;
+          List<Either<Command, CodeAction>> _codeActions_1 = null;
+          if (service2!=null) {
+            ICodeActionService2.Options _options = new ICodeActionService2.Options();
+            final Procedure1<ICodeActionService2.Options> _function_2 = (ICodeActionService2.Options o) -> {
+              o.setDocument(doc);
+              o.setResource(resource);
+              o.setLanguageServerAccess(this.access);
+              o.setCodeActionParams(params);
+              o.setCancelIndicator(cancelIndicator);
+            };
+            ICodeActionService2.Options _doubleArrow = ObjectExtensions.<ICodeActionService2.Options>operator_doubleArrow(_options, _function_2);
+            _codeActions_1=service2.getCodeActions(_doubleArrow);
+          }
+          if (_codeActions_1 != null) {
+            _elvis_1 = _codeActions_1;
+          } else {
+            List<Either<Command, CodeAction>> _emptyList_1 = CollectionLiterals.<Either<Command, CodeAction>>emptyList();
+            _elvis_1 = _emptyList_1;
+          }
+          Iterables.<Either<Command, CodeAction>>addAll(result, _elvis_1);
+          return result;
+        };
+        return this.access.<ArrayList<Either<Command, CodeAction>>>doRead(params.getTextDocument().getUri(), _function_1).get();
+      } catch (Throwable _e) {
+        throw Exceptions.sneakyThrow(_e);
       }
-      final ICodeActionService service = _get;
-      ICodeActionService2 _get_1 = null;
-      if (serviceProvider!=null) {
-        _get_1=serviceProvider.<ICodeActionService2>get(ICodeActionService2.class);
-      }
-      final ICodeActionService2 service2 = _get_1;
-      if (((service == null) && (service2 == null))) {
-        return CollectionLiterals.<Either<Command, CodeAction>>emptyList();
-      }
-      final Function2<Document, XtextResource, ArrayList<Either<Command, CodeAction>>> _function_1 = (Document doc, XtextResource resource) -> {
-        final ArrayList<Either<Command, CodeAction>> result = CollectionLiterals.<Either<Command, CodeAction>>newArrayList();
-        List<Either<Command, CodeAction>> _elvis = null;
-        List<Either<Command, CodeAction>> _codeActions = null;
-        if (service!=null) {
-          _codeActions=service.getCodeActions(doc, resource, params, cancelIndicator);
-        }
-        if (_codeActions != null) {
-          _elvis = _codeActions;
-        } else {
-          List<Either<Command, CodeAction>> _emptyList = CollectionLiterals.<Either<Command, CodeAction>>emptyList();
-          _elvis = _emptyList;
-        }
-        Iterables.<Either<Command, CodeAction>>addAll(result, _elvis);
-        List<Either<Command, CodeAction>> _elvis_1 = null;
-        List<Either<Command, CodeAction>> _codeActions_1 = null;
-        if (service2!=null) {
-          ICodeActionService2.Options _options = new ICodeActionService2.Options();
-          final Procedure1<ICodeActionService2.Options> _function_2 = (ICodeActionService2.Options o) -> {
-            o.setDocument(doc);
-            o.setResource(resource);
-            o.setLanguageServerAccess(this.access);
-            o.setCodeActionParams(params);
-            o.setCancelIndicator(cancelIndicator);
-          };
-          ICodeActionService2.Options _doubleArrow = ObjectExtensions.<ICodeActionService2.Options>operator_doubleArrow(_options, _function_2);
-          _codeActions_1=service2.getCodeActions(_doubleArrow);
-        }
-        if (_codeActions_1 != null) {
-          _elvis_1 = _codeActions_1;
-        } else {
-          List<Either<Command, CodeAction>> _emptyList_1 = CollectionLiterals.<Either<Command, CodeAction>>emptyList();
-          _elvis_1 = _emptyList_1;
-        }
-        Iterables.<Either<Command, CodeAction>>addAll(result, _elvis_1);
-        return result;
-      };
-      return this.workspaceManager.<List<Either<Command, CodeAction>>>doRead(uri, _function_1);
     };
     return this.requestManager.<List<Either<Command, CodeAction>>>runRead(_function);
   }
