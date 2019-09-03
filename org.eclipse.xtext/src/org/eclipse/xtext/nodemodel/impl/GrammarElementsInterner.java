@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2019 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2019 Sigasi NV (http://www.sigasi.com) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -37,7 +37,7 @@ public class GrammarElementsInterner {
 			this.grammarElements = grammarElements;
 		}
 		
-		EObject[] prefixElement() {
+		EObject[] prependedGrammarElements() {
 			if(grammarElements instanceof EObject) {
 				return new EObject[] {grammarElement, (EObject) grammarElements};
 			} else {
@@ -45,7 +45,7 @@ public class GrammarElementsInterner {
 			}
 		}
 		
-		EObject[] postfixElement() {
+		EObject[] appendedGrammarElements() {
 			if(grammarElements instanceof EObject) {
 				return new EObject[] {(EObject) grammarElements, grammarElement };
 			} else {
@@ -73,7 +73,7 @@ public class GrammarElementsInterner {
 		}
 	}
 
-	Map<GrammarElementsInterner.InternKey, EObject[]> interningMap = Maps.newHashMap();
+	private final Map<GrammarElementsInterner.InternKey, EObject[]> interningMap = Maps.newHashMap();
 	
 	/**
 	 * Take a list of grammar elements and add an additional grammar element to the front.  If this
@@ -83,7 +83,7 @@ public class GrammarElementsInterner {
 	 */
 	EObject[] prependAndIntern(EObject grammarElement, Object grammarElements) {
 		GrammarElementsInterner.InternKey internKey = new InternKey(grammarElement, grammarElements);
-		return interningMap.computeIfAbsent(internKey, key -> key.prefixElement());
+		return interningMap.computeIfAbsent(internKey, key -> key.prependedGrammarElements());
 	}
 	
 	/**
@@ -94,7 +94,7 @@ public class GrammarElementsInterner {
 	 */
 	EObject[] appendAndIntern(Object grammarElements, EObject grammarElement) {
 		GrammarElementsInterner.InternKey internKey = new InternKey(grammarElement, grammarElements);
-		return interningMap.computeIfAbsent(internKey, key -> key.postfixElement());
+		return interningMap.computeIfAbsent(internKey, key -> key.appendedGrammarElements());
 	}
 	
 }
