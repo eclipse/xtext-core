@@ -31,7 +31,7 @@ public class CodebuffToolFacade {
 	}
 
 	private String downloadURL = "https://github.com/holgerschill/codebuff_mirror/raw/master/codebuff-1.5.1.jar";
-	private boolean askBeforeDownload = true;
+	private boolean askBeforeDownload = false;
 
 	public void setAskBeforeDownload(boolean shouldAsk) {
 		this.askBeforeDownload = shouldAsk;

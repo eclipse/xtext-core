@@ -50,8 +50,8 @@ public class Antlr4ToolFacade {
 		this.loader = loader;
 	}
 
-	private String downloadURL = "http://www.antlr.org/download/antlr-4.5.3-complete.jar";
-	private boolean askBeforeDownload = true;
+	private String downloadURL = "https://www.antlr.org/download/antlr-4.5.3-complete.jar";
+	private boolean askBeforeDownload = false;
 	
 	public static final String ANTLR4GEN = "antlr4gen";
 	public static final String TARGETFOLDER = ANTLR4GEN + "/target/";
