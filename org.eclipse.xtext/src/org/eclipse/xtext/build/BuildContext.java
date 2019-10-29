@@ -34,10 +34,9 @@ public class BuildContext {
 
 	private ClusteringStorageAwareResourceLoader loader;
 
-	public BuildContext(
-			Function1<? super URI, ? extends IResourceServiceProvider> resourceServiceProviderProvider,
-			XtextResourceSet resourceSet, IndexState oldState,
-			IResourceClusteringPolicy clusteringPolicy, CancelIndicator cancelIndicator) {
+	public BuildContext(Function1<? super URI, ? extends IResourceServiceProvider> resourceServiceProviderProvider,
+			XtextResourceSet resourceSet, IndexState oldState, IResourceClusteringPolicy clusteringPolicy,
+			CancelIndicator cancelIndicator) {
 		this.resourceServiceProviderProvider = resourceServiceProviderProvider;
 		this.resourceSet = resourceSet;
 		this.oldState = oldState;

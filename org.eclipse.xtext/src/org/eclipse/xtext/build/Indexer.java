@@ -53,8 +53,7 @@ public class Indexer {
 
 		private final ResourceDescriptionsData newIndex;
 
-		public IndexResult(List<IResourceDescription.Delta> resourceDeltas,
-				ResourceDescriptionsData newIndex) {
+		public IndexResult(List<IResourceDescription.Delta> resourceDeltas, ResourceDescriptionsData newIndex) {
 			super();
 			this.resourceDeltas = resourceDeltas;
 			this.newIndex = newIndex;
@@ -188,7 +187,8 @@ public class Indexer {
 		}
 		Set<IResourceDescription.Delta> allDeltas = new HashSet<>(deltas);
 		allDeltas.addAll(request.getExternalDeltas());
-		Set<URI> remainingURIs = FluentIterable.from(previousIndex.getAllResourceDescriptions()).transform(IResourceDescription::getURI).copyInto(new HashSet<>());
+		Set<URI> remainingURIs = FluentIterable.from(previousIndex.getAllResourceDescriptions())
+				.transform(IResourceDescription::getURI).copyInto(new HashSet<>());
 		remainingURIs.removeAll(FluentIterable.from(deltas).transform(Delta::getUri).toSet());
 		List<URI> allAffected = FluentIterable.from(remainingURIs).filter(it -> {
 			IResourceDescription.Manager manager = context.getResourceServiceProvider(it)
@@ -228,7 +228,8 @@ public class Indexer {
 			ResourceDescriptionsData oldIndex, BuildContext context) {
 		try {
 			this.compilerPhases.setIndexing(context.getResourceSet(), true);
-			// Since context.executeClustered, we can avoid a copy due of the list due to the impl detail of IterableExtensions.toList
+			// Since context.executeClustered, we can avoid a copy due of the list due to the impl detail of
+			// IterableExtensions.toList
 			return IterableExtensions
 					.toList(context.executeClustered(affectedUris, it -> addToIndex(it, true, oldIndex, context)));
 		} finally {
@@ -258,9 +259,9 @@ public class Indexer {
 	/**
 	 * Return true, if the given resource must be processed due to the given changes.
 	 */
-	protected boolean isAffected(IResourceDescription affectionCandidate,
-			IResourceDescription.Manager manager, Collection<IResourceDescription.Delta> newDeltas,
-			Collection<IResourceDescription.Delta> allDeltas, IResourceDescriptions resourceDescriptions) {
+	protected boolean isAffected(IResourceDescription affectionCandidate, IResourceDescription.Manager manager,
+			Collection<IResourceDescription.Delta> newDeltas, Collection<IResourceDescription.Delta> allDeltas,
+			IResourceDescriptions resourceDescriptions) {
 		if ((manager instanceof IResourceDescription.Manager.AllChangeAware)) {
 			return ((IResourceDescription.Manager.AllChangeAware) manager).isAffectedByAny(allDeltas,
 					affectionCandidate, resourceDescriptions);

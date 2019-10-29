@@ -39,18 +39,16 @@ public class Source2GeneratedMapping implements Externalizable {
 		this(HashMultimap.create(), HashMultimap.create(), new HashMap<>());
 	}
 
-	public Source2GeneratedMapping(Multimap<URI, URI> source2generated,
-			Multimap<URI, URI> generated2source, Map<URI, String> generated2OutputConfigName) {
+	public Source2GeneratedMapping(Multimap<URI, URI> source2generated, Multimap<URI, URI> generated2source,
+			Map<URI, String> generated2OutputConfigName) {
 		this.source2generated = source2generated;
 		this.generated2source = generated2source;
 		this.generated2OutputConfigName = generated2OutputConfigName;
 	}
 
 	public Source2GeneratedMapping copy() {
-		return new Source2GeneratedMapping(
-				HashMultimap.create(this.source2generated),
-				HashMultimap.create(this.generated2source),
-				new HashMap<>(this.generated2OutputConfigName));
+		return new Source2GeneratedMapping(HashMultimap.create(this.source2generated),
+				HashMultimap.create(this.generated2source), new HashMap<>(this.generated2OutputConfigName));
 	}
 
 	/**

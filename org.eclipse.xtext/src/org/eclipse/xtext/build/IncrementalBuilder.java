@@ -156,9 +156,9 @@ public class IncrementalBuilder {
 
 			public URIBasedFileSystemAccess newFileSystemAccess(Resource resource, BuildRequest request) {
 				URIBasedFileSystemAccess uriBasedFileSystemAccess = new URIBasedFileSystemAccess();
-				uriBasedFileSystemAccess.setOutputConfigurations(IterableExtensions.toMap(
-						this.outputConfigurationProvider.getOutputConfigurations(resource),
-						OutputConfiguration::getName));
+				uriBasedFileSystemAccess.setOutputConfigurations(
+						IterableExtensions.toMap(this.outputConfigurationProvider.getOutputConfigurations(resource),
+								OutputConfiguration::getName));
 				uriBasedFileSystemAccess.setPostProcessor(this.postProcessor);
 				if (this.encodingProvider != null) {
 					uriBasedFileSystemAccess.setEncodingProvider(this.encodingProvider);
@@ -221,15 +221,13 @@ public class IncrementalBuilder {
 					IResourceServiceProvider serviceProvider = context.getResourceServiceProvider(source);
 					XtextResourceSet resourceSet = request.getResourceSet();
 					Set<OutputConfiguration> configs = serviceProvider
-							.get(IContextualOutputConfigurationProvider2.class)
-							.getOutputConfigurations(resourceSet);
+							.get(IContextualOutputConfigurationProvider2.class).getOutputConfigurations(resourceSet);
 					String configName = newSource2GeneratedMapping.getOutputConfigName(generated);
 					OutputConfiguration config = FluentIterable.from(configs)
 							.firstMatch((it) -> it.getName().equals(configName)).orNull();
 					if (config != null && config.isCleanUpDerivedResources()) {
 						try {
-							resourceSet.getURIConverter().delete(generated,
-									Collections.emptyMap());
+							resourceSet.getURIConverter().delete(generated, Collections.emptyMap());
 							request.getAfterDeleteFile().apply(generated);
 						} catch (IOException e) {
 							throw new RuntimeIOException(e);
@@ -251,9 +249,8 @@ public class IncrementalBuilder {
 				}
 			}
 
-			Iterable<IResourceDescription.Delta> deltas = context.executeClustered(
-					FluentIterable.from(result.getResourceDeltas()).filter((it) -> it.getNew() != null)
-							.transform(Delta::getUri),
+			Iterable<IResourceDescription.Delta> deltas = context.executeClustered(FluentIterable
+					.from(result.getResourceDeltas()).filter((it) -> it.getNew() != null).transform(Delta::getUri),
 					(resource) -> {
 						CancelIndicator cancelIndicator = request.getCancelIndicator();
 						operationCanceledManager.checkCanceled(cancelIndicator);
@@ -268,9 +265,8 @@ public class IncrementalBuilder {
 								.createCopy(description);
 						result.getNewIndex().addDescription(resource.getURI(), copiedDescription);
 						operationCanceledManager.checkCanceled(cancelIndicator);
-						if ((!request.isIndexOnly() && validate(resource)
-								&& serviceProvider.get(IShouldGenerate.class).shouldGenerate(resource,
-										CancelIndicator.NullImpl))) {
+						if ((!request.isIndexOnly() && validate(resource) && serviceProvider.get(IShouldGenerate.class)
+								.shouldGenerate(resource, CancelIndicator.NullImpl))) {
 							operationCanceledManager.checkCanceled(cancelIndicator);
 							generate(resource, request, newSource2GeneratedMapping);
 						}
@@ -294,8 +290,7 @@ public class IncrementalBuilder {
 		 * Validate the resource and return true, if the build should proceed for the current state.
 		 */
 		protected boolean validate(Resource resource) {
-			IResourceValidator resourceValidator = getResourceServiceProvider(resource)
-					.getResourceValidator();
+			IResourceValidator resourceValidator = getResourceServiceProvider(resource).getResourceValidator();
 			if (resourceValidator == null) {
 				return true;
 			}
@@ -307,8 +302,7 @@ public class IncrementalBuilder {
 		/**
 		 * Generate code for the given resource
 		 */
-		protected void generate(Resource resource, BuildRequest request,
-				Source2GeneratedMapping newMappings) {
+		protected void generate(Resource resource, BuildRequest request, Source2GeneratedMapping newMappings) {
 			IResourceServiceProvider serviceProvider = getResourceServiceProvider(resource);
 			GeneratorDelegate generator = serviceProvider.get(GeneratorDelegate.class);
 			if (generator == null) {
@@ -341,8 +335,7 @@ public class IncrementalBuilder {
 			XtextResourceSet resourceSet = request.getResourceSet();
 			for (URI noLongerCreated : previous) {
 				try {
-					resourceSet.getURIConverter().delete(noLongerCreated,
-							Collections.emptyMap());
+					resourceSet.getURIConverter().delete(noLongerCreated, Collections.emptyMap());
 					request.getAfterDeleteFile().apply(noLongerCreated);
 				} catch (IOException e) {
 					throw new RuntimeIOException(e);
