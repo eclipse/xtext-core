@@ -101,15 +101,15 @@ public class BuildRequest {
 	}
 
 	public URI getBaseDir() {
-		if ((this.baseDir == null)) {
+		if (baseDir == null) {
 			String userDir = System.getProperty("user.dir");
-			this.baseDir = UriUtil.createFolderURI(new File(userDir));
+			baseDir = UriUtil.createFolderURI(new File(userDir));
 		}
-		return this.baseDir;
+		return baseDir;
 	}
 
 	public List<URI> getDirtyFiles() {
-		return this.dirtyFiles;
+		return dirtyFiles;
 	}
 
 	public void setDirtyFiles(List<URI> dirtyFiles) {
@@ -117,7 +117,7 @@ public class BuildRequest {
 	}
 
 	public List<URI> getDeletedFiles() {
-		return this.deletedFiles;
+		return deletedFiles;
 	}
 
 	public void setDeletedFiles(List<URI> deletedFiles) {
@@ -125,7 +125,7 @@ public class BuildRequest {
 	}
 
 	public List<IResourceDescription.Delta> getExternalDeltas() {
-		return this.externalDeltas;
+		return externalDeltas;
 	}
 
 	public void setExternalDeltas(List<IResourceDescription.Delta> externalDeltas) {
@@ -133,7 +133,7 @@ public class BuildRequest {
 	}
 
 	public BuildRequest.IPostValidationCallback getAfterValidate() {
-		return this.afterValidate;
+		return afterValidate;
 	}
 
 	public void setAfterValidate(BuildRequest.IPostValidationCallback afterValidate) {
@@ -141,7 +141,7 @@ public class BuildRequest {
 	}
 
 	public Procedure2<? super URI, ? super URI> getAfterGenerateFile() {
-		return this.afterGenerateFile;
+		return afterGenerateFile;
 	}
 
 	public void setAfterGenerateFile(Procedure2<? super URI, ? super URI> afterGenerateFile) {
@@ -149,7 +149,7 @@ public class BuildRequest {
 	}
 
 	public Procedure1<? super URI> getAfterDeleteFile() {
-		return this.afterDeleteFile;
+		return afterDeleteFile;
 	}
 
 	public void setAfterDeleteFile(Procedure1<? super URI> afterDeleteFile) {
@@ -157,7 +157,7 @@ public class BuildRequest {
 	}
 
 	public IndexState getState() {
-		return this.state;
+		return state;
 	}
 
 	public void setState(IndexState state) {
@@ -165,7 +165,7 @@ public class BuildRequest {
 	}
 
 	public boolean isWriteStorageResources() {
-		return this.writeStorageResources;
+		return writeStorageResources;
 	}
 
 	public void setWriteStorageResources(boolean writeStorageResources) {
@@ -173,7 +173,7 @@ public class BuildRequest {
 	}
 
 	public boolean isIndexOnly() {
-		return this.indexOnly;
+		return indexOnly;
 	}
 
 	public void setIndexOnly(boolean indexOnly) {
@@ -181,7 +181,7 @@ public class BuildRequest {
 	}
 
 	public XtextResourceSet getResourceSet() {
-		return this.resourceSet;
+		return resourceSet;
 	}
 
 	public void setResourceSet(XtextResourceSet resourceSet) {
@@ -189,7 +189,7 @@ public class BuildRequest {
 	}
 
 	public CancelIndicator getCancelIndicator() {
-		return this.cancelIndicator;
+		return cancelIndicator;
 	}
 
 	public void setCancelIndicator(CancelIndicator cancelIndicator) {

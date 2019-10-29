@@ -48,10 +48,10 @@ public class BuildContext {
 	 * Run the given logic on all uris with clustering enabled.
 	 */
 	public <T> Iterable<T> executeClustered(Iterable<URI> uris, Function1<? super Resource, ? extends T> operation) {
-		if (this.loader == null) {
-			this.loader = new ClusteringStorageAwareResourceLoader(this);
+		if (loader == null) {
+			loader = new ClusteringStorageAwareResourceLoader(this);
 		}
-		return this.loader.executeClustered(Iterables.filter(uris, this::canHandle), operation);
+		return loader.executeClustered(Iterables.filter(uris, this::canHandle), operation);
 	}
 
 	/**
@@ -59,7 +59,7 @@ public class BuildContext {
 	 */
 	protected boolean canHandle(URI uri) {
 		IResourceServiceProvider resourceServiceProvider = getResourceServiceProvider(uri);
-		if ((resourceServiceProvider == null)) {
+		if (resourceServiceProvider == null) {
 			return false;
 		}
 		return resourceServiceProvider.canHandle(uri);
@@ -73,18 +73,18 @@ public class BuildContext {
 	}
 
 	public XtextResourceSet getResourceSet() {
-		return this.resourceSet;
+		return resourceSet;
 	}
 
 	public IndexState getOldState() {
-		return this.oldState;
+		return oldState;
 	}
 
 	public IResourceClusteringPolicy getClusteringPolicy() {
-		return this.clusteringPolicy;
+		return clusteringPolicy;
 	}
 
 	public CancelIndicator getCancelIndicator() {
-		return this.cancelIndicator;
+		return cancelIndicator;
 	}
 }

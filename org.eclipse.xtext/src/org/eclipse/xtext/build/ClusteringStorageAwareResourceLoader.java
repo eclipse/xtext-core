@@ -48,12 +48,12 @@ public class ClusteringStorageAwareResourceLoader {
 			XtextResourceSet resourceSet = context.getResourceSet();
 			if (!context.getClusteringPolicy().continueProcessing(resourceSet, uri, loadedURIsCount)) {
 				FluentIterable.from(resources).transform(operation::apply).copyInto(result);
-				this.clearResourceSet();
+				clearResourceSet();
 				resources.clear();
 				loadedURIsCount = 0;
 			}
 			loadedURIsCount++;
-			if (this.isSource(uri)) {
+			if (isSource(uri)) {
 				sourceLevelURIs.add(uri);
 				Resource existingResource = resourceSet.getResource(uri, false);
 				if (existingResource instanceof StorageAwareResource) {

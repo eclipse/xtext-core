@@ -33,10 +33,10 @@ public class IndexState {
 	}
 
 	public ResourceDescriptionsData getResourceDescriptions() {
-		return this.resourceDescriptions;
+		return resourceDescriptions;
 	}
 
 	public Source2GeneratedMapping getFileMappings() {
-		return this.fileMappings;
+		return fileMappings;
 	}
 }

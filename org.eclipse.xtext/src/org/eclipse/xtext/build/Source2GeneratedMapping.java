@@ -47,8 +47,8 @@ public class Source2GeneratedMapping implements Externalizable {
 	}
 
 	public Source2GeneratedMapping copy() {
-		return new Source2GeneratedMapping(HashMultimap.create(this.source2generated),
-				HashMultimap.create(this.generated2source), new HashMap<>(this.generated2OutputConfigName));
+		return new Source2GeneratedMapping(HashMultimap.create(source2generated),
+				HashMultimap.create(generated2source), new HashMap<>(generated2OutputConfigName));
 	}
 
 	/**
@@ -59,17 +59,17 @@ public class Source2GeneratedMapping implements Externalizable {
 	}
 
 	public void addSource2Generated(URI source, URI generated, String outputCfgName) {
-		this.source2generated.put(source, generated);
-		this.generated2source.put(generated, source);
-		this.generated2OutputConfigName.put(generated,
+		source2generated.put(source, generated);
+		generated2source.put(generated, source);
+		generated2OutputConfigName.put(generated,
 				outputCfgName == null ? IFileSystemAccess.DEFAULT_OUTPUT : outputCfgName);
 	}
 
 	public void removeSource2Generated(URI source, URI generated) {
-		this.source2generated.remove(source, generated);
-		this.generated2source.remove(generated, source);
+		source2generated.remove(source, generated);
+		generated2source.remove(generated, source);
 		if (!generated2source.containsKey(generated)) {
-			this.generated2OutputConfigName.remove(generated);
+			generated2OutputConfigName.remove(generated);
 		}
 	}
 
@@ -77,11 +77,11 @@ public class Source2GeneratedMapping implements Externalizable {
 	 * Mark the source as deleted and return all the former generated uris.
 	 */
 	public Set<URI> deleteSource(URI source) {
-		Set<URI> generated = new HashSet<>(this.source2generated.removeAll(source));
+		Set<URI> generated = new HashSet<>(source2generated.removeAll(source));
 		for (URI gen : generated) {
-			this.generated2source.remove(gen, source);
+			generated2source.remove(gen, source);
 			if (!generated2source.containsKey(gen)) {
-				this.generated2OutputConfigName.remove(gen);
+				generated2OutputConfigName.remove(gen);
 			}
 		}
 		return generated;
@@ -91,38 +91,38 @@ public class Source2GeneratedMapping implements Externalizable {
 	 * Remove the generated file from this mapping.
 	 */
 	public void deleteGenerated(URI generated) {
-		this.generated2source.removeAll(generated).forEach(it -> {
-			this.source2generated.remove(it, generated);
+		generated2source.removeAll(generated).forEach(it -> {
+			source2generated.remove(it, generated);
 		});
-		this.generated2OutputConfigName.remove(generated);
+		generated2OutputConfigName.remove(generated);
 	}
 
 	/**
 	 * Get the output configuration that led to the given generated URI.
 	 */
 	public String getOutputConfigName(URI generated) {
-		return this.generated2OutputConfigName.get(generated);
+		return generated2OutputConfigName.get(generated);
 	}
 
 	/**
 	 * Return all the generated resources for the given source.
 	 */
 	public List<URI> getGenerated(URI source) {
-		return new ArrayList<>(this.source2generated.get(source));
+		return new ArrayList<>(source2generated.get(source));
 	}
 
 	/**
 	 * Return all the source resources for the given generated resource.
 	 */
 	public List<URI> getSource(URI generated) {
-		return new ArrayList<>(this.generated2source.get(generated));
+		return new ArrayList<>(generated2source.get(generated));
 	}
 
 	/**
 	 * Return all the generated resources.
 	 */
 	public List<URI> getAllGenerated() {
-		return new ArrayList<>(this.generated2source.keySet());
+		return new ArrayList<>(generated2source.keySet());
 	}
 
 	@Override
@@ -143,14 +143,14 @@ public class Source2GeneratedMapping implements Externalizable {
 
 	@Override
 	public void writeExternal(ObjectOutput out) throws IOException {
-		Set<Map.Entry<URI, Collection<URI>>> entries = this.source2generated.asMap().entrySet();
+		Set<Map.Entry<URI, Collection<URI>>> entries = source2generated.asMap().entrySet();
 		out.writeInt(entries.size());
 		for (Map.Entry<URI, Collection<URI>> it : entries) {
 			out.writeUTF(it.getKey().toString());
 			out.writeInt(it.getValue().size());
 			for (URI value : it.getValue()) {
 				out.writeUTF(value.toString());
-				out.writeUTF(this.generated2OutputConfigName.get(value));
+				out.writeUTF(generated2OutputConfigName.get(value));
 			}
 		}
 	}

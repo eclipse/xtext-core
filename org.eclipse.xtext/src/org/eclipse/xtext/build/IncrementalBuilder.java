@@ -79,48 +79,55 @@ public class IncrementalBuilder {
 		}
 
 		public IndexState getIndexState() {
-			return this.indexState;
+			return indexState;
 		}
 
 		public List<IResourceDescription.Delta> getAffectedResources() {
-			return this.affectedResources;
+			return affectedResources;
 		}
 
 		@Override
 		public int hashCode() {
 			int prime = 31;
 			int result = 1;
-			result = prime * result + ((this.indexState == null) ? 0 : this.indexState.hashCode());
-			return prime * result + ((this.affectedResources == null) ? 0 : this.affectedResources.hashCode());
+			result = prime * result + (indexState == null ? 0 : indexState.hashCode());
+			return prime * result + (affectedResources == null ? 0 : affectedResources.hashCode());
 		}
 
 		@Override
 		public boolean equals(Object obj) {
-			if (this == obj)
+			if (this == obj) {
 				return true;
-			if (obj == null)
+			}
+			if (obj == null) {
 				return false;
-			if (getClass() != obj.getClass())
+			}
+			if (getClass() != obj.getClass()) {
 				return false;
+			}
 			IncrementalBuilder.Result other = (IncrementalBuilder.Result) obj;
-			if (this.indexState == null) {
-				if (other.indexState != null)
+			if (indexState == null) {
+				if (other.indexState != null) {
 					return false;
-			} else if (!this.indexState.equals(other.indexState))
+				}
+			} else if (!indexState.equals(other.indexState)) {
 				return false;
-			if (this.affectedResources == null) {
-				if (other.affectedResources != null)
+			}
+			if (affectedResources == null) {
+				if (other.affectedResources != null) {
 					return false;
-			} else if (!this.affectedResources.equals(other.affectedResources))
+				}
+			} else if (!affectedResources.equals(other.affectedResources)) {
 				return false;
+			}
 			return true;
 		}
 
 		@Override
 		public String toString() {
 			ToStringBuilder b = new ToStringBuilder(this);
-			b.add("indexState", this.indexState);
-			b.add("affectedResources", this.affectedResources);
+			b.add("indexState", indexState);
+			b.add("affectedResources", affectedResources);
 			return b.toString();
 		}
 
@@ -157,18 +164,18 @@ public class IncrementalBuilder {
 			public URIBasedFileSystemAccess newFileSystemAccess(Resource resource, BuildRequest request) {
 				URIBasedFileSystemAccess uriBasedFileSystemAccess = new URIBasedFileSystemAccess();
 				uriBasedFileSystemAccess.setOutputConfigurations(
-						IterableExtensions.toMap(this.outputConfigurationProvider.getOutputConfigurations(resource),
+						IterableExtensions.toMap(outputConfigurationProvider.getOutputConfigurations(resource),
 								OutputConfiguration::getName));
-				uriBasedFileSystemAccess.setPostProcessor(this.postProcessor);
-				if (this.encodingProvider != null) {
-					uriBasedFileSystemAccess.setEncodingProvider(this.encodingProvider);
+				uriBasedFileSystemAccess.setPostProcessor(postProcessor);
+				if (encodingProvider != null) {
+					uriBasedFileSystemAccess.setEncodingProvider(encodingProvider);
 				}
-				uriBasedFileSystemAccess.setTraceFileNameProvider(this.traceFileNameProvider);
-				uriBasedFileSystemAccess.setTraceRegionSerializer(this.traceRegionSerializer);
+				uriBasedFileSystemAccess.setTraceFileNameProvider(traceFileNameProvider);
+				uriBasedFileSystemAccess.setTraceRegionSerializer(traceRegionSerializer);
 				uriBasedFileSystemAccess.setGenerateTraces(true);
 				uriBasedFileSystemAccess.setBaseDir(request.getBaseDir());
-				if (this.projectConfigProvider != null) {
-					IProjectConfig projectConfig = this.projectConfigProvider
+				if (projectConfigProvider != null) {
+					IProjectConfig projectConfig = projectConfigProvider
 							.getProjectConfig(resource.getResourceSet());
 					if (projectConfig != null) {
 						ISourceFolder sourceFolder = projectConfig.findSourceFolderContaining(resource.getURI());
@@ -193,7 +200,7 @@ public class IncrementalBuilder {
 		private OperationCanceledManager operationCanceledManager;
 
 		protected void unloadResource(URI uri) {
-			XtextResourceSet resourceSet = this.request.getResourceSet();
+			XtextResourceSet resourceSet = request.getResourceSet();
 			Resource resource = resourceSet.getResource(uri, false);
 			if (resource != null) {
 				resourceSet.getResources().remove(resource);
@@ -203,7 +210,7 @@ public class IncrementalBuilder {
 		}
 
 		public IncrementalBuilder.Result launch() {
-			Source2GeneratedMapping newSource2GeneratedMapping = this.request.getState().getFileMappings();
+			Source2GeneratedMapping newSource2GeneratedMapping = request.getState().getFileMappings();
 			Set<URI> unloaded = new HashSet<>();
 			for (URI deleted : request.getDeletedFiles()) {
 				if (unloaded.add(deleted)) {
@@ -265,8 +272,8 @@ public class IncrementalBuilder {
 								.createCopy(description);
 						result.getNewIndex().addDescription(resource.getURI(), copiedDescription);
 						operationCanceledManager.checkCanceled(cancelIndicator);
-						if ((!request.isIndexOnly() && validate(resource) && serviceProvider.get(IShouldGenerate.class)
-								.shouldGenerate(resource, CancelIndicator.NullImpl))) {
+						if (!request.isIndexOnly() && validate(resource) && serviceProvider.get(IShouldGenerate.class)
+								.shouldGenerate(resource, CancelIndicator.NullImpl)) {
 							operationCanceledManager.checkCanceled(cancelIndicator);
 							generate(resource, request, newSource2GeneratedMapping);
 						}
@@ -276,11 +283,11 @@ public class IncrementalBuilder {
 					});
 
 			Iterables.addAll(resolvedDeltas, deltas);
-			return new IncrementalBuilder.Result(this.request.getState(), resolvedDeltas);
+			return new IncrementalBuilder.Result(request.getState(), resolvedDeltas);
 		}
 
 		private IResourceServiceProvider getResourceServiceProvider(Resource resource) {
-			if ((resource instanceof XtextResource)) {
+			if (resource instanceof XtextResource) {
 				return ((XtextResource) resource).getResourceServiceProvider();
 			}
 			return context.getResourceServiceProvider(resource.getURI());
@@ -309,7 +316,7 @@ public class IncrementalBuilder {
 				return;
 			}
 			Set<URI> previous = newMappings.deleteSource(resource.getURI());
-			URIBasedFileSystemAccess fileSystemAccess = this.createFileSystemAccess(serviceProvider, resource);
+			URIBasedFileSystemAccess fileSystemAccess = createFileSystemAccess(serviceProvider, resource);
 			fileSystemAccess.setBeforeWrite((uri, outputCfgName, contents) -> {
 				newMappings.addSource2Generated(resource.getURI(), uri, outputCfgName);
 				previous.remove(uri);
@@ -346,11 +353,11 @@ public class IncrementalBuilder {
 		protected URIBasedFileSystemAccess createFileSystemAccess(IResourceServiceProvider serviceProvider,
 				Resource resource) {
 			return serviceProvider.get(URIBasedFileSystemAccessFactory.class).newFileSystemAccess(resource,
-					this.request);
+					request);
 		}
 
 		protected BuildContext getContext() {
-			return this.context;
+			return context;
 		}
 
 		protected void setContext(BuildContext context) {
@@ -358,7 +365,7 @@ public class IncrementalBuilder {
 		}
 
 		protected BuildRequest getRequest() {
-			return this.request;
+			return request;
 		}
 
 		protected void setRequest(BuildRequest request) {
@@ -397,7 +404,7 @@ public class IncrementalBuilder {
 		try {
 			return builder.launch();
 		} catch (Throwable t) {
-			this.operationCanceledManager.propagateIfCancelException(t);
+			operationCanceledManager.propagateIfCancelException(t);
 			throw t;
 		}
 	}

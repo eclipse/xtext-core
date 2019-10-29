@@ -60,48 +60,55 @@ public class Indexer {
 		}
 
 		public List<IResourceDescription.Delta> getResourceDeltas() {
-			return this.resourceDeltas;
+			return resourceDeltas;
 		}
 
 		public ResourceDescriptionsData getNewIndex() {
-			return this.newIndex;
+			return newIndex;
 		}
 
 		@Override
 		public int hashCode() {
 			int prime = 31;
 			int result = 1;
-			result = prime * result + ((this.resourceDeltas == null) ? 0 : this.resourceDeltas.hashCode());
-			return prime * result + ((this.newIndex == null) ? 0 : this.newIndex.hashCode());
+			result = prime * result + (resourceDeltas == null ? 0 : resourceDeltas.hashCode());
+			return prime * result + (newIndex == null ? 0 : newIndex.hashCode());
 		}
 
 		@Override
 		public boolean equals(Object obj) {
-			if (this == obj)
+			if (this == obj) {
 				return true;
-			if (obj == null)
+			}
+			if (obj == null) {
 				return false;
-			if (getClass() != obj.getClass())
+			}
+			if (getClass() != obj.getClass()) {
 				return false;
+			}
 			Indexer.IndexResult other = (Indexer.IndexResult) obj;
-			if (this.resourceDeltas == null) {
-				if (other.resourceDeltas != null)
+			if (resourceDeltas == null) {
+				if (other.resourceDeltas != null) {
 					return false;
-			} else if (!this.resourceDeltas.equals(other.resourceDeltas))
+				}
+			} else if (!resourceDeltas.equals(other.resourceDeltas)) {
 				return false;
-			if (this.newIndex == null) {
-				if (other.newIndex != null)
+			}
+			if (newIndex == null) {
+				if (other.newIndex != null) {
 					return false;
-			} else if (!this.newIndex.equals(other.newIndex))
+				}
+			} else if (!newIndex.equals(other.newIndex)) {
 				return false;
+			}
 			return true;
 		}
 
 		@Override
 		public String toString() {
 			ToStringBuilder b = new ToStringBuilder(this);
-			b.add("resourceDeltas", this.resourceDeltas);
-			b.add("newIndex", this.newIndex);
+			b.add("resourceDeltas", resourceDeltas);
+			b.add("newIndex", newIndex);
 			return b.toString();
 		}
 
@@ -120,15 +127,15 @@ public class Indexer {
 		private ImmutableList<IEObjectDescription> exported;
 
 		public ResolvedResourceDescription(IResourceDescription original) {
-			this.uri = original.getURI();
-			this.exported = FluentIterable.from(original.getExportedObjects()).transform(from -> {
+			uri = original.getURI();
+			exported = FluentIterable.from(original.getExportedObjects()).transform(from -> {
 				if (from instanceof SerializableEObjectDescriptionProvider) {
 					return ((SerializableEObjectDescriptionProvider) from).toSerializableEObjectDescription();
 				}
 				if (from.getEObjectOrProxy().eIsProxy()) {
 					return from;
 				}
-				InternalEObject result = ((InternalEObject) EcoreUtil.create(from.getEClass()));
+				InternalEObject result = (InternalEObject) EcoreUtil.create(from.getEClass());
 				result.eSetProxyURI(from.getEObjectURI());
 				Map<String, String> userData = null;
 				String[] userDataKeys = from.getUserDataKeys();
@@ -144,7 +151,7 @@ public class Indexer {
 
 		@Override
 		protected List<IEObjectDescription> computeExportedObjects() {
-			return this.exported;
+			return exported;
 		}
 
 		@Override
@@ -163,7 +170,7 @@ public class Indexer {
 
 		@Override
 		public URI getURI() {
-			return this.uri;
+			return uri;
 		}
 	}
 
@@ -196,7 +203,7 @@ public class Indexer {
 			IResourceDescription resourceDescription = previousIndex.getResourceDescription(it);
 			return isAffected(resourceDescription, manager, allDeltas, allDeltas, newIndex);
 		}).toList();
-		deltas.addAll(this.getDeltasForChangedResources(allAffected, previousIndex, context));
+		deltas.addAll(getDeltasForChangedResources(allAffected, previousIndex, context));
 		return new Indexer.IndexResult(deltas, newIndex);
 	}
 
@@ -209,10 +216,10 @@ public class Indexer {
 		for (URI deleted : request.getDeletedFiles()) {
 			IResourceServiceProvider resourceServiceProvider = context.getResourceServiceProvider(deleted);
 			if (resourceServiceProvider != null) {
-				this.operationCanceledManager.checkCanceled(context.getCancelIndicator());
+				operationCanceledManager.checkCanceled(context.getCancelIndicator());
 				IResourceDescription oldDescription = oldIndex != null ? oldIndex.getResourceDescription(deleted)
 						: null;
-				if ((oldDescription != null)) {
+				if (oldDescription != null) {
 					DefaultResourceDescriptionDelta delta = new DefaultResourceDescriptionDelta(oldDescription, null);
 					deltas.add(delta);
 				}
@@ -227,25 +234,25 @@ public class Indexer {
 	protected List<IResourceDescription.Delta> getDeltasForChangedResources(Iterable<URI> affectedUris,
 			ResourceDescriptionsData oldIndex, BuildContext context) {
 		try {
-			this.compilerPhases.setIndexing(context.getResourceSet(), true);
+			compilerPhases.setIndexing(context.getResourceSet(), true);
 			// Since context.executeClustered, we can avoid a copy due of the list due to the impl detail of
 			// IterableExtensions.toList
 			return IterableExtensions
 					.toList(context.executeClustered(affectedUris, it -> addToIndex(it, true, oldIndex, context)));
 		} finally {
-			this.compilerPhases.setIndexing(context.getResourceSet(), false);
+			compilerPhases.setIndexing(context.getResourceSet(), false);
 		}
 	}
 
 	/**
 	 * Index the given resource.
-	 * 
+	 *
 	 * @param isPreIndexing
 	 *            can be evaluated to produce different index entries depending on the phase
 	 */
 	protected IResourceDescription.Delta addToIndex(Resource resource, boolean isPreIndexing,
 			ResourceDescriptionsData oldIndex, BuildContext context) {
-		this.operationCanceledManager.checkCanceled(context.getCancelIndicator());
+		operationCanceledManager.checkCanceled(context.getCancelIndicator());
 		URI uri = resource.getURI();
 		IResourceServiceProvider serviceProvider = context.getResourceServiceProvider(uri);
 		IResourceDescription.Manager manager = serviceProvider.getResourceDescriptionManager();
@@ -262,7 +269,7 @@ public class Indexer {
 	protected boolean isAffected(IResourceDescription affectionCandidate, IResourceDescription.Manager manager,
 			Collection<IResourceDescription.Delta> newDeltas, Collection<IResourceDescription.Delta> allDeltas,
 			IResourceDescriptions resourceDescriptions) {
-		if ((manager instanceof IResourceDescription.Manager.AllChangeAware)) {
+		if (manager instanceof IResourceDescription.Manager.AllChangeAware) {
 			return ((IResourceDescription.Manager.AllChangeAware) manager).isAffectedByAny(allDeltas,
 					affectionCandidate, resourceDescriptions);
 		} else {
