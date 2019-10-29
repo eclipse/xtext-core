@@ -450,8 +450,13 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 		initialized.thenAccept((initParams) -> {
 			PublishDiagnosticsParams publishDiagnosticsParams = new PublishDiagnosticsParams();
 			publishDiagnosticsParams.setUri(uriExtensions.toUriString(uri));
-			publishDiagnosticsParams.setDiagnostics(
-					workspaceManager.doRead(uri, (document, resource) -> toDiagnostics(issues, document)));
+			// this is not a premature optimization but a trick to handle issues of deleted resources
+			if (!issues.iterator().hasNext()) {
+				publishDiagnosticsParams.setDiagnostics(Collections.emptyList());
+			} else {
+				publishDiagnosticsParams.setDiagnostics(
+						workspaceManager.doRead(uri, (document, resource) -> toDiagnostics(issues, document)));
+			}
 			client.publishDiagnostics(publishDiagnosticsParams);
 		});
 	}
