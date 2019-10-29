@@ -8,8 +8,8 @@
 package org.eclipse.xtext.ide.server;
 
 import java.io.File;
+
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.xtext.ide.server.ProjectWorkspaceConfigFactory;
 import org.eclipse.xtext.workspace.FileProjectConfig;
 import org.eclipse.xtext.workspace.WorkspaceConfig;
 

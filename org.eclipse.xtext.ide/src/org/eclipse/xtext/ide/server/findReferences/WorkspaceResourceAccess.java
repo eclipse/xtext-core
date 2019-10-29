@@ -32,7 +32,7 @@ public class WorkspaceResourceAccess implements IReferenceFinder.IResourceAccess
 
 	@Override
 	public <R> R readOnly(URI targetURI, IUnitOfWork<R, ResourceSet> work) {
-		return this.workspaceManager.doRead(targetURI, (document, resource) -> {
+		return workspaceManager.doRead(targetURI, (document, resource) -> {
 			if (resource == null) {
 				return null;
 			}

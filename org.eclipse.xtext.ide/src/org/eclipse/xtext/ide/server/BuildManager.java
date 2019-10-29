@@ -18,7 +18,6 @@ import java.util.Set;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.xtext.build.IncrementalBuilder;
 import org.eclipse.xtext.diagnostics.Severity;
-import org.eclipse.xtext.ide.server.TopologicalSorter;
 import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.impl.DefaultResourceDescriptionDelta;
 import org.eclipse.xtext.resource.impl.ProjectDescription;
@@ -56,46 +55,53 @@ public class BuildManager {
 		public int hashCode() {
 			int prime = 31;
 			int result = 1;
-			result = prime * result + ((this.dirtyFiles == null) ? 0 : this.dirtyFiles.hashCode());
-			return prime * result + ((this.deletedFiles == null) ? 0 : this.deletedFiles.hashCode());
+			result = prime * result + (dirtyFiles == null ? 0 : dirtyFiles.hashCode());
+			return prime * result + (deletedFiles == null ? 0 : deletedFiles.hashCode());
 		}
 
 		@Override
 		public boolean equals(Object obj) {
-			if (this == obj)
+			if (this == obj) {
 				return true;
-			if (obj == null)
+			}
+			if (obj == null) {
 				return false;
-			if (getClass() != obj.getClass())
+			}
+			if (getClass() != obj.getClass()) {
 				return false;
+			}
 			BuildManager.ProjectBuildData other = (BuildManager.ProjectBuildData) obj;
-			if (this.dirtyFiles == null) {
-				if (other.dirtyFiles != null)
+			if (dirtyFiles == null) {
+				if (other.dirtyFiles != null) {
 					return false;
-			} else if (!this.dirtyFiles.equals(other.dirtyFiles))
+				}
+			} else if (!dirtyFiles.equals(other.dirtyFiles)) {
 				return false;
-			if (this.deletedFiles == null) {
-				if (other.deletedFiles != null)
+			}
+			if (deletedFiles == null) {
+				if (other.deletedFiles != null) {
 					return false;
-			} else if (!this.deletedFiles.equals(other.deletedFiles))
+				}
+			} else if (!deletedFiles.equals(other.deletedFiles)) {
 				return false;
+			}
 			return true;
 		}
 
 		@Override
 		public String toString() {
 			ToStringBuilder b = new ToStringBuilder(this);
-			b.add("dirtyFiles", this.dirtyFiles);
-			b.add("deletedFiles", this.deletedFiles);
+			b.add("dirtyFiles", dirtyFiles);
+			b.add("deletedFiles", deletedFiles);
 			return b.toString();
 		}
 
 		public List<URI> getDirtyFiles() {
-			return this.dirtyFiles;
+			return dirtyFiles;
 		}
 
 		public List<URI> getDeletedFiles() {
-			return this.deletedFiles;
+			return deletedFiles;
 		}
 	}
 
@@ -187,12 +193,11 @@ public class BuildManager {
 		}
 		Multimap<ProjectDescription, URI> project2deleted = HashMultimap.create();
 		for (URI deleted : deletedFiles) {
-			ProjectDescription projectManager = workspaceManager.getProjectManager(deleted)
-					.getProjectDescription();
+			ProjectDescription projectManager = workspaceManager.getProjectManager(deleted).getProjectDescription();
 			project2deleted.put(projectManager, deleted);
 		}
-		List<ProjectDescription> sortedDescriptions = sortByDependencies(Sets.union(project2dirty.keySet(),
-				project2deleted.keySet()));
+		List<ProjectDescription> sortedDescriptions = sortByDependencies(
+				Sets.union(project2dirty.keySet(), project2deleted.keySet()));
 		for (ProjectDescription it : sortedDescriptions) {
 			ProjectManager projectManager = workspaceManager.getProjectManager(it.getName());
 			List<URI> projectDirty = new ArrayList<>(project2dirty.get(it));
@@ -214,14 +219,14 @@ public class BuildManager {
 	 * @since 2.18
 	 */
 	protected void mergeWithUnreportedDeltas(List<IResourceDescription.Delta> newDeltas) {
-		if (this.unreportedDeltas.isEmpty()) {
+		if (unreportedDeltas.isEmpty()) {
 			unreportedDeltas.addAll(newDeltas);
 		} else {
-			Map<URI, IResourceDescription.Delta> unreportedByUri = IterableExtensions.toMap(
-					unreportedDeltas, IResourceDescription.Delta::getUri);
+			Map<URI, IResourceDescription.Delta> unreportedByUri = IterableExtensions.toMap(unreportedDeltas,
+					IResourceDescription.Delta::getUri);
 			newDeltas.forEach((newDelta) -> {
 				IResourceDescription.Delta unreportedDelta = unreportedByUri.get(newDelta.getUri());
-				if ((unreportedDelta == null)) {
+				if (unreportedDelta == null) {
 					unreportedDeltas.add(newDelta);
 				} else {
 					unreportedDeltas.remove(unreportedDelta);

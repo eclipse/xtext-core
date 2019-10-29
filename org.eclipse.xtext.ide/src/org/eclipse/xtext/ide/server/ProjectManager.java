@@ -76,12 +76,11 @@ public class ProjectManager {
 	public void initialize(ProjectDescription description, IProjectConfig projectConfig,
 			Procedure2<? super URI, ? super Iterable<Issue>> acceptor,
 			IExternalContentSupport.IExternalContentProvider openedDocumentsContentProvider,
-			Provider<Map<String, ResourceDescriptionsData>> indexProvider,
-			CancelIndicator cancelIndicator) {
-		this.projectDescription = description;
+			Provider<Map<String, ResourceDescriptionsData>> indexProvider, CancelIndicator cancelIndicator) {
+		projectDescription = description;
 		this.projectConfig = projectConfig;
-		this.baseDir = projectConfig.getPath();
-		this.issueAcceptor = acceptor;
+		baseDir = projectConfig.getPath();
+		issueAcceptor = acceptor;
 		this.openedDocumentsContentProvider = openedDocumentsContentProvider;
 		this.indexProvider = indexProvider;
 	}
@@ -118,8 +117,8 @@ public class ProjectManager {
 			List<IResourceDescription.Delta> externalDeltas, CancelIndicator cancelIndicator) {
 		BuildRequest result = new BuildRequest();
 		result.setBaseDir(baseDir);
-		result.setState(new IndexState(indexState.getResourceDescriptions().copy(),
-				indexState.getFileMappings().copy()));
+		result.setState(
+				new IndexState(indexState.getResourceDescriptions().copy(), indexState.getFileMappings().copy()));
 		result.setResourceSet(createFreshResourceSet(result.getState().getResourceDescriptions()));
 		result.setDirtyFiles(changedFiles);
 		result.setDeletedFiles(deletedFiles);

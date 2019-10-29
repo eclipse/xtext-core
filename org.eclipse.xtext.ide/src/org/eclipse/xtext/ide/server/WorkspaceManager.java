@@ -23,8 +23,6 @@ import org.eclipse.lsp4j.TextEdit;
 import org.eclipse.lsp4j.jsonrpc.ResponseErrorException;
 import org.eclipse.lsp4j.jsonrpc.messages.ResponseError;
 import org.eclipse.lsp4j.jsonrpc.messages.ResponseErrorCode;
-import org.eclipse.xtext.ide.server.Document;
-import org.eclipse.xtext.ide.server.ILanguageServerAccess;
 import org.eclipse.xtext.ide.server.BuildManager.Buildable;
 import org.eclipse.xtext.resource.IExternalContentSupport;
 import org.eclipse.xtext.resource.IResourceDescription;
@@ -306,8 +304,8 @@ public class WorkspaceManager {
 	 *             {@link #didChangeTextDocumentContent(URI, Integer, Iterable)} instead.
 	 */
 	@Deprecated
-	public List<IResourceDescription.Delta> didChange(URI uri, Integer version,
-			Iterable<TextEdit> changes, CancelIndicator cancelIndicator) {
+	public List<IResourceDescription.Delta> didChange(URI uri, Integer version, Iterable<TextEdit> changes,
+			CancelIndicator cancelIndicator) {
 		return didChange(uri, version, changes).build(cancelIndicator);
 	}
 
@@ -428,7 +426,7 @@ public class WorkspaceManager {
 			return doc;
 		}
 		String text = resource.getParseResult().getRootNode().getText();
-		return new Document(Integer.valueOf(1), text);
+		return new Document(1, text);
 	}
 
 	/**

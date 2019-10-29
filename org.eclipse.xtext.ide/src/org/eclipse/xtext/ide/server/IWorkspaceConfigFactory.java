@@ -17,7 +17,7 @@ import org.eclipse.xtext.workspace.IWorkspaceConfig;
 public interface IWorkspaceConfigFactory {
 	/**
 	 * Create a workspace config at the given location.
-	 * 
+	 *
 	 * @param workspaceBaseURI
 	 *            the location
 	 * @return the workspace configuration.

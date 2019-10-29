@@ -183,7 +183,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	private Map<String, JsonRpcMethod> supportedMethods = null;
 
-	private final Multimap<String, Endpoint> extensionProviders = LinkedListMultimap.<String, Endpoint> create();
+	private final Multimap<String, Endpoint> extensionProviders = LinkedListMultimap.<String, Endpoint>create();
 
 	@Inject
 	public void setWorkspaceManager(WorkspaceManager manager) {
@@ -210,17 +210,16 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 			throw new IllegalStateException(
 					"No Xtext languages have been registered. Please make sure you have added the languages\'s setup class in \'/META-INF/services/org.eclipse.xtext.ISetup\'");
 		}
-		this.initializeParams = params;
+		initializeParams = params;
 
 		InitializeResult result = new InitializeResult();
 
 		result.setCapabilities(createServerCapabilities(params));
 		access.addBuildListener(this);
-		return requestManager.runWrite(
-				() -> {
-					workspaceManager.initialize(baseDir, this::publishDiagnostics, CancelIndicator.NullImpl);
-					return result;
-				}, (cancelIndicator, it) -> it).thenApply(it -> initializeResult = it);
+		return requestManager.runWrite(() -> {
+			workspaceManager.initialize(baseDir, this::publishDiagnostics, CancelIndicator.NullImpl);
+			return result;
+		}, (cancelIndicator, it) -> it).thenApply(it -> initializeResult = it);
 	}
 
 	/**
@@ -278,7 +277,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 				.anyMatch(serviceProvider -> serviceProvider.get(IRenameService2.class) != null)) {
 			RenameOptions renameOptions = new RenameOptions();
 			renameOptions.setPrepareProvider(true);
-			serverCapabilities.setRenameProvider(Either.<Boolean, RenameOptions> forRight(renameOptions));
+			serverCapabilities.setRenameProvider(Either.<Boolean, RenameOptions>forRight(renameOptions));
 		} else {
 			serverCapabilities.setRenameProvider(Either.forLeft(allLanguages.stream()
 					.anyMatch((serviceProvider) -> serviceProvider.get(IRenameService.class) != null
@@ -299,8 +298,8 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 			serverCapabilities.setExecuteCommandProvider(executeCommandOptions);
 		}
 		semanticHighlightingRegistry.initialize(allLanguages, clientCapabilities, client);
-		serverCapabilities.setSemanticHighlighting(new SemanticHighlightingServerCapabilities(
-				semanticHighlightingRegistry.getAllScopes()));
+		serverCapabilities.setSemanticHighlighting(
+				new SemanticHighlightingServerCapabilities(semanticHighlightingRegistry.getAllScopes()));
 
 		for (IResourceServiceProvider language : allLanguages) {
 			ICapabilitiesContributor capabilitiesContributor = language.get(ICapabilitiesContributor.class);
@@ -372,8 +371,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 */
 	protected Buildable toBuildable(DidOpenTextDocumentParams params) {
 		TextDocumentItem textDocument = params.getTextDocument();
-		return workspaceManager.didOpen(getURI(textDocument),
-				textDocument.getVersion(), textDocument.getText());
+		return workspaceManager.didOpen(getURI(textDocument), textDocument.getVersion(), textDocument.getText());
 	}
 
 	@Override
@@ -386,8 +384,8 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 */
 	protected Buildable toBuildable(DidChangeTextDocumentParams params) {
 		VersionedTextDocumentIdentifier textDocument = params.getTextDocument();
-		return workspaceManager.didChangeTextDocumentContent(getURI(textDocument),
-				textDocument.getVersion(), params.getContentChanges());
+		return workspaceManager.didChangeTextDocumentContent(getURI(textDocument), textDocument.getVersion(),
+				params.getContentChanges());
 	}
 
 	@Override
@@ -420,8 +418,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 		List<URI> deletedFiles = new ArrayList<>();
 		params.getChanges().stream()
 				.map((fileEvent) -> Pair.of(uriExtensions.toUri(fileEvent.getUri()), fileEvent.getType()))
-				.filter(pair -> !workspaceManager.isDocumentOpen(pair.getKey()))
-				.forEach(pair -> {
+				.filter(pair -> !workspaceManager.isDocumentOpen(pair.getKey())).forEach(pair -> {
 					if (pair.getValue() == FileChangeType.Deleted) {
 						deletedFiles.add(pair.getKey());
 					} else {
@@ -453,8 +450,8 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 		initialized.thenAccept((initParams) -> {
 			PublishDiagnosticsParams publishDiagnosticsParams = new PublishDiagnosticsParams();
 			publishDiagnosticsParams.setUri(uriExtensions.toUriString(uri));
-			publishDiagnosticsParams.setDiagnostics(workspaceManager.doRead(uri,
-					(document, resource) -> toDiagnostics(issues, document)));
+			publishDiagnosticsParams.setDiagnostics(
+					workspaceManager.doRead(uri, (document, resource) -> toDiagnostics(issues, document)));
 			client.publishDiagnostics(publishDiagnosticsParams);
 		});
 	}
@@ -565,11 +562,10 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	/**
 	 * Compute the definition.
 	 */
-	protected List<? extends Location> definition(CancelIndicator cancelIndicator,
-			TextDocumentPositionParams params) {
+	protected List<? extends Location> definition(CancelIndicator cancelIndicator, TextDocumentPositionParams params) {
 		URI uri = getURI(params);
 		DocumentSymbolService documentSymbolService = getService(uri, DocumentSymbolService.class);
-		if ((documentSymbolService == null)) {
+		if (documentSymbolService == null) {
 			return Collections.emptyList();
 		}
 		return workspaceManager.doRead(uri,
@@ -587,13 +583,11 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	protected List<? extends Location> references(ReferenceParams params, CancelIndicator cancelIndicator) {
 		URI uri = getURI(params);
 		DocumentSymbolService documentSymbolService = getService(uri, DocumentSymbolService.class);
-		if ((documentSymbolService == null)) {
+		if (documentSymbolService == null) {
 			return Collections.emptyList();
 		}
-		return workspaceManager.doRead(uri,
-				(document, resource) -> documentSymbolService.getReferences(document, resource, params,
-						resourceAccess,
-						workspaceManager.getIndex(), cancelIndicator));
+		return workspaceManager.doRead(uri, (document, resource) -> documentSymbolService.getReferences(document,
+				resource, params, resourceAccess, workspaceManager.getIndex(), cancelIndicator));
 	}
 
 	@Override
@@ -609,18 +603,18 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 			CancelIndicator cancelIndicator) {
 		URI uri = getURI(params.getTextDocument());
 		IDocumentSymbolService documentSymbolService = getIDocumentSymbolService(getResourceServiceProvider(uri));
-		if ((documentSymbolService == null)) {
+		if (documentSymbolService == null) {
 			return Collections.emptyList();
 		}
-		return workspaceManager.doRead(uri, (document, resource) -> documentSymbolService.getSymbols(document,
-				resource, params, cancelIndicator));
+		return workspaceManager.doRead(uri,
+				(document, resource) -> documentSymbolService.getSymbols(document, resource, params, cancelIndicator));
 	}
 
 	/**
 	 * @since 2.16
 	 */
 	protected IDocumentSymbolService getIDocumentSymbolService(IResourceServiceProvider serviceProvider) {
-		if ((serviceProvider == null)) {
+		if (serviceProvider == null) {
 			return null;
 		}
 		if (isHierarchicalDocumentSymbolSupport()) {
@@ -660,8 +654,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 * Compute the symbol information. Executed in a read request.
 	 */
 	protected List<? extends SymbolInformation> symbol(WorkspaceSymbolParams params, CancelIndicator cancelIndicator) {
-		return workspaceSymbolService.getSymbols(params.getQuery(),
-				resourceAccess, workspaceManager.getIndex(),
+		return workspaceSymbolService.getSymbols(params.getQuery(), resourceAccess, workspaceManager.getIndex(),
 				cancelIndicator);
 	}
 
@@ -679,13 +672,13 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 		if (hoverService == null) {
 			return IHoverService.EMPTY_HOVER;
 		}
-		return workspaceManager.<Hover> doRead(uri,
+		return workspaceManager.<Hover>doRead(uri,
 				(document, resource) -> hoverService.hover(document, resource, params, cancelIndicator));
 	}
 
 	@Override
 	public CompletableFuture<CompletionItem> resolveCompletionItem(CompletionItem unresolved) {
-		return CompletableFuture.<CompletionItem> completedFuture(unresolved);
+		return CompletableFuture.<CompletionItem>completedFuture(unresolved);
 	}
 
 	@Override
@@ -707,8 +700,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	}
 
 	@Override
-	public CompletableFuture<List<? extends DocumentHighlight>> documentHighlight(
-			TextDocumentPositionParams params) {
+	public CompletableFuture<List<? extends DocumentHighlight>> documentHighlight(TextDocumentPositionParams params) {
 		return requestManager.runRead((cancelIndicator) -> documentHighlight(params, cancelIndicator));
 	}
 
@@ -722,8 +714,8 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 		if (service == null) {
 			return Collections.emptyList();
 		}
-		return workspaceManager.doRead(uri, (doc,
-				resource) -> service.getDocumentHighlights(doc, resource, params, cancelIndicator));
+		return workspaceManager.doRead(uri,
+				(doc, resource) -> service.getDocumentHighlights(doc, resource, params, cancelIndicator));
 	}
 
 	@Override
@@ -792,7 +784,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 			lens.setData(null);
 		} else {
 			if (data instanceof List<?>) {
-				List<?> l = ((List<?>) data);
+				List<?> l = (List<?>) data;
 				result = URI.createURI(l.get(0).toString());
 				lens.setData(l.get(1));
 			}
@@ -811,7 +803,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	protected List<? extends CodeLens> codeLens(CodeLensParams params, CancelIndicator cancelIndicator) {
 		URI uri = getURI(params.getTextDocument());
 		ICodeLensService codeLensService = getService(uri, ICodeLensService.class);
-		if ((codeLensService == null)) {
+		if (codeLensService == null) {
 			return Collections.emptyList();
 		}
 		return workspaceManager.doRead(uri, (document, resource) -> {
@@ -825,7 +817,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	@Override
 	public CompletableFuture<CodeLens> resolveCodeLens(CodeLens unresolved) {
 		URI uri = uninstallURI(unresolved);
-		if ((uri == null)) {
+		if (uri == null) {
 			return CompletableFuture.completedFuture(unresolved);
 		}
 		return requestManager.runRead((cancelIndicator) -> resolveCodeLens(uri, unresolved, cancelIndicator));
@@ -854,11 +846,11 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	protected List<? extends TextEdit> formatting(DocumentFormattingParams params, CancelIndicator cancelIndicator) {
 		URI uri = getURI(params.getTextDocument());
 		FormattingService formatterService = getService(uri, FormattingService.class);
-		if ((formatterService == null)) {
+		if (formatterService == null) {
 			return Collections.emptyList();
 		}
-		return workspaceManager.doRead(uri, (document,
-				resource) -> formatterService.format(document, resource, params, cancelIndicator));
+		return workspaceManager.doRead(uri,
+				(document, resource) -> formatterService.format(document, resource, params, cancelIndicator));
 	}
 
 	@Override
@@ -873,7 +865,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 			CancelIndicator cancelIndicator) {
 		URI uri = getURI(params.getTextDocument());
 		FormattingService formatterService = getService(uri, FormattingService.class);
-		if ((formatterService == null)) {
+		if (formatterService == null) {
 			return Collections.emptyList();
 		}
 		return workspaceManager.doRead(uri,
@@ -941,7 +933,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 			return renameServiceOld.rename(workspaceManager, renameParams, cancelIndicator);
 		}
 		IRenameService2 renameService2 = getService(resourceServiceProvider, IRenameService2.class);
-		if ((renameService2 != null)) {
+		if (renameService2 != null) {
 			IRenameService2.Options options = new IRenameService2.Options();
 			options.setLanguageServerAccess(access);
 			options.setRenameParams(renameParams);
@@ -964,8 +956,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 * @since 2.18
 	 */
 	@Override
-	public CompletableFuture<Either<Range, PrepareRenameResult>> prepareRename(
-			TextDocumentPositionParams params) {
+	public CompletableFuture<Either<Range, PrepareRenameResult>> prepareRename(TextDocumentPositionParams params) {
 		return requestManager.runRead(cancelIndicator -> prepareRename(params, cancelIndicator));
 	}
 
@@ -1030,7 +1021,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 				ILanguageServerExtension ext = resourceServiceProvider.get(ILanguageServerExtension.class);
 				if (ext != null) {
 					ext.initialize(access);
-					Map<String, JsonRpcMethod> supportedExtensions = (ext instanceof JsonRpcMethodProvider)
+					Map<String, JsonRpcMethod> supportedExtensions = ext instanceof JsonRpcMethodProvider
 							? ((JsonRpcMethodProvider) ext).supportedMethods()
 							: ServiceEndpoints.getSupportedMethods(ext.getClass());
 					for (Map.Entry<String, JsonRpcMethod> entry : supportedExtensions.entrySet()) {
@@ -1060,13 +1051,10 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	private final ILanguageServerAccess access = new ILanguageServerAccess() {
 		@Override
-		public <T> CompletableFuture<T> doRead(String uri,
-				Function<ILanguageServerAccess.Context, T> function) {
-			return requestManager.runRead(cancelIndicator -> workspaceManager
-					.doRead(uriExtensions.toUri(uri), (document,
-							resource) -> function.apply(new ILanguageServerAccess.Context(resource, document,
-									workspaceManager.isDocumentOpen(resource.getURI()),
-									cancelIndicator))));
+		public <T> CompletableFuture<T> doRead(String uri, Function<ILanguageServerAccess.Context, T> function) {
+			return requestManager.runRead(cancelIndicator -> workspaceManager.doRead(uriExtensions.toUri(uri),
+					(document, resource) -> function.apply(new ILanguageServerAccess.Context(resource, document,
+							workspaceManager.isDocumentOpen(resource.getURI()), cancelIndicator))));
 		}
 
 		@Override
@@ -1097,8 +1085,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 		public <T> CompletableFuture<T> doReadIndex(
 				Function<? super ILanguageServerAccess.IndexContext, ? extends T> function) {
 			return requestManager.runRead(cancelIndicator -> function
-					.apply(new ILanguageServerAccess.IndexContext(workspaceManager.getIndex(),
-							cancelIndicator)));
+					.apply(new ILanguageServerAccess.IndexContext(workspaceManager.getIndex(), cancelIndicator)));
 		}
 
 		@Override
@@ -1109,12 +1096,12 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public void afterBuild(List<IResourceDescription.Delta> deltas) {
-		FluentIterable.from(deltas).filter(it -> it.getNew() != null).transform(it -> it.getUri().toString()).forEach(
-				it -> {
+		FluentIterable.from(deltas).filter(it -> it.getNew() != null).transform(it -> it.getUri().toString())
+				.forEach(it -> {
 					access.doRead(it, ctx -> {
 						if (ctx.isDocumentOpen()) {
 							if (ctx.getResource() instanceof XtextResource) {
-								XtextResource resource = ((XtextResource) ctx.getResource());
+								XtextResource resource = (XtextResource) ctx.getResource();
 								IColoringService coloringService = resource.getResourceServiceProvider()
 										.get(IColoringService.class);
 								if (coloringService != null && client instanceof LanguageClientExtensions) {
