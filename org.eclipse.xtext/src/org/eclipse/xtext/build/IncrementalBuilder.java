@@ -163,9 +163,8 @@ public class IncrementalBuilder {
 
 			public URIBasedFileSystemAccess newFileSystemAccess(Resource resource, BuildRequest request) {
 				URIBasedFileSystemAccess uriBasedFileSystemAccess = new URIBasedFileSystemAccess();
-				uriBasedFileSystemAccess.setOutputConfigurations(
-						IterableExtensions.toMap(outputConfigurationProvider.getOutputConfigurations(resource),
-								OutputConfiguration::getName));
+				uriBasedFileSystemAccess.setOutputConfigurations(IterableExtensions.toMap(
+						outputConfigurationProvider.getOutputConfigurations(resource), OutputConfiguration::getName));
 				uriBasedFileSystemAccess.setPostProcessor(postProcessor);
 				if (encodingProvider != null) {
 					uriBasedFileSystemAccess.setEncodingProvider(encodingProvider);
@@ -175,8 +174,7 @@ public class IncrementalBuilder {
 				uriBasedFileSystemAccess.setGenerateTraces(true);
 				uriBasedFileSystemAccess.setBaseDir(request.getBaseDir());
 				if (projectConfigProvider != null) {
-					IProjectConfig projectConfig = projectConfigProvider
-							.getProjectConfig(resource.getResourceSet());
+					IProjectConfig projectConfig = projectConfigProvider.getProjectConfig(resource.getResourceSet());
 					if (projectConfig != null) {
 						ISourceFolder sourceFolder = projectConfig.findSourceFolderContaining(resource.getURI());
 						if (sourceFolder != null) {
@@ -352,8 +350,7 @@ public class IncrementalBuilder {
 
 		protected URIBasedFileSystemAccess createFileSystemAccess(IResourceServiceProvider serviceProvider,
 				Resource resource) {
-			return serviceProvider.get(URIBasedFileSystemAccessFactory.class).newFileSystemAccess(resource,
-					request);
+			return serviceProvider.get(URIBasedFileSystemAccessFactory.class).newFileSystemAccess(resource, request);
 		}
 
 		protected BuildContext getContext() {

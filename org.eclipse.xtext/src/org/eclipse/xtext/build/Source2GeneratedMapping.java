@@ -47,8 +47,8 @@ public class Source2GeneratedMapping implements Externalizable {
 	}
 
 	public Source2GeneratedMapping copy() {
-		return new Source2GeneratedMapping(HashMultimap.create(source2generated),
-				HashMultimap.create(generated2source), new HashMap<>(generated2OutputConfigName));
+		return new Source2GeneratedMapping(HashMultimap.create(source2generated), HashMultimap.create(generated2source),
+				new HashMap<>(generated2OutputConfigName));
 	}
 
 	/**
