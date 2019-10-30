@@ -146,7 +146,7 @@ import com.google.inject.Inject;
 public class LanguageServerImpl implements LanguageServer, WorkspaceService, TextDocumentService, LanguageClientAware,
 		Endpoint, JsonRpcMethodProvider, ILanguageServerAccess.IBuildListener {
 
-	private static Logger LOG = Logger.getLogger(LanguageServerImpl.class);
+	private static final Logger LOG = Logger.getLogger(LanguageServerImpl.class);
 
 	@Inject
 	private RequestManager requestManager;
@@ -175,15 +175,15 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	private InitializeResult initializeResult;
 
-	private final CompletableFuture<InitializedParams> initialized = new CompletableFuture<>();
-
 	private WorkspaceResourceAccess resourceAccess;
 
 	private LanguageClient client;
 
-	private Map<String, JsonRpcMethod> supportedMethods = null;
+	private Map<String, JsonRpcMethod> supportedMethods;
+	
+	private final CompletableFuture<InitializedParams> initialized = new CompletableFuture<>();
 
-	private final Multimap<String, Endpoint> extensionProviders = LinkedListMultimap.<String, Endpoint>create();
+	private final Multimap<String, Endpoint> extensionProviders = LinkedListMultimap.create();
 
 	@Inject
 	public void setWorkspaceManager(WorkspaceManager manager) {
@@ -1031,12 +1031,12 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 							: ServiceEndpoints.getSupportedMethods(ext.getClass());
 					for (Map.Entry<String, JsonRpcMethod> entry : supportedExtensions.entrySet()) {
 						if (supportedMethods.containsKey(entry.getKey())) {
-							LanguageServerImpl.LOG.error("The json rpc method \'" + entry.getKey()
+							LOG.error("The json rpc method \'" + entry.getKey()
 									+ "\' can not be an extension as it is already defined in the LSP standard.");
 						} else {
 							JsonRpcMethod existing = extensions.put(entry.getKey(), entry.getValue());
 							if (existing != null && !Objects.equal(existing, entry.getValue())) {
-								LanguageServerImpl.LOG.error("An incompatible LSP extension \'" + entry.getKey()
+								LOG.error("An incompatible LSP extension \'" + entry.getKey()
 										+ "\' has already been registered. Using 1 ignoring 2. \n1 : " + existing
 										+ " \n2 : " + entry.getValue());
 								extensions.put(entry.getKey(), existing);

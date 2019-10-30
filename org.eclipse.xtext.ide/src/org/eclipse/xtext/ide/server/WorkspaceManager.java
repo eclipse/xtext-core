@@ -48,6 +48,7 @@ import com.google.inject.Provider;
  * @since 2.11
  */
 public class WorkspaceManager {
+	
 	private static final Logger LOG = Logger.getLogger(WorkspaceManager.class);
 
 	@Inject
@@ -61,14 +62,14 @@ public class WorkspaceManager {
 
 	private BuildManager buildManager;
 
-	private final Map<String, ProjectManager> projectName2ProjectManager = new HashMap<>();
-
 	private URI baseDir;
 
 	private Procedure2<? super URI, ? super Iterable<Issue>> issueAcceptor;
 
 	private IWorkspaceConfig workspaceConfig;
 
+	private final Map<String, ProjectManager> projectName2ProjectManager = new HashMap<>();
+	
 	private final List<ILanguageServerAccess.IBuildListener> buildListeners = new ArrayList<>();
 
 	private final Map<String, ResourceDescriptionsData> fullIndex = new HashMap<>();
@@ -319,7 +320,7 @@ public class WorkspaceManager {
 	public BuildManager.Buildable didChange(URI uri, Integer version, Iterable<TextEdit> changes) {
 		Document contents = openDocuments.get(uri);
 		if (contents == null) {
-			WorkspaceManager.LOG.error("The document " + uri + " has not been opened.");
+			LOG.error("The document " + uri + " has not been opened.");
 			return Buildable.NO_BUILD;
 		}
 		openDocuments.put(uri, contents.applyChanges(changes));
@@ -343,7 +344,7 @@ public class WorkspaceManager {
 			Iterable<TextDocumentContentChangeEvent> changes) {
 		Document contents = openDocuments.get(uri);
 		if (contents == null) {
-			WorkspaceManager.LOG.error("The document " + uri + " has not been opened.");
+			LOG.error("The document " + uri + " has not been opened.");
 			return Buildable.NO_BUILD;
 		}
 		openDocuments.put(uri, contents.applyTextDocumentChanges(changes));

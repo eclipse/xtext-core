@@ -52,8 +52,9 @@ public class BufferedCancelIndicator implements CancelIndicator {
 	@Override
 	public boolean isCanceled() {
 		if (cancelAt == 0) {
-			if (delegate.isCanceled())
+			if (delegate.isCanceled()) {
 				cancelAt = clock.read() + delayInNanos;
+			}
 			return false;
 		} else {
 			return clock.read() > cancelAt;

@@ -54,7 +54,6 @@ public class Indexer {
 		private final ResourceDescriptionsData newIndex;
 
 		public IndexResult(List<IResourceDescription.Delta> resourceDeltas, ResourceDescriptionsData newIndex) {
-			super();
 			this.resourceDeltas = resourceDeltas;
 			this.newIndex = newIndex;
 		}

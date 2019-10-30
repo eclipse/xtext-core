@@ -23,7 +23,7 @@ public class MultiProjectWorkspaceConfigFactory extends ProjectWorkspaceConfigFa
 		if (uri == null) {
 			return;
 		}
-		final File baseFile = new File(uri.toFileString());
+		File baseFile = new File(uri.toFileString());
 		if (!baseFile.isDirectory()) {
 			return;
 		}

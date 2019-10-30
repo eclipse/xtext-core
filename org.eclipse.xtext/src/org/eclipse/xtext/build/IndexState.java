@@ -19,15 +19,11 @@ public class IndexState {
 
 	private final Source2GeneratedMapping fileMappings;
 
-	/**
-	 * Constructor
-	 */
 	public IndexState() {
 		this(new ResourceDescriptionsData(Collections.emptySet()), new Source2GeneratedMapping());
 	}
 
 	public IndexState(ResourceDescriptionsData resourceDescriptions, Source2GeneratedMapping fileMappings) {
-		super();
 		this.resourceDescriptions = resourceDescriptions;
 		this.fileMappings = fileMappings;
 	}

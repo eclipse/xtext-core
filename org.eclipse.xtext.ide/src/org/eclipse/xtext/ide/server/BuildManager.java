@@ -46,7 +46,6 @@ public class BuildManager {
 		private final List<URI> deletedFiles;
 
 		public ProjectBuildData(List<URI> dirtyFiles, List<URI> deletedFiles) {
-			super();
 			this.dirtyFiles = dirtyFiles;
 			this.deletedFiles = deletedFiles;
 		}
@@ -230,9 +229,9 @@ public class BuildManager {
 					unreportedDeltas.add(newDelta);
 				} else {
 					unreportedDeltas.remove(unreportedDelta);
-					IResourceDescription _old = unreportedDelta.getOld();
-					IResourceDescription _new = newDelta.getNew();
-					unreportedDeltas.add(new DefaultResourceDescriptionDelta(_old, _new));
+					IResourceDescription oldDescription = unreportedDelta.getOld();
+					IResourceDescription newDescription = newDelta.getNew();
+					unreportedDeltas.add(new DefaultResourceDescriptionDelta(oldDescription, newDescription));
 				}
 			});
 		}

@@ -10,7 +10,6 @@ package org.eclipse.xtext.build;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -75,7 +74,6 @@ public class IncrementalBuilder {
 		private final List<IResourceDescription.Delta> affectedResources;
 
 		public Result(IndexState indexState, List<IResourceDescription.Delta> affectedResources) {
-			super();
 			this.indexState = indexState;
 			this.affectedResources = affectedResources;
 		}
