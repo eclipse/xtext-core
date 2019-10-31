@@ -77,10 +77,10 @@ public class ProjectManager {
 			Procedure2<? super URI, ? super Iterable<Issue>> acceptor,
 			IExternalContentSupport.IExternalContentProvider openedDocumentsContentProvider,
 			Provider<Map<String, ResourceDescriptionsData>> indexProvider, CancelIndicator cancelIndicator) {
-		projectDescription = description;
+		this.projectDescription = description;
 		this.projectConfig = projectConfig;
-		baseDir = projectConfig.getPath();
-		issueAcceptor = acceptor;
+		this.baseDir = projectConfig.getPath();
+		this.issueAcceptor = acceptor;
 		this.openedDocumentsContentProvider = openedDocumentsContentProvider;
 		this.indexProvider = indexProvider;
 	}

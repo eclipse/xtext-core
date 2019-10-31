@@ -52,38 +52,32 @@ public class BuildManager {
 
 		@Override
 		public int hashCode() {
-			int prime = 31;
+			final int prime = 31;
 			int result = 1;
-			result = prime * result + (dirtyFiles == null ? 0 : dirtyFiles.hashCode());
-			return prime * result + (deletedFiles == null ? 0 : deletedFiles.hashCode());
+			result = prime * result + ((deletedFiles == null) ? 0 : deletedFiles.hashCode());
+			result = prime * result + ((dirtyFiles == null) ? 0 : dirtyFiles.hashCode());
+			return result;
 		}
 
 		@Override
 		public boolean equals(Object obj) {
-			if (this == obj) {
+			if (this == obj)
 				return true;
-			}
-			if (obj == null) {
+			if (obj == null)
 				return false;
-			}
-			if (getClass() != obj.getClass()) {
+			if (getClass() != obj.getClass())
 				return false;
-			}
-			BuildManager.ProjectBuildData other = (BuildManager.ProjectBuildData) obj;
-			if (dirtyFiles == null) {
-				if (other.dirtyFiles != null) {
-					return false;
-				}
-			} else if (!dirtyFiles.equals(other.dirtyFiles)) {
-				return false;
-			}
+			ProjectBuildData other = (ProjectBuildData) obj;
 			if (deletedFiles == null) {
-				if (other.deletedFiles != null) {
+				if (other.deletedFiles != null)
 					return false;
-				}
-			} else if (!deletedFiles.equals(other.deletedFiles)) {
+			} else if (!deletedFiles.equals(other.deletedFiles))
 				return false;
-			}
+			if (dirtyFiles == null) {
+				if (other.dirtyFiles != null)
+					return false;
+			} else if (!dirtyFiles.equals(other.dirtyFiles))
+				return false;
 			return true;
 		}
 
@@ -223,7 +217,7 @@ public class BuildManager {
 		} else {
 			Map<URI, IResourceDescription.Delta> unreportedByUri = IterableExtensions.toMap(unreportedDeltas,
 					IResourceDescription.Delta::getUri);
-			newDeltas.forEach((newDelta) -> {
+			for(IResourceDescription.Delta newDelta: newDeltas) {
 				IResourceDescription.Delta unreportedDelta = unreportedByUri.get(newDelta.getUri());
 				if (unreportedDelta == null) {
 					unreportedDeltas.add(newDelta);
@@ -233,7 +227,7 @@ public class BuildManager {
 					IResourceDescription newDescription = newDelta.getNew();
 					unreportedDeltas.add(new DefaultResourceDescriptionDelta(oldDescription, newDescription));
 				}
-			});
+			}
 		}
 	}
 
@@ -247,8 +241,7 @@ public class BuildManager {
 	}
 
 	protected void reportDependencyCycle(ProjectManager manager) {
-		manager.reportProjectIssue("Project has cyclic dependencies", BuildManager.CYCLIC_PROJECT_DEPENDENCIES,
-				Severity.ERROR);
+		manager.reportProjectIssue("Project has cyclic dependencies", CYCLIC_PROJECT_DEPENDENCIES, Severity.ERROR);
 	}
 
 	public void setWorkspaceManager(WorkspaceManager workspaceManager) {
