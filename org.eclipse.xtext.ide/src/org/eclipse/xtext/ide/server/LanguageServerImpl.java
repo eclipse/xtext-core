@@ -228,7 +228,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 * @param params
 	 *            the initialization parametrs
 	 * @return the server capabilities
-	 * @since 2.19
+	 * @since 2.20
 	 */
 	protected ServerCapabilities createServerCapabilities(InitializeParams params) {
 		ServerCapabilities serverCapabilities = new ServerCapabilities();
@@ -369,6 +369,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Evaluate the params and deduce the respective build command.
+	 * @since 2.20
 	 */
 	protected Buildable toBuildable(DidOpenTextDocumentParams params) {
 		TextDocumentItem textDocument = params.getTextDocument();
@@ -434,6 +435,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 *
 	 * @param newBuildable
 	 *            the factory for the buildable.
+	 * @since 2.20
 	 */
 	protected void runBuildable(Supplier<? extends Buildable> newBuildable) {
 		requestManager.runWrite(newBuildable::get, (cancelIndicator, buildable) -> buildable.build(cancelIndicator));
@@ -532,6 +534,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Obtain the URI from the given parameters.
+	 * @since 2.20
 	 */
 	protected URI getURI(TextDocumentPositionParams params) {
 		return getURI(params.getTextDocument());
@@ -539,6 +542,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Obtain the URI from the given identifier.
+	 * @since 2.20
 	 */
 	protected URI getURI(TextDocumentIdentifier documentIdentifier) {
 		return uriExtensions.toUri(documentIdentifier.getUri());
@@ -546,6 +550,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Obtain the URI from the given document item.
+	 * @since 2.20
 	 */
 	protected URI getURI(TextDocumentItem documentItem) {
 		return uriExtensions.toUri(documentItem.getUri());
@@ -559,6 +564,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Compute the definition. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected Either<List<? extends Location>, List<? extends LocationLink>> definition(
 			TextDocumentPositionParams params, CancelIndicator cancelIndicator) {
@@ -585,6 +591,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Compute the references. Executed in read request.
+	 * @since 2.20
 	 */
 	protected List<? extends Location> references(ReferenceParams params, CancelIndicator cancelIndicator) {
 		URI uri = getURI(params);
@@ -604,6 +611,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Compute the symbol information. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected List<Either<SymbolInformation, DocumentSymbol>> documentSymbol(DocumentSymbolParams params,
 			CancelIndicator cancelIndicator) {
@@ -661,6 +669,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Compute the symbol information. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected List<? extends SymbolInformation> symbol(WorkspaceSymbolParams params, CancelIndicator cancelIndicator) {
 		return workspaceSymbolService.getSymbols(params.getQuery(), resourceAccess, workspaceManager.getIndex(),
@@ -674,6 +683,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Compute the hover. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected Hover hover(TextDocumentPositionParams params, CancelIndicator cancelIndicator) {
 		URI uri = getURI(params);
@@ -697,6 +707,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Compute the signature help. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected SignatureHelp signatureHelp(TextDocumentPositionParams params, CancelIndicator cancelIndicator) {
 		URI uri = getURI(params);
@@ -715,6 +726,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Compute the document highlights. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected List<? extends DocumentHighlight> documentHighlight(TextDocumentPositionParams params,
 			CancelIndicator cancelIndicator) {
@@ -734,6 +746,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Compute the code action commands. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected List<Either<Command, CodeAction>> codeAction(CodeActionParams params, CancelIndicator cancelIndicator) {
 		URI uri = getURI(params.getTextDocument());
@@ -808,6 +821,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Compute the code lenses. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected List<? extends CodeLens> codeLens(CodeLensParams params, CancelIndicator cancelIndicator) {
 		URI uri = getURI(params.getTextDocument());
@@ -834,6 +848,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Resolve the given code lens. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected CodeLens resolveCodeLens(URI uri, CodeLens unresolved, CancelIndicator cancelIndicator) {
 		ICodeLensResolver resolver = getService(uri, ICodeLensResolver.class);
@@ -851,6 +866,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Create the text edits for the formatter. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected List<? extends TextEdit> formatting(DocumentFormattingParams params, CancelIndicator cancelIndicator) {
 		URI uri = getURI(params.getTextDocument());
@@ -869,6 +885,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Create the text edits for the formatter. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected List<? extends TextEdit> rangeFormatting(DocumentRangeFormattingParams params,
 			CancelIndicator cancelIndicator) {
@@ -887,6 +904,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 * @param type
 	 *            the type of the service
 	 * @return the service instance or null if the language does not exist or if it does not expose the service.
+	 * @since 2.20
 	 */
 	protected <Service> Service getService(URI uri, Class<Service> type) {
 		return getService(getResourceServiceProvider(uri), type);
@@ -900,6 +918,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 * @param type
 	 *            the type of the service
 	 * @return the service instance or null if not available.
+	 * @since 2.20
 	 */
 	protected <Service> Service getService(IResourceServiceProvider resourceServiceProvider, Class<Service> type) {
 		if (resourceServiceProvider == null) {
@@ -915,6 +934,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Execute the command. Runs in a read request.
+	 * @since 2.20
 	 */
 	protected Object executeCommand(ExecuteCommandParams params, CancelIndicator cancelIndicator) {
 		return commandRegistry.executeCommand(params, access, cancelIndicator);
@@ -932,6 +952,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Compute the rename edits. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected WorkspaceEdit rename(RenameParams renameParams, CancelIndicator cancelIndicator) {
 		URI uri = getURI(renameParams.getTextDocument());
@@ -971,6 +992,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	/**
 	 * Prepare the rename operation. Executed in a read request.
+	 * @since 2.20
 	 */
 	protected Either<Range, PrepareRenameResult> prepareRename(TextDocumentPositionParams params,
 			CancelIndicator cancelIndicator) {
