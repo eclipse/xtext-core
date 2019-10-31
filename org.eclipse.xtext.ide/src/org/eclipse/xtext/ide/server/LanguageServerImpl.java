@@ -228,6 +228,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 * @param params
 	 *            the initialization parametrs
 	 * @return the server capabilities
+	 * @since 2.19
 	 */
 	protected ServerCapabilities createServerCapabilities(InitializeParams params) {
 		ServerCapabilities serverCapabilities = new ServerCapabilities();
@@ -635,19 +636,22 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 */
 	protected boolean isHierarchicalDocumentSymbolSupport() {
 		ClientCapabilities capabilities = initializeParams.getCapabilities();
-		if (capabilities != null) {
-			TextDocumentClientCapabilities textDocument = capabilities.getTextDocument();
-			if (textDocument != null) {
-				DocumentSymbolCapabilities documentSymbol = textDocument.getDocumentSymbol();
-				if (documentSymbol != null) {
-					Boolean hierarchicalDocumentSymbolSupport = documentSymbol.getHierarchicalDocumentSymbolSupport();
-					if (hierarchicalDocumentSymbolSupport != null) {
-						return hierarchicalDocumentSymbolSupport;
-					}
-				}
-			}
+		if (capabilities == null) {
+			return false;
 		}
-		return false;
+		TextDocumentClientCapabilities textDocument = capabilities.getTextDocument();
+		if (textDocument == null) {
+			return false;
+		}
+		DocumentSymbolCapabilities documentSymbol = textDocument.getDocumentSymbol();
+		if (documentSymbol == null) {
+			return false;
+		}
+		Boolean hierarchicalDocumentSymbolSupport = documentSymbol.getHierarchicalDocumentSymbolSupport();
+		if (hierarchicalDocumentSymbolSupport == null) {
+			return false;
+		}
+		return hierarchicalDocumentSymbolSupport;
 	}
 
 	@Override
