@@ -8,9 +8,9 @@
 package org.eclipse.xtext.xtext.wizard;
 
 public enum Scope {
-	COMPILE("compile", "compile"),
-	TESTCOMPILE("test", "testCompile"),
-	TESTRUNTIME("test", "testRuntime"),
+	COMPILE("compile", "implementation"),
+	TESTCOMPILE("test", "testImplementation"),
+	TESTRUNTIME("test", "testRuntimeOnly"),
 	PROVIDED("provided", "providedCompile");
 
 	private String mavenNotation;

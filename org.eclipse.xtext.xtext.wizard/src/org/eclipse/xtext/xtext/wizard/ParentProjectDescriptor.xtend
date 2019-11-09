@@ -100,7 +100,7 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 					
 					apply plugin: 'java'
 					dependencies {
-						compile platform("org.eclipse.xtext:xtext-dev-bom:${xtextVersion}")
+						implementation platform("org.eclipse.xtext:xtext-dev-bom:${xtextVersion}")
 					}
 
 					apply plugin: 'org.xtext.xtend'

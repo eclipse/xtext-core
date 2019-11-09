@@ -24,7 +24,7 @@ class GradleBuildFile extends TextFile {
 			«IF !allDependencies.isEmpty»
 				dependencies {
 					«FOR p : project.upstreamProjects»
-						compile project(':«p.name»')
+						implementation project(':«p.name»')
 					«ENDFOR»
 					«FOR dep : mavenDependencies»
 						«IF dep.version !== null»

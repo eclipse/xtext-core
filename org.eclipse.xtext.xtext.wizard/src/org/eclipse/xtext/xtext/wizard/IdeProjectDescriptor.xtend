@@ -333,7 +333,7 @@ class IdeProjectDescriptor extends ProjectDescriptor {
 					«IF config.languageServer === LanguageServer.FATJAR»
 						shadowJar {
 							from(project.convention.getPlugin(JavaPluginConvention).sourceSets.main.output)
-							configurations = [project.configurations.runtime]
+							configurations = [project.configurations.runtimeClasspath]
 							exclude('META-INF/INDEX.LIST', 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA','schema/*',
 								'.options', '.api_description', '*.profile', '*.html', 'about.*', 'about_files/*',
 								'plugin.xml', 'systembundle.properties', 'profile.list')

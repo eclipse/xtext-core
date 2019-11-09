@@ -1159,7 +1159,7 @@ public class IdeProjectDescriptor extends ProjectDescriptor {
               _builder_1.append("from(project.convention.getPlugin(JavaPluginConvention).sourceSets.main.output)");
               _builder_1.newLine();
               _builder_1.append("\t");
-              _builder_1.append("configurations = [project.configurations.runtime]");
+              _builder_1.append("configurations = [project.configurations.runtimeClasspath]");
               _builder_1.newLine();
               _builder_1.append("\t");
               _builder_1.append("exclude(\'META-INF/INDEX.LIST\', \'META-INF/*.SF\', \'META-INF/*.DSA\', \'META-INF/*.RSA\',\'schema/*\',");

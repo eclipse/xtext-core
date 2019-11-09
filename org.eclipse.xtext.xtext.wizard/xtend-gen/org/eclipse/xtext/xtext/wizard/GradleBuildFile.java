@@ -46,7 +46,7 @@ public class GradleBuildFile extends TextFile {
           Set<? extends ProjectDescriptor> _upstreamProjects = this.getProject().getUpstreamProjects();
           for(final ProjectDescriptor p : _upstreamProjects) {
             _builder.append("\t");
-            _builder.append("compile project(\':");
+            _builder.append("implementation project(\':");
             String _name = p.getName();
             _builder.append(_name, "\t");
             _builder.append("\')");
