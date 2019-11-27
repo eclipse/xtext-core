@@ -7,30 +7,20 @@
  */
 package org.eclipse.xtext.util;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.jar.Manifest;
 
-import org.eclipse.emf.common.EMFPlugin;
-import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.common.util.URI;
 
 /**
  * @since 2.9
  */
 public class XtextVersion {
-	private static class Plugin extends EMFPlugin {
-		public static final XtextVersion.Plugin INSTANCE = new XtextVersion.Plugin();
-
-		private Plugin() {
-			super(new ResourceLocator[] {});
-		}
-
-		@Override
-		public ResourceLocator getPluginResourceLocator() {
-			return null;
-		}
-	}
 
 	private final String version;
 
@@ -92,21 +82,74 @@ public class XtextVersion {
 		return version;
 	}
 
+	/**
+	 * Tries to read the Xtext version from this bundle's manifest. The method opens the
+	 * manifest of org.eclipse.xtext.util and reads the <code>Maven-Version</code> value from
+	 * it. In CI scenarios this will be "unspecified", then it continues to read the
+	 * <code>Bundle-Version</code> value. If this ends with ".qualifier", it replaces the qualifier
+	 * by "-SNAPSHOT". Otherwise it will return the base version without the qualifier.
+	 * 
+	 * @return Version string in format <code>MAJOR.MINOR.MICRO[-SNAPSHOT]</code>
+	 */
 	private static String readVersionFromManifest() {
-		URL baseURL = XtextVersion.Plugin.INSTANCE.getBaseURL();
-		try (InputStream is = new URL (baseURL + "META-INF/MANIFEST.MF").openStream()) {
-			Manifest manifest = new Manifest(is);
-			String version = manifest.getMainAttributes().getValue("Maven-Version");
-			if ("unspecified".equals(version)) {
-				version = manifest.getMainAttributes().getValue("Bundle-Version");
-				if (version.endsWith(".qualifier")) {
-					return version.replace(".qualifier", "-SNAPSHOT");
-				} else {
-					return version.substring(0, version.lastIndexOf("."));
+		try {
+			URL ownManifestURL = getOwnManifestURL();
+			
+			try (InputStream is = ownManifestURL.openStream()) {
+				Manifest manifest = new Manifest(is);
+				String bundleId = manifest.getMainAttributes().getValue("Bundle-SymbolicName");
+				if (!"org.eclipse.xtext.util".equals(bundleId)) {
+					throw new IllegalStateException("Wrong manifest, Bundle-SymbolicName is: "+bundleId);
+				}
+				String version = manifest.getMainAttributes().getValue("Maven-Version");
+				if ("unspecified".equals(version)) {
+					version = manifest.getMainAttributes().getValue("Bundle-Version");
+					if (version.endsWith(".qualifier")) {
+						return version.replace(".qualifier", "-SNAPSHOT");
+					} else {
+						return version.substring(0, version.lastIndexOf("."));
+					}
+				}
+				return version;
+			}
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	/**
+	 * Locates the URL of this bundle's manifest file. This is done by locating the manifest file
+	 * relative to the class resource of this class. The location can be either be a file URL in the context
+	 * of unit test execution or an archive URL for CI/release bundle.
+	 * 
+	 * @throws FileNotFoundException When the MANIFEST.MF for org.eclipse.xtext.util was not found
+	 */
+	private static URL getOwnManifestURL () throws FileNotFoundException {
+		// can't use XtextVersion.class.getResource() as it retrieves the first manifest found,
+		// not the one for this bundle. Thus we have to search for the right one first.
+		// we do this here by locating the class file of XtextVersion from its classloader and locate
+		// the manifest relative to the base URI
+		try {
+			String ownClassAsResourcePath = XtextVersion.class.getName().replace('.', '/')+".class";
+			URL ownClassResourceURL = XtextVersion.class.getClassLoader().getResource(ownClassAsResourcePath);
+			URI ownClassResourceURI = URI.createURI(ownClassResourceURL.toURI().toString());
+			
+			// The XtextVersion class has 5 segments. When the class is bundled in a jar the manifest is located 
+			// relative to the root.
+			// In a unit test the class is located in the build output directory, but the manifest
+			// is found relative to the project root. This can be either 1 or 2 levels above (bin/main in Gradle or target in Maven).
+			for (int i=5; i<=7; i++) {
+				URI ownManifestURI = ownClassResourceURI.trimSegments(i).appendSegments(new String[]{"META-INF", "MANIFEST.MF"});
+				URL ownManifestURL = new URL(ownManifestURI.toString());
+				try (InputStream is = ownManifestURL.openStream()) {
+					// when the URL can be opened, then we found the manifest
+					return ownManifestURL;
+				} catch (IOException e) {
+					continue;
 				}
 			}
-			return version;
-		} catch (IOException e) {
+			throw new FileNotFoundException("Could not find MANIFEST.MF for org.eclipse.xtext.util");
+		} catch (URISyntaxException | MalformedURLException e) {
 			throw new RuntimeException(e);
 		}
 	}
