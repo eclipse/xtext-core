@@ -43,17 +43,29 @@ public interface Issue {
 	 * Returns the one-based line number of the issue.
 	 */
 	Integer getLineNumber();
+
+	/**
+	 * Returns the one-based line number of the end of the issue.
+	 */
+	Integer getLineNumberEnd();
 	
 	/**
 	 * Returns the column in the line of the issue. It's not the virtual column but literally
 	 * the character offset in the column, e.g. tab ('\t') counts as one character.
 	 * The first char in a line has column number 1, the number is one-based.
 	 * 
-	 * If no column information is available, returns -1.
-	 * 
 	 * @since 2.9
 	 */
 	Integer getColumn();
+	
+	/**
+	 * Returns the end column in the line of the issue. It's not the virtual end column but literally
+	 * the character end offset in the column, e.g. tab ('\t') counts as one character.
+	 * The first char in a line has column number 1, the number is one-based.
+	 * 
+	 * @since 2.9
+	 */
+	Integer getColumnEnd();
 
 	Integer getOffset();
 
@@ -70,7 +82,9 @@ public interface Issue {
 		
 		private static Logger LOG = Logger.getLogger(IssueImpl.class);
 
-		private Integer length, lineNumber, offset, column;
+		private Integer offset = 0, length = 0;
+		private Integer lineNumber = 0, column = 0;
+		private Integer lineNumberEnd = 0, columnEnd = 0;
 		private String code, message;
 		private boolean isSyntaxError = false;
 		private URI uriToProblem;
@@ -101,6 +115,14 @@ public interface Issue {
 			this.lineNumber = lineNumber;
 		}
 		
+		public Integer getLineNumberEnd() {
+			return lineNumberEnd;
+		}
+		
+		public void setLineNumberEnd(Integer lineNumberEnd) {
+			this.lineNumberEnd = lineNumberEnd;
+		}
+		
 		/**
 		 * @since 2.9
 		 */
@@ -114,6 +136,14 @@ public interface Issue {
 		 */
 		public void setColumn(Integer column) {
 			this.column = column;
+		}
+
+		public Integer getColumnEnd() {
+			return columnEnd;
+		}
+		
+		public void setColumnEnd(Integer columnEnd) {
+			this.columnEnd = columnEnd;
 		}
 
 		@Override
