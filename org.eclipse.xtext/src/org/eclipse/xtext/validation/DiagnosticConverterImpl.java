@@ -244,6 +244,15 @@ public class DiagnosticConverterImpl implements IDiagnosticConverter {
 					containingFeature.isMany() ? ((EList<?>) container.eGet(containingFeature)).indexOf(obj)
 							: ValidationMessageAcceptor.INSIGNIFICANT_INDEX);
 		}
+		
+		// place issue at start of document since we lack location information
+		IssueLocation startOfDocumentLocation = new IssueLocation();
+		startOfDocumentLocation.offset = 0;
+		startOfDocumentLocation.length = 0;
+		startOfDocumentLocation.lineNumber = 1;
+		startOfDocumentLocation.column = 1;
+		startOfDocumentLocation.lineNumberEnd = 1;
+		startOfDocumentLocation.columnEnd = 1;
 		return new IssueLocation();
 	}
 

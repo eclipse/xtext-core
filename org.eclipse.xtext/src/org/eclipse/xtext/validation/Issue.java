@@ -41,11 +41,13 @@ public interface Issue {
 
 	/**
 	 * Returns the one-based line number of the issue.
+	 * Values smaller than 1 are invalid.
 	 */
 	Integer getLineNumber();
 
 	/**
 	 * Returns the one-based line number of the end of the issue.
+	 * Values smaller than 1 are invalid.
 	 * 
 	 * @since 2.21
 	 */
@@ -55,6 +57,9 @@ public interface Issue {
 	 * Returns the column in the line of the issue. It's not the virtual column but literally
 	 * the character offset in the column, e.g. tab ('\t') counts as one character.
 	 * The first char in a line has column number 1, the number is one-based.
+	 * Values smaller than 1 are invalid.
+	 * 
+	 * The region defined by line and column information includes the character at the start column.
 	 * 
 	 * @since 2.9
 	 */
@@ -64,6 +69,9 @@ public interface Issue {
 	 * Returns the end column in the line of the issue. It's not the virtual end column but literally
 	 * the character end offset in the column, e.g. tab ('\t') counts as one character.
 	 * The first char in a line has column number 1, the number is one-based.
+	 * Values smaller than 1 are invalid.
+	 * 
+	 * The region defined by line and column information does not include the character at the end column.
 	 * 
 	 * @since 2.21
 	 */
@@ -116,11 +124,17 @@ public interface Issue {
 		public void setLineNumber(Integer lineNumber) {
 			this.lineNumber = lineNumber;
 		}
-		
+
+		/**
+		 * @since 2.21
+		 */
 		public Integer getLineNumberEnd() {
 			return lineNumberEnd;
 		}
-		
+
+		/**
+		 * @since 2.21
+		 */
 		public void setLineNumberEnd(Integer lineNumberEnd) {
 			this.lineNumberEnd = lineNumberEnd;
 		}
@@ -140,10 +154,16 @@ public interface Issue {
 			this.column = column;
 		}
 
+		/**
+		 * @since 2.21
+		 */
 		public Integer getColumnEnd() {
 			return columnEnd;
 		}
-		
+
+		/**
+		 * @since 2.21
+		 */
 		public void setColumnEnd(Integer columnEnd) {
 			this.columnEnd = columnEnd;
 		}
