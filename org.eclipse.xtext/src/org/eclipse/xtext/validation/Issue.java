@@ -46,6 +46,8 @@ public interface Issue {
 
 	/**
 	 * Returns the one-based line number of the end of the issue.
+	 * 
+	 * @since 2.21
 	 */
 	Integer getLineNumberEnd();
 	
@@ -63,7 +65,7 @@ public interface Issue {
 	 * the character end offset in the column, e.g. tab ('\t') counts as one character.
 	 * The first char in a line has column number 1, the number is one-based.
 	 * 
-	 * @since 2.9
+	 * @since 2.21
 	 */
 	Integer getColumnEnd();
 

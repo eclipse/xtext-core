@@ -58,6 +58,8 @@ public interface Diagnostic extends org.eclipse.emf.ecore.resource.Resource.Diag
      * Returns the end line location of the issue within the source.
      * Line <code>1</code> is the first line.
      * @return the end line location of the issue.
+	 * 
+	 * @since 2.21
      */
     int getLineEnd();
 
@@ -65,6 +67,8 @@ public interface Diagnostic extends org.eclipse.emf.ecore.resource.Resource.Diag
      * Returns the end column location of the issue within the source.
      * Column <code>1</code> is the first column.
      * @return the end column location of the issue.
+	 * 
+	 * @since 2.21
      */
     int getColumnEnd();
 
