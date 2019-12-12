@@ -41,13 +41,13 @@ public interface Issue {
 
 	/**
 	 * Returns the one-based line number of the issue.
-	 * Values smaller than 1 are invalid.
+	 * Values smaller than 1 and null values are invalid and indicate the absence of line information on this issue.
 	 */
 	Integer getLineNumber();
 
 	/**
 	 * Returns the one-based line number of the end of the issue.
-	 * Values smaller than 1 are invalid.
+	 * Values smaller than 1 and null values are invalid and indicate the absence of line information on this issue.
 	 * 
 	 * @since 2.21
 	 */
@@ -69,7 +69,7 @@ public interface Issue {
 	 * Returns the end column in the line of the issue. It's not the virtual end column but literally
 	 * the character end offset in the column, e.g. tab ('\t') counts as one character.
 	 * The first char in a line has column number 1, the number is one-based.
-	 * Values smaller than 1 and null values are invalid and indicate the absence of line information on this issue.
+	 * Values smaller than 1 and null values are invalid and indicate the absence of column information on this issue.
 	 * 
 	 * The region defined by line and column information does not include the character at the end column.
 	 * 
