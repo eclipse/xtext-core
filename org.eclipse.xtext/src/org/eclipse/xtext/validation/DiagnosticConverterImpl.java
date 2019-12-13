@@ -256,6 +256,9 @@ public class DiagnosticConverterImpl implements IDiagnosticConverter {
 		return new IssueLocation();
 	}
 
+	/**
+	 * Computes {@link IssueLocation} for the given node.
+	 */
 	protected IssueLocation getLocationForNode(INode node) {
 		ITextRegionWithLineInformation nodeRegion = node.getTextRegionWithLineInformation();
 		int offset = nodeRegion.getOffset();
@@ -263,6 +266,11 @@ public class DiagnosticConverterImpl implements IDiagnosticConverter {
 		return getLocationForNode(node, offset, length);
 	}
 
+	/**
+	 * Computes {@link IssueLocation} for the given offset and length in the given node.
+	 * 
+	 * @since 2.21
+	 */
 	protected IssueLocation getLocationForNode(INode node, int offset, int length) {
 		IssueLocation result = new IssueLocation();
 		result.offset = offset;
