@@ -29,6 +29,10 @@ public class RequestCancelIndicator implements CancelIndicator, CancelChecker, C
 		this.requestFuture.cancel(true);
 	}
 
+	/**
+	 * Not really boolean guard but will throw a {@link CancellationException} instead of returning
+	 * <code>true</code>. Otherwise returns <code>false</code>.
+	 */
 	@Override
 	public boolean isCanceled() {
 		this.checkCanceled();

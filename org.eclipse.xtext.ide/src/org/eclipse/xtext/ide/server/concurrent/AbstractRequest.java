@@ -39,13 +39,13 @@ public abstract class AbstractRequest<V> implements Runnable, Cancellable {
 
 	@Override
 	public void cancel() {
-		this.cancelIndicator.cancel();
+		cancelIndicator.cancel();
 	}
 
 	/**
 	 * Return the underlying future.
 	 */
 	public CompletableFuture<V> get() {
-		return this.result;
+		return result;
 	}
 }
