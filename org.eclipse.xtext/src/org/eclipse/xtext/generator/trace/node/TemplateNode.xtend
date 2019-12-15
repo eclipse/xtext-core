@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017 TypeFox GmbH (http://www.typefox.io) and others.
+ * Copyright (c) 2017, 2019 TypeFox GmbH (http://www.typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -9,10 +9,10 @@ package org.eclipse.xtext.generator.trace.node
 
 import com.google.common.base.Splitter
 import com.google.common.collect.Iterables
+import com.google.common.collect.Lists
 import java.util.regex.Pattern
 import org.eclipse.xtend2.lib.StringConcatenationClient
 import org.eclipse.xtend2.lib.StringConcatenationClient.TargetStringConcatenation
-import com.google.common.collect.Lists
 
 /**
  * A template node applies a {@link StringConcatenationClient} to compute its children.

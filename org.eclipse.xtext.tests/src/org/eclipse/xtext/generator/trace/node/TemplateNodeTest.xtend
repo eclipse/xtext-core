@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017 TypeFox (https://typefox.io) and others.
+ * Copyright (c) 2017, 2019 TypeFox (https://typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,10 +7,10 @@
  *******************************************************************************/
 package org.eclipse.xtext.generator.trace.node
 
-import org.junit.Test
+import org.eclipse.xtend2.lib.StringConcatenation
 import org.eclipse.xtend2.lib.StringConcatenationClient
 import org.junit.Assert
-import org.eclipse.xtend2.lib.StringConcatenation
+import org.junit.Test
 
 /**
  * @author Sven Efftinge - Initial contribution and API

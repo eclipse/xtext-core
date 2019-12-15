@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2016, 2017, 2018 TypeFox GmbH (http://www.typefox.io) and others.
+ * Copyright (c) 2016, 2019 TypeFox GmbH (http://www.typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,17 +14,17 @@ import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicInteger
 import org.apache.log4j.Level
 import org.eclipse.xtext.ide.server.ServerModule
+import org.eclipse.xtext.ide.server.concurrent.ReadRequest
 import org.eclipse.xtext.ide.server.concurrent.RequestManager
+import org.eclipse.xtext.ide.server.concurrent.WriteRequest
 import org.eclipse.xtext.testing.logging.LoggingTester
 import org.junit.After
+import org.junit.Assert
 import org.junit.Before
 import org.junit.Ignore
 import org.junit.Test
 
 import static org.junit.Assert.*
-import org.junit.Assert
-import org.eclipse.xtext.ide.server.concurrent.WriteRequest
-import org.eclipse.xtext.ide.server.concurrent.ReadRequest
 
 /**
  * @author kosyakov - Initial contribution and API

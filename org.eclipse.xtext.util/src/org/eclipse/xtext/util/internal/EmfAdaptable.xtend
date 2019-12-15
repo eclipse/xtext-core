@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2015, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,16 +7,16 @@
  *******************************************************************************/
 package org.eclipse.xtext.util.internal
 
+import java.util.List
 import org.eclipse.emf.common.notify.Adapter
 import org.eclipse.emf.common.notify.Notifier
+import org.eclipse.emf.common.notify.impl.AdapterImpl
 import org.eclipse.xtend.lib.macro.AbstractClassProcessor
 import org.eclipse.xtend.lib.macro.Active
 import org.eclipse.xtend.lib.macro.RegisterGlobalsContext
 import org.eclipse.xtend.lib.macro.TransformationContext
 import org.eclipse.xtend.lib.macro.declaration.ClassDeclaration
 import org.eclipse.xtend.lib.macro.declaration.MutableClassDeclaration
-import org.eclipse.emf.common.notify.impl.AdapterImpl
-import java.util.List
 
 /**
  * @author Sven Efftinge - Initial contribution and API

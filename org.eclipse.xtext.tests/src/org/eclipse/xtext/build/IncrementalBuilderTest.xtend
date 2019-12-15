@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2017 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2015, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,16 +14,16 @@ import org.eclipse.emf.common.util.URI
 import org.eclipse.xtext.build.BuildRequest.IPostValidationCallback
 import org.eclipse.xtext.index.IndexTestLanguageInjectorProvider
 import org.eclipse.xtext.resource.IResourceServiceProvider
-import org.eclipse.xtext.util.CancelIndicator
-import org.eclipse.xtext.testing.XtextRunner
+import org.eclipse.xtext.resource.impl.ChunkedResourceDescriptions
 import org.eclipse.xtext.testing.InjectWith
+import org.eclipse.xtext.testing.XtextRunner
 import org.eclipse.xtext.testing.builder.AbstractIncrementalBuilderTest
+import org.eclipse.xtext.util.CancelIndicator
 import org.eclipse.xtext.validation.Issue
 import org.junit.Test
 import org.junit.runner.RunWith
 
 import static org.junit.Assert.*
-import org.eclipse.xtext.resource.impl.ChunkedResourceDescriptions
 
 /**
  * @author Sven Efftinge - Initial contribution and API

@@ -9,16 +9,14 @@
 package org.eclipse.xtext.ide.server
 
 import com.google.inject.Guice
+import com.google.inject.Module
 import java.io.PrintWriter
 import java.net.InetSocketAddress
 import java.nio.channels.AsynchronousServerSocketChannel
 import java.nio.channels.Channels
 import org.eclipse.lsp4j.jsonrpc.Launcher
 import org.eclipse.lsp4j.services.LanguageClient
-import org.eclipse.xtext.ide.server.LanguageServerImpl
-import org.eclipse.xtext.ide.server.ServerModule
 import org.eclipse.xtext.util.internal.Log
-import com.google.inject.Module
 
 /**
  * Allows to launch a language server vie a server socket.

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018 TypeFox and others.
+ * Copyright (c) 2018, 2019 TypeFox and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -11,6 +11,8 @@ import com.google.inject.Inject
 import java.util.List
 import org.eclipse.lsp4j.ClientCapabilities
 import org.eclipse.lsp4j.DidChangeTextDocumentParams
+import org.eclipse.lsp4j.Position
+import org.eclipse.lsp4j.Range
 import org.eclipse.lsp4j.SemanticHighlightingCapabilities
 import org.eclipse.lsp4j.TextDocumentClientCapabilities
 import org.eclipse.lsp4j.TextDocumentContentChangeEvent
@@ -20,8 +22,6 @@ import org.junit.Before
 import org.junit.Test
 
 import static org.junit.Assert.*
-import org.eclipse.lsp4j.Range
-import org.eclipse.lsp4j.Position
 
 class SemanticHighlightingTest extends AbstractTestLangLanguageServerTest {
 

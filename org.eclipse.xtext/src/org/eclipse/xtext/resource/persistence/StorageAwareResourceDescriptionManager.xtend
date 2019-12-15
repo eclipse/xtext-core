@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2014, 2016 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2014, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,9 +7,8 @@
  *******************************************************************************/
 package org.eclipse.xtext.resource.persistence
 
-import org.eclipse.xtext.resource.impl.DefaultResourceDescriptionManager
 import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.xtext.resource.persistence.StorageAwareResource
+import org.eclipse.xtext.resource.impl.DefaultResourceDescriptionManager
 
 /**
  * @author Sven Efftinge - Initial contribution and API

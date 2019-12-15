@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2014, 2017 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2014, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,10 +8,13 @@
 package org.eclipse.xtext.formatting2.internal
 
 import com.google.inject.Inject
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.xtext.formatting2.IFormattableDocument
 import org.eclipse.xtext.formatting2.internal.formattertestlanguage.IDList
 import org.eclipse.xtext.formatting2.internal.formattertestlanguage.KWList
 import org.eclipse.xtext.formatting2.internal.services.FormatterTestLanguageGrammarAccess
 import org.eclipse.xtext.formatting2.internal.tests.FormatterTestLanguageInjectorProvider
+import org.eclipse.xtext.formatting2.regionaccess.ITextRegionExtensions
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.XtextRunner
 import org.eclipse.xtext.util.TextRegion
@@ -19,9 +22,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 import static org.eclipse.xtext.formatting2.FormatterPreferenceKeys.*
-import org.eclipse.emf.ecore.EObject
-import org.eclipse.xtext.formatting2.regionaccess.ITextRegionExtensions
-import org.eclipse.xtext.formatting2.IFormattableDocument
 
 /**
  * @author Moritz Eysholdt - Initial contribution and API

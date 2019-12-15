@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017 TypeFox GmbH (http://www.typefox.io) and others.
+ * Copyright (c) 2017, 2019 TypeFox GmbH (http://www.typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,6 +12,7 @@ import com.google.inject.Provider
 import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.lsp4j.RenameParams
 import org.eclipse.lsp4j.WorkspaceEdit
+import org.eclipse.xtext.ide.refactoring.IRenameStrategy2
 import org.eclipse.xtext.ide.refactoring.RenameChange
 import org.eclipse.xtext.ide.refactoring.RenameContext
 import org.eclipse.xtext.ide.serializer.IChangeSerializer
@@ -19,10 +20,10 @@ import org.eclipse.xtext.ide.server.UriExtensions
 import org.eclipse.xtext.ide.server.WorkspaceManager
 import org.eclipse.xtext.resource.EObjectAtOffsetHelper
 import org.eclipse.xtext.resource.XtextResource
-import org.eclipse.xtext.util.CancelIndicator
-import static org.eclipse.xtext.ide.refactoring.RefactoringIssueAcceptor.Severity.*
-import org.eclipse.xtext.ide.refactoring.IRenameStrategy2
 import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider
+import org.eclipse.xtext.util.CancelIndicator
+
+import static org.eclipse.xtext.ide.refactoring.RefactoringIssueAcceptor.Severity.*
 
 /**
  * @author koehnlein - Initial contribution and API

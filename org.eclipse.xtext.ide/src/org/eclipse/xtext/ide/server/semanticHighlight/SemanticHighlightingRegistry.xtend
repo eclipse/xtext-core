@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018 TypeFox and others.
+ * Copyright (c) 2018, 2019 TypeFox and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,6 +12,7 @@ import com.google.common.collect.BiMap
 import com.google.common.collect.ImmutableBiMap
 import com.google.common.collect.ImmutableList
 import com.google.common.collect.ImmutableMultimap
+import com.google.common.collect.Maps
 import com.google.inject.Inject
 import java.util.List
 import org.eclipse.lsp4j.ClientCapabilities
@@ -34,7 +35,6 @@ import org.eclipse.xtext.util.CancelIndicator
 import org.eclipse.xtext.util.internal.Log
 
 import static extension org.eclipse.lsp4j.util.SemanticHighlightingTokens.encode
-import com.google.common.collect.Maps
 
 /**
  * Shared semantic highlighting manager per language server.

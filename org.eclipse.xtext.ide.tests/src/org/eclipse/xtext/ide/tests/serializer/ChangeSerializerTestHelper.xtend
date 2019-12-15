@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017 TypeFox GmbH (http://www.typefox.io) and others.
+ * Copyright (c) 2017, 2019 TypeFox GmbH (http://www.typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,7 +8,7 @@
 package org.eclipse.xtext.ide.tests.serializer
 
 import com.google.common.base.Preconditions
-
+import com.google.inject.Guice
 import com.google.inject.Inject
 import java.util.Collection
 import org.eclipse.emf.common.util.URI
@@ -30,7 +30,7 @@ import org.eclipse.xtext.testing.util.InMemoryURIHandler
 import org.eclipse.xtext.testing.validation.ValidationTestHelper
 import org.eclipse.xtext.util.CollectionBasedAcceptor
 import org.junit.Assert
-import com.google.inject.Guice
+
 import static extension org.eclipse.xtext.util.Strings.*
 
 /**

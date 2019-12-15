@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2016, 2017 TypeFox GmbH (http://www.typefox.io) and others.
+ * Copyright (c) 2016, 2019 TypeFox GmbH (http://www.typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,12 +7,12 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.server
 
-import org.eclipse.lsp4j.Position
-import org.eclipse.lsp4j.TextEdit
-import org.eclipse.xtend.lib.annotations.Data
 import org.eclipse.lsp4j.DidChangeTextDocumentParams
+import org.eclipse.lsp4j.Position
 import org.eclipse.lsp4j.Range
 import org.eclipse.lsp4j.TextDocumentContentChangeEvent
+import org.eclipse.lsp4j.TextEdit
+import org.eclipse.xtend.lib.annotations.Data
 
 /**
  * @author Sven Efftinge - Initial contribution and API

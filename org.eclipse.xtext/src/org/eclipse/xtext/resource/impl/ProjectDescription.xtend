@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2017 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2015, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,11 +7,11 @@
  *******************************************************************************/
 package org.eclipse.xtext.resource.impl
 
+import com.google.common.annotations.Beta
 import java.util.List
 import org.eclipse.xtend.lib.annotations.Accessors
-import org.eclipse.xtext.util.internal.EmfAdaptable
-import com.google.common.annotations.Beta
 import org.eclipse.xtend.lib.annotations.ToString
+import org.eclipse.xtext.util.internal.EmfAdaptable
 
 /**
  * @author Sven Efftinge - Initial contribution and API

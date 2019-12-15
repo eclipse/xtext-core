@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2016, 2017 TypeFox GmbH (http://www.typefox.io) and others.
+ * Copyright (c) 2016, 2019 TypeFox GmbH (http://www.typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -16,7 +16,9 @@ import org.eclipse.emf.ecore.EObject
 import org.eclipse.lsp4j.ParameterInformation
 import org.eclipse.lsp4j.SignatureHelp
 import org.eclipse.lsp4j.SignatureInformation
+import org.eclipse.lsp4j.TextDocumentPositionParams
 import org.eclipse.xtext.EcoreUtil2
+import org.eclipse.xtext.ide.server.Document
 import org.eclipse.xtext.ide.server.signatureHelp.ISignatureHelpService
 import org.eclipse.xtext.ide.tests.testlanguage.testLanguage.Operation
 import org.eclipse.xtext.ide.tests.testlanguage.testLanguage.OperationCall
@@ -29,8 +31,6 @@ import org.eclipse.xtext.nodemodel.util.NodeModelUtils
 import org.eclipse.xtext.resource.EObjectAtOffsetHelper
 import org.eclipse.xtext.resource.XtextResource
 import org.eclipse.xtext.scoping.IScopeProvider
-import org.eclipse.xtext.ide.server.Document
-import org.eclipse.lsp4j.TextDocumentPositionParams
 import org.eclipse.xtext.util.CancelIndicator
 
 /**

@@ -5,9 +5,9 @@ import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.xtext.ide.serializer.hooks.IReferenceUpdaterContext
 import org.eclipse.xtext.ide.serializer.impl.ReferenceUpdater
 import org.eclipse.xtext.naming.IQualifiedNameProvider
-import org.eclipse.xtext.testlanguages.fileAware.fileAware.PackageDeclaration
-import org.eclipse.xtext.testlanguages.fileAware.fileAware.FileAwareFactory
 import org.eclipse.xtext.testlanguages.fileAware.fileAware.Element
+import org.eclipse.xtext.testlanguages.fileAware.fileAware.FileAwareFactory
+import org.eclipse.xtext.testlanguages.fileAware.fileAware.PackageDeclaration
 
 class FileAwareTestLanguageReferenceUpdater extends ReferenceUpdater {
 

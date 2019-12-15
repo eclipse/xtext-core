@@ -5,7 +5,9 @@ import org.eclipse.xtext.AbstractRule
 import org.eclipse.xtext.Grammar
 import org.eclipse.xtext.GrammarUtil
 import org.eclipse.xtext.xtext.UsedRulesFinder
+
 import static extension org.eclipse.xtext.xtext.generator.util.GrammarUtil2.*
+
 class XbaseUsageDetector {
 	
 	def boolean inheritsXtype(Grammar grammar) {

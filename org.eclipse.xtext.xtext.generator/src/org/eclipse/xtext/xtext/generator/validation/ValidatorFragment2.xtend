@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2018 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2015, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -17,6 +17,8 @@ import org.eclipse.xtend2.lib.StringConcatenationClient
 import org.eclipse.xtext.AbstractRule
 import org.eclipse.xtext.GeneratedMetamodel
 import org.eclipse.xtext.Grammar
+import org.eclipse.xtext.preferences.PreferenceKey
+import org.eclipse.xtext.util.IAcceptor
 import org.eclipse.xtext.validation.AbstractDeclarativeValidator
 import org.eclipse.xtext.validation.Check
 import org.eclipse.xtext.validation.ComposedChecks
@@ -28,13 +30,11 @@ import org.eclipse.xtext.xtext.generator.XtextGeneratorNaming
 import org.eclipse.xtext.xtext.generator.model.FileAccessFactory
 import org.eclipse.xtext.xtext.generator.model.GuiceModuleAccess
 import org.eclipse.xtext.xtext.generator.model.TypeReference
+import org.eclipse.xtext.xtext.generator.xbase.XbaseUsageDetector
 
 import static extension org.eclipse.xtext.GrammarUtil.*
 import static extension org.eclipse.xtext.xtext.generator.model.TypeReference.*
 import static extension org.eclipse.xtext.xtext.generator.util.GrammarUtil2.*
-import org.eclipse.xtext.util.IAcceptor
-import org.eclipse.xtext.preferences.PreferenceKey
-import org.eclipse.xtext.xtext.generator.xbase.XbaseUsageDetector
 
 /**
  * By using this fragment validation gets enabled.

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017 TypeFox GmbH (http://www.typefox.io) and others.
+ * Copyright (c) 2017, 2019 TypeFox GmbH (http://www.typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -10,6 +10,7 @@ package org.eclipse.xtext.ide.tests.serializer
 import com.google.inject.Inject
 import com.google.inject.Provider
 import org.eclipse.emf.ecore.EClass
+import org.eclipse.emf.ecore.EPackage
 import org.eclipse.emf.ecore.EcoreFactory
 import org.eclipse.xtext.ide.serializer.impl.ChangeSerializer
 import org.eclipse.xtext.ide.tests.testlanguage.partialSerializationTestLanguage.EClassRef
@@ -22,7 +23,6 @@ import org.eclipse.xtext.testlanguages.ecore.EcoreSupport
 import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.eclipse.emf.ecore.EPackage
 
 /**
  * @author Moritz Eysholdt - Initial contribution and API

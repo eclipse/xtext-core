@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2016 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2015, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,19 +7,20 @@
  *******************************************************************************/
 package org.eclipse.xtext.xtext.wizard.ecore2xtext
 
-import static extension org.eclipse.xtext.xtext.wizard.ecore2xtext.Ecore2XtextExtensions.*
-import static extension org.eclipse.xtext.xtext.wizard.ecore2xtext.UniqueNameUtil.*
+import java.util.List
+import org.eclipse.emf.ecore.EAttribute
+import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EClassifier
 import org.eclipse.emf.ecore.EDataType
-import org.eclipse.emf.ecore.EClass
-import org.eclipse.emf.ecore.EStructuralFeature
-import org.eclipse.emf.ecore.EAttribute
-import org.eclipse.emf.ecore.EReference
 import org.eclipse.emf.ecore.EEnum
-import java.util.List
+import org.eclipse.emf.ecore.EReference
+import org.eclipse.emf.ecore.EStructuralFeature
 import org.eclipse.xtext.xtext.wizard.WizardConfiguration
 
- class Ecore2XtextGrammarCreator {
+import static extension org.eclipse.xtext.xtext.wizard.ecore2xtext.Ecore2XtextExtensions.*
+import static extension org.eclipse.xtext.xtext.wizard.ecore2xtext.UniqueNameUtil.*
+
+class Ecore2XtextGrammarCreator {
 		
 	def grammar(WizardConfiguration config) {
 		val it = config.ecore2Xtext

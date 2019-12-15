@@ -30,14 +30,14 @@ import org.eclipse.xtext.resource.impl.BinaryGrammarResourceFactoryImpl
 import org.eclipse.xtext.service.SingletonBinding
 import org.eclipse.xtext.util.Modules2
 import org.eclipse.xtext.xtext.generator.model.FileAccessFactory
+import org.eclipse.xtext.xtext.generator.model.GeneratedJavaFileAccess
 import org.eclipse.xtext.xtext.generator.model.GuiceModuleAccess
 import org.eclipse.xtext.xtext.generator.model.JavaFileAccess
 import org.eclipse.xtext.xtext.generator.model.TypeReference
 import org.eclipse.xtext.xtext.generator.model.annotations.SuppressWarningsAnnotation
+import org.eclipse.xtext.xtext.generator.model.project.IXtextProjectConfig
 
 import static extension org.eclipse.xtext.xtext.generator.model.TypeReference.*
-import org.eclipse.xtext.xtext.generator.model.GeneratedJavaFileAccess
-import org.eclipse.xtext.xtext.generator.model.project.IXtextProjectConfig
 
 /**
  * Templates for generating the common language infrastructure.

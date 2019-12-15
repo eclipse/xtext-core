@@ -7,21 +7,21 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.tests.server
 
+import com.google.inject.Module
+import java.io.File
+import org.eclipse.emf.common.util.URI
 import org.eclipse.lsp4j.DidChangeWatchedFilesParams
 import org.eclipse.lsp4j.FileChangeType
 import org.eclipse.lsp4j.FileEvent
+import org.eclipse.xtext.ide.server.IWorkspaceConfigFactory
+import org.eclipse.xtext.ide.server.ProjectWorkspaceConfigFactory
+import org.eclipse.xtext.ide.server.ServerModule
+import org.eclipse.xtext.util.Modules2
+import org.eclipse.xtext.workspace.FileProjectConfig
+import org.eclipse.xtext.workspace.WorkspaceConfig
 import org.junit.Test
 
 import static org.junit.Assert.*
-import com.google.inject.Module
-import org.eclipse.xtext.util.Modules2
-import org.eclipse.xtext.ide.server.ServerModule
-import org.eclipse.xtext.ide.server.IWorkspaceConfigFactory
-import org.eclipse.xtext.ide.server.ProjectWorkspaceConfigFactory
-import org.eclipse.emf.common.util.URI
-import org.eclipse.xtext.workspace.WorkspaceConfig
-import org.eclipse.xtext.workspace.FileProjectConfig
-import java.io.File
 
 /**
  * Checks functionality of method IProjectConfig#isIndexOnly()

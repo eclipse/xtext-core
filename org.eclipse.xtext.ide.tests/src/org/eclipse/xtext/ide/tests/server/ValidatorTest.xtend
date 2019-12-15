@@ -7,13 +7,13 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.tests.server
 
+import org.eclipse.xtext.diagnostics.Diagnostic
 import org.eclipse.xtext.ide.tests.testlanguage.validation.TestLanguageValidator
 import org.junit.Test
 
 import static org.junit.Assert.*
 
 import static extension org.eclipse.xtext.util.Strings.*
-import org.eclipse.xtext.diagnostics.Diagnostic
 
 /**
  * @author Christian Dietrich - Initial contribution and API

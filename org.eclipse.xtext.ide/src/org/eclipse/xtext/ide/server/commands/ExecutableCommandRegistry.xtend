@@ -86,7 +86,7 @@ import org.eclipse.xtext.util.internal.Log
 			val localResult = service.execute(params, access, cancelIndicator)
 			if (localResult !== null) {
 				if (result !== null) {
-					org.eclipse.xtext.ide.server.commands.ExecutableCommandRegistry.LOG.error('''Multiple commands '«params.command»' have been registered. All are executed but only one result will be send back.''')
+					ExecutableCommandRegistry.LOG.error('''Multiple commands '«params.command»' have been registered. All are executed but only one result will be send back.''')
 				} else {
 					result = localResult
 				}

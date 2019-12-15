@@ -7,6 +7,7 @@ import org.eclipse.xtext.scoping.impl.ImportNormalizer
 import org.eclipse.xtext.scoping.impl.ImportedNamespaceAwareLocalScopeProvider
 import org.eclipse.xtext.testlanguages.fileAware.fileAware.Import
 import org.eclipse.xtext.testlanguages.fileAware.fileAware.PackageDeclaration
+
 import static org.eclipse.xtext.testlanguages.fileAware.fileAware.FileAwarePackage.Literals.*
 
 class FileAwareTestLanguageImportScopeProvider extends ImportedNamespaceAwareLocalScopeProvider {

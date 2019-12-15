@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2017 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2015, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -13,10 +13,11 @@ import java.util.Set
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.eclipse.xtend.lib.annotations.Data
 import org.eclipse.xtend2.lib.StringConcatenationClient
+import org.eclipse.xtext.service.AbstractGenericModule
 import org.eclipse.xtext.util.internal.Log
 
 /**
- * Configuration object for Guice modules based on {@link org.eclipse.xtext.service.AbstractGenericModule}.
+ * Configuration object for Guice modules based on {@link AbstractGenericModule}.
  */
 @Log
 class GuiceModuleAccess {

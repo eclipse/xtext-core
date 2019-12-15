@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2016, 2018 itemis AG (http://www.itemis.com) and others.
+ * Copyright (c) 2016, 2019 itemis AG (http://www.itemis.com) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,28 +7,28 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.server.formatting
 
+import com.google.common.base.Strings
 import com.google.inject.Inject
 import com.google.inject.Provider
 import java.util.List
+import java.util.Map
+import java.util.concurrent.ConcurrentHashMap
 import org.eclipse.lsp4j.DocumentFormattingParams
 import org.eclipse.lsp4j.DocumentRangeFormattingParams
+import org.eclipse.lsp4j.FormattingOptions
 import org.eclipse.lsp4j.Range
 import org.eclipse.lsp4j.TextEdit
+import org.eclipse.xtext.formatting.IIndentationInformation
 import org.eclipse.xtext.formatting2.FormatterRequest
 import org.eclipse.xtext.formatting2.IFormatter2
 import org.eclipse.xtext.formatting2.regionaccess.TextRegionAccessBuilder
 import org.eclipse.xtext.ide.server.Document
 import org.eclipse.xtext.preferences.ITypedPreferenceValues
+import org.eclipse.xtext.preferences.MapBasedPreferenceValues
 import org.eclipse.xtext.resource.XtextResource
 import org.eclipse.xtext.util.CancelIndicator
 import org.eclipse.xtext.util.ITextRegion
 import org.eclipse.xtext.util.TextRegion
-import org.eclipse.xtext.preferences.MapBasedPreferenceValues
-import com.google.common.base.Strings
-import org.eclipse.lsp4j.FormattingOptions
-import java.util.Map
-import java.util.concurrent.ConcurrentHashMap
-import org.eclipse.xtext.formatting.IIndentationInformation
 
 /**
  * Language Service Implementation for Formatting and Range-Formatting

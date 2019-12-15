@@ -14,8 +14,8 @@ import org.eclipse.xtend.lib.annotations.Accessors
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
 import org.eclipse.xtext.formatting2.regionaccess.ITextRegionExtensions
-import org.eclipse.xtext.testing.formatter.FormatterTestRequest
 import org.eclipse.xtext.testing.formatter.FormatterTestHelper
+import org.eclipse.xtext.testing.formatter.FormatterTestRequest
 
 /**
  * @author Moritz Eysholdt - Initial contribution and API

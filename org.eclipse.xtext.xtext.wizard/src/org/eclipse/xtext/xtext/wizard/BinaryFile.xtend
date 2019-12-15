@@ -1,8 +1,8 @@
 package org.eclipse.xtext.xtext.wizard
 
+import java.net.URL
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor
-import java.net.URL
 
 @FinalFieldsConstructor
 class BinaryFile extends AbstractFile {

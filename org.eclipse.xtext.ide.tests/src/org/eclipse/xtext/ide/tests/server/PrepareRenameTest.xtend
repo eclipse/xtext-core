@@ -10,6 +10,7 @@ package org.eclipse.xtext.ide.tests.server
 import com.google.common.base.Throwables
 import com.google.inject.Inject
 import java.io.File
+import java.io.FileNotFoundException
 import org.eclipse.lsp4j.ClientCapabilities
 import org.eclipse.lsp4j.Position
 import org.eclipse.lsp4j.RenameCapabilities
@@ -23,7 +24,6 @@ import org.eclipse.xtext.ide.server.UriExtensions
 import org.junit.Test
 
 import static org.junit.Assert.*
-import java.io.FileNotFoundException
 
 class PrepareRenameTest extends AbstractTestLangLanguageServerTest {
 

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2014, 2017 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2014, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -9,18 +9,17 @@ package org.eclipse.xtext.tasks
 
 import com.google.inject.Binder
 import com.google.inject.Guice
+import com.google.inject.name.Names
 import java.util.List
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl
+import org.eclipse.xtext.documentation.impl.AbstractMultiLineCommentProvider
 import org.eclipse.xtext.testlanguages.noJdt.NoJdtTestLanguageRuntimeModule
 import org.eclipse.xtext.testlanguages.noJdt.NoJdtTestLanguageStandaloneSetup
 import org.eclipse.xtext.tests.AbstractXtextTests
 import org.eclipse.xtext.tests.LineDelimiters
 import org.junit.Before
 import org.junit.Test
-
-import com.google.inject.name.Names
-import org.eclipse.xtext.documentation.impl.AbstractMultiLineCommentProvider
 
 /**
  * @author Stefan Oehme - Initial contribution and API

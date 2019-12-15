@@ -8,9 +8,9 @@
 package org.eclipse.xtext.xtext.generator.model
 
 import org.eclipse.xtend.lib.annotations.Accessors
-import org.eclipse.xtext.generator.IFileSystemAccess2
-import org.eclipse.xtend2.lib.StringConcatenationClient
 import org.eclipse.xtend2.lib.StringConcatenation
+import org.eclipse.xtend2.lib.StringConcatenationClient
+import org.eclipse.xtext.generator.IFileSystemAccess2
 
 /**
  * A utility class for generating plain text files.

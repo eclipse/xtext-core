@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2015, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,9 +8,9 @@
 package org.eclipse.xtext.ide.labels
 
 import com.google.inject.ImplementedBy
-import org.eclipse.xtext.util.SimpleAttributeResolver
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.xtext.resource.IEObjectDescription
+import org.eclipse.xtext.util.SimpleAttributeResolver
 
 /**
  * @author Jan Koehnlein - Initial contribution and API

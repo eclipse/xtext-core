@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2016, 2017 TypeFox GmbH (http://www.typefox.io) and others.
+ * Copyright (c) 2016, 2019 TypeFox GmbH (http://www.typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -21,8 +21,8 @@ import org.eclipse.xtend.lib.annotations.ToString
 import org.eclipse.xtext.ide.server.ILanguageServerAccess
 import org.eclipse.xtext.ide.server.ILanguageServerAccess.IBuildListener
 import org.eclipse.xtext.ide.server.ILanguageServerExtension
-import org.eclipse.xtext.resource.IResourceDescription.Delta
 import org.eclipse.xtext.ide.tests.testlanguage.testLanguage.TestLanguagePackage
+import org.eclipse.xtext.resource.IResourceDescription.Delta
 
 /**
  * @author efftinge - Initial contribution and API

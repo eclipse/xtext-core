@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2018, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,9 +7,9 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.tests.testlanguage.ide
 
-import org.eclipse.xtext.ide.server.commands.IExecutableCommandService
 import org.eclipse.lsp4j.ExecuteCommandParams
 import org.eclipse.xtext.ide.server.ILanguageServerAccess
+import org.eclipse.xtext.ide.server.commands.IExecutableCommandService
 import org.eclipse.xtext.util.CancelIndicator
 
 /**

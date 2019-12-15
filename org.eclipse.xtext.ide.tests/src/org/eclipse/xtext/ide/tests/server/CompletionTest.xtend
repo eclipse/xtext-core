@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2016 TypeFox GmbH (http://www.typefox.io) and others.
+ * Copyright (c) 2016, 2019 TypeFox GmbH (http://www.typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,8 +7,8 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.tests.server
 
-import org.junit.Test
 import org.eclipse.lsp4j.CompletionItem
+import org.junit.Test
 
 /**
  * @author kosyakov - Initial contribution and API

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2008, 2017 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2008, 2019 itemis AG (http://www.itemis.eu) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -39,9 +39,8 @@ import org.eclipse.xtext.tests.AbstractXtextTests
 import org.eclipse.xtext.tests.TestErrorAcceptor
 import org.eclipse.xtext.util.OnChangeEvictingCache
 import org.eclipse.xtext.xtext.XtextLinker
-import org.eclipse.xtext.xtext.ecoreInference.Xtext2EcoreTransformerTest.MyErrorAcceptor
-import org.junit.Test
 import org.eclipse.xtext.xtext.XtextLinker.PackageRemover
+import org.junit.Test
 
 /**
  * @author Jan Köhnlein - Initial contribution and API

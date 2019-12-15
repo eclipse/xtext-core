@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016, 2017 TypeFox GmbH (http://www.typefox.io) and others.
+ * Copyright (c) 2016, 2019 TypeFox GmbH (http://www.typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,9 +12,9 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import org.eclipse.xtext.ide.tests.testlanguage.testLanguage.PrimitiveType
+import org.eclipse.xtext.ide.tests.testlanguage.testLanguage.Property
 import org.eclipse.xtext.ide.tests.testlanguage.testLanguage.TypeDeclaration
 import org.eclipse.xtext.ide.tests.testlanguage.testLanguage.TypeReference
-import org.eclipse.xtext.ide.tests.testlanguage.testLanguage.Property
 
 /**
  * Generates code from your model files on save.

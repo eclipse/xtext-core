@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017 TypeFox GmbH (http://www.typefox.io) and others.
+ * Copyright (c) 2017, 2019 TypeFox GmbH (http://www.typefox.io) and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -20,13 +20,13 @@ import org.eclipse.lsp4j.WorkspaceClientCapabilities
 import org.eclipse.lsp4j.services.LanguageClient
 import org.eclipse.xtend.lib.annotations.Delegate
 import org.eclipse.xtext.ide.server.ILanguageServerAccess
+import org.eclipse.xtext.ide.server.commands.ExecutableCommandRegistry
+import org.eclipse.xtext.ide.server.commands.IExecutableCommandService
 import org.eclipse.xtext.resource.IResourceServiceProvider
 import org.eclipse.xtext.util.CancelIndicator
 import org.eclipse.xtext.util.IDisposable
 import org.junit.Assert
 import org.junit.Test
-import org.eclipse.xtext.ide.server.commands.IExecutableCommandService
-import org.eclipse.xtext.ide.server.commands.ExecutableCommandRegistry
 
 /**
  * @author Sven Efftinge - Initial contribution and API
