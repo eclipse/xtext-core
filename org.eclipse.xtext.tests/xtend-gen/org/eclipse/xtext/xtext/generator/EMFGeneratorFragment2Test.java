@@ -1,9 +1,10 @@
 /**
  * Copyright (c) 2015, 2020 itemis AG (http://www.itemis.eu) and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
  */
 package org.eclipse.xtext.xtext.generator;
 
@@ -74,11 +75,11 @@ public class EMFGeneratorFragment2Test {
     _builder_6.newLine();
     _builder_6.append("All rights reserved. This program and the accompanying materials");
     _builder_6.newLine();
-    _builder_6.append("are made available under the terms of the Eclipse Public License v1.0");
+    _builder_6.append("are made available under the terms of the Eclipse Public License v2.0");
     _builder_6.newLine();
     _builder_6.append("which accompanies this distribution, and is available at");
     _builder_6.newLine();
-    _builder_6.append("http://www.eclipse.org/legal/epl-v10.html");
+    _builder_6.append("http://www.eclipse.org/legal/epl-2.0");
     StringConcatenation _builder_7 = new StringConcatenation();
     _builder_7.append("/**");
     _builder_7.newLine();
@@ -95,7 +96,7 @@ public class EMFGeneratorFragment2Test {
     _builder_7.append("* which accompanies this distribution, and is available at");
     _builder_7.newLine();
     _builder_7.append(" ");
-    _builder_7.append("* http://www.eclipse.org/legal/epl-v10.html");
+    _builder_7.append("* http://www.eclipse.org/legal/epl-2.0");
     _builder_7.newLine();
     _builder_7.append(" ");
     _builder_7.append("*/");
@@ -109,7 +110,7 @@ public class EMFGeneratorFragment2Test {
     _builder_8.newLine();
     _builder_8.append("which accompanies this distribution, and is available at");
     _builder_8.newLine();
-    _builder_8.append("http://www.eclipse.org/legal/epl-v10.html");
+    _builder_8.append("http://www.eclipse.org/legal/epl-2.0");
     StringConcatenation _builder_9 = new StringConcatenation();
     _builder_9.append("/*******************************************************************************");
     _builder_9.newLine();
@@ -126,7 +127,7 @@ public class EMFGeneratorFragment2Test {
     _builder_9.append("* which accompanies this distribution, and is available at");
     _builder_9.newLine();
     _builder_9.append(" ");
-    _builder_9.append("* http://www.eclipse.org/legal/epl-v10.html");
+    _builder_9.append("* http://www.eclipse.org/legal/epl-2.0");
     _builder_9.newLine();
     _builder_9.append(" ");
     _builder_9.append("*******************************************************************************/");
