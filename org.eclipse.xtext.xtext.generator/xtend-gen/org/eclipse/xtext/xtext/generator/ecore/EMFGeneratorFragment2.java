@@ -900,7 +900,7 @@ public class EMFGeneratorFragment2 extends AbstractXtextGeneratorFragment {
   }
   
   public String trimMultiLineComment(final String string) {
-    return string.replace(" * ", "").replaceAll("/\\*+\\s*|\\s*\\*+/", "").trim();
+    return string.replace(" * ", "").replaceAll("/\\*+\\s*|\\s*\\*+/", "").replaceAll("(?m)^ \\*$", "").trim();
   }
   
   protected Set<EPackage> getReferencedEPackages(final List<EPackage> packs) {

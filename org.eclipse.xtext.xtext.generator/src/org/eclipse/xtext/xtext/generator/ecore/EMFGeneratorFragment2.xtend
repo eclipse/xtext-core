@@ -625,7 +625,7 @@ class EMFGeneratorFragment2 extends AbstractXtextGeneratorFragment {
 	}
 	
 	def String trimMultiLineComment(String string) {
-		return string.replace(' * ','').replaceAll("/\\*+\\s*|\\s*\\*+/", "").trim
+		return string.replace(' * ','').replaceAll("/\\*+\\s*|\\s*\\*+/", "").replaceAll('(?m)^ \\*$','').trim
 	}
 	
 	protected def Set<EPackage> getReferencedEPackages(List<EPackage> packs) {
