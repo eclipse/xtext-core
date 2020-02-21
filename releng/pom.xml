@@ -12,7 +12,7 @@
 		<tycho-version>1.6.0</tycho-version>
 		<root-dir>${basedir}/..</root-dir>
 		<JENKINS_URL>https://ci.eclipse.org/xtext</JENKINS_URL>
-		<upstreamBranch>master</upstreamBranch>
+		<upstreamBranch>cd_lsp4j090M3</upstreamBranch>
 	</properties>
 
 	<repositories>
@@ -23,6 +23,10 @@
 		<repository>
 			<id>lsp4j</id>
 			<url>${JENKINS_URL}/job/lsp4j/lastStableBuild/artifact/build/maven-repository</url>
+		</repository>
+		<repository>
+			<id>LSP4J-0.9.0M3</id>
+			<url>https://download.eclipse.org/lsp4j/updates/milestones/S202002202238/maven-repository/</url>
 		</repository>
 		<repository>
 			<id>lib</id>
