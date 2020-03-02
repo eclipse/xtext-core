@@ -1,20 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>org.eclipse.xtext</groupId>
 	<artifactId>xtext-core.releng</artifactId>
 	<version>2.21.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-
 	<properties>
-		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>	
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
 		<tycho-version>1.6.0</tycho-version>
 		<root-dir>${basedir}/..</root-dir>
 		<JENKINS_URL>https://ci.eclipse.org/xtext</JENKINS_URL>
-		<upstreamBranch>master</upstreamBranch>
+		<upstreamBranch>release_2.21.0</upstreamBranch>
 	</properties>
-
 	<repositories>
 		<repository>
 			<id>local-gradle-result</id>
@@ -29,136 +25,133 @@
 			<url>${JENKINS_URL}/job/xtext-lib/job/${upstreamBranch}/lastStableBuild/artifact/build/maven-repository</url>
 		</repository>
 	</repositories>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 			<classifier>sources</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.ide</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.ide</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 			<classifier>sources</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.ide.tests</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.ide.tests</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 			<classifier>sources</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.testing</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.testing</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 			<classifier>sources</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.testlanguages</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.testlanguages</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 			<classifier>sources</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.testlanguages.ide</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.testlanguages.ide</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 			<classifier>sources</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.tests</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.tests</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 			<classifier>sources</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.util</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.util</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 			<classifier>sources</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.xtext.generator</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.xtext.generator</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 			<classifier>sources</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.xtext.ide</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.xtext.ide</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 			<classifier>sources</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.xtext.wizard</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.xtext.wizard</artifactId>
-			<version>2.21.0-SNAPSHOT</version>
+			<version>2.21.0</version>
 			<classifier>sources</classifier>
 		</dependency>
 	</dependencies>
-
 	<modules>
 		<module>releng-target</module>
 		<module>p2</module>
 	</modules>
-
 	<build>
 		<defaultGoal>install</defaultGoal>
 		<plugins>
