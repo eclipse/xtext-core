@@ -122,7 +122,7 @@ public class PortableURIsTest extends AbstractXtextTests {
       this.checkFragmentBothDirections(EcorePackage.eINSTANCE.getEAnnotation_EModelElement(), EcorePackage.eINSTANCE.getEAttribute_EAttributeType());
       Assert.fail();
     } catch (final Throwable _t) {
-      if (_t instanceof IllegalStateException) {
+      if (_t instanceof IllegalArgumentException) {
       } else {
         throw Exceptions.sneakyThrow(_t);
       }

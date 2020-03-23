@@ -84,7 +84,7 @@ class PortableURIsTest extends AbstractXtextTests {
 		try {
 			checkFragmentBothDirections(EcorePackage.eINSTANCE.EAnnotation_EModelElement, EcorePackage.eINSTANCE.EAttribute_EAttributeType)
 			Assert.fail();
-		} catch (IllegalStateException e) {
+		} catch (IllegalArgumentException e) {
 			// expected
 		}
 	}

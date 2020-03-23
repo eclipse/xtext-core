@@ -277,8 +277,9 @@ public class PortableURIs {
 	 * @return a fragment path from the given container to the child, or <code>null</null> is fromContainer == toChild
 	 * 
 	 * @see #getEObject(EObject,String)
+	 * @throws IllegalArgumentException if the child is not a child of the given container.
 	 */
-	public String getFragment(EObject fromContainer, EObject toChild) {
+	public String getFragment(EObject fromContainer, EObject toChild) throws IllegalArgumentException {
 		return Strings.emptyToNull(EcoreUtil.getRelativeURIFragmentPath(fromContainer, toChild));
 	}
 
