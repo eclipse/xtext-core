@@ -19,6 +19,7 @@ import org.eclipse.xtext.linking.lazy.LazyLinkingResource;
 import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.util.internal.Stopwatches;
 
+import com.google.common.base.Preconditions;
 import com.google.inject.Inject;
 
 /**
@@ -45,9 +46,7 @@ public class StorageAwareResource extends LazyLinkingResource {
 	public void load(Map<?, ?> options) throws IOException {
 		if (!isLoaded && !isLoading && resourceStorageFacade != null
 				&& resourceStorageFacade.shouldLoadFromStorage(this)) {
-			if (StorageAwareResource.LOG.isDebugEnabled()) {
-				LOG.debug("Loading " + getURI() + " from storage.");
-			}
+			LOG.debug("Loading " + getURI() + " from storage.");
 			try {
 				ResourceStorageLoadable in = resourceStorageFacade.getOrCreateResourceStorageLoadable(this);
 				loadFromStorage(in);
@@ -66,9 +65,8 @@ public class StorageAwareResource extends LazyLinkingResource {
 	}
 
 	public void loadFromStorage(ResourceStorageLoadable storageInputStream) throws IOException {
-		if (storageInputStream == null) {
-			throw new NullPointerException("storageInputStream");
-		}
+		// check the argument for null before the internal state is modified
+		Preconditions.checkNotNull(storageInputStream, "storageInputStream");
 		Stopwatches.StoppedTask task = Stopwatches.forTask("Loading from storage");
 		task.start();
 		isLoading = true;

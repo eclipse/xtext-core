@@ -155,10 +155,10 @@ public class PortableURIs {
 	 * @return the EObject for the given portableURIFragment
 	 */
 	public EObject resolve(StorageAwareResource resource, String portableFragment) {
-		PortableURIs.PortableFragmentDescription desc = this.fromFragmentString(portableFragment);
+		PortableURIs.PortableFragmentDescription desc = fromFragmentString(portableFragment);
 		EReference mock = EcoreFactory.eINSTANCE.createEReference();
 		mock.setEType(desc.descriptionEClass);
-		IScope scope = this.globalScopeProvider.getScope(resource, mock, Predicates.<IEObjectDescription>alwaysTrue());
+		IScope scope = globalScopeProvider.getScope(resource, mock, Predicates.<IEObjectDescription>alwaysTrue());
 		Optional<IEObjectDescription> description = Streams.stream( //
 				scope.getElements(desc.descriptionQualifiedName)).findFirst();
 		return description.map(d -> {
@@ -223,7 +223,6 @@ public class PortableURIs {
 		return Streams.stream(desc.getExportedObjects()).filter(description -> {
 			EObject possibleContainer = EcoreUtil.resolve(description.getEObjectOrProxy(), obj.eResource());
 			return EcoreUtil.isAncestor(obj, possibleContainer);
-
 		}).map(containerDesc -> {
 			PortableFragmentDescription fragmentDescription = createPortableFragmentDescription(containerDesc, obj);
 			return toFragmentString(fragmentDescription);
