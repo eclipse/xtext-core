@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015, 2018 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2015, 2020 itemis AG (http://www.itemis.eu) and others.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0.
@@ -38,6 +38,12 @@ import org.eclipse.xtext.xtext.generator.model.TypeReference;
  */
 @SuppressWarnings("all")
 public class JUnitFragment extends AbstractStubGeneratingFragment {
+  public static class Disabled extends JUnitFragment {
+    @Override
+    public void generate() {
+    }
+  }
+  
   @Inject
   @Extension
   private XtextGeneratorNaming _xtextGeneratorNaming;
