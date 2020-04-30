@@ -8,10 +8,15 @@
  *******************************************************************************/
 package org.eclipse.xtext.parser.antlr;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.nodemodel.INode;
+import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
+import org.eclipse.xtext.parser.antlr.gh1462Test.Gh1462TestPackage;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Root;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule1;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule10;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule11;
+import org.eclipse.xtext.parser.antlr.gh1462Test.Rule12;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule2;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule3;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule4;
@@ -119,8 +124,38 @@ public class GH1462Test extends AbstractXtextTests{
 		Root root = (Root) getModelAndExpect("#11 123 s", 1);
 		Rule11 rule11 = (Rule11) root.getElement();
 		assertEquals(123, rule11.getLeft());
-		// TODO (sza, cdi): To be discussed
+		// TODO (sza, cdi): This should be false instead, or an invalid grammar
 		assertTrue(rule11.isRight());
 	}
+	
+	@Test
+	public void test12a() throws Exception {
+		Root root = (Root) getModelAndExpect("#12 123 s", 1);
+		Rule12 rule12 = (Rule12) root.getElement();
+		assertEquals(123, rule12.getLeft());
+		// TODO (sza, cdi): This should be an invalid grammar instead
+		assertTrue(rule12.isRight());
+		INode featureNode = NodeModelUtils.findNodesForFeature(rule12, Gh1462TestPackage.Literals.RULE12__RIGHT).get(0);
+		assertEquals("", featureNode.getText());
+		assertTrue(featureNode.hasDirectSemanticElement());
+		EObject element = featureNode.getSemanticElement();
+		assertNull(element.eResource());
+	}
+	
+	@Test
+	public void test12b() throws Exception {
+		disableSerializerTest();
+		Root root = (Root) getModel("#12 1 2 s");
+		Rule12 rule12 = (Rule12) root.getElement();
+		assertEquals(1, rule12.getLeft());
+		// TODO (sza, cdi): This should be an invalid grammar instead
+		assertTrue(rule12.isRight());
+		INode featureNode = NodeModelUtils.findNodesForFeature(rule12, Gh1462TestPackage.Literals.RULE12__RIGHT).get(0);
+		assertEquals(" 2", featureNode.getText());
+		assertTrue(featureNode.hasDirectSemanticElement());
+		EObject element = featureNode.getSemanticElement();
+		assertNull(element.eResource());
+	}
+	
 	
 }

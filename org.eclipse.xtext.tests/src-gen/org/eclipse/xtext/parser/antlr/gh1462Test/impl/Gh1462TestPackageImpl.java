@@ -17,6 +17,7 @@ import org.eclipse.xtext.parser.antlr.gh1462Test.Root;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule1;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule10;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule11;
+import org.eclipse.xtext.parser.antlr.gh1462Test.Rule12;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule2;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule3;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule4;
@@ -118,6 +119,13 @@ public class Gh1462TestPackageImpl extends EPackageImpl implements Gh1462TestPac
    * @generated
    */
   private EClass rule11EClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rule12EClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -693,6 +701,50 @@ public class Gh1462TestPackageImpl extends EPackageImpl implements Gh1462TestPac
    * @generated
    */
   @Override
+  public EClass getRule12()
+  {
+    return rule12EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRule12_Left()
+  {
+    return (EAttribute)rule12EClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRule12_Right()
+  {
+    return (EAttribute)rule12EClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRule12_Unit()
+  {
+    return (EAttribute)rule12EClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getWrapper()
   {
     return wrapperEClass;
@@ -797,6 +849,11 @@ public class Gh1462TestPackageImpl extends EPackageImpl implements Gh1462TestPac
     createEAttribute(rule11EClass, RULE11__RIGHT);
     createEAttribute(rule11EClass, RULE11__UNIT);
 
+    rule12EClass = createEClass(RULE12);
+    createEAttribute(rule12EClass, RULE12__LEFT);
+    createEAttribute(rule12EClass, RULE12__RIGHT);
+    createEAttribute(rule12EClass, RULE12__UNIT);
+
     wrapperEClass = createEClass(WRAPPER);
     createEAttribute(wrapperEClass, WRAPPER__VALUE);
   }
@@ -891,6 +948,11 @@ public class Gh1462TestPackageImpl extends EPackageImpl implements Gh1462TestPac
     initEAttribute(getRule11_Left(), theEcorePackage.getEInt(), "left", null, 0, 1, Rule11.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRule11_Right(), theEcorePackage.getEBoolean(), "right", null, 0, 1, Rule11.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRule11_Unit(), theEcorePackage.getEString(), "unit", null, 0, 1, Rule11.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rule12EClass, Rule12.class, "Rule12", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRule12_Left(), theEcorePackage.getEInt(), "left", null, 0, 1, Rule12.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRule12_Right(), theEcorePackage.getEBoolean(), "right", null, 0, 1, Rule12.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRule12_Unit(), theEcorePackage.getEString(), "unit", null, 0, 1, Rule12.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(wrapperEClass, Wrapper.class, "Wrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getWrapper_Value(), theEcorePackage.getEInt(), "value", null, 0, 1, Wrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

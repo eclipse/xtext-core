@@ -361,6 +361,32 @@ ruleRoot returns [EObject current=null]
 				)
 			)
 		)
+		    |
+		(
+			otherlv_22='#12'
+			{
+				newLeafNode(otherlv_22, grammarAccess.getRootAccess().getNumberSignDigitOneDigitTwoKeyword_11_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getRootAccess().getElementRule12ParserRuleCall_11_1_0());
+					}
+					lv_element_23_0=ruleRule12
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getRootRule());
+						}
+						set(
+							$current,
+							"element",
+							lv_element_23_0,
+							"org.eclipse.xtext.parser.antlr.GH1462TestLanguage.Rule12");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
 	)
 ;
 
@@ -813,7 +839,7 @@ ruleRule7 returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"right",
-						true,
+						lv_right_1_0 != null,
 						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
@@ -879,7 +905,7 @@ ruleRule8 returns [EObject current=null]
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getRule8Rule());
 					}
-					setWithLastConsumed($current, "right", true, "#1");
+					setWithLastConsumed($current, "right", lv_right_1_0 != null, "#1");
 				}
 			)
 		)
@@ -1017,7 +1043,7 @@ ruleRule10 returns [EObject current=null]
 					set(
 						$current,
 						"right",
-						true,
+						lv_right_1_0 != null,
 						"org.eclipse.xtext.parser.antlr.GH1462TestLanguage.MaybeEmpty");
 					afterParserOrEnumRuleCall();
 				}
@@ -1087,7 +1113,7 @@ ruleRule11 returns [EObject current=null]
 					set(
 						$current,
 						"right",
-						true,
+						lv_right_1_0 != null,
 						"org.eclipse.xtext.parser.antlr.GH1462TestLanguage.Integer");
 					afterParserOrEnumRuleCall();
 				}
@@ -1102,6 +1128,76 @@ ruleRule11 returns [EObject current=null]
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getRule11Rule());
+					}
+					setWithLastConsumed($current, "unit", lv_unit_2_0, "s");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleRule12
+entryRuleRule12 returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRule12Rule()); }
+	iv_ruleRule12=ruleRule12
+	{ $current=$iv_ruleRule12.current; }
+	EOF;
+
+// Rule Rule12
+ruleRule12 returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_left_0_0=RULE_INT
+				{
+					newLeafNode(lv_left_0_0, grammarAccess.getRule12Access().getLeftINTTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRule12Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"left",
+						lv_left_0_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getRule12Access().getRightWrapperParserRuleCall_1_0());
+				}
+				lv_right_1_0=ruleWrapper
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getRule12Rule());
+					}
+					set(
+						$current,
+						"right",
+						lv_right_1_0 != null,
+						"org.eclipse.xtext.parser.antlr.GH1462TestLanguage.Wrapper");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				lv_unit_2_0='s'
+				{
+					newLeafNode(lv_unit_2_0, grammarAccess.getRule12Access().getUnitSKeyword_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRule12Rule());
 					}
 					setWithLastConsumed($current, "unit", lv_unit_2_0, "s");
 				}

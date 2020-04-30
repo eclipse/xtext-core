@@ -157,6 +157,13 @@ public class Gh1462TestSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case Gh1462TestPackage.RULE12:
+      {
+        Rule12 rule12 = (Rule12)theEObject;
+        T result = caseRule12(rule12);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case Gh1462TestPackage.WRAPPER:
       {
         Wrapper wrapper = (Wrapper)theEObject;
@@ -356,6 +363,22 @@ public class Gh1462TestSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRule11(Rule11 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rule12</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rule12</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRule12(Rule12 object)
   {
     return null;
   }

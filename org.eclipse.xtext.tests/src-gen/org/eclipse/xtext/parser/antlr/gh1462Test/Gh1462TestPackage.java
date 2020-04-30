@@ -583,6 +583,52 @@ public interface Gh1462TestPackage extends EPackage
   int RULE11_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link org.eclipse.xtext.parser.antlr.gh1462Test.impl.Rule12Impl <em>Rule12</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.xtext.parser.antlr.gh1462Test.impl.Rule12Impl
+   * @see org.eclipse.xtext.parser.antlr.gh1462Test.impl.Gh1462TestPackageImpl#getRule12()
+   * @generated
+   */
+  int RULE12 = 12;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RULE12__LEFT = 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RULE12__RIGHT = 1;
+
+  /**
+   * The feature id for the '<em><b>Unit</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RULE12__UNIT = 2;
+
+  /**
+   * The number of structural features of the '<em>Rule12</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RULE12_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link org.eclipse.xtext.parser.antlr.gh1462Test.impl.WrapperImpl <em>Wrapper</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -590,7 +636,7 @@ public interface Gh1462TestPackage extends EPackage
    * @see org.eclipse.xtext.parser.antlr.gh1462Test.impl.Gh1462TestPackageImpl#getWrapper()
    * @generated
    */
-  int WRAPPER = 12;
+  int WRAPPER = 13;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1095,6 +1141,49 @@ public interface Gh1462TestPackage extends EPackage
   EAttribute getRule11_Unit();
 
   /**
+   * Returns the meta object for class '{@link org.eclipse.xtext.parser.antlr.gh1462Test.Rule12 <em>Rule12</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Rule12</em>'.
+   * @see org.eclipse.xtext.parser.antlr.gh1462Test.Rule12
+   * @generated
+   */
+  EClass getRule12();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.parser.antlr.gh1462Test.Rule12#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Left</em>'.
+   * @see org.eclipse.xtext.parser.antlr.gh1462Test.Rule12#getLeft()
+   * @see #getRule12()
+   * @generated
+   */
+  EAttribute getRule12_Left();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.parser.antlr.gh1462Test.Rule12#isRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Right</em>'.
+   * @see org.eclipse.xtext.parser.antlr.gh1462Test.Rule12#isRight()
+   * @see #getRule12()
+   * @generated
+   */
+  EAttribute getRule12_Right();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.parser.antlr.gh1462Test.Rule12#getUnit <em>Unit</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Unit</em>'.
+   * @see org.eclipse.xtext.parser.antlr.gh1462Test.Rule12#getUnit()
+   * @see #getRule12()
+   * @generated
+   */
+  EAttribute getRule12_Unit();
+
+  /**
    * Returns the meta object for class '{@link org.eclipse.xtext.parser.antlr.gh1462Test.Wrapper <em>Wrapper</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1521,6 +1610,40 @@ public interface Gh1462TestPackage extends EPackage
      * @generated
      */
     EAttribute RULE11__UNIT = eINSTANCE.getRule11_Unit();
+
+    /**
+     * The meta object literal for the '{@link org.eclipse.xtext.parser.antlr.gh1462Test.impl.Rule12Impl <em>Rule12</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.parser.antlr.gh1462Test.impl.Rule12Impl
+     * @see org.eclipse.xtext.parser.antlr.gh1462Test.impl.Gh1462TestPackageImpl#getRule12()
+     * @generated
+     */
+    EClass RULE12 = eINSTANCE.getRule12();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RULE12__LEFT = eINSTANCE.getRule12_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RULE12__RIGHT = eINSTANCE.getRule12_Right();
+
+    /**
+     * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RULE12__UNIT = eINSTANCE.getRule12_Unit();
 
     /**
      * The meta object literal for the '{@link org.eclipse.xtext.parser.antlr.gh1462Test.impl.WrapperImpl <em>Wrapper</em>}' class.

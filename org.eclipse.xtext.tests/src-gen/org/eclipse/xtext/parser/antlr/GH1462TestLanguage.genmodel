@@ -63,6 +63,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GH1462TestLanguage.ecore#//Rule11/right"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GH1462TestLanguage.ecore#//Rule11/unit"/>
     </genClasses>
+    <genClasses ecoreClass="GH1462TestLanguage.ecore#//Rule12">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GH1462TestLanguage.ecore#//Rule12/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GH1462TestLanguage.ecore#//Rule12/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GH1462TestLanguage.ecore#//Rule12/unit"/>
+    </genClasses>
     <genClasses ecoreClass="GH1462TestLanguage.ecore#//Wrapper">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GH1462TestLanguage.ecore#//Wrapper/value"/>
     </genClasses>

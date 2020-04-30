@@ -136,6 +136,11 @@ public class Gh1462TestAdapterFactory extends AdapterFactoryImpl
         return createRule11Adapter();
       }
       @Override
+      public Adapter caseRule12(Rule12 object)
+      {
+        return createRule12Adapter();
+      }
+      @Override
       public Adapter caseWrapper(Wrapper object)
       {
         return createWrapperAdapter();
@@ -338,6 +343,21 @@ public class Gh1462TestAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRule11Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.parser.antlr.gh1462Test.Rule12 <em>Rule12</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.parser.antlr.gh1462Test.Rule12
+   * @generated
+   */
+  public Adapter createRule12Adapter()
   {
     return null;
   }

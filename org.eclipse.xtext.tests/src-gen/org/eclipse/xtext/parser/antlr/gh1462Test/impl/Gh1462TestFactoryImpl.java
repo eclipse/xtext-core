@@ -77,6 +77,7 @@ public class Gh1462TestFactoryImpl extends EFactoryImpl implements Gh1462TestFac
       case Gh1462TestPackage.RULE9: return createRule9();
       case Gh1462TestPackage.RULE10: return createRule10();
       case Gh1462TestPackage.RULE11: return createRule11();
+      case Gh1462TestPackage.RULE12: return createRule12();
       case Gh1462TestPackage.WRAPPER: return createWrapper();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -225,6 +226,18 @@ public class Gh1462TestFactoryImpl extends EFactoryImpl implements Gh1462TestFac
   {
     Rule11Impl rule11 = new Rule11Impl();
     return rule11;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Rule12 createRule12()
+  {
+    Rule12Impl rule12 = new Rule12Impl();
+    return rule12;
   }
 
   /**

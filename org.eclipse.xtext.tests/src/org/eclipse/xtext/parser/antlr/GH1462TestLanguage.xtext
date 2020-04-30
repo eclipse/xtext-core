@@ -23,6 +23,7 @@ Root:
     | '#9' element=Rule9
     | '#10' element=Rule10
     | '#11' element=Rule11
+    | '#12' element=Rule12
 ;
 
 Rule1:
@@ -67,6 +68,10 @@ Rule10:
 
 Rule11:
 	left=INT right?=Integer unit='s'
+;
+
+Rule12:
+	left=INT right?=Wrapper unit='s'
 ;
 
 Integer returns EInt:

@@ -69,6 +69,10 @@ public class GH1462TestLanguageGrammarAccess extends AbstractGrammarElementFinde
 		private final Keyword cNumberSignDigitOneDigitOneKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
 		private final Assignment cElementAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
 		private final RuleCall cElementRule11ParserRuleCall_10_1_0 = (RuleCall)cElementAssignment_10_1.eContents().get(0);
+		private final Group cGroup_11 = (Group)cAlternatives.eContents().get(11);
+		private final Keyword cNumberSignDigitOneDigitTwoKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Assignment cElementAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
+		private final RuleCall cElementRule12ParserRuleCall_11_1_0 = (RuleCall)cElementAssignment_11_1.eContents().get(0);
 		
 		//Root:
 		//	'#1' element=Rule1
@@ -81,12 +85,13 @@ public class GH1462TestLanguageGrammarAccess extends AbstractGrammarElementFinde
 		//	| '#8' element=Rule8
 		//	| '#9' element=Rule9
 		//	| '#10' element=Rule10
-		//	| '#11' element=Rule11;
+		//	| '#11' element=Rule11
+		//	| '#12' element=Rule12;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'#1' element=Rule1 | '#2' element=Rule2 | '#3' element=Rule3 | '#4' element=Rule4 | '#5' element=Rule5 | '#6'
 		//element=Rule6 | '#7' element=Rule7 | '#8' element=Rule8 | '#9' element=Rule9 | '#10' element=Rule10 | '#11'
-		//element=Rule11
+		//element=Rule11 | '#12' element=Rule12
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//'#1' element=Rule1
@@ -220,6 +225,18 @@ public class GH1462TestLanguageGrammarAccess extends AbstractGrammarElementFinde
 		
 		//Rule11
 		public RuleCall getElementRule11ParserRuleCall_10_1_0() { return cElementRule11ParserRuleCall_10_1_0; }
+		
+		//'#12' element=Rule12
+		public Group getGroup_11() { return cGroup_11; }
+		
+		//'#12'
+		public Keyword getNumberSignDigitOneDigitTwoKeyword_11_0() { return cNumberSignDigitOneDigitTwoKeyword_11_0; }
+		
+		//element=Rule12
+		public Assignment getElementAssignment_11_1() { return cElementAssignment_11_1; }
+		
+		//Rule12
+		public RuleCall getElementRule12ParserRuleCall_11_1_0() { return cElementRule12ParserRuleCall_11_1_0; }
 	}
 	public class Rule1Elements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.parser.antlr.GH1462TestLanguage.Rule1");
@@ -602,6 +619,41 @@ public class GH1462TestLanguageGrammarAccess extends AbstractGrammarElementFinde
 		//'s'
 		public Keyword getUnitSKeyword_2_0() { return cUnitSKeyword_2_0; }
 	}
+	public class Rule12Elements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.parser.antlr.GH1462TestLanguage.Rule12");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cLeftAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cLeftINTTerminalRuleCall_0_0 = (RuleCall)cLeftAssignment_0.eContents().get(0);
+		private final Assignment cRightAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cRightWrapperParserRuleCall_1_0 = (RuleCall)cRightAssignment_1.eContents().get(0);
+		private final Assignment cUnitAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cUnitSKeyword_2_0 = (Keyword)cUnitAssignment_2.eContents().get(0);
+		
+		//Rule12:
+		//	left=INT right?=Wrapper unit='s';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//left=INT right?=Wrapper unit='s'
+		public Group getGroup() { return cGroup; }
+		
+		//left=INT
+		public Assignment getLeftAssignment_0() { return cLeftAssignment_0; }
+		
+		//INT
+		public RuleCall getLeftINTTerminalRuleCall_0_0() { return cLeftINTTerminalRuleCall_0_0; }
+		
+		//right?=Wrapper
+		public Assignment getRightAssignment_1() { return cRightAssignment_1; }
+		
+		//Wrapper
+		public RuleCall getRightWrapperParserRuleCall_1_0() { return cRightWrapperParserRuleCall_1_0; }
+		
+		//unit='s'
+		public Assignment getUnitAssignment_2() { return cUnitAssignment_2; }
+		
+		//'s'
+		public Keyword getUnitSKeyword_2_0() { return cUnitSKeyword_2_0; }
+	}
 	public class IntegerElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.parser.antlr.GH1462TestLanguage.Integer");
 		private final RuleCall cINTTerminalRuleCall = (RuleCall)rule.eContents().get(1);
@@ -653,6 +705,7 @@ public class GH1462TestLanguageGrammarAccess extends AbstractGrammarElementFinde
 	private final Rule9Elements pRule9;
 	private final Rule10Elements pRule10;
 	private final Rule11Elements pRule11;
+	private final Rule12Elements pRule12;
 	private final IntegerElements pInteger;
 	private final MaybeEmptyElements pMaybeEmpty;
 	private final WrapperElements pWrapper;
@@ -678,6 +731,7 @@ public class GH1462TestLanguageGrammarAccess extends AbstractGrammarElementFinde
 		this.pRule9 = new Rule9Elements();
 		this.pRule10 = new Rule10Elements();
 		this.pRule11 = new Rule11Elements();
+		this.pRule12 = new Rule12Elements();
 		this.pInteger = new IntegerElements();
 		this.pMaybeEmpty = new MaybeEmptyElements();
 		this.pWrapper = new WrapperElements();
@@ -721,7 +775,8 @@ public class GH1462TestLanguageGrammarAccess extends AbstractGrammarElementFinde
 	//	| '#8' element=Rule8
 	//	| '#9' element=Rule9
 	//	| '#10' element=Rule10
-	//	| '#11' element=Rule11;
+	//	| '#11' element=Rule11
+	//	| '#12' element=Rule12;
 	public RootElements getRootAccess() {
 		return pRoot;
 	}
@@ -838,6 +893,16 @@ public class GH1462TestLanguageGrammarAccess extends AbstractGrammarElementFinde
 	
 	public ParserRule getRule11Rule() {
 		return getRule11Access().getRule();
+	}
+	
+	//Rule12:
+	//	left=INT right?=Wrapper unit='s';
+	public Rule12Elements getRule12Access() {
+		return pRule12;
+	}
+	
+	public ParserRule getRule12Rule() {
+		return getRule12Access().getRule();
 	}
 	
 	//Integer EInt:

@@ -132,6 +132,15 @@ public interface Gh1462TestFactory extends EFactory
   Rule11 createRule11();
 
   /**
+   * Returns a new object of class '<em>Rule12</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rule12</em>'.
+   * @generated
+   */
+  Rule12 createRule12();
+
+  /**
    * Returns a new object of class '<em>Wrapper</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

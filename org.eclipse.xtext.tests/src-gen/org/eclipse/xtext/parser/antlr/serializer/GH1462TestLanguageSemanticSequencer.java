@@ -15,6 +15,7 @@ import org.eclipse.xtext.parser.antlr.gh1462Test.Root;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule1;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule10;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule11;
+import org.eclipse.xtext.parser.antlr.gh1462Test.Rule12;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule2;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule3;
 import org.eclipse.xtext.parser.antlr.gh1462Test.Rule4;
@@ -55,6 +56,9 @@ public class GH1462TestLanguageSemanticSequencer extends AbstractDelegatingSeman
 				return; 
 			case Gh1462TestPackage.RULE11:
 				sequence_Rule11(context, (Rule11) semanticObject); 
+				return; 
+			case Gh1462TestPackage.RULE12:
+				sequence_Rule12(context, (Rule12) semanticObject); 
 				return; 
 			case Gh1462TestPackage.RULE2:
 				sequence_Rule2(context, (Rule2) semanticObject); 
@@ -104,7 +108,8 @@ public class GH1462TestLanguageSemanticSequencer extends AbstractDelegatingSeman
 	 *         element=Rule8 | 
 	 *         element=Rule9 | 
 	 *         element=Rule10 | 
-	 *         element=Rule11
+	 *         element=Rule11 | 
+	 *         element=Rule12
 	 *     )
 	 */
 	protected void sequence_Root(ISerializationContext context, Root semanticObject) {
@@ -156,6 +161,30 @@ public class GH1462TestLanguageSemanticSequencer extends AbstractDelegatingSeman
 		feeder.accept(grammarAccess.getRule11Access().getLeftINTTerminalRuleCall_0_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getRule11Access().getRightIntegerParserRuleCall_1_0(), semanticObject.isRight());
 		feeder.accept(grammarAccess.getRule11Access().getUnitSKeyword_2_0(), semanticObject.getUnit());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Rule12 returns Rule12
+	 *
+	 * Constraint:
+	 *     (left=INT right?=Wrapper unit='s')
+	 */
+	protected void sequence_Rule12(ISerializationContext context, Rule12 semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, Gh1462TestPackage.Literals.RULE12__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Gh1462TestPackage.Literals.RULE12__LEFT));
+			if (transientValues.isValueTransient(semanticObject, Gh1462TestPackage.Literals.RULE12__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Gh1462TestPackage.Literals.RULE12__RIGHT));
+			if (transientValues.isValueTransient(semanticObject, Gh1462TestPackage.Literals.RULE12__UNIT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Gh1462TestPackage.Literals.RULE12__UNIT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRule12Access().getLeftINTTerminalRuleCall_0_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getRule12Access().getRightWrapperParserRuleCall_1_0(), semanticObject.isRight());
+		feeder.accept(grammarAccess.getRule12Access().getUnitSKeyword_2_0(), semanticObject.getUnit());
 		feeder.finish();
 	}
 	
