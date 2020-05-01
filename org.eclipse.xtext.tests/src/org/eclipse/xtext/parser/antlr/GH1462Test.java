@@ -72,6 +72,8 @@ public class GH1462Test extends AbstractXtextTests{
 	
 	@Test
 	public void test05() throws Exception {
+		// This invokes the value converter of INTEGER even though there was nothing parsed.
+		// Not superb, but ok.
 		Root root = (Root) getModelAndExpect("#5 123 s", 1);
 		Rule5 rule5 = (Rule5) root.getElement();
 		assertEquals(123, rule5.getLeft());
