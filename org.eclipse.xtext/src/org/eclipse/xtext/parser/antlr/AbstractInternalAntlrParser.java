@@ -205,7 +205,7 @@ public abstract class AbstractInternalAntlrParser extends Parser {
 	
 	private ICompositeNode currentNode;
 
-	private INode lastConsumedNode;
+	private INode _lastConsumedNode;
 	
 	private boolean hadErrors;
 	
@@ -357,13 +357,19 @@ public abstract class AbstractInternalAntlrParser extends Parser {
 	
 	protected void setWithLastConsumed(EObject _this, String feature, Object value, String lexerRule) {
 		if (value != null) {
-			set(_this, feature, value, lexerRule, lastConsumedNode);
+			if (_lastConsumedNode != currentNode.getLastChild()) {
+				throw new AssertionError();
+			}
+			set(_this, feature, value, lexerRule, _lastConsumedNode);
 		}
 	}
 	
 	protected void setWithLastConsumed(EObject _this, String feature, boolean value, String lexerRule) {
 		if (value) {
-			set(_this, feature, value, lexerRule, lastConsumedNode);
+			if (_lastConsumedNode != currentNode.getLastChild()) {
+				throw new AssertionError();
+			}
+			set(_this, feature, value, lexerRule, _lastConsumedNode);
 		}
 	}
 
@@ -389,13 +395,19 @@ public abstract class AbstractInternalAntlrParser extends Parser {
 	
 	protected void addWithLastConsumed(EObject _this, String feature, Object value, String lexerRule) {
 		if (value != null) {
-			add(_this, feature, value, lexerRule, lastConsumedNode);
+			if (_lastConsumedNode != currentNode.getLastChild()) {
+				throw new AssertionError();
+			}
+			add(_this, feature, value, lexerRule, _lastConsumedNode);
 		}
 	}
 	
 	protected void addWithLastConsumed(EObject _this, String feature, boolean value, String lexerRule) {
 		if (value) {
-			add(_this, feature, value, lexerRule, lastConsumedNode);
+			if (_lastConsumedNode != currentNode.getLastChild()) {
+				throw new AssertionError();
+			}
+			add(_this, feature, value, lexerRule, _lastConsumedNode);
 		}
 	}
 	
@@ -667,8 +679,8 @@ public abstract class AbstractInternalAntlrParser extends Parser {
 	// currentNode = currentNode.getParent();
     protected void afterParserOrEnumRuleCall() {
 		ICompositeNode newCurrent = nodeBuilder.compressAndReturnParent(currentNode);
-		if(currentNode == lastConsumedNode){
-			lastConsumedNode = newCurrent;
+		if(currentNode == _lastConsumedNode){
+			_lastConsumedNode = newCurrent;
 		}
 		currentNode = newCurrent;
     }
@@ -734,7 +746,7 @@ public abstract class AbstractInternalAntlrParser extends Parser {
 	}
 	
 	protected void leaveRule() {
-    	lastConsumedNode = currentNode;
+    	_lastConsumedNode = currentNode;
 	}
     
 	// currentNode = createCompositeNode()
@@ -755,7 +767,7 @@ public abstract class AbstractInternalAntlrParser extends Parser {
 				createLeafNode(hidden, null);
 			}
 			lastConsumedIndex = tokenIndex;
-			lastConsumedNode = createLeafNode(token, grammarElement);
+			_lastConsumedNode = createLeafNode(token, grammarElement);
 		}
 	}
 
