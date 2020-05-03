@@ -205,8 +205,6 @@ public abstract class AbstractInternalAntlrParser extends Parser {
 	
 	private ICompositeNode currentNode;
 
-	private INode _lastConsumedNode;
-	
 	private boolean hadErrors;
 	
 	private IAstFactory semanticModelBuilder;
@@ -357,19 +355,13 @@ public abstract class AbstractInternalAntlrParser extends Parser {
 	
 	protected void setWithLastConsumed(EObject _this, String feature, Object value, String lexerRule) {
 		if (value != null) {
-			if (_lastConsumedNode != currentNode.getLastChild()) {
-				throw new AssertionError();
-			}
-			set(_this, feature, value, lexerRule, _lastConsumedNode);
+			set(_this, feature, value, lexerRule, currentNode.getLastChild());
 		}
 	}
 	
 	protected void setWithLastConsumed(EObject _this, String feature, boolean value, String lexerRule) {
 		if (value) {
-			if (_lastConsumedNode != currentNode.getLastChild()) {
-				throw new AssertionError();
-			}
-			set(_this, feature, value, lexerRule, _lastConsumedNode);
+			set(_this, feature, value, lexerRule, currentNode.getLastChild());
 		}
 	}
 
@@ -395,19 +387,13 @@ public abstract class AbstractInternalAntlrParser extends Parser {
 	
 	protected void addWithLastConsumed(EObject _this, String feature, Object value, String lexerRule) {
 		if (value != null) {
-			if (_lastConsumedNode != currentNode.getLastChild()) {
-				throw new AssertionError();
-			}
-			add(_this, feature, value, lexerRule, _lastConsumedNode);
+			add(_this, feature, value, lexerRule, currentNode.getLastChild());
 		}
 	}
 	
 	protected void addWithLastConsumed(EObject _this, String feature, boolean value, String lexerRule) {
 		if (value) {
-			if (_lastConsumedNode != currentNode.getLastChild()) {
-				throw new AssertionError();
-			}
-			add(_this, feature, value, lexerRule, _lastConsumedNode);
+			add(_this, feature, value, lexerRule, currentNode.getLastChild());
 		}
 	}
 	
@@ -677,78 +663,81 @@ public abstract class AbstractInternalAntlrParser extends Parser {
 	// externalized usage patterns from generated sources
 	
 	// currentNode = currentNode.getParent();
-    protected void afterParserOrEnumRuleCall() {
-		ICompositeNode newCurrent = nodeBuilder.compressAndReturnParent(currentNode);
-		if(currentNode == _lastConsumedNode){
-			_lastConsumedNode = newCurrent;
-		}
-		currentNode = newCurrent;
-    }
+	protected void afterParserOrEnumRuleCall() {
+		currentNode = nodeBuilder.compressAndReturnParent(currentNode);
+	}
 	
-    // if (current==null) {
-    //========
-	//    current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
-	//    associateNodeWithAstElement(currentNode.getParent(), current);
-    //========
+	// if (current==null) {
+	//========
+	// current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
+	// associateNodeWithAstElement(currentNode.getParent(), current);
+	//========
 	//}
-    protected EObject createModelElementForParent(AbstractRule rule) {
-    	return createModelElement(rule.getType().getClassifier(), currentNode.getParent());
-    }
+	protected EObject createModelElementForParent(AbstractRule rule) {
+		return createModelElement(rule.getType().getClassifier(), currentNode.getParent());
+	}
 
-    protected EObject createModelElement(AbstractRule rule) {
-    	return createModelElement(rule.getType().getClassifier(), currentNode);
-    }
-    
-    protected EObject createModelElementForParent(EClassifier classifier) {
-    	return createModelElement(classifier, currentNode.getParent());
-    }
+	protected EObject createModelElement(AbstractRule rule) {
+		return createModelElement(rule.getType().getClassifier(), currentNode);
+	}
+	
+	protected EObject createModelElementForParent(EClassifier classifier) {
+		return createModelElement(classifier, currentNode.getParent());
+	}
 
-    protected EObject createModelElement(EClassifier classifier) {
-    	return createModelElement(classifier, currentNode);
-    }
-    
-    protected EObject createModelElement(EClassifier classifier, ICompositeNode compositeNode) {
-    	EObject result = semanticModelBuilder.create(classifier);
-    	associateNodeWithAstElement(compositeNode, result);
-    	return result;
-    }
-    
-    // Assigned action code
-    protected EObject forceCreateModelElementAndSet(Action action, EObject value) {
-    	EObject result = semanticModelBuilder.create(action.getType().getClassifier());
-    	semanticModelBuilder.set(result, action.getFeature(), value, null /* ParserRule */, currentNode);
-    	insertCompositeNode(action);
-    	associateNodeWithAstElement(currentNode, result);
-    	return result;
-    }
-    
-    protected EObject forceCreateModelElementAndAdd(Action action, EObject value) {
-    	EObject result = semanticModelBuilder.create(action.getType().getClassifier());
-    	semanticModelBuilder.add(result, action.getFeature(), value, null /* ParserRule */, currentNode);
-    	insertCompositeNode(action);
-    	associateNodeWithAstElement(currentNode, result);
-    	return result;
-    }
-    
-    protected EObject forceCreateModelElement(Action action, EObject value) {
-    	EObject result = semanticModelBuilder.create(action.getType().getClassifier());
-    	insertCompositeNode(action);
-    	associateNodeWithAstElement(currentNode, result);
-    	return result;
-    }
+	protected EObject createModelElement(EClassifier classifier) {
+		return createModelElement(classifier, currentNode);
+	}
+	
+	protected EObject createModelElement(EClassifier classifier, ICompositeNode compositeNode) {
+		EObject result = semanticModelBuilder.create(classifier);
+		associateNodeWithAstElement(compositeNode, result);
+		return result;
+	}
+	
+	// Assigned action code
+	protected EObject forceCreateModelElementAndSet(Action action, EObject value) {
+		EObject result = semanticModelBuilder.create(action.getType().getClassifier());
+		semanticModelBuilder.set(result, action.getFeature(), value, null /* ParserRule */, currentNode);
+		insertCompositeNode(action);
+		associateNodeWithAstElement(currentNode, result);
+		return result;
+	}
+	
+	protected EObject forceCreateModelElementAndAdd(Action action, EObject value) {
+		EObject result = semanticModelBuilder.create(action.getType().getClassifier());
+		semanticModelBuilder.add(result, action.getFeature(), value, null /* ParserRule */, currentNode);
+		insertCompositeNode(action);
+		associateNodeWithAstElement(currentNode, result);
+		return result;
+	}
+	
+	protected EObject forceCreateModelElement(Action action, EObject value) {
+		EObject result = semanticModelBuilder.create(action.getType().getClassifier());
+		insertCompositeNode(action);
+		associateNodeWithAstElement(currentNode, result);
+		return result;
+	}
 
 	protected void insertCompositeNode(Action action) {
-    	ICompositeNode newCurrentNode = nodeBuilder.newCompositeNodeAsParentOf(action, currentNode.getLookAhead(), currentNode);
-    	currentNode = newCurrentNode;
+		ICompositeNode newCurrentNode = nodeBuilder.newCompositeNodeAsParentOf(action, currentNode.getLookAhead(), currentNode);
+		currentNode = newCurrentNode;
 	}
 	
+	/**
+	 * @deprecated this is no longer called by default. If desired, enabled it via an option in the workflow and regenerate your parser.
+	 */
+	@Deprecated
 	protected void enterRule() {
 	}
-	
+
+	/**
+	 * @deprecated this is no longer called by default. If desired, enabled it via an option in the workflow and regenerate your parser.
+	 */
+	@Deprecated
 	protected void leaveRule() {
-    	_lastConsumedNode = currentNode;
 	}
-    
+	
 	// currentNode = createCompositeNode()
 	protected void newCompositeNode(EObject grammarElement) {
 		XtextTokenStream input = (XtextTokenStream) this.input;
@@ -767,7 +756,7 @@ public abstract class AbstractInternalAntlrParser extends Parser {
 				createLeafNode(hidden, null);
 			}
 			lastConsumedIndex = tokenIndex;
-			_lastConsumedNode = createLeafNode(token, grammarElement);
+			createLeafNode(token, grammarElement);
 		}
 	}
 

@@ -326,28 +326,52 @@ public class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenera
     CharSequence _compileReturns = this.compileReturns(it, options);
     _builder.append(_compileReturns);
     _builder.newLineIfNotEmpty();
-    _builder.append("@init {");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("enterRule();");
-    _builder.newLine();
-    _builder.append("\t");
-    CharSequence _compileInitHiddenTokens = this.compileInitHiddenTokens(it, options);
-    _builder.append(_compileInitHiddenTokens, "\t");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    CharSequence _compileInitUnorderedGroups = this.compileInitUnorderedGroups(it, options);
-    _builder.append(_compileInitUnorderedGroups, "\t");
-    _builder.newLineIfNotEmpty();
-    _builder.append("}");
-    _builder.newLine();
-    _builder.append("@after {");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("leaveRule();");
-    _builder.newLine();
-    _builder.append("}");
+    {
+      boolean _requiresInit = this.requiresInit(it, options);
+      if (_requiresInit) {
+        _builder.append("@init {");
+        _builder.newLine();
+        {
+          boolean _isGenerateEnterAndLeaveRule = options.isGenerateEnterAndLeaveRule();
+          if (_isGenerateEnterAndLeaveRule) {
+            _builder.append("\t");
+            _builder.append("enterRule();");
+            _builder.newLine();
+          }
+        }
+        _builder.append("\t");
+        CharSequence _compileInitHiddenTokens = this.compileInitHiddenTokens(it, options);
+        _builder.append(_compileInitHiddenTokens, "\t");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        CharSequence _compileInitUnorderedGroups = this.compileInitUnorderedGroups(it, options);
+        _builder.append(_compileInitUnorderedGroups, "\t");
+        _builder.newLineIfNotEmpty();
+        _builder.append("}");
+        _builder.newLine();
+      }
+    }
+    {
+      boolean _isGenerateEnterAndLeaveRule_1 = options.isGenerateEnterAndLeaveRule();
+      if (_isGenerateEnterAndLeaveRule_1) {
+        _builder.append("@after {");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("leaveRule();");
+        _builder.newLine();
+        _builder.append("}");
+        _builder.newLine();
+      }
+    }
     return _builder.toString();
+  }
+  
+  protected boolean _requiresInit(final AbstractRule it, final AntlrOptions options) {
+    return options.isGenerateEnterAndLeaveRule();
+  }
+  
+  protected boolean _requiresInit(final ParserRule it, final AntlrOptions options) {
+    return ((options.isGenerateEnterAndLeaveRule() || it.isDefinesHiddenTokens()) || this._grammarAccessExtensions.definesUnorderedGroups(it, options));
   }
   
   protected CharSequence compileReturns(final AbstractRule it, final AntlrOptions options) {
@@ -1236,6 +1260,17 @@ public class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenera
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
         Arrays.<Object>asList(it, grammar, options).toString());
+    }
+  }
+  
+  protected boolean requiresInit(final AbstractRule it, final AntlrOptions options) {
+    if (it instanceof ParserRule) {
+      return _requiresInit((ParserRule)it, options);
+    } else if (it != null) {
+      return _requiresInit(it, options);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(it, options).toString());
     }
   }
 }

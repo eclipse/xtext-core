@@ -8,6 +8,7 @@
  */
 package org.eclipse.xtext.xtext.generator.parser.antlr;
 
+import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.xtext.generator.parser.antlr.splitting.AntlrParserSplitter;
 import org.eclipse.xtext.xtext.generator.parser.antlr.splitting.PartialClassExtractor;
 import org.eclipse.xtext.xtext.generator.parser.antlr.splitting.internal.LexerSpecialStateTransitionSplitter;
@@ -36,6 +37,8 @@ public class AntlrOptions {
 	private boolean optimizeCodeQuality = true;
 
 	private boolean stripAllComments = false;
+	
+	private boolean generateEnterAndLeaveRule = false;
 
 	private String keptBitSetsPattern;
 
@@ -131,6 +134,17 @@ public class AntlrOptions {
 
 	public void setOptimizeCodeQuality(boolean optimizeCodeQuality) {
 		this.optimizeCodeQuality = optimizeCodeQuality;
+	}
+	
+	public boolean isGenerateEnterAndLeaveRule() {
+		return generateEnterAndLeaveRule;
+	}
+	
+	/**
+	 * Generate a invocation of {@link AbstractInternalAntlrParser#enterRule()} and {@link AbstractInternalAntlrParser#leaveRule()}.
+	 */
+	public void setGenerateEnterAndLeaveRule(boolean generateEnterAndLeaveRule) {
+		this.generateEnterAndLeaveRule = generateEnterAndLeaveRule;
 	}
 
 	public boolean isStripAllComments() {

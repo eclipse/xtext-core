@@ -132,16 +132,27 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 	
 	override protected compileInit(AbstractRule it, AntlrOptions options) '''
 		«IF it instanceof ParserRule»«getParameterList(!isPassCurrentIntoFragment, currentType)»«ENDIF» returns «compileReturns(options)»
-		@init {
-			enterRule();
-			«compileInitHiddenTokens(options)»
-			«compileInitUnorderedGroups(options)»
-		}
-		@after {
+		«IF requiresInit(options)»
+			@init {
+				«IF options.generateEnterAndLeaveRule»
+					enterRule();
+				«ENDIF»
+				«compileInitHiddenTokens(options)»
+				«compileInitUnorderedGroups(options)»
+			}
+		«ENDIF»
+		«IF options.generateEnterAndLeaveRule»@after {
 			leaveRule();
-		}'''
+		}
+		«ENDIF»'''
 	
+	protected def dispatch requiresInit(AbstractRule it, AntlrOptions options) {
+		options.isGenerateEnterAndLeaveRule
+	}
 	
+	protected def dispatch requiresInit(ParserRule it, AntlrOptions options) {
+		options.isGenerateEnterAndLeaveRule || definesHiddenTokens || definesUnorderedGroups(options)
+	}
 		
 	protected def compileReturns(AbstractRule it, AntlrOptions options) {
 		switch it {
