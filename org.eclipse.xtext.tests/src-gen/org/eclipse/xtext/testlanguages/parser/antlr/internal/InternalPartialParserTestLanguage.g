@@ -69,12 +69,7 @@ entryRuleSomeContainer returns [EObject current=null]:
 
 // Rule SomeContainer
 ruleSomeContainer returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='container'
 		{
@@ -159,12 +154,7 @@ entryRuleNested returns [EObject current=null]:
 
 // Rule Nested
 ruleNested returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='nested'
 		{
@@ -209,12 +199,7 @@ entryRuleContent returns [EObject current=null]:
 
 // Rule Content
 ruleContent returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getContentAccess().getChildrenParserRuleCall_0());
@@ -245,12 +230,7 @@ entryRuleChildren returns [EObject current=null]:
 
 // Rule Children
 ruleChildren returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='children'
 		{
@@ -320,12 +300,7 @@ entryRuleChild returns [EObject current=null]:
 
 // Rule Child
 ruleChild returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='->'
 		{
@@ -374,12 +349,7 @@ entryRuleAbstractChildren returns [EObject current=null]:
 
 // Rule AbstractChildren
 ruleAbstractChildren returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='abstract children'
 		{
@@ -424,12 +394,7 @@ entryRuleAbstractChild returns [EObject current=null]:
 
 // Rule AbstractChild
 ruleAbstractChild returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getAbstractChildAccess().getFirstConcreteParserRuleCall_0());
@@ -460,12 +425,7 @@ entryRuleFirstConcrete returns [EObject current=null]:
 
 // Rule FirstConcrete
 ruleFirstConcrete returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='->'
 		{
@@ -527,12 +487,7 @@ entryRuleSecondConcrete returns [EObject current=null]:
 
 // Rule SecondConcrete
 ruleSecondConcrete returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='->'
 		{
@@ -598,12 +553,7 @@ entryRuleNamed returns [EObject current=null]:
 
 // Rule Named
 ruleNamed returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID

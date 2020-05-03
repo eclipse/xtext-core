@@ -69,12 +69,7 @@ entryRuleSpielplatz returns [EObject current=null]:
 
 // Rule Spielplatz
 ruleSpielplatz returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='spielplatz'
 		{
@@ -217,12 +212,7 @@ entryRuleKind returns [EObject current=null]:
 
 // Rule Kind
 ruleKind returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='kind'
 		{
@@ -284,12 +274,7 @@ entryRuleErwachsener returns [EObject current=null]:
 
 // Rule Erwachsener
 ruleErwachsener returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='erwachsener'
 		{
@@ -351,12 +336,7 @@ entryRuleSpielzeug returns [EObject current=null]:
 
 // Rule Spielzeug
 ruleSpielzeug returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='spielzeug'
 		{
@@ -419,12 +399,7 @@ entryRuleFarbe returns [EObject current=null]:
 
 // Rule Farbe
 ruleFarbe returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -485,12 +460,7 @@ entryRuleFamilie returns [EObject current=null]:
 
 // Rule Familie
 ruleFamilie returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='familie'
 		{

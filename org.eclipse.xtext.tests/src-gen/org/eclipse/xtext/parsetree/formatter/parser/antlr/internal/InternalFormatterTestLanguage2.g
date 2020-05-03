@@ -69,12 +69,7 @@ entryRuleRoot returns [EObject current=null]:
 
 // Rule Root
 ruleRoot returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='test'
 		{

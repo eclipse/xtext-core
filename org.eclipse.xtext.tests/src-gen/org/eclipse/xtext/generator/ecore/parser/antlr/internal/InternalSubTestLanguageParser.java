@@ -123,25 +123,22 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
         EObject lv_another_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSubTestLanguage.g:77:2: ( (otherlv_0= '{' ( (lv_superMains_1_0= ruleSuperMain ) ) otherlv_2= '}' ( (lv_another_3_0= ruleAnotherSuperMain ) )? ) )
-            // InternalSubTestLanguage.g:78:2: (otherlv_0= '{' ( (lv_superMains_1_0= ruleSuperMain ) ) otherlv_2= '}' ( (lv_another_3_0= ruleAnotherSuperMain ) )? )
+            // InternalSubTestLanguage.g:72:1: ( (otherlv_0= '{' ( (lv_superMains_1_0= ruleSuperMain ) ) otherlv_2= '}' ( (lv_another_3_0= ruleAnotherSuperMain ) )? ) )
+            // InternalSubTestLanguage.g:73:2: (otherlv_0= '{' ( (lv_superMains_1_0= ruleSuperMain ) ) otherlv_2= '}' ( (lv_another_3_0= ruleAnotherSuperMain ) )? )
             {
-            // InternalSubTestLanguage.g:78:2: (otherlv_0= '{' ( (lv_superMains_1_0= ruleSuperMain ) ) otherlv_2= '}' ( (lv_another_3_0= ruleAnotherSuperMain ) )? )
-            // InternalSubTestLanguage.g:79:3: otherlv_0= '{' ( (lv_superMains_1_0= ruleSuperMain ) ) otherlv_2= '}' ( (lv_another_3_0= ruleAnotherSuperMain ) )?
+            // InternalSubTestLanguage.g:73:2: (otherlv_0= '{' ( (lv_superMains_1_0= ruleSuperMain ) ) otherlv_2= '}' ( (lv_another_3_0= ruleAnotherSuperMain ) )? )
+            // InternalSubTestLanguage.g:74:3: otherlv_0= '{' ( (lv_superMains_1_0= ruleSuperMain ) ) otherlv_2= '}' ( (lv_another_3_0= ruleAnotherSuperMain ) )?
             {
             otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getSubMainAccess().getLeftCurlyBracketKeyword_0());
             		
-            // InternalSubTestLanguage.g:83:3: ( (lv_superMains_1_0= ruleSuperMain ) )
-            // InternalSubTestLanguage.g:84:4: (lv_superMains_1_0= ruleSuperMain )
+            // InternalSubTestLanguage.g:78:3: ( (lv_superMains_1_0= ruleSuperMain ) )
+            // InternalSubTestLanguage.g:79:4: (lv_superMains_1_0= ruleSuperMain )
             {
-            // InternalSubTestLanguage.g:84:4: (lv_superMains_1_0= ruleSuperMain )
-            // InternalSubTestLanguage.g:85:5: lv_superMains_1_0= ruleSuperMain
+            // InternalSubTestLanguage.g:79:4: (lv_superMains_1_0= ruleSuperMain )
+            // InternalSubTestLanguage.g:80:5: lv_superMains_1_0= ruleSuperMain
             {
 
             					newCompositeNode(grammarAccess.getSubMainAccess().getSuperMainsSuperMainParserRuleCall_1_0());
@@ -172,7 +169,7 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getSubMainAccess().getRightCurlyBracketKeyword_2());
             		
-            // InternalSubTestLanguage.g:106:3: ( (lv_another_3_0= ruleAnotherSuperMain ) )?
+            // InternalSubTestLanguage.g:101:3: ( (lv_another_3_0= ruleAnotherSuperMain ) )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -181,10 +178,10 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalSubTestLanguage.g:107:4: (lv_another_3_0= ruleAnotherSuperMain )
+                    // InternalSubTestLanguage.g:102:4: (lv_another_3_0= ruleAnotherSuperMain )
                     {
-                    // InternalSubTestLanguage.g:107:4: (lv_another_3_0= ruleAnotherSuperMain )
-                    // InternalSubTestLanguage.g:108:5: lv_another_3_0= ruleAnotherSuperMain
+                    // InternalSubTestLanguage.g:102:4: (lv_another_3_0= ruleAnotherSuperMain )
+                    // InternalSubTestLanguage.g:103:5: lv_another_3_0= ruleAnotherSuperMain
                     {
 
                     					newCompositeNode(grammarAccess.getSubMainAccess().getAnotherAnotherSuperMainParserRuleCall_3_0());
@@ -220,9 +217,6 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -237,7 +231,7 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAnotherSuperMain"
-    // InternalSubTestLanguage.g:129:1: entryRuleAnotherSuperMain returns [EObject current=null] : iv_ruleAnotherSuperMain= ruleAnotherSuperMain EOF ;
+    // InternalSubTestLanguage.g:124:1: entryRuleAnotherSuperMain returns [EObject current=null] : iv_ruleAnotherSuperMain= ruleAnotherSuperMain EOF ;
     public final EObject entryRuleAnotherSuperMain() throws RecognitionException {
         EObject current = null;
 
@@ -245,8 +239,8 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSubTestLanguage.g:129:57: (iv_ruleAnotherSuperMain= ruleAnotherSuperMain EOF )
-            // InternalSubTestLanguage.g:130:2: iv_ruleAnotherSuperMain= ruleAnotherSuperMain EOF
+            // InternalSubTestLanguage.g:124:57: (iv_ruleAnotherSuperMain= ruleAnotherSuperMain EOF )
+            // InternalSubTestLanguage.g:125:2: iv_ruleAnotherSuperMain= ruleAnotherSuperMain EOF
             {
              newCompositeNode(grammarAccess.getAnotherSuperMainRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -273,32 +267,29 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnotherSuperMain"
-    // InternalSubTestLanguage.g:136:1: ruleAnotherSuperMain returns [EObject current=null] : (otherlv_0= 'ups' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalSubTestLanguage.g:131:1: ruleAnotherSuperMain returns [EObject current=null] : (otherlv_0= 'ups' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleAnotherSuperMain() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSubTestLanguage.g:142:2: ( (otherlv_0= 'ups' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalSubTestLanguage.g:143:2: (otherlv_0= 'ups' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalSubTestLanguage.g:132:1: ( (otherlv_0= 'ups' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalSubTestLanguage.g:133:2: (otherlv_0= 'ups' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalSubTestLanguage.g:143:2: (otherlv_0= 'ups' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalSubTestLanguage.g:144:3: otherlv_0= 'ups' ( (lv_name_1_0= RULE_ID ) )
+            // InternalSubTestLanguage.g:133:2: (otherlv_0= 'ups' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalSubTestLanguage.g:134:3: otherlv_0= 'ups' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,13,FollowSets000.FOLLOW_6); 
 
             			newLeafNode(otherlv_0, grammarAccess.getAnotherSuperMainAccess().getUpsKeyword_0());
             		
-            // InternalSubTestLanguage.g:148:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalSubTestLanguage.g:149:4: (lv_name_1_0= RULE_ID )
+            // InternalSubTestLanguage.g:138:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalSubTestLanguage.g:139:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalSubTestLanguage.g:149:4: (lv_name_1_0= RULE_ID )
-            // InternalSubTestLanguage.g:150:5: lv_name_1_0= RULE_ID
+            // InternalSubTestLanguage.g:139:4: (lv_name_1_0= RULE_ID )
+            // InternalSubTestLanguage.g:140:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -326,9 +317,6 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -343,7 +331,7 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSuperMain"
-    // InternalSubTestLanguage.g:170:1: entryRuleSuperMain returns [EObject current=null] : iv_ruleSuperMain= ruleSuperMain EOF ;
+    // InternalSubTestLanguage.g:160:1: entryRuleSuperMain returns [EObject current=null] : iv_ruleSuperMain= ruleSuperMain EOF ;
     public final EObject entryRuleSuperMain() throws RecognitionException {
         EObject current = null;
 
@@ -351,8 +339,8 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSubTestLanguage.g:170:50: (iv_ruleSuperMain= ruleSuperMain EOF )
-            // InternalSubTestLanguage.g:171:2: iv_ruleSuperMain= ruleSuperMain EOF
+            // InternalSubTestLanguage.g:160:50: (iv_ruleSuperMain= ruleSuperMain EOF )
+            // InternalSubTestLanguage.g:161:2: iv_ruleSuperMain= ruleSuperMain EOF
             {
              newCompositeNode(grammarAccess.getSuperMainRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -379,32 +367,29 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSuperMain"
-    // InternalSubTestLanguage.g:177:1: ruleSuperMain returns [EObject current=null] : (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalSubTestLanguage.g:167:1: ruleSuperMain returns [EObject current=null] : (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleSuperMain() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSubTestLanguage.g:183:2: ( (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalSubTestLanguage.g:184:2: (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalSubTestLanguage.g:168:1: ( (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalSubTestLanguage.g:169:2: (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalSubTestLanguage.g:184:2: (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalSubTestLanguage.g:185:3: otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) )
+            // InternalSubTestLanguage.g:169:2: (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalSubTestLanguage.g:170:3: otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,14,FollowSets000.FOLLOW_6); 
 
             			newLeafNode(otherlv_0, grammarAccess.getSuperMainAccess().getSuperKeyword_0());
             		
-            // InternalSubTestLanguage.g:189:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalSubTestLanguage.g:190:4: (lv_name_1_0= RULE_ID )
+            // InternalSubTestLanguage.g:174:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalSubTestLanguage.g:175:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalSubTestLanguage.g:190:4: (lv_name_1_0= RULE_ID )
-            // InternalSubTestLanguage.g:191:5: lv_name_1_0= RULE_ID
+            // InternalSubTestLanguage.g:175:4: (lv_name_1_0= RULE_ID )
+            // InternalSubTestLanguage.g:176:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -431,9 +416,6 @@ public class InternalSubTestLanguageParser extends AbstractInternalAntlrParser {
 
 
             }
-
-
-            	leaveRule();
 
         }
 

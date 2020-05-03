@@ -120,25 +120,22 @@ public class InternalFormatterTestLanguage2Parser extends AbstractInternalAntlrP
         Token otherlv_2=null;
         Token otherlv_3=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFormatterTestLanguage2.g:77:2: ( (otherlv_0= 'test' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) )
-            // InternalFormatterTestLanguage2.g:78:2: (otherlv_0= 'test' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
+            // InternalFormatterTestLanguage2.g:72:1: ( (otherlv_0= 'test' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) )
+            // InternalFormatterTestLanguage2.g:73:2: (otherlv_0= 'test' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
             {
-            // InternalFormatterTestLanguage2.g:78:2: (otherlv_0= 'test' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
-            // InternalFormatterTestLanguage2.g:79:3: otherlv_0= 'test' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}'
+            // InternalFormatterTestLanguage2.g:73:2: (otherlv_0= 'test' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
+            // InternalFormatterTestLanguage2.g:74:3: otherlv_0= 'test' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}'
             {
             otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getRootAccess().getTestKeyword_0());
             		
-            // InternalFormatterTestLanguage2.g:83:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalFormatterTestLanguage2.g:84:4: (lv_name_1_0= RULE_ID )
+            // InternalFormatterTestLanguage2.g:78:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalFormatterTestLanguage2.g:79:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalFormatterTestLanguage2.g:84:4: (lv_name_1_0= RULE_ID )
-            // InternalFormatterTestLanguage2.g:85:5: lv_name_1_0= RULE_ID
+            // InternalFormatterTestLanguage2.g:79:4: (lv_name_1_0= RULE_ID )
+            // InternalFormatterTestLanguage2.g:80:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_4); 
 
@@ -173,9 +170,6 @@ public class InternalFormatterTestLanguage2Parser extends AbstractInternalAntlrP
 
 
             }
-
-
-            	leaveRule();
 
         }
 

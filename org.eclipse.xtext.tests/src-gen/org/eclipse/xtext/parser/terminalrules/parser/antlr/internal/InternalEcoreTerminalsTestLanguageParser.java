@@ -119,14 +119,11 @@ public class InternalEcoreTerminalsTestLanguageParser extends AbstractInternalAn
         Token otherlv_4=null;
         Token lv_dateValues_5_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalEcoreTerminalsTestLanguage.g:77:2: ( ( (otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) ) ) | (otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) ) ) | (otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) ) ) )* )
-            // InternalEcoreTerminalsTestLanguage.g:78:2: ( (otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) ) ) | (otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) ) ) | (otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) ) ) )*
+            // InternalEcoreTerminalsTestLanguage.g:72:1: ( ( (otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) ) ) | (otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) ) ) | (otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) ) ) )* )
+            // InternalEcoreTerminalsTestLanguage.g:73:2: ( (otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) ) ) | (otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) ) ) | (otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) ) ) )*
             {
-            // InternalEcoreTerminalsTestLanguage.g:78:2: ( (otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) ) ) | (otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) ) ) | (otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) ) ) )*
+            // InternalEcoreTerminalsTestLanguage.g:73:2: ( (otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) ) ) | (otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) ) ) | (otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) ) ) )*
             loop1:
             do {
                 int alt1=4;
@@ -151,20 +148,20 @@ public class InternalEcoreTerminalsTestLanguageParser extends AbstractInternalAn
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalEcoreTerminalsTestLanguage.g:79:3: (otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:74:3: (otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) ) )
             	    {
-            	    // InternalEcoreTerminalsTestLanguage.g:79:3: (otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) ) )
-            	    // InternalEcoreTerminalsTestLanguage.g:80:4: otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:74:3: (otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:75:4: otherlv_0= 'int' ( (lv_intValues_1_0= RULE_EINT ) )
             	    {
             	    otherlv_0=(Token)match(input,8,FollowSets000.FOLLOW_3); 
 
             	    				newLeafNode(otherlv_0, grammarAccess.getModelAccess().getIntKeyword_0_0());
             	    			
-            	    // InternalEcoreTerminalsTestLanguage.g:84:4: ( (lv_intValues_1_0= RULE_EINT ) )
-            	    // InternalEcoreTerminalsTestLanguage.g:85:5: (lv_intValues_1_0= RULE_EINT )
+            	    // InternalEcoreTerminalsTestLanguage.g:79:4: ( (lv_intValues_1_0= RULE_EINT ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:80:5: (lv_intValues_1_0= RULE_EINT )
             	    {
-            	    // InternalEcoreTerminalsTestLanguage.g:85:5: (lv_intValues_1_0= RULE_EINT )
-            	    // InternalEcoreTerminalsTestLanguage.g:86:6: lv_intValues_1_0= RULE_EINT
+            	    // InternalEcoreTerminalsTestLanguage.g:80:5: (lv_intValues_1_0= RULE_EINT )
+            	    // InternalEcoreTerminalsTestLanguage.g:81:6: lv_intValues_1_0= RULE_EINT
             	    {
             	    lv_intValues_1_0=(Token)match(input,RULE_EINT,FollowSets000.FOLLOW_4); 
 
@@ -193,20 +190,20 @@ public class InternalEcoreTerminalsTestLanguageParser extends AbstractInternalAn
             	    }
             	    break;
             	case 2 :
-            	    // InternalEcoreTerminalsTestLanguage.g:104:3: (otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:99:3: (otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) ) )
             	    {
-            	    // InternalEcoreTerminalsTestLanguage.g:104:3: (otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) ) )
-            	    // InternalEcoreTerminalsTestLanguage.g:105:4: otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:99:3: (otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:100:4: otherlv_2= 'double' ( (lv_doubleValues_3_0= RULE_EDOUBLE ) )
             	    {
             	    otherlv_2=(Token)match(input,9,FollowSets000.FOLLOW_5); 
 
             	    				newLeafNode(otherlv_2, grammarAccess.getModelAccess().getDoubleKeyword_1_0());
             	    			
-            	    // InternalEcoreTerminalsTestLanguage.g:109:4: ( (lv_doubleValues_3_0= RULE_EDOUBLE ) )
-            	    // InternalEcoreTerminalsTestLanguage.g:110:5: (lv_doubleValues_3_0= RULE_EDOUBLE )
+            	    // InternalEcoreTerminalsTestLanguage.g:104:4: ( (lv_doubleValues_3_0= RULE_EDOUBLE ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:105:5: (lv_doubleValues_3_0= RULE_EDOUBLE )
             	    {
-            	    // InternalEcoreTerminalsTestLanguage.g:110:5: (lv_doubleValues_3_0= RULE_EDOUBLE )
-            	    // InternalEcoreTerminalsTestLanguage.g:111:6: lv_doubleValues_3_0= RULE_EDOUBLE
+            	    // InternalEcoreTerminalsTestLanguage.g:105:5: (lv_doubleValues_3_0= RULE_EDOUBLE )
+            	    // InternalEcoreTerminalsTestLanguage.g:106:6: lv_doubleValues_3_0= RULE_EDOUBLE
             	    {
             	    lv_doubleValues_3_0=(Token)match(input,RULE_EDOUBLE,FollowSets000.FOLLOW_4); 
 
@@ -235,20 +232,20 @@ public class InternalEcoreTerminalsTestLanguageParser extends AbstractInternalAn
             	    }
             	    break;
             	case 3 :
-            	    // InternalEcoreTerminalsTestLanguage.g:129:3: (otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:124:3: (otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) ) )
             	    {
-            	    // InternalEcoreTerminalsTestLanguage.g:129:3: (otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) ) )
-            	    // InternalEcoreTerminalsTestLanguage.g:130:4: otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:124:3: (otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:125:4: otherlv_4= 'date' ( (lv_dateValues_5_0= RULE_EDATE ) )
             	    {
             	    otherlv_4=(Token)match(input,10,FollowSets000.FOLLOW_6); 
 
             	    				newLeafNode(otherlv_4, grammarAccess.getModelAccess().getDateKeyword_2_0());
             	    			
-            	    // InternalEcoreTerminalsTestLanguage.g:134:4: ( (lv_dateValues_5_0= RULE_EDATE ) )
-            	    // InternalEcoreTerminalsTestLanguage.g:135:5: (lv_dateValues_5_0= RULE_EDATE )
+            	    // InternalEcoreTerminalsTestLanguage.g:129:4: ( (lv_dateValues_5_0= RULE_EDATE ) )
+            	    // InternalEcoreTerminalsTestLanguage.g:130:5: (lv_dateValues_5_0= RULE_EDATE )
             	    {
-            	    // InternalEcoreTerminalsTestLanguage.g:135:5: (lv_dateValues_5_0= RULE_EDATE )
-            	    // InternalEcoreTerminalsTestLanguage.g:136:6: lv_dateValues_5_0= RULE_EDATE
+            	    // InternalEcoreTerminalsTestLanguage.g:130:5: (lv_dateValues_5_0= RULE_EDATE )
+            	    // InternalEcoreTerminalsTestLanguage.g:131:6: lv_dateValues_5_0= RULE_EDATE
             	    {
             	    lv_dateValues_5_0=(Token)match(input,RULE_EDATE,FollowSets000.FOLLOW_4); 
 
@@ -284,9 +281,6 @@ public class InternalEcoreTerminalsTestLanguageParser extends AbstractInternalAn
 
 
             }
-
-
-            	leaveRule();
 
         }
 

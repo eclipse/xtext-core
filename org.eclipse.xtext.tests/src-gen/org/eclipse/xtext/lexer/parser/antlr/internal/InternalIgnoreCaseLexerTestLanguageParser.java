@@ -113,21 +113,18 @@ public class InternalIgnoreCaseLexerTestLanguageParser extends AbstractInternalA
         Token otherlv_1=null;
         Token lv_value_2_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalIgnoreCaseLexerTestLanguageParser.g:70:2: ( (otherlv_0= Case (otherlv_1= Foo )? ( (lv_value_2_0= Case ) ) ) )
-            // InternalIgnoreCaseLexerTestLanguageParser.g:71:2: (otherlv_0= Case (otherlv_1= Foo )? ( (lv_value_2_0= Case ) ) )
+            // InternalIgnoreCaseLexerTestLanguageParser.g:65:1: ( (otherlv_0= Case (otherlv_1= Foo )? ( (lv_value_2_0= Case ) ) ) )
+            // InternalIgnoreCaseLexerTestLanguageParser.g:66:2: (otherlv_0= Case (otherlv_1= Foo )? ( (lv_value_2_0= Case ) ) )
             {
-            // InternalIgnoreCaseLexerTestLanguageParser.g:71:2: (otherlv_0= Case (otherlv_1= Foo )? ( (lv_value_2_0= Case ) ) )
-            // InternalIgnoreCaseLexerTestLanguageParser.g:72:3: otherlv_0= Case (otherlv_1= Foo )? ( (lv_value_2_0= Case ) )
+            // InternalIgnoreCaseLexerTestLanguageParser.g:66:2: (otherlv_0= Case (otherlv_1= Foo )? ( (lv_value_2_0= Case ) ) )
+            // InternalIgnoreCaseLexerTestLanguageParser.g:67:3: otherlv_0= Case (otherlv_1= Foo )? ( (lv_value_2_0= Case ) )
             {
             otherlv_0=(Token)match(input,Case,FollowSets000.FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getModelAccess().getCaseKeyword_0());
             		
-            // InternalIgnoreCaseLexerTestLanguageParser.g:76:3: (otherlv_1= Foo )?
+            // InternalIgnoreCaseLexerTestLanguageParser.g:71:3: (otherlv_1= Foo )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -136,7 +133,7 @@ public class InternalIgnoreCaseLexerTestLanguageParser extends AbstractInternalA
             }
             switch (alt1) {
                 case 1 :
-                    // InternalIgnoreCaseLexerTestLanguageParser.g:77:4: otherlv_1= Foo
+                    // InternalIgnoreCaseLexerTestLanguageParser.g:72:4: otherlv_1= Foo
                     {
                     otherlv_1=(Token)match(input,Foo,FollowSets000.FOLLOW_4); 
 
@@ -148,11 +145,11 @@ public class InternalIgnoreCaseLexerTestLanguageParser extends AbstractInternalA
 
             }
 
-            // InternalIgnoreCaseLexerTestLanguageParser.g:82:3: ( (lv_value_2_0= Case ) )
-            // InternalIgnoreCaseLexerTestLanguageParser.g:83:4: (lv_value_2_0= Case )
+            // InternalIgnoreCaseLexerTestLanguageParser.g:77:3: ( (lv_value_2_0= Case ) )
+            // InternalIgnoreCaseLexerTestLanguageParser.g:78:4: (lv_value_2_0= Case )
             {
-            // InternalIgnoreCaseLexerTestLanguageParser.g:83:4: (lv_value_2_0= Case )
-            // InternalIgnoreCaseLexerTestLanguageParser.g:84:5: lv_value_2_0= Case
+            // InternalIgnoreCaseLexerTestLanguageParser.g:78:4: (lv_value_2_0= Case )
+            // InternalIgnoreCaseLexerTestLanguageParser.g:79:5: lv_value_2_0= Case
             {
             lv_value_2_0=(Token)match(input,Case,FollowSets000.FOLLOW_2); 
 
@@ -175,9 +172,6 @@ public class InternalIgnoreCaseLexerTestLanguageParser extends AbstractInternalA
 
 
             }
-
-
-            	leaveRule();
 
         }
 

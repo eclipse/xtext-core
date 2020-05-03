@@ -69,12 +69,7 @@ entryRuleCompositeModel returns [EObject current=null]:
 
 // Rule CompositeModel
 ruleCompositeModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -105,12 +100,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -247,12 +237,7 @@ entryRuleModelId returns [String current=null]:
 
 // Rule ModelId
 ruleModelId returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{
@@ -285,12 +270,7 @@ entryRuleNestedModelId returns [String current=null]:
 
 // Rule NestedModelId
 ruleNestedModelId returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getNestedModelIdAccess().getModelIdParserRuleCall_0());
@@ -329,12 +309,7 @@ entryRuleFraction returns [String current=null]:
 
 // Rule Fraction
 ruleFraction returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_INT_0=RULE_INT
 		{
@@ -369,12 +344,7 @@ entryRuleVector returns [String current=null]:
 
 // Rule Vector
 ruleVector returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='('
 		{
@@ -412,12 +382,7 @@ entryRuleDots returns [String current=null]:
 
 // Rule Dots
 ruleDots returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			kw='.'
@@ -449,12 +414,7 @@ entryRuleDouble returns [String current=null]:
 
 // Rule Double
 ruleDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			kw='-'

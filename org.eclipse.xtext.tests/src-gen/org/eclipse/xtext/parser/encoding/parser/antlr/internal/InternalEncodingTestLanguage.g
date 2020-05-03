@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -105,12 +100,7 @@ entryRuleWord returns [EObject current=null]:
 
 // Rule Word
 ruleWord returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_value_0_0=RULE_LEXEME

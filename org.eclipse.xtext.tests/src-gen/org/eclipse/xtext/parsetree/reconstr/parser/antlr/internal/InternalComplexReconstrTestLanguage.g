@@ -69,12 +69,7 @@ entryRuleRoot returns [EObject current=null]:
 
 // Rule Root
 ruleRoot returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getRootAccess().getOpParserRuleCall_0());
@@ -105,12 +100,7 @@ entryRuleOp returns [EObject current=null]:
 
 // Rule Op
 ruleOp returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getOpAccess().getTermParserRuleCall_0());
@@ -199,12 +189,7 @@ entryRuleTerm returns [EObject current=null]:
 
 // Rule Term
 ruleTerm returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getTermAccess().getAtomParserRuleCall_0());
@@ -235,12 +220,7 @@ entryRuleAtom returns [EObject current=null]:
 
 // Rule Atom
 ruleAtom returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID
@@ -270,12 +250,7 @@ entryRuleParens returns [EObject current=null]:
 
 // Rule Parens
 ruleParens returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='('
 		{
@@ -319,12 +294,7 @@ entryRuleTrickyG returns [EObject current=null]:
 
 // Rule TrickyG
 ruleTrickyG returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='TG'
 		{
@@ -361,12 +331,7 @@ entryRuleTrickyG1 returns [EObject current=null]:
 
 // Rule TrickyG1
 ruleTrickyG1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='['
 		{
@@ -434,12 +399,7 @@ entryRuleTrickyG2 returns [EObject current=null]:
 
 // Rule TrickyG2
 ruleTrickyG2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getTrickyG2Access().getTrickyG1ParserRuleCall_0());

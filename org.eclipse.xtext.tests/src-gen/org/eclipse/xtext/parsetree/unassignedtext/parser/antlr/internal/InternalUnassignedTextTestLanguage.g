@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getModelAccess().getCaseInsensitiveKeywordRuleParserRuleCall_0());
@@ -141,12 +136,7 @@ entryRuleCaseInsensitiveKeywordRule returns [EObject current=null]:
 
 // Rule CaseInsensitiveKeywordRule
 ruleCaseInsensitiveKeywordRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_CaseInsensitiveKeyword_0=RULE_CASEINSENSITIVEKEYWORD
 		{
@@ -182,12 +172,7 @@ entryRulePluralRule returns [EObject current=null]:
 
 // Rule PluralRule
 rulePluralRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='contents:'
 		{
@@ -227,12 +212,7 @@ entryRuleMultiRule returns [EObject current=null]:
 
 // Rule MultiRule
 ruleMultiRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='multi'
 		{
@@ -280,12 +260,7 @@ entryRuleDatatypeRule returns [EObject current=null]:
 
 // Rule DatatypeRule
 ruleDatatypeRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='datatype'
 		{
@@ -328,12 +303,7 @@ entryRuleDatatype returns [String current=null]:
 
 // Rule Datatype
 ruleDatatype returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='str'
 		{
@@ -371,12 +341,7 @@ entryRuleDatatype2 returns [String current=null]:
 
 // Rule Datatype2
 ruleDatatype2 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_STRING_0=RULE_STRING
 	{
 		$current.merge(this_STRING_0);
@@ -395,12 +360,7 @@ entryRuleCommonTerminalsRule returns [EObject current=null]:
 
 // Rule CommonTerminalsRule
 ruleCommonTerminalsRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='terminals'
 		{
@@ -448,12 +408,7 @@ entryRuleGroupRule returns [EObject current=null]:
 
 // Rule GroupRule
 ruleGroupRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -485,12 +440,7 @@ entryRuleGroupDataTypeRule returns [String current=null]:
 
 // Rule GroupDataTypeRule
 ruleGroupDataTypeRule returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='this'
 		{

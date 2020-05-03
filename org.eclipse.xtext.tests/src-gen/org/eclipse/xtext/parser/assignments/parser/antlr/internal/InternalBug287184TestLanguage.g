@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='model'
 		{
@@ -148,12 +143,7 @@ entryRuleDetail returns [EObject current=null]:
 
 // Rule Detail
 ruleDetail returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='detail'
 		{
@@ -225,12 +215,7 @@ entryRuleAssociatedDetail returns [EObject current=null]:
 
 // Rule AssociatedDetail
 ruleAssociatedDetail returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='associated'
 		{
@@ -268,12 +253,7 @@ entryRuleFQN returns [String current=null]:
 
 // Rule FQN
 ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{

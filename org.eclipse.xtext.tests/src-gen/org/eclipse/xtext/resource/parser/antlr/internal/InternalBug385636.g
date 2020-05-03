@@ -69,12 +69,7 @@ entryRuleProgram returns [EObject current=null]:
 
 // Rule Program
 ruleProgram returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -130,12 +125,7 @@ entryRuleDefineVariables returns [EObject current=null]:
 
 // Rule DefineVariables
 ruleDefineVariables returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='VARIABLES'
 		{
@@ -176,12 +166,7 @@ entryRuleDefineVariable returns [EObject current=null]:
 
 // Rule DefineVariable
 ruleDefineVariable returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='NAME'
 		{
@@ -217,12 +202,7 @@ entryRuleNVariableAccess returns [EObject current=null]:
 
 // Rule NVariableAccess
 ruleNVariableAccess returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -247,12 +227,7 @@ entryRuleStatement returns [EObject current=null]:
 
 // Rule Statement
 ruleStatement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getStatementAccess().getExpression_VariableNameParserRuleCall_0());
@@ -518,12 +493,7 @@ entryRuleExpression_VariableName returns [EObject current=null]:
 
 // Rule Expression_VariableName
 ruleExpression_VariableName returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{

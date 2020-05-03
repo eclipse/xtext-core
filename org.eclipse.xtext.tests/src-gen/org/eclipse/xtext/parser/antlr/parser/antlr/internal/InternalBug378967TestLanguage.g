@@ -70,12 +70,7 @@ entryRuleRoot returns [EObject current=null]:
 
 // Rule Root
 ruleRoot returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='1'
@@ -192,12 +187,7 @@ entryRuleRule1 returns [EObject current=null]:
 
 // Rule Rule1
 ruleRule1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -267,12 +257,7 @@ entryRuleRule2 returns [EObject current=null]:
 
 // Rule Rule2
 ruleRule2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='after'
 		{
@@ -312,12 +297,7 @@ entryRuleRule3 returns [EObject current=null]:
 
 // Rule Rule3
 ruleRule3 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getRule3Access().getAfterParserRuleCall_0());
@@ -363,12 +343,7 @@ entryRuleRule4 returns [EObject current=null]:
 
 // Rule Rule4
 ruleRule4 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -438,12 +413,7 @@ entryRuleAfterObj returns [EObject current=null]:
 
 // Rule AfterObj
 ruleAfterObj returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_value_0_0='after'
@@ -469,12 +439,7 @@ entryRuleSObj returns [EObject current=null]:
 
 // Rule SObj
 ruleSObj returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_value_0_0='s'
@@ -500,12 +465,7 @@ entryRuleAfter returns [String current=null]:
 
 // Rule After
 ruleAfter returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	kw='after'
 	{
 		$current.merge(kw);
@@ -522,12 +482,7 @@ entryRuleS returns [String current=null]:
 
 // Rule S
 ruleS returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	kw='s'
 	{
 		$current.merge(kw);
@@ -537,12 +492,7 @@ ruleS returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 
 // Rule FirstEnum
 ruleFirstEnum returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		enumLiteral_0='after'
 		{
@@ -554,12 +504,7 @@ ruleFirstEnum returns [Enumerator current=null]
 
 // Rule SecondEnum
 ruleSecondEnum returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		enumLiteral_0='s'
 		{

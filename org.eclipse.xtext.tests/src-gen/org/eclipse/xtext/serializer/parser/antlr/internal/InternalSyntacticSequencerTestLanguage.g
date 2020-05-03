@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -407,12 +402,7 @@ entryRuleMandatoryKeywords returns [EObject current=null]:
 
 // Rule MandatoryKeywords
 ruleMandatoryKeywords returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#1'
 		{
@@ -500,12 +490,7 @@ entryRuleExp0 returns [EObject current=null]:
 
 // Rule Exp0
 ruleExp0 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#2'
 		{
@@ -531,12 +516,7 @@ entryRuleAddition0 returns [EObject current=null]:
 
 // Rule Addition0
 ruleAddition0 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getAddition0Access().getPrim0ParserRuleCall_0());
@@ -590,12 +570,7 @@ entryRulePrim0 returns [EObject current=null]:
 
 // Rule Prim0
 rulePrim0 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -634,12 +609,7 @@ entryRuleExp1 returns [EObject current=null]:
 
 // Rule Exp1
 ruleExp1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#3'
 		{
@@ -665,12 +635,7 @@ entryRuleAddition1 returns [EObject current=null]:
 
 // Rule Addition1
 ruleAddition1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getAddition1Access().getPrim1ParserRuleCall_0());
@@ -724,12 +689,7 @@ entryRulePrim1 returns [EObject current=null]:
 
 // Rule Prim1
 rulePrim1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -789,12 +749,7 @@ entryRuleExp2 returns [EObject current=null]:
 
 // Rule Exp2
 ruleExp2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#4'
 		{
@@ -820,12 +775,7 @@ entryRuleAddition2 returns [EObject current=null]:
 
 // Rule Addition2
 ruleAddition2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getAddition2Access().getMultiplication2ParserRuleCall_0());
@@ -879,12 +829,7 @@ entryRuleMultiplication2 returns [EObject current=null]:
 
 // Rule Multiplication2
 ruleMultiplication2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getMultiplication2Access().getPrim2ParserRuleCall_0());
@@ -938,12 +883,7 @@ entryRulePrim2 returns [EObject current=null]:
 
 // Rule Prim2
 rulePrim2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1003,12 +943,7 @@ entryRuleDatatypeID returns [String current=null]:
 
 // Rule DatatypeID
 ruleDatatypeID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_ID_0=RULE_ID
 	{
 		$current.merge(this_ID_0);
@@ -1027,12 +962,7 @@ entryRuleSingleCrossReference returns [EObject current=null]:
 
 // Rule SingleCrossReference
 ruleSingleCrossReference returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#5'
 		{
@@ -1194,12 +1124,7 @@ entryRuleBooleanAlternative returns [EObject current=null]:
 
 // Rule BooleanAlternative
 ruleBooleanAlternative returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#6'
 		{
@@ -1236,12 +1161,7 @@ entryRuleBooleanAlternativeLiteral returns [EObject current=null]:
 
 // Rule BooleanAlternativeLiteral
 ruleBooleanAlternativeLiteral returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1283,12 +1203,7 @@ entryRuleUnassignedDatatype returns [EObject current=null]:
 
 // Rule UnassignedDatatype
 ruleUnassignedDatatype returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#7'
 		{
@@ -1331,12 +1246,7 @@ entryRuleKW1 returns [String current=null]:
 
 // Rule KW1
 ruleKW1 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='kw1'
 		{
@@ -1372,12 +1282,7 @@ entryRuleOptionalSingleTransition returns [EObject current=null]:
 
 // Rule OptionalSingleTransition
 ruleOptionalSingleTransition returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#8'
 		{
@@ -1422,12 +1327,7 @@ entryRuleOptionalManyTransition returns [EObject current=null]:
 
 // Rule OptionalManyTransition
 ruleOptionalManyTransition returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#9'
 		{
@@ -1472,12 +1372,7 @@ entryRuleMandatoryManyTransition returns [EObject current=null]:
 
 // Rule MandatoryManyTransition
 ruleMandatoryManyTransition returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#10'
 		{
@@ -1522,12 +1417,7 @@ entryRuleAlternativeTransition returns [EObject current=null]:
 
 // Rule AlternativeTransition
 ruleAlternativeTransition returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#11'
 		{
@@ -1577,12 +1467,7 @@ entryRuleBooleanDatatypeID returns [String current=null]:
 
 // Rule BooleanDatatypeID
 ruleBooleanDatatypeID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_ID_0=RULE_ID
 	{
 		$current.merge(this_ID_0);
@@ -1601,12 +1486,7 @@ entryRuleBooleanValues returns [EObject current=null]:
 
 // Rule BooleanValues
 ruleBooleanValues returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1682,12 +1562,7 @@ entryRuleLongAlternative returns [EObject current=null]:
 
 // Rule LongAlternative
 ruleLongAlternative returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#13'
 		{
@@ -1928,12 +1803,7 @@ entryRuleActionOnly returns [EObject current=null]:
 
 // Rule ActionOnly
 ruleActionOnly returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#14'
 		{
@@ -1983,12 +1853,7 @@ entryRuleFragmentCaller returns [EObject current=null]:
 
 // Rule FragmentCaller
 ruleFragmentCaller returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='#15'
 		{
@@ -2047,12 +1912,7 @@ ruleFragmentCaller returns [EObject current=null]
 
 // Rule Fragment1
 ruleFragment1[EObject in_current]  returns [EObject current=in_current]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_fragVal_0_0=RULE_ID
@@ -2082,12 +1942,7 @@ entryRuleBug398890 returns [EObject current=null]:
 
 // Rule Bug398890
 ruleBug398890 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_C_COMMENT_END_0=RULE_C_COMMENT_END
 		{

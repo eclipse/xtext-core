@@ -117,15 +117,12 @@ public class InternalActionTestLanguageParser extends AbstractInternalAntlrParse
         EObject lv_right_2_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalActionTestLanguage.g:77:2: ( (this_Child_0= ruleChild ( () ( (lv_right_2_0= ruleChild ) ) )? ) )
-            // InternalActionTestLanguage.g:78:2: (this_Child_0= ruleChild ( () ( (lv_right_2_0= ruleChild ) ) )? )
+            // InternalActionTestLanguage.g:72:1: ( (this_Child_0= ruleChild ( () ( (lv_right_2_0= ruleChild ) ) )? ) )
+            // InternalActionTestLanguage.g:73:2: (this_Child_0= ruleChild ( () ( (lv_right_2_0= ruleChild ) ) )? )
             {
-            // InternalActionTestLanguage.g:78:2: (this_Child_0= ruleChild ( () ( (lv_right_2_0= ruleChild ) ) )? )
-            // InternalActionTestLanguage.g:79:3: this_Child_0= ruleChild ( () ( (lv_right_2_0= ruleChild ) ) )?
+            // InternalActionTestLanguage.g:73:2: (this_Child_0= ruleChild ( () ( (lv_right_2_0= ruleChild ) ) )? )
+            // InternalActionTestLanguage.g:74:3: this_Child_0= ruleChild ( () ( (lv_right_2_0= ruleChild ) ) )?
             {
 
             			newCompositeNode(grammarAccess.getModelAccess().getChildParserRuleCall_0());
@@ -139,7 +136,7 @@ public class InternalActionTestLanguageParser extends AbstractInternalAntlrParse
             			current = this_Child_0;
             			afterParserOrEnumRuleCall();
             		
-            // InternalActionTestLanguage.g:87:3: ( () ( (lv_right_2_0= ruleChild ) ) )?
+            // InternalActionTestLanguage.g:82:3: ( () ( (lv_right_2_0= ruleChild ) ) )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -148,10 +145,10 @@ public class InternalActionTestLanguageParser extends AbstractInternalAntlrParse
             }
             switch (alt1) {
                 case 1 :
-                    // InternalActionTestLanguage.g:88:4: () ( (lv_right_2_0= ruleChild ) )
+                    // InternalActionTestLanguage.g:83:4: () ( (lv_right_2_0= ruleChild ) )
                     {
-                    // InternalActionTestLanguage.g:88:4: ()
-                    // InternalActionTestLanguage.g:89:5: 
+                    // InternalActionTestLanguage.g:83:4: ()
+                    // InternalActionTestLanguage.g:84:5: 
                     {
 
                     					current = forceCreateModelElementAndSet(
@@ -161,11 +158,11 @@ public class InternalActionTestLanguageParser extends AbstractInternalAntlrParse
 
                     }
 
-                    // InternalActionTestLanguage.g:95:4: ( (lv_right_2_0= ruleChild ) )
-                    // InternalActionTestLanguage.g:96:5: (lv_right_2_0= ruleChild )
+                    // InternalActionTestLanguage.g:90:4: ( (lv_right_2_0= ruleChild ) )
+                    // InternalActionTestLanguage.g:91:5: (lv_right_2_0= ruleChild )
                     {
-                    // InternalActionTestLanguage.g:96:5: (lv_right_2_0= ruleChild )
-                    // InternalActionTestLanguage.g:97:6: lv_right_2_0= ruleChild
+                    // InternalActionTestLanguage.g:91:5: (lv_right_2_0= ruleChild )
+                    // InternalActionTestLanguage.g:92:6: lv_right_2_0= ruleChild
                     {
 
                     						newCompositeNode(grammarAccess.getModelAccess().getRightChildParserRuleCall_1_1_0());
@@ -204,9 +201,6 @@ public class InternalActionTestLanguageParser extends AbstractInternalAntlrParse
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -221,7 +215,7 @@ public class InternalActionTestLanguageParser extends AbstractInternalAntlrParse
 
 
     // $ANTLR start "entryRuleChild"
-    // InternalActionTestLanguage.g:119:1: entryRuleChild returns [EObject current=null] : iv_ruleChild= ruleChild EOF ;
+    // InternalActionTestLanguage.g:114:1: entryRuleChild returns [EObject current=null] : iv_ruleChild= ruleChild EOF ;
     public final EObject entryRuleChild() throws RecognitionException {
         EObject current = null;
 
@@ -229,8 +223,8 @@ public class InternalActionTestLanguageParser extends AbstractInternalAntlrParse
 
 
         try {
-            // InternalActionTestLanguage.g:119:46: (iv_ruleChild= ruleChild EOF )
-            // InternalActionTestLanguage.g:120:2: iv_ruleChild= ruleChild EOF
+            // InternalActionTestLanguage.g:114:46: (iv_ruleChild= ruleChild EOF )
+            // InternalActionTestLanguage.g:115:2: iv_ruleChild= ruleChild EOF
             {
              newCompositeNode(grammarAccess.getChildRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -257,24 +251,21 @@ public class InternalActionTestLanguageParser extends AbstractInternalAntlrParse
 
 
     // $ANTLR start "ruleChild"
-    // InternalActionTestLanguage.g:126:1: ruleChild returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // InternalActionTestLanguage.g:121:1: ruleChild returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleChild() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalActionTestLanguage.g:132:2: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // InternalActionTestLanguage.g:133:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalActionTestLanguage.g:122:1: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // InternalActionTestLanguage.g:123:2: ( (lv_name_0_0= RULE_ID ) )
             {
-            // InternalActionTestLanguage.g:133:2: ( (lv_name_0_0= RULE_ID ) )
-            // InternalActionTestLanguage.g:134:3: (lv_name_0_0= RULE_ID )
+            // InternalActionTestLanguage.g:123:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalActionTestLanguage.g:124:3: (lv_name_0_0= RULE_ID )
             {
-            // InternalActionTestLanguage.g:134:3: (lv_name_0_0= RULE_ID )
-            // InternalActionTestLanguage.g:135:4: lv_name_0_0= RULE_ID
+            // InternalActionTestLanguage.g:124:3: (lv_name_0_0= RULE_ID )
+            // InternalActionTestLanguage.g:125:4: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -298,9 +289,6 @@ public class InternalActionTestLanguageParser extends AbstractInternalAntlrParse
 
 
             }
-
-
-            	leaveRule();
 
         }
 

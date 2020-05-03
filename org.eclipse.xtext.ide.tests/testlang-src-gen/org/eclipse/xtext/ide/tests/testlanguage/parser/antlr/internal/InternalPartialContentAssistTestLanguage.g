@@ -74,12 +74,7 @@ entryRuleTypeDeclaration returns [EObject current=null]:
 
 // Rule TypeDeclaration
 ruleTypeDeclaration returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='type'
 		{
@@ -161,12 +156,7 @@ entryRuleProperty returns [EObject current=null]:
 
 // Rule Property
 ruleProperty returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(

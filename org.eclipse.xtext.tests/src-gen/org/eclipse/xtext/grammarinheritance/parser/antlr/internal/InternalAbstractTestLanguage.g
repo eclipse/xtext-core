@@ -69,12 +69,7 @@ entryRuleInheritedParserRule returns [EObject current=null]:
 
 // Rule InheritedParserRule
 ruleInheritedParserRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='element'
 		{
@@ -110,12 +105,7 @@ entryRuleOverridableParserRule returns [EObject current=null]:
 
 // Rule OverridableParserRule
 ruleOverridableParserRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='element'
 		{
@@ -151,12 +141,7 @@ entryRuleExtendableParserRule returns [EObject current=null]:
 
 // Rule ExtendableParserRule
 ruleExtendableParserRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='element'
 		{

@@ -124,14 +124,11 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
         EObject lv_bars_1_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalEObjectAtOffsetTestLanguage.g:77:2: ( ( ( (lv_foos_0_0= ruleFoo ) ) | ( (lv_bars_1_0= ruleAbstractBar ) ) )* )
-            // InternalEObjectAtOffsetTestLanguage.g:78:2: ( ( (lv_foos_0_0= ruleFoo ) ) | ( (lv_bars_1_0= ruleAbstractBar ) ) )*
+            // InternalEObjectAtOffsetTestLanguage.g:72:1: ( ( ( (lv_foos_0_0= ruleFoo ) ) | ( (lv_bars_1_0= ruleAbstractBar ) ) )* )
+            // InternalEObjectAtOffsetTestLanguage.g:73:2: ( ( (lv_foos_0_0= ruleFoo ) ) | ( (lv_bars_1_0= ruleAbstractBar ) ) )*
             {
-            // InternalEObjectAtOffsetTestLanguage.g:78:2: ( ( (lv_foos_0_0= ruleFoo ) ) | ( (lv_bars_1_0= ruleAbstractBar ) ) )*
+            // InternalEObjectAtOffsetTestLanguage.g:73:2: ( ( (lv_foos_0_0= ruleFoo ) ) | ( (lv_bars_1_0= ruleAbstractBar ) ) )*
             loop1:
             do {
                 int alt1=3;
@@ -147,13 +144,13 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalEObjectAtOffsetTestLanguage.g:79:3: ( (lv_foos_0_0= ruleFoo ) )
+            	    // InternalEObjectAtOffsetTestLanguage.g:74:3: ( (lv_foos_0_0= ruleFoo ) )
             	    {
-            	    // InternalEObjectAtOffsetTestLanguage.g:79:3: ( (lv_foos_0_0= ruleFoo ) )
-            	    // InternalEObjectAtOffsetTestLanguage.g:80:4: (lv_foos_0_0= ruleFoo )
+            	    // InternalEObjectAtOffsetTestLanguage.g:74:3: ( (lv_foos_0_0= ruleFoo ) )
+            	    // InternalEObjectAtOffsetTestLanguage.g:75:4: (lv_foos_0_0= ruleFoo )
             	    {
-            	    // InternalEObjectAtOffsetTestLanguage.g:80:4: (lv_foos_0_0= ruleFoo )
-            	    // InternalEObjectAtOffsetTestLanguage.g:81:5: lv_foos_0_0= ruleFoo
+            	    // InternalEObjectAtOffsetTestLanguage.g:75:4: (lv_foos_0_0= ruleFoo )
+            	    // InternalEObjectAtOffsetTestLanguage.g:76:5: lv_foos_0_0= ruleFoo
             	    {
 
             	    					newCompositeNode(grammarAccess.getModelAccess().getFoosFooParserRuleCall_0_0());
@@ -184,13 +181,13 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
             	    }
             	    break;
             	case 2 :
-            	    // InternalEObjectAtOffsetTestLanguage.g:99:3: ( (lv_bars_1_0= ruleAbstractBar ) )
+            	    // InternalEObjectAtOffsetTestLanguage.g:94:3: ( (lv_bars_1_0= ruleAbstractBar ) )
             	    {
-            	    // InternalEObjectAtOffsetTestLanguage.g:99:3: ( (lv_bars_1_0= ruleAbstractBar ) )
-            	    // InternalEObjectAtOffsetTestLanguage.g:100:4: (lv_bars_1_0= ruleAbstractBar )
+            	    // InternalEObjectAtOffsetTestLanguage.g:94:3: ( (lv_bars_1_0= ruleAbstractBar ) )
+            	    // InternalEObjectAtOffsetTestLanguage.g:95:4: (lv_bars_1_0= ruleAbstractBar )
             	    {
-            	    // InternalEObjectAtOffsetTestLanguage.g:100:4: (lv_bars_1_0= ruleAbstractBar )
-            	    // InternalEObjectAtOffsetTestLanguage.g:101:5: lv_bars_1_0= ruleAbstractBar
+            	    // InternalEObjectAtOffsetTestLanguage.g:95:4: (lv_bars_1_0= ruleAbstractBar )
+            	    // InternalEObjectAtOffsetTestLanguage.g:96:5: lv_bars_1_0= ruleAbstractBar
             	    {
 
             	    					newCompositeNode(grammarAccess.getModelAccess().getBarsAbstractBarParserRuleCall_1_0());
@@ -229,9 +226,6 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -246,7 +240,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
     // $ANTLR start "entryRuleAbstractBar"
-    // InternalEObjectAtOffsetTestLanguage.g:122:1: entryRuleAbstractBar returns [EObject current=null] : iv_ruleAbstractBar= ruleAbstractBar EOF ;
+    // InternalEObjectAtOffsetTestLanguage.g:117:1: entryRuleAbstractBar returns [EObject current=null] : iv_ruleAbstractBar= ruleAbstractBar EOF ;
     public final EObject entryRuleAbstractBar() throws RecognitionException {
         EObject current = null;
 
@@ -254,8 +248,8 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
         try {
-            // InternalEObjectAtOffsetTestLanguage.g:122:52: (iv_ruleAbstractBar= ruleAbstractBar EOF )
-            // InternalEObjectAtOffsetTestLanguage.g:123:2: iv_ruleAbstractBar= ruleAbstractBar EOF
+            // InternalEObjectAtOffsetTestLanguage.g:117:52: (iv_ruleAbstractBar= ruleAbstractBar EOF )
+            // InternalEObjectAtOffsetTestLanguage.g:118:2: iv_ruleAbstractBar= ruleAbstractBar EOF
             {
              newCompositeNode(grammarAccess.getAbstractBarRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -282,7 +276,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
     // $ANTLR start "ruleAbstractBar"
-    // InternalEObjectAtOffsetTestLanguage.g:129:1: ruleAbstractBar returns [EObject current=null] : ( (otherlv_0= 'zonk' )? (this_INT_1= RULE_INT )? this_Bar_2= ruleBar ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )? ( ( ruleQualifiedNameWithOtherDelim ) )? ) ;
+    // InternalEObjectAtOffsetTestLanguage.g:124:1: ruleAbstractBar returns [EObject current=null] : ( (otherlv_0= 'zonk' )? (this_INT_1= RULE_INT )? this_Bar_2= ruleBar ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )? ( ( ruleQualifiedNameWithOtherDelim ) )? ) ;
     public final EObject ruleAbstractBar() throws RecognitionException {
         EObject current = null;
 
@@ -292,17 +286,14 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
         EObject this_Bar_2 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalEObjectAtOffsetTestLanguage.g:135:2: ( ( (otherlv_0= 'zonk' )? (this_INT_1= RULE_INT )? this_Bar_2= ruleBar ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )? ( ( ruleQualifiedNameWithOtherDelim ) )? ) )
-            // InternalEObjectAtOffsetTestLanguage.g:136:2: ( (otherlv_0= 'zonk' )? (this_INT_1= RULE_INT )? this_Bar_2= ruleBar ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )? ( ( ruleQualifiedNameWithOtherDelim ) )? )
+            // InternalEObjectAtOffsetTestLanguage.g:125:1: ( ( (otherlv_0= 'zonk' )? (this_INT_1= RULE_INT )? this_Bar_2= ruleBar ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )? ( ( ruleQualifiedNameWithOtherDelim ) )? ) )
+            // InternalEObjectAtOffsetTestLanguage.g:126:2: ( (otherlv_0= 'zonk' )? (this_INT_1= RULE_INT )? this_Bar_2= ruleBar ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )? ( ( ruleQualifiedNameWithOtherDelim ) )? )
             {
-            // InternalEObjectAtOffsetTestLanguage.g:136:2: ( (otherlv_0= 'zonk' )? (this_INT_1= RULE_INT )? this_Bar_2= ruleBar ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )? ( ( ruleQualifiedNameWithOtherDelim ) )? )
-            // InternalEObjectAtOffsetTestLanguage.g:137:3: (otherlv_0= 'zonk' )? (this_INT_1= RULE_INT )? this_Bar_2= ruleBar ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )? ( ( ruleQualifiedNameWithOtherDelim ) )?
+            // InternalEObjectAtOffsetTestLanguage.g:126:2: ( (otherlv_0= 'zonk' )? (this_INT_1= RULE_INT )? this_Bar_2= ruleBar ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )? ( ( ruleQualifiedNameWithOtherDelim ) )? )
+            // InternalEObjectAtOffsetTestLanguage.g:127:3: (otherlv_0= 'zonk' )? (this_INT_1= RULE_INT )? this_Bar_2= ruleBar ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )? ( ( ruleQualifiedNameWithOtherDelim ) )?
             {
-            // InternalEObjectAtOffsetTestLanguage.g:137:3: (otherlv_0= 'zonk' )?
+            // InternalEObjectAtOffsetTestLanguage.g:127:3: (otherlv_0= 'zonk' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -311,7 +302,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
             }
             switch (alt2) {
                 case 1 :
-                    // InternalEObjectAtOffsetTestLanguage.g:138:4: otherlv_0= 'zonk'
+                    // InternalEObjectAtOffsetTestLanguage.g:128:4: otherlv_0= 'zonk'
                     {
                     otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_4); 
 
@@ -323,7 +314,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
             }
 
-            // InternalEObjectAtOffsetTestLanguage.g:143:3: (this_INT_1= RULE_INT )?
+            // InternalEObjectAtOffsetTestLanguage.g:133:3: (this_INT_1= RULE_INT )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -332,7 +323,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
             }
             switch (alt3) {
                 case 1 :
-                    // InternalEObjectAtOffsetTestLanguage.g:144:4: this_INT_1= RULE_INT
+                    // InternalEObjectAtOffsetTestLanguage.g:134:4: this_INT_1= RULE_INT
                     {
                     this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_4); 
 
@@ -356,7 +347,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
             			current = this_Bar_2;
             			afterParserOrEnumRuleCall();
             		
-            // InternalEObjectAtOffsetTestLanguage.g:157:3: ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )?
+            // InternalEObjectAtOffsetTestLanguage.g:147:3: ( () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -365,10 +356,10 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
             }
             switch (alt4) {
                 case 1 :
-                    // InternalEObjectAtOffsetTestLanguage.g:158:4: () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) )
+                    // InternalEObjectAtOffsetTestLanguage.g:148:4: () otherlv_4= 'foobar' ( ( ruleQualifiedNameWithOtherDelim ) )
                     {
-                    // InternalEObjectAtOffsetTestLanguage.g:158:4: ()
-                    // InternalEObjectAtOffsetTestLanguage.g:159:5: 
+                    // InternalEObjectAtOffsetTestLanguage.g:148:4: ()
+                    // InternalEObjectAtOffsetTestLanguage.g:149:5: 
                     {
 
                     					current = forceCreateModelElementAndSet(
@@ -382,11 +373,11 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
                     				newLeafNode(otherlv_4, grammarAccess.getAbstractBarAccess().getFoobarKeyword_3_1());
                     			
-                    // InternalEObjectAtOffsetTestLanguage.g:169:4: ( ( ruleQualifiedNameWithOtherDelim ) )
-                    // InternalEObjectAtOffsetTestLanguage.g:170:5: ( ruleQualifiedNameWithOtherDelim )
+                    // InternalEObjectAtOffsetTestLanguage.g:159:4: ( ( ruleQualifiedNameWithOtherDelim ) )
+                    // InternalEObjectAtOffsetTestLanguage.g:160:5: ( ruleQualifiedNameWithOtherDelim )
                     {
-                    // InternalEObjectAtOffsetTestLanguage.g:170:5: ( ruleQualifiedNameWithOtherDelim )
-                    // InternalEObjectAtOffsetTestLanguage.g:171:6: ruleQualifiedNameWithOtherDelim
+                    // InternalEObjectAtOffsetTestLanguage.g:160:5: ( ruleQualifiedNameWithOtherDelim )
+                    // InternalEObjectAtOffsetTestLanguage.g:161:6: ruleQualifiedNameWithOtherDelim
                     {
 
                     						if (current==null) {
@@ -416,7 +407,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
             }
 
-            // InternalEObjectAtOffsetTestLanguage.g:186:3: ( ( ruleQualifiedNameWithOtherDelim ) )?
+            // InternalEObjectAtOffsetTestLanguage.g:176:3: ( ( ruleQualifiedNameWithOtherDelim ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -425,10 +416,10 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
             }
             switch (alt5) {
                 case 1 :
-                    // InternalEObjectAtOffsetTestLanguage.g:187:4: ( ruleQualifiedNameWithOtherDelim )
+                    // InternalEObjectAtOffsetTestLanguage.g:177:4: ( ruleQualifiedNameWithOtherDelim )
                     {
-                    // InternalEObjectAtOffsetTestLanguage.g:187:4: ( ruleQualifiedNameWithOtherDelim )
-                    // InternalEObjectAtOffsetTestLanguage.g:188:5: ruleQualifiedNameWithOtherDelim
+                    // InternalEObjectAtOffsetTestLanguage.g:177:4: ( ruleQualifiedNameWithOtherDelim )
+                    // InternalEObjectAtOffsetTestLanguage.g:178:5: ruleQualifiedNameWithOtherDelim
                     {
 
                     					if (current==null) {
@@ -461,9 +452,6 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -478,7 +466,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
     // $ANTLR start "entryRuleBar"
-    // InternalEObjectAtOffsetTestLanguage.g:206:1: entryRuleBar returns [EObject current=null] : iv_ruleBar= ruleBar EOF ;
+    // InternalEObjectAtOffsetTestLanguage.g:196:1: entryRuleBar returns [EObject current=null] : iv_ruleBar= ruleBar EOF ;
     public final EObject entryRuleBar() throws RecognitionException {
         EObject current = null;
 
@@ -486,8 +474,8 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
         try {
-            // InternalEObjectAtOffsetTestLanguage.g:206:44: (iv_ruleBar= ruleBar EOF )
-            // InternalEObjectAtOffsetTestLanguage.g:207:2: iv_ruleBar= ruleBar EOF
+            // InternalEObjectAtOffsetTestLanguage.g:196:44: (iv_ruleBar= ruleBar EOF )
+            // InternalEObjectAtOffsetTestLanguage.g:197:2: iv_ruleBar= ruleBar EOF
             {
              newCompositeNode(grammarAccess.getBarRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -514,7 +502,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
     // $ANTLR start "ruleBar"
-    // InternalEObjectAtOffsetTestLanguage.g:213:1: ruleBar returns [EObject current=null] : (otherlv_0= 'bar' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleQualifiedNameWithOtherDelim ) ) (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )* ) ;
+    // InternalEObjectAtOffsetTestLanguage.g:203:1: ruleBar returns [EObject current=null] : (otherlv_0= 'bar' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleQualifiedNameWithOtherDelim ) ) (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )* ) ;
     public final EObject ruleBar() throws RecognitionException {
         EObject current = null;
 
@@ -522,25 +510,22 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
         Token lv_name_1_0=null;
         Token otherlv_3=null;
 
-
-        	enterRule();
-
         try {
-            // InternalEObjectAtOffsetTestLanguage.g:219:2: ( (otherlv_0= 'bar' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleQualifiedNameWithOtherDelim ) ) (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )* ) )
-            // InternalEObjectAtOffsetTestLanguage.g:220:2: (otherlv_0= 'bar' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleQualifiedNameWithOtherDelim ) ) (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )* )
+            // InternalEObjectAtOffsetTestLanguage.g:204:1: ( (otherlv_0= 'bar' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleQualifiedNameWithOtherDelim ) ) (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )* ) )
+            // InternalEObjectAtOffsetTestLanguage.g:205:2: (otherlv_0= 'bar' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleQualifiedNameWithOtherDelim ) ) (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )* )
             {
-            // InternalEObjectAtOffsetTestLanguage.g:220:2: (otherlv_0= 'bar' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleQualifiedNameWithOtherDelim ) ) (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )* )
-            // InternalEObjectAtOffsetTestLanguage.g:221:3: otherlv_0= 'bar' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleQualifiedNameWithOtherDelim ) ) (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )*
+            // InternalEObjectAtOffsetTestLanguage.g:205:2: (otherlv_0= 'bar' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleQualifiedNameWithOtherDelim ) ) (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )* )
+            // InternalEObjectAtOffsetTestLanguage.g:206:3: otherlv_0= 'bar' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleQualifiedNameWithOtherDelim ) ) (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )*
             {
             otherlv_0=(Token)match(input,13,FollowSets000.FOLLOW_6); 
 
             			newLeafNode(otherlv_0, grammarAccess.getBarAccess().getBarKeyword_0());
             		
-            // InternalEObjectAtOffsetTestLanguage.g:225:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalEObjectAtOffsetTestLanguage.g:226:4: (lv_name_1_0= RULE_ID )
+            // InternalEObjectAtOffsetTestLanguage.g:210:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalEObjectAtOffsetTestLanguage.g:211:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalEObjectAtOffsetTestLanguage.g:226:4: (lv_name_1_0= RULE_ID )
-            // InternalEObjectAtOffsetTestLanguage.g:227:5: lv_name_1_0= RULE_ID
+            // InternalEObjectAtOffsetTestLanguage.g:211:4: (lv_name_1_0= RULE_ID )
+            // InternalEObjectAtOffsetTestLanguage.g:212:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); 
 
@@ -562,11 +547,11 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
             }
 
-            // InternalEObjectAtOffsetTestLanguage.g:243:3: ( ( ruleQualifiedNameWithOtherDelim ) )
-            // InternalEObjectAtOffsetTestLanguage.g:244:4: ( ruleQualifiedNameWithOtherDelim )
+            // InternalEObjectAtOffsetTestLanguage.g:228:3: ( ( ruleQualifiedNameWithOtherDelim ) )
+            // InternalEObjectAtOffsetTestLanguage.g:229:4: ( ruleQualifiedNameWithOtherDelim )
             {
-            // InternalEObjectAtOffsetTestLanguage.g:244:4: ( ruleQualifiedNameWithOtherDelim )
-            // InternalEObjectAtOffsetTestLanguage.g:245:5: ruleQualifiedNameWithOtherDelim
+            // InternalEObjectAtOffsetTestLanguage.g:229:4: ( ruleQualifiedNameWithOtherDelim )
+            // InternalEObjectAtOffsetTestLanguage.g:230:5: ruleQualifiedNameWithOtherDelim
             {
 
             					if (current==null) {
@@ -590,7 +575,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
             }
 
-            // InternalEObjectAtOffsetTestLanguage.g:259:3: (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )*
+            // InternalEObjectAtOffsetTestLanguage.g:244:3: (otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) ) )*
             loop6:
             do {
                 int alt6=2;
@@ -603,17 +588,17 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalEObjectAtOffsetTestLanguage.g:260:4: otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) )
+            	    // InternalEObjectAtOffsetTestLanguage.g:245:4: otherlv_3= ',' ( ( ruleQualifiedNameWithOtherDelim ) )
             	    {
             	    otherlv_3=(Token)match(input,14,FollowSets000.FOLLOW_6); 
 
             	    				newLeafNode(otherlv_3, grammarAccess.getBarAccess().getCommaKeyword_3_0());
             	    			
-            	    // InternalEObjectAtOffsetTestLanguage.g:264:4: ( ( ruleQualifiedNameWithOtherDelim ) )
-            	    // InternalEObjectAtOffsetTestLanguage.g:265:5: ( ruleQualifiedNameWithOtherDelim )
+            	    // InternalEObjectAtOffsetTestLanguage.g:249:4: ( ( ruleQualifiedNameWithOtherDelim ) )
+            	    // InternalEObjectAtOffsetTestLanguage.g:250:5: ( ruleQualifiedNameWithOtherDelim )
             	    {
-            	    // InternalEObjectAtOffsetTestLanguage.g:265:5: ( ruleQualifiedNameWithOtherDelim )
-            	    // InternalEObjectAtOffsetTestLanguage.g:266:6: ruleQualifiedNameWithOtherDelim
+            	    // InternalEObjectAtOffsetTestLanguage.g:250:5: ( ruleQualifiedNameWithOtherDelim )
+            	    // InternalEObjectAtOffsetTestLanguage.g:251:6: ruleQualifiedNameWithOtherDelim
             	    {
 
             	    						if (current==null) {
@@ -652,9 +637,6 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -669,7 +651,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
     // $ANTLR start "entryRuleFoo"
-    // InternalEObjectAtOffsetTestLanguage.g:285:1: entryRuleFoo returns [EObject current=null] : iv_ruleFoo= ruleFoo EOF ;
+    // InternalEObjectAtOffsetTestLanguage.g:270:1: entryRuleFoo returns [EObject current=null] : iv_ruleFoo= ruleFoo EOF ;
     public final EObject entryRuleFoo() throws RecognitionException {
         EObject current = null;
 
@@ -677,8 +659,8 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
         try {
-            // InternalEObjectAtOffsetTestLanguage.g:285:44: (iv_ruleFoo= ruleFoo EOF )
-            // InternalEObjectAtOffsetTestLanguage.g:286:2: iv_ruleFoo= ruleFoo EOF
+            // InternalEObjectAtOffsetTestLanguage.g:270:44: (iv_ruleFoo= ruleFoo EOF )
+            // InternalEObjectAtOffsetTestLanguage.g:271:2: iv_ruleFoo= ruleFoo EOF
             {
              newCompositeNode(grammarAccess.getFooRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -705,7 +687,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
     // $ANTLR start "ruleFoo"
-    // InternalEObjectAtOffsetTestLanguage.g:292:1: ruleFoo returns [EObject current=null] : (otherlv_0= 'foo' ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) ) ) ;
+    // InternalEObjectAtOffsetTestLanguage.g:277:1: ruleFoo returns [EObject current=null] : (otherlv_0= 'foo' ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) ) ) ;
     public final EObject ruleFoo() throws RecognitionException {
         EObject current = null;
 
@@ -713,25 +695,22 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
         AntlrDatatypeRuleToken lv_name_1_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalEObjectAtOffsetTestLanguage.g:298:2: ( (otherlv_0= 'foo' ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) ) ) )
-            // InternalEObjectAtOffsetTestLanguage.g:299:2: (otherlv_0= 'foo' ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) ) )
+            // InternalEObjectAtOffsetTestLanguage.g:278:1: ( (otherlv_0= 'foo' ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) ) ) )
+            // InternalEObjectAtOffsetTestLanguage.g:279:2: (otherlv_0= 'foo' ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) ) )
             {
-            // InternalEObjectAtOffsetTestLanguage.g:299:2: (otherlv_0= 'foo' ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) ) )
-            // InternalEObjectAtOffsetTestLanguage.g:300:3: otherlv_0= 'foo' ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) )
+            // InternalEObjectAtOffsetTestLanguage.g:279:2: (otherlv_0= 'foo' ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) ) )
+            // InternalEObjectAtOffsetTestLanguage.g:280:3: otherlv_0= 'foo' ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) )
             {
             otherlv_0=(Token)match(input,15,FollowSets000.FOLLOW_6); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFooAccess().getFooKeyword_0());
             		
-            // InternalEObjectAtOffsetTestLanguage.g:304:3: ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) )
-            // InternalEObjectAtOffsetTestLanguage.g:305:4: (lv_name_1_0= ruleQualifiedNameWithOtherDelim )
+            // InternalEObjectAtOffsetTestLanguage.g:284:3: ( (lv_name_1_0= ruleQualifiedNameWithOtherDelim ) )
+            // InternalEObjectAtOffsetTestLanguage.g:285:4: (lv_name_1_0= ruleQualifiedNameWithOtherDelim )
             {
-            // InternalEObjectAtOffsetTestLanguage.g:305:4: (lv_name_1_0= ruleQualifiedNameWithOtherDelim )
-            // InternalEObjectAtOffsetTestLanguage.g:306:5: lv_name_1_0= ruleQualifiedNameWithOtherDelim
+            // InternalEObjectAtOffsetTestLanguage.g:285:4: (lv_name_1_0= ruleQualifiedNameWithOtherDelim )
+            // InternalEObjectAtOffsetTestLanguage.g:286:5: lv_name_1_0= ruleQualifiedNameWithOtherDelim
             {
 
             					newCompositeNode(grammarAccess.getFooAccess().getNameQualifiedNameWithOtherDelimParserRuleCall_1_0());
@@ -764,9 +743,6 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -781,7 +757,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
     // $ANTLR start "entryRuleQualifiedNameWithOtherDelim"
-    // InternalEObjectAtOffsetTestLanguage.g:327:1: entryRuleQualifiedNameWithOtherDelim returns [String current=null] : iv_ruleQualifiedNameWithOtherDelim= ruleQualifiedNameWithOtherDelim EOF ;
+    // InternalEObjectAtOffsetTestLanguage.g:307:1: entryRuleQualifiedNameWithOtherDelim returns [String current=null] : iv_ruleQualifiedNameWithOtherDelim= ruleQualifiedNameWithOtherDelim EOF ;
     public final String entryRuleQualifiedNameWithOtherDelim() throws RecognitionException {
         String current = null;
 
@@ -789,8 +765,8 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
         try {
-            // InternalEObjectAtOffsetTestLanguage.g:327:67: (iv_ruleQualifiedNameWithOtherDelim= ruleQualifiedNameWithOtherDelim EOF )
-            // InternalEObjectAtOffsetTestLanguage.g:328:2: iv_ruleQualifiedNameWithOtherDelim= ruleQualifiedNameWithOtherDelim EOF
+            // InternalEObjectAtOffsetTestLanguage.g:307:67: (iv_ruleQualifiedNameWithOtherDelim= ruleQualifiedNameWithOtherDelim EOF )
+            // InternalEObjectAtOffsetTestLanguage.g:308:2: iv_ruleQualifiedNameWithOtherDelim= ruleQualifiedNameWithOtherDelim EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameWithOtherDelimRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -817,7 +793,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
     // $ANTLR start "ruleQualifiedNameWithOtherDelim"
-    // InternalEObjectAtOffsetTestLanguage.g:334:1: ruleQualifiedNameWithOtherDelim returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName (kw= '=' this_QualifiedName_2= ruleQualifiedName )* ) ;
+    // InternalEObjectAtOffsetTestLanguage.g:314:1: ruleQualifiedNameWithOtherDelim returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName (kw= '=' this_QualifiedName_2= ruleQualifiedName )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedNameWithOtherDelim() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -827,15 +803,12 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
         AntlrDatatypeRuleToken this_QualifiedName_2 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalEObjectAtOffsetTestLanguage.g:340:2: ( (this_QualifiedName_0= ruleQualifiedName (kw= '=' this_QualifiedName_2= ruleQualifiedName )* ) )
-            // InternalEObjectAtOffsetTestLanguage.g:341:2: (this_QualifiedName_0= ruleQualifiedName (kw= '=' this_QualifiedName_2= ruleQualifiedName )* )
+            // InternalEObjectAtOffsetTestLanguage.g:315:1: ( (this_QualifiedName_0= ruleQualifiedName (kw= '=' this_QualifiedName_2= ruleQualifiedName )* ) )
+            // InternalEObjectAtOffsetTestLanguage.g:316:2: (this_QualifiedName_0= ruleQualifiedName (kw= '=' this_QualifiedName_2= ruleQualifiedName )* )
             {
-            // InternalEObjectAtOffsetTestLanguage.g:341:2: (this_QualifiedName_0= ruleQualifiedName (kw= '=' this_QualifiedName_2= ruleQualifiedName )* )
-            // InternalEObjectAtOffsetTestLanguage.g:342:3: this_QualifiedName_0= ruleQualifiedName (kw= '=' this_QualifiedName_2= ruleQualifiedName )*
+            // InternalEObjectAtOffsetTestLanguage.g:316:2: (this_QualifiedName_0= ruleQualifiedName (kw= '=' this_QualifiedName_2= ruleQualifiedName )* )
+            // InternalEObjectAtOffsetTestLanguage.g:317:3: this_QualifiedName_0= ruleQualifiedName (kw= '=' this_QualifiedName_2= ruleQualifiedName )*
             {
 
             			newCompositeNode(grammarAccess.getQualifiedNameWithOtherDelimAccess().getQualifiedNameParserRuleCall_0());
@@ -851,7 +824,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
             			afterParserOrEnumRuleCall();
             		
-            // InternalEObjectAtOffsetTestLanguage.g:352:3: (kw= '=' this_QualifiedName_2= ruleQualifiedName )*
+            // InternalEObjectAtOffsetTestLanguage.g:327:3: (kw= '=' this_QualifiedName_2= ruleQualifiedName )*
             loop7:
             do {
                 int alt7=2;
@@ -864,7 +837,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalEObjectAtOffsetTestLanguage.g:353:4: kw= '=' this_QualifiedName_2= ruleQualifiedName
+            	    // InternalEObjectAtOffsetTestLanguage.g:328:4: kw= '=' this_QualifiedName_2= ruleQualifiedName
             	    {
             	    kw=(Token)match(input,16,FollowSets000.FOLLOW_6); 
 
@@ -900,9 +873,6 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -917,7 +887,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalEObjectAtOffsetTestLanguage.g:373:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalEObjectAtOffsetTestLanguage.g:348:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -925,8 +895,8 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
         try {
-            // InternalEObjectAtOffsetTestLanguage.g:373:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalEObjectAtOffsetTestLanguage.g:374:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalEObjectAtOffsetTestLanguage.g:348:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalEObjectAtOffsetTestLanguage.g:349:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -953,7 +923,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalEObjectAtOffsetTestLanguage.g:380:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalEObjectAtOffsetTestLanguage.g:355:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -961,15 +931,12 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
         Token kw=null;
         Token this_ID_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalEObjectAtOffsetTestLanguage.g:386:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalEObjectAtOffsetTestLanguage.g:387:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalEObjectAtOffsetTestLanguage.g:356:1: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalEObjectAtOffsetTestLanguage.g:357:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalEObjectAtOffsetTestLanguage.g:387:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalEObjectAtOffsetTestLanguage.g:388:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalEObjectAtOffsetTestLanguage.g:357:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalEObjectAtOffsetTestLanguage.g:358:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_10); 
 
@@ -978,7 +945,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
             			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
             		
-            // InternalEObjectAtOffsetTestLanguage.g:395:3: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalEObjectAtOffsetTestLanguage.g:365:3: (kw= '.' this_ID_2= RULE_ID )*
             loop8:
             do {
                 int alt8=2;
@@ -991,7 +958,7 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalEObjectAtOffsetTestLanguage.g:396:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalEObjectAtOffsetTestLanguage.g:366:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,17,FollowSets000.FOLLOW_6); 
 
@@ -1019,9 +986,6 @@ public class InternalEObjectAtOffsetTestLanguageParser extends AbstractInternalA
 
 
             }
-
-
-            	leaveRule();
 
         }
 

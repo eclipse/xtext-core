@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -127,12 +122,7 @@ entryRuleGreeting returns [EObject current=null]:
 
 // Rule Greeting
 ruleGreeting returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='Hello'
 		{
@@ -173,12 +163,7 @@ entryRuleMyId returns [String current=null]:
 
 // Rule MyId
 ruleMyId returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_ID_0=RULE_ID
 	{
 		$current.merge(this_ID_0);

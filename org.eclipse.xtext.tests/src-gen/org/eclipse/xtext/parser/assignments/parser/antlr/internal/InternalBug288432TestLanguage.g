@@ -69,12 +69,7 @@ entryRuleBody returns [EObject current=null]:
 
 // Rule Body
 ruleBody returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='('
@@ -206,12 +201,7 @@ entryRuleFoo returns [EObject current=null]:
 
 // Rule Foo
 ruleFoo returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_fooValue_0_0=RULE_STRING
@@ -241,12 +231,7 @@ entryRuleContent returns [EObject current=null]:
 
 // Rule Content
 ruleContent returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='content'
 		{
@@ -276,12 +261,7 @@ entryRuleMyElement returns [EObject current=null]:
 
 // Rule MyElement
 ruleMyElement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='element'
 		{
@@ -336,12 +316,7 @@ entryRuleParameter returns [EObject current=null]:
 
 // Rule Parameter
 ruleParameter returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -386,12 +361,7 @@ entryRuleParameterRef returns [EObject current=null]:
 
 // Rule ParameterRef
 ruleParameterRef returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -416,12 +386,7 @@ entryRuleMyInt returns [EObject current=null]:
 
 // Rule MyInt
 ruleMyInt returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_int_0_0=RULE_INT

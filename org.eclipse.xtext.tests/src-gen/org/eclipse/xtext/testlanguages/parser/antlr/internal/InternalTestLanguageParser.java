@@ -118,14 +118,11 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
         EObject lv_multiFeature_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalTestLanguage.g:77:2: ( ( (lv_multiFeature_0_0= ruleAbstractRule ) )* )
-            // InternalTestLanguage.g:78:2: ( (lv_multiFeature_0_0= ruleAbstractRule ) )*
+            // InternalTestLanguage.g:72:1: ( ( (lv_multiFeature_0_0= ruleAbstractRule ) )* )
+            // InternalTestLanguage.g:73:2: ( (lv_multiFeature_0_0= ruleAbstractRule ) )*
             {
-            // InternalTestLanguage.g:78:2: ( (lv_multiFeature_0_0= ruleAbstractRule ) )*
+            // InternalTestLanguage.g:73:2: ( (lv_multiFeature_0_0= ruleAbstractRule ) )*
             loop1:
             do {
                 int alt1=2;
@@ -138,10 +135,10 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalTestLanguage.g:79:3: (lv_multiFeature_0_0= ruleAbstractRule )
+            	    // InternalTestLanguage.g:74:3: (lv_multiFeature_0_0= ruleAbstractRule )
             	    {
-            	    // InternalTestLanguage.g:79:3: (lv_multiFeature_0_0= ruleAbstractRule )
-            	    // InternalTestLanguage.g:80:4: lv_multiFeature_0_0= ruleAbstractRule
+            	    // InternalTestLanguage.g:74:3: (lv_multiFeature_0_0= ruleAbstractRule )
+            	    // InternalTestLanguage.g:75:4: lv_multiFeature_0_0= ruleAbstractRule
             	    {
 
             	    				newCompositeNode(grammarAccess.getEntryRuleAccess().getMultiFeatureAbstractRuleParserRuleCall_0());
@@ -177,9 +174,6 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -194,7 +188,7 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAbstractRule"
-    // InternalTestLanguage.g:100:1: entryRuleAbstractRule returns [EObject current=null] : iv_ruleAbstractRule= ruleAbstractRule EOF ;
+    // InternalTestLanguage.g:95:1: entryRuleAbstractRule returns [EObject current=null] : iv_ruleAbstractRule= ruleAbstractRule EOF ;
     public final EObject entryRuleAbstractRule() throws RecognitionException {
         EObject current = null;
 
@@ -202,8 +196,8 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTestLanguage.g:100:53: (iv_ruleAbstractRule= ruleAbstractRule EOF )
-            // InternalTestLanguage.g:101:2: iv_ruleAbstractRule= ruleAbstractRule EOF
+            // InternalTestLanguage.g:95:53: (iv_ruleAbstractRule= ruleAbstractRule EOF )
+            // InternalTestLanguage.g:96:2: iv_ruleAbstractRule= ruleAbstractRule EOF
             {
              newCompositeNode(grammarAccess.getAbstractRuleRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -230,7 +224,7 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAbstractRule"
-    // InternalTestLanguage.g:107:1: ruleAbstractRule returns [EObject current=null] : (this_ChoiceRule_0= ruleChoiceRule | this_ReducibleRule_1= ruleReducibleRule ) ;
+    // InternalTestLanguage.g:102:1: ruleAbstractRule returns [EObject current=null] : (this_ChoiceRule_0= ruleChoiceRule | this_ReducibleRule_1= ruleReducibleRule ) ;
     public final EObject ruleAbstractRule() throws RecognitionException {
         EObject current = null;
 
@@ -239,14 +233,11 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
         EObject this_ReducibleRule_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalTestLanguage.g:113:2: ( (this_ChoiceRule_0= ruleChoiceRule | this_ReducibleRule_1= ruleReducibleRule ) )
-            // InternalTestLanguage.g:114:2: (this_ChoiceRule_0= ruleChoiceRule | this_ReducibleRule_1= ruleReducibleRule )
+            // InternalTestLanguage.g:103:1: ( (this_ChoiceRule_0= ruleChoiceRule | this_ReducibleRule_1= ruleReducibleRule ) )
+            // InternalTestLanguage.g:104:2: (this_ChoiceRule_0= ruleChoiceRule | this_ReducibleRule_1= ruleReducibleRule )
             {
-            // InternalTestLanguage.g:114:2: (this_ChoiceRule_0= ruleChoiceRule | this_ReducibleRule_1= ruleReducibleRule )
+            // InternalTestLanguage.g:104:2: (this_ChoiceRule_0= ruleChoiceRule | this_ReducibleRule_1= ruleReducibleRule )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -264,7 +255,7 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalTestLanguage.g:115:3: this_ChoiceRule_0= ruleChoiceRule
+                    // InternalTestLanguage.g:105:3: this_ChoiceRule_0= ruleChoiceRule
                     {
 
                     			newCompositeNode(grammarAccess.getAbstractRuleAccess().getChoiceRuleParserRuleCall_0());
@@ -282,7 +273,7 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTestLanguage.g:124:3: this_ReducibleRule_1= ruleReducibleRule
+                    // InternalTestLanguage.g:114:3: this_ReducibleRule_1= ruleReducibleRule
                     {
 
                     			newCompositeNode(grammarAccess.getAbstractRuleAccess().getReducibleRuleParserRuleCall_1());
@@ -305,9 +296,6 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -322,7 +310,7 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleChoiceRule"
-    // InternalTestLanguage.g:136:1: entryRuleChoiceRule returns [EObject current=null] : iv_ruleChoiceRule= ruleChoiceRule EOF ;
+    // InternalTestLanguage.g:126:1: entryRuleChoiceRule returns [EObject current=null] : iv_ruleChoiceRule= ruleChoiceRule EOF ;
     public final EObject entryRuleChoiceRule() throws RecognitionException {
         EObject current = null;
 
@@ -330,8 +318,8 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTestLanguage.g:136:51: (iv_ruleChoiceRule= ruleChoiceRule EOF )
-            // InternalTestLanguage.g:137:2: iv_ruleChoiceRule= ruleChoiceRule EOF
+            // InternalTestLanguage.g:126:51: (iv_ruleChoiceRule= ruleChoiceRule EOF )
+            // InternalTestLanguage.g:127:2: iv_ruleChoiceRule= ruleChoiceRule EOF
             {
              newCompositeNode(grammarAccess.getChoiceRuleRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -358,7 +346,7 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleChoiceRule"
-    // InternalTestLanguage.g:143:1: ruleChoiceRule returns [EObject current=null] : (otherlv_0= 'choice' ( (lv_optionalKeyword_1_0= 'optional' ) )? ( (lv_name_2_0= RULE_ID ) ) ) ;
+    // InternalTestLanguage.g:133:1: ruleChoiceRule returns [EObject current=null] : (otherlv_0= 'choice' ( (lv_optionalKeyword_1_0= 'optional' ) )? ( (lv_name_2_0= RULE_ID ) ) ) ;
     public final EObject ruleChoiceRule() throws RecognitionException {
         EObject current = null;
 
@@ -366,21 +354,18 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
         Token lv_optionalKeyword_1_0=null;
         Token lv_name_2_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalTestLanguage.g:149:2: ( (otherlv_0= 'choice' ( (lv_optionalKeyword_1_0= 'optional' ) )? ( (lv_name_2_0= RULE_ID ) ) ) )
-            // InternalTestLanguage.g:150:2: (otherlv_0= 'choice' ( (lv_optionalKeyword_1_0= 'optional' ) )? ( (lv_name_2_0= RULE_ID ) ) )
+            // InternalTestLanguage.g:134:1: ( (otherlv_0= 'choice' ( (lv_optionalKeyword_1_0= 'optional' ) )? ( (lv_name_2_0= RULE_ID ) ) ) )
+            // InternalTestLanguage.g:135:2: (otherlv_0= 'choice' ( (lv_optionalKeyword_1_0= 'optional' ) )? ( (lv_name_2_0= RULE_ID ) ) )
             {
-            // InternalTestLanguage.g:150:2: (otherlv_0= 'choice' ( (lv_optionalKeyword_1_0= 'optional' ) )? ( (lv_name_2_0= RULE_ID ) ) )
-            // InternalTestLanguage.g:151:3: otherlv_0= 'choice' ( (lv_optionalKeyword_1_0= 'optional' ) )? ( (lv_name_2_0= RULE_ID ) )
+            // InternalTestLanguage.g:135:2: (otherlv_0= 'choice' ( (lv_optionalKeyword_1_0= 'optional' ) )? ( (lv_name_2_0= RULE_ID ) ) )
+            // InternalTestLanguage.g:136:3: otherlv_0= 'choice' ( (lv_optionalKeyword_1_0= 'optional' ) )? ( (lv_name_2_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getChoiceRuleAccess().getChoiceKeyword_0());
             		
-            // InternalTestLanguage.g:155:3: ( (lv_optionalKeyword_1_0= 'optional' ) )?
+            // InternalTestLanguage.g:140:3: ( (lv_optionalKeyword_1_0= 'optional' ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -389,10 +374,10 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalTestLanguage.g:156:4: (lv_optionalKeyword_1_0= 'optional' )
+                    // InternalTestLanguage.g:141:4: (lv_optionalKeyword_1_0= 'optional' )
                     {
-                    // InternalTestLanguage.g:156:4: (lv_optionalKeyword_1_0= 'optional' )
-                    // InternalTestLanguage.g:157:5: lv_optionalKeyword_1_0= 'optional'
+                    // InternalTestLanguage.g:141:4: (lv_optionalKeyword_1_0= 'optional' )
+                    // InternalTestLanguage.g:142:5: lv_optionalKeyword_1_0= 'optional'
                     {
                     lv_optionalKeyword_1_0=(Token)match(input,12,FollowSets000.FOLLOW_5); 
 
@@ -413,11 +398,11 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTestLanguage.g:169:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalTestLanguage.g:170:4: (lv_name_2_0= RULE_ID )
+            // InternalTestLanguage.g:154:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalTestLanguage.g:155:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalTestLanguage.g:170:4: (lv_name_2_0= RULE_ID )
-            // InternalTestLanguage.g:171:5: lv_name_2_0= RULE_ID
+            // InternalTestLanguage.g:155:4: (lv_name_2_0= RULE_ID )
+            // InternalTestLanguage.g:156:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -445,9 +430,6 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -462,7 +444,7 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleReducibleRule"
-    // InternalTestLanguage.g:191:1: entryRuleReducibleRule returns [EObject current=null] : iv_ruleReducibleRule= ruleReducibleRule EOF ;
+    // InternalTestLanguage.g:176:1: entryRuleReducibleRule returns [EObject current=null] : iv_ruleReducibleRule= ruleReducibleRule EOF ;
     public final EObject entryRuleReducibleRule() throws RecognitionException {
         EObject current = null;
 
@@ -470,8 +452,8 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTestLanguage.g:191:54: (iv_ruleReducibleRule= ruleReducibleRule EOF )
-            // InternalTestLanguage.g:192:2: iv_ruleReducibleRule= ruleReducibleRule EOF
+            // InternalTestLanguage.g:176:54: (iv_ruleReducibleRule= ruleReducibleRule EOF )
+            // InternalTestLanguage.g:177:2: iv_ruleReducibleRule= ruleReducibleRule EOF
             {
              newCompositeNode(grammarAccess.getReducibleRuleRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -498,7 +480,7 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReducibleRule"
-    // InternalTestLanguage.g:198:1: ruleReducibleRule returns [EObject current=null] : (otherlv_0= 'reducible' this_TerminalRule_1= ruleTerminalRule ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )? ) ;
+    // InternalTestLanguage.g:183:1: ruleReducibleRule returns [EObject current=null] : (otherlv_0= 'reducible' this_TerminalRule_1= ruleTerminalRule ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )? ) ;
     public final EObject ruleReducibleRule() throws RecognitionException {
         EObject current = null;
 
@@ -508,15 +490,12 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
         EObject lv_actionFeature_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalTestLanguage.g:204:2: ( (otherlv_0= 'reducible' this_TerminalRule_1= ruleTerminalRule ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )? ) )
-            // InternalTestLanguage.g:205:2: (otherlv_0= 'reducible' this_TerminalRule_1= ruleTerminalRule ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )? )
+            // InternalTestLanguage.g:184:1: ( (otherlv_0= 'reducible' this_TerminalRule_1= ruleTerminalRule ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )? ) )
+            // InternalTestLanguage.g:185:2: (otherlv_0= 'reducible' this_TerminalRule_1= ruleTerminalRule ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )? )
             {
-            // InternalTestLanguage.g:205:2: (otherlv_0= 'reducible' this_TerminalRule_1= ruleTerminalRule ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )? )
-            // InternalTestLanguage.g:206:3: otherlv_0= 'reducible' this_TerminalRule_1= ruleTerminalRule ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )?
+            // InternalTestLanguage.g:185:2: (otherlv_0= 'reducible' this_TerminalRule_1= ruleTerminalRule ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )? )
+            // InternalTestLanguage.g:186:3: otherlv_0= 'reducible' this_TerminalRule_1= ruleTerminalRule ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )?
             {
             otherlv_0=(Token)match(input,13,FollowSets000.FOLLOW_6); 
 
@@ -534,7 +513,7 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
             			current = this_TerminalRule_1;
             			afterParserOrEnumRuleCall();
             		
-            // InternalTestLanguage.g:218:3: ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )?
+            // InternalTestLanguage.g:198:3: ( () ( (lv_actionFeature_3_0= ruleTerminalRule ) ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -543,10 +522,10 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalTestLanguage.g:219:4: () ( (lv_actionFeature_3_0= ruleTerminalRule ) )
+                    // InternalTestLanguage.g:199:4: () ( (lv_actionFeature_3_0= ruleTerminalRule ) )
                     {
-                    // InternalTestLanguage.g:219:4: ()
-                    // InternalTestLanguage.g:220:5: 
+                    // InternalTestLanguage.g:199:4: ()
+                    // InternalTestLanguage.g:200:5: 
                     {
 
                     					current = forceCreateModelElementAndAdd(
@@ -556,11 +535,11 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalTestLanguage.g:226:4: ( (lv_actionFeature_3_0= ruleTerminalRule ) )
-                    // InternalTestLanguage.g:227:5: (lv_actionFeature_3_0= ruleTerminalRule )
+                    // InternalTestLanguage.g:206:4: ( (lv_actionFeature_3_0= ruleTerminalRule ) )
+                    // InternalTestLanguage.g:207:5: (lv_actionFeature_3_0= ruleTerminalRule )
                     {
-                    // InternalTestLanguage.g:227:5: (lv_actionFeature_3_0= ruleTerminalRule )
-                    // InternalTestLanguage.g:228:6: lv_actionFeature_3_0= ruleTerminalRule
+                    // InternalTestLanguage.g:207:5: (lv_actionFeature_3_0= ruleTerminalRule )
+                    // InternalTestLanguage.g:208:6: lv_actionFeature_3_0= ruleTerminalRule
                     {
 
                     						newCompositeNode(grammarAccess.getReducibleRuleAccess().getActionFeatureTerminalRuleParserRuleCall_2_1_0());
@@ -599,9 +578,6 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -616,7 +592,7 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTerminalRule"
-    // InternalTestLanguage.g:250:1: entryRuleTerminalRule returns [EObject current=null] : iv_ruleTerminalRule= ruleTerminalRule EOF ;
+    // InternalTestLanguage.g:230:1: entryRuleTerminalRule returns [EObject current=null] : iv_ruleTerminalRule= ruleTerminalRule EOF ;
     public final EObject entryRuleTerminalRule() throws RecognitionException {
         EObject current = null;
 
@@ -624,8 +600,8 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTestLanguage.g:250:53: (iv_ruleTerminalRule= ruleTerminalRule EOF )
-            // InternalTestLanguage.g:251:2: iv_ruleTerminalRule= ruleTerminalRule EOF
+            // InternalTestLanguage.g:230:53: (iv_ruleTerminalRule= ruleTerminalRule EOF )
+            // InternalTestLanguage.g:231:2: iv_ruleTerminalRule= ruleTerminalRule EOF
             {
              newCompositeNode(grammarAccess.getTerminalRuleRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -652,24 +628,21 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTerminalRule"
-    // InternalTestLanguage.g:257:1: ruleTerminalRule returns [EObject current=null] : ( (lv_stringFeature_0_0= RULE_STRING ) ) ;
+    // InternalTestLanguage.g:237:1: ruleTerminalRule returns [EObject current=null] : ( (lv_stringFeature_0_0= RULE_STRING ) ) ;
     public final EObject ruleTerminalRule() throws RecognitionException {
         EObject current = null;
 
         Token lv_stringFeature_0_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalTestLanguage.g:263:2: ( ( (lv_stringFeature_0_0= RULE_STRING ) ) )
-            // InternalTestLanguage.g:264:2: ( (lv_stringFeature_0_0= RULE_STRING ) )
+            // InternalTestLanguage.g:238:1: ( ( (lv_stringFeature_0_0= RULE_STRING ) ) )
+            // InternalTestLanguage.g:239:2: ( (lv_stringFeature_0_0= RULE_STRING ) )
             {
-            // InternalTestLanguage.g:264:2: ( (lv_stringFeature_0_0= RULE_STRING ) )
-            // InternalTestLanguage.g:265:3: (lv_stringFeature_0_0= RULE_STRING )
+            // InternalTestLanguage.g:239:2: ( (lv_stringFeature_0_0= RULE_STRING ) )
+            // InternalTestLanguage.g:240:3: (lv_stringFeature_0_0= RULE_STRING )
             {
-            // InternalTestLanguage.g:265:3: (lv_stringFeature_0_0= RULE_STRING )
-            // InternalTestLanguage.g:266:4: lv_stringFeature_0_0= RULE_STRING
+            // InternalTestLanguage.g:240:3: (lv_stringFeature_0_0= RULE_STRING )
+            // InternalTestLanguage.g:241:4: lv_stringFeature_0_0= RULE_STRING
             {
             lv_stringFeature_0_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_2); 
 
@@ -693,9 +666,6 @@ public class InternalTestLanguageParser extends AbstractInternalAntlrParser {
 
 
             }
-
-
-            	leaveRule();
 
         }
 

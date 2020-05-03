@@ -69,12 +69,7 @@ entryRuleEPatch returns [EObject current=null]:
 
 // Rule EPatch
 ruleEPatch returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='epatch'
 		{
@@ -175,12 +170,7 @@ entryRuleImport returns [EObject current=null]:
 
 // Rule Import
 ruleImport returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getImportAccess().getModelImportParserRuleCall_0());
@@ -220,12 +210,7 @@ entryRuleModelImport returns [EObject current=null]:
 
 // Rule ModelImport
 ruleModelImport returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getModelImportAccess().getResourceImportParserRuleCall_0());
@@ -256,12 +241,7 @@ entryRuleResourceImport returns [EObject current=null]:
 
 // Rule ResourceImport
 ruleResourceImport returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='import'
 		{
@@ -319,12 +299,7 @@ entryRuleEPackageImport returns [EObject current=null]:
 
 // Rule EPackageImport
 ruleEPackageImport returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='import'
 		{
@@ -382,12 +357,7 @@ entryRuleJavaImport returns [EObject current=null]:
 
 // Rule JavaImport
 ruleJavaImport returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='import'
 		{
@@ -451,12 +421,7 @@ entryRuleExtensionImport returns [EObject current=null]:
 
 // Rule ExtensionImport
 ruleExtensionImport returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='import'
 		{
@@ -520,12 +485,7 @@ entryRuleNamedResource returns [EObject current=null]:
 
 // Rule NamedResource
 ruleNamedResource returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='resource'
 		{
@@ -677,12 +637,7 @@ entryRuleObjectRef returns [EObject current=null]:
 
 // Rule ObjectRef
 ruleObjectRef returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='object'
 		{
@@ -927,12 +882,7 @@ entryRuleBiSingleAssignment returns [EObject current=null]:
 
 // Rule BiSingleAssignment
 ruleBiSingleAssignment returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1014,12 +964,7 @@ entryRuleBiListAssignment returns [EObject current=null]:
 
 // Rule BiListAssignment
 ruleBiListAssignment returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1163,12 +1108,7 @@ entryRuleMonoSingleAssignment returns [EObject current=null]:
 
 // Rule MonoSingleAssignment
 ruleMonoSingleAssignment returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1227,12 +1167,7 @@ entryRuleMonoListAssignment returns [EObject current=null]:
 
 // Rule MonoListAssignment
 ruleMonoListAssignment returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1326,12 +1261,7 @@ entryRuleAssignmentValue returns [EObject current=null]:
 
 // Rule AssignmentValue
 ruleAssignmentValue returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1485,12 +1415,7 @@ entryRuleListAssignmentValue returns [EObject current=null]:
 
 // Rule ListAssignmentValue
 ruleListAssignmentValue returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1697,12 +1622,7 @@ entryRuleSingleAssignmentValue returns [EObject current=null]:
 
 // Rule SingleAssignmentValue
 ruleSingleAssignmentValue returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1871,12 +1791,7 @@ entryRuleCreatedObject returns [EObject current=null]:
 
 // Rule CreatedObject
 ruleCreatedObject returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1997,12 +1912,7 @@ entryRuleObjectNew returns [EObject current=null]:
 
 // Rule ObjectNew
 ruleObjectNew returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='new'
 		{
@@ -2051,12 +1961,7 @@ entryRuleObjectCopy returns [EObject current=null]:
 
 // Rule ObjectCopy
 ruleObjectCopy returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='copy'
 		{
@@ -2105,12 +2010,7 @@ entryRuleMigration returns [EObject current=null]:
 
 // Rule Migration
 ruleMigration returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -2211,12 +2111,7 @@ entryRuleExecutable returns [EObject current=null]:
 
 // Rule Executable
 ruleExecutable returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getExecutableAccess().getJavaExecutableParserRuleCall_0());
@@ -2247,12 +2142,7 @@ entryRuleJavaExecutable returns [EObject current=null]:
 
 // Rule JavaExecutable
 ruleJavaExecutable returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='java'
 		{
@@ -2296,12 +2186,7 @@ entryRuleExpressionExecutable returns [EObject current=null]:
 
 // Rule ExpressionExecutable
 ruleExpressionExecutable returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_exprstr_0_0=RULE_STRING

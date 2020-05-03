@@ -116,25 +116,22 @@ public class InternalBaseInheritanceTestLanguageParser extends AbstractInternalA
         Token otherlv_0=null;
         Token lv_name_1_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalBaseInheritanceTestLanguage.g:77:2: ( (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalBaseInheritanceTestLanguage.g:78:2: (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalBaseInheritanceTestLanguage.g:72:1: ( (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalBaseInheritanceTestLanguage.g:73:2: (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalBaseInheritanceTestLanguage.g:78:2: (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalBaseInheritanceTestLanguage.g:79:3: otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) )
+            // InternalBaseInheritanceTestLanguage.g:73:2: (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalBaseInheritanceTestLanguage.g:74:3: otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getModelAccess().getModelKeyword_0());
             		
-            // InternalBaseInheritanceTestLanguage.g:83:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalBaseInheritanceTestLanguage.g:84:4: (lv_name_1_0= RULE_ID )
+            // InternalBaseInheritanceTestLanguage.g:78:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalBaseInheritanceTestLanguage.g:79:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalBaseInheritanceTestLanguage.g:84:4: (lv_name_1_0= RULE_ID )
-            // InternalBaseInheritanceTestLanguage.g:85:5: lv_name_1_0= RULE_ID
+            // InternalBaseInheritanceTestLanguage.g:79:4: (lv_name_1_0= RULE_ID )
+            // InternalBaseInheritanceTestLanguage.g:80:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -161,9 +158,6 @@ public class InternalBaseInheritanceTestLanguageParser extends AbstractInternalA
 
 
             }
-
-
-            	leaveRule();
 
         }
 

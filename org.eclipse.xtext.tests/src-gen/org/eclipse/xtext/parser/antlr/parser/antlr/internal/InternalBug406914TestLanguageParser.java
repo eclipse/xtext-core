@@ -117,21 +117,18 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
 
         Token lv_name_0_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalBug406914TestLanguage.g:77:2: ( ( ( (lv_name_0_0= RULE_ID ) ) ruleBS_ESCAPE ) )
-            // InternalBug406914TestLanguage.g:78:2: ( ( (lv_name_0_0= RULE_ID ) ) ruleBS_ESCAPE )
+            // InternalBug406914TestLanguage.g:72:1: ( ( ( (lv_name_0_0= RULE_ID ) ) ruleBS_ESCAPE ) )
+            // InternalBug406914TestLanguage.g:73:2: ( ( (lv_name_0_0= RULE_ID ) ) ruleBS_ESCAPE )
             {
-            // InternalBug406914TestLanguage.g:78:2: ( ( (lv_name_0_0= RULE_ID ) ) ruleBS_ESCAPE )
-            // InternalBug406914TestLanguage.g:79:3: ( (lv_name_0_0= RULE_ID ) ) ruleBS_ESCAPE
+            // InternalBug406914TestLanguage.g:73:2: ( ( (lv_name_0_0= RULE_ID ) ) ruleBS_ESCAPE )
+            // InternalBug406914TestLanguage.g:74:3: ( (lv_name_0_0= RULE_ID ) ) ruleBS_ESCAPE
             {
-            // InternalBug406914TestLanguage.g:79:3: ( (lv_name_0_0= RULE_ID ) )
-            // InternalBug406914TestLanguage.g:80:4: (lv_name_0_0= RULE_ID )
+            // InternalBug406914TestLanguage.g:74:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalBug406914TestLanguage.g:75:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalBug406914TestLanguage.g:80:4: (lv_name_0_0= RULE_ID )
-            // InternalBug406914TestLanguage.g:81:5: lv_name_0_0= RULE_ID
+            // InternalBug406914TestLanguage.g:75:4: (lv_name_0_0= RULE_ID )
+            // InternalBug406914TestLanguage.g:76:5: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_3); 
 
@@ -170,9 +167,6 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -187,7 +181,7 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleBS_ESCAPE"
-    // InternalBug406914TestLanguage.g:108:1: entryRuleBS_ESCAPE returns [String current=null] : iv_ruleBS_ESCAPE= ruleBS_ESCAPE EOF ;
+    // InternalBug406914TestLanguage.g:103:1: entryRuleBS_ESCAPE returns [String current=null] : iv_ruleBS_ESCAPE= ruleBS_ESCAPE EOF ;
     public final String entryRuleBS_ESCAPE() throws RecognitionException {
         String current = null;
 
@@ -195,8 +189,8 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalBug406914TestLanguage.g:108:49: (iv_ruleBS_ESCAPE= ruleBS_ESCAPE EOF )
-            // InternalBug406914TestLanguage.g:109:2: iv_ruleBS_ESCAPE= ruleBS_ESCAPE EOF
+            // InternalBug406914TestLanguage.g:103:49: (iv_ruleBS_ESCAPE= ruleBS_ESCAPE EOF )
+            // InternalBug406914TestLanguage.g:104:2: iv_ruleBS_ESCAPE= ruleBS_ESCAPE EOF
             {
              newCompositeNode(grammarAccess.getBS_ESCAPERule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -223,20 +217,17 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleBS_ESCAPE"
-    // InternalBug406914TestLanguage.g:115:1: ruleBS_ESCAPE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '\\b' | kw= '\\f' | kw= '\\n' | kw= 'lineFeed' | kw= '\\r' | kw= '\\t' | kw= '\\\\' ) ;
+    // InternalBug406914TestLanguage.g:110:1: ruleBS_ESCAPE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '\\b' | kw= '\\f' | kw= '\\n' | kw= 'lineFeed' | kw= '\\r' | kw= '\\t' | kw= '\\\\' ) ;
     public final AntlrDatatypeRuleToken ruleBS_ESCAPE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token kw=null;
 
-
-        	enterRule();
-
         try {
-            // InternalBug406914TestLanguage.g:121:2: ( (kw= '\\b' | kw= '\\f' | kw= '\\n' | kw= 'lineFeed' | kw= '\\r' | kw= '\\t' | kw= '\\\\' ) )
-            // InternalBug406914TestLanguage.g:122:2: (kw= '\\b' | kw= '\\f' | kw= '\\n' | kw= 'lineFeed' | kw= '\\r' | kw= '\\t' | kw= '\\\\' )
+            // InternalBug406914TestLanguage.g:111:1: ( (kw= '\\b' | kw= '\\f' | kw= '\\n' | kw= 'lineFeed' | kw= '\\r' | kw= '\\t' | kw= '\\\\' ) )
+            // InternalBug406914TestLanguage.g:112:2: (kw= '\\b' | kw= '\\f' | kw= '\\n' | kw= 'lineFeed' | kw= '\\r' | kw= '\\t' | kw= '\\\\' )
             {
-            // InternalBug406914TestLanguage.g:122:2: (kw= '\\b' | kw= '\\f' | kw= '\\n' | kw= 'lineFeed' | kw= '\\r' | kw= '\\t' | kw= '\\\\' )
+            // InternalBug406914TestLanguage.g:112:2: (kw= '\\b' | kw= '\\f' | kw= '\\n' | kw= 'lineFeed' | kw= '\\r' | kw= '\\t' | kw= '\\\\' )
             int alt1=7;
             switch ( input.LA(1) ) {
             case 7:
@@ -283,7 +274,7 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
 
             switch (alt1) {
                 case 1 :
-                    // InternalBug406914TestLanguage.g:123:3: kw= '\\b'
+                    // InternalBug406914TestLanguage.g:113:3: kw= '\\b'
                     {
                     kw=(Token)match(input,7,FollowSets000.FOLLOW_2); 
 
@@ -294,7 +285,7 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 2 :
-                    // InternalBug406914TestLanguage.g:129:3: kw= '\\f'
+                    // InternalBug406914TestLanguage.g:119:3: kw= '\\f'
                     {
                     kw=(Token)match(input,8,FollowSets000.FOLLOW_2); 
 
@@ -305,7 +296,7 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 3 :
-                    // InternalBug406914TestLanguage.g:135:3: kw= '\\n'
+                    // InternalBug406914TestLanguage.g:125:3: kw= '\\n'
                     {
                     kw=(Token)match(input,9,FollowSets000.FOLLOW_2); 
 
@@ -316,7 +307,7 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 4 :
-                    // InternalBug406914TestLanguage.g:141:3: kw= 'lineFeed'
+                    // InternalBug406914TestLanguage.g:131:3: kw= 'lineFeed'
                     {
                     kw=(Token)match(input,10,FollowSets000.FOLLOW_2); 
 
@@ -327,7 +318,7 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 5 :
-                    // InternalBug406914TestLanguage.g:147:3: kw= '\\r'
+                    // InternalBug406914TestLanguage.g:137:3: kw= '\\r'
                     {
                     kw=(Token)match(input,11,FollowSets000.FOLLOW_2); 
 
@@ -338,7 +329,7 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 6 :
-                    // InternalBug406914TestLanguage.g:153:3: kw= '\\t'
+                    // InternalBug406914TestLanguage.g:143:3: kw= '\\t'
                     {
                     kw=(Token)match(input,12,FollowSets000.FOLLOW_2); 
 
@@ -349,7 +340,7 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 7 :
-                    // InternalBug406914TestLanguage.g:159:3: kw= '\\\\'
+                    // InternalBug406914TestLanguage.g:149:3: kw= '\\\\'
                     {
                     kw=(Token)match(input,13,FollowSets000.FOLLOW_2); 
 
@@ -364,9 +355,6 @@ public class InternalBug406914TestLanguageParser extends AbstractInternalAntlrPa
 
 
             }
-
-
-            	leaveRule();
 
         }
 

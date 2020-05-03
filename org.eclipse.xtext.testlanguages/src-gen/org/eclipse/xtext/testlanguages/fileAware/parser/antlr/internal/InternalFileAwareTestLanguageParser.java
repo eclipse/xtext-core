@@ -127,25 +127,22 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
         EObject lv_contents_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFileAwareTestLanguage.g:77:2: ( (otherlv_0= 'package' ( (lv_name_1_0= ruleQualifiedName ) ) ( (lv_imports_2_0= ruleImport ) )* ( (lv_contents_3_0= ruleElement ) )* ) )
-            // InternalFileAwareTestLanguage.g:78:2: (otherlv_0= 'package' ( (lv_name_1_0= ruleQualifiedName ) ) ( (lv_imports_2_0= ruleImport ) )* ( (lv_contents_3_0= ruleElement ) )* )
+            // InternalFileAwareTestLanguage.g:72:1: ( (otherlv_0= 'package' ( (lv_name_1_0= ruleQualifiedName ) ) ( (lv_imports_2_0= ruleImport ) )* ( (lv_contents_3_0= ruleElement ) )* ) )
+            // InternalFileAwareTestLanguage.g:73:2: (otherlv_0= 'package' ( (lv_name_1_0= ruleQualifiedName ) ) ( (lv_imports_2_0= ruleImport ) )* ( (lv_contents_3_0= ruleElement ) )* )
             {
-            // InternalFileAwareTestLanguage.g:78:2: (otherlv_0= 'package' ( (lv_name_1_0= ruleQualifiedName ) ) ( (lv_imports_2_0= ruleImport ) )* ( (lv_contents_3_0= ruleElement ) )* )
-            // InternalFileAwareTestLanguage.g:79:3: otherlv_0= 'package' ( (lv_name_1_0= ruleQualifiedName ) ) ( (lv_imports_2_0= ruleImport ) )* ( (lv_contents_3_0= ruleElement ) )*
+            // InternalFileAwareTestLanguage.g:73:2: (otherlv_0= 'package' ( (lv_name_1_0= ruleQualifiedName ) ) ( (lv_imports_2_0= ruleImport ) )* ( (lv_contents_3_0= ruleElement ) )* )
+            // InternalFileAwareTestLanguage.g:74:3: otherlv_0= 'package' ( (lv_name_1_0= ruleQualifiedName ) ) ( (lv_imports_2_0= ruleImport ) )* ( (lv_contents_3_0= ruleElement ) )*
             {
             otherlv_0=(Token)match(input,11,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getPackageDeclarationAccess().getPackageKeyword_0());
             		
-            // InternalFileAwareTestLanguage.g:83:3: ( (lv_name_1_0= ruleQualifiedName ) )
-            // InternalFileAwareTestLanguage.g:84:4: (lv_name_1_0= ruleQualifiedName )
+            // InternalFileAwareTestLanguage.g:78:3: ( (lv_name_1_0= ruleQualifiedName ) )
+            // InternalFileAwareTestLanguage.g:79:4: (lv_name_1_0= ruleQualifiedName )
             {
-            // InternalFileAwareTestLanguage.g:84:4: (lv_name_1_0= ruleQualifiedName )
-            // InternalFileAwareTestLanguage.g:85:5: lv_name_1_0= ruleQualifiedName
+            // InternalFileAwareTestLanguage.g:79:4: (lv_name_1_0= ruleQualifiedName )
+            // InternalFileAwareTestLanguage.g:80:5: lv_name_1_0= ruleQualifiedName
             {
 
             					newCompositeNode(grammarAccess.getPackageDeclarationAccess().getNameQualifiedNameParserRuleCall_1_0());
@@ -172,7 +169,7 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            // InternalFileAwareTestLanguage.g:102:3: ( (lv_imports_2_0= ruleImport ) )*
+            // InternalFileAwareTestLanguage.g:97:3: ( (lv_imports_2_0= ruleImport ) )*
             loop1:
             do {
                 int alt1=2;
@@ -185,10 +182,10 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalFileAwareTestLanguage.g:103:4: (lv_imports_2_0= ruleImport )
+            	    // InternalFileAwareTestLanguage.g:98:4: (lv_imports_2_0= ruleImport )
             	    {
-            	    // InternalFileAwareTestLanguage.g:103:4: (lv_imports_2_0= ruleImport )
-            	    // InternalFileAwareTestLanguage.g:104:5: lv_imports_2_0= ruleImport
+            	    // InternalFileAwareTestLanguage.g:98:4: (lv_imports_2_0= ruleImport )
+            	    // InternalFileAwareTestLanguage.g:99:5: lv_imports_2_0= ruleImport
             	    {
 
             	    					newCompositeNode(grammarAccess.getPackageDeclarationAccess().getImportsImportParserRuleCall_2_0());
@@ -221,7 +218,7 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
                 }
             } while (true);
 
-            // InternalFileAwareTestLanguage.g:121:3: ( (lv_contents_3_0= ruleElement ) )*
+            // InternalFileAwareTestLanguage.g:116:3: ( (lv_contents_3_0= ruleElement ) )*
             loop2:
             do {
                 int alt2=2;
@@ -234,10 +231,10 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalFileAwareTestLanguage.g:122:4: (lv_contents_3_0= ruleElement )
+            	    // InternalFileAwareTestLanguage.g:117:4: (lv_contents_3_0= ruleElement )
             	    {
-            	    // InternalFileAwareTestLanguage.g:122:4: (lv_contents_3_0= ruleElement )
-            	    // InternalFileAwareTestLanguage.g:123:5: lv_contents_3_0= ruleElement
+            	    // InternalFileAwareTestLanguage.g:117:4: (lv_contents_3_0= ruleElement )
+            	    // InternalFileAwareTestLanguage.g:118:5: lv_contents_3_0= ruleElement
             	    {
 
             	    					newCompositeNode(grammarAccess.getPackageDeclarationAccess().getContentsElementParserRuleCall_3_0());
@@ -276,9 +273,6 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -293,7 +287,7 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleImport"
-    // InternalFileAwareTestLanguage.g:144:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
+    // InternalFileAwareTestLanguage.g:139:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
     public final EObject entryRuleImport() throws RecognitionException {
         EObject current = null;
 
@@ -301,8 +295,8 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalFileAwareTestLanguage.g:144:47: (iv_ruleImport= ruleImport EOF )
-            // InternalFileAwareTestLanguage.g:145:2: iv_ruleImport= ruleImport EOF
+            // InternalFileAwareTestLanguage.g:139:47: (iv_ruleImport= ruleImport EOF )
+            // InternalFileAwareTestLanguage.g:140:2: iv_ruleImport= ruleImport EOF
             {
              newCompositeNode(grammarAccess.getImportRule()); 
             pushFollow(FOLLOW_1);
@@ -329,31 +323,28 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleImport"
-    // InternalFileAwareTestLanguage.g:151:1: ruleImport returns [EObject current=null] : (otherlv_0= 'import' ( ( ruleQualifiedName ) ) ) ;
+    // InternalFileAwareTestLanguage.g:146:1: ruleImport returns [EObject current=null] : (otherlv_0= 'import' ( ( ruleQualifiedName ) ) ) ;
     public final EObject ruleImport() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFileAwareTestLanguage.g:157:2: ( (otherlv_0= 'import' ( ( ruleQualifiedName ) ) ) )
-            // InternalFileAwareTestLanguage.g:158:2: (otherlv_0= 'import' ( ( ruleQualifiedName ) ) )
+            // InternalFileAwareTestLanguage.g:147:1: ( (otherlv_0= 'import' ( ( ruleQualifiedName ) ) ) )
+            // InternalFileAwareTestLanguage.g:148:2: (otherlv_0= 'import' ( ( ruleQualifiedName ) ) )
             {
-            // InternalFileAwareTestLanguage.g:158:2: (otherlv_0= 'import' ( ( ruleQualifiedName ) ) )
-            // InternalFileAwareTestLanguage.g:159:3: otherlv_0= 'import' ( ( ruleQualifiedName ) )
+            // InternalFileAwareTestLanguage.g:148:2: (otherlv_0= 'import' ( ( ruleQualifiedName ) ) )
+            // InternalFileAwareTestLanguage.g:149:3: otherlv_0= 'import' ( ( ruleQualifiedName ) )
             {
             otherlv_0=(Token)match(input,12,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getImportAccess().getImportKeyword_0());
             		
-            // InternalFileAwareTestLanguage.g:163:3: ( ( ruleQualifiedName ) )
-            // InternalFileAwareTestLanguage.g:164:4: ( ruleQualifiedName )
+            // InternalFileAwareTestLanguage.g:153:3: ( ( ruleQualifiedName ) )
+            // InternalFileAwareTestLanguage.g:154:4: ( ruleQualifiedName )
             {
-            // InternalFileAwareTestLanguage.g:164:4: ( ruleQualifiedName )
-            // InternalFileAwareTestLanguage.g:165:5: ruleQualifiedName
+            // InternalFileAwareTestLanguage.g:154:4: ( ruleQualifiedName )
+            // InternalFileAwareTestLanguage.g:155:5: ruleQualifiedName
             {
 
             					if (current==null) {
@@ -383,9 +374,6 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -400,7 +388,7 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleElement"
-    // InternalFileAwareTestLanguage.g:183:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
+    // InternalFileAwareTestLanguage.g:173:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
     public final EObject entryRuleElement() throws RecognitionException {
         EObject current = null;
 
@@ -408,8 +396,8 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalFileAwareTestLanguage.g:183:48: (iv_ruleElement= ruleElement EOF )
-            // InternalFileAwareTestLanguage.g:184:2: iv_ruleElement= ruleElement EOF
+            // InternalFileAwareTestLanguage.g:173:48: (iv_ruleElement= ruleElement EOF )
+            // InternalFileAwareTestLanguage.g:174:2: iv_ruleElement= ruleElement EOF
             {
              newCompositeNode(grammarAccess.getElementRule()); 
             pushFollow(FOLLOW_1);
@@ -436,7 +424,7 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleElement"
-    // InternalFileAwareTestLanguage.g:190:1: ruleElement returns [EObject current=null] : (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )* otherlv_6= '}' ) ;
+    // InternalFileAwareTestLanguage.g:180:1: ruleElement returns [EObject current=null] : (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )* otherlv_6= '}' ) ;
     public final EObject ruleElement() throws RecognitionException {
         EObject current = null;
 
@@ -448,25 +436,22 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
         EObject lv_contents_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFileAwareTestLanguage.g:196:2: ( (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )* otherlv_6= '}' ) )
-            // InternalFileAwareTestLanguage.g:197:2: (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )* otherlv_6= '}' )
+            // InternalFileAwareTestLanguage.g:181:1: ( (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )* otherlv_6= '}' ) )
+            // InternalFileAwareTestLanguage.g:182:2: (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )* otherlv_6= '}' )
             {
-            // InternalFileAwareTestLanguage.g:197:2: (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )* otherlv_6= '}' )
-            // InternalFileAwareTestLanguage.g:198:3: otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )* otherlv_6= '}'
+            // InternalFileAwareTestLanguage.g:182:2: (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )* otherlv_6= '}' )
+            // InternalFileAwareTestLanguage.g:183:3: otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )* otherlv_6= '}'
             {
             otherlv_0=(Token)match(input,13,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getElementAccess().getElementKeyword_0());
             		
-            // InternalFileAwareTestLanguage.g:202:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalFileAwareTestLanguage.g:203:4: (lv_name_1_0= RULE_ID )
+            // InternalFileAwareTestLanguage.g:187:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalFileAwareTestLanguage.g:188:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalFileAwareTestLanguage.g:203:4: (lv_name_1_0= RULE_ID )
-            // InternalFileAwareTestLanguage.g:204:5: lv_name_1_0= RULE_ID
+            // InternalFileAwareTestLanguage.g:188:4: (lv_name_1_0= RULE_ID )
+            // InternalFileAwareTestLanguage.g:189:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_6); 
 
@@ -492,7 +477,7 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
             			newLeafNode(otherlv_2, grammarAccess.getElementAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalFileAwareTestLanguage.g:224:3: ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )*
+            // InternalFileAwareTestLanguage.g:209:3: ( ( (lv_contents_3_0= ruleElement ) ) | (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) ) )*
             loop3:
             do {
                 int alt3=3;
@@ -508,13 +493,13 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalFileAwareTestLanguage.g:225:4: ( (lv_contents_3_0= ruleElement ) )
+            	    // InternalFileAwareTestLanguage.g:210:4: ( (lv_contents_3_0= ruleElement ) )
             	    {
-            	    // InternalFileAwareTestLanguage.g:225:4: ( (lv_contents_3_0= ruleElement ) )
-            	    // InternalFileAwareTestLanguage.g:226:5: (lv_contents_3_0= ruleElement )
+            	    // InternalFileAwareTestLanguage.g:210:4: ( (lv_contents_3_0= ruleElement ) )
+            	    // InternalFileAwareTestLanguage.g:211:5: (lv_contents_3_0= ruleElement )
             	    {
-            	    // InternalFileAwareTestLanguage.g:226:5: (lv_contents_3_0= ruleElement )
-            	    // InternalFileAwareTestLanguage.g:227:6: lv_contents_3_0= ruleElement
+            	    // InternalFileAwareTestLanguage.g:211:5: (lv_contents_3_0= ruleElement )
+            	    // InternalFileAwareTestLanguage.g:212:6: lv_contents_3_0= ruleElement
             	    {
 
             	    						newCompositeNode(grammarAccess.getElementAccess().getContentsElementParserRuleCall_3_0_0());
@@ -545,20 +530,20 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
             	    }
             	    break;
             	case 2 :
-            	    // InternalFileAwareTestLanguage.g:245:4: (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) )
+            	    // InternalFileAwareTestLanguage.g:230:4: (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) )
             	    {
-            	    // InternalFileAwareTestLanguage.g:245:4: (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) )
-            	    // InternalFileAwareTestLanguage.g:246:5: otherlv_4= 'ref' ( ( ruleQualifiedName ) )
+            	    // InternalFileAwareTestLanguage.g:230:4: (otherlv_4= 'ref' ( ( ruleQualifiedName ) ) )
+            	    // InternalFileAwareTestLanguage.g:231:5: otherlv_4= 'ref' ( ( ruleQualifiedName ) )
             	    {
             	    otherlv_4=(Token)match(input,15,FOLLOW_3); 
 
             	    					newLeafNode(otherlv_4, grammarAccess.getElementAccess().getRefKeyword_3_1_0());
             	    				
-            	    // InternalFileAwareTestLanguage.g:250:5: ( ( ruleQualifiedName ) )
-            	    // InternalFileAwareTestLanguage.g:251:6: ( ruleQualifiedName )
+            	    // InternalFileAwareTestLanguage.g:235:5: ( ( ruleQualifiedName ) )
+            	    // InternalFileAwareTestLanguage.g:236:6: ( ruleQualifiedName )
             	    {
-            	    // InternalFileAwareTestLanguage.g:251:6: ( ruleQualifiedName )
-            	    // InternalFileAwareTestLanguage.g:252:7: ruleQualifiedName
+            	    // InternalFileAwareTestLanguage.g:236:6: ( ruleQualifiedName )
+            	    // InternalFileAwareTestLanguage.g:237:7: ruleQualifiedName
             	    {
 
             	    							if (current==null) {
@@ -604,9 +589,6 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -621,7 +603,7 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalFileAwareTestLanguage.g:276:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalFileAwareTestLanguage.g:261:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -629,8 +611,8 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalFileAwareTestLanguage.g:276:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalFileAwareTestLanguage.g:277:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalFileAwareTestLanguage.g:261:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalFileAwareTestLanguage.g:262:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameRule()); 
             pushFollow(FOLLOW_1);
@@ -657,7 +639,7 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalFileAwareTestLanguage.g:283:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalFileAwareTestLanguage.g:268:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -665,15 +647,12 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
         Token kw=null;
         Token this_ID_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFileAwareTestLanguage.g:289:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalFileAwareTestLanguage.g:290:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalFileAwareTestLanguage.g:269:1: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalFileAwareTestLanguage.g:270:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalFileAwareTestLanguage.g:290:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalFileAwareTestLanguage.g:291:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalFileAwareTestLanguage.g:270:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalFileAwareTestLanguage.g:271:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
             this_ID_0=(Token)match(input,RULE_ID,FOLLOW_8); 
 
@@ -682,7 +661,7 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
             			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
             		
-            // InternalFileAwareTestLanguage.g:298:3: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalFileAwareTestLanguage.g:278:3: (kw= '.' this_ID_2= RULE_ID )*
             loop4:
             do {
                 int alt4=2;
@@ -695,7 +674,7 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalFileAwareTestLanguage.g:299:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalFileAwareTestLanguage.g:279:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,17,FOLLOW_3); 
 
@@ -723,9 +702,6 @@ public class InternalFileAwareTestLanguageParser extends AbstractInternalAntlrPa
 
 
             }
-
-
-            	leaveRule();
 
         }
 

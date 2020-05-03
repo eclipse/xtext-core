@@ -119,25 +119,22 @@ public class InternalQualifiedNameTestLanguageParser extends AbstractInternalAnt
         AntlrDatatypeRuleToken lv_qualifiedName_1_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalQualifiedNameTestLanguage.g:77:2: ( (otherlv_0= 'keyword' ( (lv_qualifiedName_1_0= ruleQualifiedName ) ) ) )
-            // InternalQualifiedNameTestLanguage.g:78:2: (otherlv_0= 'keyword' ( (lv_qualifiedName_1_0= ruleQualifiedName ) ) )
+            // InternalQualifiedNameTestLanguage.g:72:1: ( (otherlv_0= 'keyword' ( (lv_qualifiedName_1_0= ruleQualifiedName ) ) ) )
+            // InternalQualifiedNameTestLanguage.g:73:2: (otherlv_0= 'keyword' ( (lv_qualifiedName_1_0= ruleQualifiedName ) ) )
             {
-            // InternalQualifiedNameTestLanguage.g:78:2: (otherlv_0= 'keyword' ( (lv_qualifiedName_1_0= ruleQualifiedName ) ) )
-            // InternalQualifiedNameTestLanguage.g:79:3: otherlv_0= 'keyword' ( (lv_qualifiedName_1_0= ruleQualifiedName ) )
+            // InternalQualifiedNameTestLanguage.g:73:2: (otherlv_0= 'keyword' ( (lv_qualifiedName_1_0= ruleQualifiedName ) ) )
+            // InternalQualifiedNameTestLanguage.g:74:3: otherlv_0= 'keyword' ( (lv_qualifiedName_1_0= ruleQualifiedName ) )
             {
             otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getElementAccess().getKeywordKeyword_0());
             		
-            // InternalQualifiedNameTestLanguage.g:83:3: ( (lv_qualifiedName_1_0= ruleQualifiedName ) )
-            // InternalQualifiedNameTestLanguage.g:84:4: (lv_qualifiedName_1_0= ruleQualifiedName )
+            // InternalQualifiedNameTestLanguage.g:78:3: ( (lv_qualifiedName_1_0= ruleQualifiedName ) )
+            // InternalQualifiedNameTestLanguage.g:79:4: (lv_qualifiedName_1_0= ruleQualifiedName )
             {
-            // InternalQualifiedNameTestLanguage.g:84:4: (lv_qualifiedName_1_0= ruleQualifiedName )
-            // InternalQualifiedNameTestLanguage.g:85:5: lv_qualifiedName_1_0= ruleQualifiedName
+            // InternalQualifiedNameTestLanguage.g:79:4: (lv_qualifiedName_1_0= ruleQualifiedName )
+            // InternalQualifiedNameTestLanguage.g:80:5: lv_qualifiedName_1_0= ruleQualifiedName
             {
 
             					newCompositeNode(grammarAccess.getElementAccess().getQualifiedNameQualifiedNameParserRuleCall_1_0());
@@ -170,9 +167,6 @@ public class InternalQualifiedNameTestLanguageParser extends AbstractInternalAnt
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -187,7 +181,7 @@ public class InternalQualifiedNameTestLanguageParser extends AbstractInternalAnt
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalQualifiedNameTestLanguage.g:106:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalQualifiedNameTestLanguage.g:101:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -195,8 +189,8 @@ public class InternalQualifiedNameTestLanguageParser extends AbstractInternalAnt
 
 
         try {
-            // InternalQualifiedNameTestLanguage.g:106:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalQualifiedNameTestLanguage.g:107:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalQualifiedNameTestLanguage.g:101:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalQualifiedNameTestLanguage.g:102:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -223,7 +217,7 @@ public class InternalQualifiedNameTestLanguageParser extends AbstractInternalAnt
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalQualifiedNameTestLanguage.g:113:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* (kw= '.' kw= '*' )? ) ;
+    // InternalQualifiedNameTestLanguage.g:108:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* (kw= '.' kw= '*' )? ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -231,15 +225,12 @@ public class InternalQualifiedNameTestLanguageParser extends AbstractInternalAnt
         Token kw=null;
         Token this_ID_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalQualifiedNameTestLanguage.g:119:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* (kw= '.' kw= '*' )? ) )
-            // InternalQualifiedNameTestLanguage.g:120:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* (kw= '.' kw= '*' )? )
+            // InternalQualifiedNameTestLanguage.g:109:1: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* (kw= '.' kw= '*' )? ) )
+            // InternalQualifiedNameTestLanguage.g:110:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* (kw= '.' kw= '*' )? )
             {
-            // InternalQualifiedNameTestLanguage.g:120:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* (kw= '.' kw= '*' )? )
-            // InternalQualifiedNameTestLanguage.g:121:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* (kw= '.' kw= '*' )?
+            // InternalQualifiedNameTestLanguage.g:110:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* (kw= '.' kw= '*' )? )
+            // InternalQualifiedNameTestLanguage.g:111:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* (kw= '.' kw= '*' )?
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_4); 
 
@@ -248,7 +239,7 @@ public class InternalQualifiedNameTestLanguageParser extends AbstractInternalAnt
 
             			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
             		
-            // InternalQualifiedNameTestLanguage.g:128:3: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalQualifiedNameTestLanguage.g:118:3: (kw= '.' this_ID_2= RULE_ID )*
             loop1:
             do {
                 int alt1=2;
@@ -267,7 +258,7 @@ public class InternalQualifiedNameTestLanguageParser extends AbstractInternalAnt
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalQualifiedNameTestLanguage.g:129:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalQualifiedNameTestLanguage.g:119:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,12,FollowSets000.FOLLOW_3); 
 
@@ -290,7 +281,7 @@ public class InternalQualifiedNameTestLanguageParser extends AbstractInternalAnt
                 }
             } while (true);
 
-            // InternalQualifiedNameTestLanguage.g:142:3: (kw= '.' kw= '*' )?
+            // InternalQualifiedNameTestLanguage.g:132:3: (kw= '.' kw= '*' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -299,7 +290,7 @@ public class InternalQualifiedNameTestLanguageParser extends AbstractInternalAnt
             }
             switch (alt2) {
                 case 1 :
-                    // InternalQualifiedNameTestLanguage.g:143:4: kw= '.' kw= '*'
+                    // InternalQualifiedNameTestLanguage.g:133:4: kw= '.' kw= '*'
                     {
                     kw=(Token)match(input,12,FollowSets000.FOLLOW_5); 
 
@@ -322,9 +313,6 @@ public class InternalQualifiedNameTestLanguageParser extends AbstractInternalAnt
 
 
             }
-
-
-            	leaveRule();
 
         }
 

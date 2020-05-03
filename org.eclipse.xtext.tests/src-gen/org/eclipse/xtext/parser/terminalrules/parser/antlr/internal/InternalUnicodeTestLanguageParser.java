@@ -116,14 +116,11 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
         EObject lv_strings_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalUnicodeTestLanguage.g:77:2: ( ( (lv_strings_0_0= ruleAbstractString ) )* )
-            // InternalUnicodeTestLanguage.g:78:2: ( (lv_strings_0_0= ruleAbstractString ) )*
+            // InternalUnicodeTestLanguage.g:72:1: ( ( (lv_strings_0_0= ruleAbstractString ) )* )
+            // InternalUnicodeTestLanguage.g:73:2: ( (lv_strings_0_0= ruleAbstractString ) )*
             {
-            // InternalUnicodeTestLanguage.g:78:2: ( (lv_strings_0_0= ruleAbstractString ) )*
+            // InternalUnicodeTestLanguage.g:73:2: ( (lv_strings_0_0= ruleAbstractString ) )*
             loop1:
             do {
                 int alt1=2;
@@ -136,10 +133,10 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalUnicodeTestLanguage.g:79:3: (lv_strings_0_0= ruleAbstractString )
+            	    // InternalUnicodeTestLanguage.g:74:3: (lv_strings_0_0= ruleAbstractString )
             	    {
-            	    // InternalUnicodeTestLanguage.g:79:3: (lv_strings_0_0= ruleAbstractString )
-            	    // InternalUnicodeTestLanguage.g:80:4: lv_strings_0_0= ruleAbstractString
+            	    // InternalUnicodeTestLanguage.g:74:3: (lv_strings_0_0= ruleAbstractString )
+            	    // InternalUnicodeTestLanguage.g:75:4: lv_strings_0_0= ruleAbstractString
             	    {
 
             	    				newCompositeNode(grammarAccess.getModelAccess().getStringsAbstractStringParserRuleCall_0());
@@ -175,9 +172,6 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -192,7 +186,7 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
 
     // $ANTLR start "entryRuleAbstractString"
-    // InternalUnicodeTestLanguage.g:100:1: entryRuleAbstractString returns [EObject current=null] : iv_ruleAbstractString= ruleAbstractString EOF ;
+    // InternalUnicodeTestLanguage.g:95:1: entryRuleAbstractString returns [EObject current=null] : iv_ruleAbstractString= ruleAbstractString EOF ;
     public final EObject entryRuleAbstractString() throws RecognitionException {
         EObject current = null;
 
@@ -200,8 +194,8 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
 
         try {
-            // InternalUnicodeTestLanguage.g:100:55: (iv_ruleAbstractString= ruleAbstractString EOF )
-            // InternalUnicodeTestLanguage.g:101:2: iv_ruleAbstractString= ruleAbstractString EOF
+            // InternalUnicodeTestLanguage.g:95:55: (iv_ruleAbstractString= ruleAbstractString EOF )
+            // InternalUnicodeTestLanguage.g:96:2: iv_ruleAbstractString= ruleAbstractString EOF
             {
              newCompositeNode(grammarAccess.getAbstractStringRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -228,7 +222,7 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
 
     // $ANTLR start "ruleAbstractString"
-    // InternalUnicodeTestLanguage.g:107:1: ruleAbstractString returns [EObject current=null] : (this_GString_0= ruleGString | this_QuotedString_1= ruleQuotedString ) ;
+    // InternalUnicodeTestLanguage.g:102:1: ruleAbstractString returns [EObject current=null] : (this_GString_0= ruleGString | this_QuotedString_1= ruleQuotedString ) ;
     public final EObject ruleAbstractString() throws RecognitionException {
         EObject current = null;
 
@@ -237,14 +231,11 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
         EObject this_QuotedString_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalUnicodeTestLanguage.g:113:2: ( (this_GString_0= ruleGString | this_QuotedString_1= ruleQuotedString ) )
-            // InternalUnicodeTestLanguage.g:114:2: (this_GString_0= ruleGString | this_QuotedString_1= ruleQuotedString )
+            // InternalUnicodeTestLanguage.g:103:1: ( (this_GString_0= ruleGString | this_QuotedString_1= ruleQuotedString ) )
+            // InternalUnicodeTestLanguage.g:104:2: (this_GString_0= ruleGString | this_QuotedString_1= ruleQuotedString )
             {
-            // InternalUnicodeTestLanguage.g:114:2: (this_GString_0= ruleGString | this_QuotedString_1= ruleQuotedString )
+            // InternalUnicodeTestLanguage.g:104:2: (this_GString_0= ruleGString | this_QuotedString_1= ruleQuotedString )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -262,7 +253,7 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
             }
             switch (alt2) {
                 case 1 :
-                    // InternalUnicodeTestLanguage.g:115:3: this_GString_0= ruleGString
+                    // InternalUnicodeTestLanguage.g:105:3: this_GString_0= ruleGString
                     {
 
                     			newCompositeNode(grammarAccess.getAbstractStringAccess().getGStringParserRuleCall_0());
@@ -280,7 +271,7 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
                     }
                     break;
                 case 2 :
-                    // InternalUnicodeTestLanguage.g:124:3: this_QuotedString_1= ruleQuotedString
+                    // InternalUnicodeTestLanguage.g:114:3: this_QuotedString_1= ruleQuotedString
                     {
 
                     			newCompositeNode(grammarAccess.getAbstractStringAccess().getQuotedStringParserRuleCall_1());
@@ -303,9 +294,6 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -320,7 +308,7 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
 
     // $ANTLR start "entryRuleGString"
-    // InternalUnicodeTestLanguage.g:136:1: entryRuleGString returns [EObject current=null] : iv_ruleGString= ruleGString EOF ;
+    // InternalUnicodeTestLanguage.g:126:1: entryRuleGString returns [EObject current=null] : iv_ruleGString= ruleGString EOF ;
     public final EObject entryRuleGString() throws RecognitionException {
         EObject current = null;
 
@@ -328,8 +316,8 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
 
         try {
-            // InternalUnicodeTestLanguage.g:136:48: (iv_ruleGString= ruleGString EOF )
-            // InternalUnicodeTestLanguage.g:137:2: iv_ruleGString= ruleGString EOF
+            // InternalUnicodeTestLanguage.g:126:48: (iv_ruleGString= ruleGString EOF )
+            // InternalUnicodeTestLanguage.g:127:2: iv_ruleGString= ruleGString EOF
             {
              newCompositeNode(grammarAccess.getGStringRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -356,24 +344,21 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
 
     // $ANTLR start "ruleGString"
-    // InternalUnicodeTestLanguage.g:143:1: ruleGString returns [EObject current=null] : ( (lv_name_0_0= RULE_GERMAN_STRING ) ) ;
+    // InternalUnicodeTestLanguage.g:133:1: ruleGString returns [EObject current=null] : ( (lv_name_0_0= RULE_GERMAN_STRING ) ) ;
     public final EObject ruleGString() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalUnicodeTestLanguage.g:149:2: ( ( (lv_name_0_0= RULE_GERMAN_STRING ) ) )
-            // InternalUnicodeTestLanguage.g:150:2: ( (lv_name_0_0= RULE_GERMAN_STRING ) )
+            // InternalUnicodeTestLanguage.g:134:1: ( ( (lv_name_0_0= RULE_GERMAN_STRING ) ) )
+            // InternalUnicodeTestLanguage.g:135:2: ( (lv_name_0_0= RULE_GERMAN_STRING ) )
             {
-            // InternalUnicodeTestLanguage.g:150:2: ( (lv_name_0_0= RULE_GERMAN_STRING ) )
-            // InternalUnicodeTestLanguage.g:151:3: (lv_name_0_0= RULE_GERMAN_STRING )
+            // InternalUnicodeTestLanguage.g:135:2: ( (lv_name_0_0= RULE_GERMAN_STRING ) )
+            // InternalUnicodeTestLanguage.g:136:3: (lv_name_0_0= RULE_GERMAN_STRING )
             {
-            // InternalUnicodeTestLanguage.g:151:3: (lv_name_0_0= RULE_GERMAN_STRING )
-            // InternalUnicodeTestLanguage.g:152:4: lv_name_0_0= RULE_GERMAN_STRING
+            // InternalUnicodeTestLanguage.g:136:3: (lv_name_0_0= RULE_GERMAN_STRING )
+            // InternalUnicodeTestLanguage.g:137:4: lv_name_0_0= RULE_GERMAN_STRING
             {
             lv_name_0_0=(Token)match(input,RULE_GERMAN_STRING,FollowSets000.FOLLOW_2); 
 
@@ -398,9 +383,6 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -415,7 +397,7 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
 
     // $ANTLR start "entryRuleQuotedString"
-    // InternalUnicodeTestLanguage.g:171:1: entryRuleQuotedString returns [EObject current=null] : iv_ruleQuotedString= ruleQuotedString EOF ;
+    // InternalUnicodeTestLanguage.g:156:1: entryRuleQuotedString returns [EObject current=null] : iv_ruleQuotedString= ruleQuotedString EOF ;
     public final EObject entryRuleQuotedString() throws RecognitionException {
         EObject current = null;
 
@@ -423,8 +405,8 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
 
         try {
-            // InternalUnicodeTestLanguage.g:171:53: (iv_ruleQuotedString= ruleQuotedString EOF )
-            // InternalUnicodeTestLanguage.g:172:2: iv_ruleQuotedString= ruleQuotedString EOF
+            // InternalUnicodeTestLanguage.g:156:53: (iv_ruleQuotedString= ruleQuotedString EOF )
+            // InternalUnicodeTestLanguage.g:157:2: iv_ruleQuotedString= ruleQuotedString EOF
             {
              newCompositeNode(grammarAccess.getQuotedStringRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -451,24 +433,21 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
 
     // $ANTLR start "ruleQuotedString"
-    // InternalUnicodeTestLanguage.g:178:1: ruleQuotedString returns [EObject current=null] : ( (lv_name_0_0= RULE_STRING ) ) ;
+    // InternalUnicodeTestLanguage.g:163:1: ruleQuotedString returns [EObject current=null] : ( (lv_name_0_0= RULE_STRING ) ) ;
     public final EObject ruleQuotedString() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalUnicodeTestLanguage.g:184:2: ( ( (lv_name_0_0= RULE_STRING ) ) )
-            // InternalUnicodeTestLanguage.g:185:2: ( (lv_name_0_0= RULE_STRING ) )
+            // InternalUnicodeTestLanguage.g:164:1: ( ( (lv_name_0_0= RULE_STRING ) ) )
+            // InternalUnicodeTestLanguage.g:165:2: ( (lv_name_0_0= RULE_STRING ) )
             {
-            // InternalUnicodeTestLanguage.g:185:2: ( (lv_name_0_0= RULE_STRING ) )
-            // InternalUnicodeTestLanguage.g:186:3: (lv_name_0_0= RULE_STRING )
+            // InternalUnicodeTestLanguage.g:165:2: ( (lv_name_0_0= RULE_STRING ) )
+            // InternalUnicodeTestLanguage.g:166:3: (lv_name_0_0= RULE_STRING )
             {
-            // InternalUnicodeTestLanguage.g:186:3: (lv_name_0_0= RULE_STRING )
-            // InternalUnicodeTestLanguage.g:187:4: lv_name_0_0= RULE_STRING
+            // InternalUnicodeTestLanguage.g:166:3: (lv_name_0_0= RULE_STRING )
+            // InternalUnicodeTestLanguage.g:167:4: lv_name_0_0= RULE_STRING
             {
             lv_name_0_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_2); 
 
@@ -492,9 +471,6 @@ public class InternalUnicodeTestLanguageParser extends AbstractInternalAntlrPars
 
 
             }
-
-
-            	leaveRule();
 
         }
 

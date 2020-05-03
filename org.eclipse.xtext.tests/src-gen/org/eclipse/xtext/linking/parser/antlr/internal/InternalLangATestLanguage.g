@@ -69,12 +69,7 @@ entryRuleMain returns [EObject current=null]:
 
 // Rule Main
 ruleMain returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -126,12 +121,7 @@ entryRuleImport returns [EObject current=null]:
 
 // Rule Import
 ruleImport returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='import'
 		{
@@ -167,12 +157,7 @@ entryRuleType returns [EObject current=null]:
 
 // Rule Type
 ruleType returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='type'
 		{

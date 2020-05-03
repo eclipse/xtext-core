@@ -126,21 +126,18 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
         EObject lv_extends_2_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalEcoreReferenceTestLanguage.g:77:2: ( ( ( (lv_extends_0_0= ruleExtendsNsURIEObject ) ) ( (lv_extends_1_0= ruleExtendsPluginEObject ) ) ( (lv_extends_2_0= ruleExtendsResourceEObject ) ) ) )
-            // InternalEcoreReferenceTestLanguage.g:78:2: ( ( (lv_extends_0_0= ruleExtendsNsURIEObject ) ) ( (lv_extends_1_0= ruleExtendsPluginEObject ) ) ( (lv_extends_2_0= ruleExtendsResourceEObject ) ) )
+            // InternalEcoreReferenceTestLanguage.g:72:1: ( ( ( (lv_extends_0_0= ruleExtendsNsURIEObject ) ) ( (lv_extends_1_0= ruleExtendsPluginEObject ) ) ( (lv_extends_2_0= ruleExtendsResourceEObject ) ) ) )
+            // InternalEcoreReferenceTestLanguage.g:73:2: ( ( (lv_extends_0_0= ruleExtendsNsURIEObject ) ) ( (lv_extends_1_0= ruleExtendsPluginEObject ) ) ( (lv_extends_2_0= ruleExtendsResourceEObject ) ) )
             {
-            // InternalEcoreReferenceTestLanguage.g:78:2: ( ( (lv_extends_0_0= ruleExtendsNsURIEObject ) ) ( (lv_extends_1_0= ruleExtendsPluginEObject ) ) ( (lv_extends_2_0= ruleExtendsResourceEObject ) ) )
-            // InternalEcoreReferenceTestLanguage.g:79:3: ( (lv_extends_0_0= ruleExtendsNsURIEObject ) ) ( (lv_extends_1_0= ruleExtendsPluginEObject ) ) ( (lv_extends_2_0= ruleExtendsResourceEObject ) )
+            // InternalEcoreReferenceTestLanguage.g:73:2: ( ( (lv_extends_0_0= ruleExtendsNsURIEObject ) ) ( (lv_extends_1_0= ruleExtendsPluginEObject ) ) ( (lv_extends_2_0= ruleExtendsResourceEObject ) ) )
+            // InternalEcoreReferenceTestLanguage.g:74:3: ( (lv_extends_0_0= ruleExtendsNsURIEObject ) ) ( (lv_extends_1_0= ruleExtendsPluginEObject ) ) ( (lv_extends_2_0= ruleExtendsResourceEObject ) )
             {
-            // InternalEcoreReferenceTestLanguage.g:79:3: ( (lv_extends_0_0= ruleExtendsNsURIEObject ) )
-            // InternalEcoreReferenceTestLanguage.g:80:4: (lv_extends_0_0= ruleExtendsNsURIEObject )
+            // InternalEcoreReferenceTestLanguage.g:74:3: ( (lv_extends_0_0= ruleExtendsNsURIEObject ) )
+            // InternalEcoreReferenceTestLanguage.g:75:4: (lv_extends_0_0= ruleExtendsNsURIEObject )
             {
-            // InternalEcoreReferenceTestLanguage.g:80:4: (lv_extends_0_0= ruleExtendsNsURIEObject )
-            // InternalEcoreReferenceTestLanguage.g:81:5: lv_extends_0_0= ruleExtendsNsURIEObject
+            // InternalEcoreReferenceTestLanguage.g:75:4: (lv_extends_0_0= ruleExtendsNsURIEObject )
+            // InternalEcoreReferenceTestLanguage.g:76:5: lv_extends_0_0= ruleExtendsNsURIEObject
             {
 
             					newCompositeNode(grammarAccess.getModelAccess().getExtendsExtendsNsURIEObjectParserRuleCall_0_0());
@@ -167,11 +164,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-            // InternalEcoreReferenceTestLanguage.g:98:3: ( (lv_extends_1_0= ruleExtendsPluginEObject ) )
-            // InternalEcoreReferenceTestLanguage.g:99:4: (lv_extends_1_0= ruleExtendsPluginEObject )
+            // InternalEcoreReferenceTestLanguage.g:93:3: ( (lv_extends_1_0= ruleExtendsPluginEObject ) )
+            // InternalEcoreReferenceTestLanguage.g:94:4: (lv_extends_1_0= ruleExtendsPluginEObject )
             {
-            // InternalEcoreReferenceTestLanguage.g:99:4: (lv_extends_1_0= ruleExtendsPluginEObject )
-            // InternalEcoreReferenceTestLanguage.g:100:5: lv_extends_1_0= ruleExtendsPluginEObject
+            // InternalEcoreReferenceTestLanguage.g:94:4: (lv_extends_1_0= ruleExtendsPluginEObject )
+            // InternalEcoreReferenceTestLanguage.g:95:5: lv_extends_1_0= ruleExtendsPluginEObject
             {
 
             					newCompositeNode(grammarAccess.getModelAccess().getExtendsExtendsPluginEObjectParserRuleCall_1_0());
@@ -198,11 +195,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-            // InternalEcoreReferenceTestLanguage.g:117:3: ( (lv_extends_2_0= ruleExtendsResourceEObject ) )
-            // InternalEcoreReferenceTestLanguage.g:118:4: (lv_extends_2_0= ruleExtendsResourceEObject )
+            // InternalEcoreReferenceTestLanguage.g:112:3: ( (lv_extends_2_0= ruleExtendsResourceEObject ) )
+            // InternalEcoreReferenceTestLanguage.g:113:4: (lv_extends_2_0= ruleExtendsResourceEObject )
             {
-            // InternalEcoreReferenceTestLanguage.g:118:4: (lv_extends_2_0= ruleExtendsResourceEObject )
-            // InternalEcoreReferenceTestLanguage.g:119:5: lv_extends_2_0= ruleExtendsResourceEObject
+            // InternalEcoreReferenceTestLanguage.g:113:4: (lv_extends_2_0= ruleExtendsResourceEObject )
+            // InternalEcoreReferenceTestLanguage.g:114:5: lv_extends_2_0= ruleExtendsResourceEObject
             {
 
             					newCompositeNode(grammarAccess.getModelAccess().getExtendsExtendsResourceEObjectParserRuleCall_2_0());
@@ -235,9 +232,6 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -252,7 +246,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "entryRuleExtendsNsURIEObject"
-    // InternalEcoreReferenceTestLanguage.g:140:1: entryRuleExtendsNsURIEObject returns [EObject current=null] : iv_ruleExtendsNsURIEObject= ruleExtendsNsURIEObject EOF ;
+    // InternalEcoreReferenceTestLanguage.g:135:1: entryRuleExtendsNsURIEObject returns [EObject current=null] : iv_ruleExtendsNsURIEObject= ruleExtendsNsURIEObject EOF ;
     public final EObject entryRuleExtendsNsURIEObject() throws RecognitionException {
         EObject current = null;
 
@@ -260,8 +254,8 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
         try {
-            // InternalEcoreReferenceTestLanguage.g:140:60: (iv_ruleExtendsNsURIEObject= ruleExtendsNsURIEObject EOF )
-            // InternalEcoreReferenceTestLanguage.g:141:2: iv_ruleExtendsNsURIEObject= ruleExtendsNsURIEObject EOF
+            // InternalEcoreReferenceTestLanguage.g:135:60: (iv_ruleExtendsNsURIEObject= ruleExtendsNsURIEObject EOF )
+            // InternalEcoreReferenceTestLanguage.g:136:2: iv_ruleExtendsNsURIEObject= ruleExtendsNsURIEObject EOF
             {
              newCompositeNode(grammarAccess.getExtendsNsURIEObjectRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -288,7 +282,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "ruleExtendsNsURIEObject"
-    // InternalEcoreReferenceTestLanguage.g:147:1: ruleExtendsNsURIEObject returns [EObject current=null] : (otherlv_0= 'ExtendsNsURIEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )? ) ;
+    // InternalEcoreReferenceTestLanguage.g:142:1: ruleExtendsNsURIEObject returns [EObject current=null] : (otherlv_0= 'ExtendsNsURIEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )? ) ;
     public final EObject ruleExtendsNsURIEObject() throws RecognitionException {
         EObject current = null;
 
@@ -321,25 +315,22 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
         EObject lv_eObjectContainment_20_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalEcoreReferenceTestLanguage.g:153:2: ( (otherlv_0= 'ExtendsNsURIEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )? ) )
-            // InternalEcoreReferenceTestLanguage.g:154:2: (otherlv_0= 'ExtendsNsURIEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )? )
+            // InternalEcoreReferenceTestLanguage.g:143:1: ( (otherlv_0= 'ExtendsNsURIEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )? ) )
+            // InternalEcoreReferenceTestLanguage.g:144:2: (otherlv_0= 'ExtendsNsURIEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )? )
             {
-            // InternalEcoreReferenceTestLanguage.g:154:2: (otherlv_0= 'ExtendsNsURIEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )? )
-            // InternalEcoreReferenceTestLanguage.g:155:3: otherlv_0= 'ExtendsNsURIEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )?
+            // InternalEcoreReferenceTestLanguage.g:144:2: (otherlv_0= 'ExtendsNsURIEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )? )
+            // InternalEcoreReferenceTestLanguage.g:145:3: otherlv_0= 'ExtendsNsURIEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )?
             {
             otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getExtendsNsURIEObjectAccess().getExtendsNsURIEObjectKeyword_0());
             		
-            // InternalEcoreReferenceTestLanguage.g:159:3: ( (lv_name_1_0= ruleValidID ) )
-            // InternalEcoreReferenceTestLanguage.g:160:4: (lv_name_1_0= ruleValidID )
+            // InternalEcoreReferenceTestLanguage.g:149:3: ( (lv_name_1_0= ruleValidID ) )
+            // InternalEcoreReferenceTestLanguage.g:150:4: (lv_name_1_0= ruleValidID )
             {
-            // InternalEcoreReferenceTestLanguage.g:160:4: (lv_name_1_0= ruleValidID )
-            // InternalEcoreReferenceTestLanguage.g:161:5: lv_name_1_0= ruleValidID
+            // InternalEcoreReferenceTestLanguage.g:150:4: (lv_name_1_0= ruleValidID )
+            // InternalEcoreReferenceTestLanguage.g:151:5: lv_name_1_0= ruleValidID
             {
 
             					newCompositeNode(grammarAccess.getExtendsNsURIEObjectAccess().getNameValidIDParserRuleCall_1_0());
@@ -366,7 +357,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-            // InternalEcoreReferenceTestLanguage.g:178:3: ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) )
+            // InternalEcoreReferenceTestLanguage.g:168:3: ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) )
             int alt1=4;
             switch ( input.LA(1) ) {
             case 12:
@@ -398,20 +389,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             switch (alt1) {
                 case 1 :
-                    // InternalEcoreReferenceTestLanguage.g:179:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:169:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:179:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:180:5: otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:169:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:170:5: otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) )
                     {
                     otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_2, grammarAccess.getExtendsNsURIEObjectAccess().getEObjectKeyword_2_0_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:184:5: ( (otherlv_3= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:185:6: (otherlv_3= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:174:5: ( (otherlv_3= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:175:6: (otherlv_3= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:185:6: (otherlv_3= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:186:7: otherlv_3= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:175:6: (otherlv_3= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:176:7: otherlv_3= RULE_ID
                     {
 
                     							if (current==null) {
@@ -435,20 +426,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     break;
                 case 2 :
-                    // InternalEcoreReferenceTestLanguage.g:199:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:189:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:199:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:200:5: otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:189:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:190:5: otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) )
                     {
                     otherlv_4=(Token)match(input,11,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_4, grammarAccess.getExtendsNsURIEObjectAccess().getExtendsNsURIEObjectKeyword_2_1_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:204:5: ( (otherlv_5= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:205:6: (otherlv_5= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:194:5: ( (otherlv_5= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:195:6: (otherlv_5= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:205:6: (otherlv_5= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:206:7: otherlv_5= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:195:6: (otherlv_5= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:196:7: otherlv_5= RULE_ID
                     {
 
                     							if (current==null) {
@@ -472,20 +463,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     break;
                 case 3 :
-                    // InternalEcoreReferenceTestLanguage.g:219:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:209:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:219:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:220:5: otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:209:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:210:5: otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) )
                     {
                     otherlv_6=(Token)match(input,13,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_6, grammarAccess.getExtendsNsURIEObjectAccess().getExtendsPluginEObjectKeyword_2_2_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:224:5: ( (otherlv_7= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:225:6: (otherlv_7= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:214:5: ( (otherlv_7= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:215:6: (otherlv_7= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:225:6: (otherlv_7= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:226:7: otherlv_7= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:215:6: (otherlv_7= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:216:7: otherlv_7= RULE_ID
                     {
 
                     							if (current==null) {
@@ -509,20 +500,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     break;
                 case 4 :
-                    // InternalEcoreReferenceTestLanguage.g:239:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:229:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:239:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:240:5: otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:229:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:230:5: otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) )
                     {
                     otherlv_8=(Token)match(input,14,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_8, grammarAccess.getExtendsNsURIEObjectAccess().getExtendsResourceEObjectKeyword_2_3_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:244:5: ( (otherlv_9= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:245:6: (otherlv_9= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:234:5: ( (otherlv_9= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:235:6: (otherlv_9= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:245:6: (otherlv_9= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:246:7: otherlv_9= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:235:6: (otherlv_9= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:236:7: otherlv_9= RULE_ID
                     {
 
                     							if (current==null) {
@@ -548,7 +539,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-            // InternalEcoreReferenceTestLanguage.g:259:3: (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )?
+            // InternalEcoreReferenceTestLanguage.g:249:3: (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -565,17 +556,17 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
             }
             switch (alt5) {
                 case 1 :
-                    // InternalEcoreReferenceTestLanguage.g:260:4: otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) )
+                    // InternalEcoreReferenceTestLanguage.g:250:4: otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (otherlv_14= RULE_ID ) ) ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_18_0= ruleEObject ) ) ( (lv_eObjectContainment_19_0= ruleEAttribute ) ) ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) )
                     {
                     otherlv_10=(Token)match(input,13,FollowSets000.FOLLOW_5); 
 
                     				newLeafNode(otherlv_10, grammarAccess.getExtendsNsURIEObjectAccess().getExtendsPluginEObjectKeyword_3_0());
                     			
-                    // InternalEcoreReferenceTestLanguage.g:264:4: ( (otherlv_11= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:265:5: (otherlv_11= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:254:4: ( (otherlv_11= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:255:5: (otherlv_11= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:265:5: (otherlv_11= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:266:6: otherlv_11= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:255:5: (otherlv_11= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:256:6: otherlv_11= RULE_ID
                     {
 
                     						if (current==null) {
@@ -592,11 +583,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:277:4: ( (otherlv_12= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:278:5: (otherlv_12= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:267:4: ( (otherlv_12= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:268:5: (otherlv_12= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:278:5: (otherlv_12= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:279:6: otherlv_12= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:268:5: (otherlv_12= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:269:6: otherlv_12= RULE_ID
                     {
 
                     						if (current==null) {
@@ -613,11 +604,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:290:4: ( (otherlv_13= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:291:5: (otherlv_13= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:280:4: ( (otherlv_13= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:281:5: (otherlv_13= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:291:5: (otherlv_13= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:292:6: otherlv_13= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:281:5: (otherlv_13= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:282:6: otherlv_13= RULE_ID
                     {
 
                     						if (current==null) {
@@ -634,11 +625,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:303:4: ( (otherlv_14= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:304:5: (otherlv_14= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:293:4: ( (otherlv_14= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:294:5: (otherlv_14= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:304:5: (otherlv_14= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:305:6: otherlv_14= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:294:5: (otherlv_14= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:295:6: otherlv_14= RULE_ID
                     {
 
                     						if (current==null) {
@@ -655,7 +646,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:316:4: ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )?
+                    // InternalEcoreReferenceTestLanguage.g:306:4: ( (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject ) )?
                     int alt2=2;
                     int LA2_0 = input.LA(1);
 
@@ -664,10 +655,10 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     switch (alt2) {
                         case 1 :
-                            // InternalEcoreReferenceTestLanguage.g:317:5: (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject )
+                            // InternalEcoreReferenceTestLanguage.g:307:5: (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject )
                             {
-                            // InternalEcoreReferenceTestLanguage.g:317:5: (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject )
-                            // InternalEcoreReferenceTestLanguage.g:318:6: lv_eObjectContainment_15_0= ruleExtendsNsURIEObject
+                            // InternalEcoreReferenceTestLanguage.g:307:5: (lv_eObjectContainment_15_0= ruleExtendsNsURIEObject )
+                            // InternalEcoreReferenceTestLanguage.g:308:6: lv_eObjectContainment_15_0= ruleExtendsNsURIEObject
                             {
 
                             						newCompositeNode(grammarAccess.getExtendsNsURIEObjectAccess().getEObjectContainmentExtendsNsURIEObjectParserRuleCall_3_5_0());
@@ -697,7 +688,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:335:4: ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )?
+                    // InternalEcoreReferenceTestLanguage.g:325:4: ( (lv_eObjectContainment_16_0= ruleExtendsPluginEObject ) )?
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -706,10 +697,10 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     switch (alt3) {
                         case 1 :
-                            // InternalEcoreReferenceTestLanguage.g:336:5: (lv_eObjectContainment_16_0= ruleExtendsPluginEObject )
+                            // InternalEcoreReferenceTestLanguage.g:326:5: (lv_eObjectContainment_16_0= ruleExtendsPluginEObject )
                             {
-                            // InternalEcoreReferenceTestLanguage.g:336:5: (lv_eObjectContainment_16_0= ruleExtendsPluginEObject )
-                            // InternalEcoreReferenceTestLanguage.g:337:6: lv_eObjectContainment_16_0= ruleExtendsPluginEObject
+                            // InternalEcoreReferenceTestLanguage.g:326:5: (lv_eObjectContainment_16_0= ruleExtendsPluginEObject )
+                            // InternalEcoreReferenceTestLanguage.g:327:6: lv_eObjectContainment_16_0= ruleExtendsPluginEObject
                             {
 
                             						newCompositeNode(grammarAccess.getExtendsNsURIEObjectAccess().getEObjectContainmentExtendsPluginEObjectParserRuleCall_3_6_0());
@@ -739,7 +730,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:354:4: ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )?
+                    // InternalEcoreReferenceTestLanguage.g:344:4: ( (lv_eObjectContainment_17_0= ruleExtendsResourceEObject ) )?
                     int alt4=2;
                     int LA4_0 = input.LA(1);
 
@@ -748,10 +739,10 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     switch (alt4) {
                         case 1 :
-                            // InternalEcoreReferenceTestLanguage.g:355:5: (lv_eObjectContainment_17_0= ruleExtendsResourceEObject )
+                            // InternalEcoreReferenceTestLanguage.g:345:5: (lv_eObjectContainment_17_0= ruleExtendsResourceEObject )
                             {
-                            // InternalEcoreReferenceTestLanguage.g:355:5: (lv_eObjectContainment_17_0= ruleExtendsResourceEObject )
-                            // InternalEcoreReferenceTestLanguage.g:356:6: lv_eObjectContainment_17_0= ruleExtendsResourceEObject
+                            // InternalEcoreReferenceTestLanguage.g:345:5: (lv_eObjectContainment_17_0= ruleExtendsResourceEObject )
+                            // InternalEcoreReferenceTestLanguage.g:346:6: lv_eObjectContainment_17_0= ruleExtendsResourceEObject
                             {
 
                             						newCompositeNode(grammarAccess.getExtendsNsURIEObjectAccess().getEObjectContainmentExtendsResourceEObjectParserRuleCall_3_7_0());
@@ -781,11 +772,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:373:4: ( (lv_eObjectContainment_18_0= ruleEObject ) )
-                    // InternalEcoreReferenceTestLanguage.g:374:5: (lv_eObjectContainment_18_0= ruleEObject )
+                    // InternalEcoreReferenceTestLanguage.g:363:4: ( (lv_eObjectContainment_18_0= ruleEObject ) )
+                    // InternalEcoreReferenceTestLanguage.g:364:5: (lv_eObjectContainment_18_0= ruleEObject )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:374:5: (lv_eObjectContainment_18_0= ruleEObject )
-                    // InternalEcoreReferenceTestLanguage.g:375:6: lv_eObjectContainment_18_0= ruleEObject
+                    // InternalEcoreReferenceTestLanguage.g:364:5: (lv_eObjectContainment_18_0= ruleEObject )
+                    // InternalEcoreReferenceTestLanguage.g:365:6: lv_eObjectContainment_18_0= ruleEObject
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsNsURIEObjectAccess().getEObjectContainmentEObjectParserRuleCall_3_8_0());
@@ -812,11 +803,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:392:4: ( (lv_eObjectContainment_19_0= ruleEAttribute ) )
-                    // InternalEcoreReferenceTestLanguage.g:393:5: (lv_eObjectContainment_19_0= ruleEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:382:4: ( (lv_eObjectContainment_19_0= ruleEAttribute ) )
+                    // InternalEcoreReferenceTestLanguage.g:383:5: (lv_eObjectContainment_19_0= ruleEAttribute )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:393:5: (lv_eObjectContainment_19_0= ruleEAttribute )
-                    // InternalEcoreReferenceTestLanguage.g:394:6: lv_eObjectContainment_19_0= ruleEAttribute
+                    // InternalEcoreReferenceTestLanguage.g:383:5: (lv_eObjectContainment_19_0= ruleEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:384:6: lv_eObjectContainment_19_0= ruleEAttribute
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsNsURIEObjectAccess().getEObjectContainmentEAttributeParserRuleCall_3_9_0());
@@ -843,11 +834,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:411:4: ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) )
-                    // InternalEcoreReferenceTestLanguage.g:412:5: (lv_eObjectContainment_20_0= ruleMyEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:401:4: ( (lv_eObjectContainment_20_0= ruleMyEAttribute ) )
+                    // InternalEcoreReferenceTestLanguage.g:402:5: (lv_eObjectContainment_20_0= ruleMyEAttribute )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:412:5: (lv_eObjectContainment_20_0= ruleMyEAttribute )
-                    // InternalEcoreReferenceTestLanguage.g:413:6: lv_eObjectContainment_20_0= ruleMyEAttribute
+                    // InternalEcoreReferenceTestLanguage.g:402:5: (lv_eObjectContainment_20_0= ruleMyEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:403:6: lv_eObjectContainment_20_0= ruleMyEAttribute
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsNsURIEObjectAccess().getEObjectContainmentMyEAttributeParserRuleCall_3_10_0());
@@ -886,9 +877,6 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -903,7 +891,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "entryRuleMyEAttribute"
-    // InternalEcoreReferenceTestLanguage.g:435:1: entryRuleMyEAttribute returns [EObject current=null] : iv_ruleMyEAttribute= ruleMyEAttribute EOF ;
+    // InternalEcoreReferenceTestLanguage.g:425:1: entryRuleMyEAttribute returns [EObject current=null] : iv_ruleMyEAttribute= ruleMyEAttribute EOF ;
     public final EObject entryRuleMyEAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -911,8 +899,8 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
         try {
-            // InternalEcoreReferenceTestLanguage.g:435:53: (iv_ruleMyEAttribute= ruleMyEAttribute EOF )
-            // InternalEcoreReferenceTestLanguage.g:436:2: iv_ruleMyEAttribute= ruleMyEAttribute EOF
+            // InternalEcoreReferenceTestLanguage.g:425:53: (iv_ruleMyEAttribute= ruleMyEAttribute EOF )
+            // InternalEcoreReferenceTestLanguage.g:426:2: iv_ruleMyEAttribute= ruleMyEAttribute EOF
             {
              newCompositeNode(grammarAccess.getMyEAttributeRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -939,24 +927,21 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "ruleMyEAttribute"
-    // InternalEcoreReferenceTestLanguage.g:442:1: ruleMyEAttribute returns [EObject current=null] : ( () otherlv_1= 'MyEAttribute' ) ;
+    // InternalEcoreReferenceTestLanguage.g:432:1: ruleMyEAttribute returns [EObject current=null] : ( () otherlv_1= 'MyEAttribute' ) ;
     public final EObject ruleMyEAttribute() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
 
-
-        	enterRule();
-
         try {
-            // InternalEcoreReferenceTestLanguage.g:448:2: ( ( () otherlv_1= 'MyEAttribute' ) )
-            // InternalEcoreReferenceTestLanguage.g:449:2: ( () otherlv_1= 'MyEAttribute' )
+            // InternalEcoreReferenceTestLanguage.g:433:1: ( ( () otherlv_1= 'MyEAttribute' ) )
+            // InternalEcoreReferenceTestLanguage.g:434:2: ( () otherlv_1= 'MyEAttribute' )
             {
-            // InternalEcoreReferenceTestLanguage.g:449:2: ( () otherlv_1= 'MyEAttribute' )
-            // InternalEcoreReferenceTestLanguage.g:450:3: () otherlv_1= 'MyEAttribute'
+            // InternalEcoreReferenceTestLanguage.g:434:2: ( () otherlv_1= 'MyEAttribute' )
+            // InternalEcoreReferenceTestLanguage.g:435:3: () otherlv_1= 'MyEAttribute'
             {
-            // InternalEcoreReferenceTestLanguage.g:450:3: ()
-            // InternalEcoreReferenceTestLanguage.g:451:4: 
+            // InternalEcoreReferenceTestLanguage.g:435:3: ()
+            // InternalEcoreReferenceTestLanguage.g:436:4: 
             {
 
             				current = forceCreateModelElement(
@@ -976,9 +961,6 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -993,7 +975,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "entryRuleEAttribute"
-    // InternalEcoreReferenceTestLanguage.g:465:1: entryRuleEAttribute returns [EObject current=null] : iv_ruleEAttribute= ruleEAttribute EOF ;
+    // InternalEcoreReferenceTestLanguage.g:450:1: entryRuleEAttribute returns [EObject current=null] : iv_ruleEAttribute= ruleEAttribute EOF ;
     public final EObject entryRuleEAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -1001,8 +983,8 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
         try {
-            // InternalEcoreReferenceTestLanguage.g:465:51: (iv_ruleEAttribute= ruleEAttribute EOF )
-            // InternalEcoreReferenceTestLanguage.g:466:2: iv_ruleEAttribute= ruleEAttribute EOF
+            // InternalEcoreReferenceTestLanguage.g:450:51: (iv_ruleEAttribute= ruleEAttribute EOF )
+            // InternalEcoreReferenceTestLanguage.g:451:2: iv_ruleEAttribute= ruleEAttribute EOF
             {
              newCompositeNode(grammarAccess.getEAttributeRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -1029,24 +1011,21 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "ruleEAttribute"
-    // InternalEcoreReferenceTestLanguage.g:472:1: ruleEAttribute returns [EObject current=null] : ( () otherlv_1= 'EAttribute' ) ;
+    // InternalEcoreReferenceTestLanguage.g:457:1: ruleEAttribute returns [EObject current=null] : ( () otherlv_1= 'EAttribute' ) ;
     public final EObject ruleEAttribute() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
 
-
-        	enterRule();
-
         try {
-            // InternalEcoreReferenceTestLanguage.g:478:2: ( ( () otherlv_1= 'EAttribute' ) )
-            // InternalEcoreReferenceTestLanguage.g:479:2: ( () otherlv_1= 'EAttribute' )
+            // InternalEcoreReferenceTestLanguage.g:458:1: ( ( () otherlv_1= 'EAttribute' ) )
+            // InternalEcoreReferenceTestLanguage.g:459:2: ( () otherlv_1= 'EAttribute' )
             {
-            // InternalEcoreReferenceTestLanguage.g:479:2: ( () otherlv_1= 'EAttribute' )
-            // InternalEcoreReferenceTestLanguage.g:480:3: () otherlv_1= 'EAttribute'
+            // InternalEcoreReferenceTestLanguage.g:459:2: ( () otherlv_1= 'EAttribute' )
+            // InternalEcoreReferenceTestLanguage.g:460:3: () otherlv_1= 'EAttribute'
             {
-            // InternalEcoreReferenceTestLanguage.g:480:3: ()
-            // InternalEcoreReferenceTestLanguage.g:481:4: 
+            // InternalEcoreReferenceTestLanguage.g:460:3: ()
+            // InternalEcoreReferenceTestLanguage.g:461:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1066,9 +1045,6 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -1083,7 +1059,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "entryRuleExtendsPluginEObject"
-    // InternalEcoreReferenceTestLanguage.g:495:1: entryRuleExtendsPluginEObject returns [EObject current=null] : iv_ruleExtendsPluginEObject= ruleExtendsPluginEObject EOF ;
+    // InternalEcoreReferenceTestLanguage.g:475:1: entryRuleExtendsPluginEObject returns [EObject current=null] : iv_ruleExtendsPluginEObject= ruleExtendsPluginEObject EOF ;
     public final EObject entryRuleExtendsPluginEObject() throws RecognitionException {
         EObject current = null;
 
@@ -1091,8 +1067,8 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
         try {
-            // InternalEcoreReferenceTestLanguage.g:495:61: (iv_ruleExtendsPluginEObject= ruleExtendsPluginEObject EOF )
-            // InternalEcoreReferenceTestLanguage.g:496:2: iv_ruleExtendsPluginEObject= ruleExtendsPluginEObject EOF
+            // InternalEcoreReferenceTestLanguage.g:475:61: (iv_ruleExtendsPluginEObject= ruleExtendsPluginEObject EOF )
+            // InternalEcoreReferenceTestLanguage.g:476:2: iv_ruleExtendsPluginEObject= ruleExtendsPluginEObject EOF
             {
              newCompositeNode(grammarAccess.getExtendsPluginEObjectRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -1119,7 +1095,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "ruleExtendsPluginEObject"
-    // InternalEcoreReferenceTestLanguage.g:502:1: ruleExtendsPluginEObject returns [EObject current=null] : (otherlv_0= 'ExtendsPluginEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? ) ;
+    // InternalEcoreReferenceTestLanguage.g:482:1: ruleExtendsPluginEObject returns [EObject current=null] : (otherlv_0= 'ExtendsPluginEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? ) ;
     public final EObject ruleExtendsPluginEObject() throws RecognitionException {
         EObject current = null;
 
@@ -1151,25 +1127,22 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
         EObject lv_eObjectContainment_19_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalEcoreReferenceTestLanguage.g:508:2: ( (otherlv_0= 'ExtendsPluginEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? ) )
-            // InternalEcoreReferenceTestLanguage.g:509:2: (otherlv_0= 'ExtendsPluginEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? )
+            // InternalEcoreReferenceTestLanguage.g:483:1: ( (otherlv_0= 'ExtendsPluginEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? ) )
+            // InternalEcoreReferenceTestLanguage.g:484:2: (otherlv_0= 'ExtendsPluginEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? )
             {
-            // InternalEcoreReferenceTestLanguage.g:509:2: (otherlv_0= 'ExtendsPluginEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? )
-            // InternalEcoreReferenceTestLanguage.g:510:3: otherlv_0= 'ExtendsPluginEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )?
+            // InternalEcoreReferenceTestLanguage.g:484:2: (otherlv_0= 'ExtendsPluginEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? )
+            // InternalEcoreReferenceTestLanguage.g:485:3: otherlv_0= 'ExtendsPluginEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )?
             {
             otherlv_0=(Token)match(input,13,FollowSets000.FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getExtendsPluginEObjectAccess().getExtendsPluginEObjectKeyword_0());
             		
-            // InternalEcoreReferenceTestLanguage.g:514:3: ( (lv_name_1_0= ruleValidID ) )
-            // InternalEcoreReferenceTestLanguage.g:515:4: (lv_name_1_0= ruleValidID )
+            // InternalEcoreReferenceTestLanguage.g:489:3: ( (lv_name_1_0= ruleValidID ) )
+            // InternalEcoreReferenceTestLanguage.g:490:4: (lv_name_1_0= ruleValidID )
             {
-            // InternalEcoreReferenceTestLanguage.g:515:4: (lv_name_1_0= ruleValidID )
-            // InternalEcoreReferenceTestLanguage.g:516:5: lv_name_1_0= ruleValidID
+            // InternalEcoreReferenceTestLanguage.g:490:4: (lv_name_1_0= ruleValidID )
+            // InternalEcoreReferenceTestLanguage.g:491:5: lv_name_1_0= ruleValidID
             {
 
             					newCompositeNode(grammarAccess.getExtendsPluginEObjectAccess().getNameValidIDParserRuleCall_1_0());
@@ -1196,7 +1169,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-            // InternalEcoreReferenceTestLanguage.g:533:3: ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) )
+            // InternalEcoreReferenceTestLanguage.g:508:3: ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) )
             int alt6=4;
             switch ( input.LA(1) ) {
             case 12:
@@ -1228,20 +1201,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             switch (alt6) {
                 case 1 :
-                    // InternalEcoreReferenceTestLanguage.g:534:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:509:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:534:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:535:5: otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:509:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:510:5: otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) )
                     {
                     otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_2, grammarAccess.getExtendsPluginEObjectAccess().getEObjectKeyword_2_0_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:539:5: ( (otherlv_3= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:540:6: (otherlv_3= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:514:5: ( (otherlv_3= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:515:6: (otherlv_3= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:540:6: (otherlv_3= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:541:7: otherlv_3= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:515:6: (otherlv_3= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:516:7: otherlv_3= RULE_ID
                     {
 
                     							if (current==null) {
@@ -1265,20 +1238,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     break;
                 case 2 :
-                    // InternalEcoreReferenceTestLanguage.g:554:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:529:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:554:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:555:5: otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:529:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:530:5: otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) )
                     {
                     otherlv_4=(Token)match(input,11,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_4, grammarAccess.getExtendsPluginEObjectAccess().getExtendsNsURIEObjectKeyword_2_1_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:559:5: ( (otherlv_5= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:560:6: (otherlv_5= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:534:5: ( (otherlv_5= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:535:6: (otherlv_5= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:560:6: (otherlv_5= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:561:7: otherlv_5= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:535:6: (otherlv_5= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:536:7: otherlv_5= RULE_ID
                     {
 
                     							if (current==null) {
@@ -1302,20 +1275,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     break;
                 case 3 :
-                    // InternalEcoreReferenceTestLanguage.g:574:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:549:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:574:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:575:5: otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:549:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:550:5: otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) )
                     {
                     otherlv_6=(Token)match(input,13,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_6, grammarAccess.getExtendsPluginEObjectAccess().getExtendsPluginEObjectKeyword_2_2_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:579:5: ( (otherlv_7= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:580:6: (otherlv_7= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:554:5: ( (otherlv_7= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:555:6: (otherlv_7= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:580:6: (otherlv_7= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:581:7: otherlv_7= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:555:6: (otherlv_7= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:556:7: otherlv_7= RULE_ID
                     {
 
                     							if (current==null) {
@@ -1339,20 +1312,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     break;
                 case 4 :
-                    // InternalEcoreReferenceTestLanguage.g:594:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:569:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:594:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:595:5: otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:569:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:570:5: otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) )
                     {
                     otherlv_8=(Token)match(input,14,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_8, grammarAccess.getExtendsPluginEObjectAccess().getExtendsResourceEObjectKeyword_2_3_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:599:5: ( (otherlv_9= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:600:6: (otherlv_9= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:574:5: ( (otherlv_9= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:575:6: (otherlv_9= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:600:6: (otherlv_9= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:601:7: otherlv_9= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:575:6: (otherlv_9= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:576:7: otherlv_9= RULE_ID
                     {
 
                     							if (current==null) {
@@ -1378,7 +1351,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-            // InternalEcoreReferenceTestLanguage.g:614:3: (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )?
+            // InternalEcoreReferenceTestLanguage.g:589:3: (otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1387,17 +1360,17 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
             }
             switch (alt10) {
                 case 1 :
-                    // InternalEcoreReferenceTestLanguage.g:615:4: otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) )
+                    // InternalEcoreReferenceTestLanguage.g:590:4: otherlv_10= 'ExtendsPluginEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )? ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )? ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )? ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) )
                     {
                     otherlv_10=(Token)match(input,13,FollowSets000.FOLLOW_5); 
 
                     				newLeafNode(otherlv_10, grammarAccess.getExtendsPluginEObjectAccess().getExtendsPluginEObjectKeyword_3_0());
                     			
-                    // InternalEcoreReferenceTestLanguage.g:619:4: ( (otherlv_11= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:620:5: (otherlv_11= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:594:4: ( (otherlv_11= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:595:5: (otherlv_11= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:620:5: (otherlv_11= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:621:6: otherlv_11= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:595:5: (otherlv_11= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:596:6: otherlv_11= RULE_ID
                     {
 
                     						if (current==null) {
@@ -1414,11 +1387,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:632:4: ( (otherlv_12= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:633:5: (otherlv_12= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:607:4: ( (otherlv_12= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:608:5: (otherlv_12= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:633:5: (otherlv_12= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:634:6: otherlv_12= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:608:5: (otherlv_12= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:609:6: otherlv_12= RULE_ID
                     {
 
                     						if (current==null) {
@@ -1435,11 +1408,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:645:4: ( (otherlv_13= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:646:5: (otherlv_13= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:620:4: ( (otherlv_13= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:621:5: (otherlv_13= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:646:5: (otherlv_13= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:647:6: otherlv_13= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:621:5: (otherlv_13= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:622:6: otherlv_13= RULE_ID
                     {
 
                     						if (current==null) {
@@ -1456,7 +1429,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:658:4: ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )?
+                    // InternalEcoreReferenceTestLanguage.g:633:4: ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -1465,10 +1438,10 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     switch (alt7) {
                         case 1 :
-                            // InternalEcoreReferenceTestLanguage.g:659:5: (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject )
+                            // InternalEcoreReferenceTestLanguage.g:634:5: (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject )
                             {
-                            // InternalEcoreReferenceTestLanguage.g:659:5: (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject )
-                            // InternalEcoreReferenceTestLanguage.g:660:6: lv_eObjectContainment_14_0= ruleExtendsNsURIEObject
+                            // InternalEcoreReferenceTestLanguage.g:634:5: (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject )
+                            // InternalEcoreReferenceTestLanguage.g:635:6: lv_eObjectContainment_14_0= ruleExtendsNsURIEObject
                             {
 
                             						newCompositeNode(grammarAccess.getExtendsPluginEObjectAccess().getEObjectContainmentExtendsNsURIEObjectParserRuleCall_3_4_0());
@@ -1498,7 +1471,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:677:4: ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )?
+                    // InternalEcoreReferenceTestLanguage.g:652:4: ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -1507,10 +1480,10 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     switch (alt8) {
                         case 1 :
-                            // InternalEcoreReferenceTestLanguage.g:678:5: (lv_eObjectContainment_15_0= ruleExtendsPluginEObject )
+                            // InternalEcoreReferenceTestLanguage.g:653:5: (lv_eObjectContainment_15_0= ruleExtendsPluginEObject )
                             {
-                            // InternalEcoreReferenceTestLanguage.g:678:5: (lv_eObjectContainment_15_0= ruleExtendsPluginEObject )
-                            // InternalEcoreReferenceTestLanguage.g:679:6: lv_eObjectContainment_15_0= ruleExtendsPluginEObject
+                            // InternalEcoreReferenceTestLanguage.g:653:5: (lv_eObjectContainment_15_0= ruleExtendsPluginEObject )
+                            // InternalEcoreReferenceTestLanguage.g:654:6: lv_eObjectContainment_15_0= ruleExtendsPluginEObject
                             {
 
                             						newCompositeNode(grammarAccess.getExtendsPluginEObjectAccess().getEObjectContainmentExtendsPluginEObjectParserRuleCall_3_5_0());
@@ -1540,7 +1513,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:696:4: ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )?
+                    // InternalEcoreReferenceTestLanguage.g:671:4: ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1549,10 +1522,10 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalEcoreReferenceTestLanguage.g:697:5: (lv_eObjectContainment_16_0= ruleExtendsResourceEObject )
+                            // InternalEcoreReferenceTestLanguage.g:672:5: (lv_eObjectContainment_16_0= ruleExtendsResourceEObject )
                             {
-                            // InternalEcoreReferenceTestLanguage.g:697:5: (lv_eObjectContainment_16_0= ruleExtendsResourceEObject )
-                            // InternalEcoreReferenceTestLanguage.g:698:6: lv_eObjectContainment_16_0= ruleExtendsResourceEObject
+                            // InternalEcoreReferenceTestLanguage.g:672:5: (lv_eObjectContainment_16_0= ruleExtendsResourceEObject )
+                            // InternalEcoreReferenceTestLanguage.g:673:6: lv_eObjectContainment_16_0= ruleExtendsResourceEObject
                             {
 
                             						newCompositeNode(grammarAccess.getExtendsPluginEObjectAccess().getEObjectContainmentExtendsResourceEObjectParserRuleCall_3_6_0());
@@ -1582,11 +1555,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:715:4: ( (lv_eObjectContainment_17_0= ruleEObject ) )
-                    // InternalEcoreReferenceTestLanguage.g:716:5: (lv_eObjectContainment_17_0= ruleEObject )
+                    // InternalEcoreReferenceTestLanguage.g:690:4: ( (lv_eObjectContainment_17_0= ruleEObject ) )
+                    // InternalEcoreReferenceTestLanguage.g:691:5: (lv_eObjectContainment_17_0= ruleEObject )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:716:5: (lv_eObjectContainment_17_0= ruleEObject )
-                    // InternalEcoreReferenceTestLanguage.g:717:6: lv_eObjectContainment_17_0= ruleEObject
+                    // InternalEcoreReferenceTestLanguage.g:691:5: (lv_eObjectContainment_17_0= ruleEObject )
+                    // InternalEcoreReferenceTestLanguage.g:692:6: lv_eObjectContainment_17_0= ruleEObject
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsPluginEObjectAccess().getEObjectContainmentEObjectParserRuleCall_3_7_0());
@@ -1613,11 +1586,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:734:4: ( (lv_eObjectContainment_18_0= ruleEAttribute ) )
-                    // InternalEcoreReferenceTestLanguage.g:735:5: (lv_eObjectContainment_18_0= ruleEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:709:4: ( (lv_eObjectContainment_18_0= ruleEAttribute ) )
+                    // InternalEcoreReferenceTestLanguage.g:710:5: (lv_eObjectContainment_18_0= ruleEAttribute )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:735:5: (lv_eObjectContainment_18_0= ruleEAttribute )
-                    // InternalEcoreReferenceTestLanguage.g:736:6: lv_eObjectContainment_18_0= ruleEAttribute
+                    // InternalEcoreReferenceTestLanguage.g:710:5: (lv_eObjectContainment_18_0= ruleEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:711:6: lv_eObjectContainment_18_0= ruleEAttribute
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsPluginEObjectAccess().getEObjectContainmentEAttributeParserRuleCall_3_8_0());
@@ -1644,11 +1617,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:753:4: ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) )
-                    // InternalEcoreReferenceTestLanguage.g:754:5: (lv_eObjectContainment_19_0= ruleMyEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:728:4: ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) )
+                    // InternalEcoreReferenceTestLanguage.g:729:5: (lv_eObjectContainment_19_0= ruleMyEAttribute )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:754:5: (lv_eObjectContainment_19_0= ruleMyEAttribute )
-                    // InternalEcoreReferenceTestLanguage.g:755:6: lv_eObjectContainment_19_0= ruleMyEAttribute
+                    // InternalEcoreReferenceTestLanguage.g:729:5: (lv_eObjectContainment_19_0= ruleMyEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:730:6: lv_eObjectContainment_19_0= ruleMyEAttribute
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsPluginEObjectAccess().getEObjectContainmentMyEAttributeParserRuleCall_3_9_0());
@@ -1687,9 +1660,6 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -1704,7 +1674,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "entryRuleExtendsResourceEObject"
-    // InternalEcoreReferenceTestLanguage.g:777:1: entryRuleExtendsResourceEObject returns [EObject current=null] : iv_ruleExtendsResourceEObject= ruleExtendsResourceEObject EOF ;
+    // InternalEcoreReferenceTestLanguage.g:752:1: entryRuleExtendsResourceEObject returns [EObject current=null] : iv_ruleExtendsResourceEObject= ruleExtendsResourceEObject EOF ;
     public final EObject entryRuleExtendsResourceEObject() throws RecognitionException {
         EObject current = null;
 
@@ -1712,8 +1682,8 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
         try {
-            // InternalEcoreReferenceTestLanguage.g:777:63: (iv_ruleExtendsResourceEObject= ruleExtendsResourceEObject EOF )
-            // InternalEcoreReferenceTestLanguage.g:778:2: iv_ruleExtendsResourceEObject= ruleExtendsResourceEObject EOF
+            // InternalEcoreReferenceTestLanguage.g:752:63: (iv_ruleExtendsResourceEObject= ruleExtendsResourceEObject EOF )
+            // InternalEcoreReferenceTestLanguage.g:753:2: iv_ruleExtendsResourceEObject= ruleExtendsResourceEObject EOF
             {
              newCompositeNode(grammarAccess.getExtendsResourceEObjectRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -1740,7 +1710,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "ruleExtendsResourceEObject"
-    // InternalEcoreReferenceTestLanguage.g:784:1: ruleExtendsResourceEObject returns [EObject current=null] : (otherlv_0= 'ExtendsResourceEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? ) ;
+    // InternalEcoreReferenceTestLanguage.g:759:1: ruleExtendsResourceEObject returns [EObject current=null] : (otherlv_0= 'ExtendsResourceEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? ) ;
     public final EObject ruleExtendsResourceEObject() throws RecognitionException {
         EObject current = null;
 
@@ -1772,25 +1742,22 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
         EObject lv_eObjectContainment_19_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalEcoreReferenceTestLanguage.g:790:2: ( (otherlv_0= 'ExtendsResourceEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? ) )
-            // InternalEcoreReferenceTestLanguage.g:791:2: (otherlv_0= 'ExtendsResourceEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? )
+            // InternalEcoreReferenceTestLanguage.g:760:1: ( (otherlv_0= 'ExtendsResourceEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? ) )
+            // InternalEcoreReferenceTestLanguage.g:761:2: (otherlv_0= 'ExtendsResourceEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? )
             {
-            // InternalEcoreReferenceTestLanguage.g:791:2: (otherlv_0= 'ExtendsResourceEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? )
-            // InternalEcoreReferenceTestLanguage.g:792:3: otherlv_0= 'ExtendsResourceEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )?
+            // InternalEcoreReferenceTestLanguage.g:761:2: (otherlv_0= 'ExtendsResourceEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )? )
+            // InternalEcoreReferenceTestLanguage.g:762:3: otherlv_0= 'ExtendsResourceEObject' ( (lv_name_1_0= ruleValidID ) ) ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) ) (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )?
             {
             otherlv_0=(Token)match(input,14,FollowSets000.FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getExtendsResourceEObjectAccess().getExtendsResourceEObjectKeyword_0());
             		
-            // InternalEcoreReferenceTestLanguage.g:796:3: ( (lv_name_1_0= ruleValidID ) )
-            // InternalEcoreReferenceTestLanguage.g:797:4: (lv_name_1_0= ruleValidID )
+            // InternalEcoreReferenceTestLanguage.g:766:3: ( (lv_name_1_0= ruleValidID ) )
+            // InternalEcoreReferenceTestLanguage.g:767:4: (lv_name_1_0= ruleValidID )
             {
-            // InternalEcoreReferenceTestLanguage.g:797:4: (lv_name_1_0= ruleValidID )
-            // InternalEcoreReferenceTestLanguage.g:798:5: lv_name_1_0= ruleValidID
+            // InternalEcoreReferenceTestLanguage.g:767:4: (lv_name_1_0= ruleValidID )
+            // InternalEcoreReferenceTestLanguage.g:768:5: lv_name_1_0= ruleValidID
             {
 
             					newCompositeNode(grammarAccess.getExtendsResourceEObjectAccess().getNameValidIDParserRuleCall_1_0());
@@ -1817,7 +1784,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-            // InternalEcoreReferenceTestLanguage.g:815:3: ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) )
+            // InternalEcoreReferenceTestLanguage.g:785:3: ( (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) ) | (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) ) )
             int alt11=4;
             switch ( input.LA(1) ) {
             case 12:
@@ -1849,20 +1816,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             switch (alt11) {
                 case 1 :
-                    // InternalEcoreReferenceTestLanguage.g:816:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:786:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:816:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:817:5: otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:786:4: (otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:787:5: otherlv_2= 'EObject' ( (otherlv_3= RULE_ID ) )
                     {
                     otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_2, grammarAccess.getExtendsResourceEObjectAccess().getEObjectKeyword_2_0_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:821:5: ( (otherlv_3= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:822:6: (otherlv_3= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:791:5: ( (otherlv_3= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:792:6: (otherlv_3= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:822:6: (otherlv_3= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:823:7: otherlv_3= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:792:6: (otherlv_3= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:793:7: otherlv_3= RULE_ID
                     {
 
                     							if (current==null) {
@@ -1886,20 +1853,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     break;
                 case 2 :
-                    // InternalEcoreReferenceTestLanguage.g:836:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:806:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:836:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:837:5: otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:806:4: (otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:807:5: otherlv_4= 'ExtendsNsURIEObject' ( (otherlv_5= RULE_ID ) )
                     {
                     otherlv_4=(Token)match(input,11,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_4, grammarAccess.getExtendsResourceEObjectAccess().getExtendsNsURIEObjectKeyword_2_1_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:841:5: ( (otherlv_5= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:842:6: (otherlv_5= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:811:5: ( (otherlv_5= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:812:6: (otherlv_5= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:842:6: (otherlv_5= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:843:7: otherlv_5= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:812:6: (otherlv_5= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:813:7: otherlv_5= RULE_ID
                     {
 
                     							if (current==null) {
@@ -1923,20 +1890,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     break;
                 case 3 :
-                    // InternalEcoreReferenceTestLanguage.g:856:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:826:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:856:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:857:5: otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:826:4: (otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:827:5: otherlv_6= 'ExtendsPluginEObject' ( (otherlv_7= RULE_ID ) )
                     {
                     otherlv_6=(Token)match(input,13,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_6, grammarAccess.getExtendsResourceEObjectAccess().getExtendsPluginEObjectKeyword_2_2_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:861:5: ( (otherlv_7= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:862:6: (otherlv_7= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:831:5: ( (otherlv_7= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:832:6: (otherlv_7= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:862:6: (otherlv_7= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:863:7: otherlv_7= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:832:6: (otherlv_7= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:833:7: otherlv_7= RULE_ID
                     {
 
                     							if (current==null) {
@@ -1960,20 +1927,20 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
                     }
                     break;
                 case 4 :
-                    // InternalEcoreReferenceTestLanguage.g:876:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:846:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:876:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
-                    // InternalEcoreReferenceTestLanguage.g:877:5: otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:846:4: (otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) ) )
+                    // InternalEcoreReferenceTestLanguage.g:847:5: otherlv_8= 'ExtendsResourceEObject' ( (otherlv_9= RULE_ID ) )
                     {
                     otherlv_8=(Token)match(input,14,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_8, grammarAccess.getExtendsResourceEObjectAccess().getExtendsResourceEObjectKeyword_2_3_0());
                     				
-                    // InternalEcoreReferenceTestLanguage.g:881:5: ( (otherlv_9= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:882:6: (otherlv_9= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:851:5: ( (otherlv_9= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:852:6: (otherlv_9= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:882:6: (otherlv_9= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:883:7: otherlv_9= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:852:6: (otherlv_9= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:853:7: otherlv_9= RULE_ID
                     {
 
                     							if (current==null) {
@@ -1999,7 +1966,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-            // InternalEcoreReferenceTestLanguage.g:896:3: (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )?
+            // InternalEcoreReferenceTestLanguage.g:866:3: (otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) ) )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -2008,17 +1975,17 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
             }
             switch (alt12) {
                 case 1 :
-                    // InternalEcoreReferenceTestLanguage.g:897:4: otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) )
+                    // InternalEcoreReferenceTestLanguage.g:867:4: otherlv_10= 'ExtendsResourceEObject' ( (otherlv_11= RULE_ID ) ) ( (otherlv_12= RULE_ID ) ) ( (otherlv_13= RULE_ID ) ) ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) ) ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) ) ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) ) ( (lv_eObjectContainment_17_0= ruleEObject ) ) ( (lv_eObjectContainment_18_0= ruleEAttribute ) ) ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) )
                     {
                     otherlv_10=(Token)match(input,14,FollowSets000.FOLLOW_5); 
 
                     				newLeafNode(otherlv_10, grammarAccess.getExtendsResourceEObjectAccess().getExtendsResourceEObjectKeyword_3_0());
                     			
-                    // InternalEcoreReferenceTestLanguage.g:901:4: ( (otherlv_11= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:902:5: (otherlv_11= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:871:4: ( (otherlv_11= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:872:5: (otherlv_11= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:902:5: (otherlv_11= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:903:6: otherlv_11= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:872:5: (otherlv_11= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:873:6: otherlv_11= RULE_ID
                     {
 
                     						if (current==null) {
@@ -2035,11 +2002,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:914:4: ( (otherlv_12= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:915:5: (otherlv_12= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:884:4: ( (otherlv_12= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:885:5: (otherlv_12= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:915:5: (otherlv_12= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:916:6: otherlv_12= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:885:5: (otherlv_12= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:886:6: otherlv_12= RULE_ID
                     {
 
                     						if (current==null) {
@@ -2056,11 +2023,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:927:4: ( (otherlv_13= RULE_ID ) )
-                    // InternalEcoreReferenceTestLanguage.g:928:5: (otherlv_13= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:897:4: ( (otherlv_13= RULE_ID ) )
+                    // InternalEcoreReferenceTestLanguage.g:898:5: (otherlv_13= RULE_ID )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:928:5: (otherlv_13= RULE_ID )
-                    // InternalEcoreReferenceTestLanguage.g:929:6: otherlv_13= RULE_ID
+                    // InternalEcoreReferenceTestLanguage.g:898:5: (otherlv_13= RULE_ID )
+                    // InternalEcoreReferenceTestLanguage.g:899:6: otherlv_13= RULE_ID
                     {
 
                     						if (current==null) {
@@ -2077,11 +2044,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:940:4: ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )
-                    // InternalEcoreReferenceTestLanguage.g:941:5: (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject )
+                    // InternalEcoreReferenceTestLanguage.g:910:4: ( (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject ) )
+                    // InternalEcoreReferenceTestLanguage.g:911:5: (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:941:5: (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject )
-                    // InternalEcoreReferenceTestLanguage.g:942:6: lv_eObjectContainment_14_0= ruleExtendsNsURIEObject
+                    // InternalEcoreReferenceTestLanguage.g:911:5: (lv_eObjectContainment_14_0= ruleExtendsNsURIEObject )
+                    // InternalEcoreReferenceTestLanguage.g:912:6: lv_eObjectContainment_14_0= ruleExtendsNsURIEObject
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsResourceEObjectAccess().getEObjectContainmentExtendsNsURIEObjectParserRuleCall_3_4_0());
@@ -2108,11 +2075,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:959:4: ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )
-                    // InternalEcoreReferenceTestLanguage.g:960:5: (lv_eObjectContainment_15_0= ruleExtendsPluginEObject )
+                    // InternalEcoreReferenceTestLanguage.g:929:4: ( (lv_eObjectContainment_15_0= ruleExtendsPluginEObject ) )
+                    // InternalEcoreReferenceTestLanguage.g:930:5: (lv_eObjectContainment_15_0= ruleExtendsPluginEObject )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:960:5: (lv_eObjectContainment_15_0= ruleExtendsPluginEObject )
-                    // InternalEcoreReferenceTestLanguage.g:961:6: lv_eObjectContainment_15_0= ruleExtendsPluginEObject
+                    // InternalEcoreReferenceTestLanguage.g:930:5: (lv_eObjectContainment_15_0= ruleExtendsPluginEObject )
+                    // InternalEcoreReferenceTestLanguage.g:931:6: lv_eObjectContainment_15_0= ruleExtendsPluginEObject
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsResourceEObjectAccess().getEObjectContainmentExtendsPluginEObjectParserRuleCall_3_5_0());
@@ -2139,11 +2106,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:978:4: ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )
-                    // InternalEcoreReferenceTestLanguage.g:979:5: (lv_eObjectContainment_16_0= ruleExtendsResourceEObject )
+                    // InternalEcoreReferenceTestLanguage.g:948:4: ( (lv_eObjectContainment_16_0= ruleExtendsResourceEObject ) )
+                    // InternalEcoreReferenceTestLanguage.g:949:5: (lv_eObjectContainment_16_0= ruleExtendsResourceEObject )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:979:5: (lv_eObjectContainment_16_0= ruleExtendsResourceEObject )
-                    // InternalEcoreReferenceTestLanguage.g:980:6: lv_eObjectContainment_16_0= ruleExtendsResourceEObject
+                    // InternalEcoreReferenceTestLanguage.g:949:5: (lv_eObjectContainment_16_0= ruleExtendsResourceEObject )
+                    // InternalEcoreReferenceTestLanguage.g:950:6: lv_eObjectContainment_16_0= ruleExtendsResourceEObject
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsResourceEObjectAccess().getEObjectContainmentExtendsResourceEObjectParserRuleCall_3_6_0());
@@ -2170,11 +2137,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:997:4: ( (lv_eObjectContainment_17_0= ruleEObject ) )
-                    // InternalEcoreReferenceTestLanguage.g:998:5: (lv_eObjectContainment_17_0= ruleEObject )
+                    // InternalEcoreReferenceTestLanguage.g:967:4: ( (lv_eObjectContainment_17_0= ruleEObject ) )
+                    // InternalEcoreReferenceTestLanguage.g:968:5: (lv_eObjectContainment_17_0= ruleEObject )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:998:5: (lv_eObjectContainment_17_0= ruleEObject )
-                    // InternalEcoreReferenceTestLanguage.g:999:6: lv_eObjectContainment_17_0= ruleEObject
+                    // InternalEcoreReferenceTestLanguage.g:968:5: (lv_eObjectContainment_17_0= ruleEObject )
+                    // InternalEcoreReferenceTestLanguage.g:969:6: lv_eObjectContainment_17_0= ruleEObject
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsResourceEObjectAccess().getEObjectContainmentEObjectParserRuleCall_3_7_0());
@@ -2201,11 +2168,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:1016:4: ( (lv_eObjectContainment_18_0= ruleEAttribute ) )
-                    // InternalEcoreReferenceTestLanguage.g:1017:5: (lv_eObjectContainment_18_0= ruleEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:986:4: ( (lv_eObjectContainment_18_0= ruleEAttribute ) )
+                    // InternalEcoreReferenceTestLanguage.g:987:5: (lv_eObjectContainment_18_0= ruleEAttribute )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:1017:5: (lv_eObjectContainment_18_0= ruleEAttribute )
-                    // InternalEcoreReferenceTestLanguage.g:1018:6: lv_eObjectContainment_18_0= ruleEAttribute
+                    // InternalEcoreReferenceTestLanguage.g:987:5: (lv_eObjectContainment_18_0= ruleEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:988:6: lv_eObjectContainment_18_0= ruleEAttribute
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsResourceEObjectAccess().getEObjectContainmentEAttributeParserRuleCall_3_8_0());
@@ -2232,11 +2199,11 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
                     }
 
-                    // InternalEcoreReferenceTestLanguage.g:1035:4: ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) )
-                    // InternalEcoreReferenceTestLanguage.g:1036:5: (lv_eObjectContainment_19_0= ruleMyEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:1005:4: ( (lv_eObjectContainment_19_0= ruleMyEAttribute ) )
+                    // InternalEcoreReferenceTestLanguage.g:1006:5: (lv_eObjectContainment_19_0= ruleMyEAttribute )
                     {
-                    // InternalEcoreReferenceTestLanguage.g:1036:5: (lv_eObjectContainment_19_0= ruleMyEAttribute )
-                    // InternalEcoreReferenceTestLanguage.g:1037:6: lv_eObjectContainment_19_0= ruleMyEAttribute
+                    // InternalEcoreReferenceTestLanguage.g:1006:5: (lv_eObjectContainment_19_0= ruleMyEAttribute )
+                    // InternalEcoreReferenceTestLanguage.g:1007:6: lv_eObjectContainment_19_0= ruleMyEAttribute
                     {
 
                     						newCompositeNode(grammarAccess.getExtendsResourceEObjectAccess().getEObjectContainmentMyEAttributeParserRuleCall_3_9_0());
@@ -2275,9 +2242,6 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -2292,7 +2256,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "entryRuleEObject"
-    // InternalEcoreReferenceTestLanguage.g:1059:1: entryRuleEObject returns [EObject current=null] : iv_ruleEObject= ruleEObject EOF ;
+    // InternalEcoreReferenceTestLanguage.g:1029:1: entryRuleEObject returns [EObject current=null] : iv_ruleEObject= ruleEObject EOF ;
     public final EObject entryRuleEObject() throws RecognitionException {
         EObject current = null;
 
@@ -2300,8 +2264,8 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
         try {
-            // InternalEcoreReferenceTestLanguage.g:1059:48: (iv_ruleEObject= ruleEObject EOF )
-            // InternalEcoreReferenceTestLanguage.g:1060:2: iv_ruleEObject= ruleEObject EOF
+            // InternalEcoreReferenceTestLanguage.g:1029:48: (iv_ruleEObject= ruleEObject EOF )
+            // InternalEcoreReferenceTestLanguage.g:1030:2: iv_ruleEObject= ruleEObject EOF
             {
              newCompositeNode(grammarAccess.getEObjectRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -2328,24 +2292,21 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "ruleEObject"
-    // InternalEcoreReferenceTestLanguage.g:1066:1: ruleEObject returns [EObject current=null] : ( () otherlv_1= 'object' ) ;
+    // InternalEcoreReferenceTestLanguage.g:1036:1: ruleEObject returns [EObject current=null] : ( () otherlv_1= 'object' ) ;
     public final EObject ruleEObject() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
 
-
-        	enterRule();
-
         try {
-            // InternalEcoreReferenceTestLanguage.g:1072:2: ( ( () otherlv_1= 'object' ) )
-            // InternalEcoreReferenceTestLanguage.g:1073:2: ( () otherlv_1= 'object' )
+            // InternalEcoreReferenceTestLanguage.g:1037:1: ( ( () otherlv_1= 'object' ) )
+            // InternalEcoreReferenceTestLanguage.g:1038:2: ( () otherlv_1= 'object' )
             {
-            // InternalEcoreReferenceTestLanguage.g:1073:2: ( () otherlv_1= 'object' )
-            // InternalEcoreReferenceTestLanguage.g:1074:3: () otherlv_1= 'object'
+            // InternalEcoreReferenceTestLanguage.g:1038:2: ( () otherlv_1= 'object' )
+            // InternalEcoreReferenceTestLanguage.g:1039:3: () otherlv_1= 'object'
             {
-            // InternalEcoreReferenceTestLanguage.g:1074:3: ()
-            // InternalEcoreReferenceTestLanguage.g:1075:4: 
+            // InternalEcoreReferenceTestLanguage.g:1039:3: ()
+            // InternalEcoreReferenceTestLanguage.g:1040:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2365,9 +2326,6 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -2382,7 +2340,7 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "entryRuleValidID"
-    // InternalEcoreReferenceTestLanguage.g:1089:1: entryRuleValidID returns [String current=null] : iv_ruleValidID= ruleValidID EOF ;
+    // InternalEcoreReferenceTestLanguage.g:1054:1: entryRuleValidID returns [String current=null] : iv_ruleValidID= ruleValidID EOF ;
     public final String entryRuleValidID() throws RecognitionException {
         String current = null;
 
@@ -2390,8 +2348,8 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
         try {
-            // InternalEcoreReferenceTestLanguage.g:1089:47: (iv_ruleValidID= ruleValidID EOF )
-            // InternalEcoreReferenceTestLanguage.g:1090:2: iv_ruleValidID= ruleValidID EOF
+            // InternalEcoreReferenceTestLanguage.g:1054:47: (iv_ruleValidID= ruleValidID EOF )
+            // InternalEcoreReferenceTestLanguage.g:1055:2: iv_ruleValidID= ruleValidID EOF
             {
              newCompositeNode(grammarAccess.getValidIDRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -2418,18 +2376,15 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
 
 
     // $ANTLR start "ruleValidID"
-    // InternalEcoreReferenceTestLanguage.g:1096:1: ruleValidID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
+    // InternalEcoreReferenceTestLanguage.g:1061:1: ruleValidID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
     public final AntlrDatatypeRuleToken ruleValidID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_ID_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalEcoreReferenceTestLanguage.g:1102:2: (this_ID_0= RULE_ID )
-            // InternalEcoreReferenceTestLanguage.g:1103:2: this_ID_0= RULE_ID
+            // InternalEcoreReferenceTestLanguage.g:1062:1: (this_ID_0= RULE_ID )
+            // InternalEcoreReferenceTestLanguage.g:1063:2: this_ID_0= RULE_ID
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -2440,9 +2395,6 @@ public class InternalEcoreReferenceTestLanguageParser extends AbstractInternalAn
             	
 
             }
-
-
-            	leaveRule();
 
         }
 

@@ -70,12 +70,7 @@ entryRuleRoot returns [EObject current=null]:
 
 // Rule Root
 ruleRoot returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getRootAccess().getSimpleParserRuleCall_0());
@@ -208,12 +203,7 @@ entryRuleSimple returns [EObject current=null]:
 
 // Rule Simple
 ruleSimple returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='1'
 		{
@@ -249,12 +239,7 @@ entryRuleDelegation returns [EObject current=null]:
 
 // Rule Delegation
 ruleDelegation returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='2'
 		{
@@ -291,12 +276,7 @@ entryRuleUnassigned returns [EObject current=null]:
 
 // Rule Unassigned
 ruleUnassigned returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='3'
 		{
@@ -322,12 +302,7 @@ entryRulePrefixedUnassigned returns [EObject current=null]:
 
 // Rule PrefixedUnassigned
 rulePrefixedUnassigned returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='4'
 		{
@@ -364,12 +339,7 @@ entryRulePrefixedDelegate returns [EObject current=null]:
 
 // Rule PrefixedDelegate
 rulePrefixedDelegate returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='prefix'
 		{
@@ -395,12 +365,7 @@ entryRuleDelegate returns [EObject current=null]:
 
 // Rule Delegate
 ruleDelegate returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID
@@ -430,12 +395,7 @@ entryRuleExpression returns [EObject current=null]:
 
 // Rule Expression
 ruleExpression returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getExpressionAccess().getPrimaryParserRuleCall_0());
@@ -489,12 +449,7 @@ entryRulePrimary returns [EObject current=null]:
 
 // Rule Primary
 rulePrimary returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -544,12 +499,7 @@ entryRuleParenthesized returns [EObject current=null]:
 
 // Rule Parenthesized
 ruleParenthesized returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='('
 		{
@@ -579,12 +529,7 @@ entryRuleMixed returns [EObject current=null]:
 
 // Rule Mixed
 ruleMixed returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='('
 		{
@@ -808,12 +753,7 @@ entryRuleDatatype returns [String current=null]:
 
 // Rule Datatype
 ruleDatatype returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='datatype'
 		{
@@ -846,12 +786,7 @@ ruleDatatype returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken(
 
 // Rule Fragment
 ruleFragment[EObject in_current]  returns [EObject current=in_current]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -927,12 +862,7 @@ entryRuleValueList returns [EObject current=null]:
 
 // Rule ValueList
 ruleValueList returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -964,12 +894,7 @@ ruleValueList returns [EObject current=null]
 
 // Rule Enum
 ruleEnum returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			enumLiteral_0='lit1'

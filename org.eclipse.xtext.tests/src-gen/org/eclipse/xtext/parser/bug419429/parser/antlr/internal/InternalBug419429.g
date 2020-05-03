@@ -69,12 +69,7 @@ entryRuleEReference returns [EObject current=null]:
 
 // Rule EReference
 ruleEReference returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{

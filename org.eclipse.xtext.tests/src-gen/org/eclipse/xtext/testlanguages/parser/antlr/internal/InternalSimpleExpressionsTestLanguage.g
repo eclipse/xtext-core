@@ -69,12 +69,7 @@ entryRuleSequence returns [EObject current=null]:
 
 // Rule Sequence
 ruleSequence returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getSequenceAccess().getAdditionParserRuleCall_0());
@@ -124,12 +119,7 @@ entryRuleAddition returns [EObject current=null]:
 
 // Rule Addition
 ruleAddition returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getAdditionAccess().getMultiplicationParserRuleCall_0());
@@ -206,12 +196,7 @@ entryRuleMultiplication returns [EObject current=null]:
 
 // Rule Multiplication
 ruleMultiplication returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getMultiplicationAccess().getTermParserRuleCall_0());
@@ -288,12 +273,7 @@ entryRuleTerm returns [EObject current=null]:
 
 // Rule Term
 ruleTerm returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getTermAccess().getAtomParserRuleCall_0());
@@ -324,12 +304,7 @@ entryRuleAtom returns [EObject current=null]:
 
 // Rule Atom
 ruleAtom returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID
@@ -359,12 +334,7 @@ entryRuleParens returns [EObject current=null]:
 
 // Rule Parens
 ruleParens returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='('
 		{

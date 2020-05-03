@@ -140,18 +140,15 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
         EObject lv_xbs_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 2) ) { return current; }
-            // InternalBacktrackingLexerTestLanguageParser.g:78:2: ( ( ( (lv_enums_0_0= ruleEnumName ) )* ( (lv_ycs_1_0= RULE_YC ) )* ( (lv_abs_2_0= ruleAb ) )* ( (lv_xbs_3_0= ruleXb ) )* ( (lv_ys_4_0= RULE_CHARY ) )* ( (lv_as_5_0= RULE_CHARA ) )* ) )
-            // InternalBacktrackingLexerTestLanguageParser.g:79:2: ( ( (lv_enums_0_0= ruleEnumName ) )* ( (lv_ycs_1_0= RULE_YC ) )* ( (lv_abs_2_0= ruleAb ) )* ( (lv_xbs_3_0= ruleXb ) )* ( (lv_ys_4_0= RULE_CHARY ) )* ( (lv_as_5_0= RULE_CHARA ) )* )
+            // InternalBacktrackingLexerTestLanguageParser.g:73:1: ( ( ( (lv_enums_0_0= ruleEnumName ) )* ( (lv_ycs_1_0= RULE_YC ) )* ( (lv_abs_2_0= ruleAb ) )* ( (lv_xbs_3_0= ruleXb ) )* ( (lv_ys_4_0= RULE_CHARY ) )* ( (lv_as_5_0= RULE_CHARA ) )* ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:74:2: ( ( (lv_enums_0_0= ruleEnumName ) )* ( (lv_ycs_1_0= RULE_YC ) )* ( (lv_abs_2_0= ruleAb ) )* ( (lv_xbs_3_0= ruleXb ) )* ( (lv_ys_4_0= RULE_CHARY ) )* ( (lv_as_5_0= RULE_CHARA ) )* )
             {
-            // InternalBacktrackingLexerTestLanguageParser.g:79:2: ( ( (lv_enums_0_0= ruleEnumName ) )* ( (lv_ycs_1_0= RULE_YC ) )* ( (lv_abs_2_0= ruleAb ) )* ( (lv_xbs_3_0= ruleXb ) )* ( (lv_ys_4_0= RULE_CHARY ) )* ( (lv_as_5_0= RULE_CHARA ) )* )
-            // InternalBacktrackingLexerTestLanguageParser.g:80:3: ( (lv_enums_0_0= ruleEnumName ) )* ( (lv_ycs_1_0= RULE_YC ) )* ( (lv_abs_2_0= ruleAb ) )* ( (lv_xbs_3_0= ruleXb ) )* ( (lv_ys_4_0= RULE_CHARY ) )* ( (lv_as_5_0= RULE_CHARA ) )*
+            // InternalBacktrackingLexerTestLanguageParser.g:74:2: ( ( (lv_enums_0_0= ruleEnumName ) )* ( (lv_ycs_1_0= RULE_YC ) )* ( (lv_abs_2_0= ruleAb ) )* ( (lv_xbs_3_0= ruleXb ) )* ( (lv_ys_4_0= RULE_CHARY ) )* ( (lv_as_5_0= RULE_CHARA ) )* )
+            // InternalBacktrackingLexerTestLanguageParser.g:75:3: ( (lv_enums_0_0= ruleEnumName ) )* ( (lv_ycs_1_0= RULE_YC ) )* ( (lv_abs_2_0= ruleAb ) )* ( (lv_xbs_3_0= ruleXb ) )* ( (lv_ys_4_0= RULE_CHARY ) )* ( (lv_as_5_0= RULE_CHARA ) )*
             {
-            // InternalBacktrackingLexerTestLanguageParser.g:80:3: ( (lv_enums_0_0= ruleEnumName ) )*
+            // InternalBacktrackingLexerTestLanguageParser.g:75:3: ( (lv_enums_0_0= ruleEnumName ) )*
             loop1:
             do {
                 int alt1=2;
@@ -164,10 +161,10 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalBacktrackingLexerTestLanguageParser.g:81:4: (lv_enums_0_0= ruleEnumName )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:76:4: (lv_enums_0_0= ruleEnumName )
             	    {
-            	    // InternalBacktrackingLexerTestLanguageParser.g:81:4: (lv_enums_0_0= ruleEnumName )
-            	    // InternalBacktrackingLexerTestLanguageParser.g:82:5: lv_enums_0_0= ruleEnumName
+            	    // InternalBacktrackingLexerTestLanguageParser.g:76:4: (lv_enums_0_0= ruleEnumName )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:77:5: lv_enums_0_0= ruleEnumName
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -204,7 +201,7 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
                 }
             } while (true);
 
-            // InternalBacktrackingLexerTestLanguageParser.g:99:3: ( (lv_ycs_1_0= RULE_YC ) )*
+            // InternalBacktrackingLexerTestLanguageParser.g:94:3: ( (lv_ycs_1_0= RULE_YC ) )*
             loop2:
             do {
                 int alt2=2;
@@ -217,10 +214,10 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalBacktrackingLexerTestLanguageParser.g:100:4: (lv_ycs_1_0= RULE_YC )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:95:4: (lv_ycs_1_0= RULE_YC )
             	    {
-            	    // InternalBacktrackingLexerTestLanguageParser.g:100:4: (lv_ycs_1_0= RULE_YC )
-            	    // InternalBacktrackingLexerTestLanguageParser.g:101:5: lv_ycs_1_0= RULE_YC
+            	    // InternalBacktrackingLexerTestLanguageParser.g:95:4: (lv_ycs_1_0= RULE_YC )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:96:5: lv_ycs_1_0= RULE_YC
             	    {
             	    lv_ycs_1_0=(Token)match(input,RULE_YC,FollowSets000.FOLLOW_4); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -252,7 +249,7 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
                 }
             } while (true);
 
-            // InternalBacktrackingLexerTestLanguageParser.g:117:3: ( (lv_abs_2_0= ruleAb ) )*
+            // InternalBacktrackingLexerTestLanguageParser.g:112:3: ( (lv_abs_2_0= ruleAb ) )*
             loop3:
             do {
                 int alt3=2;
@@ -271,10 +268,10 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalBacktrackingLexerTestLanguageParser.g:118:4: (lv_abs_2_0= ruleAb )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:113:4: (lv_abs_2_0= ruleAb )
             	    {
-            	    // InternalBacktrackingLexerTestLanguageParser.g:118:4: (lv_abs_2_0= ruleAb )
-            	    // InternalBacktrackingLexerTestLanguageParser.g:119:5: lv_abs_2_0= ruleAb
+            	    // InternalBacktrackingLexerTestLanguageParser.g:113:4: (lv_abs_2_0= ruleAb )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:114:5: lv_abs_2_0= ruleAb
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -311,7 +308,7 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
                 }
             } while (true);
 
-            // InternalBacktrackingLexerTestLanguageParser.g:136:3: ( (lv_xbs_3_0= ruleXb ) )*
+            // InternalBacktrackingLexerTestLanguageParser.g:131:3: ( (lv_xbs_3_0= ruleXb ) )*
             loop4:
             do {
                 int alt4=2;
@@ -324,10 +321,10 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalBacktrackingLexerTestLanguageParser.g:137:4: (lv_xbs_3_0= ruleXb )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:132:4: (lv_xbs_3_0= ruleXb )
             	    {
-            	    // InternalBacktrackingLexerTestLanguageParser.g:137:4: (lv_xbs_3_0= ruleXb )
-            	    // InternalBacktrackingLexerTestLanguageParser.g:138:5: lv_xbs_3_0= ruleXb
+            	    // InternalBacktrackingLexerTestLanguageParser.g:132:4: (lv_xbs_3_0= ruleXb )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:133:5: lv_xbs_3_0= ruleXb
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -364,7 +361,7 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
                 }
             } while (true);
 
-            // InternalBacktrackingLexerTestLanguageParser.g:155:3: ( (lv_ys_4_0= RULE_CHARY ) )*
+            // InternalBacktrackingLexerTestLanguageParser.g:150:3: ( (lv_ys_4_0= RULE_CHARY ) )*
             loop5:
             do {
                 int alt5=2;
@@ -377,10 +374,10 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
                 switch (alt5) {
             	case 1 :
-            	    // InternalBacktrackingLexerTestLanguageParser.g:156:4: (lv_ys_4_0= RULE_CHARY )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:151:4: (lv_ys_4_0= RULE_CHARY )
             	    {
-            	    // InternalBacktrackingLexerTestLanguageParser.g:156:4: (lv_ys_4_0= RULE_CHARY )
-            	    // InternalBacktrackingLexerTestLanguageParser.g:157:5: lv_ys_4_0= RULE_CHARY
+            	    // InternalBacktrackingLexerTestLanguageParser.g:151:4: (lv_ys_4_0= RULE_CHARY )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:152:5: lv_ys_4_0= RULE_CHARY
             	    {
             	    lv_ys_4_0=(Token)match(input,RULE_CHARY,FollowSets000.FOLLOW_6); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -412,7 +409,7 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
                 }
             } while (true);
 
-            // InternalBacktrackingLexerTestLanguageParser.g:173:3: ( (lv_as_5_0= RULE_CHARA ) )*
+            // InternalBacktrackingLexerTestLanguageParser.g:168:3: ( (lv_as_5_0= RULE_CHARA ) )*
             loop6:
             do {
                 int alt6=2;
@@ -425,10 +422,10 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalBacktrackingLexerTestLanguageParser.g:174:4: (lv_as_5_0= RULE_CHARA )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:169:4: (lv_as_5_0= RULE_CHARA )
             	    {
-            	    // InternalBacktrackingLexerTestLanguageParser.g:174:4: (lv_as_5_0= RULE_CHARA )
-            	    // InternalBacktrackingLexerTestLanguageParser.g:175:5: lv_as_5_0= RULE_CHARA
+            	    // InternalBacktrackingLexerTestLanguageParser.g:169:4: (lv_as_5_0= RULE_CHARA )
+            	    // InternalBacktrackingLexerTestLanguageParser.g:170:5: lv_as_5_0= RULE_CHARA
             	    {
             	    lv_as_5_0=(Token)match(input,RULE_CHARA,FollowSets000.FOLLOW_7); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -466,11 +463,6 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -486,7 +478,7 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
 
     // $ANTLR start "entryRuleAb"
-    // InternalBacktrackingLexerTestLanguageParser.g:195:1: entryRuleAb returns [EObject current=null] : iv_ruleAb= ruleAb EOF ;
+    // InternalBacktrackingLexerTestLanguageParser.g:190:1: entryRuleAb returns [EObject current=null] : iv_ruleAb= ruleAb EOF ;
     public final EObject entryRuleAb() throws RecognitionException {
         EObject current = null;
         int entryRuleAb_StartIndex = input.index();
@@ -495,8 +487,8 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 3) ) { return current; }
-            // InternalBacktrackingLexerTestLanguageParser.g:195:43: (iv_ruleAb= ruleAb EOF )
-            // InternalBacktrackingLexerTestLanguageParser.g:196:2: iv_ruleAb= ruleAb EOF
+            // InternalBacktrackingLexerTestLanguageParser.g:190:43: (iv_ruleAb= ruleAb EOF )
+            // InternalBacktrackingLexerTestLanguageParser.g:191:2: iv_ruleAb= ruleAb EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAbRule()); 
@@ -528,29 +520,26 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
 
     // $ANTLR start "ruleAb"
-    // InternalBacktrackingLexerTestLanguageParser.g:202:1: ruleAb returns [EObject current=null] : ( ( (lv_x_0_0= RULE_CHARA ) ) ( (lv_y_1_0= RULE_CHARB ) ) ) ;
+    // InternalBacktrackingLexerTestLanguageParser.g:197:1: ruleAb returns [EObject current=null] : ( ( (lv_x_0_0= RULE_CHARA ) ) ( (lv_y_1_0= RULE_CHARB ) ) ) ;
     public final EObject ruleAb() throws RecognitionException {
         EObject current = null;
         int ruleAb_StartIndex = input.index();
         Token lv_x_0_0=null;
         Token lv_y_1_0=null;
 
-
-        	enterRule();
-
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return current; }
-            // InternalBacktrackingLexerTestLanguageParser.g:208:2: ( ( ( (lv_x_0_0= RULE_CHARA ) ) ( (lv_y_1_0= RULE_CHARB ) ) ) )
-            // InternalBacktrackingLexerTestLanguageParser.g:209:2: ( ( (lv_x_0_0= RULE_CHARA ) ) ( (lv_y_1_0= RULE_CHARB ) ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:198:1: ( ( ( (lv_x_0_0= RULE_CHARA ) ) ( (lv_y_1_0= RULE_CHARB ) ) ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:199:2: ( ( (lv_x_0_0= RULE_CHARA ) ) ( (lv_y_1_0= RULE_CHARB ) ) )
             {
-            // InternalBacktrackingLexerTestLanguageParser.g:209:2: ( ( (lv_x_0_0= RULE_CHARA ) ) ( (lv_y_1_0= RULE_CHARB ) ) )
-            // InternalBacktrackingLexerTestLanguageParser.g:210:3: ( (lv_x_0_0= RULE_CHARA ) ) ( (lv_y_1_0= RULE_CHARB ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:199:2: ( ( (lv_x_0_0= RULE_CHARA ) ) ( (lv_y_1_0= RULE_CHARB ) ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:200:3: ( (lv_x_0_0= RULE_CHARA ) ) ( (lv_y_1_0= RULE_CHARB ) )
             {
-            // InternalBacktrackingLexerTestLanguageParser.g:210:3: ( (lv_x_0_0= RULE_CHARA ) )
-            // InternalBacktrackingLexerTestLanguageParser.g:211:4: (lv_x_0_0= RULE_CHARA )
+            // InternalBacktrackingLexerTestLanguageParser.g:200:3: ( (lv_x_0_0= RULE_CHARA ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:201:4: (lv_x_0_0= RULE_CHARA )
             {
-            // InternalBacktrackingLexerTestLanguageParser.g:211:4: (lv_x_0_0= RULE_CHARA )
-            // InternalBacktrackingLexerTestLanguageParser.g:212:5: lv_x_0_0= RULE_CHARA
+            // InternalBacktrackingLexerTestLanguageParser.g:201:4: (lv_x_0_0= RULE_CHARA )
+            // InternalBacktrackingLexerTestLanguageParser.g:202:5: lv_x_0_0= RULE_CHARA
             {
             lv_x_0_0=(Token)match(input,RULE_CHARA,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -576,11 +565,11 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
             }
 
-            // InternalBacktrackingLexerTestLanguageParser.g:228:3: ( (lv_y_1_0= RULE_CHARB ) )
-            // InternalBacktrackingLexerTestLanguageParser.g:229:4: (lv_y_1_0= RULE_CHARB )
+            // InternalBacktrackingLexerTestLanguageParser.g:218:3: ( (lv_y_1_0= RULE_CHARB ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:219:4: (lv_y_1_0= RULE_CHARB )
             {
-            // InternalBacktrackingLexerTestLanguageParser.g:229:4: (lv_y_1_0= RULE_CHARB )
-            // InternalBacktrackingLexerTestLanguageParser.g:230:5: lv_y_1_0= RULE_CHARB
+            // InternalBacktrackingLexerTestLanguageParser.g:219:4: (lv_y_1_0= RULE_CHARB )
+            // InternalBacktrackingLexerTestLanguageParser.g:220:5: lv_y_1_0= RULE_CHARB
             {
             lv_y_1_0=(Token)match(input,RULE_CHARB,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -612,11 +601,6 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -632,7 +616,7 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
 
     // $ANTLR start "entryRuleXb"
-    // InternalBacktrackingLexerTestLanguageParser.g:250:1: entryRuleXb returns [EObject current=null] : iv_ruleXb= ruleXb EOF ;
+    // InternalBacktrackingLexerTestLanguageParser.g:240:1: entryRuleXb returns [EObject current=null] : iv_ruleXb= ruleXb EOF ;
     public final EObject entryRuleXb() throws RecognitionException {
         EObject current = null;
         int entryRuleXb_StartIndex = input.index();
@@ -641,8 +625,8 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 5) ) { return current; }
-            // InternalBacktrackingLexerTestLanguageParser.g:250:43: (iv_ruleXb= ruleXb EOF )
-            // InternalBacktrackingLexerTestLanguageParser.g:251:2: iv_ruleXb= ruleXb EOF
+            // InternalBacktrackingLexerTestLanguageParser.g:240:43: (iv_ruleXb= ruleXb EOF )
+            // InternalBacktrackingLexerTestLanguageParser.g:241:2: iv_ruleXb= ruleXb EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXbRule()); 
@@ -674,29 +658,26 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
 
     // $ANTLR start "ruleXb"
-    // InternalBacktrackingLexerTestLanguageParser.g:257:1: ruleXb returns [EObject current=null] : ( ( (lv_x_0_0= RULE_CHARX ) ) ( (lv_y_1_0= RULE_CHARB ) ) ) ;
+    // InternalBacktrackingLexerTestLanguageParser.g:247:1: ruleXb returns [EObject current=null] : ( ( (lv_x_0_0= RULE_CHARX ) ) ( (lv_y_1_0= RULE_CHARB ) ) ) ;
     public final EObject ruleXb() throws RecognitionException {
         EObject current = null;
         int ruleXb_StartIndex = input.index();
         Token lv_x_0_0=null;
         Token lv_y_1_0=null;
 
-
-        	enterRule();
-
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 6) ) { return current; }
-            // InternalBacktrackingLexerTestLanguageParser.g:263:2: ( ( ( (lv_x_0_0= RULE_CHARX ) ) ( (lv_y_1_0= RULE_CHARB ) ) ) )
-            // InternalBacktrackingLexerTestLanguageParser.g:264:2: ( ( (lv_x_0_0= RULE_CHARX ) ) ( (lv_y_1_0= RULE_CHARB ) ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:248:1: ( ( ( (lv_x_0_0= RULE_CHARX ) ) ( (lv_y_1_0= RULE_CHARB ) ) ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:249:2: ( ( (lv_x_0_0= RULE_CHARX ) ) ( (lv_y_1_0= RULE_CHARB ) ) )
             {
-            // InternalBacktrackingLexerTestLanguageParser.g:264:2: ( ( (lv_x_0_0= RULE_CHARX ) ) ( (lv_y_1_0= RULE_CHARB ) ) )
-            // InternalBacktrackingLexerTestLanguageParser.g:265:3: ( (lv_x_0_0= RULE_CHARX ) ) ( (lv_y_1_0= RULE_CHARB ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:249:2: ( ( (lv_x_0_0= RULE_CHARX ) ) ( (lv_y_1_0= RULE_CHARB ) ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:250:3: ( (lv_x_0_0= RULE_CHARX ) ) ( (lv_y_1_0= RULE_CHARB ) )
             {
-            // InternalBacktrackingLexerTestLanguageParser.g:265:3: ( (lv_x_0_0= RULE_CHARX ) )
-            // InternalBacktrackingLexerTestLanguageParser.g:266:4: (lv_x_0_0= RULE_CHARX )
+            // InternalBacktrackingLexerTestLanguageParser.g:250:3: ( (lv_x_0_0= RULE_CHARX ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:251:4: (lv_x_0_0= RULE_CHARX )
             {
-            // InternalBacktrackingLexerTestLanguageParser.g:266:4: (lv_x_0_0= RULE_CHARX )
-            // InternalBacktrackingLexerTestLanguageParser.g:267:5: lv_x_0_0= RULE_CHARX
+            // InternalBacktrackingLexerTestLanguageParser.g:251:4: (lv_x_0_0= RULE_CHARX )
+            // InternalBacktrackingLexerTestLanguageParser.g:252:5: lv_x_0_0= RULE_CHARX
             {
             lv_x_0_0=(Token)match(input,RULE_CHARX,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -722,11 +703,11 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
             }
 
-            // InternalBacktrackingLexerTestLanguageParser.g:283:3: ( (lv_y_1_0= RULE_CHARB ) )
-            // InternalBacktrackingLexerTestLanguageParser.g:284:4: (lv_y_1_0= RULE_CHARB )
+            // InternalBacktrackingLexerTestLanguageParser.g:268:3: ( (lv_y_1_0= RULE_CHARB ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:269:4: (lv_y_1_0= RULE_CHARB )
             {
-            // InternalBacktrackingLexerTestLanguageParser.g:284:4: (lv_y_1_0= RULE_CHARB )
-            // InternalBacktrackingLexerTestLanguageParser.g:285:5: lv_y_1_0= RULE_CHARB
+            // InternalBacktrackingLexerTestLanguageParser.g:269:4: (lv_y_1_0= RULE_CHARB )
+            // InternalBacktrackingLexerTestLanguageParser.g:270:5: lv_y_1_0= RULE_CHARB
             {
             lv_y_1_0=(Token)match(input,RULE_CHARB,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -758,11 +739,6 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -778,22 +754,19 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
 
     // $ANTLR start "ruleEnumName"
-    // InternalBacktrackingLexerTestLanguageParser.g:305:1: ruleEnumName returns [Enumerator current=null] : ( (enumLiteral_0= Abc ) | (enumLiteral_1= Efg ) ) ;
+    // InternalBacktrackingLexerTestLanguageParser.g:290:1: ruleEnumName returns [Enumerator current=null] : ( (enumLiteral_0= Abc ) | (enumLiteral_1= Efg ) ) ;
     public final Enumerator ruleEnumName() throws RecognitionException {
         Enumerator current = null;
         int ruleEnumName_StartIndex = input.index();
         Token enumLiteral_0=null;
         Token enumLiteral_1=null;
 
-
-        	enterRule();
-
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 7) ) { return current; }
-            // InternalBacktrackingLexerTestLanguageParser.g:311:2: ( ( (enumLiteral_0= Abc ) | (enumLiteral_1= Efg ) ) )
-            // InternalBacktrackingLexerTestLanguageParser.g:312:2: ( (enumLiteral_0= Abc ) | (enumLiteral_1= Efg ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:291:1: ( ( (enumLiteral_0= Abc ) | (enumLiteral_1= Efg ) ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:292:2: ( (enumLiteral_0= Abc ) | (enumLiteral_1= Efg ) )
             {
-            // InternalBacktrackingLexerTestLanguageParser.g:312:2: ( (enumLiteral_0= Abc ) | (enumLiteral_1= Efg ) )
+            // InternalBacktrackingLexerTestLanguageParser.g:292:2: ( (enumLiteral_0= Abc ) | (enumLiteral_1= Efg ) )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -812,10 +785,10 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
             }
             switch (alt7) {
                 case 1 :
-                    // InternalBacktrackingLexerTestLanguageParser.g:313:3: (enumLiteral_0= Abc )
+                    // InternalBacktrackingLexerTestLanguageParser.g:293:3: (enumLiteral_0= Abc )
                     {
-                    // InternalBacktrackingLexerTestLanguageParser.g:313:3: (enumLiteral_0= Abc )
-                    // InternalBacktrackingLexerTestLanguageParser.g:314:4: enumLiteral_0= Abc
+                    // InternalBacktrackingLexerTestLanguageParser.g:293:3: (enumLiteral_0= Abc )
+                    // InternalBacktrackingLexerTestLanguageParser.g:294:4: enumLiteral_0= Abc
                     {
                     enumLiteral_0=(Token)match(input,Abc,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -831,10 +804,10 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
                     }
                     break;
                 case 2 :
-                    // InternalBacktrackingLexerTestLanguageParser.g:321:3: (enumLiteral_1= Efg )
+                    // InternalBacktrackingLexerTestLanguageParser.g:301:3: (enumLiteral_1= Efg )
                     {
-                    // InternalBacktrackingLexerTestLanguageParser.g:321:3: (enumLiteral_1= Efg )
-                    // InternalBacktrackingLexerTestLanguageParser.g:322:4: enumLiteral_1= Efg
+                    // InternalBacktrackingLexerTestLanguageParser.g:301:3: (enumLiteral_1= Efg )
+                    // InternalBacktrackingLexerTestLanguageParser.g:302:4: enumLiteral_1= Efg
                     {
                     enumLiteral_1=(Token)match(input,Efg,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -855,11 +828,6 @@ public class InternalBacktrackingLexerTestLanguageParser extends AbstractInterna
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {

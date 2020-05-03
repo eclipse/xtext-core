@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getModelAccess().getChildParserRuleCall_0());
@@ -124,12 +119,7 @@ entryRuleChild returns [EObject current=null]:
 
 // Rule Child
 ruleChild returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID

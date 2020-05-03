@@ -124,14 +124,11 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
         EObject lv_types_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalLazyLinkingTestLanguage.g:77:2: ( ( (lv_types_0_0= ruleType ) )* )
-            // InternalLazyLinkingTestLanguage.g:78:2: ( (lv_types_0_0= ruleType ) )*
+            // InternalLazyLinkingTestLanguage.g:72:1: ( ( (lv_types_0_0= ruleType ) )* )
+            // InternalLazyLinkingTestLanguage.g:73:2: ( (lv_types_0_0= ruleType ) )*
             {
-            // InternalLazyLinkingTestLanguage.g:78:2: ( (lv_types_0_0= ruleType ) )*
+            // InternalLazyLinkingTestLanguage.g:73:2: ( (lv_types_0_0= ruleType ) )*
             loop1:
             do {
                 int alt1=2;
@@ -144,10 +141,10 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalLazyLinkingTestLanguage.g:79:3: (lv_types_0_0= ruleType )
+            	    // InternalLazyLinkingTestLanguage.g:74:3: (lv_types_0_0= ruleType )
             	    {
-            	    // InternalLazyLinkingTestLanguage.g:79:3: (lv_types_0_0= ruleType )
-            	    // InternalLazyLinkingTestLanguage.g:80:4: lv_types_0_0= ruleType
+            	    // InternalLazyLinkingTestLanguage.g:74:3: (lv_types_0_0= ruleType )
+            	    // InternalLazyLinkingTestLanguage.g:75:4: lv_types_0_0= ruleType
             	    {
 
             	    				newCompositeNode(grammarAccess.getModelAccess().getTypesTypeParserRuleCall_0());
@@ -183,9 +180,6 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -200,7 +194,7 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
 
     // $ANTLR start "entryRuleType"
-    // InternalLazyLinkingTestLanguage.g:100:1: entryRuleType returns [EObject current=null] : iv_ruleType= ruleType EOF ;
+    // InternalLazyLinkingTestLanguage.g:95:1: entryRuleType returns [EObject current=null] : iv_ruleType= ruleType EOF ;
     public final EObject entryRuleType() throws RecognitionException {
         EObject current = null;
 
@@ -208,8 +202,8 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
 
         try {
-            // InternalLazyLinkingTestLanguage.g:100:45: (iv_ruleType= ruleType EOF )
-            // InternalLazyLinkingTestLanguage.g:101:2: iv_ruleType= ruleType EOF
+            // InternalLazyLinkingTestLanguage.g:95:45: (iv_ruleType= ruleType EOF )
+            // InternalLazyLinkingTestLanguage.g:96:2: iv_ruleType= ruleType EOF
             {
              newCompositeNode(grammarAccess.getTypeRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -236,7 +230,7 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
 
     // $ANTLR start "ruleType"
-    // InternalLazyLinkingTestLanguage.g:107:1: ruleType returns [EObject current=null] : (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )? (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )? otherlv_10= '{' ( (lv_properties_11_0= ruleProperty ) )* ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )* otherlv_13= '}' ) ;
+    // InternalLazyLinkingTestLanguage.g:102:1: ruleType returns [EObject current=null] : (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )? (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )? otherlv_10= '{' ( (lv_properties_11_0= ruleProperty ) )* ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )* otherlv_13= '}' ) ;
     public final EObject ruleType() throws RecognitionException {
         EObject current = null;
 
@@ -257,25 +251,22 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
         EObject lv_unresolvedProxyProperty_12_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalLazyLinkingTestLanguage.g:113:2: ( (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )? (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )? otherlv_10= '{' ( (lv_properties_11_0= ruleProperty ) )* ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )* otherlv_13= '}' ) )
-            // InternalLazyLinkingTestLanguage.g:114:2: (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )? (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )? otherlv_10= '{' ( (lv_properties_11_0= ruleProperty ) )* ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )* otherlv_13= '}' )
+            // InternalLazyLinkingTestLanguage.g:103:1: ( (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )? (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )? otherlv_10= '{' ( (lv_properties_11_0= ruleProperty ) )* ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )* otherlv_13= '}' ) )
+            // InternalLazyLinkingTestLanguage.g:104:2: (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )? (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )? otherlv_10= '{' ( (lv_properties_11_0= ruleProperty ) )* ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )* otherlv_13= '}' )
             {
-            // InternalLazyLinkingTestLanguage.g:114:2: (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )? (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )? otherlv_10= '{' ( (lv_properties_11_0= ruleProperty ) )* ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )* otherlv_13= '}' )
-            // InternalLazyLinkingTestLanguage.g:115:3: otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )? (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )? otherlv_10= '{' ( (lv_properties_11_0= ruleProperty ) )* ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )* otherlv_13= '}'
+            // InternalLazyLinkingTestLanguage.g:104:2: (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )? (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )? otherlv_10= '{' ( (lv_properties_11_0= ruleProperty ) )* ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )* otherlv_13= '}' )
+            // InternalLazyLinkingTestLanguage.g:105:3: otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )? (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )? otherlv_10= '{' ( (lv_properties_11_0= ruleProperty ) )* ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )* otherlv_13= '}'
             {
             otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTypeAccess().getTypeKeyword_0());
             		
-            // InternalLazyLinkingTestLanguage.g:119:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalLazyLinkingTestLanguage.g:120:4: (lv_name_1_0= RULE_ID )
+            // InternalLazyLinkingTestLanguage.g:109:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalLazyLinkingTestLanguage.g:110:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalLazyLinkingTestLanguage.g:120:4: (lv_name_1_0= RULE_ID )
-            // InternalLazyLinkingTestLanguage.g:121:5: lv_name_1_0= RULE_ID
+            // InternalLazyLinkingTestLanguage.g:110:4: (lv_name_1_0= RULE_ID )
+            // InternalLazyLinkingTestLanguage.g:111:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); 
 
@@ -297,7 +288,7 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
             }
 
-            // InternalLazyLinkingTestLanguage.g:137:3: (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )?
+            // InternalLazyLinkingTestLanguage.g:127:3: (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) ) )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -306,17 +297,17 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
             }
             switch (alt2) {
                 case 1 :
-                    // InternalLazyLinkingTestLanguage.g:138:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) )
+                    // InternalLazyLinkingTestLanguage.g:128:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) otherlv_4= '.' ( (otherlv_5= RULE_ID ) )
                     {
                     otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_4); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getTypeAccess().getExtendsKeyword_2_0());
                     			
-                    // InternalLazyLinkingTestLanguage.g:142:4: ( (otherlv_3= RULE_ID ) )
-                    // InternalLazyLinkingTestLanguage.g:143:5: (otherlv_3= RULE_ID )
+                    // InternalLazyLinkingTestLanguage.g:132:4: ( (otherlv_3= RULE_ID ) )
+                    // InternalLazyLinkingTestLanguage.g:133:5: (otherlv_3= RULE_ID )
                     {
-                    // InternalLazyLinkingTestLanguage.g:143:5: (otherlv_3= RULE_ID )
-                    // InternalLazyLinkingTestLanguage.g:144:6: otherlv_3= RULE_ID
+                    // InternalLazyLinkingTestLanguage.g:133:5: (otherlv_3= RULE_ID )
+                    // InternalLazyLinkingTestLanguage.g:134:6: otherlv_3= RULE_ID
                     {
 
                     						if (current==null) {
@@ -337,11 +328,11 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
                     				newLeafNode(otherlv_4, grammarAccess.getTypeAccess().getFullStopKeyword_2_2());
                     			
-                    // InternalLazyLinkingTestLanguage.g:159:4: ( (otherlv_5= RULE_ID ) )
-                    // InternalLazyLinkingTestLanguage.g:160:5: (otherlv_5= RULE_ID )
+                    // InternalLazyLinkingTestLanguage.g:149:4: ( (otherlv_5= RULE_ID ) )
+                    // InternalLazyLinkingTestLanguage.g:150:5: (otherlv_5= RULE_ID )
                     {
-                    // InternalLazyLinkingTestLanguage.g:160:5: (otherlv_5= RULE_ID )
-                    // InternalLazyLinkingTestLanguage.g:161:6: otherlv_5= RULE_ID
+                    // InternalLazyLinkingTestLanguage.g:150:5: (otherlv_5= RULE_ID )
+                    // InternalLazyLinkingTestLanguage.g:151:6: otherlv_5= RULE_ID
                     {
 
                     						if (current==null) {
@@ -364,7 +355,7 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
             }
 
-            // InternalLazyLinkingTestLanguage.g:173:3: (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )?
+            // InternalLazyLinkingTestLanguage.g:163:3: (otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -373,17 +364,17 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
             }
             switch (alt3) {
                 case 1 :
-                    // InternalLazyLinkingTestLanguage.g:174:4: otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) )
+                    // InternalLazyLinkingTestLanguage.g:164:4: otherlv_6= 'for' ( (otherlv_7= RULE_ID ) ) otherlv_8= 'in' ( (otherlv_9= RULE_ID ) )
                     {
                     otherlv_6=(Token)match(input,14,FollowSets000.FOLLOW_4); 
 
                     				newLeafNode(otherlv_6, grammarAccess.getTypeAccess().getForKeyword_3_0());
                     			
-                    // InternalLazyLinkingTestLanguage.g:178:4: ( (otherlv_7= RULE_ID ) )
-                    // InternalLazyLinkingTestLanguage.g:179:5: (otherlv_7= RULE_ID )
+                    // InternalLazyLinkingTestLanguage.g:168:4: ( (otherlv_7= RULE_ID ) )
+                    // InternalLazyLinkingTestLanguage.g:169:5: (otherlv_7= RULE_ID )
                     {
-                    // InternalLazyLinkingTestLanguage.g:179:5: (otherlv_7= RULE_ID )
-                    // InternalLazyLinkingTestLanguage.g:180:6: otherlv_7= RULE_ID
+                    // InternalLazyLinkingTestLanguage.g:169:5: (otherlv_7= RULE_ID )
+                    // InternalLazyLinkingTestLanguage.g:170:6: otherlv_7= RULE_ID
                     {
 
                     						if (current==null) {
@@ -404,11 +395,11 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
                     				newLeafNode(otherlv_8, grammarAccess.getTypeAccess().getInKeyword_3_2());
                     			
-                    // InternalLazyLinkingTestLanguage.g:195:4: ( (otherlv_9= RULE_ID ) )
-                    // InternalLazyLinkingTestLanguage.g:196:5: (otherlv_9= RULE_ID )
+                    // InternalLazyLinkingTestLanguage.g:185:4: ( (otherlv_9= RULE_ID ) )
+                    // InternalLazyLinkingTestLanguage.g:186:5: (otherlv_9= RULE_ID )
                     {
-                    // InternalLazyLinkingTestLanguage.g:196:5: (otherlv_9= RULE_ID )
-                    // InternalLazyLinkingTestLanguage.g:197:6: otherlv_9= RULE_ID
+                    // InternalLazyLinkingTestLanguage.g:186:5: (otherlv_9= RULE_ID )
+                    // InternalLazyLinkingTestLanguage.g:187:6: otherlv_9= RULE_ID
                     {
 
                     						if (current==null) {
@@ -435,7 +426,7 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
             			newLeafNode(otherlv_10, grammarAccess.getTypeAccess().getLeftCurlyBracketKeyword_4());
             		
-            // InternalLazyLinkingTestLanguage.g:213:3: ( (lv_properties_11_0= ruleProperty ) )*
+            // InternalLazyLinkingTestLanguage.g:203:3: ( (lv_properties_11_0= ruleProperty ) )*
             loop4:
             do {
                 int alt4=2;
@@ -448,10 +439,10 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalLazyLinkingTestLanguage.g:214:4: (lv_properties_11_0= ruleProperty )
+            	    // InternalLazyLinkingTestLanguage.g:204:4: (lv_properties_11_0= ruleProperty )
             	    {
-            	    // InternalLazyLinkingTestLanguage.g:214:4: (lv_properties_11_0= ruleProperty )
-            	    // InternalLazyLinkingTestLanguage.g:215:5: lv_properties_11_0= ruleProperty
+            	    // InternalLazyLinkingTestLanguage.g:204:4: (lv_properties_11_0= ruleProperty )
+            	    // InternalLazyLinkingTestLanguage.g:205:5: lv_properties_11_0= ruleProperty
             	    {
 
             	    					newCompositeNode(grammarAccess.getTypeAccess().getPropertiesPropertyParserRuleCall_5_0());
@@ -484,7 +475,7 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
                 }
             } while (true);
 
-            // InternalLazyLinkingTestLanguage.g:232:3: ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )*
+            // InternalLazyLinkingTestLanguage.g:222:3: ( (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty ) )*
             loop5:
             do {
                 int alt5=2;
@@ -497,10 +488,10 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
                 switch (alt5) {
             	case 1 :
-            	    // InternalLazyLinkingTestLanguage.g:233:4: (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty )
+            	    // InternalLazyLinkingTestLanguage.g:223:4: (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty )
             	    {
-            	    // InternalLazyLinkingTestLanguage.g:233:4: (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty )
-            	    // InternalLazyLinkingTestLanguage.g:234:5: lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty
+            	    // InternalLazyLinkingTestLanguage.g:223:4: (lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty )
+            	    // InternalLazyLinkingTestLanguage.g:224:5: lv_unresolvedProxyProperty_12_0= ruleUnresolvedProxyProperty
             	    {
 
             	    					newCompositeNode(grammarAccess.getTypeAccess().getUnresolvedProxyPropertyUnresolvedProxyPropertyParserRuleCall_6_0());
@@ -543,9 +534,6 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -560,7 +548,7 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
 
     // $ANTLR start "entryRuleProperty"
-    // InternalLazyLinkingTestLanguage.g:259:1: entryRuleProperty returns [EObject current=null] : iv_ruleProperty= ruleProperty EOF ;
+    // InternalLazyLinkingTestLanguage.g:249:1: entryRuleProperty returns [EObject current=null] : iv_ruleProperty= ruleProperty EOF ;
     public final EObject entryRuleProperty() throws RecognitionException {
         EObject current = null;
 
@@ -568,8 +556,8 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
 
         try {
-            // InternalLazyLinkingTestLanguage.g:259:49: (iv_ruleProperty= ruleProperty EOF )
-            // InternalLazyLinkingTestLanguage.g:260:2: iv_ruleProperty= ruleProperty EOF
+            // InternalLazyLinkingTestLanguage.g:249:49: (iv_ruleProperty= ruleProperty EOF )
+            // InternalLazyLinkingTestLanguage.g:250:2: iv_ruleProperty= ruleProperty EOF
             {
              newCompositeNode(grammarAccess.getPropertyRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -596,7 +584,7 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
 
     // $ANTLR start "ruleProperty"
-    // InternalLazyLinkingTestLanguage.g:266:1: ruleProperty returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) )+ ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
+    // InternalLazyLinkingTestLanguage.g:256:1: ruleProperty returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) )+ ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
     public final EObject ruleProperty() throws RecognitionException {
         EObject current = null;
 
@@ -604,17 +592,14 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
         Token lv_name_1_0=null;
         Token otherlv_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalLazyLinkingTestLanguage.g:272:2: ( ( ( (otherlv_0= RULE_ID ) )+ ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) )
-            // InternalLazyLinkingTestLanguage.g:273:2: ( ( (otherlv_0= RULE_ID ) )+ ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
+            // InternalLazyLinkingTestLanguage.g:257:1: ( ( ( (otherlv_0= RULE_ID ) )+ ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) )
+            // InternalLazyLinkingTestLanguage.g:258:2: ( ( (otherlv_0= RULE_ID ) )+ ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
             {
-            // InternalLazyLinkingTestLanguage.g:273:2: ( ( (otherlv_0= RULE_ID ) )+ ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
-            // InternalLazyLinkingTestLanguage.g:274:3: ( (otherlv_0= RULE_ID ) )+ ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
+            // InternalLazyLinkingTestLanguage.g:258:2: ( ( (otherlv_0= RULE_ID ) )+ ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
+            // InternalLazyLinkingTestLanguage.g:259:3: ( (otherlv_0= RULE_ID ) )+ ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
             {
-            // InternalLazyLinkingTestLanguage.g:274:3: ( (otherlv_0= RULE_ID ) )+
+            // InternalLazyLinkingTestLanguage.g:259:3: ( (otherlv_0= RULE_ID ) )+
             int cnt6=0;
             loop6:
             do {
@@ -634,10 +619,10 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalLazyLinkingTestLanguage.g:275:4: (otherlv_0= RULE_ID )
+            	    // InternalLazyLinkingTestLanguage.g:260:4: (otherlv_0= RULE_ID )
             	    {
-            	    // InternalLazyLinkingTestLanguage.g:275:4: (otherlv_0= RULE_ID )
-            	    // InternalLazyLinkingTestLanguage.g:276:5: otherlv_0= RULE_ID
+            	    // InternalLazyLinkingTestLanguage.g:260:4: (otherlv_0= RULE_ID )
+            	    // InternalLazyLinkingTestLanguage.g:261:5: otherlv_0= RULE_ID
             	    {
 
             	    					if (current==null) {
@@ -664,11 +649,11 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
                 cnt6++;
             } while (true);
 
-            // InternalLazyLinkingTestLanguage.g:287:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalLazyLinkingTestLanguage.g:288:4: (lv_name_1_0= RULE_ID )
+            // InternalLazyLinkingTestLanguage.g:272:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalLazyLinkingTestLanguage.g:273:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalLazyLinkingTestLanguage.g:288:4: (lv_name_1_0= RULE_ID )
-            // InternalLazyLinkingTestLanguage.g:289:5: lv_name_1_0= RULE_ID
+            // InternalLazyLinkingTestLanguage.g:273:4: (lv_name_1_0= RULE_ID )
+            // InternalLazyLinkingTestLanguage.g:274:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_12); 
 
@@ -700,9 +685,6 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -717,7 +699,7 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
 
     // $ANTLR start "entryRuleUnresolvedProxyProperty"
-    // InternalLazyLinkingTestLanguage.g:313:1: entryRuleUnresolvedProxyProperty returns [EObject current=null] : iv_ruleUnresolvedProxyProperty= ruleUnresolvedProxyProperty EOF ;
+    // InternalLazyLinkingTestLanguage.g:298:1: entryRuleUnresolvedProxyProperty returns [EObject current=null] : iv_ruleUnresolvedProxyProperty= ruleUnresolvedProxyProperty EOF ;
     public final EObject entryRuleUnresolvedProxyProperty() throws RecognitionException {
         EObject current = null;
 
@@ -725,8 +707,8 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
 
         try {
-            // InternalLazyLinkingTestLanguage.g:313:64: (iv_ruleUnresolvedProxyProperty= ruleUnresolvedProxyProperty EOF )
-            // InternalLazyLinkingTestLanguage.g:314:2: iv_ruleUnresolvedProxyProperty= ruleUnresolvedProxyProperty EOF
+            // InternalLazyLinkingTestLanguage.g:298:64: (iv_ruleUnresolvedProxyProperty= ruleUnresolvedProxyProperty EOF )
+            // InternalLazyLinkingTestLanguage.g:299:2: iv_ruleUnresolvedProxyProperty= ruleUnresolvedProxyProperty EOF
             {
              newCompositeNode(grammarAccess.getUnresolvedProxyPropertyRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -753,7 +735,7 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
 
     // $ANTLR start "ruleUnresolvedProxyProperty"
-    // InternalLazyLinkingTestLanguage.g:320:1: ruleUnresolvedProxyProperty returns [EObject current=null] : (otherlv_0= 'unresolved' ( (otherlv_1= RULE_ID ) )+ ( (lv_name_2_0= RULE_ID ) ) otherlv_3= ';' ) ;
+    // InternalLazyLinkingTestLanguage.g:305:1: ruleUnresolvedProxyProperty returns [EObject current=null] : (otherlv_0= 'unresolved' ( (otherlv_1= RULE_ID ) )+ ( (lv_name_2_0= RULE_ID ) ) otherlv_3= ';' ) ;
     public final EObject ruleUnresolvedProxyProperty() throws RecognitionException {
         EObject current = null;
 
@@ -762,21 +744,18 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
         Token lv_name_2_0=null;
         Token otherlv_3=null;
 
-
-        	enterRule();
-
         try {
-            // InternalLazyLinkingTestLanguage.g:326:2: ( (otherlv_0= 'unresolved' ( (otherlv_1= RULE_ID ) )+ ( (lv_name_2_0= RULE_ID ) ) otherlv_3= ';' ) )
-            // InternalLazyLinkingTestLanguage.g:327:2: (otherlv_0= 'unresolved' ( (otherlv_1= RULE_ID ) )+ ( (lv_name_2_0= RULE_ID ) ) otherlv_3= ';' )
+            // InternalLazyLinkingTestLanguage.g:306:1: ( (otherlv_0= 'unresolved' ( (otherlv_1= RULE_ID ) )+ ( (lv_name_2_0= RULE_ID ) ) otherlv_3= ';' ) )
+            // InternalLazyLinkingTestLanguage.g:307:2: (otherlv_0= 'unresolved' ( (otherlv_1= RULE_ID ) )+ ( (lv_name_2_0= RULE_ID ) ) otherlv_3= ';' )
             {
-            // InternalLazyLinkingTestLanguage.g:327:2: (otherlv_0= 'unresolved' ( (otherlv_1= RULE_ID ) )+ ( (lv_name_2_0= RULE_ID ) ) otherlv_3= ';' )
-            // InternalLazyLinkingTestLanguage.g:328:3: otherlv_0= 'unresolved' ( (otherlv_1= RULE_ID ) )+ ( (lv_name_2_0= RULE_ID ) ) otherlv_3= ';'
+            // InternalLazyLinkingTestLanguage.g:307:2: (otherlv_0= 'unresolved' ( (otherlv_1= RULE_ID ) )+ ( (lv_name_2_0= RULE_ID ) ) otherlv_3= ';' )
+            // InternalLazyLinkingTestLanguage.g:308:3: otherlv_0= 'unresolved' ( (otherlv_1= RULE_ID ) )+ ( (lv_name_2_0= RULE_ID ) ) otherlv_3= ';'
             {
             otherlv_0=(Token)match(input,19,FollowSets000.FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getUnresolvedProxyPropertyAccess().getUnresolvedKeyword_0());
             		
-            // InternalLazyLinkingTestLanguage.g:332:3: ( (otherlv_1= RULE_ID ) )+
+            // InternalLazyLinkingTestLanguage.g:312:3: ( (otherlv_1= RULE_ID ) )+
             int cnt7=0;
             loop7:
             do {
@@ -796,10 +775,10 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalLazyLinkingTestLanguage.g:333:4: (otherlv_1= RULE_ID )
+            	    // InternalLazyLinkingTestLanguage.g:313:4: (otherlv_1= RULE_ID )
             	    {
-            	    // InternalLazyLinkingTestLanguage.g:333:4: (otherlv_1= RULE_ID )
-            	    // InternalLazyLinkingTestLanguage.g:334:5: otherlv_1= RULE_ID
+            	    // InternalLazyLinkingTestLanguage.g:313:4: (otherlv_1= RULE_ID )
+            	    // InternalLazyLinkingTestLanguage.g:314:5: otherlv_1= RULE_ID
             	    {
 
             	    					if (current==null) {
@@ -826,11 +805,11 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
                 cnt7++;
             } while (true);
 
-            // InternalLazyLinkingTestLanguage.g:345:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalLazyLinkingTestLanguage.g:346:4: (lv_name_2_0= RULE_ID )
+            // InternalLazyLinkingTestLanguage.g:325:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalLazyLinkingTestLanguage.g:326:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalLazyLinkingTestLanguage.g:346:4: (lv_name_2_0= RULE_ID )
-            // InternalLazyLinkingTestLanguage.g:347:5: lv_name_2_0= RULE_ID
+            // InternalLazyLinkingTestLanguage.g:326:4: (lv_name_2_0= RULE_ID )
+            // InternalLazyLinkingTestLanguage.g:327:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_12); 
 
@@ -861,9 +840,6 @@ public class InternalLazyLinkingTestLanguageParser extends AbstractInternalAntlr
 
 
             }
-
-
-            	leaveRule();
 
         }
 

@@ -69,12 +69,7 @@ entryRuleSuperMain returns [EObject current=null]:
 
 // Rule SuperMain
 ruleSuperMain returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='super'
 		{

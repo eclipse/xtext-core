@@ -182,14 +182,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject lv_x16_15_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:77:2: ( ( ( (lv_x1_0_0= ruleMandatoryKeywords ) ) | ( (lv_x2_1_0= ruleExp0 ) ) | ( (lv_x3_2_0= ruleExp1 ) ) | ( (lv_x4_3_0= ruleExp2 ) ) | ( (lv_x5_4_0= ruleSingleCrossReference ) ) | ( (lv_x6_5_0= ruleBooleanAlternative ) ) | ( (lv_x7_6_0= ruleUnassignedDatatype ) ) | ( (lv_x8_7_0= ruleOptionalSingleTransition ) ) | ( (lv_x9_8_0= ruleOptionalManyTransition ) ) | ( (lv_x10_9_0= ruleMandatoryManyTransition ) ) | ( (lv_x11_10_0= ruleAlternativeTransition ) ) | ( (lv_x12_11_0= ruleBooleanValues ) ) | ( (lv_x13_12_0= ruleLongAlternative ) ) | ( (lv_x14_13_0= ruleActionOnly ) ) | ( (lv_x15_14_0= ruleFragmentCaller ) ) | ( (lv_x16_15_0= ruleBug398890 ) ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:78:2: ( ( (lv_x1_0_0= ruleMandatoryKeywords ) ) | ( (lv_x2_1_0= ruleExp0 ) ) | ( (lv_x3_2_0= ruleExp1 ) ) | ( (lv_x4_3_0= ruleExp2 ) ) | ( (lv_x5_4_0= ruleSingleCrossReference ) ) | ( (lv_x6_5_0= ruleBooleanAlternative ) ) | ( (lv_x7_6_0= ruleUnassignedDatatype ) ) | ( (lv_x8_7_0= ruleOptionalSingleTransition ) ) | ( (lv_x9_8_0= ruleOptionalManyTransition ) ) | ( (lv_x10_9_0= ruleMandatoryManyTransition ) ) | ( (lv_x11_10_0= ruleAlternativeTransition ) ) | ( (lv_x12_11_0= ruleBooleanValues ) ) | ( (lv_x13_12_0= ruleLongAlternative ) ) | ( (lv_x14_13_0= ruleActionOnly ) ) | ( (lv_x15_14_0= ruleFragmentCaller ) ) | ( (lv_x16_15_0= ruleBug398890 ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:72:1: ( ( ( (lv_x1_0_0= ruleMandatoryKeywords ) ) | ( (lv_x2_1_0= ruleExp0 ) ) | ( (lv_x3_2_0= ruleExp1 ) ) | ( (lv_x4_3_0= ruleExp2 ) ) | ( (lv_x5_4_0= ruleSingleCrossReference ) ) | ( (lv_x6_5_0= ruleBooleanAlternative ) ) | ( (lv_x7_6_0= ruleUnassignedDatatype ) ) | ( (lv_x8_7_0= ruleOptionalSingleTransition ) ) | ( (lv_x9_8_0= ruleOptionalManyTransition ) ) | ( (lv_x10_9_0= ruleMandatoryManyTransition ) ) | ( (lv_x11_10_0= ruleAlternativeTransition ) ) | ( (lv_x12_11_0= ruleBooleanValues ) ) | ( (lv_x13_12_0= ruleLongAlternative ) ) | ( (lv_x14_13_0= ruleActionOnly ) ) | ( (lv_x15_14_0= ruleFragmentCaller ) ) | ( (lv_x16_15_0= ruleBug398890 ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:73:2: ( ( (lv_x1_0_0= ruleMandatoryKeywords ) ) | ( (lv_x2_1_0= ruleExp0 ) ) | ( (lv_x3_2_0= ruleExp1 ) ) | ( (lv_x4_3_0= ruleExp2 ) ) | ( (lv_x5_4_0= ruleSingleCrossReference ) ) | ( (lv_x6_5_0= ruleBooleanAlternative ) ) | ( (lv_x7_6_0= ruleUnassignedDatatype ) ) | ( (lv_x8_7_0= ruleOptionalSingleTransition ) ) | ( (lv_x9_8_0= ruleOptionalManyTransition ) ) | ( (lv_x10_9_0= ruleMandatoryManyTransition ) ) | ( (lv_x11_10_0= ruleAlternativeTransition ) ) | ( (lv_x12_11_0= ruleBooleanValues ) ) | ( (lv_x13_12_0= ruleLongAlternative ) ) | ( (lv_x14_13_0= ruleActionOnly ) ) | ( (lv_x15_14_0= ruleFragmentCaller ) ) | ( (lv_x16_15_0= ruleBug398890 ) ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:78:2: ( ( (lv_x1_0_0= ruleMandatoryKeywords ) ) | ( (lv_x2_1_0= ruleExp0 ) ) | ( (lv_x3_2_0= ruleExp1 ) ) | ( (lv_x4_3_0= ruleExp2 ) ) | ( (lv_x5_4_0= ruleSingleCrossReference ) ) | ( (lv_x6_5_0= ruleBooleanAlternative ) ) | ( (lv_x7_6_0= ruleUnassignedDatatype ) ) | ( (lv_x8_7_0= ruleOptionalSingleTransition ) ) | ( (lv_x9_8_0= ruleOptionalManyTransition ) ) | ( (lv_x10_9_0= ruleMandatoryManyTransition ) ) | ( (lv_x11_10_0= ruleAlternativeTransition ) ) | ( (lv_x12_11_0= ruleBooleanValues ) ) | ( (lv_x13_12_0= ruleLongAlternative ) ) | ( (lv_x14_13_0= ruleActionOnly ) ) | ( (lv_x15_14_0= ruleFragmentCaller ) ) | ( (lv_x16_15_0= ruleBug398890 ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:73:2: ( ( (lv_x1_0_0= ruleMandatoryKeywords ) ) | ( (lv_x2_1_0= ruleExp0 ) ) | ( (lv_x3_2_0= ruleExp1 ) ) | ( (lv_x4_3_0= ruleExp2 ) ) | ( (lv_x5_4_0= ruleSingleCrossReference ) ) | ( (lv_x6_5_0= ruleBooleanAlternative ) ) | ( (lv_x7_6_0= ruleUnassignedDatatype ) ) | ( (lv_x8_7_0= ruleOptionalSingleTransition ) ) | ( (lv_x9_8_0= ruleOptionalManyTransition ) ) | ( (lv_x10_9_0= ruleMandatoryManyTransition ) ) | ( (lv_x11_10_0= ruleAlternativeTransition ) ) | ( (lv_x12_11_0= ruleBooleanValues ) ) | ( (lv_x13_12_0= ruleLongAlternative ) ) | ( (lv_x14_13_0= ruleActionOnly ) ) | ( (lv_x15_14_0= ruleFragmentCaller ) ) | ( (lv_x16_15_0= ruleBug398890 ) ) )
             int alt1=16;
             switch ( input.LA(1) ) {
             case 14:
@@ -282,13 +279,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             switch (alt1) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:79:3: ( (lv_x1_0_0= ruleMandatoryKeywords ) )
+                    // InternalSyntacticSequencerTestLanguage.g:74:3: ( (lv_x1_0_0= ruleMandatoryKeywords ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:79:3: ( (lv_x1_0_0= ruleMandatoryKeywords ) )
-                    // InternalSyntacticSequencerTestLanguage.g:80:4: (lv_x1_0_0= ruleMandatoryKeywords )
+                    // InternalSyntacticSequencerTestLanguage.g:74:3: ( (lv_x1_0_0= ruleMandatoryKeywords ) )
+                    // InternalSyntacticSequencerTestLanguage.g:75:4: (lv_x1_0_0= ruleMandatoryKeywords )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:80:4: (lv_x1_0_0= ruleMandatoryKeywords )
-                    // InternalSyntacticSequencerTestLanguage.g:81:5: lv_x1_0_0= ruleMandatoryKeywords
+                    // InternalSyntacticSequencerTestLanguage.g:75:4: (lv_x1_0_0= ruleMandatoryKeywords )
+                    // InternalSyntacticSequencerTestLanguage.g:76:5: lv_x1_0_0= ruleMandatoryKeywords
                     {
                     if ( state.backtracking==0 ) {
 
@@ -323,13 +320,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 2 :
-                    // InternalSyntacticSequencerTestLanguage.g:99:3: ( (lv_x2_1_0= ruleExp0 ) )
+                    // InternalSyntacticSequencerTestLanguage.g:94:3: ( (lv_x2_1_0= ruleExp0 ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:99:3: ( (lv_x2_1_0= ruleExp0 ) )
-                    // InternalSyntacticSequencerTestLanguage.g:100:4: (lv_x2_1_0= ruleExp0 )
+                    // InternalSyntacticSequencerTestLanguage.g:94:3: ( (lv_x2_1_0= ruleExp0 ) )
+                    // InternalSyntacticSequencerTestLanguage.g:95:4: (lv_x2_1_0= ruleExp0 )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:100:4: (lv_x2_1_0= ruleExp0 )
-                    // InternalSyntacticSequencerTestLanguage.g:101:5: lv_x2_1_0= ruleExp0
+                    // InternalSyntacticSequencerTestLanguage.g:95:4: (lv_x2_1_0= ruleExp0 )
+                    // InternalSyntacticSequencerTestLanguage.g:96:5: lv_x2_1_0= ruleExp0
                     {
                     if ( state.backtracking==0 ) {
 
@@ -364,13 +361,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 3 :
-                    // InternalSyntacticSequencerTestLanguage.g:119:3: ( (lv_x3_2_0= ruleExp1 ) )
+                    // InternalSyntacticSequencerTestLanguage.g:114:3: ( (lv_x3_2_0= ruleExp1 ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:119:3: ( (lv_x3_2_0= ruleExp1 ) )
-                    // InternalSyntacticSequencerTestLanguage.g:120:4: (lv_x3_2_0= ruleExp1 )
+                    // InternalSyntacticSequencerTestLanguage.g:114:3: ( (lv_x3_2_0= ruleExp1 ) )
+                    // InternalSyntacticSequencerTestLanguage.g:115:4: (lv_x3_2_0= ruleExp1 )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:120:4: (lv_x3_2_0= ruleExp1 )
-                    // InternalSyntacticSequencerTestLanguage.g:121:5: lv_x3_2_0= ruleExp1
+                    // InternalSyntacticSequencerTestLanguage.g:115:4: (lv_x3_2_0= ruleExp1 )
+                    // InternalSyntacticSequencerTestLanguage.g:116:5: lv_x3_2_0= ruleExp1
                     {
                     if ( state.backtracking==0 ) {
 
@@ -405,13 +402,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 4 :
-                    // InternalSyntacticSequencerTestLanguage.g:139:3: ( (lv_x4_3_0= ruleExp2 ) )
+                    // InternalSyntacticSequencerTestLanguage.g:134:3: ( (lv_x4_3_0= ruleExp2 ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:139:3: ( (lv_x4_3_0= ruleExp2 ) )
-                    // InternalSyntacticSequencerTestLanguage.g:140:4: (lv_x4_3_0= ruleExp2 )
+                    // InternalSyntacticSequencerTestLanguage.g:134:3: ( (lv_x4_3_0= ruleExp2 ) )
+                    // InternalSyntacticSequencerTestLanguage.g:135:4: (lv_x4_3_0= ruleExp2 )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:140:4: (lv_x4_3_0= ruleExp2 )
-                    // InternalSyntacticSequencerTestLanguage.g:141:5: lv_x4_3_0= ruleExp2
+                    // InternalSyntacticSequencerTestLanguage.g:135:4: (lv_x4_3_0= ruleExp2 )
+                    // InternalSyntacticSequencerTestLanguage.g:136:5: lv_x4_3_0= ruleExp2
                     {
                     if ( state.backtracking==0 ) {
 
@@ -446,13 +443,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 5 :
-                    // InternalSyntacticSequencerTestLanguage.g:159:3: ( (lv_x5_4_0= ruleSingleCrossReference ) )
+                    // InternalSyntacticSequencerTestLanguage.g:154:3: ( (lv_x5_4_0= ruleSingleCrossReference ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:159:3: ( (lv_x5_4_0= ruleSingleCrossReference ) )
-                    // InternalSyntacticSequencerTestLanguage.g:160:4: (lv_x5_4_0= ruleSingleCrossReference )
+                    // InternalSyntacticSequencerTestLanguage.g:154:3: ( (lv_x5_4_0= ruleSingleCrossReference ) )
+                    // InternalSyntacticSequencerTestLanguage.g:155:4: (lv_x5_4_0= ruleSingleCrossReference )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:160:4: (lv_x5_4_0= ruleSingleCrossReference )
-                    // InternalSyntacticSequencerTestLanguage.g:161:5: lv_x5_4_0= ruleSingleCrossReference
+                    // InternalSyntacticSequencerTestLanguage.g:155:4: (lv_x5_4_0= ruleSingleCrossReference )
+                    // InternalSyntacticSequencerTestLanguage.g:156:5: lv_x5_4_0= ruleSingleCrossReference
                     {
                     if ( state.backtracking==0 ) {
 
@@ -487,13 +484,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 6 :
-                    // InternalSyntacticSequencerTestLanguage.g:179:3: ( (lv_x6_5_0= ruleBooleanAlternative ) )
+                    // InternalSyntacticSequencerTestLanguage.g:174:3: ( (lv_x6_5_0= ruleBooleanAlternative ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:179:3: ( (lv_x6_5_0= ruleBooleanAlternative ) )
-                    // InternalSyntacticSequencerTestLanguage.g:180:4: (lv_x6_5_0= ruleBooleanAlternative )
+                    // InternalSyntacticSequencerTestLanguage.g:174:3: ( (lv_x6_5_0= ruleBooleanAlternative ) )
+                    // InternalSyntacticSequencerTestLanguage.g:175:4: (lv_x6_5_0= ruleBooleanAlternative )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:180:4: (lv_x6_5_0= ruleBooleanAlternative )
-                    // InternalSyntacticSequencerTestLanguage.g:181:5: lv_x6_5_0= ruleBooleanAlternative
+                    // InternalSyntacticSequencerTestLanguage.g:175:4: (lv_x6_5_0= ruleBooleanAlternative )
+                    // InternalSyntacticSequencerTestLanguage.g:176:5: lv_x6_5_0= ruleBooleanAlternative
                     {
                     if ( state.backtracking==0 ) {
 
@@ -528,13 +525,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 7 :
-                    // InternalSyntacticSequencerTestLanguage.g:199:3: ( (lv_x7_6_0= ruleUnassignedDatatype ) )
+                    // InternalSyntacticSequencerTestLanguage.g:194:3: ( (lv_x7_6_0= ruleUnassignedDatatype ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:199:3: ( (lv_x7_6_0= ruleUnassignedDatatype ) )
-                    // InternalSyntacticSequencerTestLanguage.g:200:4: (lv_x7_6_0= ruleUnassignedDatatype )
+                    // InternalSyntacticSequencerTestLanguage.g:194:3: ( (lv_x7_6_0= ruleUnassignedDatatype ) )
+                    // InternalSyntacticSequencerTestLanguage.g:195:4: (lv_x7_6_0= ruleUnassignedDatatype )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:200:4: (lv_x7_6_0= ruleUnassignedDatatype )
-                    // InternalSyntacticSequencerTestLanguage.g:201:5: lv_x7_6_0= ruleUnassignedDatatype
+                    // InternalSyntacticSequencerTestLanguage.g:195:4: (lv_x7_6_0= ruleUnassignedDatatype )
+                    // InternalSyntacticSequencerTestLanguage.g:196:5: lv_x7_6_0= ruleUnassignedDatatype
                     {
                     if ( state.backtracking==0 ) {
 
@@ -569,13 +566,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 8 :
-                    // InternalSyntacticSequencerTestLanguage.g:219:3: ( (lv_x8_7_0= ruleOptionalSingleTransition ) )
+                    // InternalSyntacticSequencerTestLanguage.g:214:3: ( (lv_x8_7_0= ruleOptionalSingleTransition ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:219:3: ( (lv_x8_7_0= ruleOptionalSingleTransition ) )
-                    // InternalSyntacticSequencerTestLanguage.g:220:4: (lv_x8_7_0= ruleOptionalSingleTransition )
+                    // InternalSyntacticSequencerTestLanguage.g:214:3: ( (lv_x8_7_0= ruleOptionalSingleTransition ) )
+                    // InternalSyntacticSequencerTestLanguage.g:215:4: (lv_x8_7_0= ruleOptionalSingleTransition )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:220:4: (lv_x8_7_0= ruleOptionalSingleTransition )
-                    // InternalSyntacticSequencerTestLanguage.g:221:5: lv_x8_7_0= ruleOptionalSingleTransition
+                    // InternalSyntacticSequencerTestLanguage.g:215:4: (lv_x8_7_0= ruleOptionalSingleTransition )
+                    // InternalSyntacticSequencerTestLanguage.g:216:5: lv_x8_7_0= ruleOptionalSingleTransition
                     {
                     if ( state.backtracking==0 ) {
 
@@ -610,13 +607,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 9 :
-                    // InternalSyntacticSequencerTestLanguage.g:239:3: ( (lv_x9_8_0= ruleOptionalManyTransition ) )
+                    // InternalSyntacticSequencerTestLanguage.g:234:3: ( (lv_x9_8_0= ruleOptionalManyTransition ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:239:3: ( (lv_x9_8_0= ruleOptionalManyTransition ) )
-                    // InternalSyntacticSequencerTestLanguage.g:240:4: (lv_x9_8_0= ruleOptionalManyTransition )
+                    // InternalSyntacticSequencerTestLanguage.g:234:3: ( (lv_x9_8_0= ruleOptionalManyTransition ) )
+                    // InternalSyntacticSequencerTestLanguage.g:235:4: (lv_x9_8_0= ruleOptionalManyTransition )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:240:4: (lv_x9_8_0= ruleOptionalManyTransition )
-                    // InternalSyntacticSequencerTestLanguage.g:241:5: lv_x9_8_0= ruleOptionalManyTransition
+                    // InternalSyntacticSequencerTestLanguage.g:235:4: (lv_x9_8_0= ruleOptionalManyTransition )
+                    // InternalSyntacticSequencerTestLanguage.g:236:5: lv_x9_8_0= ruleOptionalManyTransition
                     {
                     if ( state.backtracking==0 ) {
 
@@ -651,13 +648,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 10 :
-                    // InternalSyntacticSequencerTestLanguage.g:259:3: ( (lv_x10_9_0= ruleMandatoryManyTransition ) )
+                    // InternalSyntacticSequencerTestLanguage.g:254:3: ( (lv_x10_9_0= ruleMandatoryManyTransition ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:259:3: ( (lv_x10_9_0= ruleMandatoryManyTransition ) )
-                    // InternalSyntacticSequencerTestLanguage.g:260:4: (lv_x10_9_0= ruleMandatoryManyTransition )
+                    // InternalSyntacticSequencerTestLanguage.g:254:3: ( (lv_x10_9_0= ruleMandatoryManyTransition ) )
+                    // InternalSyntacticSequencerTestLanguage.g:255:4: (lv_x10_9_0= ruleMandatoryManyTransition )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:260:4: (lv_x10_9_0= ruleMandatoryManyTransition )
-                    // InternalSyntacticSequencerTestLanguage.g:261:5: lv_x10_9_0= ruleMandatoryManyTransition
+                    // InternalSyntacticSequencerTestLanguage.g:255:4: (lv_x10_9_0= ruleMandatoryManyTransition )
+                    // InternalSyntacticSequencerTestLanguage.g:256:5: lv_x10_9_0= ruleMandatoryManyTransition
                     {
                     if ( state.backtracking==0 ) {
 
@@ -692,13 +689,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 11 :
-                    // InternalSyntacticSequencerTestLanguage.g:279:3: ( (lv_x11_10_0= ruleAlternativeTransition ) )
+                    // InternalSyntacticSequencerTestLanguage.g:274:3: ( (lv_x11_10_0= ruleAlternativeTransition ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:279:3: ( (lv_x11_10_0= ruleAlternativeTransition ) )
-                    // InternalSyntacticSequencerTestLanguage.g:280:4: (lv_x11_10_0= ruleAlternativeTransition )
+                    // InternalSyntacticSequencerTestLanguage.g:274:3: ( (lv_x11_10_0= ruleAlternativeTransition ) )
+                    // InternalSyntacticSequencerTestLanguage.g:275:4: (lv_x11_10_0= ruleAlternativeTransition )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:280:4: (lv_x11_10_0= ruleAlternativeTransition )
-                    // InternalSyntacticSequencerTestLanguage.g:281:5: lv_x11_10_0= ruleAlternativeTransition
+                    // InternalSyntacticSequencerTestLanguage.g:275:4: (lv_x11_10_0= ruleAlternativeTransition )
+                    // InternalSyntacticSequencerTestLanguage.g:276:5: lv_x11_10_0= ruleAlternativeTransition
                     {
                     if ( state.backtracking==0 ) {
 
@@ -733,13 +730,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 12 :
-                    // InternalSyntacticSequencerTestLanguage.g:299:3: ( (lv_x12_11_0= ruleBooleanValues ) )
+                    // InternalSyntacticSequencerTestLanguage.g:294:3: ( (lv_x12_11_0= ruleBooleanValues ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:299:3: ( (lv_x12_11_0= ruleBooleanValues ) )
-                    // InternalSyntacticSequencerTestLanguage.g:300:4: (lv_x12_11_0= ruleBooleanValues )
+                    // InternalSyntacticSequencerTestLanguage.g:294:3: ( (lv_x12_11_0= ruleBooleanValues ) )
+                    // InternalSyntacticSequencerTestLanguage.g:295:4: (lv_x12_11_0= ruleBooleanValues )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:300:4: (lv_x12_11_0= ruleBooleanValues )
-                    // InternalSyntacticSequencerTestLanguage.g:301:5: lv_x12_11_0= ruleBooleanValues
+                    // InternalSyntacticSequencerTestLanguage.g:295:4: (lv_x12_11_0= ruleBooleanValues )
+                    // InternalSyntacticSequencerTestLanguage.g:296:5: lv_x12_11_0= ruleBooleanValues
                     {
                     if ( state.backtracking==0 ) {
 
@@ -774,13 +771,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 13 :
-                    // InternalSyntacticSequencerTestLanguage.g:319:3: ( (lv_x13_12_0= ruleLongAlternative ) )
+                    // InternalSyntacticSequencerTestLanguage.g:314:3: ( (lv_x13_12_0= ruleLongAlternative ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:319:3: ( (lv_x13_12_0= ruleLongAlternative ) )
-                    // InternalSyntacticSequencerTestLanguage.g:320:4: (lv_x13_12_0= ruleLongAlternative )
+                    // InternalSyntacticSequencerTestLanguage.g:314:3: ( (lv_x13_12_0= ruleLongAlternative ) )
+                    // InternalSyntacticSequencerTestLanguage.g:315:4: (lv_x13_12_0= ruleLongAlternative )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:320:4: (lv_x13_12_0= ruleLongAlternative )
-                    // InternalSyntacticSequencerTestLanguage.g:321:5: lv_x13_12_0= ruleLongAlternative
+                    // InternalSyntacticSequencerTestLanguage.g:315:4: (lv_x13_12_0= ruleLongAlternative )
+                    // InternalSyntacticSequencerTestLanguage.g:316:5: lv_x13_12_0= ruleLongAlternative
                     {
                     if ( state.backtracking==0 ) {
 
@@ -815,13 +812,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 14 :
-                    // InternalSyntacticSequencerTestLanguage.g:339:3: ( (lv_x14_13_0= ruleActionOnly ) )
+                    // InternalSyntacticSequencerTestLanguage.g:334:3: ( (lv_x14_13_0= ruleActionOnly ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:339:3: ( (lv_x14_13_0= ruleActionOnly ) )
-                    // InternalSyntacticSequencerTestLanguage.g:340:4: (lv_x14_13_0= ruleActionOnly )
+                    // InternalSyntacticSequencerTestLanguage.g:334:3: ( (lv_x14_13_0= ruleActionOnly ) )
+                    // InternalSyntacticSequencerTestLanguage.g:335:4: (lv_x14_13_0= ruleActionOnly )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:340:4: (lv_x14_13_0= ruleActionOnly )
-                    // InternalSyntacticSequencerTestLanguage.g:341:5: lv_x14_13_0= ruleActionOnly
+                    // InternalSyntacticSequencerTestLanguage.g:335:4: (lv_x14_13_0= ruleActionOnly )
+                    // InternalSyntacticSequencerTestLanguage.g:336:5: lv_x14_13_0= ruleActionOnly
                     {
                     if ( state.backtracking==0 ) {
 
@@ -856,13 +853,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 15 :
-                    // InternalSyntacticSequencerTestLanguage.g:359:3: ( (lv_x15_14_0= ruleFragmentCaller ) )
+                    // InternalSyntacticSequencerTestLanguage.g:354:3: ( (lv_x15_14_0= ruleFragmentCaller ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:359:3: ( (lv_x15_14_0= ruleFragmentCaller ) )
-                    // InternalSyntacticSequencerTestLanguage.g:360:4: (lv_x15_14_0= ruleFragmentCaller )
+                    // InternalSyntacticSequencerTestLanguage.g:354:3: ( (lv_x15_14_0= ruleFragmentCaller ) )
+                    // InternalSyntacticSequencerTestLanguage.g:355:4: (lv_x15_14_0= ruleFragmentCaller )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:360:4: (lv_x15_14_0= ruleFragmentCaller )
-                    // InternalSyntacticSequencerTestLanguage.g:361:5: lv_x15_14_0= ruleFragmentCaller
+                    // InternalSyntacticSequencerTestLanguage.g:355:4: (lv_x15_14_0= ruleFragmentCaller )
+                    // InternalSyntacticSequencerTestLanguage.g:356:5: lv_x15_14_0= ruleFragmentCaller
                     {
                     if ( state.backtracking==0 ) {
 
@@ -897,13 +894,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 16 :
-                    // InternalSyntacticSequencerTestLanguage.g:379:3: ( (lv_x16_15_0= ruleBug398890 ) )
+                    // InternalSyntacticSequencerTestLanguage.g:374:3: ( (lv_x16_15_0= ruleBug398890 ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:379:3: ( (lv_x16_15_0= ruleBug398890 ) )
-                    // InternalSyntacticSequencerTestLanguage.g:380:4: (lv_x16_15_0= ruleBug398890 )
+                    // InternalSyntacticSequencerTestLanguage.g:374:3: ( (lv_x16_15_0= ruleBug398890 ) )
+                    // InternalSyntacticSequencerTestLanguage.g:375:4: (lv_x16_15_0= ruleBug398890 )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:380:4: (lv_x16_15_0= ruleBug398890 )
-                    // InternalSyntacticSequencerTestLanguage.g:381:5: lv_x16_15_0= ruleBug398890
+                    // InternalSyntacticSequencerTestLanguage.g:375:4: (lv_x16_15_0= ruleBug398890 )
+                    // InternalSyntacticSequencerTestLanguage.g:376:5: lv_x16_15_0= ruleBug398890
                     {
                     if ( state.backtracking==0 ) {
 
@@ -943,11 +940,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -962,7 +954,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleMandatoryKeywords"
-    // InternalSyntacticSequencerTestLanguage.g:402:1: entryRuleMandatoryKeywords returns [EObject current=null] : iv_ruleMandatoryKeywords= ruleMandatoryKeywords EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:397:1: entryRuleMandatoryKeywords returns [EObject current=null] : iv_ruleMandatoryKeywords= ruleMandatoryKeywords EOF ;
     public final EObject entryRuleMandatoryKeywords() throws RecognitionException {
         EObject current = null;
 
@@ -970,8 +962,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:402:58: (iv_ruleMandatoryKeywords= ruleMandatoryKeywords EOF )
-            // InternalSyntacticSequencerTestLanguage.g:403:2: iv_ruleMandatoryKeywords= ruleMandatoryKeywords EOF
+            // InternalSyntacticSequencerTestLanguage.g:397:58: (iv_ruleMandatoryKeywords= ruleMandatoryKeywords EOF )
+            // InternalSyntacticSequencerTestLanguage.g:398:2: iv_ruleMandatoryKeywords= ruleMandatoryKeywords EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMandatoryKeywordsRule()); 
@@ -1002,7 +994,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleMandatoryKeywords"
-    // InternalSyntacticSequencerTestLanguage.g:409:1: ruleMandatoryKeywords returns [EObject current=null] : (otherlv_0= '#1' ( (lv_val1_1_0= RULE_ID ) ) otherlv_2= 'kw1' ( (lv_val2_3_0= RULE_ID ) ) otherlv_4= 'kw2' otherlv_5= 'kw3' ( (lv_val3_6_0= RULE_ID ) ) otherlv_7= 'kw4' ) ;
+    // InternalSyntacticSequencerTestLanguage.g:404:1: ruleMandatoryKeywords returns [EObject current=null] : (otherlv_0= '#1' ( (lv_val1_1_0= RULE_ID ) ) otherlv_2= 'kw1' ( (lv_val2_3_0= RULE_ID ) ) otherlv_4= 'kw2' otherlv_5= 'kw3' ( (lv_val3_6_0= RULE_ID ) ) otherlv_7= 'kw4' ) ;
     public final EObject ruleMandatoryKeywords() throws RecognitionException {
         EObject current = null;
 
@@ -1015,15 +1007,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         Token lv_val3_6_0=null;
         Token otherlv_7=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:415:2: ( (otherlv_0= '#1' ( (lv_val1_1_0= RULE_ID ) ) otherlv_2= 'kw1' ( (lv_val2_3_0= RULE_ID ) ) otherlv_4= 'kw2' otherlv_5= 'kw3' ( (lv_val3_6_0= RULE_ID ) ) otherlv_7= 'kw4' ) )
-            // InternalSyntacticSequencerTestLanguage.g:416:2: (otherlv_0= '#1' ( (lv_val1_1_0= RULE_ID ) ) otherlv_2= 'kw1' ( (lv_val2_3_0= RULE_ID ) ) otherlv_4= 'kw2' otherlv_5= 'kw3' ( (lv_val3_6_0= RULE_ID ) ) otherlv_7= 'kw4' )
+            // InternalSyntacticSequencerTestLanguage.g:405:1: ( (otherlv_0= '#1' ( (lv_val1_1_0= RULE_ID ) ) otherlv_2= 'kw1' ( (lv_val2_3_0= RULE_ID ) ) otherlv_4= 'kw2' otherlv_5= 'kw3' ( (lv_val3_6_0= RULE_ID ) ) otherlv_7= 'kw4' ) )
+            // InternalSyntacticSequencerTestLanguage.g:406:2: (otherlv_0= '#1' ( (lv_val1_1_0= RULE_ID ) ) otherlv_2= 'kw1' ( (lv_val2_3_0= RULE_ID ) ) otherlv_4= 'kw2' otherlv_5= 'kw3' ( (lv_val3_6_0= RULE_ID ) ) otherlv_7= 'kw4' )
             {
-            // InternalSyntacticSequencerTestLanguage.g:416:2: (otherlv_0= '#1' ( (lv_val1_1_0= RULE_ID ) ) otherlv_2= 'kw1' ( (lv_val2_3_0= RULE_ID ) ) otherlv_4= 'kw2' otherlv_5= 'kw3' ( (lv_val3_6_0= RULE_ID ) ) otherlv_7= 'kw4' )
-            // InternalSyntacticSequencerTestLanguage.g:417:3: otherlv_0= '#1' ( (lv_val1_1_0= RULE_ID ) ) otherlv_2= 'kw1' ( (lv_val2_3_0= RULE_ID ) ) otherlv_4= 'kw2' otherlv_5= 'kw3' ( (lv_val3_6_0= RULE_ID ) ) otherlv_7= 'kw4'
+            // InternalSyntacticSequencerTestLanguage.g:406:2: (otherlv_0= '#1' ( (lv_val1_1_0= RULE_ID ) ) otherlv_2= 'kw1' ( (lv_val2_3_0= RULE_ID ) ) otherlv_4= 'kw2' otherlv_5= 'kw3' ( (lv_val3_6_0= RULE_ID ) ) otherlv_7= 'kw4' )
+            // InternalSyntacticSequencerTestLanguage.g:407:3: otherlv_0= '#1' ( (lv_val1_1_0= RULE_ID ) ) otherlv_2= 'kw1' ( (lv_val2_3_0= RULE_ID ) ) otherlv_4= 'kw2' otherlv_5= 'kw3' ( (lv_val3_6_0= RULE_ID ) ) otherlv_7= 'kw4'
             {
             otherlv_0=(Token)match(input,14,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1031,11 +1020,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_0, grammarAccess.getMandatoryKeywordsAccess().getNumberSignDigitOneKeyword_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:421:3: ( (lv_val1_1_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:422:4: (lv_val1_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:411:3: ( (lv_val1_1_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:412:4: (lv_val1_1_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:422:4: (lv_val1_1_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:423:5: lv_val1_1_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:412:4: (lv_val1_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:413:5: lv_val1_1_0= RULE_ID
             {
             lv_val1_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1067,11 +1056,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_2, grammarAccess.getMandatoryKeywordsAccess().getKw1Keyword_2());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:443:3: ( (lv_val2_3_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:444:4: (lv_val2_3_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:433:3: ( (lv_val2_3_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:434:4: (lv_val2_3_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:444:4: (lv_val2_3_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:445:5: lv_val2_3_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:434:4: (lv_val2_3_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:435:5: lv_val2_3_0= RULE_ID
             {
             lv_val2_3_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1109,11 +1098,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_5, grammarAccess.getMandatoryKeywordsAccess().getKw3Keyword_5());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:469:3: ( (lv_val3_6_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:470:4: (lv_val3_6_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:459:3: ( (lv_val3_6_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:460:4: (lv_val3_6_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:470:4: (lv_val3_6_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:471:5: lv_val3_6_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:460:4: (lv_val3_6_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:461:5: lv_val3_6_0= RULE_ID
             {
             lv_val3_6_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1151,11 +1140,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1170,7 +1154,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleExp0"
-    // InternalSyntacticSequencerTestLanguage.g:495:1: entryRuleExp0 returns [EObject current=null] : iv_ruleExp0= ruleExp0 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:485:1: entryRuleExp0 returns [EObject current=null] : iv_ruleExp0= ruleExp0 EOF ;
     public final EObject entryRuleExp0() throws RecognitionException {
         EObject current = null;
 
@@ -1178,8 +1162,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:495:45: (iv_ruleExp0= ruleExp0 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:496:2: iv_ruleExp0= ruleExp0 EOF
+            // InternalSyntacticSequencerTestLanguage.g:485:45: (iv_ruleExp0= ruleExp0 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:486:2: iv_ruleExp0= ruleExp0 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExp0Rule()); 
@@ -1210,7 +1194,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleExp0"
-    // InternalSyntacticSequencerTestLanguage.g:502:1: ruleExp0 returns [EObject current=null] : (otherlv_0= '#2' this_Addition0_1= ruleAddition0 ) ;
+    // InternalSyntacticSequencerTestLanguage.g:492:1: ruleExp0 returns [EObject current=null] : (otherlv_0= '#2' this_Addition0_1= ruleAddition0 ) ;
     public final EObject ruleExp0() throws RecognitionException {
         EObject current = null;
 
@@ -1218,15 +1202,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject this_Addition0_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:508:2: ( (otherlv_0= '#2' this_Addition0_1= ruleAddition0 ) )
-            // InternalSyntacticSequencerTestLanguage.g:509:2: (otherlv_0= '#2' this_Addition0_1= ruleAddition0 )
+            // InternalSyntacticSequencerTestLanguage.g:493:1: ( (otherlv_0= '#2' this_Addition0_1= ruleAddition0 ) )
+            // InternalSyntacticSequencerTestLanguage.g:494:2: (otherlv_0= '#2' this_Addition0_1= ruleAddition0 )
             {
-            // InternalSyntacticSequencerTestLanguage.g:509:2: (otherlv_0= '#2' this_Addition0_1= ruleAddition0 )
-            // InternalSyntacticSequencerTestLanguage.g:510:3: otherlv_0= '#2' this_Addition0_1= ruleAddition0
+            // InternalSyntacticSequencerTestLanguage.g:494:2: (otherlv_0= '#2' this_Addition0_1= ruleAddition0 )
+            // InternalSyntacticSequencerTestLanguage.g:495:3: otherlv_0= '#2' this_Addition0_1= ruleAddition0
             {
             otherlv_0=(Token)match(input,19,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1256,11 +1237,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1275,7 +1251,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleAddition0"
-    // InternalSyntacticSequencerTestLanguage.g:526:1: entryRuleAddition0 returns [EObject current=null] : iv_ruleAddition0= ruleAddition0 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:511:1: entryRuleAddition0 returns [EObject current=null] : iv_ruleAddition0= ruleAddition0 EOF ;
     public final EObject entryRuleAddition0() throws RecognitionException {
         EObject current = null;
 
@@ -1283,8 +1259,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:526:50: (iv_ruleAddition0= ruleAddition0 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:527:2: iv_ruleAddition0= ruleAddition0 EOF
+            // InternalSyntacticSequencerTestLanguage.g:511:50: (iv_ruleAddition0= ruleAddition0 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:512:2: iv_ruleAddition0= ruleAddition0 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAddition0Rule()); 
@@ -1315,7 +1291,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleAddition0"
-    // InternalSyntacticSequencerTestLanguage.g:533:1: ruleAddition0 returns [EObject current=null] : (this_Prim0_0= rulePrim0 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )* ) ;
+    // InternalSyntacticSequencerTestLanguage.g:518:1: ruleAddition0 returns [EObject current=null] : (this_Prim0_0= rulePrim0 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )* ) ;
     public final EObject ruleAddition0() throws RecognitionException {
         EObject current = null;
 
@@ -1325,15 +1301,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject lv_right_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:539:2: ( (this_Prim0_0= rulePrim0 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )* ) )
-            // InternalSyntacticSequencerTestLanguage.g:540:2: (this_Prim0_0= rulePrim0 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )* )
+            // InternalSyntacticSequencerTestLanguage.g:519:1: ( (this_Prim0_0= rulePrim0 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )* ) )
+            // InternalSyntacticSequencerTestLanguage.g:520:2: (this_Prim0_0= rulePrim0 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )* )
             {
-            // InternalSyntacticSequencerTestLanguage.g:540:2: (this_Prim0_0= rulePrim0 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )* )
-            // InternalSyntacticSequencerTestLanguage.g:541:3: this_Prim0_0= rulePrim0 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )*
+            // InternalSyntacticSequencerTestLanguage.g:520:2: (this_Prim0_0= rulePrim0 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )* )
+            // InternalSyntacticSequencerTestLanguage.g:521:3: this_Prim0_0= rulePrim0 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )*
             {
             if ( state.backtracking==0 ) {
 
@@ -1351,7 +1324,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:549:3: ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )*
+            // InternalSyntacticSequencerTestLanguage.g:529:3: ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) ) )*
             loop2:
             do {
                 int alt2=2;
@@ -1364,10 +1337,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalSyntacticSequencerTestLanguage.g:550:4: () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) )
+            	    // InternalSyntacticSequencerTestLanguage.g:530:4: () otherlv_2= '+' ( (lv_right_3_0= rulePrim0 ) )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:550:4: ()
-            	    // InternalSyntacticSequencerTestLanguage.g:551:5: 
+            	    // InternalSyntacticSequencerTestLanguage.g:530:4: ()
+            	    // InternalSyntacticSequencerTestLanguage.g:531:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -1385,11 +1358,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      				newLeafNode(otherlv_2, grammarAccess.getAddition0Access().getPlusSignKeyword_1_1());
             	      			
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:561:4: ( (lv_right_3_0= rulePrim0 ) )
-            	    // InternalSyntacticSequencerTestLanguage.g:562:5: (lv_right_3_0= rulePrim0 )
+            	    // InternalSyntacticSequencerTestLanguage.g:541:4: ( (lv_right_3_0= rulePrim0 ) )
+            	    // InternalSyntacticSequencerTestLanguage.g:542:5: (lv_right_3_0= rulePrim0 )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:562:5: (lv_right_3_0= rulePrim0 )
-            	    // InternalSyntacticSequencerTestLanguage.g:563:6: lv_right_3_0= rulePrim0
+            	    // InternalSyntacticSequencerTestLanguage.g:542:5: (lv_right_3_0= rulePrim0 )
+            	    // InternalSyntacticSequencerTestLanguage.g:543:6: lv_right_3_0= rulePrim0
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -1435,11 +1408,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1454,7 +1422,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRulePrim0"
-    // InternalSyntacticSequencerTestLanguage.g:585:1: entryRulePrim0 returns [EObject current=null] : iv_rulePrim0= rulePrim0 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:565:1: entryRulePrim0 returns [EObject current=null] : iv_rulePrim0= rulePrim0 EOF ;
     public final EObject entryRulePrim0() throws RecognitionException {
         EObject current = null;
 
@@ -1462,8 +1430,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:585:46: (iv_rulePrim0= rulePrim0 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:586:2: iv_rulePrim0= rulePrim0 EOF
+            // InternalSyntacticSequencerTestLanguage.g:565:46: (iv_rulePrim0= rulePrim0 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:566:2: iv_rulePrim0= rulePrim0 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrim0Rule()); 
@@ -1494,24 +1462,21 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "rulePrim0"
-    // InternalSyntacticSequencerTestLanguage.g:592:1: rulePrim0 returns [EObject current=null] : ( () ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:572:1: rulePrim0 returns [EObject current=null] : ( () ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject rulePrim0() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_1_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:598:2: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:599:2: ( () ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:573:1: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:574:2: ( () ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:599:2: ( () ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:600:3: () ( (lv_name_1_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:574:2: ( () ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:575:3: () ( (lv_name_1_0= RULE_ID ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:600:3: ()
-            // InternalSyntacticSequencerTestLanguage.g:601:4: 
+            // InternalSyntacticSequencerTestLanguage.g:575:3: ()
+            // InternalSyntacticSequencerTestLanguage.g:576:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -1523,11 +1488,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:607:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:608:4: (lv_name_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:582:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:583:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:608:4: (lv_name_1_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:609:5: lv_name_1_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:583:4: (lv_name_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:584:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1559,11 +1524,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1578,7 +1538,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleExp1"
-    // InternalSyntacticSequencerTestLanguage.g:629:1: entryRuleExp1 returns [EObject current=null] : iv_ruleExp1= ruleExp1 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:604:1: entryRuleExp1 returns [EObject current=null] : iv_ruleExp1= ruleExp1 EOF ;
     public final EObject entryRuleExp1() throws RecognitionException {
         EObject current = null;
 
@@ -1586,8 +1546,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:629:45: (iv_ruleExp1= ruleExp1 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:630:2: iv_ruleExp1= ruleExp1 EOF
+            // InternalSyntacticSequencerTestLanguage.g:604:45: (iv_ruleExp1= ruleExp1 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:605:2: iv_ruleExp1= ruleExp1 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExp1Rule()); 
@@ -1618,7 +1578,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleExp1"
-    // InternalSyntacticSequencerTestLanguage.g:636:1: ruleExp1 returns [EObject current=null] : (otherlv_0= '#3' this_Addition1_1= ruleAddition1 ) ;
+    // InternalSyntacticSequencerTestLanguage.g:611:1: ruleExp1 returns [EObject current=null] : (otherlv_0= '#3' this_Addition1_1= ruleAddition1 ) ;
     public final EObject ruleExp1() throws RecognitionException {
         EObject current = null;
 
@@ -1626,15 +1586,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject this_Addition1_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:642:2: ( (otherlv_0= '#3' this_Addition1_1= ruleAddition1 ) )
-            // InternalSyntacticSequencerTestLanguage.g:643:2: (otherlv_0= '#3' this_Addition1_1= ruleAddition1 )
+            // InternalSyntacticSequencerTestLanguage.g:612:1: ( (otherlv_0= '#3' this_Addition1_1= ruleAddition1 ) )
+            // InternalSyntacticSequencerTestLanguage.g:613:2: (otherlv_0= '#3' this_Addition1_1= ruleAddition1 )
             {
-            // InternalSyntacticSequencerTestLanguage.g:643:2: (otherlv_0= '#3' this_Addition1_1= ruleAddition1 )
-            // InternalSyntacticSequencerTestLanguage.g:644:3: otherlv_0= '#3' this_Addition1_1= ruleAddition1
+            // InternalSyntacticSequencerTestLanguage.g:613:2: (otherlv_0= '#3' this_Addition1_1= ruleAddition1 )
+            // InternalSyntacticSequencerTestLanguage.g:614:3: otherlv_0= '#3' this_Addition1_1= ruleAddition1
             {
             otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1664,11 +1621,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1683,7 +1635,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleAddition1"
-    // InternalSyntacticSequencerTestLanguage.g:660:1: entryRuleAddition1 returns [EObject current=null] : iv_ruleAddition1= ruleAddition1 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:630:1: entryRuleAddition1 returns [EObject current=null] : iv_ruleAddition1= ruleAddition1 EOF ;
     public final EObject entryRuleAddition1() throws RecognitionException {
         EObject current = null;
 
@@ -1691,8 +1643,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:660:50: (iv_ruleAddition1= ruleAddition1 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:661:2: iv_ruleAddition1= ruleAddition1 EOF
+            // InternalSyntacticSequencerTestLanguage.g:630:50: (iv_ruleAddition1= ruleAddition1 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:631:2: iv_ruleAddition1= ruleAddition1 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAddition1Rule()); 
@@ -1723,7 +1675,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleAddition1"
-    // InternalSyntacticSequencerTestLanguage.g:667:1: ruleAddition1 returns [EObject current=null] : (this_Prim1_0= rulePrim1 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )* ) ;
+    // InternalSyntacticSequencerTestLanguage.g:637:1: ruleAddition1 returns [EObject current=null] : (this_Prim1_0= rulePrim1 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )* ) ;
     public final EObject ruleAddition1() throws RecognitionException {
         EObject current = null;
 
@@ -1733,15 +1685,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject lv_right_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:673:2: ( (this_Prim1_0= rulePrim1 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )* ) )
-            // InternalSyntacticSequencerTestLanguage.g:674:2: (this_Prim1_0= rulePrim1 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )* )
+            // InternalSyntacticSequencerTestLanguage.g:638:1: ( (this_Prim1_0= rulePrim1 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )* ) )
+            // InternalSyntacticSequencerTestLanguage.g:639:2: (this_Prim1_0= rulePrim1 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )* )
             {
-            // InternalSyntacticSequencerTestLanguage.g:674:2: (this_Prim1_0= rulePrim1 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )* )
-            // InternalSyntacticSequencerTestLanguage.g:675:3: this_Prim1_0= rulePrim1 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )*
+            // InternalSyntacticSequencerTestLanguage.g:639:2: (this_Prim1_0= rulePrim1 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )* )
+            // InternalSyntacticSequencerTestLanguage.g:640:3: this_Prim1_0= rulePrim1 ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )*
             {
             if ( state.backtracking==0 ) {
 
@@ -1759,7 +1708,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:683:3: ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )*
+            // InternalSyntacticSequencerTestLanguage.g:648:3: ( () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) ) )*
             loop3:
             do {
                 int alt3=2;
@@ -1772,10 +1721,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalSyntacticSequencerTestLanguage.g:684:4: () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) )
+            	    // InternalSyntacticSequencerTestLanguage.g:649:4: () otherlv_2= '+' ( (lv_right_3_0= rulePrim1 ) )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:684:4: ()
-            	    // InternalSyntacticSequencerTestLanguage.g:685:5: 
+            	    // InternalSyntacticSequencerTestLanguage.g:649:4: ()
+            	    // InternalSyntacticSequencerTestLanguage.g:650:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -1793,11 +1742,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      				newLeafNode(otherlv_2, grammarAccess.getAddition1Access().getPlusSignKeyword_1_1());
             	      			
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:695:4: ( (lv_right_3_0= rulePrim1 ) )
-            	    // InternalSyntacticSequencerTestLanguage.g:696:5: (lv_right_3_0= rulePrim1 )
+            	    // InternalSyntacticSequencerTestLanguage.g:660:4: ( (lv_right_3_0= rulePrim1 ) )
+            	    // InternalSyntacticSequencerTestLanguage.g:661:5: (lv_right_3_0= rulePrim1 )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:696:5: (lv_right_3_0= rulePrim1 )
-            	    // InternalSyntacticSequencerTestLanguage.g:697:6: lv_right_3_0= rulePrim1
+            	    // InternalSyntacticSequencerTestLanguage.g:661:5: (lv_right_3_0= rulePrim1 )
+            	    // InternalSyntacticSequencerTestLanguage.g:662:6: lv_right_3_0= rulePrim1
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -1843,11 +1792,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1862,7 +1806,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRulePrim1"
-    // InternalSyntacticSequencerTestLanguage.g:719:1: entryRulePrim1 returns [EObject current=null] : iv_rulePrim1= rulePrim1 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:684:1: entryRulePrim1 returns [EObject current=null] : iv_rulePrim1= rulePrim1 EOF ;
     public final EObject entryRulePrim1() throws RecognitionException {
         EObject current = null;
 
@@ -1870,8 +1814,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:719:46: (iv_rulePrim1= rulePrim1 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:720:2: iv_rulePrim1= rulePrim1 EOF
+            // InternalSyntacticSequencerTestLanguage.g:684:46: (iv_rulePrim1= rulePrim1 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:685:2: iv_rulePrim1= rulePrim1 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrim1Rule()); 
@@ -1902,7 +1846,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "rulePrim1"
-    // InternalSyntacticSequencerTestLanguage.g:726:1: rulePrim1 returns [EObject current=null] : ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:691:1: rulePrim1 returns [EObject current=null] : ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' ) ) ;
     public final EObject rulePrim1() throws RecognitionException {
         EObject current = null;
 
@@ -1912,14 +1856,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject this_Addition1_3 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:732:2: ( ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:733:2: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' ) )
+            // InternalSyntacticSequencerTestLanguage.g:692:1: ( ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:693:2: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:733:2: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' ) )
+            // InternalSyntacticSequencerTestLanguage.g:693:2: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1938,13 +1879,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt4) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:734:3: ( () ( (lv_name_1_0= RULE_ID ) ) )
+                    // InternalSyntacticSequencerTestLanguage.g:694:3: ( () ( (lv_name_1_0= RULE_ID ) ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:734:3: ( () ( (lv_name_1_0= RULE_ID ) ) )
-                    // InternalSyntacticSequencerTestLanguage.g:735:4: () ( (lv_name_1_0= RULE_ID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:694:3: ( () ( (lv_name_1_0= RULE_ID ) ) )
+                    // InternalSyntacticSequencerTestLanguage.g:695:4: () ( (lv_name_1_0= RULE_ID ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:735:4: ()
-                    // InternalSyntacticSequencerTestLanguage.g:736:5: 
+                    // InternalSyntacticSequencerTestLanguage.g:695:4: ()
+                    // InternalSyntacticSequencerTestLanguage.g:696:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -1956,11 +1897,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
                     }
 
-                    // InternalSyntacticSequencerTestLanguage.g:742:4: ( (lv_name_1_0= RULE_ID ) )
-                    // InternalSyntacticSequencerTestLanguage.g:743:5: (lv_name_1_0= RULE_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:702:4: ( (lv_name_1_0= RULE_ID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:703:5: (lv_name_1_0= RULE_ID )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:743:5: (lv_name_1_0= RULE_ID )
-                    // InternalSyntacticSequencerTestLanguage.g:744:6: lv_name_1_0= RULE_ID
+                    // InternalSyntacticSequencerTestLanguage.g:703:5: (lv_name_1_0= RULE_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:704:6: lv_name_1_0= RULE_ID
                     {
                     lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1993,10 +1934,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 2 :
-                    // InternalSyntacticSequencerTestLanguage.g:762:3: (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' )
+                    // InternalSyntacticSequencerTestLanguage.g:722:3: (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:762:3: (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' )
-                    // InternalSyntacticSequencerTestLanguage.g:763:4: otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')'
+                    // InternalSyntacticSequencerTestLanguage.g:722:3: (otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')' )
+                    // InternalSyntacticSequencerTestLanguage.g:723:4: otherlv_2= '(' this_Addition1_3= ruleAddition1 otherlv_4= ')'
                     {
                     otherlv_2=(Token)match(input,22,FollowSets000.FOLLOW_9); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2038,11 +1979,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2057,7 +1993,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleExp2"
-    // InternalSyntacticSequencerTestLanguage.g:784:1: entryRuleExp2 returns [EObject current=null] : iv_ruleExp2= ruleExp2 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:744:1: entryRuleExp2 returns [EObject current=null] : iv_ruleExp2= ruleExp2 EOF ;
     public final EObject entryRuleExp2() throws RecognitionException {
         EObject current = null;
 
@@ -2065,8 +2001,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:784:45: (iv_ruleExp2= ruleExp2 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:785:2: iv_ruleExp2= ruleExp2 EOF
+            // InternalSyntacticSequencerTestLanguage.g:744:45: (iv_ruleExp2= ruleExp2 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:745:2: iv_ruleExp2= ruleExp2 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExp2Rule()); 
@@ -2097,7 +2033,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleExp2"
-    // InternalSyntacticSequencerTestLanguage.g:791:1: ruleExp2 returns [EObject current=null] : (otherlv_0= '#4' this_Addition2_1= ruleAddition2 ) ;
+    // InternalSyntacticSequencerTestLanguage.g:751:1: ruleExp2 returns [EObject current=null] : (otherlv_0= '#4' this_Addition2_1= ruleAddition2 ) ;
     public final EObject ruleExp2() throws RecognitionException {
         EObject current = null;
 
@@ -2105,15 +2041,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject this_Addition2_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:797:2: ( (otherlv_0= '#4' this_Addition2_1= ruleAddition2 ) )
-            // InternalSyntacticSequencerTestLanguage.g:798:2: (otherlv_0= '#4' this_Addition2_1= ruleAddition2 )
+            // InternalSyntacticSequencerTestLanguage.g:752:1: ( (otherlv_0= '#4' this_Addition2_1= ruleAddition2 ) )
+            // InternalSyntacticSequencerTestLanguage.g:753:2: (otherlv_0= '#4' this_Addition2_1= ruleAddition2 )
             {
-            // InternalSyntacticSequencerTestLanguage.g:798:2: (otherlv_0= '#4' this_Addition2_1= ruleAddition2 )
-            // InternalSyntacticSequencerTestLanguage.g:799:3: otherlv_0= '#4' this_Addition2_1= ruleAddition2
+            // InternalSyntacticSequencerTestLanguage.g:753:2: (otherlv_0= '#4' this_Addition2_1= ruleAddition2 )
+            // InternalSyntacticSequencerTestLanguage.g:754:3: otherlv_0= '#4' this_Addition2_1= ruleAddition2
             {
             otherlv_0=(Token)match(input,24,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2143,11 +2076,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2162,7 +2090,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleAddition2"
-    // InternalSyntacticSequencerTestLanguage.g:815:1: entryRuleAddition2 returns [EObject current=null] : iv_ruleAddition2= ruleAddition2 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:770:1: entryRuleAddition2 returns [EObject current=null] : iv_ruleAddition2= ruleAddition2 EOF ;
     public final EObject entryRuleAddition2() throws RecognitionException {
         EObject current = null;
 
@@ -2170,8 +2098,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:815:50: (iv_ruleAddition2= ruleAddition2 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:816:2: iv_ruleAddition2= ruleAddition2 EOF
+            // InternalSyntacticSequencerTestLanguage.g:770:50: (iv_ruleAddition2= ruleAddition2 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:771:2: iv_ruleAddition2= ruleAddition2 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAddition2Rule()); 
@@ -2202,7 +2130,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleAddition2"
-    // InternalSyntacticSequencerTestLanguage.g:822:1: ruleAddition2 returns [EObject current=null] : (this_Multiplication2_0= ruleMultiplication2 ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )* ) ;
+    // InternalSyntacticSequencerTestLanguage.g:777:1: ruleAddition2 returns [EObject current=null] : (this_Multiplication2_0= ruleMultiplication2 ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )* ) ;
     public final EObject ruleAddition2() throws RecognitionException {
         EObject current = null;
 
@@ -2212,15 +2140,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject lv_right_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:828:2: ( (this_Multiplication2_0= ruleMultiplication2 ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )* ) )
-            // InternalSyntacticSequencerTestLanguage.g:829:2: (this_Multiplication2_0= ruleMultiplication2 ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )* )
+            // InternalSyntacticSequencerTestLanguage.g:778:1: ( (this_Multiplication2_0= ruleMultiplication2 ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )* ) )
+            // InternalSyntacticSequencerTestLanguage.g:779:2: (this_Multiplication2_0= ruleMultiplication2 ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )* )
             {
-            // InternalSyntacticSequencerTestLanguage.g:829:2: (this_Multiplication2_0= ruleMultiplication2 ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )* )
-            // InternalSyntacticSequencerTestLanguage.g:830:3: this_Multiplication2_0= ruleMultiplication2 ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )*
+            // InternalSyntacticSequencerTestLanguage.g:779:2: (this_Multiplication2_0= ruleMultiplication2 ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )* )
+            // InternalSyntacticSequencerTestLanguage.g:780:3: this_Multiplication2_0= ruleMultiplication2 ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )*
             {
             if ( state.backtracking==0 ) {
 
@@ -2238,7 +2163,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:838:3: ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )*
+            // InternalSyntacticSequencerTestLanguage.g:788:3: ( () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) ) )*
             loop5:
             do {
                 int alt5=2;
@@ -2251,10 +2176,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
                 switch (alt5) {
             	case 1 :
-            	    // InternalSyntacticSequencerTestLanguage.g:839:4: () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) )
+            	    // InternalSyntacticSequencerTestLanguage.g:789:4: () otherlv_2= '+' ( (lv_right_3_0= ruleMultiplication2 ) )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:839:4: ()
-            	    // InternalSyntacticSequencerTestLanguage.g:840:5: 
+            	    // InternalSyntacticSequencerTestLanguage.g:789:4: ()
+            	    // InternalSyntacticSequencerTestLanguage.g:790:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -2272,11 +2197,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      				newLeafNode(otherlv_2, grammarAccess.getAddition2Access().getPlusSignKeyword_1_1());
             	      			
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:850:4: ( (lv_right_3_0= ruleMultiplication2 ) )
-            	    // InternalSyntacticSequencerTestLanguage.g:851:5: (lv_right_3_0= ruleMultiplication2 )
+            	    // InternalSyntacticSequencerTestLanguage.g:800:4: ( (lv_right_3_0= ruleMultiplication2 ) )
+            	    // InternalSyntacticSequencerTestLanguage.g:801:5: (lv_right_3_0= ruleMultiplication2 )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:851:5: (lv_right_3_0= ruleMultiplication2 )
-            	    // InternalSyntacticSequencerTestLanguage.g:852:6: lv_right_3_0= ruleMultiplication2
+            	    // InternalSyntacticSequencerTestLanguage.g:801:5: (lv_right_3_0= ruleMultiplication2 )
+            	    // InternalSyntacticSequencerTestLanguage.g:802:6: lv_right_3_0= ruleMultiplication2
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -2322,11 +2247,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2341,7 +2261,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleMultiplication2"
-    // InternalSyntacticSequencerTestLanguage.g:874:1: entryRuleMultiplication2 returns [EObject current=null] : iv_ruleMultiplication2= ruleMultiplication2 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:824:1: entryRuleMultiplication2 returns [EObject current=null] : iv_ruleMultiplication2= ruleMultiplication2 EOF ;
     public final EObject entryRuleMultiplication2() throws RecognitionException {
         EObject current = null;
 
@@ -2349,8 +2269,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:874:56: (iv_ruleMultiplication2= ruleMultiplication2 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:875:2: iv_ruleMultiplication2= ruleMultiplication2 EOF
+            // InternalSyntacticSequencerTestLanguage.g:824:56: (iv_ruleMultiplication2= ruleMultiplication2 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:825:2: iv_ruleMultiplication2= ruleMultiplication2 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMultiplication2Rule()); 
@@ -2381,7 +2301,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleMultiplication2"
-    // InternalSyntacticSequencerTestLanguage.g:881:1: ruleMultiplication2 returns [EObject current=null] : (this_Prim2_0= rulePrim2 ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )* ) ;
+    // InternalSyntacticSequencerTestLanguage.g:831:1: ruleMultiplication2 returns [EObject current=null] : (this_Prim2_0= rulePrim2 ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )* ) ;
     public final EObject ruleMultiplication2() throws RecognitionException {
         EObject current = null;
 
@@ -2391,15 +2311,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject lv_right_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:887:2: ( (this_Prim2_0= rulePrim2 ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )* ) )
-            // InternalSyntacticSequencerTestLanguage.g:888:2: (this_Prim2_0= rulePrim2 ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )* )
+            // InternalSyntacticSequencerTestLanguage.g:832:1: ( (this_Prim2_0= rulePrim2 ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )* ) )
+            // InternalSyntacticSequencerTestLanguage.g:833:2: (this_Prim2_0= rulePrim2 ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )* )
             {
-            // InternalSyntacticSequencerTestLanguage.g:888:2: (this_Prim2_0= rulePrim2 ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )* )
-            // InternalSyntacticSequencerTestLanguage.g:889:3: this_Prim2_0= rulePrim2 ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )*
+            // InternalSyntacticSequencerTestLanguage.g:833:2: (this_Prim2_0= rulePrim2 ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )* )
+            // InternalSyntacticSequencerTestLanguage.g:834:3: this_Prim2_0= rulePrim2 ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )*
             {
             if ( state.backtracking==0 ) {
 
@@ -2417,7 +2334,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:897:3: ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )*
+            // InternalSyntacticSequencerTestLanguage.g:842:3: ( () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) ) )*
             loop6:
             do {
                 int alt6=2;
@@ -2430,10 +2347,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalSyntacticSequencerTestLanguage.g:898:4: () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) )
+            	    // InternalSyntacticSequencerTestLanguage.g:843:4: () otherlv_2= '*' ( (lv_right_3_0= rulePrim2 ) )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:898:4: ()
-            	    // InternalSyntacticSequencerTestLanguage.g:899:5: 
+            	    // InternalSyntacticSequencerTestLanguage.g:843:4: ()
+            	    // InternalSyntacticSequencerTestLanguage.g:844:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -2451,11 +2368,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      				newLeafNode(otherlv_2, grammarAccess.getMultiplication2Access().getAsteriskKeyword_1_1());
             	      			
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:909:4: ( (lv_right_3_0= rulePrim2 ) )
-            	    // InternalSyntacticSequencerTestLanguage.g:910:5: (lv_right_3_0= rulePrim2 )
+            	    // InternalSyntacticSequencerTestLanguage.g:854:4: ( (lv_right_3_0= rulePrim2 ) )
+            	    // InternalSyntacticSequencerTestLanguage.g:855:5: (lv_right_3_0= rulePrim2 )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:910:5: (lv_right_3_0= rulePrim2 )
-            	    // InternalSyntacticSequencerTestLanguage.g:911:6: lv_right_3_0= rulePrim2
+            	    // InternalSyntacticSequencerTestLanguage.g:855:5: (lv_right_3_0= rulePrim2 )
+            	    // InternalSyntacticSequencerTestLanguage.g:856:6: lv_right_3_0= rulePrim2
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -2501,11 +2418,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2520,7 +2432,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRulePrim2"
-    // InternalSyntacticSequencerTestLanguage.g:933:1: entryRulePrim2 returns [EObject current=null] : iv_rulePrim2= rulePrim2 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:878:1: entryRulePrim2 returns [EObject current=null] : iv_rulePrim2= rulePrim2 EOF ;
     public final EObject entryRulePrim2() throws RecognitionException {
         EObject current = null;
 
@@ -2528,8 +2440,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:933:46: (iv_rulePrim2= rulePrim2 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:934:2: iv_rulePrim2= rulePrim2 EOF
+            // InternalSyntacticSequencerTestLanguage.g:878:46: (iv_rulePrim2= rulePrim2 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:879:2: iv_rulePrim2= rulePrim2 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrim2Rule()); 
@@ -2560,7 +2472,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "rulePrim2"
-    // InternalSyntacticSequencerTestLanguage.g:940:1: rulePrim2 returns [EObject current=null] : ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:885:1: rulePrim2 returns [EObject current=null] : ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' ) ) ;
     public final EObject rulePrim2() throws RecognitionException {
         EObject current = null;
 
@@ -2570,14 +2482,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject this_Addition2_3 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:946:2: ( ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:947:2: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' ) )
+            // InternalSyntacticSequencerTestLanguage.g:886:1: ( ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:887:2: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:947:2: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' ) )
+            // InternalSyntacticSequencerTestLanguage.g:887:2: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) | (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' ) )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -2596,13 +2505,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt7) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:948:3: ( () ( (lv_name_1_0= RULE_ID ) ) )
+                    // InternalSyntacticSequencerTestLanguage.g:888:3: ( () ( (lv_name_1_0= RULE_ID ) ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:948:3: ( () ( (lv_name_1_0= RULE_ID ) ) )
-                    // InternalSyntacticSequencerTestLanguage.g:949:4: () ( (lv_name_1_0= RULE_ID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:888:3: ( () ( (lv_name_1_0= RULE_ID ) ) )
+                    // InternalSyntacticSequencerTestLanguage.g:889:4: () ( (lv_name_1_0= RULE_ID ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:949:4: ()
-                    // InternalSyntacticSequencerTestLanguage.g:950:5: 
+                    // InternalSyntacticSequencerTestLanguage.g:889:4: ()
+                    // InternalSyntacticSequencerTestLanguage.g:890:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2614,11 +2523,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
                     }
 
-                    // InternalSyntacticSequencerTestLanguage.g:956:4: ( (lv_name_1_0= RULE_ID ) )
-                    // InternalSyntacticSequencerTestLanguage.g:957:5: (lv_name_1_0= RULE_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:896:4: ( (lv_name_1_0= RULE_ID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:897:5: (lv_name_1_0= RULE_ID )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:957:5: (lv_name_1_0= RULE_ID )
-                    // InternalSyntacticSequencerTestLanguage.g:958:6: lv_name_1_0= RULE_ID
+                    // InternalSyntacticSequencerTestLanguage.g:897:5: (lv_name_1_0= RULE_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:898:6: lv_name_1_0= RULE_ID
                     {
                     lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2651,10 +2560,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 2 :
-                    // InternalSyntacticSequencerTestLanguage.g:976:3: (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' )
+                    // InternalSyntacticSequencerTestLanguage.g:916:3: (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:976:3: (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' )
-                    // InternalSyntacticSequencerTestLanguage.g:977:4: otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')'
+                    // InternalSyntacticSequencerTestLanguage.g:916:3: (otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')' )
+                    // InternalSyntacticSequencerTestLanguage.g:917:4: otherlv_2= '(' this_Addition2_3= ruleAddition2 otherlv_4= ')'
                     {
                     otherlv_2=(Token)match(input,22,FollowSets000.FOLLOW_9); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2696,11 +2605,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2715,7 +2619,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleDatatypeID"
-    // InternalSyntacticSequencerTestLanguage.g:998:1: entryRuleDatatypeID returns [String current=null] : iv_ruleDatatypeID= ruleDatatypeID EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:938:1: entryRuleDatatypeID returns [String current=null] : iv_ruleDatatypeID= ruleDatatypeID EOF ;
     public final String entryRuleDatatypeID() throws RecognitionException {
         String current = null;
 
@@ -2723,8 +2627,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:998:50: (iv_ruleDatatypeID= ruleDatatypeID EOF )
-            // InternalSyntacticSequencerTestLanguage.g:999:2: iv_ruleDatatypeID= ruleDatatypeID EOF
+            // InternalSyntacticSequencerTestLanguage.g:938:50: (iv_ruleDatatypeID= ruleDatatypeID EOF )
+            // InternalSyntacticSequencerTestLanguage.g:939:2: iv_ruleDatatypeID= ruleDatatypeID EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDatatypeIDRule()); 
@@ -2755,18 +2659,15 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleDatatypeID"
-    // InternalSyntacticSequencerTestLanguage.g:1005:1: ruleDatatypeID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
+    // InternalSyntacticSequencerTestLanguage.g:945:1: ruleDatatypeID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
     public final AntlrDatatypeRuleToken ruleDatatypeID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_ID_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1011:2: (this_ID_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:1012:2: this_ID_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:946:1: (this_ID_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:947:2: this_ID_0= RULE_ID
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2782,11 +2683,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2801,7 +2697,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleSingleCrossReference"
-    // InternalSyntacticSequencerTestLanguage.g:1022:1: entryRuleSingleCrossReference returns [EObject current=null] : iv_ruleSingleCrossReference= ruleSingleCrossReference EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:957:1: entryRuleSingleCrossReference returns [EObject current=null] : iv_ruleSingleCrossReference= ruleSingleCrossReference EOF ;
     public final EObject entryRuleSingleCrossReference() throws RecognitionException {
         EObject current = null;
 
@@ -2809,8 +2705,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1022:61: (iv_ruleSingleCrossReference= ruleSingleCrossReference EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1023:2: iv_ruleSingleCrossReference= ruleSingleCrossReference EOF
+            // InternalSyntacticSequencerTestLanguage.g:957:61: (iv_ruleSingleCrossReference= ruleSingleCrossReference EOF )
+            // InternalSyntacticSequencerTestLanguage.g:958:2: iv_ruleSingleCrossReference= ruleSingleCrossReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSingleCrossReferenceRule()); 
@@ -2841,7 +2737,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleSingleCrossReference"
-    // InternalSyntacticSequencerTestLanguage.g:1029:1: ruleSingleCrossReference returns [EObject current=null] : (otherlv_0= '#5' ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) ) (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )? (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )? (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )? (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )? (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )? ) ;
+    // InternalSyntacticSequencerTestLanguage.g:964:1: ruleSingleCrossReference returns [EObject current=null] : (otherlv_0= '#5' ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) ) (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )? (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )? (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )? (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )? (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )? ) ;
     public final EObject ruleSingleCrossReference() throws RecognitionException {
         EObject current = null;
 
@@ -2859,15 +2755,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         Token otherlv_10=null;
         Token otherlv_11=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1035:2: ( (otherlv_0= '#5' ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) ) (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )? (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )? (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )? (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )? (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )? ) )
-            // InternalSyntacticSequencerTestLanguage.g:1036:2: (otherlv_0= '#5' ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) ) (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )? (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )? (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )? (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )? (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )? )
+            // InternalSyntacticSequencerTestLanguage.g:965:1: ( (otherlv_0= '#5' ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) ) (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )? (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )? (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )? (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )? (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )? ) )
+            // InternalSyntacticSequencerTestLanguage.g:966:2: (otherlv_0= '#5' ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) ) (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )? (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )? (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )? (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )? (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )? )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1036:2: (otherlv_0= '#5' ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) ) (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )? (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )? (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )? (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )? (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )? )
-            // InternalSyntacticSequencerTestLanguage.g:1037:3: otherlv_0= '#5' ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) ) (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )? (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )? (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )? (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )? (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )?
+            // InternalSyntacticSequencerTestLanguage.g:966:2: (otherlv_0= '#5' ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) ) (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )? (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )? (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )? (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )? (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )? )
+            // InternalSyntacticSequencerTestLanguage.g:967:3: otherlv_0= '#5' ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) ) (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )? (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )? (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )? (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )? (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )?
             {
             otherlv_0=(Token)match(input,26,FollowSets000.FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2875,13 +2768,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_0, grammarAccess.getSingleCrossReferenceAccess().getNumberSignDigitFiveKeyword_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:1041:3: ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1042:4: ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) )
+            // InternalSyntacticSequencerTestLanguage.g:971:3: ( ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:972:4: ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1042:4: ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) )
-            // InternalSyntacticSequencerTestLanguage.g:1043:5: (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' )
+            // InternalSyntacticSequencerTestLanguage.g:972:4: ( (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' ) )
+            // InternalSyntacticSequencerTestLanguage.g:973:5: (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1043:5: (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' )
+            // InternalSyntacticSequencerTestLanguage.g:973:5: (lv_name_1_1= RULE_TERMINAL_ID | lv_name_1_2= RULE_ID | lv_name_1_3= 'kw5' )
             int alt8=3;
             switch ( input.LA(1) ) {
             case RULE_TERMINAL_ID:
@@ -2909,7 +2802,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             switch (alt8) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1044:6: lv_name_1_1= RULE_TERMINAL_ID
+                    // InternalSyntacticSequencerTestLanguage.g:974:6: lv_name_1_1= RULE_TERMINAL_ID
                     {
                     lv_name_1_1=(Token)match(input,RULE_TERMINAL_ID,FollowSets000.FOLLOW_13); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2933,7 +2826,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 2 :
-                    // InternalSyntacticSequencerTestLanguage.g:1059:6: lv_name_1_2= RULE_ID
+                    // InternalSyntacticSequencerTestLanguage.g:989:6: lv_name_1_2= RULE_ID
                     {
                     lv_name_1_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_13); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2957,7 +2850,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 3 :
-                    // InternalSyntacticSequencerTestLanguage.g:1074:6: lv_name_1_3= 'kw5'
+                    // InternalSyntacticSequencerTestLanguage.g:1004:6: lv_name_1_3= 'kw5'
                     {
                     lv_name_1_3=(Token)match(input,27,FollowSets000.FOLLOW_13); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2985,7 +2878,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1087:3: (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )?
+            // InternalSyntacticSequencerTestLanguage.g:1017:3: (otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) ) )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -2994,7 +2887,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt9) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1088:4: otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1018:4: otherlv_2= 'kw1' ( (otherlv_3= RULE_TERMINAL_ID ) )
                     {
                     otherlv_2=(Token)match(input,15,FollowSets000.FOLLOW_14); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3002,11 +2895,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                       				newLeafNode(otherlv_2, grammarAccess.getSingleCrossReferenceAccess().getKw1Keyword_2_0());
                       			
                     }
-                    // InternalSyntacticSequencerTestLanguage.g:1092:4: ( (otherlv_3= RULE_TERMINAL_ID ) )
-                    // InternalSyntacticSequencerTestLanguage.g:1093:5: (otherlv_3= RULE_TERMINAL_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:1022:4: ( (otherlv_3= RULE_TERMINAL_ID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1023:5: (otherlv_3= RULE_TERMINAL_ID )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:1093:5: (otherlv_3= RULE_TERMINAL_ID )
-                    // InternalSyntacticSequencerTestLanguage.g:1094:6: otherlv_3= RULE_TERMINAL_ID
+                    // InternalSyntacticSequencerTestLanguage.g:1023:5: (otherlv_3= RULE_TERMINAL_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:1024:6: otherlv_3= RULE_TERMINAL_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3033,7 +2926,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1106:3: (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )?
+            // InternalSyntacticSequencerTestLanguage.g:1036:3: (otherlv_4= 'kw2' ( ( ruleDatatypeID ) ) )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -3042,7 +2935,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt10) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1107:4: otherlv_4= 'kw2' ( ( ruleDatatypeID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1037:4: otherlv_4= 'kw2' ( ( ruleDatatypeID ) )
                     {
                     otherlv_4=(Token)match(input,16,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3050,11 +2943,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                       				newLeafNode(otherlv_4, grammarAccess.getSingleCrossReferenceAccess().getKw2Keyword_3_0());
                       			
                     }
-                    // InternalSyntacticSequencerTestLanguage.g:1111:4: ( ( ruleDatatypeID ) )
-                    // InternalSyntacticSequencerTestLanguage.g:1112:5: ( ruleDatatypeID )
+                    // InternalSyntacticSequencerTestLanguage.g:1041:4: ( ( ruleDatatypeID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1042:5: ( ruleDatatypeID )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:1112:5: ( ruleDatatypeID )
-                    // InternalSyntacticSequencerTestLanguage.g:1113:6: ruleDatatypeID
+                    // InternalSyntacticSequencerTestLanguage.g:1042:5: ( ruleDatatypeID )
+                    // InternalSyntacticSequencerTestLanguage.g:1043:6: ruleDatatypeID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3090,7 +2983,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1128:3: (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )?
+            // InternalSyntacticSequencerTestLanguage.g:1058:3: (otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) ) )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -3099,7 +2992,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt11) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1129:4: otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1059:4: otherlv_6= 'kw3' ( (otherlv_7= RULE_ID ) )
                     {
                     otherlv_6=(Token)match(input,17,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3107,11 +3000,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                       				newLeafNode(otherlv_6, grammarAccess.getSingleCrossReferenceAccess().getKw3Keyword_4_0());
                       			
                     }
-                    // InternalSyntacticSequencerTestLanguage.g:1133:4: ( (otherlv_7= RULE_ID ) )
-                    // InternalSyntacticSequencerTestLanguage.g:1134:5: (otherlv_7= RULE_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:1063:4: ( (otherlv_7= RULE_ID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1064:5: (otherlv_7= RULE_ID )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:1134:5: (otherlv_7= RULE_ID )
-                    // InternalSyntacticSequencerTestLanguage.g:1135:6: otherlv_7= RULE_ID
+                    // InternalSyntacticSequencerTestLanguage.g:1064:5: (otherlv_7= RULE_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:1065:6: otherlv_7= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3138,7 +3031,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1147:3: (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )?
+            // InternalSyntacticSequencerTestLanguage.g:1077:3: (otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) ) )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -3147,7 +3040,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt12) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1148:4: otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1078:4: otherlv_8= 'kw4' ( (otherlv_9= RULE_ID ) )
                     {
                     otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3155,11 +3048,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                       				newLeafNode(otherlv_8, grammarAccess.getSingleCrossReferenceAccess().getKw4Keyword_5_0());
                       			
                     }
-                    // InternalSyntacticSequencerTestLanguage.g:1152:4: ( (otherlv_9= RULE_ID ) )
-                    // InternalSyntacticSequencerTestLanguage.g:1153:5: (otherlv_9= RULE_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:1082:4: ( (otherlv_9= RULE_ID ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1083:5: (otherlv_9= RULE_ID )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:1153:5: (otherlv_9= RULE_ID )
-                    // InternalSyntacticSequencerTestLanguage.g:1154:6: otherlv_9= RULE_ID
+                    // InternalSyntacticSequencerTestLanguage.g:1083:5: (otherlv_9= RULE_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:1084:6: otherlv_9= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3186,7 +3079,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1166:3: (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )?
+            // InternalSyntacticSequencerTestLanguage.g:1096:3: (otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) ) )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -3195,7 +3088,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt13) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1167:4: otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1097:4: otherlv_10= 'kw5' ( (otherlv_11= 'kw5' ) )
                     {
                     otherlv_10=(Token)match(input,27,FollowSets000.FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3203,11 +3096,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                       				newLeafNode(otherlv_10, grammarAccess.getSingleCrossReferenceAccess().getKw5Keyword_6_0());
                       			
                     }
-                    // InternalSyntacticSequencerTestLanguage.g:1171:4: ( (otherlv_11= 'kw5' ) )
-                    // InternalSyntacticSequencerTestLanguage.g:1172:5: (otherlv_11= 'kw5' )
+                    // InternalSyntacticSequencerTestLanguage.g:1101:4: ( (otherlv_11= 'kw5' ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1102:5: (otherlv_11= 'kw5' )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:1172:5: (otherlv_11= 'kw5' )
-                    // InternalSyntacticSequencerTestLanguage.g:1173:6: otherlv_11= 'kw5'
+                    // InternalSyntacticSequencerTestLanguage.g:1102:5: (otherlv_11= 'kw5' )
+                    // InternalSyntacticSequencerTestLanguage.g:1103:6: otherlv_11= 'kw5'
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3240,11 +3133,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -3259,7 +3147,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleBooleanAlternative"
-    // InternalSyntacticSequencerTestLanguage.g:1189:1: entryRuleBooleanAlternative returns [EObject current=null] : iv_ruleBooleanAlternative= ruleBooleanAlternative EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1119:1: entryRuleBooleanAlternative returns [EObject current=null] : iv_ruleBooleanAlternative= ruleBooleanAlternative EOF ;
     public final EObject entryRuleBooleanAlternative() throws RecognitionException {
         EObject current = null;
 
@@ -3267,8 +3155,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1189:59: (iv_ruleBooleanAlternative= ruleBooleanAlternative EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1190:2: iv_ruleBooleanAlternative= ruleBooleanAlternative EOF
+            // InternalSyntacticSequencerTestLanguage.g:1119:59: (iv_ruleBooleanAlternative= ruleBooleanAlternative EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1120:2: iv_ruleBooleanAlternative= ruleBooleanAlternative EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBooleanAlternativeRule()); 
@@ -3299,7 +3187,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleBooleanAlternative"
-    // InternalSyntacticSequencerTestLanguage.g:1196:1: ruleBooleanAlternative returns [EObject current=null] : (otherlv_0= '#6' ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1126:1: ruleBooleanAlternative returns [EObject current=null] : (otherlv_0= '#6' ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) ) ) ;
     public final EObject ruleBooleanAlternative() throws RecognitionException {
         EObject current = null;
 
@@ -3307,15 +3195,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject lv_bool_1_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1202:2: ( (otherlv_0= '#6' ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1203:2: (otherlv_0= '#6' ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1127:1: ( (otherlv_0= '#6' ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1128:2: (otherlv_0= '#6' ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1203:2: (otherlv_0= '#6' ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1204:3: otherlv_0= '#6' ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) )
+            // InternalSyntacticSequencerTestLanguage.g:1128:2: (otherlv_0= '#6' ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1129:3: otherlv_0= '#6' ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) )
             {
             otherlv_0=(Token)match(input,28,FollowSets000.FOLLOW_20); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3323,11 +3208,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_0, grammarAccess.getBooleanAlternativeAccess().getNumberSignDigitSixKeyword_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:1208:3: ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) )
-            // InternalSyntacticSequencerTestLanguage.g:1209:4: (lv_bool_1_0= ruleBooleanAlternativeLiteral )
+            // InternalSyntacticSequencerTestLanguage.g:1133:3: ( (lv_bool_1_0= ruleBooleanAlternativeLiteral ) )
+            // InternalSyntacticSequencerTestLanguage.g:1134:4: (lv_bool_1_0= ruleBooleanAlternativeLiteral )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1209:4: (lv_bool_1_0= ruleBooleanAlternativeLiteral )
-            // InternalSyntacticSequencerTestLanguage.g:1210:5: lv_bool_1_0= ruleBooleanAlternativeLiteral
+            // InternalSyntacticSequencerTestLanguage.g:1134:4: (lv_bool_1_0= ruleBooleanAlternativeLiteral )
+            // InternalSyntacticSequencerTestLanguage.g:1135:5: lv_bool_1_0= ruleBooleanAlternativeLiteral
             {
             if ( state.backtracking==0 ) {
 
@@ -3364,11 +3249,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -3383,7 +3263,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleBooleanAlternativeLiteral"
-    // InternalSyntacticSequencerTestLanguage.g:1231:1: entryRuleBooleanAlternativeLiteral returns [EObject current=null] : iv_ruleBooleanAlternativeLiteral= ruleBooleanAlternativeLiteral EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1156:1: entryRuleBooleanAlternativeLiteral returns [EObject current=null] : iv_ruleBooleanAlternativeLiteral= ruleBooleanAlternativeLiteral EOF ;
     public final EObject entryRuleBooleanAlternativeLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3391,8 +3271,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1231:66: (iv_ruleBooleanAlternativeLiteral= ruleBooleanAlternativeLiteral EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1232:2: iv_ruleBooleanAlternativeLiteral= ruleBooleanAlternativeLiteral EOF
+            // InternalSyntacticSequencerTestLanguage.g:1156:66: (iv_ruleBooleanAlternativeLiteral= ruleBooleanAlternativeLiteral EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1157:2: iv_ruleBooleanAlternativeLiteral= ruleBooleanAlternativeLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBooleanAlternativeLiteralRule()); 
@@ -3423,25 +3303,22 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleBooleanAlternativeLiteral"
-    // InternalSyntacticSequencerTestLanguage.g:1238:1: ruleBooleanAlternativeLiteral returns [EObject current=null] : ( () (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1163:1: ruleBooleanAlternativeLiteral returns [EObject current=null] : ( () (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) ) ) ;
     public final EObject ruleBooleanAlternativeLiteral() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token lv_isTrue_2_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1244:2: ( ( () (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1245:2: ( () (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1164:1: ( ( () (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1165:2: ( () (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1245:2: ( () (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1246:3: () (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1165:2: ( () (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1166:3: () (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1246:3: ()
-            // InternalSyntacticSequencerTestLanguage.g:1247:4: 
+            // InternalSyntacticSequencerTestLanguage.g:1166:3: ()
+            // InternalSyntacticSequencerTestLanguage.g:1167:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -3453,7 +3330,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1253:3: (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1173:3: (otherlv_1= 'kw1' | ( (lv_isTrue_2_0= 'kw2' ) ) )
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -3472,7 +3349,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt14) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1254:4: otherlv_1= 'kw1'
+                    // InternalSyntacticSequencerTestLanguage.g:1174:4: otherlv_1= 'kw1'
                     {
                     otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3484,13 +3361,13 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 2 :
-                    // InternalSyntacticSequencerTestLanguage.g:1259:4: ( (lv_isTrue_2_0= 'kw2' ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1179:4: ( (lv_isTrue_2_0= 'kw2' ) )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:1259:4: ( (lv_isTrue_2_0= 'kw2' ) )
-                    // InternalSyntacticSequencerTestLanguage.g:1260:5: (lv_isTrue_2_0= 'kw2' )
+                    // InternalSyntacticSequencerTestLanguage.g:1179:4: ( (lv_isTrue_2_0= 'kw2' ) )
+                    // InternalSyntacticSequencerTestLanguage.g:1180:5: (lv_isTrue_2_0= 'kw2' )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:1260:5: (lv_isTrue_2_0= 'kw2' )
-                    // InternalSyntacticSequencerTestLanguage.g:1261:6: lv_isTrue_2_0= 'kw2'
+                    // InternalSyntacticSequencerTestLanguage.g:1180:5: (lv_isTrue_2_0= 'kw2' )
+                    // InternalSyntacticSequencerTestLanguage.g:1181:6: lv_isTrue_2_0= 'kw2'
                     {
                     lv_isTrue_2_0=(Token)match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3524,11 +3401,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -3543,7 +3415,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleUnassignedDatatype"
-    // InternalSyntacticSequencerTestLanguage.g:1278:1: entryRuleUnassignedDatatype returns [EObject current=null] : iv_ruleUnassignedDatatype= ruleUnassignedDatatype EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1198:1: entryRuleUnassignedDatatype returns [EObject current=null] : iv_ruleUnassignedDatatype= ruleUnassignedDatatype EOF ;
     public final EObject entryRuleUnassignedDatatype() throws RecognitionException {
         EObject current = null;
 
@@ -3551,8 +3423,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1278:59: (iv_ruleUnassignedDatatype= ruleUnassignedDatatype EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1279:2: iv_ruleUnassignedDatatype= ruleUnassignedDatatype EOF
+            // InternalSyntacticSequencerTestLanguage.g:1198:59: (iv_ruleUnassignedDatatype= ruleUnassignedDatatype EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1199:2: iv_ruleUnassignedDatatype= ruleUnassignedDatatype EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnassignedDatatypeRule()); 
@@ -3583,22 +3455,19 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleUnassignedDatatype"
-    // InternalSyntacticSequencerTestLanguage.g:1285:1: ruleUnassignedDatatype returns [EObject current=null] : (otherlv_0= '#7' ( (lv_val_1_0= RULE_ID ) ) ruleKW1 ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1205:1: ruleUnassignedDatatype returns [EObject current=null] : (otherlv_0= '#7' ( (lv_val_1_0= RULE_ID ) ) ruleKW1 ) ;
     public final EObject ruleUnassignedDatatype() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_val_1_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1291:2: ( (otherlv_0= '#7' ( (lv_val_1_0= RULE_ID ) ) ruleKW1 ) )
-            // InternalSyntacticSequencerTestLanguage.g:1292:2: (otherlv_0= '#7' ( (lv_val_1_0= RULE_ID ) ) ruleKW1 )
+            // InternalSyntacticSequencerTestLanguage.g:1206:1: ( (otherlv_0= '#7' ( (lv_val_1_0= RULE_ID ) ) ruleKW1 ) )
+            // InternalSyntacticSequencerTestLanguage.g:1207:2: (otherlv_0= '#7' ( (lv_val_1_0= RULE_ID ) ) ruleKW1 )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1292:2: (otherlv_0= '#7' ( (lv_val_1_0= RULE_ID ) ) ruleKW1 )
-            // InternalSyntacticSequencerTestLanguage.g:1293:3: otherlv_0= '#7' ( (lv_val_1_0= RULE_ID ) ) ruleKW1
+            // InternalSyntacticSequencerTestLanguage.g:1207:2: (otherlv_0= '#7' ( (lv_val_1_0= RULE_ID ) ) ruleKW1 )
+            // InternalSyntacticSequencerTestLanguage.g:1208:3: otherlv_0= '#7' ( (lv_val_1_0= RULE_ID ) ) ruleKW1
             {
             otherlv_0=(Token)match(input,29,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3606,11 +3475,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_0, grammarAccess.getUnassignedDatatypeAccess().getNumberSignDigitSevenKeyword_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:1297:3: ( (lv_val_1_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:1298:4: (lv_val_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1212:3: ( (lv_val_1_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1213:4: (lv_val_1_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1298:4: (lv_val_1_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:1299:5: lv_val_1_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:1213:4: (lv_val_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1214:5: lv_val_1_0= RULE_ID
             {
             lv_val_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3657,11 +3526,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -3676,7 +3540,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleKW1"
-    // InternalSyntacticSequencerTestLanguage.g:1326:1: entryRuleKW1 returns [String current=null] : iv_ruleKW1= ruleKW1 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1241:1: entryRuleKW1 returns [String current=null] : iv_ruleKW1= ruleKW1 EOF ;
     public final String entryRuleKW1() throws RecognitionException {
         String current = null;
 
@@ -3684,8 +3548,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1326:43: (iv_ruleKW1= ruleKW1 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1327:2: iv_ruleKW1= ruleKW1 EOF
+            // InternalSyntacticSequencerTestLanguage.g:1241:43: (iv_ruleKW1= ruleKW1 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1242:2: iv_ruleKW1= ruleKW1 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getKW1Rule()); 
@@ -3716,21 +3580,18 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleKW1"
-    // InternalSyntacticSequencerTestLanguage.g:1333:1: ruleKW1 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'kw1' | (kw= 'matched' (this_INT_2= RULE_INT )? ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1248:1: ruleKW1 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'kw1' | (kw= 'matched' (this_INT_2= RULE_INT )? ) ) ;
     public final AntlrDatatypeRuleToken ruleKW1() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token kw=null;
         Token this_INT_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1339:2: ( (kw= 'kw1' | (kw= 'matched' (this_INT_2= RULE_INT )? ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1340:2: (kw= 'kw1' | (kw= 'matched' (this_INT_2= RULE_INT )? ) )
+            // InternalSyntacticSequencerTestLanguage.g:1249:1: ( (kw= 'kw1' | (kw= 'matched' (this_INT_2= RULE_INT )? ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1250:2: (kw= 'kw1' | (kw= 'matched' (this_INT_2= RULE_INT )? ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1340:2: (kw= 'kw1' | (kw= 'matched' (this_INT_2= RULE_INT )? ) )
+            // InternalSyntacticSequencerTestLanguage.g:1250:2: (kw= 'kw1' | (kw= 'matched' (this_INT_2= RULE_INT )? ) )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -3749,7 +3610,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt16) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1341:3: kw= 'kw1'
+                    // InternalSyntacticSequencerTestLanguage.g:1251:3: kw= 'kw1'
                     {
                     kw=(Token)match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3762,10 +3623,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 2 :
-                    // InternalSyntacticSequencerTestLanguage.g:1347:3: (kw= 'matched' (this_INT_2= RULE_INT )? )
+                    // InternalSyntacticSequencerTestLanguage.g:1257:3: (kw= 'matched' (this_INT_2= RULE_INT )? )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:1347:3: (kw= 'matched' (this_INT_2= RULE_INT )? )
-                    // InternalSyntacticSequencerTestLanguage.g:1348:4: kw= 'matched' (this_INT_2= RULE_INT )?
+                    // InternalSyntacticSequencerTestLanguage.g:1257:3: (kw= 'matched' (this_INT_2= RULE_INT )? )
+                    // InternalSyntacticSequencerTestLanguage.g:1258:4: kw= 'matched' (this_INT_2= RULE_INT )?
                     {
                     kw=(Token)match(input,30,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3774,7 +3635,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                       				newLeafNode(kw, grammarAccess.getKW1Access().getMatchedKeyword_1_0());
                       			
                     }
-                    // InternalSyntacticSequencerTestLanguage.g:1353:4: (this_INT_2= RULE_INT )?
+                    // InternalSyntacticSequencerTestLanguage.g:1263:4: (this_INT_2= RULE_INT )?
                     int alt15=2;
                     int LA15_0 = input.LA(1);
 
@@ -3783,7 +3644,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     switch (alt15) {
                         case 1 :
-                            // InternalSyntacticSequencerTestLanguage.g:1354:5: this_INT_2= RULE_INT
+                            // InternalSyntacticSequencerTestLanguage.g:1264:5: this_INT_2= RULE_INT
                             {
                             this_INT_2=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -3814,11 +3675,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -3833,7 +3689,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleOptionalSingleTransition"
-    // InternalSyntacticSequencerTestLanguage.g:1367:1: entryRuleOptionalSingleTransition returns [EObject current=null] : iv_ruleOptionalSingleTransition= ruleOptionalSingleTransition EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1277:1: entryRuleOptionalSingleTransition returns [EObject current=null] : iv_ruleOptionalSingleTransition= ruleOptionalSingleTransition EOF ;
     public final EObject entryRuleOptionalSingleTransition() throws RecognitionException {
         EObject current = null;
 
@@ -3841,8 +3697,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1367:65: (iv_ruleOptionalSingleTransition= ruleOptionalSingleTransition EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1368:2: iv_ruleOptionalSingleTransition= ruleOptionalSingleTransition EOF
+            // InternalSyntacticSequencerTestLanguage.g:1277:65: (iv_ruleOptionalSingleTransition= ruleOptionalSingleTransition EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1278:2: iv_ruleOptionalSingleTransition= ruleOptionalSingleTransition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOptionalSingleTransitionRule()); 
@@ -3873,22 +3729,19 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleOptionalSingleTransition"
-    // InternalSyntacticSequencerTestLanguage.g:1374:1: ruleOptionalSingleTransition returns [EObject current=null] : (otherlv_0= '#8' ( ruleKW1 )? ( (lv_val_2_0= RULE_ID ) ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1284:1: ruleOptionalSingleTransition returns [EObject current=null] : (otherlv_0= '#8' ( ruleKW1 )? ( (lv_val_2_0= RULE_ID ) ) ) ;
     public final EObject ruleOptionalSingleTransition() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_val_2_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1380:2: ( (otherlv_0= '#8' ( ruleKW1 )? ( (lv_val_2_0= RULE_ID ) ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1381:2: (otherlv_0= '#8' ( ruleKW1 )? ( (lv_val_2_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1285:1: ( (otherlv_0= '#8' ( ruleKW1 )? ( (lv_val_2_0= RULE_ID ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1286:2: (otherlv_0= '#8' ( ruleKW1 )? ( (lv_val_2_0= RULE_ID ) ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1381:2: (otherlv_0= '#8' ( ruleKW1 )? ( (lv_val_2_0= RULE_ID ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1382:3: otherlv_0= '#8' ( ruleKW1 )? ( (lv_val_2_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1286:2: (otherlv_0= '#8' ( ruleKW1 )? ( (lv_val_2_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1287:3: otherlv_0= '#8' ( ruleKW1 )? ( (lv_val_2_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,31,FollowSets000.FOLLOW_23); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3896,7 +3749,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_0, grammarAccess.getOptionalSingleTransitionAccess().getNumberSignDigitEightKeyword_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:1386:3: ( ruleKW1 )?
+            // InternalSyntacticSequencerTestLanguage.g:1291:3: ( ruleKW1 )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -3905,7 +3758,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt17) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1387:4: ruleKW1
+                    // InternalSyntacticSequencerTestLanguage.g:1292:4: ruleKW1
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3928,11 +3781,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1395:3: ( (lv_val_2_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:1396:4: (lv_val_2_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1300:3: ( (lv_val_2_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1301:4: (lv_val_2_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1396:4: (lv_val_2_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:1397:5: lv_val_2_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:1301:4: (lv_val_2_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1302:5: lv_val_2_0= RULE_ID
             {
             lv_val_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3964,11 +3817,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -3983,7 +3831,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleOptionalManyTransition"
-    // InternalSyntacticSequencerTestLanguage.g:1417:1: entryRuleOptionalManyTransition returns [EObject current=null] : iv_ruleOptionalManyTransition= ruleOptionalManyTransition EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1322:1: entryRuleOptionalManyTransition returns [EObject current=null] : iv_ruleOptionalManyTransition= ruleOptionalManyTransition EOF ;
     public final EObject entryRuleOptionalManyTransition() throws RecognitionException {
         EObject current = null;
 
@@ -3991,8 +3839,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1417:63: (iv_ruleOptionalManyTransition= ruleOptionalManyTransition EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1418:2: iv_ruleOptionalManyTransition= ruleOptionalManyTransition EOF
+            // InternalSyntacticSequencerTestLanguage.g:1322:63: (iv_ruleOptionalManyTransition= ruleOptionalManyTransition EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1323:2: iv_ruleOptionalManyTransition= ruleOptionalManyTransition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOptionalManyTransitionRule()); 
@@ -4023,22 +3871,19 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleOptionalManyTransition"
-    // InternalSyntacticSequencerTestLanguage.g:1424:1: ruleOptionalManyTransition returns [EObject current=null] : (otherlv_0= '#9' ( ruleKW1 )* ( (lv_val_2_0= RULE_ID ) ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1329:1: ruleOptionalManyTransition returns [EObject current=null] : (otherlv_0= '#9' ( ruleKW1 )* ( (lv_val_2_0= RULE_ID ) ) ) ;
     public final EObject ruleOptionalManyTransition() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_val_2_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1430:2: ( (otherlv_0= '#9' ( ruleKW1 )* ( (lv_val_2_0= RULE_ID ) ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1431:2: (otherlv_0= '#9' ( ruleKW1 )* ( (lv_val_2_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1330:1: ( (otherlv_0= '#9' ( ruleKW1 )* ( (lv_val_2_0= RULE_ID ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1331:2: (otherlv_0= '#9' ( ruleKW1 )* ( (lv_val_2_0= RULE_ID ) ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1431:2: (otherlv_0= '#9' ( ruleKW1 )* ( (lv_val_2_0= RULE_ID ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1432:3: otherlv_0= '#9' ( ruleKW1 )* ( (lv_val_2_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1331:2: (otherlv_0= '#9' ( ruleKW1 )* ( (lv_val_2_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1332:3: otherlv_0= '#9' ( ruleKW1 )* ( (lv_val_2_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,32,FollowSets000.FOLLOW_23); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4046,7 +3891,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_0, grammarAccess.getOptionalManyTransitionAccess().getNumberSignDigitNineKeyword_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:1436:3: ( ruleKW1 )*
+            // InternalSyntacticSequencerTestLanguage.g:1336:3: ( ruleKW1 )*
             loop18:
             do {
                 int alt18=2;
@@ -4059,7 +3904,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
                 switch (alt18) {
             	case 1 :
-            	    // InternalSyntacticSequencerTestLanguage.g:1437:4: ruleKW1
+            	    // InternalSyntacticSequencerTestLanguage.g:1337:4: ruleKW1
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -4085,11 +3930,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                 }
             } while (true);
 
-            // InternalSyntacticSequencerTestLanguage.g:1445:3: ( (lv_val_2_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:1446:4: (lv_val_2_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1345:3: ( (lv_val_2_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1346:4: (lv_val_2_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1446:4: (lv_val_2_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:1447:5: lv_val_2_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:1346:4: (lv_val_2_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1347:5: lv_val_2_0= RULE_ID
             {
             lv_val_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4121,11 +3966,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -4140,7 +3980,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleMandatoryManyTransition"
-    // InternalSyntacticSequencerTestLanguage.g:1467:1: entryRuleMandatoryManyTransition returns [EObject current=null] : iv_ruleMandatoryManyTransition= ruleMandatoryManyTransition EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1367:1: entryRuleMandatoryManyTransition returns [EObject current=null] : iv_ruleMandatoryManyTransition= ruleMandatoryManyTransition EOF ;
     public final EObject entryRuleMandatoryManyTransition() throws RecognitionException {
         EObject current = null;
 
@@ -4148,8 +3988,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1467:64: (iv_ruleMandatoryManyTransition= ruleMandatoryManyTransition EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1468:2: iv_ruleMandatoryManyTransition= ruleMandatoryManyTransition EOF
+            // InternalSyntacticSequencerTestLanguage.g:1367:64: (iv_ruleMandatoryManyTransition= ruleMandatoryManyTransition EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1368:2: iv_ruleMandatoryManyTransition= ruleMandatoryManyTransition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMandatoryManyTransitionRule()); 
@@ -4180,22 +4020,19 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleMandatoryManyTransition"
-    // InternalSyntacticSequencerTestLanguage.g:1474:1: ruleMandatoryManyTransition returns [EObject current=null] : (otherlv_0= '#10' ( ruleKW1 )+ ( (lv_val_2_0= RULE_ID ) ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1374:1: ruleMandatoryManyTransition returns [EObject current=null] : (otherlv_0= '#10' ( ruleKW1 )+ ( (lv_val_2_0= RULE_ID ) ) ) ;
     public final EObject ruleMandatoryManyTransition() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_val_2_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1480:2: ( (otherlv_0= '#10' ( ruleKW1 )+ ( (lv_val_2_0= RULE_ID ) ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1481:2: (otherlv_0= '#10' ( ruleKW1 )+ ( (lv_val_2_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1375:1: ( (otherlv_0= '#10' ( ruleKW1 )+ ( (lv_val_2_0= RULE_ID ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1376:2: (otherlv_0= '#10' ( ruleKW1 )+ ( (lv_val_2_0= RULE_ID ) ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1481:2: (otherlv_0= '#10' ( ruleKW1 )+ ( (lv_val_2_0= RULE_ID ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1482:3: otherlv_0= '#10' ( ruleKW1 )+ ( (lv_val_2_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1376:2: (otherlv_0= '#10' ( ruleKW1 )+ ( (lv_val_2_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1377:3: otherlv_0= '#10' ( ruleKW1 )+ ( (lv_val_2_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,33,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4203,7 +4040,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_0, grammarAccess.getMandatoryManyTransitionAccess().getNumberSignDigitOneDigitZeroKeyword_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:1486:3: ( ruleKW1 )+
+            // InternalSyntacticSequencerTestLanguage.g:1381:3: ( ruleKW1 )+
             int cnt19=0;
             loop19:
             do {
@@ -4217,7 +4054,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
                 switch (alt19) {
             	case 1 :
-            	    // InternalSyntacticSequencerTestLanguage.g:1487:4: ruleKW1
+            	    // InternalSyntacticSequencerTestLanguage.g:1382:4: ruleKW1
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -4248,11 +4085,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                 cnt19++;
             } while (true);
 
-            // InternalSyntacticSequencerTestLanguage.g:1495:3: ( (lv_val_2_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:1496:4: (lv_val_2_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1390:3: ( (lv_val_2_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1391:4: (lv_val_2_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1496:4: (lv_val_2_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:1497:5: lv_val_2_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:1391:4: (lv_val_2_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1392:5: lv_val_2_0= RULE_ID
             {
             lv_val_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4284,11 +4121,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -4303,7 +4135,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleAlternativeTransition"
-    // InternalSyntacticSequencerTestLanguage.g:1517:1: entryRuleAlternativeTransition returns [EObject current=null] : iv_ruleAlternativeTransition= ruleAlternativeTransition EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1412:1: entryRuleAlternativeTransition returns [EObject current=null] : iv_ruleAlternativeTransition= ruleAlternativeTransition EOF ;
     public final EObject entryRuleAlternativeTransition() throws RecognitionException {
         EObject current = null;
 
@@ -4311,8 +4143,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1517:62: (iv_ruleAlternativeTransition= ruleAlternativeTransition EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1518:2: iv_ruleAlternativeTransition= ruleAlternativeTransition EOF
+            // InternalSyntacticSequencerTestLanguage.g:1412:62: (iv_ruleAlternativeTransition= ruleAlternativeTransition EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1413:2: iv_ruleAlternativeTransition= ruleAlternativeTransition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAlternativeTransitionRule()); 
@@ -4343,7 +4175,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleAlternativeTransition"
-    // InternalSyntacticSequencerTestLanguage.g:1524:1: ruleAlternativeTransition returns [EObject current=null] : (otherlv_0= '#11' ( ruleKW1 | otherlv_2= 'kw2' ) ( (lv_val_3_0= RULE_ID ) ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1419:1: ruleAlternativeTransition returns [EObject current=null] : (otherlv_0= '#11' ( ruleKW1 | otherlv_2= 'kw2' ) ( (lv_val_3_0= RULE_ID ) ) ) ;
     public final EObject ruleAlternativeTransition() throws RecognitionException {
         EObject current = null;
 
@@ -4351,15 +4183,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         Token otherlv_2=null;
         Token lv_val_3_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1530:2: ( (otherlv_0= '#11' ( ruleKW1 | otherlv_2= 'kw2' ) ( (lv_val_3_0= RULE_ID ) ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1531:2: (otherlv_0= '#11' ( ruleKW1 | otherlv_2= 'kw2' ) ( (lv_val_3_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1420:1: ( (otherlv_0= '#11' ( ruleKW1 | otherlv_2= 'kw2' ) ( (lv_val_3_0= RULE_ID ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1421:2: (otherlv_0= '#11' ( ruleKW1 | otherlv_2= 'kw2' ) ( (lv_val_3_0= RULE_ID ) ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1531:2: (otherlv_0= '#11' ( ruleKW1 | otherlv_2= 'kw2' ) ( (lv_val_3_0= RULE_ID ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1532:3: otherlv_0= '#11' ( ruleKW1 | otherlv_2= 'kw2' ) ( (lv_val_3_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1421:2: (otherlv_0= '#11' ( ruleKW1 | otherlv_2= 'kw2' ) ( (lv_val_3_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1422:3: otherlv_0= '#11' ( ruleKW1 | otherlv_2= 'kw2' ) ( (lv_val_3_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,34,FollowSets000.FOLLOW_24); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4367,7 +4196,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_0, grammarAccess.getAlternativeTransitionAccess().getNumberSignDigitOneDigitOneKeyword_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:1536:3: ( ruleKW1 | otherlv_2= 'kw2' )
+            // InternalSyntacticSequencerTestLanguage.g:1426:3: ( ruleKW1 | otherlv_2= 'kw2' )
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -4386,7 +4215,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt20) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1537:4: ruleKW1
+                    // InternalSyntacticSequencerTestLanguage.g:1427:4: ruleKW1
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4407,7 +4236,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 2 :
-                    // InternalSyntacticSequencerTestLanguage.g:1545:4: otherlv_2= 'kw2'
+                    // InternalSyntacticSequencerTestLanguage.g:1435:4: otherlv_2= 'kw2'
                     {
                     otherlv_2=(Token)match(input,16,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4421,11 +4250,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1550:3: ( (lv_val_3_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:1551:4: (lv_val_3_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1440:3: ( (lv_val_3_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1441:4: (lv_val_3_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1551:4: (lv_val_3_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:1552:5: lv_val_3_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:1441:4: (lv_val_3_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1442:5: lv_val_3_0= RULE_ID
             {
             lv_val_3_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4457,11 +4286,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -4476,7 +4300,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleBooleanDatatypeID"
-    // InternalSyntacticSequencerTestLanguage.g:1572:1: entryRuleBooleanDatatypeID returns [String current=null] : iv_ruleBooleanDatatypeID= ruleBooleanDatatypeID EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1462:1: entryRuleBooleanDatatypeID returns [String current=null] : iv_ruleBooleanDatatypeID= ruleBooleanDatatypeID EOF ;
     public final String entryRuleBooleanDatatypeID() throws RecognitionException {
         String current = null;
 
@@ -4484,8 +4308,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1572:57: (iv_ruleBooleanDatatypeID= ruleBooleanDatatypeID EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1573:2: iv_ruleBooleanDatatypeID= ruleBooleanDatatypeID EOF
+            // InternalSyntacticSequencerTestLanguage.g:1462:57: (iv_ruleBooleanDatatypeID= ruleBooleanDatatypeID EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1463:2: iv_ruleBooleanDatatypeID= ruleBooleanDatatypeID EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBooleanDatatypeIDRule()); 
@@ -4516,18 +4340,15 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleBooleanDatatypeID"
-    // InternalSyntacticSequencerTestLanguage.g:1579:1: ruleBooleanDatatypeID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
+    // InternalSyntacticSequencerTestLanguage.g:1469:1: ruleBooleanDatatypeID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
     public final AntlrDatatypeRuleToken ruleBooleanDatatypeID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_ID_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1585:2: (this_ID_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:1586:2: this_ID_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:1470:1: (this_ID_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1471:2: this_ID_0= RULE_ID
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4543,11 +4364,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -4562,7 +4378,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleBooleanValues"
-    // InternalSyntacticSequencerTestLanguage.g:1596:1: entryRuleBooleanValues returns [EObject current=null] : iv_ruleBooleanValues= ruleBooleanValues EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1481:1: entryRuleBooleanValues returns [EObject current=null] : iv_ruleBooleanValues= ruleBooleanValues EOF ;
     public final EObject entryRuleBooleanValues() throws RecognitionException {
         EObject current = null;
 
@@ -4570,8 +4386,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1596:54: (iv_ruleBooleanValues= ruleBooleanValues EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1597:2: iv_ruleBooleanValues= ruleBooleanValues EOF
+            // InternalSyntacticSequencerTestLanguage.g:1481:54: (iv_ruleBooleanValues= ruleBooleanValues EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1482:2: iv_ruleBooleanValues= ruleBooleanValues EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBooleanValuesRule()); 
@@ -4602,7 +4418,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleBooleanValues"
-    // InternalSyntacticSequencerTestLanguage.g:1603:1: ruleBooleanValues returns [EObject current=null] : ( () otherlv_1= '#12' ( (lv_val1_2_0= 'kw1' ) )? ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )? ( (lv_val3_4_0= ruleBooleanDatatypeID ) )? ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1488:1: ruleBooleanValues returns [EObject current=null] : ( () otherlv_1= '#12' ( (lv_val1_2_0= 'kw1' ) )? ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )? ( (lv_val3_4_0= ruleBooleanDatatypeID ) )? ) ;
     public final EObject ruleBooleanValues() throws RecognitionException {
         EObject current = null;
 
@@ -4612,18 +4428,15 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         AntlrDatatypeRuleToken lv_val3_4_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1609:2: ( ( () otherlv_1= '#12' ( (lv_val1_2_0= 'kw1' ) )? ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )? ( (lv_val3_4_0= ruleBooleanDatatypeID ) )? ) )
-            // InternalSyntacticSequencerTestLanguage.g:1610:2: ( () otherlv_1= '#12' ( (lv_val1_2_0= 'kw1' ) )? ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )? ( (lv_val3_4_0= ruleBooleanDatatypeID ) )? )
+            // InternalSyntacticSequencerTestLanguage.g:1489:1: ( ( () otherlv_1= '#12' ( (lv_val1_2_0= 'kw1' ) )? ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )? ( (lv_val3_4_0= ruleBooleanDatatypeID ) )? ) )
+            // InternalSyntacticSequencerTestLanguage.g:1490:2: ( () otherlv_1= '#12' ( (lv_val1_2_0= 'kw1' ) )? ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )? ( (lv_val3_4_0= ruleBooleanDatatypeID ) )? )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1610:2: ( () otherlv_1= '#12' ( (lv_val1_2_0= 'kw1' ) )? ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )? ( (lv_val3_4_0= ruleBooleanDatatypeID ) )? )
-            // InternalSyntacticSequencerTestLanguage.g:1611:3: () otherlv_1= '#12' ( (lv_val1_2_0= 'kw1' ) )? ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )? ( (lv_val3_4_0= ruleBooleanDatatypeID ) )?
+            // InternalSyntacticSequencerTestLanguage.g:1490:2: ( () otherlv_1= '#12' ( (lv_val1_2_0= 'kw1' ) )? ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )? ( (lv_val3_4_0= ruleBooleanDatatypeID ) )? )
+            // InternalSyntacticSequencerTestLanguage.g:1491:3: () otherlv_1= '#12' ( (lv_val1_2_0= 'kw1' ) )? ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )? ( (lv_val3_4_0= ruleBooleanDatatypeID ) )?
             {
-            // InternalSyntacticSequencerTestLanguage.g:1611:3: ()
-            // InternalSyntacticSequencerTestLanguage.g:1612:4: 
+            // InternalSyntacticSequencerTestLanguage.g:1491:3: ()
+            // InternalSyntacticSequencerTestLanguage.g:1492:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -4641,7 +4454,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_1, grammarAccess.getBooleanValuesAccess().getNumberSignDigitOneDigitTwoKeyword_1());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:1622:3: ( (lv_val1_2_0= 'kw1' ) )?
+            // InternalSyntacticSequencerTestLanguage.g:1502:3: ( (lv_val1_2_0= 'kw1' ) )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -4650,10 +4463,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt21) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1623:4: (lv_val1_2_0= 'kw1' )
+                    // InternalSyntacticSequencerTestLanguage.g:1503:4: (lv_val1_2_0= 'kw1' )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:1623:4: (lv_val1_2_0= 'kw1' )
-                    // InternalSyntacticSequencerTestLanguage.g:1624:5: lv_val1_2_0= 'kw1'
+                    // InternalSyntacticSequencerTestLanguage.g:1503:4: (lv_val1_2_0= 'kw1' )
+                    // InternalSyntacticSequencerTestLanguage.g:1504:5: lv_val1_2_0= 'kw1'
                     {
                     lv_val1_2_0=(Token)match(input,15,FollowSets000.FOLLOW_26); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4678,7 +4491,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1636:3: ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )?
+            // InternalSyntacticSequencerTestLanguage.g:1516:3: ( (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID ) )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -4687,10 +4500,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt22) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1637:4: (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:1517:4: (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:1637:4: (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID )
-                    // InternalSyntacticSequencerTestLanguage.g:1638:5: lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID
+                    // InternalSyntacticSequencerTestLanguage.g:1517:4: (lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID )
+                    // InternalSyntacticSequencerTestLanguage.g:1518:5: lv_val2_3_0= RULE_BOOLEAN_TERMINAL_ID
                     {
                     lv_val2_3_0=(Token)match(input,RULE_BOOLEAN_TERMINAL_ID,FollowSets000.FOLLOW_27); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4719,7 +4532,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1654:3: ( (lv_val3_4_0= ruleBooleanDatatypeID ) )?
+            // InternalSyntacticSequencerTestLanguage.g:1534:3: ( (lv_val3_4_0= ruleBooleanDatatypeID ) )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -4728,10 +4541,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt23) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1655:4: (lv_val3_4_0= ruleBooleanDatatypeID )
+                    // InternalSyntacticSequencerTestLanguage.g:1535:4: (lv_val3_4_0= ruleBooleanDatatypeID )
                     {
-                    // InternalSyntacticSequencerTestLanguage.g:1655:4: (lv_val3_4_0= ruleBooleanDatatypeID )
-                    // InternalSyntacticSequencerTestLanguage.g:1656:5: lv_val3_4_0= ruleBooleanDatatypeID
+                    // InternalSyntacticSequencerTestLanguage.g:1535:4: (lv_val3_4_0= ruleBooleanDatatypeID )
+                    // InternalSyntacticSequencerTestLanguage.g:1536:5: lv_val3_4_0= ruleBooleanDatatypeID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4771,11 +4584,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -4790,7 +4598,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleLongAlternative"
-    // InternalSyntacticSequencerTestLanguage.g:1677:1: entryRuleLongAlternative returns [EObject current=null] : iv_ruleLongAlternative= ruleLongAlternative EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1557:1: entryRuleLongAlternative returns [EObject current=null] : iv_ruleLongAlternative= ruleLongAlternative EOF ;
     public final EObject entryRuleLongAlternative() throws RecognitionException {
         EObject current = null;
 
@@ -4798,8 +4606,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1677:56: (iv_ruleLongAlternative= ruleLongAlternative EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1678:2: iv_ruleLongAlternative= ruleLongAlternative EOF
+            // InternalSyntacticSequencerTestLanguage.g:1557:56: (iv_ruleLongAlternative= ruleLongAlternative EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1558:2: iv_ruleLongAlternative= ruleLongAlternative EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLongAlternativeRule()); 
@@ -4830,7 +4638,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleLongAlternative"
-    // InternalSyntacticSequencerTestLanguage.g:1684:1: ruleLongAlternative returns [EObject current=null] : (otherlv_0= '#13' ( (lv_foo_1_0= RULE_ID ) ) ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )* otherlv_18= '!' ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1564:1: ruleLongAlternative returns [EObject current=null] : (otherlv_0= '#13' ( (lv_foo_1_0= RULE_ID ) ) ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )* otherlv_18= '!' ) ;
     public final EObject ruleLongAlternative() throws RecognitionException {
         EObject current = null;
 
@@ -4854,15 +4662,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         Token lv_val8_17_0=null;
         Token otherlv_18=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1690:2: ( (otherlv_0= '#13' ( (lv_foo_1_0= RULE_ID ) ) ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )* otherlv_18= '!' ) )
-            // InternalSyntacticSequencerTestLanguage.g:1691:2: (otherlv_0= '#13' ( (lv_foo_1_0= RULE_ID ) ) ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )* otherlv_18= '!' )
+            // InternalSyntacticSequencerTestLanguage.g:1565:1: ( (otherlv_0= '#13' ( (lv_foo_1_0= RULE_ID ) ) ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )* otherlv_18= '!' ) )
+            // InternalSyntacticSequencerTestLanguage.g:1566:2: (otherlv_0= '#13' ( (lv_foo_1_0= RULE_ID ) ) ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )* otherlv_18= '!' )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1691:2: (otherlv_0= '#13' ( (lv_foo_1_0= RULE_ID ) ) ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )* otherlv_18= '!' )
-            // InternalSyntacticSequencerTestLanguage.g:1692:3: otherlv_0= '#13' ( (lv_foo_1_0= RULE_ID ) ) ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )* otherlv_18= '!'
+            // InternalSyntacticSequencerTestLanguage.g:1566:2: (otherlv_0= '#13' ( (lv_foo_1_0= RULE_ID ) ) ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )* otherlv_18= '!' )
+            // InternalSyntacticSequencerTestLanguage.g:1567:3: otherlv_0= '#13' ( (lv_foo_1_0= RULE_ID ) ) ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )* otherlv_18= '!'
             {
             otherlv_0=(Token)match(input,36,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4870,11 +4675,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_0, grammarAccess.getLongAlternativeAccess().getNumberSignDigitOneDigitThreeKeyword_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:1696:3: ( (lv_foo_1_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:1697:4: (lv_foo_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1571:3: ( (lv_foo_1_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1572:4: (lv_foo_1_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1697:4: (lv_foo_1_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:1698:5: lv_foo_1_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:1572:4: (lv_foo_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1573:5: lv_foo_1_0= RULE_ID
             {
             lv_foo_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_28); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4900,7 +4705,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1714:3: ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )*
+            // InternalSyntacticSequencerTestLanguage.g:1589:3: ( (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? ) | (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? ) | (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? ) | (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? ) | (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? ) | (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? ) | (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? ) | (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? ) )*
             loop32:
             do {
                 int alt32=9;
@@ -4950,10 +4755,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
                 switch (alt32) {
             	case 1 :
-            	    // InternalSyntacticSequencerTestLanguage.g:1715:4: (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1590:4: (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:1715:4: (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? )
-            	    // InternalSyntacticSequencerTestLanguage.g:1716:5: otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1590:4: (otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1591:5: otherlv_2= 'kw1' ( (lv_val1_3_0= RULE_ID ) )?
             	    {
             	    otherlv_2=(Token)match(input,15,FollowSets000.FOLLOW_29); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -4961,7 +4766,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      					newLeafNode(otherlv_2, grammarAccess.getLongAlternativeAccess().getKw1Keyword_2_0_0());
             	      				
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:1720:5: ( (lv_val1_3_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1595:5: ( (lv_val1_3_0= RULE_ID ) )?
             	    int alt24=2;
             	    int LA24_0 = input.LA(1);
 
@@ -4970,10 +4775,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    switch (alt24) {
             	        case 1 :
-            	            // InternalSyntacticSequencerTestLanguage.g:1721:6: (lv_val1_3_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1596:6: (lv_val1_3_0= RULE_ID )
             	            {
-            	            // InternalSyntacticSequencerTestLanguage.g:1721:6: (lv_val1_3_0= RULE_ID )
-            	            // InternalSyntacticSequencerTestLanguage.g:1722:7: lv_val1_3_0= RULE_ID
+            	            // InternalSyntacticSequencerTestLanguage.g:1596:6: (lv_val1_3_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1597:7: lv_val1_3_0= RULE_ID
             	            {
             	            lv_val1_3_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_28); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -5009,10 +4814,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    break;
             	case 2 :
-            	    // InternalSyntacticSequencerTestLanguage.g:1740:4: (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1615:4: (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:1740:4: (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? )
-            	    // InternalSyntacticSequencerTestLanguage.g:1741:5: otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1615:4: (otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1616:5: otherlv_4= 'kw2' ( (lv_val2_5_0= RULE_ID ) )?
             	    {
             	    otherlv_4=(Token)match(input,16,FollowSets000.FOLLOW_29); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -5020,7 +4825,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      					newLeafNode(otherlv_4, grammarAccess.getLongAlternativeAccess().getKw2Keyword_2_1_0());
             	      				
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:1745:5: ( (lv_val2_5_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1620:5: ( (lv_val2_5_0= RULE_ID ) )?
             	    int alt25=2;
             	    int LA25_0 = input.LA(1);
 
@@ -5029,10 +4834,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    switch (alt25) {
             	        case 1 :
-            	            // InternalSyntacticSequencerTestLanguage.g:1746:6: (lv_val2_5_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1621:6: (lv_val2_5_0= RULE_ID )
             	            {
-            	            // InternalSyntacticSequencerTestLanguage.g:1746:6: (lv_val2_5_0= RULE_ID )
-            	            // InternalSyntacticSequencerTestLanguage.g:1747:7: lv_val2_5_0= RULE_ID
+            	            // InternalSyntacticSequencerTestLanguage.g:1621:6: (lv_val2_5_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1622:7: lv_val2_5_0= RULE_ID
             	            {
             	            lv_val2_5_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_28); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -5068,10 +4873,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    break;
             	case 3 :
-            	    // InternalSyntacticSequencerTestLanguage.g:1765:4: (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1640:4: (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:1765:4: (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? )
-            	    // InternalSyntacticSequencerTestLanguage.g:1766:5: otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1640:4: (otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1641:5: otherlv_6= 'kw3' ( (lv_val3_7_0= RULE_ID ) )?
             	    {
             	    otherlv_6=(Token)match(input,17,FollowSets000.FOLLOW_29); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -5079,7 +4884,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      					newLeafNode(otherlv_6, grammarAccess.getLongAlternativeAccess().getKw3Keyword_2_2_0());
             	      				
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:1770:5: ( (lv_val3_7_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1645:5: ( (lv_val3_7_0= RULE_ID ) )?
             	    int alt26=2;
             	    int LA26_0 = input.LA(1);
 
@@ -5088,10 +4893,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    switch (alt26) {
             	        case 1 :
-            	            // InternalSyntacticSequencerTestLanguage.g:1771:6: (lv_val3_7_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1646:6: (lv_val3_7_0= RULE_ID )
             	            {
-            	            // InternalSyntacticSequencerTestLanguage.g:1771:6: (lv_val3_7_0= RULE_ID )
-            	            // InternalSyntacticSequencerTestLanguage.g:1772:7: lv_val3_7_0= RULE_ID
+            	            // InternalSyntacticSequencerTestLanguage.g:1646:6: (lv_val3_7_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1647:7: lv_val3_7_0= RULE_ID
             	            {
             	            lv_val3_7_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_28); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -5127,10 +4932,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    break;
             	case 4 :
-            	    // InternalSyntacticSequencerTestLanguage.g:1790:4: (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1665:4: (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:1790:4: (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? )
-            	    // InternalSyntacticSequencerTestLanguage.g:1791:5: otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1665:4: (otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1666:5: otherlv_8= 'kw4' ( (lv_val4_9_0= RULE_ID ) )?
             	    {
             	    otherlv_8=(Token)match(input,18,FollowSets000.FOLLOW_29); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -5138,7 +4943,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      					newLeafNode(otherlv_8, grammarAccess.getLongAlternativeAccess().getKw4Keyword_2_3_0());
             	      				
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:1795:5: ( (lv_val4_9_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1670:5: ( (lv_val4_9_0= RULE_ID ) )?
             	    int alt27=2;
             	    int LA27_0 = input.LA(1);
 
@@ -5147,10 +4952,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    switch (alt27) {
             	        case 1 :
-            	            // InternalSyntacticSequencerTestLanguage.g:1796:6: (lv_val4_9_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1671:6: (lv_val4_9_0= RULE_ID )
             	            {
-            	            // InternalSyntacticSequencerTestLanguage.g:1796:6: (lv_val4_9_0= RULE_ID )
-            	            // InternalSyntacticSequencerTestLanguage.g:1797:7: lv_val4_9_0= RULE_ID
+            	            // InternalSyntacticSequencerTestLanguage.g:1671:6: (lv_val4_9_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1672:7: lv_val4_9_0= RULE_ID
             	            {
             	            lv_val4_9_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_28); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -5186,10 +4991,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    break;
             	case 5 :
-            	    // InternalSyntacticSequencerTestLanguage.g:1815:4: (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1690:4: (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:1815:4: (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? )
-            	    // InternalSyntacticSequencerTestLanguage.g:1816:5: otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1690:4: (otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1691:5: otherlv_10= 'kw5' ( (lv_val5_11_0= RULE_ID ) )?
             	    {
             	    otherlv_10=(Token)match(input,27,FollowSets000.FOLLOW_29); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -5197,7 +5002,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      					newLeafNode(otherlv_10, grammarAccess.getLongAlternativeAccess().getKw5Keyword_2_4_0());
             	      				
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:1820:5: ( (lv_val5_11_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1695:5: ( (lv_val5_11_0= RULE_ID ) )?
             	    int alt28=2;
             	    int LA28_0 = input.LA(1);
 
@@ -5206,10 +5011,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    switch (alt28) {
             	        case 1 :
-            	            // InternalSyntacticSequencerTestLanguage.g:1821:6: (lv_val5_11_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1696:6: (lv_val5_11_0= RULE_ID )
             	            {
-            	            // InternalSyntacticSequencerTestLanguage.g:1821:6: (lv_val5_11_0= RULE_ID )
-            	            // InternalSyntacticSequencerTestLanguage.g:1822:7: lv_val5_11_0= RULE_ID
+            	            // InternalSyntacticSequencerTestLanguage.g:1696:6: (lv_val5_11_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1697:7: lv_val5_11_0= RULE_ID
             	            {
             	            lv_val5_11_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_28); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -5245,10 +5050,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    break;
             	case 6 :
-            	    // InternalSyntacticSequencerTestLanguage.g:1840:4: (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1715:4: (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:1840:4: (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? )
-            	    // InternalSyntacticSequencerTestLanguage.g:1841:5: otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1715:4: (otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1716:5: otherlv_12= 'kw6' ( (lv_val6_13_0= RULE_ID ) )?
             	    {
             	    otherlv_12=(Token)match(input,37,FollowSets000.FOLLOW_29); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -5256,7 +5061,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      					newLeafNode(otherlv_12, grammarAccess.getLongAlternativeAccess().getKw6Keyword_2_5_0());
             	      				
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:1845:5: ( (lv_val6_13_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1720:5: ( (lv_val6_13_0= RULE_ID ) )?
             	    int alt29=2;
             	    int LA29_0 = input.LA(1);
 
@@ -5265,10 +5070,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    switch (alt29) {
             	        case 1 :
-            	            // InternalSyntacticSequencerTestLanguage.g:1846:6: (lv_val6_13_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1721:6: (lv_val6_13_0= RULE_ID )
             	            {
-            	            // InternalSyntacticSequencerTestLanguage.g:1846:6: (lv_val6_13_0= RULE_ID )
-            	            // InternalSyntacticSequencerTestLanguage.g:1847:7: lv_val6_13_0= RULE_ID
+            	            // InternalSyntacticSequencerTestLanguage.g:1721:6: (lv_val6_13_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1722:7: lv_val6_13_0= RULE_ID
             	            {
             	            lv_val6_13_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_28); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -5304,10 +5109,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    break;
             	case 7 :
-            	    // InternalSyntacticSequencerTestLanguage.g:1865:4: (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1740:4: (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:1865:4: (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? )
-            	    // InternalSyntacticSequencerTestLanguage.g:1866:5: otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1740:4: (otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1741:5: otherlv_14= 'kw7' ( (lv_val7_15_0= RULE_ID ) )?
             	    {
             	    otherlv_14=(Token)match(input,38,FollowSets000.FOLLOW_29); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -5315,7 +5120,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      					newLeafNode(otherlv_14, grammarAccess.getLongAlternativeAccess().getKw7Keyword_2_6_0());
             	      				
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:1870:5: ( (lv_val7_15_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1745:5: ( (lv_val7_15_0= RULE_ID ) )?
             	    int alt30=2;
             	    int LA30_0 = input.LA(1);
 
@@ -5324,10 +5129,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    switch (alt30) {
             	        case 1 :
-            	            // InternalSyntacticSequencerTestLanguage.g:1871:6: (lv_val7_15_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1746:6: (lv_val7_15_0= RULE_ID )
             	            {
-            	            // InternalSyntacticSequencerTestLanguage.g:1871:6: (lv_val7_15_0= RULE_ID )
-            	            // InternalSyntacticSequencerTestLanguage.g:1872:7: lv_val7_15_0= RULE_ID
+            	            // InternalSyntacticSequencerTestLanguage.g:1746:6: (lv_val7_15_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1747:7: lv_val7_15_0= RULE_ID
             	            {
             	            lv_val7_15_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_28); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -5363,10 +5168,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    break;
             	case 8 :
-            	    // InternalSyntacticSequencerTestLanguage.g:1890:4: (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1765:4: (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? )
             	    {
-            	    // InternalSyntacticSequencerTestLanguage.g:1890:4: (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? )
-            	    // InternalSyntacticSequencerTestLanguage.g:1891:5: otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1765:4: (otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )? )
+            	    // InternalSyntacticSequencerTestLanguage.g:1766:5: otherlv_16= 'kw8' ( (lv_val8_17_0= RULE_ID ) )?
             	    {
             	    otherlv_16=(Token)match(input,39,FollowSets000.FOLLOW_29); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -5374,7 +5179,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	      					newLeafNode(otherlv_16, grammarAccess.getLongAlternativeAccess().getKw8Keyword_2_7_0());
             	      				
             	    }
-            	    // InternalSyntacticSequencerTestLanguage.g:1895:5: ( (lv_val8_17_0= RULE_ID ) )?
+            	    // InternalSyntacticSequencerTestLanguage.g:1770:5: ( (lv_val8_17_0= RULE_ID ) )?
             	    int alt31=2;
             	    int LA31_0 = input.LA(1);
 
@@ -5383,10 +5188,10 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             	    }
             	    switch (alt31) {
             	        case 1 :
-            	            // InternalSyntacticSequencerTestLanguage.g:1896:6: (lv_val8_17_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1771:6: (lv_val8_17_0= RULE_ID )
             	            {
-            	            // InternalSyntacticSequencerTestLanguage.g:1896:6: (lv_val8_17_0= RULE_ID )
-            	            // InternalSyntacticSequencerTestLanguage.g:1897:7: lv_val8_17_0= RULE_ID
+            	            // InternalSyntacticSequencerTestLanguage.g:1771:6: (lv_val8_17_0= RULE_ID )
+            	            // InternalSyntacticSequencerTestLanguage.g:1772:7: lv_val8_17_0= RULE_ID
             	            {
             	            lv_val8_17_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_28); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -5439,11 +5244,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -5458,7 +5258,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleActionOnly"
-    // InternalSyntacticSequencerTestLanguage.g:1923:1: entryRuleActionOnly returns [EObject current=null] : iv_ruleActionOnly= ruleActionOnly EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1798:1: entryRuleActionOnly returns [EObject current=null] : iv_ruleActionOnly= ruleActionOnly EOF ;
     public final EObject entryRuleActionOnly() throws RecognitionException {
         EObject current = null;
 
@@ -5466,8 +5266,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1923:51: (iv_ruleActionOnly= ruleActionOnly EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1924:2: iv_ruleActionOnly= ruleActionOnly EOF
+            // InternalSyntacticSequencerTestLanguage.g:1798:51: (iv_ruleActionOnly= ruleActionOnly EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1799:2: iv_ruleActionOnly= ruleActionOnly EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getActionOnlyRule()); 
@@ -5498,7 +5298,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleActionOnly"
-    // InternalSyntacticSequencerTestLanguage.g:1930:1: ruleActionOnly returns [EObject current=null] : (otherlv_0= '#14' (otherlv_1= 'kw1' )? ( ( RULE_ID )=>this_ID_2= RULE_ID )? () (otherlv_4= 'kw2' )? (this_ID_5= RULE_ID )? ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1805:1: ruleActionOnly returns [EObject current=null] : (otherlv_0= '#14' (otherlv_1= 'kw1' )? ( ( RULE_ID )=>this_ID_2= RULE_ID )? () (otherlv_4= 'kw2' )? (this_ID_5= RULE_ID )? ) ;
     public final EObject ruleActionOnly() throws RecognitionException {
         EObject current = null;
 
@@ -5508,15 +5308,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         Token otherlv_4=null;
         Token this_ID_5=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1936:2: ( (otherlv_0= '#14' (otherlv_1= 'kw1' )? ( ( RULE_ID )=>this_ID_2= RULE_ID )? () (otherlv_4= 'kw2' )? (this_ID_5= RULE_ID )? ) )
-            // InternalSyntacticSequencerTestLanguage.g:1937:2: (otherlv_0= '#14' (otherlv_1= 'kw1' )? ( ( RULE_ID )=>this_ID_2= RULE_ID )? () (otherlv_4= 'kw2' )? (this_ID_5= RULE_ID )? )
+            // InternalSyntacticSequencerTestLanguage.g:1806:1: ( (otherlv_0= '#14' (otherlv_1= 'kw1' )? ( ( RULE_ID )=>this_ID_2= RULE_ID )? () (otherlv_4= 'kw2' )? (this_ID_5= RULE_ID )? ) )
+            // InternalSyntacticSequencerTestLanguage.g:1807:2: (otherlv_0= '#14' (otherlv_1= 'kw1' )? ( ( RULE_ID )=>this_ID_2= RULE_ID )? () (otherlv_4= 'kw2' )? (this_ID_5= RULE_ID )? )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1937:2: (otherlv_0= '#14' (otherlv_1= 'kw1' )? ( ( RULE_ID )=>this_ID_2= RULE_ID )? () (otherlv_4= 'kw2' )? (this_ID_5= RULE_ID )? )
-            // InternalSyntacticSequencerTestLanguage.g:1938:3: otherlv_0= '#14' (otherlv_1= 'kw1' )? ( ( RULE_ID )=>this_ID_2= RULE_ID )? () (otherlv_4= 'kw2' )? (this_ID_5= RULE_ID )?
+            // InternalSyntacticSequencerTestLanguage.g:1807:2: (otherlv_0= '#14' (otherlv_1= 'kw1' )? ( ( RULE_ID )=>this_ID_2= RULE_ID )? () (otherlv_4= 'kw2' )? (this_ID_5= RULE_ID )? )
+            // InternalSyntacticSequencerTestLanguage.g:1808:3: otherlv_0= '#14' (otherlv_1= 'kw1' )? ( ( RULE_ID )=>this_ID_2= RULE_ID )? () (otherlv_4= 'kw2' )? (this_ID_5= RULE_ID )?
             {
             otherlv_0=(Token)match(input,41,FollowSets000.FOLLOW_30); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5524,7 +5321,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_0, grammarAccess.getActionOnlyAccess().getNumberSignDigitOneDigitFourKeyword_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:1942:3: (otherlv_1= 'kw1' )?
+            // InternalSyntacticSequencerTestLanguage.g:1812:3: (otherlv_1= 'kw1' )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -5533,7 +5330,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt33) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1943:4: otherlv_1= 'kw1'
+                    // InternalSyntacticSequencerTestLanguage.g:1813:4: otherlv_1= 'kw1'
                     {
                     otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_31); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5547,7 +5344,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1948:3: ( ( RULE_ID )=>this_ID_2= RULE_ID )?
+            // InternalSyntacticSequencerTestLanguage.g:1818:3: ( ( RULE_ID )=>this_ID_2= RULE_ID )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -5560,7 +5357,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt34) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1949:4: ( RULE_ID )=>this_ID_2= RULE_ID
+                    // InternalSyntacticSequencerTestLanguage.g:1819:4: ( RULE_ID )=>this_ID_2= RULE_ID
                     {
                     this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_31); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5574,8 +5371,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1955:3: ()
-            // InternalSyntacticSequencerTestLanguage.g:1956:4: 
+            // InternalSyntacticSequencerTestLanguage.g:1825:3: ()
+            // InternalSyntacticSequencerTestLanguage.g:1826:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -5587,7 +5384,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1962:3: (otherlv_4= 'kw2' )?
+            // InternalSyntacticSequencerTestLanguage.g:1832:3: (otherlv_4= 'kw2' )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -5596,7 +5393,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt35) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1963:4: otherlv_4= 'kw2'
+                    // InternalSyntacticSequencerTestLanguage.g:1833:4: otherlv_4= 'kw2'
                     {
                     otherlv_4=(Token)match(input,16,FollowSets000.FOLLOW_27); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5610,7 +5407,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSyntacticSequencerTestLanguage.g:1968:3: (this_ID_5= RULE_ID )?
+            // InternalSyntacticSequencerTestLanguage.g:1838:3: (this_ID_5= RULE_ID )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -5619,7 +5416,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
             }
             switch (alt36) {
                 case 1 :
-                    // InternalSyntacticSequencerTestLanguage.g:1969:4: this_ID_5= RULE_ID
+                    // InternalSyntacticSequencerTestLanguage.g:1839:4: this_ID_5= RULE_ID
                     {
                     this_ID_5=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -5639,11 +5436,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -5658,7 +5450,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleFragmentCaller"
-    // InternalSyntacticSequencerTestLanguage.g:1978:1: entryRuleFragmentCaller returns [EObject current=null] : iv_ruleFragmentCaller= ruleFragmentCaller EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1848:1: entryRuleFragmentCaller returns [EObject current=null] : iv_ruleFragmentCaller= ruleFragmentCaller EOF ;
     public final EObject entryRuleFragmentCaller() throws RecognitionException {
         EObject current = null;
 
@@ -5666,8 +5458,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1978:55: (iv_ruleFragmentCaller= ruleFragmentCaller EOF )
-            // InternalSyntacticSequencerTestLanguage.g:1979:2: iv_ruleFragmentCaller= ruleFragmentCaller EOF
+            // InternalSyntacticSequencerTestLanguage.g:1848:55: (iv_ruleFragmentCaller= ruleFragmentCaller EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1849:2: iv_ruleFragmentCaller= ruleFragmentCaller EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFragmentCallerRule()); 
@@ -5698,7 +5490,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleFragmentCaller"
-    // InternalSyntacticSequencerTestLanguage.g:1985:1: ruleFragmentCaller returns [EObject current=null] : (otherlv_0= '#15' ( (lv_val1_1_0= RULE_ID ) ) this_Fragment1_2= ruleFragment1[$current] ( (lv_val_3_0= RULE_ID ) ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1855:1: ruleFragmentCaller returns [EObject current=null] : (otherlv_0= '#15' ( (lv_val1_1_0= RULE_ID ) ) this_Fragment1_2= ruleFragment1[$current] ( (lv_val_3_0= RULE_ID ) ) ) ;
     public final EObject ruleFragmentCaller() throws RecognitionException {
         EObject current = null;
 
@@ -5708,15 +5500,12 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
         EObject this_Fragment1_2 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:1991:2: ( (otherlv_0= '#15' ( (lv_val1_1_0= RULE_ID ) ) this_Fragment1_2= ruleFragment1[$current] ( (lv_val_3_0= RULE_ID ) ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1992:2: (otherlv_0= '#15' ( (lv_val1_1_0= RULE_ID ) ) this_Fragment1_2= ruleFragment1[$current] ( (lv_val_3_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1856:1: ( (otherlv_0= '#15' ( (lv_val1_1_0= RULE_ID ) ) this_Fragment1_2= ruleFragment1[$current] ( (lv_val_3_0= RULE_ID ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1857:2: (otherlv_0= '#15' ( (lv_val1_1_0= RULE_ID ) ) this_Fragment1_2= ruleFragment1[$current] ( (lv_val_3_0= RULE_ID ) ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1992:2: (otherlv_0= '#15' ( (lv_val1_1_0= RULE_ID ) ) this_Fragment1_2= ruleFragment1[$current] ( (lv_val_3_0= RULE_ID ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:1993:3: otherlv_0= '#15' ( (lv_val1_1_0= RULE_ID ) ) this_Fragment1_2= ruleFragment1[$current] ( (lv_val_3_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1857:2: (otherlv_0= '#15' ( (lv_val1_1_0= RULE_ID ) ) this_Fragment1_2= ruleFragment1[$current] ( (lv_val_3_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1858:3: otherlv_0= '#15' ( (lv_val1_1_0= RULE_ID ) ) this_Fragment1_2= ruleFragment1[$current] ( (lv_val_3_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,42,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5724,11 +5513,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(otherlv_0, grammarAccess.getFragmentCallerAccess().getNumberSignDigitOneDigitFiveKeyword_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:1997:3: ( (lv_val1_1_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:1998:4: (lv_val1_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1862:3: ( (lv_val1_1_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1863:4: (lv_val1_1_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:1998:4: (lv_val1_1_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:1999:5: lv_val1_1_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:1863:4: (lv_val1_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1864:5: lv_val1_1_0= RULE_ID
             {
             lv_val1_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5773,11 +5562,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:2026:3: ( (lv_val_3_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:2027:4: (lv_val_3_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1891:3: ( (lv_val_3_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1892:4: (lv_val_3_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:2027:4: (lv_val_3_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:2028:5: lv_val_3_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:1892:4: (lv_val_3_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1893:5: lv_val_3_0= RULE_ID
             {
             lv_val_3_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5809,11 +5598,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -5828,24 +5612,21 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleFragment1"
-    // InternalSyntacticSequencerTestLanguage.g:2049:1: ruleFragment1[EObject in_current] returns [EObject current=in_current] : ( (lv_fragVal_0_0= RULE_ID ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1914:1: ruleFragment1[EObject in_current] returns [EObject current=in_current] : ( (lv_fragVal_0_0= RULE_ID ) ) ;
     public final EObject ruleFragment1(EObject in_current) throws RecognitionException {
         EObject current = in_current;
 
         Token lv_fragVal_0_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:2055:2: ( ( (lv_fragVal_0_0= RULE_ID ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:2056:2: ( (lv_fragVal_0_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1915:1: ( ( (lv_fragVal_0_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1916:2: ( (lv_fragVal_0_0= RULE_ID ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:2056:2: ( (lv_fragVal_0_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:2057:3: (lv_fragVal_0_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1916:2: ( (lv_fragVal_0_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1917:3: (lv_fragVal_0_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:2057:3: (lv_fragVal_0_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:2058:4: lv_fragVal_0_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:1917:3: (lv_fragVal_0_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1918:4: lv_fragVal_0_0= RULE_ID
             {
             lv_fragVal_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5874,11 +5655,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -5893,7 +5669,7 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleBug398890"
-    // InternalSyntacticSequencerTestLanguage.g:2077:1: entryRuleBug398890 returns [EObject current=null] : iv_ruleBug398890= ruleBug398890 EOF ;
+    // InternalSyntacticSequencerTestLanguage.g:1937:1: entryRuleBug398890 returns [EObject current=null] : iv_ruleBug398890= ruleBug398890 EOF ;
     public final EObject entryRuleBug398890() throws RecognitionException {
         EObject current = null;
 
@@ -5901,8 +5677,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSyntacticSequencerTestLanguage.g:2077:50: (iv_ruleBug398890= ruleBug398890 EOF )
-            // InternalSyntacticSequencerTestLanguage.g:2078:2: iv_ruleBug398890= ruleBug398890 EOF
+            // InternalSyntacticSequencerTestLanguage.g:1937:50: (iv_ruleBug398890= ruleBug398890 EOF )
+            // InternalSyntacticSequencerTestLanguage.g:1938:2: iv_ruleBug398890= ruleBug398890 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBug398890Rule()); 
@@ -5933,22 +5709,19 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleBug398890"
-    // InternalSyntacticSequencerTestLanguage.g:2084:1: ruleBug398890 returns [EObject current=null] : (this_C_COMMENT_END_0= RULE_C_COMMENT_END ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalSyntacticSequencerTestLanguage.g:1944:1: ruleBug398890 returns [EObject current=null] : (this_C_COMMENT_END_0= RULE_C_COMMENT_END ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleBug398890() throws RecognitionException {
         EObject current = null;
 
         Token this_C_COMMENT_END_0=null;
         Token lv_name_1_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSyntacticSequencerTestLanguage.g:2090:2: ( (this_C_COMMENT_END_0= RULE_C_COMMENT_END ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:2091:2: (this_C_COMMENT_END_0= RULE_C_COMMENT_END ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1945:1: ( (this_C_COMMENT_END_0= RULE_C_COMMENT_END ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1946:2: (this_C_COMMENT_END_0= RULE_C_COMMENT_END ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalSyntacticSequencerTestLanguage.g:2091:2: (this_C_COMMENT_END_0= RULE_C_COMMENT_END ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalSyntacticSequencerTestLanguage.g:2092:3: this_C_COMMENT_END_0= RULE_C_COMMENT_END ( (lv_name_1_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1946:2: (this_C_COMMENT_END_0= RULE_C_COMMENT_END ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalSyntacticSequencerTestLanguage.g:1947:3: this_C_COMMENT_END_0= RULE_C_COMMENT_END ( (lv_name_1_0= RULE_ID ) )
             {
             this_C_COMMENT_END_0=(Token)match(input,RULE_C_COMMENT_END,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5956,11 +5729,11 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
               			newLeafNode(this_C_COMMENT_END_0, grammarAccess.getBug398890Access().getC_COMMENT_ENDTerminalRuleCall_0());
               		
             }
-            // InternalSyntacticSequencerTestLanguage.g:2096:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalSyntacticSequencerTestLanguage.g:2097:4: (lv_name_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1951:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalSyntacticSequencerTestLanguage.g:1952:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalSyntacticSequencerTestLanguage.g:2097:4: (lv_name_1_0= RULE_ID )
-            // InternalSyntacticSequencerTestLanguage.g:2098:5: lv_name_1_0= RULE_ID
+            // InternalSyntacticSequencerTestLanguage.g:1952:4: (lv_name_1_0= RULE_ID )
+            // InternalSyntacticSequencerTestLanguage.g:1953:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -5992,11 +5765,6 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -6011,8 +5779,8 @@ public class InternalSyntacticSequencerTestLanguageParser extends AbstractIntern
 
     // $ANTLR start synpred1_InternalSyntacticSequencerTestLanguage
     public final void synpred1_InternalSyntacticSequencerTestLanguage_fragment() throws RecognitionException {   
-        // InternalSyntacticSequencerTestLanguage.g:1949:4: ( RULE_ID )
-        // InternalSyntacticSequencerTestLanguage.g:1949:5: RULE_ID
+        // InternalSyntacticSequencerTestLanguage.g:1819:4: ( RULE_ID )
+        // InternalSyntacticSequencerTestLanguage.g:1819:5: RULE_ID
         {
         match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return ;
 

@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='model'
 		{
@@ -117,12 +112,7 @@ entryRuleModelFeatures returns [EObject current=null]:
 
 // Rule ModelFeatures
 ruleModelFeatures returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='feature'
 		{
@@ -169,12 +159,7 @@ entryRuleDataTypeRule returns [String current=null]:
 
 // Rule DataTypeRule
 ruleDataTypeRule returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_INT_0=RULE_INT
 		{

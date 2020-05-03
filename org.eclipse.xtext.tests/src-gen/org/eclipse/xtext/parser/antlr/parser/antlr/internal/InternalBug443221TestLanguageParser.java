@@ -128,18 +128,15 @@ public class InternalBug443221TestLanguageParser extends AbstractInternalAntlrPa
         Token otherlv_7=null;
         Token otherlv_8=null;
 
-
-        	enterRule();
-
         try {
-            // InternalBug443221TestLanguage.g:77:2: ( ( () otherlv_1= 'dummy' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '_' otherlv_4= '_dummy_' otherlv_5= '__dummy__' otherlv_6= '$__dummy__' otherlv_7= '$' otherlv_8= 'DollarSign' ) )
-            // InternalBug443221TestLanguage.g:78:2: ( () otherlv_1= 'dummy' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '_' otherlv_4= '_dummy_' otherlv_5= '__dummy__' otherlv_6= '$__dummy__' otherlv_7= '$' otherlv_8= 'DollarSign' )
+            // InternalBug443221TestLanguage.g:72:1: ( ( () otherlv_1= 'dummy' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '_' otherlv_4= '_dummy_' otherlv_5= '__dummy__' otherlv_6= '$__dummy__' otherlv_7= '$' otherlv_8= 'DollarSign' ) )
+            // InternalBug443221TestLanguage.g:73:2: ( () otherlv_1= 'dummy' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '_' otherlv_4= '_dummy_' otherlv_5= '__dummy__' otherlv_6= '$__dummy__' otherlv_7= '$' otherlv_8= 'DollarSign' )
             {
-            // InternalBug443221TestLanguage.g:78:2: ( () otherlv_1= 'dummy' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '_' otherlv_4= '_dummy_' otherlv_5= '__dummy__' otherlv_6= '$__dummy__' otherlv_7= '$' otherlv_8= 'DollarSign' )
-            // InternalBug443221TestLanguage.g:79:3: () otherlv_1= 'dummy' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '_' otherlv_4= '_dummy_' otherlv_5= '__dummy__' otherlv_6= '$__dummy__' otherlv_7= '$' otherlv_8= 'DollarSign'
+            // InternalBug443221TestLanguage.g:73:2: ( () otherlv_1= 'dummy' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '_' otherlv_4= '_dummy_' otherlv_5= '__dummy__' otherlv_6= '$__dummy__' otherlv_7= '$' otherlv_8= 'DollarSign' )
+            // InternalBug443221TestLanguage.g:74:3: () otherlv_1= 'dummy' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '_' otherlv_4= '_dummy_' otherlv_5= '__dummy__' otherlv_6= '$__dummy__' otherlv_7= '$' otherlv_8= 'DollarSign'
             {
-            // InternalBug443221TestLanguage.g:79:3: ()
-            // InternalBug443221TestLanguage.g:80:4: 
+            // InternalBug443221TestLanguage.g:74:3: ()
+            // InternalBug443221TestLanguage.g:75:4: 
             {
 
             				current = forceCreateModelElement(
@@ -153,11 +150,11 @@ public class InternalBug443221TestLanguageParser extends AbstractInternalAntlrPa
 
             			newLeafNode(otherlv_1, grammarAccess.getModelAccess().getDummyKeyword_1());
             		
-            // InternalBug443221TestLanguage.g:90:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalBug443221TestLanguage.g:91:4: (lv_name_2_0= RULE_ID )
+            // InternalBug443221TestLanguage.g:85:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalBug443221TestLanguage.g:86:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalBug443221TestLanguage.g:91:4: (lv_name_2_0= RULE_ID )
-            // InternalBug443221TestLanguage.g:92:5: lv_name_2_0= RULE_ID
+            // InternalBug443221TestLanguage.g:86:4: (lv_name_2_0= RULE_ID )
+            // InternalBug443221TestLanguage.g:87:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_4); 
 
@@ -208,9 +205,6 @@ public class InternalBug443221TestLanguageParser extends AbstractInternalAntlrPa
 
 
             }
-
-
-            	leaveRule();
 
         }
 

@@ -74,12 +74,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='#1'
@@ -328,12 +323,7 @@ entryRuleMandatoryValue returns [EObject current=null]:
 
 // Rule MandatoryValue
 ruleMandatoryValue returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID
@@ -363,12 +353,7 @@ entryRuleOptionalValue returns [EObject current=null]:
 
 // Rule OptionalValue
 ruleOptionalValue returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -419,12 +404,7 @@ entryRuleManyOptionalValues returns [EObject current=null]:
 
 // Rule ManyOptionalValues
 ruleManyOptionalValues returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -463,12 +443,7 @@ entryRuleManyMandatoryValues returns [EObject current=null]:
 
 // Rule ManyMandatoryValues
 ruleManyMandatoryValues returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID
@@ -498,12 +473,7 @@ entryRuleMandatoryChild returns [EObject current=null]:
 
 // Rule MandatoryChild
 ruleMandatoryChild returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -534,12 +504,7 @@ entryRuleOptionalChild returns [EObject current=null]:
 
 // Rule OptionalChild
 ruleOptionalChild returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -579,12 +544,7 @@ entryRuleTwoChildLists returns [EObject current=null]:
 
 // Rule TwoChildLists
 ruleTwoChildLists returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='{'
 		{
@@ -656,12 +616,7 @@ entryRuleTwoChilds returns [EObject current=null]:
 
 // Rule TwoChilds
 ruleTwoChilds returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -736,12 +691,7 @@ entryRuleChildWithSubChilds returns [EObject current=null]:
 
 // Rule ChildWithSubChilds
 ruleChildWithSubChilds returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -781,12 +731,7 @@ entryRuleChildWithSubChild returns [EObject current=null]:
 
 // Rule ChildWithSubChild
 ruleChildWithSubChild returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -830,12 +775,7 @@ entryRuleSubChild returns [EObject current=null]:
 
 // Rule SubChild
 ruleSubChild returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID
@@ -865,12 +805,7 @@ entryRuleMandatoryChildList returns [EObject current=null]:
 
 // Rule MandatoryChildList
 ruleMandatoryChildList returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -901,12 +836,7 @@ entryRuleOptionalChildList returns [EObject current=null]:
 
 // Rule OptionalChildList
 ruleOptionalChildList returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -946,12 +876,7 @@ entryRuleImport returns [EObject current=null]:
 
 // Rule Import
 ruleImport returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='import'
 		{
@@ -988,12 +913,7 @@ entryRuleNode returns [EObject current=null]:
 
 // Rule Node
 ruleNode returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1131,12 +1051,7 @@ entryRuleQualifiedName returns [String current=null]:
 
 // Rule QualifiedName
 ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{
@@ -1171,12 +1086,7 @@ entryRuleEClassDecl returns [EObject current=null]:
 
 // Rule EClassDecl
 ruleEClassDecl returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID
@@ -1206,12 +1116,7 @@ entryRuleEClassRef returns [EObject current=null]:
 
 // Rule EClassRef
 ruleEClassRef returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1239,12 +1144,7 @@ entryRuleWithTransientContainer returns [EObject current=null]:
 
 // Rule WithTransientContainer
 ruleWithTransientContainer returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1275,12 +1175,7 @@ entryRuleWithTransient returns [EObject current=null]:
 
 // Rule WithTransient
 ruleWithTransient returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID

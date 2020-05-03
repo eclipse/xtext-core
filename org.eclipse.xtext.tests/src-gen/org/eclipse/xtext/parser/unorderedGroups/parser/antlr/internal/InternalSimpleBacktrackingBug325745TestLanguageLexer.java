@@ -166,10 +166,10 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:581:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:581:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:553:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:553:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:581:11: ( '^' )?
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:553:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -178,7 +178,7 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
             }
             switch (alt1) {
                 case 1 :
-                    // InternalSimpleBacktrackingBug325745TestLanguage.g:581:11: '^'
+                    // InternalSimpleBacktrackingBug325745TestLanguage.g:553:11: '^'
                     {
                     match('^'); 
 
@@ -196,7 +196,7 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
                 recover(mse);
                 throw mse;}
 
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:581:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:553:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -245,10 +245,10 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:583:10: ( ( '0' .. '9' )+ )
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:583:12: ( '0' .. '9' )+
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:555:10: ( ( '0' .. '9' )+ )
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:555:12: ( '0' .. '9' )+
             {
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:583:12: ( '0' .. '9' )+
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:555:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -262,7 +262,7 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalSimpleBacktrackingBug325745TestLanguage.g:583:13: '0' .. '9'
+            	    // InternalSimpleBacktrackingBug325745TestLanguage.g:555:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -294,10 +294,10 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:585:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:585:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:557:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:557:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:585:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:557:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -315,10 +315,10 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
             }
             switch (alt6) {
                 case 1 :
-                    // InternalSimpleBacktrackingBug325745TestLanguage.g:585:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalSimpleBacktrackingBug325745TestLanguage.g:557:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalSimpleBacktrackingBug325745TestLanguage.g:585:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalSimpleBacktrackingBug325745TestLanguage.g:557:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -334,7 +334,7 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalSimpleBacktrackingBug325745TestLanguage.g:585:21: '\\\\' .
+                    	    // InternalSimpleBacktrackingBug325745TestLanguage.g:557:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -342,7 +342,7 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalSimpleBacktrackingBug325745TestLanguage.g:585:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalSimpleBacktrackingBug325745TestLanguage.g:557:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -367,10 +367,10 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
                     }
                     break;
                 case 2 :
-                    // InternalSimpleBacktrackingBug325745TestLanguage.g:585:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalSimpleBacktrackingBug325745TestLanguage.g:557:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalSimpleBacktrackingBug325745TestLanguage.g:585:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalSimpleBacktrackingBug325745TestLanguage.g:557:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -386,7 +386,7 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalSimpleBacktrackingBug325745TestLanguage.g:585:54: '\\\\' .
+                    	    // InternalSimpleBacktrackingBug325745TestLanguage.g:557:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -394,7 +394,7 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalSimpleBacktrackingBug325745TestLanguage.g:585:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalSimpleBacktrackingBug325745TestLanguage.g:557:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -437,12 +437,12 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:587:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:587:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:559:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:559:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:587:24: ( options {greedy=false; } : . )*
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:559:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -467,7 +467,7 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalSimpleBacktrackingBug325745TestLanguage.g:587:52: .
+            	    // InternalSimpleBacktrackingBug325745TestLanguage.g:559:52: .
             	    {
             	    matchAny(); 
 
@@ -497,12 +497,12 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:589:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:589:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:561:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:561:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:589:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:561:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -515,7 +515,7 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalSimpleBacktrackingBug325745TestLanguage.g:589:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalSimpleBacktrackingBug325745TestLanguage.g:561:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -535,7 +535,7 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
                 }
             } while (true);
 
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:589:40: ( ( '\\r' )? '\\n' )?
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:561:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -544,9 +544,9 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
             }
             switch (alt10) {
                 case 1 :
-                    // InternalSimpleBacktrackingBug325745TestLanguage.g:589:41: ( '\\r' )? '\\n'
+                    // InternalSimpleBacktrackingBug325745TestLanguage.g:561:41: ( '\\r' )? '\\n'
                     {
-                    // InternalSimpleBacktrackingBug325745TestLanguage.g:589:41: ( '\\r' )?
+                    // InternalSimpleBacktrackingBug325745TestLanguage.g:561:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -555,7 +555,7 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalSimpleBacktrackingBug325745TestLanguage.g:589:41: '\\r'
+                            // InternalSimpleBacktrackingBug325745TestLanguage.g:561:41: '\\r'
                             {
                             match('\r'); 
 
@@ -587,10 +587,10 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:591:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:591:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:563:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:563:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:591:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:563:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -644,8 +644,8 @@ public class InternalSimpleBacktrackingBug325745TestLanguageLexer extends Lexer 
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:593:16: ( . )
-            // InternalSimpleBacktrackingBug325745TestLanguage.g:593:18: .
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:565:16: ( . )
+            // InternalSimpleBacktrackingBug325745TestLanguage.g:565:18: .
             {
             matchAny(); 
 

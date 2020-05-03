@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -105,12 +100,7 @@ entryRuleAbstractString returns [EObject current=null]:
 
 // Rule AbstractString
 ruleAbstractString returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getAbstractStringAccess().getGStringParserRuleCall_0());
@@ -141,12 +131,7 @@ entryRuleGString returns [EObject current=null]:
 
 // Rule GString
 ruleGString returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_GERMAN_STRING
@@ -176,12 +161,7 @@ entryRuleQuotedString returns [EObject current=null]:
 
 // Rule QuotedString
 ruleQuotedString returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_STRING

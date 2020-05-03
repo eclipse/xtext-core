@@ -69,12 +69,7 @@ entryRuleSecond returns [EObject current=null]:
 
 // Rule Second
 ruleSecond returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(

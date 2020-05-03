@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1374,12 +1369,7 @@ entryRuleNestedModel returns [EObject current=null]:
 
 // Rule NestedModel
 ruleNestedModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1465,12 +1455,7 @@ entryRuleUnorderedDatatype returns [String current=null]:
 
 // Rule UnorderedDatatype
 ruleUnorderedDatatype returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			kw='1'
@@ -2441,12 +2426,7 @@ entryRuleUnorderedSerialization returns [EObject current=null]:
 
 // Rule UnorderedSerialization
 ruleUnorderedSerialization returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{

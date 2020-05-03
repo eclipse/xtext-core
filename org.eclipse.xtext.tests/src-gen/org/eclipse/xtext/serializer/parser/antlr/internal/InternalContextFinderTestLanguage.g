@@ -70,12 +70,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='#0'
@@ -502,12 +497,7 @@ entryRuleModel2 returns [EObject current=null]:
 
 // Rule Model2
 ruleModel2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -532,12 +522,7 @@ entryRuleAttributeExclusionTest1 returns [EObject current=null]:
 
 // Rule AttributeExclusionTest1
 ruleAttributeExclusionTest1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='kw1'
 		{
@@ -573,12 +558,7 @@ entryRuleAttributeExclusionTest2 returns [EObject current=null]:
 
 // Rule AttributeExclusionTest2
 ruleAttributeExclusionTest2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='kw2'
 		{
@@ -614,12 +594,7 @@ entryRuleNestedTypeTest1 returns [EObject current=null]:
 
 // Rule NestedTypeTest1
 ruleNestedTypeTest1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -650,12 +625,7 @@ entryRuleNestedTypeTest2 returns [EObject current=null]:
 
 // Rule NestedTypeTest2
 ruleNestedTypeTest2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -686,12 +656,7 @@ entryRuleNestedTypeChild1 returns [EObject current=null]:
 
 // Rule NestedTypeChild1
 ruleNestedTypeChild1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='kw1'
 		{
@@ -727,12 +692,7 @@ entryRuleNestedTypeChild2 returns [EObject current=null]:
 
 // Rule NestedTypeChild2
 ruleNestedTypeChild2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='kw2'
 		{
@@ -768,12 +728,7 @@ entryRuleNestedTypeRecursiveTest1 returns [EObject current=null]:
 
 // Rule NestedTypeRecursiveTest1
 ruleNestedTypeRecursiveTest1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -811,12 +766,7 @@ entryRuleNestedTypeRecursiveTest2 returns [EObject current=null]:
 
 // Rule NestedTypeRecursiveTest2
 ruleNestedTypeRecursiveTest2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -854,12 +804,7 @@ entryRuleParentRefTest1 returns [EObject current=null]:
 
 // Rule ParentRefTest1
 ruleParentRefTest1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='kw1'
 		{
@@ -896,12 +841,7 @@ entryRuleParentRefTest2 returns [EObject current=null]:
 
 // Rule ParentRefTest2
 ruleParentRefTest2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='kw2'
 		{
@@ -938,12 +878,7 @@ entryRuleParentRefTestChild1 returns [EObject current=null]:
 
 // Rule ParentRefTestChild1
 ruleParentRefTestChild1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -987,12 +922,7 @@ entryRuleParentRefTestChild2 returns [EObject current=null]:
 
 // Rule ParentRefTestChild2
 ruleParentRefTestChild2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1036,12 +966,7 @@ entryRuleQuantityExclusionTest1 returns [EObject current=null]:
 
 // Rule QuantityExclusionTest1
 ruleQuantityExclusionTest1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='kw1'
 		{
@@ -1095,12 +1020,7 @@ entryRuleQuantityExclusionTest2 returns [EObject current=null]:
 
 // Rule QuantityExclusionTest2
 ruleQuantityExclusionTest2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='kw2'
 		{
@@ -1154,12 +1074,7 @@ entryRuleValueExclusionTest1 returns [EObject current=null]:
 
 // Rule ValueExclusionTest1
 ruleValueExclusionTest1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1190,12 +1105,7 @@ entryRuleValueExclusionTest2 returns [EObject current=null]:
 
 // Rule ValueExclusionTest2
 ruleValueExclusionTest2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1226,12 +1136,7 @@ entryRuleNodeExclusion1 returns [EObject current=null]:
 
 // Rule NodeExclusion1
 ruleNodeExclusion1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1256,12 +1161,7 @@ entryRuleNodeExclusion2 returns [EObject current=null]:
 
 // Rule NodeExclusion2
 ruleNodeExclusion2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1286,12 +1186,7 @@ entryRuleNodeExclusion1List returns [EObject current=null]:
 
 // Rule NodeExclusion1List
 ruleNodeExclusion1List returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1316,12 +1211,7 @@ entryRuleNodeExclusion2List returns [EObject current=null]:
 
 // Rule NodeExclusion2List
 ruleNodeExclusion2List returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1339,12 +1229,7 @@ ruleNodeExclusion2List returns [EObject current=null]
 
 // Rule ValueExclusionTestEn1
 ruleValueExclusionTestEn1 returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		enumLiteral_0='lit1'
 		{
@@ -1356,12 +1241,7 @@ ruleValueExclusionTestEn1 returns [Enumerator current=null]
 
 // Rule ValueExclusionTestEn2
 ruleValueExclusionTestEn2 returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		enumLiteral_0='lit2'
 		{

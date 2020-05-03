@@ -119,17 +119,14 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
         EObject lv_greetings_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalBug362902.g:77:2: ( ( ( (lv_greetings_0_0= ruleGreeting ) )* otherlv_1= 'favourite' ( ( ruleMyId ) ) ) )
-            // InternalBug362902.g:78:2: ( ( (lv_greetings_0_0= ruleGreeting ) )* otherlv_1= 'favourite' ( ( ruleMyId ) ) )
+            // InternalBug362902.g:72:1: ( ( ( (lv_greetings_0_0= ruleGreeting ) )* otherlv_1= 'favourite' ( ( ruleMyId ) ) ) )
+            // InternalBug362902.g:73:2: ( ( (lv_greetings_0_0= ruleGreeting ) )* otherlv_1= 'favourite' ( ( ruleMyId ) ) )
             {
-            // InternalBug362902.g:78:2: ( ( (lv_greetings_0_0= ruleGreeting ) )* otherlv_1= 'favourite' ( ( ruleMyId ) ) )
-            // InternalBug362902.g:79:3: ( (lv_greetings_0_0= ruleGreeting ) )* otherlv_1= 'favourite' ( ( ruleMyId ) )
+            // InternalBug362902.g:73:2: ( ( (lv_greetings_0_0= ruleGreeting ) )* otherlv_1= 'favourite' ( ( ruleMyId ) ) )
+            // InternalBug362902.g:74:3: ( (lv_greetings_0_0= ruleGreeting ) )* otherlv_1= 'favourite' ( ( ruleMyId ) )
             {
-            // InternalBug362902.g:79:3: ( (lv_greetings_0_0= ruleGreeting ) )*
+            // InternalBug362902.g:74:3: ( (lv_greetings_0_0= ruleGreeting ) )*
             loop1:
             do {
                 int alt1=2;
@@ -142,10 +139,10 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalBug362902.g:80:4: (lv_greetings_0_0= ruleGreeting )
+            	    // InternalBug362902.g:75:4: (lv_greetings_0_0= ruleGreeting )
             	    {
-            	    // InternalBug362902.g:80:4: (lv_greetings_0_0= ruleGreeting )
-            	    // InternalBug362902.g:81:5: lv_greetings_0_0= ruleGreeting
+            	    // InternalBug362902.g:75:4: (lv_greetings_0_0= ruleGreeting )
+            	    // InternalBug362902.g:76:5: lv_greetings_0_0= ruleGreeting
             	    {
 
             	    					newCompositeNode(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0_0());
@@ -182,11 +179,11 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getModelAccess().getFavouriteKeyword_1());
             		
-            // InternalBug362902.g:102:3: ( ( ruleMyId ) )
-            // InternalBug362902.g:103:4: ( ruleMyId )
+            // InternalBug362902.g:97:3: ( ( ruleMyId ) )
+            // InternalBug362902.g:98:4: ( ruleMyId )
             {
-            // InternalBug362902.g:103:4: ( ruleMyId )
-            // InternalBug362902.g:104:5: ruleMyId
+            // InternalBug362902.g:98:4: ( ruleMyId )
+            // InternalBug362902.g:99:5: ruleMyId
             {
 
             					if (current==null) {
@@ -216,9 +213,6 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -233,7 +227,7 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGreeting"
-    // InternalBug362902.g:122:1: entryRuleGreeting returns [EObject current=null] : iv_ruleGreeting= ruleGreeting EOF ;
+    // InternalBug362902.g:117:1: entryRuleGreeting returns [EObject current=null] : iv_ruleGreeting= ruleGreeting EOF ;
     public final EObject entryRuleGreeting() throws RecognitionException {
         EObject current = null;
 
@@ -241,8 +235,8 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBug362902.g:122:49: (iv_ruleGreeting= ruleGreeting EOF )
-            // InternalBug362902.g:123:2: iv_ruleGreeting= ruleGreeting EOF
+            // InternalBug362902.g:117:49: (iv_ruleGreeting= ruleGreeting EOF )
+            // InternalBug362902.g:118:2: iv_ruleGreeting= ruleGreeting EOF
             {
              newCompositeNode(grammarAccess.getGreetingRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -269,7 +263,7 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGreeting"
-    // InternalBug362902.g:129:1: ruleGreeting returns [EObject current=null] : (otherlv_0= 'Hello' ( (lv_name_1_0= ruleMyId ) ) otherlv_2= '!' ) ;
+    // InternalBug362902.g:124:1: ruleGreeting returns [EObject current=null] : (otherlv_0= 'Hello' ( (lv_name_1_0= ruleMyId ) ) otherlv_2= '!' ) ;
     public final EObject ruleGreeting() throws RecognitionException {
         EObject current = null;
 
@@ -278,25 +272,22 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
         AntlrDatatypeRuleToken lv_name_1_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalBug362902.g:135:2: ( (otherlv_0= 'Hello' ( (lv_name_1_0= ruleMyId ) ) otherlv_2= '!' ) )
-            // InternalBug362902.g:136:2: (otherlv_0= 'Hello' ( (lv_name_1_0= ruleMyId ) ) otherlv_2= '!' )
+            // InternalBug362902.g:125:1: ( (otherlv_0= 'Hello' ( (lv_name_1_0= ruleMyId ) ) otherlv_2= '!' ) )
+            // InternalBug362902.g:126:2: (otherlv_0= 'Hello' ( (lv_name_1_0= ruleMyId ) ) otherlv_2= '!' )
             {
-            // InternalBug362902.g:136:2: (otherlv_0= 'Hello' ( (lv_name_1_0= ruleMyId ) ) otherlv_2= '!' )
-            // InternalBug362902.g:137:3: otherlv_0= 'Hello' ( (lv_name_1_0= ruleMyId ) ) otherlv_2= '!'
+            // InternalBug362902.g:126:2: (otherlv_0= 'Hello' ( (lv_name_1_0= ruleMyId ) ) otherlv_2= '!' )
+            // InternalBug362902.g:127:3: otherlv_0= 'Hello' ( (lv_name_1_0= ruleMyId ) ) otherlv_2= '!'
             {
             otherlv_0=(Token)match(input,12,FollowSets000.FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getGreetingAccess().getHelloKeyword_0());
             		
-            // InternalBug362902.g:141:3: ( (lv_name_1_0= ruleMyId ) )
-            // InternalBug362902.g:142:4: (lv_name_1_0= ruleMyId )
+            // InternalBug362902.g:131:3: ( (lv_name_1_0= ruleMyId ) )
+            // InternalBug362902.g:132:4: (lv_name_1_0= ruleMyId )
             {
-            // InternalBug362902.g:142:4: (lv_name_1_0= ruleMyId )
-            // InternalBug362902.g:143:5: lv_name_1_0= ruleMyId
+            // InternalBug362902.g:132:4: (lv_name_1_0= ruleMyId )
+            // InternalBug362902.g:133:5: lv_name_1_0= ruleMyId
             {
 
             					newCompositeNode(grammarAccess.getGreetingAccess().getNameMyIdParserRuleCall_1_0());
@@ -333,9 +324,6 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -350,7 +338,7 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMyId"
-    // InternalBug362902.g:168:1: entryRuleMyId returns [String current=null] : iv_ruleMyId= ruleMyId EOF ;
+    // InternalBug362902.g:158:1: entryRuleMyId returns [String current=null] : iv_ruleMyId= ruleMyId EOF ;
     public final String entryRuleMyId() throws RecognitionException {
         String current = null;
 
@@ -358,8 +346,8 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBug362902.g:168:44: (iv_ruleMyId= ruleMyId EOF )
-            // InternalBug362902.g:169:2: iv_ruleMyId= ruleMyId EOF
+            // InternalBug362902.g:158:44: (iv_ruleMyId= ruleMyId EOF )
+            // InternalBug362902.g:159:2: iv_ruleMyId= ruleMyId EOF
             {
              newCompositeNode(grammarAccess.getMyIdRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -386,18 +374,15 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMyId"
-    // InternalBug362902.g:175:1: ruleMyId returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
+    // InternalBug362902.g:165:1: ruleMyId returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
     public final AntlrDatatypeRuleToken ruleMyId() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_ID_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalBug362902.g:181:2: (this_ID_0= RULE_ID )
-            // InternalBug362902.g:182:2: this_ID_0= RULE_ID
+            // InternalBug362902.g:166:1: (this_ID_0= RULE_ID )
+            // InternalBug362902.g:167:2: this_ID_0= RULE_ID
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -408,9 +393,6 @@ public class InternalBug362902Parser extends AbstractInternalAntlrParser {
             	
 
             }
-
-
-            	leaveRule();
 
         }
 

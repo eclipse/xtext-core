@@ -69,12 +69,7 @@ entryRuleORing returns [EObject current=null]:
 
 // Rule ORing
 ruleORing returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getORingAccess().getValueParserRuleCall_0());
@@ -128,12 +123,7 @@ entryRuleValue returns [EObject current=null]:
 
 // Rule Value
 ruleValue returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_value_0_0='a'

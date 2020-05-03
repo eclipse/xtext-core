@@ -69,12 +69,7 @@ entryRuleNodeList returns [EObject current=null]:
 
 // Rule NodeList
 ruleNodeList returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -132,12 +127,7 @@ entryRuleNode returns [EObject current=null]:
 
 // Rule Node
 ruleNode returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -203,12 +193,7 @@ entryRuleString returns [String current=null]:
 
 // Rule String
 ruleString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_OTHER_0=RULE_OTHER
 		{

@@ -114,18 +114,15 @@ public class InternalLiveContainerBuilderIntegerationTestLanguageParser extends 
 
         Token lv_name_0_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalLiveContainerBuilderIntegerationTestLanguage.g:77:2: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // InternalLiveContainerBuilderIntegerationTestLanguage.g:78:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalLiveContainerBuilderIntegerationTestLanguage.g:72:1: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // InternalLiveContainerBuilderIntegerationTestLanguage.g:73:2: ( (lv_name_0_0= RULE_ID ) )
             {
-            // InternalLiveContainerBuilderIntegerationTestLanguage.g:78:2: ( (lv_name_0_0= RULE_ID ) )
-            // InternalLiveContainerBuilderIntegerationTestLanguage.g:79:3: (lv_name_0_0= RULE_ID )
+            // InternalLiveContainerBuilderIntegerationTestLanguage.g:73:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalLiveContainerBuilderIntegerationTestLanguage.g:74:3: (lv_name_0_0= RULE_ID )
             {
-            // InternalLiveContainerBuilderIntegerationTestLanguage.g:79:3: (lv_name_0_0= RULE_ID )
-            // InternalLiveContainerBuilderIntegerationTestLanguage.g:80:4: lv_name_0_0= RULE_ID
+            // InternalLiveContainerBuilderIntegerationTestLanguage.g:74:3: (lv_name_0_0= RULE_ID )
+            // InternalLiveContainerBuilderIntegerationTestLanguage.g:75:4: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -149,9 +146,6 @@ public class InternalLiveContainerBuilderIntegerationTestLanguageParser extends 
 
 
             }
-
-
-            	leaveRule();
 
         }
 

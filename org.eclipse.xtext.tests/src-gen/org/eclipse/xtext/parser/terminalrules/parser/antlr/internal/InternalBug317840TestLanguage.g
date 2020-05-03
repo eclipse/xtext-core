@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -105,12 +100,7 @@ entryRuleElement returns [EObject current=null]:
 
 // Rule Element
 ruleElement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='element'
 		{
@@ -206,12 +196,7 @@ entryRuleNamed returns [EObject current=null]:
 
 // Rule Named
 ruleNamed returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -248,12 +233,9 @@ finally {
 // Rule NAME
 ruleNAME returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{

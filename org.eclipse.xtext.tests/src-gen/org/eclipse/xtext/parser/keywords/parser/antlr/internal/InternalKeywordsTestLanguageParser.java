@@ -129,14 +129,11 @@ public class InternalKeywordsTestLanguageParser extends AbstractInternalAntlrPar
         Token lv_seventh_6_0=null;
         Token lv_eighth_7_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalKeywordsTestLanguage.g:77:2: ( ( ( (lv_first_0_0= 'foo\\\\bar' ) ) | ( (lv_second_1_0= 'foo\\\\' ) ) | ( (lv_third_2_0= '\\\\bar' ) ) | ( (lv_forth_3_0= '\\\\' ) ) | ( (lv_fifth_4_0= '\"a\"' ) ) | ( (lv_sixth_5_0= '\\'b\\'' ) ) | ( (lv_seventh_6_0= '\\'c\\'' ) ) | ( (lv_eighth_7_0= '\"d\"' ) ) ) )
-            // InternalKeywordsTestLanguage.g:78:2: ( ( (lv_first_0_0= 'foo\\\\bar' ) ) | ( (lv_second_1_0= 'foo\\\\' ) ) | ( (lv_third_2_0= '\\\\bar' ) ) | ( (lv_forth_3_0= '\\\\' ) ) | ( (lv_fifth_4_0= '\"a\"' ) ) | ( (lv_sixth_5_0= '\\'b\\'' ) ) | ( (lv_seventh_6_0= '\\'c\\'' ) ) | ( (lv_eighth_7_0= '\"d\"' ) ) )
+            // InternalKeywordsTestLanguage.g:72:1: ( ( ( (lv_first_0_0= 'foo\\\\bar' ) ) | ( (lv_second_1_0= 'foo\\\\' ) ) | ( (lv_third_2_0= '\\\\bar' ) ) | ( (lv_forth_3_0= '\\\\' ) ) | ( (lv_fifth_4_0= '\"a\"' ) ) | ( (lv_sixth_5_0= '\\'b\\'' ) ) | ( (lv_seventh_6_0= '\\'c\\'' ) ) | ( (lv_eighth_7_0= '\"d\"' ) ) ) )
+            // InternalKeywordsTestLanguage.g:73:2: ( ( (lv_first_0_0= 'foo\\\\bar' ) ) | ( (lv_second_1_0= 'foo\\\\' ) ) | ( (lv_third_2_0= '\\\\bar' ) ) | ( (lv_forth_3_0= '\\\\' ) ) | ( (lv_fifth_4_0= '\"a\"' ) ) | ( (lv_sixth_5_0= '\\'b\\'' ) ) | ( (lv_seventh_6_0= '\\'c\\'' ) ) | ( (lv_eighth_7_0= '\"d\"' ) ) )
             {
-            // InternalKeywordsTestLanguage.g:78:2: ( ( (lv_first_0_0= 'foo\\\\bar' ) ) | ( (lv_second_1_0= 'foo\\\\' ) ) | ( (lv_third_2_0= '\\\\bar' ) ) | ( (lv_forth_3_0= '\\\\' ) ) | ( (lv_fifth_4_0= '\"a\"' ) ) | ( (lv_sixth_5_0= '\\'b\\'' ) ) | ( (lv_seventh_6_0= '\\'c\\'' ) ) | ( (lv_eighth_7_0= '\"d\"' ) ) )
+            // InternalKeywordsTestLanguage.g:73:2: ( ( (lv_first_0_0= 'foo\\\\bar' ) ) | ( (lv_second_1_0= 'foo\\\\' ) ) | ( (lv_third_2_0= '\\\\bar' ) ) | ( (lv_forth_3_0= '\\\\' ) ) | ( (lv_fifth_4_0= '\"a\"' ) ) | ( (lv_sixth_5_0= '\\'b\\'' ) ) | ( (lv_seventh_6_0= '\\'c\\'' ) ) | ( (lv_eighth_7_0= '\"d\"' ) ) )
             int alt1=8;
             switch ( input.LA(1) ) {
             case 11:
@@ -188,13 +185,13 @@ public class InternalKeywordsTestLanguageParser extends AbstractInternalAntlrPar
 
             switch (alt1) {
                 case 1 :
-                    // InternalKeywordsTestLanguage.g:79:3: ( (lv_first_0_0= 'foo\\\\bar' ) )
+                    // InternalKeywordsTestLanguage.g:74:3: ( (lv_first_0_0= 'foo\\\\bar' ) )
                     {
-                    // InternalKeywordsTestLanguage.g:79:3: ( (lv_first_0_0= 'foo\\\\bar' ) )
-                    // InternalKeywordsTestLanguage.g:80:4: (lv_first_0_0= 'foo\\\\bar' )
+                    // InternalKeywordsTestLanguage.g:74:3: ( (lv_first_0_0= 'foo\\\\bar' ) )
+                    // InternalKeywordsTestLanguage.g:75:4: (lv_first_0_0= 'foo\\\\bar' )
                     {
-                    // InternalKeywordsTestLanguage.g:80:4: (lv_first_0_0= 'foo\\\\bar' )
-                    // InternalKeywordsTestLanguage.g:81:5: lv_first_0_0= 'foo\\\\bar'
+                    // InternalKeywordsTestLanguage.g:75:4: (lv_first_0_0= 'foo\\\\bar' )
+                    // InternalKeywordsTestLanguage.g:76:5: lv_first_0_0= 'foo\\\\bar'
                     {
                     lv_first_0_0=(Token)match(input,11,FollowSets000.FOLLOW_2); 
 
@@ -216,13 +213,13 @@ public class InternalKeywordsTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 2 :
-                    // InternalKeywordsTestLanguage.g:94:3: ( (lv_second_1_0= 'foo\\\\' ) )
+                    // InternalKeywordsTestLanguage.g:89:3: ( (lv_second_1_0= 'foo\\\\' ) )
                     {
-                    // InternalKeywordsTestLanguage.g:94:3: ( (lv_second_1_0= 'foo\\\\' ) )
-                    // InternalKeywordsTestLanguage.g:95:4: (lv_second_1_0= 'foo\\\\' )
+                    // InternalKeywordsTestLanguage.g:89:3: ( (lv_second_1_0= 'foo\\\\' ) )
+                    // InternalKeywordsTestLanguage.g:90:4: (lv_second_1_0= 'foo\\\\' )
                     {
-                    // InternalKeywordsTestLanguage.g:95:4: (lv_second_1_0= 'foo\\\\' )
-                    // InternalKeywordsTestLanguage.g:96:5: lv_second_1_0= 'foo\\\\'
+                    // InternalKeywordsTestLanguage.g:90:4: (lv_second_1_0= 'foo\\\\' )
+                    // InternalKeywordsTestLanguage.g:91:5: lv_second_1_0= 'foo\\\\'
                     {
                     lv_second_1_0=(Token)match(input,12,FollowSets000.FOLLOW_2); 
 
@@ -244,13 +241,13 @@ public class InternalKeywordsTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 3 :
-                    // InternalKeywordsTestLanguage.g:109:3: ( (lv_third_2_0= '\\\\bar' ) )
+                    // InternalKeywordsTestLanguage.g:104:3: ( (lv_third_2_0= '\\\\bar' ) )
                     {
-                    // InternalKeywordsTestLanguage.g:109:3: ( (lv_third_2_0= '\\\\bar' ) )
-                    // InternalKeywordsTestLanguage.g:110:4: (lv_third_2_0= '\\\\bar' )
+                    // InternalKeywordsTestLanguage.g:104:3: ( (lv_third_2_0= '\\\\bar' ) )
+                    // InternalKeywordsTestLanguage.g:105:4: (lv_third_2_0= '\\\\bar' )
                     {
-                    // InternalKeywordsTestLanguage.g:110:4: (lv_third_2_0= '\\\\bar' )
-                    // InternalKeywordsTestLanguage.g:111:5: lv_third_2_0= '\\\\bar'
+                    // InternalKeywordsTestLanguage.g:105:4: (lv_third_2_0= '\\\\bar' )
+                    // InternalKeywordsTestLanguage.g:106:5: lv_third_2_0= '\\\\bar'
                     {
                     lv_third_2_0=(Token)match(input,13,FollowSets000.FOLLOW_2); 
 
@@ -272,13 +269,13 @@ public class InternalKeywordsTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 4 :
-                    // InternalKeywordsTestLanguage.g:124:3: ( (lv_forth_3_0= '\\\\' ) )
+                    // InternalKeywordsTestLanguage.g:119:3: ( (lv_forth_3_0= '\\\\' ) )
                     {
-                    // InternalKeywordsTestLanguage.g:124:3: ( (lv_forth_3_0= '\\\\' ) )
-                    // InternalKeywordsTestLanguage.g:125:4: (lv_forth_3_0= '\\\\' )
+                    // InternalKeywordsTestLanguage.g:119:3: ( (lv_forth_3_0= '\\\\' ) )
+                    // InternalKeywordsTestLanguage.g:120:4: (lv_forth_3_0= '\\\\' )
                     {
-                    // InternalKeywordsTestLanguage.g:125:4: (lv_forth_3_0= '\\\\' )
-                    // InternalKeywordsTestLanguage.g:126:5: lv_forth_3_0= '\\\\'
+                    // InternalKeywordsTestLanguage.g:120:4: (lv_forth_3_0= '\\\\' )
+                    // InternalKeywordsTestLanguage.g:121:5: lv_forth_3_0= '\\\\'
                     {
                     lv_forth_3_0=(Token)match(input,14,FollowSets000.FOLLOW_2); 
 
@@ -300,13 +297,13 @@ public class InternalKeywordsTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 5 :
-                    // InternalKeywordsTestLanguage.g:139:3: ( (lv_fifth_4_0= '\"a\"' ) )
+                    // InternalKeywordsTestLanguage.g:134:3: ( (lv_fifth_4_0= '\"a\"' ) )
                     {
-                    // InternalKeywordsTestLanguage.g:139:3: ( (lv_fifth_4_0= '\"a\"' ) )
-                    // InternalKeywordsTestLanguage.g:140:4: (lv_fifth_4_0= '\"a\"' )
+                    // InternalKeywordsTestLanguage.g:134:3: ( (lv_fifth_4_0= '\"a\"' ) )
+                    // InternalKeywordsTestLanguage.g:135:4: (lv_fifth_4_0= '\"a\"' )
                     {
-                    // InternalKeywordsTestLanguage.g:140:4: (lv_fifth_4_0= '\"a\"' )
-                    // InternalKeywordsTestLanguage.g:141:5: lv_fifth_4_0= '\"a\"'
+                    // InternalKeywordsTestLanguage.g:135:4: (lv_fifth_4_0= '\"a\"' )
+                    // InternalKeywordsTestLanguage.g:136:5: lv_fifth_4_0= '\"a\"'
                     {
                     lv_fifth_4_0=(Token)match(input,15,FollowSets000.FOLLOW_2); 
 
@@ -328,13 +325,13 @@ public class InternalKeywordsTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 6 :
-                    // InternalKeywordsTestLanguage.g:154:3: ( (lv_sixth_5_0= '\\'b\\'' ) )
+                    // InternalKeywordsTestLanguage.g:149:3: ( (lv_sixth_5_0= '\\'b\\'' ) )
                     {
-                    // InternalKeywordsTestLanguage.g:154:3: ( (lv_sixth_5_0= '\\'b\\'' ) )
-                    // InternalKeywordsTestLanguage.g:155:4: (lv_sixth_5_0= '\\'b\\'' )
+                    // InternalKeywordsTestLanguage.g:149:3: ( (lv_sixth_5_0= '\\'b\\'' ) )
+                    // InternalKeywordsTestLanguage.g:150:4: (lv_sixth_5_0= '\\'b\\'' )
                     {
-                    // InternalKeywordsTestLanguage.g:155:4: (lv_sixth_5_0= '\\'b\\'' )
-                    // InternalKeywordsTestLanguage.g:156:5: lv_sixth_5_0= '\\'b\\''
+                    // InternalKeywordsTestLanguage.g:150:4: (lv_sixth_5_0= '\\'b\\'' )
+                    // InternalKeywordsTestLanguage.g:151:5: lv_sixth_5_0= '\\'b\\''
                     {
                     lv_sixth_5_0=(Token)match(input,16,FollowSets000.FOLLOW_2); 
 
@@ -356,13 +353,13 @@ public class InternalKeywordsTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 7 :
-                    // InternalKeywordsTestLanguage.g:169:3: ( (lv_seventh_6_0= '\\'c\\'' ) )
+                    // InternalKeywordsTestLanguage.g:164:3: ( (lv_seventh_6_0= '\\'c\\'' ) )
                     {
-                    // InternalKeywordsTestLanguage.g:169:3: ( (lv_seventh_6_0= '\\'c\\'' ) )
-                    // InternalKeywordsTestLanguage.g:170:4: (lv_seventh_6_0= '\\'c\\'' )
+                    // InternalKeywordsTestLanguage.g:164:3: ( (lv_seventh_6_0= '\\'c\\'' ) )
+                    // InternalKeywordsTestLanguage.g:165:4: (lv_seventh_6_0= '\\'c\\'' )
                     {
-                    // InternalKeywordsTestLanguage.g:170:4: (lv_seventh_6_0= '\\'c\\'' )
-                    // InternalKeywordsTestLanguage.g:171:5: lv_seventh_6_0= '\\'c\\''
+                    // InternalKeywordsTestLanguage.g:165:4: (lv_seventh_6_0= '\\'c\\'' )
+                    // InternalKeywordsTestLanguage.g:166:5: lv_seventh_6_0= '\\'c\\''
                     {
                     lv_seventh_6_0=(Token)match(input,17,FollowSets000.FOLLOW_2); 
 
@@ -384,13 +381,13 @@ public class InternalKeywordsTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 8 :
-                    // InternalKeywordsTestLanguage.g:184:3: ( (lv_eighth_7_0= '\"d\"' ) )
+                    // InternalKeywordsTestLanguage.g:179:3: ( (lv_eighth_7_0= '\"d\"' ) )
                     {
-                    // InternalKeywordsTestLanguage.g:184:3: ( (lv_eighth_7_0= '\"d\"' ) )
-                    // InternalKeywordsTestLanguage.g:185:4: (lv_eighth_7_0= '\"d\"' )
+                    // InternalKeywordsTestLanguage.g:179:3: ( (lv_eighth_7_0= '\"d\"' ) )
+                    // InternalKeywordsTestLanguage.g:180:4: (lv_eighth_7_0= '\"d\"' )
                     {
-                    // InternalKeywordsTestLanguage.g:185:4: (lv_eighth_7_0= '\"d\"' )
-                    // InternalKeywordsTestLanguage.g:186:5: lv_eighth_7_0= '\"d\"'
+                    // InternalKeywordsTestLanguage.g:180:4: (lv_eighth_7_0= '\"d\"' )
+                    // InternalKeywordsTestLanguage.g:181:5: lv_eighth_7_0= '\"d\"'
                     {
                     lv_eighth_7_0=(Token)match(input,18,FollowSets000.FOLLOW_2); 
 
@@ -416,9 +413,6 @@ public class InternalKeywordsTestLanguageParser extends AbstractInternalAntlrPar
 
 
             }
-
-
-            	leaveRule();
 
         }
 

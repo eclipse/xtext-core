@@ -141,14 +141,11 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
         EObject lv_familie_7_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalReferenceGrammarTestLanguage.g:77:2: ( (otherlv_0= 'spielplatz' ( (lv_groesse_1_0= RULE_INT ) ) ( (lv_beschreibung_2_0= RULE_STRING ) )? otherlv_3= '{' ( ( (lv_kinder_4_0= ruleKind ) ) | ( (lv_erzieher_5_0= ruleErwachsener ) ) | ( (lv_spielzeuge_6_0= ruleSpielzeug ) ) | ( (lv_familie_7_0= ruleFamilie ) ) )* otherlv_8= '}' )? )
-            // InternalReferenceGrammarTestLanguage.g:78:2: (otherlv_0= 'spielplatz' ( (lv_groesse_1_0= RULE_INT ) ) ( (lv_beschreibung_2_0= RULE_STRING ) )? otherlv_3= '{' ( ( (lv_kinder_4_0= ruleKind ) ) | ( (lv_erzieher_5_0= ruleErwachsener ) ) | ( (lv_spielzeuge_6_0= ruleSpielzeug ) ) | ( (lv_familie_7_0= ruleFamilie ) ) )* otherlv_8= '}' )?
+            // InternalReferenceGrammarTestLanguage.g:72:1: ( (otherlv_0= 'spielplatz' ( (lv_groesse_1_0= RULE_INT ) ) ( (lv_beschreibung_2_0= RULE_STRING ) )? otherlv_3= '{' ( ( (lv_kinder_4_0= ruleKind ) ) | ( (lv_erzieher_5_0= ruleErwachsener ) ) | ( (lv_spielzeuge_6_0= ruleSpielzeug ) ) | ( (lv_familie_7_0= ruleFamilie ) ) )* otherlv_8= '}' )? )
+            // InternalReferenceGrammarTestLanguage.g:73:2: (otherlv_0= 'spielplatz' ( (lv_groesse_1_0= RULE_INT ) ) ( (lv_beschreibung_2_0= RULE_STRING ) )? otherlv_3= '{' ( ( (lv_kinder_4_0= ruleKind ) ) | ( (lv_erzieher_5_0= ruleErwachsener ) ) | ( (lv_spielzeuge_6_0= ruleSpielzeug ) ) | ( (lv_familie_7_0= ruleFamilie ) ) )* otherlv_8= '}' )?
             {
-            // InternalReferenceGrammarTestLanguage.g:78:2: (otherlv_0= 'spielplatz' ( (lv_groesse_1_0= RULE_INT ) ) ( (lv_beschreibung_2_0= RULE_STRING ) )? otherlv_3= '{' ( ( (lv_kinder_4_0= ruleKind ) ) | ( (lv_erzieher_5_0= ruleErwachsener ) ) | ( (lv_spielzeuge_6_0= ruleSpielzeug ) ) | ( (lv_familie_7_0= ruleFamilie ) ) )* otherlv_8= '}' )?
+            // InternalReferenceGrammarTestLanguage.g:73:2: (otherlv_0= 'spielplatz' ( (lv_groesse_1_0= RULE_INT ) ) ( (lv_beschreibung_2_0= RULE_STRING ) )? otherlv_3= '{' ( ( (lv_kinder_4_0= ruleKind ) ) | ( (lv_erzieher_5_0= ruleErwachsener ) ) | ( (lv_spielzeuge_6_0= ruleSpielzeug ) ) | ( (lv_familie_7_0= ruleFamilie ) ) )* otherlv_8= '}' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -157,17 +154,17 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
             }
             switch (alt3) {
                 case 1 :
-                    // InternalReferenceGrammarTestLanguage.g:79:3: otherlv_0= 'spielplatz' ( (lv_groesse_1_0= RULE_INT ) ) ( (lv_beschreibung_2_0= RULE_STRING ) )? otherlv_3= '{' ( ( (lv_kinder_4_0= ruleKind ) ) | ( (lv_erzieher_5_0= ruleErwachsener ) ) | ( (lv_spielzeuge_6_0= ruleSpielzeug ) ) | ( (lv_familie_7_0= ruleFamilie ) ) )* otherlv_8= '}'
+                    // InternalReferenceGrammarTestLanguage.g:74:3: otherlv_0= 'spielplatz' ( (lv_groesse_1_0= RULE_INT ) ) ( (lv_beschreibung_2_0= RULE_STRING ) )? otherlv_3= '{' ( ( (lv_kinder_4_0= ruleKind ) ) | ( (lv_erzieher_5_0= ruleErwachsener ) ) | ( (lv_spielzeuge_6_0= ruleSpielzeug ) ) | ( (lv_familie_7_0= ruleFamilie ) ) )* otherlv_8= '}'
                     {
                     otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_3); 
 
                     			newLeafNode(otherlv_0, grammarAccess.getSpielplatzAccess().getSpielplatzKeyword_0());
                     		
-                    // InternalReferenceGrammarTestLanguage.g:83:3: ( (lv_groesse_1_0= RULE_INT ) )
-                    // InternalReferenceGrammarTestLanguage.g:84:4: (lv_groesse_1_0= RULE_INT )
+                    // InternalReferenceGrammarTestLanguage.g:78:3: ( (lv_groesse_1_0= RULE_INT ) )
+                    // InternalReferenceGrammarTestLanguage.g:79:4: (lv_groesse_1_0= RULE_INT )
                     {
-                    // InternalReferenceGrammarTestLanguage.g:84:4: (lv_groesse_1_0= RULE_INT )
-                    // InternalReferenceGrammarTestLanguage.g:85:5: lv_groesse_1_0= RULE_INT
+                    // InternalReferenceGrammarTestLanguage.g:79:4: (lv_groesse_1_0= RULE_INT )
+                    // InternalReferenceGrammarTestLanguage.g:80:5: lv_groesse_1_0= RULE_INT
                     {
                     lv_groesse_1_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_4); 
 
@@ -189,7 +186,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
                     }
 
-                    // InternalReferenceGrammarTestLanguage.g:101:3: ( (lv_beschreibung_2_0= RULE_STRING ) )?
+                    // InternalReferenceGrammarTestLanguage.g:96:3: ( (lv_beschreibung_2_0= RULE_STRING ) )?
                     int alt1=2;
                     int LA1_0 = input.LA(1);
 
@@ -198,10 +195,10 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
                     }
                     switch (alt1) {
                         case 1 :
-                            // InternalReferenceGrammarTestLanguage.g:102:4: (lv_beschreibung_2_0= RULE_STRING )
+                            // InternalReferenceGrammarTestLanguage.g:97:4: (lv_beschreibung_2_0= RULE_STRING )
                             {
-                            // InternalReferenceGrammarTestLanguage.g:102:4: (lv_beschreibung_2_0= RULE_STRING )
-                            // InternalReferenceGrammarTestLanguage.g:103:5: lv_beschreibung_2_0= RULE_STRING
+                            // InternalReferenceGrammarTestLanguage.g:97:4: (lv_beschreibung_2_0= RULE_STRING )
+                            // InternalReferenceGrammarTestLanguage.g:98:5: lv_beschreibung_2_0= RULE_STRING
                             {
                             lv_beschreibung_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_5); 
 
@@ -230,7 +227,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
                     			newLeafNode(otherlv_3, grammarAccess.getSpielplatzAccess().getLeftCurlyBracketKeyword_3());
                     		
-                    // InternalReferenceGrammarTestLanguage.g:123:3: ( ( (lv_kinder_4_0= ruleKind ) ) | ( (lv_erzieher_5_0= ruleErwachsener ) ) | ( (lv_spielzeuge_6_0= ruleSpielzeug ) ) | ( (lv_familie_7_0= ruleFamilie ) ) )*
+                    // InternalReferenceGrammarTestLanguage.g:118:3: ( ( (lv_kinder_4_0= ruleKind ) ) | ( (lv_erzieher_5_0= ruleErwachsener ) ) | ( (lv_spielzeuge_6_0= ruleSpielzeug ) ) | ( (lv_familie_7_0= ruleFamilie ) ) )*
                     loop2:
                     do {
                         int alt2=5;
@@ -260,13 +257,13 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
                         switch (alt2) {
                     	case 1 :
-                    	    // InternalReferenceGrammarTestLanguage.g:124:4: ( (lv_kinder_4_0= ruleKind ) )
+                    	    // InternalReferenceGrammarTestLanguage.g:119:4: ( (lv_kinder_4_0= ruleKind ) )
                     	    {
-                    	    // InternalReferenceGrammarTestLanguage.g:124:4: ( (lv_kinder_4_0= ruleKind ) )
-                    	    // InternalReferenceGrammarTestLanguage.g:125:5: (lv_kinder_4_0= ruleKind )
+                    	    // InternalReferenceGrammarTestLanguage.g:119:4: ( (lv_kinder_4_0= ruleKind ) )
+                    	    // InternalReferenceGrammarTestLanguage.g:120:5: (lv_kinder_4_0= ruleKind )
                     	    {
-                    	    // InternalReferenceGrammarTestLanguage.g:125:5: (lv_kinder_4_0= ruleKind )
-                    	    // InternalReferenceGrammarTestLanguage.g:126:6: lv_kinder_4_0= ruleKind
+                    	    // InternalReferenceGrammarTestLanguage.g:120:5: (lv_kinder_4_0= ruleKind )
+                    	    // InternalReferenceGrammarTestLanguage.g:121:6: lv_kinder_4_0= ruleKind
                     	    {
 
                     	    						newCompositeNode(grammarAccess.getSpielplatzAccess().getKinderKindParserRuleCall_4_0_0());
@@ -297,13 +294,13 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalReferenceGrammarTestLanguage.g:144:4: ( (lv_erzieher_5_0= ruleErwachsener ) )
+                    	    // InternalReferenceGrammarTestLanguage.g:139:4: ( (lv_erzieher_5_0= ruleErwachsener ) )
                     	    {
-                    	    // InternalReferenceGrammarTestLanguage.g:144:4: ( (lv_erzieher_5_0= ruleErwachsener ) )
-                    	    // InternalReferenceGrammarTestLanguage.g:145:5: (lv_erzieher_5_0= ruleErwachsener )
+                    	    // InternalReferenceGrammarTestLanguage.g:139:4: ( (lv_erzieher_5_0= ruleErwachsener ) )
+                    	    // InternalReferenceGrammarTestLanguage.g:140:5: (lv_erzieher_5_0= ruleErwachsener )
                     	    {
-                    	    // InternalReferenceGrammarTestLanguage.g:145:5: (lv_erzieher_5_0= ruleErwachsener )
-                    	    // InternalReferenceGrammarTestLanguage.g:146:6: lv_erzieher_5_0= ruleErwachsener
+                    	    // InternalReferenceGrammarTestLanguage.g:140:5: (lv_erzieher_5_0= ruleErwachsener )
+                    	    // InternalReferenceGrammarTestLanguage.g:141:6: lv_erzieher_5_0= ruleErwachsener
                     	    {
 
                     	    						newCompositeNode(grammarAccess.getSpielplatzAccess().getErzieherErwachsenerParserRuleCall_4_1_0());
@@ -334,13 +331,13 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
                     	    }
                     	    break;
                     	case 3 :
-                    	    // InternalReferenceGrammarTestLanguage.g:164:4: ( (lv_spielzeuge_6_0= ruleSpielzeug ) )
+                    	    // InternalReferenceGrammarTestLanguage.g:159:4: ( (lv_spielzeuge_6_0= ruleSpielzeug ) )
                     	    {
-                    	    // InternalReferenceGrammarTestLanguage.g:164:4: ( (lv_spielzeuge_6_0= ruleSpielzeug ) )
-                    	    // InternalReferenceGrammarTestLanguage.g:165:5: (lv_spielzeuge_6_0= ruleSpielzeug )
+                    	    // InternalReferenceGrammarTestLanguage.g:159:4: ( (lv_spielzeuge_6_0= ruleSpielzeug ) )
+                    	    // InternalReferenceGrammarTestLanguage.g:160:5: (lv_spielzeuge_6_0= ruleSpielzeug )
                     	    {
-                    	    // InternalReferenceGrammarTestLanguage.g:165:5: (lv_spielzeuge_6_0= ruleSpielzeug )
-                    	    // InternalReferenceGrammarTestLanguage.g:166:6: lv_spielzeuge_6_0= ruleSpielzeug
+                    	    // InternalReferenceGrammarTestLanguage.g:160:5: (lv_spielzeuge_6_0= ruleSpielzeug )
+                    	    // InternalReferenceGrammarTestLanguage.g:161:6: lv_spielzeuge_6_0= ruleSpielzeug
                     	    {
 
                     	    						newCompositeNode(grammarAccess.getSpielplatzAccess().getSpielzeugeSpielzeugParserRuleCall_4_2_0());
@@ -371,13 +368,13 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
                     	    }
                     	    break;
                     	case 4 :
-                    	    // InternalReferenceGrammarTestLanguage.g:184:4: ( (lv_familie_7_0= ruleFamilie ) )
+                    	    // InternalReferenceGrammarTestLanguage.g:179:4: ( (lv_familie_7_0= ruleFamilie ) )
                     	    {
-                    	    // InternalReferenceGrammarTestLanguage.g:184:4: ( (lv_familie_7_0= ruleFamilie ) )
-                    	    // InternalReferenceGrammarTestLanguage.g:185:5: (lv_familie_7_0= ruleFamilie )
+                    	    // InternalReferenceGrammarTestLanguage.g:179:4: ( (lv_familie_7_0= ruleFamilie ) )
+                    	    // InternalReferenceGrammarTestLanguage.g:180:5: (lv_familie_7_0= ruleFamilie )
                     	    {
-                    	    // InternalReferenceGrammarTestLanguage.g:185:5: (lv_familie_7_0= ruleFamilie )
-                    	    // InternalReferenceGrammarTestLanguage.g:186:6: lv_familie_7_0= ruleFamilie
+                    	    // InternalReferenceGrammarTestLanguage.g:180:5: (lv_familie_7_0= ruleFamilie )
+                    	    // InternalReferenceGrammarTestLanguage.g:181:6: lv_familie_7_0= ruleFamilie
                     	    {
 
                     	    						newCompositeNode(grammarAccess.getSpielplatzAccess().getFamilieFamilieParserRuleCall_4_3_0());
@@ -426,9 +423,6 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -443,7 +437,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
     // $ANTLR start "entryRuleKind"
-    // InternalReferenceGrammarTestLanguage.g:212:1: entryRuleKind returns [EObject current=null] : iv_ruleKind= ruleKind EOF ;
+    // InternalReferenceGrammarTestLanguage.g:207:1: entryRuleKind returns [EObject current=null] : iv_ruleKind= ruleKind EOF ;
     public final EObject entryRuleKind() throws RecognitionException {
         EObject current = null;
 
@@ -451,8 +445,8 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
         try {
-            // InternalReferenceGrammarTestLanguage.g:212:45: (iv_ruleKind= ruleKind EOF )
-            // InternalReferenceGrammarTestLanguage.g:213:2: iv_ruleKind= ruleKind EOF
+            // InternalReferenceGrammarTestLanguage.g:207:45: (iv_ruleKind= ruleKind EOF )
+            // InternalReferenceGrammarTestLanguage.g:208:2: iv_ruleKind= ruleKind EOF
             {
              newCompositeNode(grammarAccess.getKindRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -479,7 +473,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
     // $ANTLR start "ruleKind"
-    // InternalReferenceGrammarTestLanguage.g:219:1: ruleKind returns [EObject current=null] : (otherlv_0= 'kind' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' ) ;
+    // InternalReferenceGrammarTestLanguage.g:214:1: ruleKind returns [EObject current=null] : (otherlv_0= 'kind' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' ) ;
     public final EObject ruleKind() throws RecognitionException {
         EObject current = null;
 
@@ -489,15 +483,12 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
         Token lv_age_3_0=null;
         Token otherlv_4=null;
 
-
-        	enterRule();
-
         try {
-            // InternalReferenceGrammarTestLanguage.g:225:2: ( (otherlv_0= 'kind' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' ) )
-            // InternalReferenceGrammarTestLanguage.g:226:2: (otherlv_0= 'kind' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' )
+            // InternalReferenceGrammarTestLanguage.g:215:1: ( (otherlv_0= 'kind' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' ) )
+            // InternalReferenceGrammarTestLanguage.g:216:2: (otherlv_0= 'kind' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' )
             {
-            // InternalReferenceGrammarTestLanguage.g:226:2: (otherlv_0= 'kind' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' )
-            // InternalReferenceGrammarTestLanguage.g:227:3: otherlv_0= 'kind' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')'
+            // InternalReferenceGrammarTestLanguage.g:216:2: (otherlv_0= 'kind' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' )
+            // InternalReferenceGrammarTestLanguage.g:217:3: otherlv_0= 'kind' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,14,FollowSets000.FOLLOW_7); 
 
@@ -507,11 +498,11 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             			newLeafNode(otherlv_1, grammarAccess.getKindAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalReferenceGrammarTestLanguage.g:235:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalReferenceGrammarTestLanguage.g:236:4: (lv_name_2_0= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:225:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalReferenceGrammarTestLanguage.g:226:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalReferenceGrammarTestLanguage.g:236:4: (lv_name_2_0= RULE_ID )
-            // InternalReferenceGrammarTestLanguage.g:237:5: lv_name_2_0= RULE_ID
+            // InternalReferenceGrammarTestLanguage.g:226:4: (lv_name_2_0= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:227:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_3); 
 
@@ -533,11 +524,11 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-            // InternalReferenceGrammarTestLanguage.g:253:3: ( (lv_age_3_0= RULE_INT ) )
-            // InternalReferenceGrammarTestLanguage.g:254:4: (lv_age_3_0= RULE_INT )
+            // InternalReferenceGrammarTestLanguage.g:243:3: ( (lv_age_3_0= RULE_INT ) )
+            // InternalReferenceGrammarTestLanguage.g:244:4: (lv_age_3_0= RULE_INT )
             {
-            // InternalReferenceGrammarTestLanguage.g:254:4: (lv_age_3_0= RULE_INT )
-            // InternalReferenceGrammarTestLanguage.g:255:5: lv_age_3_0= RULE_INT
+            // InternalReferenceGrammarTestLanguage.g:244:4: (lv_age_3_0= RULE_INT )
+            // InternalReferenceGrammarTestLanguage.g:245:5: lv_age_3_0= RULE_INT
             {
             lv_age_3_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_9); 
 
@@ -569,9 +560,6 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -586,7 +574,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
     // $ANTLR start "entryRuleErwachsener"
-    // InternalReferenceGrammarTestLanguage.g:279:1: entryRuleErwachsener returns [EObject current=null] : iv_ruleErwachsener= ruleErwachsener EOF ;
+    // InternalReferenceGrammarTestLanguage.g:269:1: entryRuleErwachsener returns [EObject current=null] : iv_ruleErwachsener= ruleErwachsener EOF ;
     public final EObject entryRuleErwachsener() throws RecognitionException {
         EObject current = null;
 
@@ -594,8 +582,8 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
         try {
-            // InternalReferenceGrammarTestLanguage.g:279:52: (iv_ruleErwachsener= ruleErwachsener EOF )
-            // InternalReferenceGrammarTestLanguage.g:280:2: iv_ruleErwachsener= ruleErwachsener EOF
+            // InternalReferenceGrammarTestLanguage.g:269:52: (iv_ruleErwachsener= ruleErwachsener EOF )
+            // InternalReferenceGrammarTestLanguage.g:270:2: iv_ruleErwachsener= ruleErwachsener EOF
             {
              newCompositeNode(grammarAccess.getErwachsenerRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -622,7 +610,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
     // $ANTLR start "ruleErwachsener"
-    // InternalReferenceGrammarTestLanguage.g:286:1: ruleErwachsener returns [EObject current=null] : (otherlv_0= 'erwachsener' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' ) ;
+    // InternalReferenceGrammarTestLanguage.g:276:1: ruleErwachsener returns [EObject current=null] : (otherlv_0= 'erwachsener' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' ) ;
     public final EObject ruleErwachsener() throws RecognitionException {
         EObject current = null;
 
@@ -632,15 +620,12 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
         Token lv_age_3_0=null;
         Token otherlv_4=null;
 
-
-        	enterRule();
-
         try {
-            // InternalReferenceGrammarTestLanguage.g:292:2: ( (otherlv_0= 'erwachsener' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' ) )
-            // InternalReferenceGrammarTestLanguage.g:293:2: (otherlv_0= 'erwachsener' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' )
+            // InternalReferenceGrammarTestLanguage.g:277:1: ( (otherlv_0= 'erwachsener' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' ) )
+            // InternalReferenceGrammarTestLanguage.g:278:2: (otherlv_0= 'erwachsener' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' )
             {
-            // InternalReferenceGrammarTestLanguage.g:293:2: (otherlv_0= 'erwachsener' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' )
-            // InternalReferenceGrammarTestLanguage.g:294:3: otherlv_0= 'erwachsener' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')'
+            // InternalReferenceGrammarTestLanguage.g:278:2: (otherlv_0= 'erwachsener' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')' )
+            // InternalReferenceGrammarTestLanguage.g:279:3: otherlv_0= 'erwachsener' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_age_3_0= RULE_INT ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,17,FollowSets000.FOLLOW_7); 
 
@@ -650,11 +635,11 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             			newLeafNode(otherlv_1, grammarAccess.getErwachsenerAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalReferenceGrammarTestLanguage.g:302:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalReferenceGrammarTestLanguage.g:303:4: (lv_name_2_0= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:287:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalReferenceGrammarTestLanguage.g:288:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalReferenceGrammarTestLanguage.g:303:4: (lv_name_2_0= RULE_ID )
-            // InternalReferenceGrammarTestLanguage.g:304:5: lv_name_2_0= RULE_ID
+            // InternalReferenceGrammarTestLanguage.g:288:4: (lv_name_2_0= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:289:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_3); 
 
@@ -676,11 +661,11 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-            // InternalReferenceGrammarTestLanguage.g:320:3: ( (lv_age_3_0= RULE_INT ) )
-            // InternalReferenceGrammarTestLanguage.g:321:4: (lv_age_3_0= RULE_INT )
+            // InternalReferenceGrammarTestLanguage.g:305:3: ( (lv_age_3_0= RULE_INT ) )
+            // InternalReferenceGrammarTestLanguage.g:306:4: (lv_age_3_0= RULE_INT )
             {
-            // InternalReferenceGrammarTestLanguage.g:321:4: (lv_age_3_0= RULE_INT )
-            // InternalReferenceGrammarTestLanguage.g:322:5: lv_age_3_0= RULE_INT
+            // InternalReferenceGrammarTestLanguage.g:306:4: (lv_age_3_0= RULE_INT )
+            // InternalReferenceGrammarTestLanguage.g:307:5: lv_age_3_0= RULE_INT
             {
             lv_age_3_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_9); 
 
@@ -712,9 +697,6 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -729,7 +711,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
     // $ANTLR start "entryRuleSpielzeug"
-    // InternalReferenceGrammarTestLanguage.g:346:1: entryRuleSpielzeug returns [EObject current=null] : iv_ruleSpielzeug= ruleSpielzeug EOF ;
+    // InternalReferenceGrammarTestLanguage.g:331:1: entryRuleSpielzeug returns [EObject current=null] : iv_ruleSpielzeug= ruleSpielzeug EOF ;
     public final EObject entryRuleSpielzeug() throws RecognitionException {
         EObject current = null;
 
@@ -737,8 +719,8 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
         try {
-            // InternalReferenceGrammarTestLanguage.g:346:50: (iv_ruleSpielzeug= ruleSpielzeug EOF )
-            // InternalReferenceGrammarTestLanguage.g:347:2: iv_ruleSpielzeug= ruleSpielzeug EOF
+            // InternalReferenceGrammarTestLanguage.g:331:50: (iv_ruleSpielzeug= ruleSpielzeug EOF )
+            // InternalReferenceGrammarTestLanguage.g:332:2: iv_ruleSpielzeug= ruleSpielzeug EOF
             {
              newCompositeNode(grammarAccess.getSpielzeugRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -765,7 +747,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
     // $ANTLR start "ruleSpielzeug"
-    // InternalReferenceGrammarTestLanguage.g:353:1: ruleSpielzeug returns [EObject current=null] : (otherlv_0= 'spielzeug' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_farbe_3_0= ruleFarbe ) ) otherlv_4= ')' ) ;
+    // InternalReferenceGrammarTestLanguage.g:338:1: ruleSpielzeug returns [EObject current=null] : (otherlv_0= 'spielzeug' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_farbe_3_0= ruleFarbe ) ) otherlv_4= ')' ) ;
     public final EObject ruleSpielzeug() throws RecognitionException {
         EObject current = null;
 
@@ -776,15 +758,12 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
         EObject lv_farbe_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalReferenceGrammarTestLanguage.g:359:2: ( (otherlv_0= 'spielzeug' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_farbe_3_0= ruleFarbe ) ) otherlv_4= ')' ) )
-            // InternalReferenceGrammarTestLanguage.g:360:2: (otherlv_0= 'spielzeug' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_farbe_3_0= ruleFarbe ) ) otherlv_4= ')' )
+            // InternalReferenceGrammarTestLanguage.g:339:1: ( (otherlv_0= 'spielzeug' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_farbe_3_0= ruleFarbe ) ) otherlv_4= ')' ) )
+            // InternalReferenceGrammarTestLanguage.g:340:2: (otherlv_0= 'spielzeug' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_farbe_3_0= ruleFarbe ) ) otherlv_4= ')' )
             {
-            // InternalReferenceGrammarTestLanguage.g:360:2: (otherlv_0= 'spielzeug' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_farbe_3_0= ruleFarbe ) ) otherlv_4= ')' )
-            // InternalReferenceGrammarTestLanguage.g:361:3: otherlv_0= 'spielzeug' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_farbe_3_0= ruleFarbe ) ) otherlv_4= ')'
+            // InternalReferenceGrammarTestLanguage.g:340:2: (otherlv_0= 'spielzeug' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_farbe_3_0= ruleFarbe ) ) otherlv_4= ')' )
+            // InternalReferenceGrammarTestLanguage.g:341:3: otherlv_0= 'spielzeug' otherlv_1= '(' ( (lv_name_2_0= RULE_ID ) ) ( (lv_farbe_3_0= ruleFarbe ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,18,FollowSets000.FOLLOW_7); 
 
@@ -794,11 +773,11 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             			newLeafNode(otherlv_1, grammarAccess.getSpielzeugAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalReferenceGrammarTestLanguage.g:369:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalReferenceGrammarTestLanguage.g:370:4: (lv_name_2_0= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:349:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalReferenceGrammarTestLanguage.g:350:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalReferenceGrammarTestLanguage.g:370:4: (lv_name_2_0= RULE_ID )
-            // InternalReferenceGrammarTestLanguage.g:371:5: lv_name_2_0= RULE_ID
+            // InternalReferenceGrammarTestLanguage.g:350:4: (lv_name_2_0= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:351:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_10); 
 
@@ -820,11 +799,11 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-            // InternalReferenceGrammarTestLanguage.g:387:3: ( (lv_farbe_3_0= ruleFarbe ) )
-            // InternalReferenceGrammarTestLanguage.g:388:4: (lv_farbe_3_0= ruleFarbe )
+            // InternalReferenceGrammarTestLanguage.g:367:3: ( (lv_farbe_3_0= ruleFarbe ) )
+            // InternalReferenceGrammarTestLanguage.g:368:4: (lv_farbe_3_0= ruleFarbe )
             {
-            // InternalReferenceGrammarTestLanguage.g:388:4: (lv_farbe_3_0= ruleFarbe )
-            // InternalReferenceGrammarTestLanguage.g:389:5: lv_farbe_3_0= ruleFarbe
+            // InternalReferenceGrammarTestLanguage.g:368:4: (lv_farbe_3_0= ruleFarbe )
+            // InternalReferenceGrammarTestLanguage.g:369:5: lv_farbe_3_0= ruleFarbe
             {
 
             					newCompositeNode(grammarAccess.getSpielzeugAccess().getFarbeFarbeParserRuleCall_3_0());
@@ -861,9 +840,6 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -878,7 +854,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
     // $ANTLR start "entryRuleFarbe"
-    // InternalReferenceGrammarTestLanguage.g:414:1: entryRuleFarbe returns [EObject current=null] : iv_ruleFarbe= ruleFarbe EOF ;
+    // InternalReferenceGrammarTestLanguage.g:394:1: entryRuleFarbe returns [EObject current=null] : iv_ruleFarbe= ruleFarbe EOF ;
     public final EObject entryRuleFarbe() throws RecognitionException {
         EObject current = null;
 
@@ -886,8 +862,8 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
         try {
-            // InternalReferenceGrammarTestLanguage.g:414:46: (iv_ruleFarbe= ruleFarbe EOF )
-            // InternalReferenceGrammarTestLanguage.g:415:2: iv_ruleFarbe= ruleFarbe EOF
+            // InternalReferenceGrammarTestLanguage.g:394:46: (iv_ruleFarbe= ruleFarbe EOF )
+            // InternalReferenceGrammarTestLanguage.g:395:2: iv_ruleFarbe= ruleFarbe EOF
             {
              newCompositeNode(grammarAccess.getFarbeRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -914,7 +890,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
     // $ANTLR start "ruleFarbe"
-    // InternalReferenceGrammarTestLanguage.g:421:1: ruleFarbe returns [EObject current=null] : ( ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) ) ) ;
+    // InternalReferenceGrammarTestLanguage.g:401:1: ruleFarbe returns [EObject current=null] : ( ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) ) ) ;
     public final EObject ruleFarbe() throws RecognitionException {
         EObject current = null;
 
@@ -923,20 +899,17 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
         Token lv_wert_0_3=null;
         Token lv_wert_0_4=null;
 
-
-        	enterRule();
-
         try {
-            // InternalReferenceGrammarTestLanguage.g:427:2: ( ( ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) ) ) )
-            // InternalReferenceGrammarTestLanguage.g:428:2: ( ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) ) )
+            // InternalReferenceGrammarTestLanguage.g:402:1: ( ( ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) ) ) )
+            // InternalReferenceGrammarTestLanguage.g:403:2: ( ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) ) )
             {
-            // InternalReferenceGrammarTestLanguage.g:428:2: ( ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) ) )
-            // InternalReferenceGrammarTestLanguage.g:429:3: ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) )
+            // InternalReferenceGrammarTestLanguage.g:403:2: ( ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) ) )
+            // InternalReferenceGrammarTestLanguage.g:404:3: ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) )
             {
-            // InternalReferenceGrammarTestLanguage.g:429:3: ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) )
-            // InternalReferenceGrammarTestLanguage.g:430:4: (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' )
+            // InternalReferenceGrammarTestLanguage.g:404:3: ( (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' ) )
+            // InternalReferenceGrammarTestLanguage.g:405:4: (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' )
             {
-            // InternalReferenceGrammarTestLanguage.g:430:4: (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' )
+            // InternalReferenceGrammarTestLanguage.g:405:4: (lv_wert_0_1= 'ROT' | lv_wert_0_2= 'BLAU' | lv_wert_0_3= 'GELB' | lv_wert_0_4= 'GR\\u00DCN' )
             int alt4=4;
             switch ( input.LA(1) ) {
             case 19:
@@ -968,7 +941,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             switch (alt4) {
                 case 1 :
-                    // InternalReferenceGrammarTestLanguage.g:431:5: lv_wert_0_1= 'ROT'
+                    // InternalReferenceGrammarTestLanguage.g:406:5: lv_wert_0_1= 'ROT'
                     {
                     lv_wert_0_1=(Token)match(input,19,FollowSets000.FOLLOW_2); 
 
@@ -984,7 +957,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
                     }
                     break;
                 case 2 :
-                    // InternalReferenceGrammarTestLanguage.g:442:5: lv_wert_0_2= 'BLAU'
+                    // InternalReferenceGrammarTestLanguage.g:417:5: lv_wert_0_2= 'BLAU'
                     {
                     lv_wert_0_2=(Token)match(input,20,FollowSets000.FOLLOW_2); 
 
@@ -1000,7 +973,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
                     }
                     break;
                 case 3 :
-                    // InternalReferenceGrammarTestLanguage.g:453:5: lv_wert_0_3= 'GELB'
+                    // InternalReferenceGrammarTestLanguage.g:428:5: lv_wert_0_3= 'GELB'
                     {
                     lv_wert_0_3=(Token)match(input,21,FollowSets000.FOLLOW_2); 
 
@@ -1016,7 +989,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
                     }
                     break;
                 case 4 :
-                    // InternalReferenceGrammarTestLanguage.g:464:5: lv_wert_0_4= 'GR\\u00DCN'
+                    // InternalReferenceGrammarTestLanguage.g:439:5: lv_wert_0_4= 'GR\\u00DCN'
                     {
                     lv_wert_0_4=(Token)match(input,22,FollowSets000.FOLLOW_2); 
 
@@ -1043,9 +1016,6 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -1060,7 +1030,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
     // $ANTLR start "entryRuleFamilie"
-    // InternalReferenceGrammarTestLanguage.g:480:1: entryRuleFamilie returns [EObject current=null] : iv_ruleFamilie= ruleFamilie EOF ;
+    // InternalReferenceGrammarTestLanguage.g:455:1: entryRuleFamilie returns [EObject current=null] : iv_ruleFamilie= ruleFamilie EOF ;
     public final EObject entryRuleFamilie() throws RecognitionException {
         EObject current = null;
 
@@ -1068,8 +1038,8 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
         try {
-            // InternalReferenceGrammarTestLanguage.g:480:48: (iv_ruleFamilie= ruleFamilie EOF )
-            // InternalReferenceGrammarTestLanguage.g:481:2: iv_ruleFamilie= ruleFamilie EOF
+            // InternalReferenceGrammarTestLanguage.g:455:48: (iv_ruleFamilie= ruleFamilie EOF )
+            // InternalReferenceGrammarTestLanguage.g:456:2: iv_ruleFamilie= ruleFamilie EOF
             {
              newCompositeNode(grammarAccess.getFamilieRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -1096,7 +1066,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
     // $ANTLR start "ruleFamilie"
-    // InternalReferenceGrammarTestLanguage.g:487:1: ruleFamilie returns [EObject current=null] : (otherlv_0= 'familie' otherlv_1= '(' ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) ) ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) ( (otherlv_5= RULE_ID ) ) (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )* otherlv_8= ')' ) ;
+    // InternalReferenceGrammarTestLanguage.g:462:1: ruleFamilie returns [EObject current=null] : (otherlv_0= 'familie' otherlv_1= '(' ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) ) ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) ( (otherlv_5= RULE_ID ) ) (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )* otherlv_8= ')' ) ;
     public final EObject ruleFamilie() throws RecognitionException {
         EObject current = null;
 
@@ -1112,15 +1082,12 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
         Token otherlv_7=null;
         Token otherlv_8=null;
 
-
-        	enterRule();
-
         try {
-            // InternalReferenceGrammarTestLanguage.g:493:2: ( (otherlv_0= 'familie' otherlv_1= '(' ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) ) ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) ( (otherlv_5= RULE_ID ) ) (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )* otherlv_8= ')' ) )
-            // InternalReferenceGrammarTestLanguage.g:494:2: (otherlv_0= 'familie' otherlv_1= '(' ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) ) ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) ( (otherlv_5= RULE_ID ) ) (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )* otherlv_8= ')' )
+            // InternalReferenceGrammarTestLanguage.g:463:1: ( (otherlv_0= 'familie' otherlv_1= '(' ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) ) ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) ( (otherlv_5= RULE_ID ) ) (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )* otherlv_8= ')' ) )
+            // InternalReferenceGrammarTestLanguage.g:464:2: (otherlv_0= 'familie' otherlv_1= '(' ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) ) ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) ( (otherlv_5= RULE_ID ) ) (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )* otherlv_8= ')' )
             {
-            // InternalReferenceGrammarTestLanguage.g:494:2: (otherlv_0= 'familie' otherlv_1= '(' ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) ) ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) ( (otherlv_5= RULE_ID ) ) (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )* otherlv_8= ')' )
-            // InternalReferenceGrammarTestLanguage.g:495:3: otherlv_0= 'familie' otherlv_1= '(' ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) ) ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) ( (otherlv_5= RULE_ID ) ) (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )* otherlv_8= ')'
+            // InternalReferenceGrammarTestLanguage.g:464:2: (otherlv_0= 'familie' otherlv_1= '(' ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) ) ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) ( (otherlv_5= RULE_ID ) ) (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )* otherlv_8= ')' )
+            // InternalReferenceGrammarTestLanguage.g:465:3: otherlv_0= 'familie' otherlv_1= '(' ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) ) ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) ( (otherlv_5= RULE_ID ) ) (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )* otherlv_8= ')'
             {
             otherlv_0=(Token)match(input,23,FollowSets000.FOLLOW_7); 
 
@@ -1130,13 +1097,13 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             			newLeafNode(otherlv_1, grammarAccess.getFamilieAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalReferenceGrammarTestLanguage.g:503:3: ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) )
-            // InternalReferenceGrammarTestLanguage.g:504:4: ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) )
+            // InternalReferenceGrammarTestLanguage.g:473:3: ( ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) ) )
+            // InternalReferenceGrammarTestLanguage.g:474:4: ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) )
             {
-            // InternalReferenceGrammarTestLanguage.g:504:4: ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) )
-            // InternalReferenceGrammarTestLanguage.g:505:5: (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:474:4: ( (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID ) )
+            // InternalReferenceGrammarTestLanguage.g:475:5: (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID )
             {
-            // InternalReferenceGrammarTestLanguage.g:505:5: (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:475:5: (lv_name_2_1= 'keyword' | lv_name_2_2= RULE_STRING | lv_name_2_3= RULE_ID )
             int alt5=3;
             switch ( input.LA(1) ) {
             case 24:
@@ -1163,7 +1130,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             switch (alt5) {
                 case 1 :
-                    // InternalReferenceGrammarTestLanguage.g:506:6: lv_name_2_1= 'keyword'
+                    // InternalReferenceGrammarTestLanguage.g:476:6: lv_name_2_1= 'keyword'
                     {
                     lv_name_2_1=(Token)match(input,24,FollowSets000.FOLLOW_8); 
 
@@ -1179,7 +1146,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
                     }
                     break;
                 case 2 :
-                    // InternalReferenceGrammarTestLanguage.g:517:6: lv_name_2_2= RULE_STRING
+                    // InternalReferenceGrammarTestLanguage.g:487:6: lv_name_2_2= RULE_STRING
                     {
                     lv_name_2_2=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_8); 
 
@@ -1199,7 +1166,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
                     }
                     break;
                 case 3 :
-                    // InternalReferenceGrammarTestLanguage.g:532:6: lv_name_2_3= RULE_ID
+                    // InternalReferenceGrammarTestLanguage.g:502:6: lv_name_2_3= RULE_ID
                     {
                     lv_name_2_3=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_8); 
 
@@ -1227,11 +1194,11 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-            // InternalReferenceGrammarTestLanguage.g:549:3: ( (otherlv_3= RULE_ID ) )
-            // InternalReferenceGrammarTestLanguage.g:550:4: (otherlv_3= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:519:3: ( (otherlv_3= RULE_ID ) )
+            // InternalReferenceGrammarTestLanguage.g:520:4: (otherlv_3= RULE_ID )
             {
-            // InternalReferenceGrammarTestLanguage.g:550:4: (otherlv_3= RULE_ID )
-            // InternalReferenceGrammarTestLanguage.g:551:5: otherlv_3= RULE_ID
+            // InternalReferenceGrammarTestLanguage.g:520:4: (otherlv_3= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:521:5: otherlv_3= RULE_ID
             {
 
             					if (current==null) {
@@ -1248,11 +1215,11 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-            // InternalReferenceGrammarTestLanguage.g:562:3: ( (otherlv_4= RULE_ID ) )
-            // InternalReferenceGrammarTestLanguage.g:563:4: (otherlv_4= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:532:3: ( (otherlv_4= RULE_ID ) )
+            // InternalReferenceGrammarTestLanguage.g:533:4: (otherlv_4= RULE_ID )
             {
-            // InternalReferenceGrammarTestLanguage.g:563:4: (otherlv_4= RULE_ID )
-            // InternalReferenceGrammarTestLanguage.g:564:5: otherlv_4= RULE_ID
+            // InternalReferenceGrammarTestLanguage.g:533:4: (otherlv_4= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:534:5: otherlv_4= RULE_ID
             {
 
             					if (current==null) {
@@ -1269,11 +1236,11 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-            // InternalReferenceGrammarTestLanguage.g:575:3: ( (otherlv_5= RULE_ID ) )
-            // InternalReferenceGrammarTestLanguage.g:576:4: (otherlv_5= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:545:3: ( (otherlv_5= RULE_ID ) )
+            // InternalReferenceGrammarTestLanguage.g:546:4: (otherlv_5= RULE_ID )
             {
-            // InternalReferenceGrammarTestLanguage.g:576:4: (otherlv_5= RULE_ID )
-            // InternalReferenceGrammarTestLanguage.g:577:5: otherlv_5= RULE_ID
+            // InternalReferenceGrammarTestLanguage.g:546:4: (otherlv_5= RULE_ID )
+            // InternalReferenceGrammarTestLanguage.g:547:5: otherlv_5= RULE_ID
             {
 
             					if (current==null) {
@@ -1290,7 +1257,7 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
             }
 
-            // InternalReferenceGrammarTestLanguage.g:588:3: (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )*
+            // InternalReferenceGrammarTestLanguage.g:558:3: (otherlv_6= ',' ( (otherlv_7= RULE_ID ) ) )*
             loop6:
             do {
                 int alt6=2;
@@ -1303,17 +1270,17 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalReferenceGrammarTestLanguage.g:589:4: otherlv_6= ',' ( (otherlv_7= RULE_ID ) )
+            	    // InternalReferenceGrammarTestLanguage.g:559:4: otherlv_6= ',' ( (otherlv_7= RULE_ID ) )
             	    {
             	    otherlv_6=(Token)match(input,25,FollowSets000.FOLLOW_8); 
 
             	    				newLeafNode(otherlv_6, grammarAccess.getFamilieAccess().getCommaKeyword_6_0());
             	    			
-            	    // InternalReferenceGrammarTestLanguage.g:593:4: ( (otherlv_7= RULE_ID ) )
-            	    // InternalReferenceGrammarTestLanguage.g:594:5: (otherlv_7= RULE_ID )
+            	    // InternalReferenceGrammarTestLanguage.g:563:4: ( (otherlv_7= RULE_ID ) )
+            	    // InternalReferenceGrammarTestLanguage.g:564:5: (otherlv_7= RULE_ID )
             	    {
-            	    // InternalReferenceGrammarTestLanguage.g:594:5: (otherlv_7= RULE_ID )
-            	    // InternalReferenceGrammarTestLanguage.g:595:6: otherlv_7= RULE_ID
+            	    // InternalReferenceGrammarTestLanguage.g:564:5: (otherlv_7= RULE_ID )
+            	    // InternalReferenceGrammarTestLanguage.g:565:6: otherlv_7= RULE_ID
             	    {
 
             	    						if (current==null) {
@@ -1348,9 +1315,6 @@ public class InternalReferenceGrammarTestLanguageParser extends AbstractInternal
 
 
             }
-
-
-            	leaveRule();
 
         }
 

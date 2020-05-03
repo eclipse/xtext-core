@@ -128,14 +128,11 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
         EObject lv_expressions_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalBug297105TestLanguage.g:83:2: ( ( (lv_expressions_0_0= ruleExpression ) )* )
-            // InternalBug297105TestLanguage.g:84:2: ( (lv_expressions_0_0= ruleExpression ) )*
+            // InternalBug297105TestLanguage.g:78:1: ( ( (lv_expressions_0_0= ruleExpression ) )* )
+            // InternalBug297105TestLanguage.g:79:2: ( (lv_expressions_0_0= ruleExpression ) )*
             {
-            // InternalBug297105TestLanguage.g:84:2: ( (lv_expressions_0_0= ruleExpression ) )*
+            // InternalBug297105TestLanguage.g:79:2: ( (lv_expressions_0_0= ruleExpression ) )*
             loop1:
             do {
                 int alt1=2;
@@ -148,10 +145,10 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalBug297105TestLanguage.g:85:3: (lv_expressions_0_0= ruleExpression )
+            	    // InternalBug297105TestLanguage.g:80:3: (lv_expressions_0_0= ruleExpression )
             	    {
-            	    // InternalBug297105TestLanguage.g:85:3: (lv_expressions_0_0= ruleExpression )
-            	    // InternalBug297105TestLanguage.g:86:4: lv_expressions_0_0= ruleExpression
+            	    // InternalBug297105TestLanguage.g:80:3: (lv_expressions_0_0= ruleExpression )
+            	    // InternalBug297105TestLanguage.g:81:4: lv_expressions_0_0= ruleExpression
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -191,11 +188,6 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -210,7 +202,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleExpression"
-    // InternalBug297105TestLanguage.g:106:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
+    // InternalBug297105TestLanguage.g:101:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
     public final EObject entryRuleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -218,8 +210,8 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalBug297105TestLanguage.g:106:51: (iv_ruleExpression= ruleExpression EOF )
-            // InternalBug297105TestLanguage.g:107:2: iv_ruleExpression= ruleExpression EOF
+            // InternalBug297105TestLanguage.g:101:51: (iv_ruleExpression= ruleExpression EOF )
+            // InternalBug297105TestLanguage.g:102:2: iv_ruleExpression= ruleExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpressionRule()); 
@@ -250,7 +242,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleExpression"
-    // InternalBug297105TestLanguage.g:113:1: ruleExpression returns [EObject current=null] : ( ( (lv_left_0_0= ruleLiteral ) ) otherlv_1= '+' ( (lv_right_2_0= ruleLiteral ) ) ) ;
+    // InternalBug297105TestLanguage.g:108:1: ruleExpression returns [EObject current=null] : ( ( (lv_left_0_0= ruleLiteral ) ) otherlv_1= '+' ( (lv_right_2_0= ruleLiteral ) ) ) ;
     public final EObject ruleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -260,21 +252,18 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
         EObject lv_right_2_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalBug297105TestLanguage.g:119:2: ( ( ( (lv_left_0_0= ruleLiteral ) ) otherlv_1= '+' ( (lv_right_2_0= ruleLiteral ) ) ) )
-            // InternalBug297105TestLanguage.g:120:2: ( ( (lv_left_0_0= ruleLiteral ) ) otherlv_1= '+' ( (lv_right_2_0= ruleLiteral ) ) )
+            // InternalBug297105TestLanguage.g:109:1: ( ( ( (lv_left_0_0= ruleLiteral ) ) otherlv_1= '+' ( (lv_right_2_0= ruleLiteral ) ) ) )
+            // InternalBug297105TestLanguage.g:110:2: ( ( (lv_left_0_0= ruleLiteral ) ) otherlv_1= '+' ( (lv_right_2_0= ruleLiteral ) ) )
             {
-            // InternalBug297105TestLanguage.g:120:2: ( ( (lv_left_0_0= ruleLiteral ) ) otherlv_1= '+' ( (lv_right_2_0= ruleLiteral ) ) )
-            // InternalBug297105TestLanguage.g:121:3: ( (lv_left_0_0= ruleLiteral ) ) otherlv_1= '+' ( (lv_right_2_0= ruleLiteral ) )
+            // InternalBug297105TestLanguage.g:110:2: ( ( (lv_left_0_0= ruleLiteral ) ) otherlv_1= '+' ( (lv_right_2_0= ruleLiteral ) ) )
+            // InternalBug297105TestLanguage.g:111:3: ( (lv_left_0_0= ruleLiteral ) ) otherlv_1= '+' ( (lv_right_2_0= ruleLiteral ) )
             {
-            // InternalBug297105TestLanguage.g:121:3: ( (lv_left_0_0= ruleLiteral ) )
-            // InternalBug297105TestLanguage.g:122:4: (lv_left_0_0= ruleLiteral )
+            // InternalBug297105TestLanguage.g:111:3: ( (lv_left_0_0= ruleLiteral ) )
+            // InternalBug297105TestLanguage.g:112:4: (lv_left_0_0= ruleLiteral )
             {
-            // InternalBug297105TestLanguage.g:122:4: (lv_left_0_0= ruleLiteral )
-            // InternalBug297105TestLanguage.g:123:5: lv_left_0_0= ruleLiteral
+            // InternalBug297105TestLanguage.g:112:4: (lv_left_0_0= ruleLiteral )
+            // InternalBug297105TestLanguage.g:113:5: lv_left_0_0= ruleLiteral
             {
             if ( state.backtracking==0 ) {
 
@@ -311,11 +300,11 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
               			newLeafNode(otherlv_1, grammarAccess.getExpressionAccess().getPlusSignKeyword_1());
               		
             }
-            // InternalBug297105TestLanguage.g:144:3: ( (lv_right_2_0= ruleLiteral ) )
-            // InternalBug297105TestLanguage.g:145:4: (lv_right_2_0= ruleLiteral )
+            // InternalBug297105TestLanguage.g:134:3: ( (lv_right_2_0= ruleLiteral ) )
+            // InternalBug297105TestLanguage.g:135:4: (lv_right_2_0= ruleLiteral )
             {
-            // InternalBug297105TestLanguage.g:145:4: (lv_right_2_0= ruleLiteral )
-            // InternalBug297105TestLanguage.g:146:5: lv_right_2_0= ruleLiteral
+            // InternalBug297105TestLanguage.g:135:4: (lv_right_2_0= ruleLiteral )
+            // InternalBug297105TestLanguage.g:136:5: lv_right_2_0= ruleLiteral
             {
             if ( state.backtracking==0 ) {
 
@@ -352,11 +341,6 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -371,7 +355,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleLiteral"
-    // InternalBug297105TestLanguage.g:167:1: entryRuleLiteral returns [EObject current=null] : iv_ruleLiteral= ruleLiteral EOF ;
+    // InternalBug297105TestLanguage.g:157:1: entryRuleLiteral returns [EObject current=null] : iv_ruleLiteral= ruleLiteral EOF ;
     public final EObject entryRuleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -379,8 +363,8 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalBug297105TestLanguage.g:167:48: (iv_ruleLiteral= ruleLiteral EOF )
-            // InternalBug297105TestLanguage.g:168:2: iv_ruleLiteral= ruleLiteral EOF
+            // InternalBug297105TestLanguage.g:157:48: (iv_ruleLiteral= ruleLiteral EOF )
+            // InternalBug297105TestLanguage.g:158:2: iv_ruleLiteral= ruleLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLiteralRule()); 
@@ -411,7 +395,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleLiteral"
-    // InternalBug297105TestLanguage.g:174:1: ruleLiteral returns [EObject current=null] : (this_RealLiteral_0= ruleRealLiteral | this_IntLiteral_1= ruleIntLiteral ) ;
+    // InternalBug297105TestLanguage.g:164:1: ruleLiteral returns [EObject current=null] : (this_RealLiteral_0= ruleRealLiteral | this_IntLiteral_1= ruleIntLiteral ) ;
     public final EObject ruleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -420,14 +404,11 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
         EObject this_IntLiteral_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalBug297105TestLanguage.g:180:2: ( (this_RealLiteral_0= ruleRealLiteral | this_IntLiteral_1= ruleIntLiteral ) )
-            // InternalBug297105TestLanguage.g:181:2: (this_RealLiteral_0= ruleRealLiteral | this_IntLiteral_1= ruleIntLiteral )
+            // InternalBug297105TestLanguage.g:165:1: ( (this_RealLiteral_0= ruleRealLiteral | this_IntLiteral_1= ruleIntLiteral ) )
+            // InternalBug297105TestLanguage.g:166:2: (this_RealLiteral_0= ruleRealLiteral | this_IntLiteral_1= ruleIntLiteral )
             {
-            // InternalBug297105TestLanguage.g:181:2: (this_RealLiteral_0= ruleRealLiteral | this_IntLiteral_1= ruleIntLiteral )
+            // InternalBug297105TestLanguage.g:166:2: (this_RealLiteral_0= ruleRealLiteral | this_IntLiteral_1= ruleIntLiteral )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -460,7 +441,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
             }
             switch (alt2) {
                 case 1 :
-                    // InternalBug297105TestLanguage.g:182:3: this_RealLiteral_0= ruleRealLiteral
+                    // InternalBug297105TestLanguage.g:167:3: this_RealLiteral_0= ruleRealLiteral
                     {
                     if ( state.backtracking==0 ) {
 
@@ -487,7 +468,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 2 :
-                    // InternalBug297105TestLanguage.g:194:3: this_IntLiteral_1= ruleIntLiteral
+                    // InternalBug297105TestLanguage.g:179:3: this_IntLiteral_1= ruleIntLiteral
                     {
                     if ( state.backtracking==0 ) {
 
@@ -519,11 +500,6 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -538,7 +514,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleIntLiteral"
-    // InternalBug297105TestLanguage.g:209:1: entryRuleIntLiteral returns [EObject current=null] : iv_ruleIntLiteral= ruleIntLiteral EOF ;
+    // InternalBug297105TestLanguage.g:194:1: entryRuleIntLiteral returns [EObject current=null] : iv_ruleIntLiteral= ruleIntLiteral EOF ;
     public final EObject entryRuleIntLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -546,8 +522,8 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalBug297105TestLanguage.g:209:51: (iv_ruleIntLiteral= ruleIntLiteral EOF )
-            // InternalBug297105TestLanguage.g:210:2: iv_ruleIntLiteral= ruleIntLiteral EOF
+            // InternalBug297105TestLanguage.g:194:51: (iv_ruleIntLiteral= ruleIntLiteral EOF )
+            // InternalBug297105TestLanguage.g:195:2: iv_ruleIntLiteral= ruleIntLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIntLiteralRule()); 
@@ -578,25 +554,22 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleIntLiteral"
-    // InternalBug297105TestLanguage.g:216:1: ruleIntLiteral returns [EObject current=null] : ( (lv_value_0_0= ruleIntValue ) ) ;
+    // InternalBug297105TestLanguage.g:201:1: ruleIntLiteral returns [EObject current=null] : ( (lv_value_0_0= ruleIntValue ) ) ;
     public final EObject ruleIntLiteral() throws RecognitionException {
         EObject current = null;
 
         AntlrDatatypeRuleToken lv_value_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalBug297105TestLanguage.g:222:2: ( ( (lv_value_0_0= ruleIntValue ) ) )
-            // InternalBug297105TestLanguage.g:223:2: ( (lv_value_0_0= ruleIntValue ) )
+            // InternalBug297105TestLanguage.g:202:1: ( ( (lv_value_0_0= ruleIntValue ) ) )
+            // InternalBug297105TestLanguage.g:203:2: ( (lv_value_0_0= ruleIntValue ) )
             {
-            // InternalBug297105TestLanguage.g:223:2: ( (lv_value_0_0= ruleIntValue ) )
-            // InternalBug297105TestLanguage.g:224:3: (lv_value_0_0= ruleIntValue )
+            // InternalBug297105TestLanguage.g:203:2: ( (lv_value_0_0= ruleIntValue ) )
+            // InternalBug297105TestLanguage.g:204:3: (lv_value_0_0= ruleIntValue )
             {
-            // InternalBug297105TestLanguage.g:224:3: (lv_value_0_0= ruleIntValue )
-            // InternalBug297105TestLanguage.g:225:4: lv_value_0_0= ruleIntValue
+            // InternalBug297105TestLanguage.g:204:3: (lv_value_0_0= ruleIntValue )
+            // InternalBug297105TestLanguage.g:205:4: lv_value_0_0= ruleIntValue
             {
             if ( state.backtracking==0 ) {
 
@@ -630,11 +603,6 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -649,7 +617,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleRealLiteral"
-    // InternalBug297105TestLanguage.g:245:1: entryRuleRealLiteral returns [EObject current=null] : iv_ruleRealLiteral= ruleRealLiteral EOF ;
+    // InternalBug297105TestLanguage.g:225:1: entryRuleRealLiteral returns [EObject current=null] : iv_ruleRealLiteral= ruleRealLiteral EOF ;
     public final EObject entryRuleRealLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -657,8 +625,8 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalBug297105TestLanguage.g:245:52: (iv_ruleRealLiteral= ruleRealLiteral EOF )
-            // InternalBug297105TestLanguage.g:246:2: iv_ruleRealLiteral= ruleRealLiteral EOF
+            // InternalBug297105TestLanguage.g:225:52: (iv_ruleRealLiteral= ruleRealLiteral EOF )
+            // InternalBug297105TestLanguage.g:226:2: iv_ruleRealLiteral= ruleRealLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRealLiteralRule()); 
@@ -689,25 +657,22 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleRealLiteral"
-    // InternalBug297105TestLanguage.g:252:1: ruleRealLiteral returns [EObject current=null] : ( (lv_value_0_0= ruleRealValue ) ) ;
+    // InternalBug297105TestLanguage.g:232:1: ruleRealLiteral returns [EObject current=null] : ( (lv_value_0_0= ruleRealValue ) ) ;
     public final EObject ruleRealLiteral() throws RecognitionException {
         EObject current = null;
 
         AntlrDatatypeRuleToken lv_value_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalBug297105TestLanguage.g:258:2: ( ( (lv_value_0_0= ruleRealValue ) ) )
-            // InternalBug297105TestLanguage.g:259:2: ( (lv_value_0_0= ruleRealValue ) )
+            // InternalBug297105TestLanguage.g:233:1: ( ( (lv_value_0_0= ruleRealValue ) ) )
+            // InternalBug297105TestLanguage.g:234:2: ( (lv_value_0_0= ruleRealValue ) )
             {
-            // InternalBug297105TestLanguage.g:259:2: ( (lv_value_0_0= ruleRealValue ) )
-            // InternalBug297105TestLanguage.g:260:3: (lv_value_0_0= ruleRealValue )
+            // InternalBug297105TestLanguage.g:234:2: ( (lv_value_0_0= ruleRealValue ) )
+            // InternalBug297105TestLanguage.g:235:3: (lv_value_0_0= ruleRealValue )
             {
-            // InternalBug297105TestLanguage.g:260:3: (lv_value_0_0= ruleRealValue )
-            // InternalBug297105TestLanguage.g:261:4: lv_value_0_0= ruleRealValue
+            // InternalBug297105TestLanguage.g:235:3: (lv_value_0_0= ruleRealValue )
+            // InternalBug297105TestLanguage.g:236:4: lv_value_0_0= ruleRealValue
             {
             if ( state.backtracking==0 ) {
 
@@ -741,11 +706,6 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -760,7 +720,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleIntValue"
-    // InternalBug297105TestLanguage.g:281:1: entryRuleIntValue returns [String current=null] : iv_ruleIntValue= ruleIntValue EOF ;
+    // InternalBug297105TestLanguage.g:256:1: entryRuleIntValue returns [String current=null] : iv_ruleIntValue= ruleIntValue EOF ;
     public final String entryRuleIntValue() throws RecognitionException {
         String current = null;
 
@@ -768,8 +728,8 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalBug297105TestLanguage.g:281:48: (iv_ruleIntValue= ruleIntValue EOF )
-            // InternalBug297105TestLanguage.g:282:2: iv_ruleIntValue= ruleIntValue EOF
+            // InternalBug297105TestLanguage.g:256:48: (iv_ruleIntValue= ruleIntValue EOF )
+            // InternalBug297105TestLanguage.g:257:2: iv_ruleIntValue= ruleIntValue EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIntValueRule()); 
@@ -800,18 +760,15 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleIntValue"
-    // InternalBug297105TestLanguage.g:288:1: ruleIntValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
+    // InternalBug297105TestLanguage.g:263:1: ruleIntValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
     public final AntlrDatatypeRuleToken ruleIntValue() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_INT_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalBug297105TestLanguage.g:294:2: (this_INT_0= RULE_INT )
-            // InternalBug297105TestLanguage.g:295:2: this_INT_0= RULE_INT
+            // InternalBug297105TestLanguage.g:264:1: (this_INT_0= RULE_INT )
+            // InternalBug297105TestLanguage.g:265:2: this_INT_0= RULE_INT
             {
             this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -827,11 +784,6 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -846,7 +798,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleRealValue"
-    // InternalBug297105TestLanguage.g:305:1: entryRuleRealValue returns [String current=null] : iv_ruleRealValue= ruleRealValue EOF ;
+    // InternalBug297105TestLanguage.g:275:1: entryRuleRealValue returns [String current=null] : iv_ruleRealValue= ruleRealValue EOF ;
     public final String entryRuleRealValue() throws RecognitionException {
         String current = null;
 
@@ -854,8 +806,8 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalBug297105TestLanguage.g:305:49: (iv_ruleRealValue= ruleRealValue EOF )
-            // InternalBug297105TestLanguage.g:306:2: iv_ruleRealValue= ruleRealValue EOF
+            // InternalBug297105TestLanguage.g:275:49: (iv_ruleRealValue= ruleRealValue EOF )
+            // InternalBug297105TestLanguage.g:276:2: iv_ruleRealValue= ruleRealValue EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRealValueRule()); 
@@ -886,19 +838,16 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleRealValue"
-    // InternalBug297105TestLanguage.g:312:1: ruleRealValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_Real_0= ruleReal ;
+    // InternalBug297105TestLanguage.g:282:1: ruleRealValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_Real_0= ruleReal ;
     public final AntlrDatatypeRuleToken ruleRealValue() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         AntlrDatatypeRuleToken this_Real_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalBug297105TestLanguage.g:318:2: (this_Real_0= ruleReal )
-            // InternalBug297105TestLanguage.g:319:2: this_Real_0= ruleReal
+            // InternalBug297105TestLanguage.g:283:1: (this_Real_0= ruleReal )
+            // InternalBug297105TestLanguage.g:284:2: this_Real_0= ruleReal
             {
             if ( state.backtracking==0 ) {
 
@@ -923,11 +872,6 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -942,7 +886,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleReal"
-    // InternalBug297105TestLanguage.g:332:1: entryRuleReal returns [String current=null] : iv_ruleReal= ruleReal EOF ;
+    // InternalBug297105TestLanguage.g:297:1: entryRuleReal returns [String current=null] : iv_ruleReal= ruleReal EOF ;
     public final String entryRuleReal() throws RecognitionException {
         String current = null;
 
@@ -953,8 +897,8 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
         	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
 
         try {
-            // InternalBug297105TestLanguage.g:334:2: (iv_ruleReal= ruleReal EOF )
-            // InternalBug297105TestLanguage.g:335:2: iv_ruleReal= ruleReal EOF
+            // InternalBug297105TestLanguage.g:299:2: (iv_ruleReal= ruleReal EOF )
+            // InternalBug297105TestLanguage.g:300:2: iv_ruleReal= ruleReal EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRealRule()); 
@@ -988,7 +932,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleReal"
-    // InternalBug297105TestLanguage.g:344:1: ruleReal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT )? kw= '.' (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT ) ) ;
+    // InternalBug297105TestLanguage.g:309:1: ruleReal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT )? kw= '.' (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT ) ) ;
     public final AntlrDatatypeRuleToken ruleReal() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -998,17 +942,16 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
         Token this_INT_3=null;
 
 
-        	enterRule();
         	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
 
         try {
-            // InternalBug297105TestLanguage.g:351:2: ( ( (this_INT_0= RULE_INT )? kw= '.' (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT ) ) )
-            // InternalBug297105TestLanguage.g:352:2: ( (this_INT_0= RULE_INT )? kw= '.' (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT ) )
+            // InternalBug297105TestLanguage.g:313:1: ( ( (this_INT_0= RULE_INT )? kw= '.' (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT ) ) )
+            // InternalBug297105TestLanguage.g:314:2: ( (this_INT_0= RULE_INT )? kw= '.' (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT ) )
             {
-            // InternalBug297105TestLanguage.g:352:2: ( (this_INT_0= RULE_INT )? kw= '.' (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT ) )
-            // InternalBug297105TestLanguage.g:353:3: (this_INT_0= RULE_INT )? kw= '.' (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT )
+            // InternalBug297105TestLanguage.g:314:2: ( (this_INT_0= RULE_INT )? kw= '.' (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT ) )
+            // InternalBug297105TestLanguage.g:315:3: (this_INT_0= RULE_INT )? kw= '.' (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT )
             {
-            // InternalBug297105TestLanguage.g:353:3: (this_INT_0= RULE_INT )?
+            // InternalBug297105TestLanguage.g:315:3: (this_INT_0= RULE_INT )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1017,7 +960,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
             }
             switch (alt3) {
                 case 1 :
-                    // InternalBug297105TestLanguage.g:354:4: this_INT_0= RULE_INT
+                    // InternalBug297105TestLanguage.g:316:4: this_INT_0= RULE_INT
                     {
                     this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1043,7 +986,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
               			newLeafNode(kw, grammarAccess.getRealAccess().getFullStopKeyword_1());
               		
             }
-            // InternalBug297105TestLanguage.g:367:3: (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT )
+            // InternalBug297105TestLanguage.g:329:3: (this_EXT_INT_2= RULE_EXT_INT | this_INT_3= RULE_INT )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1062,7 +1005,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
             }
             switch (alt4) {
                 case 1 :
-                    // InternalBug297105TestLanguage.g:368:4: this_EXT_INT_2= RULE_EXT_INT
+                    // InternalBug297105TestLanguage.g:330:4: this_EXT_INT_2= RULE_EXT_INT
                     {
                     this_EXT_INT_2=(Token)match(input,RULE_EXT_INT,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1079,7 +1022,7 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 2 :
-                    // InternalBug297105TestLanguage.g:376:4: this_INT_3= RULE_INT
+                    // InternalBug297105TestLanguage.g:338:4: this_INT_3= RULE_INT
                     {
                     this_INT_3=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1104,11 +1047,6 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1129,8 +1067,8 @@ public class InternalBug297105TestLanguageParser extends AbstractInternalAntlrPa
         EObject this_RealLiteral_0 = null;
 
 
-        // InternalBug297105TestLanguage.g:182:3: (this_RealLiteral_0= ruleRealLiteral )
-        // InternalBug297105TestLanguage.g:182:3: this_RealLiteral_0= ruleRealLiteral
+        // InternalBug297105TestLanguage.g:167:3: (this_RealLiteral_0= ruleRealLiteral )
+        // InternalBug297105TestLanguage.g:167:3: this_RealLiteral_0= ruleRealLiteral
         {
         if ( state.backtracking==0 ) {
 

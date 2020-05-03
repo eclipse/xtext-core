@@ -120,18 +120,15 @@ public class InternalNoJdtTestLanguageParser extends AbstractInternalAntlrParser
         EObject lv_greetings_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalNoJdtTestLanguage.g:77:2: ( ( (lv_greetings_0_0= ruleGreeting ) ) )
-            // InternalNoJdtTestLanguage.g:78:2: ( (lv_greetings_0_0= ruleGreeting ) )
+            // InternalNoJdtTestLanguage.g:72:1: ( ( (lv_greetings_0_0= ruleGreeting ) ) )
+            // InternalNoJdtTestLanguage.g:73:2: ( (lv_greetings_0_0= ruleGreeting ) )
             {
-            // InternalNoJdtTestLanguage.g:78:2: ( (lv_greetings_0_0= ruleGreeting ) )
-            // InternalNoJdtTestLanguage.g:79:3: (lv_greetings_0_0= ruleGreeting )
+            // InternalNoJdtTestLanguage.g:73:2: ( (lv_greetings_0_0= ruleGreeting ) )
+            // InternalNoJdtTestLanguage.g:74:3: (lv_greetings_0_0= ruleGreeting )
             {
-            // InternalNoJdtTestLanguage.g:79:3: (lv_greetings_0_0= ruleGreeting )
-            // InternalNoJdtTestLanguage.g:80:4: lv_greetings_0_0= ruleGreeting
+            // InternalNoJdtTestLanguage.g:74:3: (lv_greetings_0_0= ruleGreeting )
+            // InternalNoJdtTestLanguage.g:75:4: lv_greetings_0_0= ruleGreeting
             {
 
             				newCompositeNode(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0());
@@ -161,9 +158,6 @@ public class InternalNoJdtTestLanguageParser extends AbstractInternalAntlrParser
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -178,7 +172,7 @@ public class InternalNoJdtTestLanguageParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start "entryRuleGreeting"
-    // InternalNoJdtTestLanguage.g:100:1: entryRuleGreeting returns [EObject current=null] : iv_ruleGreeting= ruleGreeting EOF ;
+    // InternalNoJdtTestLanguage.g:95:1: entryRuleGreeting returns [EObject current=null] : iv_ruleGreeting= ruleGreeting EOF ;
     public final EObject entryRuleGreeting() throws RecognitionException {
         EObject current = null;
 
@@ -186,8 +180,8 @@ public class InternalNoJdtTestLanguageParser extends AbstractInternalAntlrParser
 
 
         try {
-            // InternalNoJdtTestLanguage.g:100:49: (iv_ruleGreeting= ruleGreeting EOF )
-            // InternalNoJdtTestLanguage.g:101:2: iv_ruleGreeting= ruleGreeting EOF
+            // InternalNoJdtTestLanguage.g:95:49: (iv_ruleGreeting= ruleGreeting EOF )
+            // InternalNoJdtTestLanguage.g:96:2: iv_ruleGreeting= ruleGreeting EOF
             {
              newCompositeNode(grammarAccess.getGreetingRule()); 
             pushFollow(FOLLOW_1);
@@ -214,7 +208,7 @@ public class InternalNoJdtTestLanguageParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start "ruleGreeting"
-    // InternalNoJdtTestLanguage.g:107:1: ruleGreeting returns [EObject current=null] : (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )? otherlv_6= '!' ) ;
+    // InternalNoJdtTestLanguage.g:102:1: ruleGreeting returns [EObject current=null] : (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )? otherlv_6= '!' ) ;
     public final EObject ruleGreeting() throws RecognitionException {
         EObject current = null;
 
@@ -226,25 +220,22 @@ public class InternalNoJdtTestLanguageParser extends AbstractInternalAntlrParser
         Token otherlv_5=null;
         Token otherlv_6=null;
 
-
-        	enterRule();
-
         try {
-            // InternalNoJdtTestLanguage.g:113:2: ( (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )? otherlv_6= '!' ) )
-            // InternalNoJdtTestLanguage.g:114:2: (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )? otherlv_6= '!' )
+            // InternalNoJdtTestLanguage.g:103:1: ( (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )? otherlv_6= '!' ) )
+            // InternalNoJdtTestLanguage.g:104:2: (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )? otherlv_6= '!' )
             {
-            // InternalNoJdtTestLanguage.g:114:2: (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )? otherlv_6= '!' )
-            // InternalNoJdtTestLanguage.g:115:3: otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )? otherlv_6= '!'
+            // InternalNoJdtTestLanguage.g:104:2: (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )? otherlv_6= '!' )
+            // InternalNoJdtTestLanguage.g:105:3: otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )? otherlv_6= '!'
             {
             otherlv_0=(Token)match(input,11,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getGreetingAccess().getHelloKeyword_0());
             		
-            // InternalNoJdtTestLanguage.g:119:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalNoJdtTestLanguage.g:120:4: (lv_name_1_0= RULE_ID )
+            // InternalNoJdtTestLanguage.g:109:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalNoJdtTestLanguage.g:110:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalNoJdtTestLanguage.g:120:4: (lv_name_1_0= RULE_ID )
-            // InternalNoJdtTestLanguage.g:121:5: lv_name_1_0= RULE_ID
+            // InternalNoJdtTestLanguage.g:110:4: (lv_name_1_0= RULE_ID )
+            // InternalNoJdtTestLanguage.g:111:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
 
@@ -266,7 +257,7 @@ public class InternalNoJdtTestLanguageParser extends AbstractInternalAntlrParser
 
             }
 
-            // InternalNoJdtTestLanguage.g:137:3: (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )?
+            // InternalNoJdtTestLanguage.g:127:3: (otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -275,7 +266,7 @@ public class InternalNoJdtTestLanguageParser extends AbstractInternalAntlrParser
             }
             switch (alt1) {
                 case 1 :
-                    // InternalNoJdtTestLanguage.g:138:4: otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')'
+                    // InternalNoJdtTestLanguage.g:128:4: otherlv_2= '(' otherlv_3= 'from' ( (otherlv_4= RULE_ID ) ) otherlv_5= ')'
                     {
                     otherlv_2=(Token)match(input,12,FOLLOW_5); 
 
@@ -285,11 +276,11 @@ public class InternalNoJdtTestLanguageParser extends AbstractInternalAntlrParser
 
                     				newLeafNode(otherlv_3, grammarAccess.getGreetingAccess().getFromKeyword_2_1());
                     			
-                    // InternalNoJdtTestLanguage.g:146:4: ( (otherlv_4= RULE_ID ) )
-                    // InternalNoJdtTestLanguage.g:147:5: (otherlv_4= RULE_ID )
+                    // InternalNoJdtTestLanguage.g:136:4: ( (otherlv_4= RULE_ID ) )
+                    // InternalNoJdtTestLanguage.g:137:5: (otherlv_4= RULE_ID )
                     {
-                    // InternalNoJdtTestLanguage.g:147:5: (otherlv_4= RULE_ID )
-                    // InternalNoJdtTestLanguage.g:148:6: otherlv_4= RULE_ID
+                    // InternalNoJdtTestLanguage.g:137:5: (otherlv_4= RULE_ID )
+                    // InternalNoJdtTestLanguage.g:138:6: otherlv_4= RULE_ID
                     {
 
                     						if (current==null) {
@@ -325,9 +316,6 @@ public class InternalNoJdtTestLanguageParser extends AbstractInternalAntlrParser
 
 
             }
-
-
-            	leaveRule();
 
         }
 

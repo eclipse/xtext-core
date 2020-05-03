@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -105,12 +100,7 @@ entryRuleDefinition returns [EObject current=null]:
 
 // Rule Definition
 ruleDefinition returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='(def)'
 		{
@@ -188,12 +178,7 @@ entryRuleChild returns [EObject current=null]:
 
 // Rule Child
 ruleChild returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='(child)'
 		{
@@ -246,12 +231,7 @@ entryRuleReference returns [EObject current=null]:
 
 // Rule Reference
 ruleReference returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='(ref)'
 		{

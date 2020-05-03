@@ -69,12 +69,7 @@ entryRuleSubMain returns [EObject current=null]:
 
 // Rule SubMain
 ruleSubMain returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='{'
 		{
@@ -134,12 +129,7 @@ entryRuleAnotherSuperMain returns [EObject current=null]:
 
 // Rule AnotherSuperMain
 ruleAnotherSuperMain returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='ups'
 		{
@@ -175,12 +165,7 @@ entryRuleSuperMain returns [EObject current=null]:
 
 // Rule SuperMain
 ruleSuperMain returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='super'
 		{

@@ -69,12 +69,7 @@ entryRuleRoot returns [EObject current=null]:
 
 // Rule Root
 ruleRoot returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getRootAccess().getIDListParserRuleCall_0());
@@ -105,12 +100,7 @@ entryRuleIDList returns [EObject current=null]:
 
 // Rule IDList
 ruleIDList returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -153,12 +143,7 @@ entryRuleKWList returns [EObject current=null]:
 
 // Rule KWList
 ruleKWList returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{

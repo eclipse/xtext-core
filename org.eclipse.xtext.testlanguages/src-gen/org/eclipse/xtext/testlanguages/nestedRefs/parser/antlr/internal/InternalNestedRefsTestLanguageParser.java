@@ -119,14 +119,11 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
         EObject lv_declarations_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalNestedRefsTestLanguage.g:77:2: ( ( (lv_declarations_0_0= ruleSelfReferingDecl ) )* )
-            // InternalNestedRefsTestLanguage.g:78:2: ( (lv_declarations_0_0= ruleSelfReferingDecl ) )*
+            // InternalNestedRefsTestLanguage.g:72:1: ( ( (lv_declarations_0_0= ruleSelfReferingDecl ) )* )
+            // InternalNestedRefsTestLanguage.g:73:2: ( (lv_declarations_0_0= ruleSelfReferingDecl ) )*
             {
-            // InternalNestedRefsTestLanguage.g:78:2: ( (lv_declarations_0_0= ruleSelfReferingDecl ) )*
+            // InternalNestedRefsTestLanguage.g:73:2: ( (lv_declarations_0_0= ruleSelfReferingDecl ) )*
             loop1:
             do {
                 int alt1=2;
@@ -139,10 +136,10 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalNestedRefsTestLanguage.g:79:3: (lv_declarations_0_0= ruleSelfReferingDecl )
+            	    // InternalNestedRefsTestLanguage.g:74:3: (lv_declarations_0_0= ruleSelfReferingDecl )
             	    {
-            	    // InternalNestedRefsTestLanguage.g:79:3: (lv_declarations_0_0= ruleSelfReferingDecl )
-            	    // InternalNestedRefsTestLanguage.g:80:4: lv_declarations_0_0= ruleSelfReferingDecl
+            	    // InternalNestedRefsTestLanguage.g:74:3: (lv_declarations_0_0= ruleSelfReferingDecl )
+            	    // InternalNestedRefsTestLanguage.g:75:4: lv_declarations_0_0= ruleSelfReferingDecl
             	    {
 
             	    				newCompositeNode(grammarAccess.getDocAccess().getDeclarationsSelfReferingDeclParserRuleCall_0());
@@ -178,9 +175,6 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -195,7 +189,7 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "entryRuleSelfReferingDecl"
-    // InternalNestedRefsTestLanguage.g:100:1: entryRuleSelfReferingDecl returns [EObject current=null] : iv_ruleSelfReferingDecl= ruleSelfReferingDecl EOF ;
+    // InternalNestedRefsTestLanguage.g:95:1: entryRuleSelfReferingDecl returns [EObject current=null] : iv_ruleSelfReferingDecl= ruleSelfReferingDecl EOF ;
     public final EObject entryRuleSelfReferingDecl() throws RecognitionException {
         EObject current = null;
 
@@ -203,8 +197,8 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
 
         try {
-            // InternalNestedRefsTestLanguage.g:100:57: (iv_ruleSelfReferingDecl= ruleSelfReferingDecl EOF )
-            // InternalNestedRefsTestLanguage.g:101:2: iv_ruleSelfReferingDecl= ruleSelfReferingDecl EOF
+            // InternalNestedRefsTestLanguage.g:95:57: (iv_ruleSelfReferingDecl= ruleSelfReferingDecl EOF )
+            // InternalNestedRefsTestLanguage.g:96:2: iv_ruleSelfReferingDecl= ruleSelfReferingDecl EOF
             {
              newCompositeNode(grammarAccess.getSelfReferingDeclRule()); 
             pushFollow(FOLLOW_1);
@@ -231,7 +225,7 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "ruleSelfReferingDecl"
-    // InternalNestedRefsTestLanguage.g:107:1: ruleSelfReferingDecl returns [EObject current=null] : (otherlv_0= 'decl' ( (lv_name_1_0= ruleQualifiedName ) ) otherlv_2= 'end' ( ( ruleQualifiedName ) ) otherlv_4= ';' ) ;
+    // InternalNestedRefsTestLanguage.g:102:1: ruleSelfReferingDecl returns [EObject current=null] : (otherlv_0= 'decl' ( (lv_name_1_0= ruleQualifiedName ) ) otherlv_2= 'end' ( ( ruleQualifiedName ) ) otherlv_4= ';' ) ;
     public final EObject ruleSelfReferingDecl() throws RecognitionException {
         EObject current = null;
 
@@ -241,25 +235,22 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
         AntlrDatatypeRuleToken lv_name_1_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalNestedRefsTestLanguage.g:113:2: ( (otherlv_0= 'decl' ( (lv_name_1_0= ruleQualifiedName ) ) otherlv_2= 'end' ( ( ruleQualifiedName ) ) otherlv_4= ';' ) )
-            // InternalNestedRefsTestLanguage.g:114:2: (otherlv_0= 'decl' ( (lv_name_1_0= ruleQualifiedName ) ) otherlv_2= 'end' ( ( ruleQualifiedName ) ) otherlv_4= ';' )
+            // InternalNestedRefsTestLanguage.g:103:1: ( (otherlv_0= 'decl' ( (lv_name_1_0= ruleQualifiedName ) ) otherlv_2= 'end' ( ( ruleQualifiedName ) ) otherlv_4= ';' ) )
+            // InternalNestedRefsTestLanguage.g:104:2: (otherlv_0= 'decl' ( (lv_name_1_0= ruleQualifiedName ) ) otherlv_2= 'end' ( ( ruleQualifiedName ) ) otherlv_4= ';' )
             {
-            // InternalNestedRefsTestLanguage.g:114:2: (otherlv_0= 'decl' ( (lv_name_1_0= ruleQualifiedName ) ) otherlv_2= 'end' ( ( ruleQualifiedName ) ) otherlv_4= ';' )
-            // InternalNestedRefsTestLanguage.g:115:3: otherlv_0= 'decl' ( (lv_name_1_0= ruleQualifiedName ) ) otherlv_2= 'end' ( ( ruleQualifiedName ) ) otherlv_4= ';'
+            // InternalNestedRefsTestLanguage.g:104:2: (otherlv_0= 'decl' ( (lv_name_1_0= ruleQualifiedName ) ) otherlv_2= 'end' ( ( ruleQualifiedName ) ) otherlv_4= ';' )
+            // InternalNestedRefsTestLanguage.g:105:3: otherlv_0= 'decl' ( (lv_name_1_0= ruleQualifiedName ) ) otherlv_2= 'end' ( ( ruleQualifiedName ) ) otherlv_4= ';'
             {
             otherlv_0=(Token)match(input,11,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getSelfReferingDeclAccess().getDeclKeyword_0());
             		
-            // InternalNestedRefsTestLanguage.g:119:3: ( (lv_name_1_0= ruleQualifiedName ) )
-            // InternalNestedRefsTestLanguage.g:120:4: (lv_name_1_0= ruleQualifiedName )
+            // InternalNestedRefsTestLanguage.g:109:3: ( (lv_name_1_0= ruleQualifiedName ) )
+            // InternalNestedRefsTestLanguage.g:110:4: (lv_name_1_0= ruleQualifiedName )
             {
-            // InternalNestedRefsTestLanguage.g:120:4: (lv_name_1_0= ruleQualifiedName )
-            // InternalNestedRefsTestLanguage.g:121:5: lv_name_1_0= ruleQualifiedName
+            // InternalNestedRefsTestLanguage.g:110:4: (lv_name_1_0= ruleQualifiedName )
+            // InternalNestedRefsTestLanguage.g:111:5: lv_name_1_0= ruleQualifiedName
             {
 
             					newCompositeNode(grammarAccess.getSelfReferingDeclAccess().getNameQualifiedNameParserRuleCall_1_0());
@@ -290,11 +281,11 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
             			newLeafNode(otherlv_2, grammarAccess.getSelfReferingDeclAccess().getEndKeyword_2());
             		
-            // InternalNestedRefsTestLanguage.g:142:3: ( ( ruleQualifiedName ) )
-            // InternalNestedRefsTestLanguage.g:143:4: ( ruleQualifiedName )
+            // InternalNestedRefsTestLanguage.g:132:3: ( ( ruleQualifiedName ) )
+            // InternalNestedRefsTestLanguage.g:133:4: ( ruleQualifiedName )
             {
-            // InternalNestedRefsTestLanguage.g:143:4: ( ruleQualifiedName )
-            // InternalNestedRefsTestLanguage.g:144:5: ruleQualifiedName
+            // InternalNestedRefsTestLanguage.g:133:4: ( ruleQualifiedName )
+            // InternalNestedRefsTestLanguage.g:134:5: ruleQualifiedName
             {
 
             					if (current==null) {
@@ -328,9 +319,6 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -345,7 +333,7 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalNestedRefsTestLanguage.g:166:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalNestedRefsTestLanguage.g:156:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -353,8 +341,8 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
 
         try {
-            // InternalNestedRefsTestLanguage.g:166:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalNestedRefsTestLanguage.g:167:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalNestedRefsTestLanguage.g:156:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalNestedRefsTestLanguage.g:157:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameRule()); 
             pushFollow(FOLLOW_1);
@@ -381,7 +369,7 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalNestedRefsTestLanguage.g:173:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalNestedRefsTestLanguage.g:163:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -389,15 +377,12 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
         Token kw=null;
         Token this_ID_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalNestedRefsTestLanguage.g:179:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalNestedRefsTestLanguage.g:180:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalNestedRefsTestLanguage.g:164:1: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalNestedRefsTestLanguage.g:165:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalNestedRefsTestLanguage.g:180:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalNestedRefsTestLanguage.g:181:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalNestedRefsTestLanguage.g:165:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalNestedRefsTestLanguage.g:166:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
             this_ID_0=(Token)match(input,RULE_ID,FOLLOW_7); 
 
@@ -406,7 +391,7 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
             			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
             		
-            // InternalNestedRefsTestLanguage.g:188:3: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalNestedRefsTestLanguage.g:173:3: (kw= '.' this_ID_2= RULE_ID )*
             loop2:
             do {
                 int alt2=2;
@@ -419,7 +404,7 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalNestedRefsTestLanguage.g:189:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalNestedRefsTestLanguage.g:174:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,14,FOLLOW_4); 
 
@@ -447,9 +432,6 @@ public class InternalNestedRefsTestLanguageParser extends AbstractInternalAntlrP
 
 
             }
-
-
-            	leaveRule();
 
         }
 

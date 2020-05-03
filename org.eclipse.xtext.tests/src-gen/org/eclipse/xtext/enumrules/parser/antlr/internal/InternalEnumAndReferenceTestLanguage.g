@@ -70,12 +70,7 @@ entryRuleEntityWithEnumAndReference returns [EObject current=null]:
 
 // Rule EntityWithEnumAndReference
 ruleEntityWithEnumAndReference returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -136,12 +131,7 @@ ruleEntityWithEnumAndReference returns [EObject current=null]
 
 // Rule KindOfKeyword
 ruleKindOfKeyword returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			enumLiteral_0='kindOfKeyword'

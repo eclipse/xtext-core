@@ -69,12 +69,7 @@ entryRuleParserRuleParameters returns [EObject current=null]:
 
 // Rule ParserRuleParameters
 ruleParserRuleParameters returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -566,12 +561,7 @@ entryRuleScenario1_True returns [EObject current=null]:
 
 // Rule Scenario1_True
 ruleScenario1_True returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_first_0_0=RULE_ID
@@ -601,12 +591,7 @@ entryRuleScenario1_False returns [EObject current=null]:
 
 // Rule Scenario1_False
 ruleScenario1_False returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_second_0_0=RULE_ID
@@ -636,12 +621,7 @@ entryRuleScenario2_True returns [EObject current=null]:
 
 // Rule Scenario2_True
 ruleScenario2_True returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -672,12 +652,7 @@ entryRuleScenario2_False returns [EObject current=null]:
 
 // Rule Scenario2_False
 ruleScenario2_False returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -708,12 +683,7 @@ entryRuleScenario3_True returns [EObject current=null]:
 
 // Rule Scenario3_True
 ruleScenario3_True returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			((
@@ -765,12 +735,7 @@ entryRuleScenario3_False returns [EObject current=null]:
 
 // Rule Scenario3_False
 ruleScenario3_False returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			((
@@ -822,12 +787,7 @@ entryRuleScenario4_True returns [EObject current=null]:
 
 // Rule Scenario4_True
 ruleScenario4_True returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			((
@@ -868,12 +828,7 @@ entryRuleScenario4_False returns [EObject current=null]:
 
 // Rule Scenario4_False
 ruleScenario4_False returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			((
@@ -914,12 +869,7 @@ entryRuleIdOrKeyword_True returns [String current=null]:
 
 // Rule IdOrKeyword_True
 ruleIdOrKeyword_True returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='keyword'
 		{
@@ -946,12 +896,7 @@ entryRuleIdOrKeyword_False returns [String current=null]:
 
 // Rule IdOrKeyword_False
 ruleIdOrKeyword_False returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_ID_0=RULE_ID
 	{
 		$current.merge(this_ID_0);
@@ -970,12 +915,7 @@ entryRuleIdOrKeyword returns [String current=null]:
 
 // Rule IdOrKeyword
 ruleIdOrKeyword returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_ID_0=RULE_ID
 	{
 		$current.merge(this_ID_0);
@@ -988,12 +928,7 @@ ruleIdOrKeyword returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleTok
 
 // Rule IdOrKeyword
 norm1_IdOrKeyword returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='keyword'
 		{

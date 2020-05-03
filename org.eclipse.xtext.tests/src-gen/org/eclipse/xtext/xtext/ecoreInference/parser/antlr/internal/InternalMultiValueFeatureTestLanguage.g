@@ -69,12 +69,7 @@ entryRuleStart returns [EObject current=null]:
 
 // Rule Start
 ruleStart returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_featureA_0_0=RULE_ID

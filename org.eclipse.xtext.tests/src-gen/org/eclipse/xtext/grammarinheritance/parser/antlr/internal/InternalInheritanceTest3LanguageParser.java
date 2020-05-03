@@ -121,12 +121,9 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
         EObject this_Model_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalInheritanceTest3Language.g:77:2: (this_Model_0= superModel )
-            // InternalInheritanceTest3Language.g:78:2: this_Model_0= superModel
+            // InternalInheritanceTest3Language.g:72:1: (this_Model_0= superModel )
+            // InternalInheritanceTest3Language.g:73:2: this_Model_0= superModel
             {
 
             		newCompositeNode(grammarAccess.getModelAccess().getModelParserRuleCall());
@@ -143,9 +140,6 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -160,7 +154,7 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
 
     // $ANTLR start "entryRuleElement"
-    // InternalInheritanceTest3Language.g:89:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
+    // InternalInheritanceTest3Language.g:84:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
     public final EObject entryRuleElement() throws RecognitionException {
         EObject current = null;
 
@@ -168,8 +162,8 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
 
         try {
-            // InternalInheritanceTest3Language.g:89:48: (iv_ruleElement= ruleElement EOF )
-            // InternalInheritanceTest3Language.g:90:2: iv_ruleElement= ruleElement EOF
+            // InternalInheritanceTest3Language.g:84:48: (iv_ruleElement= ruleElement EOF )
+            // InternalInheritanceTest3Language.g:85:2: iv_ruleElement= ruleElement EOF
             {
              newCompositeNode(grammarAccess.getElementRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -196,7 +190,7 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
 
     // $ANTLR start "ruleElement"
-    // InternalInheritanceTest3Language.g:96:1: ruleElement returns [EObject current=null] : (this_Element_0= superElement | ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) ) | ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) ) | ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) ) ) ;
+    // InternalInheritanceTest3Language.g:91:1: ruleElement returns [EObject current=null] : (this_Element_0= superElement | ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) ) | ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) ) | ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) ) ) ;
     public final EObject ruleElement() throws RecognitionException {
         EObject current = null;
 
@@ -209,14 +203,11 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
         EObject this_Element_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalInheritanceTest3Language.g:102:2: ( (this_Element_0= superElement | ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) ) | ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) ) | ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) ) ) )
-            // InternalInheritanceTest3Language.g:103:2: (this_Element_0= superElement | ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) ) | ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) ) | ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) ) )
+            // InternalInheritanceTest3Language.g:92:1: ( (this_Element_0= superElement | ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) ) | ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) ) | ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) ) ) )
+            // InternalInheritanceTest3Language.g:93:2: (this_Element_0= superElement | ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) ) | ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) ) | ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) ) )
             {
-            // InternalInheritanceTest3Language.g:103:2: (this_Element_0= superElement | ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) ) | ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) ) | ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) ) )
+            // InternalInheritanceTest3Language.g:93:2: (this_Element_0= superElement | ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) ) | ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) ) | ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) ) )
             int alt1=4;
             int LA1_0 = input.LA(1);
 
@@ -258,7 +249,7 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
             }
             switch (alt1) {
                 case 1 :
-                    // InternalInheritanceTest3Language.g:104:3: this_Element_0= superElement
+                    // InternalInheritanceTest3Language.g:94:3: this_Element_0= superElement
                     {
 
                     			newCompositeNode(grammarAccess.getElementAccess().getElementParserRuleCall_0());
@@ -276,13 +267,13 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
                     }
                     break;
                 case 2 :
-                    // InternalInheritanceTest3Language.g:113:3: ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) )
+                    // InternalInheritanceTest3Language.g:103:3: ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) )
                     {
-                    // InternalInheritanceTest3Language.g:113:3: ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) )
-                    // InternalInheritanceTest3Language.g:114:4: () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) )
+                    // InternalInheritanceTest3Language.g:103:3: ( () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) ) )
+                    // InternalInheritanceTest3Language.g:104:4: () otherlv_2= 'element' ( (lv_name_3_0= SUPER_ID ) )
                     {
-                    // InternalInheritanceTest3Language.g:114:4: ()
-                    // InternalInheritanceTest3Language.g:115:5: 
+                    // InternalInheritanceTest3Language.g:104:4: ()
+                    // InternalInheritanceTest3Language.g:105:5: 
                     {
 
                     					current = forceCreateModelElement(
@@ -296,11 +287,11 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
                     				newLeafNode(otherlv_2, grammarAccess.getElementAccess().getElementKeyword_1_1());
                     			
-                    // InternalInheritanceTest3Language.g:125:4: ( (lv_name_3_0= SUPER_ID ) )
-                    // InternalInheritanceTest3Language.g:126:5: (lv_name_3_0= SUPER_ID )
+                    // InternalInheritanceTest3Language.g:115:4: ( (lv_name_3_0= SUPER_ID ) )
+                    // InternalInheritanceTest3Language.g:116:5: (lv_name_3_0= SUPER_ID )
                     {
-                    // InternalInheritanceTest3Language.g:126:5: (lv_name_3_0= SUPER_ID )
-                    // InternalInheritanceTest3Language.g:127:6: lv_name_3_0= SUPER_ID
+                    // InternalInheritanceTest3Language.g:116:5: (lv_name_3_0= SUPER_ID )
+                    // InternalInheritanceTest3Language.g:117:6: lv_name_3_0= SUPER_ID
                     {
                     lv_name_3_0=(Token)match(input,SUPER_ID,FollowSets000.FOLLOW_2); 
 
@@ -329,13 +320,13 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
                     }
                     break;
                 case 3 :
-                    // InternalInheritanceTest3Language.g:145:3: ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) )
+                    // InternalInheritanceTest3Language.g:135:3: ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) )
                     {
-                    // InternalInheritanceTest3Language.g:145:3: ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) )
-                    // InternalInheritanceTest3Language.g:146:4: () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) )
+                    // InternalInheritanceTest3Language.g:135:3: ( () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) ) )
+                    // InternalInheritanceTest3Language.g:136:4: () otherlv_5= 'element' ( (lv_name_6_0= SUPER_1_ID ) )
                     {
-                    // InternalInheritanceTest3Language.g:146:4: ()
-                    // InternalInheritanceTest3Language.g:147:5: 
+                    // InternalInheritanceTest3Language.g:136:4: ()
+                    // InternalInheritanceTest3Language.g:137:5: 
                     {
 
                     					current = forceCreateModelElement(
@@ -349,11 +340,11 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
                     				newLeafNode(otherlv_5, grammarAccess.getElementAccess().getElementKeyword_2_1());
                     			
-                    // InternalInheritanceTest3Language.g:157:4: ( (lv_name_6_0= SUPER_1_ID ) )
-                    // InternalInheritanceTest3Language.g:158:5: (lv_name_6_0= SUPER_1_ID )
+                    // InternalInheritanceTest3Language.g:147:4: ( (lv_name_6_0= SUPER_1_ID ) )
+                    // InternalInheritanceTest3Language.g:148:5: (lv_name_6_0= SUPER_1_ID )
                     {
-                    // InternalInheritanceTest3Language.g:158:5: (lv_name_6_0= SUPER_1_ID )
-                    // InternalInheritanceTest3Language.g:159:6: lv_name_6_0= SUPER_1_ID
+                    // InternalInheritanceTest3Language.g:148:5: (lv_name_6_0= SUPER_1_ID )
+                    // InternalInheritanceTest3Language.g:149:6: lv_name_6_0= SUPER_1_ID
                     {
                     lv_name_6_0=(Token)match(input,SUPER_1_ID,FollowSets000.FOLLOW_2); 
 
@@ -382,13 +373,13 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
                     }
                     break;
                 case 4 :
-                    // InternalInheritanceTest3Language.g:177:3: ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) )
+                    // InternalInheritanceTest3Language.g:167:3: ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) )
                     {
-                    // InternalInheritanceTest3Language.g:177:3: ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) )
-                    // InternalInheritanceTest3Language.g:178:4: () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) )
+                    // InternalInheritanceTest3Language.g:167:3: ( () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) ) )
+                    // InternalInheritanceTest3Language.g:168:4: () otherlv_8= 'element' ( (lv_name_9_0= RULE_STRING ) )
                     {
-                    // InternalInheritanceTest3Language.g:178:4: ()
-                    // InternalInheritanceTest3Language.g:179:5: 
+                    // InternalInheritanceTest3Language.g:168:4: ()
+                    // InternalInheritanceTest3Language.g:169:5: 
                     {
 
                     					current = forceCreateModelElement(
@@ -402,11 +393,11 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
                     				newLeafNode(otherlv_8, grammarAccess.getElementAccess().getElementKeyword_3_1());
                     			
-                    // InternalInheritanceTest3Language.g:189:4: ( (lv_name_9_0= RULE_STRING ) )
-                    // InternalInheritanceTest3Language.g:190:5: (lv_name_9_0= RULE_STRING )
+                    // InternalInheritanceTest3Language.g:179:4: ( (lv_name_9_0= RULE_STRING ) )
+                    // InternalInheritanceTest3Language.g:180:5: (lv_name_9_0= RULE_STRING )
                     {
-                    // InternalInheritanceTest3Language.g:190:5: (lv_name_9_0= RULE_STRING )
-                    // InternalInheritanceTest3Language.g:191:6: lv_name_9_0= RULE_STRING
+                    // InternalInheritanceTest3Language.g:180:5: (lv_name_9_0= RULE_STRING )
+                    // InternalInheritanceTest3Language.g:181:6: lv_name_9_0= RULE_STRING
                     {
                     lv_name_9_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_2); 
 
@@ -440,9 +431,6 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -457,7 +445,7 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
 
     // $ANTLR start "entrySuperModel"
-    // InternalInheritanceTest3Language.g:212:1: entrySuperModel returns [EObject current=null] : iv_superModel= superModel EOF ;
+    // InternalInheritanceTest3Language.g:202:1: entrySuperModel returns [EObject current=null] : iv_superModel= superModel EOF ;
     public final EObject entrySuperModel() throws RecognitionException {
         EObject current = null;
 
@@ -465,8 +453,8 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
 
         try {
-            // InternalInheritanceTest3Language.g:212:47: (iv_superModel= superModel EOF )
-            // InternalInheritanceTest3Language.g:213:2: iv_superModel= superModel EOF
+            // InternalInheritanceTest3Language.g:202:47: (iv_superModel= superModel EOF )
+            // InternalInheritanceTest3Language.g:203:2: iv_superModel= superModel EOF
             {
              newCompositeNode(grammarAccess.getInheritanceTestLanguageModelRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -493,7 +481,7 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
 
     // $ANTLR start "superModel"
-    // InternalInheritanceTest3Language.g:219:1: superModel returns [EObject current=null] : (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' ) ;
+    // InternalInheritanceTest3Language.g:209:1: superModel returns [EObject current=null] : (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' ) ;
     public final EObject superModel() throws RecognitionException {
         EObject current = null;
 
@@ -504,25 +492,22 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
         EObject lv_elements_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalInheritanceTest3Language.g:225:2: ( (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' ) )
-            // InternalInheritanceTest3Language.g:226:2: (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' )
+            // InternalInheritanceTest3Language.g:210:1: ( (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' ) )
+            // InternalInheritanceTest3Language.g:211:2: (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' )
             {
-            // InternalInheritanceTest3Language.g:226:2: (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' )
-            // InternalInheritanceTest3Language.g:227:3: otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}'
+            // InternalInheritanceTest3Language.g:211:2: (otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' )
+            // InternalInheritanceTest3Language.g:212:3: otherlv_0= 'model' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}'
             {
             otherlv_0=(Token)match(input,14,FollowSets000.FOLLOW_6); 
 
             			newLeafNode(otherlv_0, grammarAccess.getInheritanceTestLanguageModelAccess().getModelKeyword_0());
             		
-            // InternalInheritanceTest3Language.g:231:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalInheritanceTest3Language.g:232:4: (lv_name_1_0= RULE_ID )
+            // InternalInheritanceTest3Language.g:216:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalInheritanceTest3Language.g:217:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalInheritanceTest3Language.g:232:4: (lv_name_1_0= RULE_ID )
-            // InternalInheritanceTest3Language.g:233:5: lv_name_1_0= RULE_ID
+            // InternalInheritanceTest3Language.g:217:4: (lv_name_1_0= RULE_ID )
+            // InternalInheritanceTest3Language.g:218:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_7); 
 
@@ -548,7 +533,7 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
             			newLeafNode(otherlv_2, grammarAccess.getInheritanceTestLanguageModelAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalInheritanceTest3Language.g:253:3: ( (lv_elements_3_0= ruleElement ) )*
+            // InternalInheritanceTest3Language.g:238:3: ( (lv_elements_3_0= ruleElement ) )*
             loop2:
             do {
                 int alt2=2;
@@ -561,10 +546,10 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalInheritanceTest3Language.g:254:4: (lv_elements_3_0= ruleElement )
+            	    // InternalInheritanceTest3Language.g:239:4: (lv_elements_3_0= ruleElement )
             	    {
-            	    // InternalInheritanceTest3Language.g:254:4: (lv_elements_3_0= ruleElement )
-            	    // InternalInheritanceTest3Language.g:255:5: lv_elements_3_0= ruleElement
+            	    // InternalInheritanceTest3Language.g:239:4: (lv_elements_3_0= ruleElement )
+            	    // InternalInheritanceTest3Language.g:240:5: lv_elements_3_0= ruleElement
             	    {
 
             	    					newCompositeNode(grammarAccess.getInheritanceTestLanguageModelAccess().getElementsElementParserRuleCall_3_0());
@@ -607,9 +592,6 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -624,7 +606,7 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
 
     // $ANTLR start "entrySuperElement"
-    // InternalInheritanceTest3Language.g:280:1: entrySuperElement returns [EObject current=null] : iv_superElement= superElement EOF ;
+    // InternalInheritanceTest3Language.g:265:1: entrySuperElement returns [EObject current=null] : iv_superElement= superElement EOF ;
     public final EObject entrySuperElement() throws RecognitionException {
         EObject current = null;
 
@@ -632,8 +614,8 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
 
         try {
-            // InternalInheritanceTest3Language.g:280:49: (iv_superElement= superElement EOF )
-            // InternalInheritanceTest3Language.g:281:2: iv_superElement= superElement EOF
+            // InternalInheritanceTest3Language.g:265:49: (iv_superElement= superElement EOF )
+            // InternalInheritanceTest3Language.g:266:2: iv_superElement= superElement EOF
             {
              newCompositeNode(grammarAccess.getInheritanceTestLanguageElementRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -660,32 +642,29 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
 
     // $ANTLR start "superElement"
-    // InternalInheritanceTest3Language.g:287:1: superElement returns [EObject current=null] : (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalInheritanceTest3Language.g:272:1: superElement returns [EObject current=null] : (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject superElement() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalInheritanceTest3Language.g:293:2: ( (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalInheritanceTest3Language.g:294:2: (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalInheritanceTest3Language.g:273:1: ( (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalInheritanceTest3Language.g:274:2: (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalInheritanceTest3Language.g:294:2: (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalInheritanceTest3Language.g:295:3: otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) )
+            // InternalInheritanceTest3Language.g:274:2: (otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalInheritanceTest3Language.g:275:3: otherlv_0= 'element' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,13,FollowSets000.FOLLOW_6); 
 
             			newLeafNode(otherlv_0, grammarAccess.getInheritanceTestLanguageElementAccess().getElementKeyword_0());
             		
-            // InternalInheritanceTest3Language.g:299:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalInheritanceTest3Language.g:300:4: (lv_name_1_0= RULE_ID )
+            // InternalInheritanceTest3Language.g:279:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalInheritanceTest3Language.g:280:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalInheritanceTest3Language.g:300:4: (lv_name_1_0= RULE_ID )
-            // InternalInheritanceTest3Language.g:301:5: lv_name_1_0= RULE_ID
+            // InternalInheritanceTest3Language.g:280:4: (lv_name_1_0= RULE_ID )
+            // InternalInheritanceTest3Language.g:281:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -712,9 +691,6 @@ public class InternalInheritanceTest3LanguageParser extends AbstractInternalAntl
 
 
             }
-
-
-            	leaveRule();
 
         }
 

@@ -69,12 +69,7 @@ entryRuleEntryRule returns [EObject current=null]:
 
 // Rule EntryRule
 ruleEntryRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -105,12 +100,7 @@ entryRuleAbstractRule returns [EObject current=null]:
 
 // Rule AbstractRule
 ruleAbstractRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getAbstractRuleAccess().getChoiceRuleParserRuleCall_0());
@@ -141,12 +131,7 @@ entryRuleChoiceRule returns [EObject current=null]:
 
 // Rule ChoiceRule
 ruleChoiceRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='choice'
 		{
@@ -196,12 +181,7 @@ entryRuleReducibleRule returns [EObject current=null]:
 
 // Rule ReducibleRule
 ruleReducibleRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='reducible'
 		{
@@ -255,12 +235,7 @@ entryRuleTerminalRule returns [EObject current=null]:
 
 // Rule TerminalRule
 ruleTerminalRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_stringFeature_0_0=RULE_STRING

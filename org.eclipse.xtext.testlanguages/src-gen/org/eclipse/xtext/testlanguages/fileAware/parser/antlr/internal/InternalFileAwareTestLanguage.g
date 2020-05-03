@@ -69,12 +69,7 @@ entryRulePackageDeclaration returns [EObject current=null]:
 
 // Rule PackageDeclaration
 rulePackageDeclaration returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='package'
 		{
@@ -149,12 +144,7 @@ entryRuleImport returns [EObject current=null]:
 
 // Rule Import
 ruleImport returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='import'
 		{
@@ -188,12 +178,7 @@ entryRuleElement returns [EObject current=null]:
 
 // Rule Element
 ruleElement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='element'
 		{
@@ -281,12 +266,7 @@ entryRuleQualifiedName returns [String current=null]:
 
 // Rule QualifiedName
 ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{

@@ -75,12 +75,9 @@ finally {
 // Rule Model
 ruleModel returns [EObject current=null]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='FIX'
@@ -180,12 +177,9 @@ finally {
 // Rule Error
 ruleError returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_APOSTROPHE_CHAR_0=RULE_APOSTROPHE_CHAR
 		{
@@ -232,12 +226,9 @@ finally {
 // Rule Fix
 ruleFix returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_APOSTROPHE_CHAR_0=RULE_APOSTROPHE_CHAR
 		{
@@ -294,12 +285,9 @@ finally {
 // Rule Apostrophe
 ruleApostrophe returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
 }
-@after {
-	leaveRule();
-}:
+:
 	this_APOSTROPHE_CHAR_0=RULE_APOSTROPHE_CHAR
 	{
 		$current.merge(this_APOSTROPHE_CHAR_0);
@@ -327,12 +315,9 @@ finally {
 // Rule Rehide
 ruleRehide returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='^'
 		{
@@ -354,12 +339,7 @@ entryRuleGraphical returns [String current=null]:
 
 // Rule Graphical
 ruleGraphical returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_CHAR_0=RULE_CHAR
 		{

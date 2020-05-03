@@ -118,25 +118,22 @@ public class InternalBug299237TestLanguageParser extends AbstractInternalAntlrPa
         Token lv_name_1_0=null;
         Token otherlv_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalBug299237TestLanguageParser.g:70:2: ( (otherlv_0= Model ( (lv_name_1_0= RULE_ID ) ) otherlv_2= Semicolon ) )
-            // InternalBug299237TestLanguageParser.g:71:2: (otherlv_0= Model ( (lv_name_1_0= RULE_ID ) ) otherlv_2= Semicolon )
+            // InternalBug299237TestLanguageParser.g:65:1: ( (otherlv_0= Model ( (lv_name_1_0= RULE_ID ) ) otherlv_2= Semicolon ) )
+            // InternalBug299237TestLanguageParser.g:66:2: (otherlv_0= Model ( (lv_name_1_0= RULE_ID ) ) otherlv_2= Semicolon )
             {
-            // InternalBug299237TestLanguageParser.g:71:2: (otherlv_0= Model ( (lv_name_1_0= RULE_ID ) ) otherlv_2= Semicolon )
-            // InternalBug299237TestLanguageParser.g:72:3: otherlv_0= Model ( (lv_name_1_0= RULE_ID ) ) otherlv_2= Semicolon
+            // InternalBug299237TestLanguageParser.g:66:2: (otherlv_0= Model ( (lv_name_1_0= RULE_ID ) ) otherlv_2= Semicolon )
+            // InternalBug299237TestLanguageParser.g:67:3: otherlv_0= Model ( (lv_name_1_0= RULE_ID ) ) otherlv_2= Semicolon
             {
             otherlv_0=(Token)match(input,Model,FollowSets000.FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getModelAccess().getModelKeyword_0());
             		
-            // InternalBug299237TestLanguageParser.g:76:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalBug299237TestLanguageParser.g:77:4: (lv_name_1_0= RULE_ID )
+            // InternalBug299237TestLanguageParser.g:71:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalBug299237TestLanguageParser.g:72:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalBug299237TestLanguageParser.g:77:4: (lv_name_1_0= RULE_ID )
-            // InternalBug299237TestLanguageParser.g:78:5: lv_name_1_0= RULE_ID
+            // InternalBug299237TestLanguageParser.g:72:4: (lv_name_1_0= RULE_ID )
+            // InternalBug299237TestLanguageParser.g:73:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_4); 
 
@@ -167,9 +164,6 @@ public class InternalBug299237TestLanguageParser extends AbstractInternalAntlrPa
 
 
             }
-
-
-            	leaveRule();
 
         }
 

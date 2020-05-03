@@ -125,10 +125,10 @@ public class InternalRenameTestLanguageLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRenameTestLanguage.g:174:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalRenameTestLanguage.g:174:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalRenameTestLanguage.g:164:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalRenameTestLanguage.g:164:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalRenameTestLanguage.g:174:11: ( '^' )?
+            // InternalRenameTestLanguage.g:164:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -137,7 +137,7 @@ public class InternalRenameTestLanguageLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalRenameTestLanguage.g:174:11: '^'
+                    // InternalRenameTestLanguage.g:164:11: '^'
                     {
                     match('^'); 
 
@@ -155,7 +155,7 @@ public class InternalRenameTestLanguageLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalRenameTestLanguage.g:174:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalRenameTestLanguage.g:164:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -204,10 +204,10 @@ public class InternalRenameTestLanguageLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRenameTestLanguage.g:176:10: ( ( '0' .. '9' )+ )
-            // InternalRenameTestLanguage.g:176:12: ( '0' .. '9' )+
+            // InternalRenameTestLanguage.g:166:10: ( ( '0' .. '9' )+ )
+            // InternalRenameTestLanguage.g:166:12: ( '0' .. '9' )+
             {
-            // InternalRenameTestLanguage.g:176:12: ( '0' .. '9' )+
+            // InternalRenameTestLanguage.g:166:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -221,7 +221,7 @@ public class InternalRenameTestLanguageLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalRenameTestLanguage.g:176:13: '0' .. '9'
+            	    // InternalRenameTestLanguage.g:166:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -253,10 +253,10 @@ public class InternalRenameTestLanguageLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRenameTestLanguage.g:178:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalRenameTestLanguage.g:178:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalRenameTestLanguage.g:168:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalRenameTestLanguage.g:168:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalRenameTestLanguage.g:178:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalRenameTestLanguage.g:168:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -274,10 +274,10 @@ public class InternalRenameTestLanguageLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalRenameTestLanguage.g:178:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalRenameTestLanguage.g:168:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalRenameTestLanguage.g:178:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalRenameTestLanguage.g:168:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -293,7 +293,7 @@ public class InternalRenameTestLanguageLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalRenameTestLanguage.g:178:21: '\\\\' .
+                    	    // InternalRenameTestLanguage.g:168:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -301,7 +301,7 @@ public class InternalRenameTestLanguageLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalRenameTestLanguage.g:178:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalRenameTestLanguage.g:168:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -326,10 +326,10 @@ public class InternalRenameTestLanguageLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalRenameTestLanguage.g:178:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalRenameTestLanguage.g:168:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalRenameTestLanguage.g:178:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalRenameTestLanguage.g:168:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -345,7 +345,7 @@ public class InternalRenameTestLanguageLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalRenameTestLanguage.g:178:54: '\\\\' .
+                    	    // InternalRenameTestLanguage.g:168:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -353,7 +353,7 @@ public class InternalRenameTestLanguageLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalRenameTestLanguage.g:178:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalRenameTestLanguage.g:168:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -396,12 +396,12 @@ public class InternalRenameTestLanguageLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRenameTestLanguage.g:180:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalRenameTestLanguage.g:180:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalRenameTestLanguage.g:170:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalRenameTestLanguage.g:170:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalRenameTestLanguage.g:180:24: ( options {greedy=false; } : . )*
+            // InternalRenameTestLanguage.g:170:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -426,7 +426,7 @@ public class InternalRenameTestLanguageLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalRenameTestLanguage.g:180:52: .
+            	    // InternalRenameTestLanguage.g:170:52: .
             	    {
             	    matchAny(); 
 
@@ -456,12 +456,12 @@ public class InternalRenameTestLanguageLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRenameTestLanguage.g:182:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalRenameTestLanguage.g:182:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalRenameTestLanguage.g:172:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalRenameTestLanguage.g:172:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalRenameTestLanguage.g:182:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalRenameTestLanguage.g:172:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -474,7 +474,7 @@ public class InternalRenameTestLanguageLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalRenameTestLanguage.g:182:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalRenameTestLanguage.g:172:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -494,7 +494,7 @@ public class InternalRenameTestLanguageLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalRenameTestLanguage.g:182:40: ( ( '\\r' )? '\\n' )?
+            // InternalRenameTestLanguage.g:172:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -503,9 +503,9 @@ public class InternalRenameTestLanguageLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalRenameTestLanguage.g:182:41: ( '\\r' )? '\\n'
+                    // InternalRenameTestLanguage.g:172:41: ( '\\r' )? '\\n'
                     {
-                    // InternalRenameTestLanguage.g:182:41: ( '\\r' )?
+                    // InternalRenameTestLanguage.g:172:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -514,7 +514,7 @@ public class InternalRenameTestLanguageLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalRenameTestLanguage.g:182:41: '\\r'
+                            // InternalRenameTestLanguage.g:172:41: '\\r'
                             {
                             match('\r'); 
 
@@ -546,10 +546,10 @@ public class InternalRenameTestLanguageLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRenameTestLanguage.g:184:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalRenameTestLanguage.g:184:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalRenameTestLanguage.g:174:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalRenameTestLanguage.g:174:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalRenameTestLanguage.g:184:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalRenameTestLanguage.g:174:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -603,8 +603,8 @@ public class InternalRenameTestLanguageLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRenameTestLanguage.g:186:16: ( . )
-            // InternalRenameTestLanguage.g:186:18: .
+            // InternalRenameTestLanguage.g:176:16: ( . )
+            // InternalRenameTestLanguage.g:176:18: .
             {
             matchAny(); 
 

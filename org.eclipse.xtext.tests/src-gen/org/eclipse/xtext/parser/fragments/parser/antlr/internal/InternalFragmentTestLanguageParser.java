@@ -159,18 +159,15 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         EObject lv_element_18_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:77:2: ( ( () ( (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) ) | (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) ) | (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) ) | (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) ) | (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) ) | (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) ) | (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) ) | (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) ) ) ) )
-            // InternalFragmentTestLanguage.g:78:2: ( () ( (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) ) | (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) ) | (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) ) | (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) ) | (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) ) | (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) ) | (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) ) | (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) ) ) )
+            // InternalFragmentTestLanguage.g:72:1: ( ( () ( (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) ) | (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) ) | (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) ) | (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) ) | (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) ) | (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) ) | (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) ) | (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) ) ) ) )
+            // InternalFragmentTestLanguage.g:73:2: ( () ( (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) ) | (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) ) | (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) ) | (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) ) | (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) ) | (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) ) | (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) ) | (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) ) ) )
             {
-            // InternalFragmentTestLanguage.g:78:2: ( () ( (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) ) | (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) ) | (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) ) | (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) ) | (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) ) | (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) ) | (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) ) | (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) ) ) )
-            // InternalFragmentTestLanguage.g:79:3: () ( (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) ) | (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) ) | (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) ) | (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) ) | (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) ) | (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) ) | (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) ) | (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) ) )
+            // InternalFragmentTestLanguage.g:73:2: ( () ( (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) ) | (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) ) | (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) ) | (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) ) | (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) ) | (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) ) | (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) ) | (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) ) ) )
+            // InternalFragmentTestLanguage.g:74:3: () ( (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) ) | (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) ) | (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) ) | (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) ) | (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) ) | (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) ) | (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) ) | (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) ) )
             {
-            // InternalFragmentTestLanguage.g:79:3: ()
-            // InternalFragmentTestLanguage.g:80:4: 
+            // InternalFragmentTestLanguage.g:74:3: ()
+            // InternalFragmentTestLanguage.g:75:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -182,7 +179,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalFragmentTestLanguage.g:86:3: ( (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) ) | (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) ) | (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) ) | (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) ) | (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) ) | (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) ) | (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) ) | (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) ) )
+            // InternalFragmentTestLanguage.g:81:3: ( (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) ) | (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) ) | (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) ) | (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) ) | (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) ) | (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) ) | (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) ) | (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) ) )
             int alt1=8;
             switch ( input.LA(1) ) {
             case 11:
@@ -235,10 +232,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             switch (alt1) {
                 case 1 :
-                    // InternalFragmentTestLanguage.g:87:4: (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) )
+                    // InternalFragmentTestLanguage.g:82:4: (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) )
                     {
-                    // InternalFragmentTestLanguage.g:87:4: (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) )
-                    // InternalFragmentTestLanguage.g:88:5: otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) )
+                    // InternalFragmentTestLanguage.g:82:4: (otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) ) )
+                    // InternalFragmentTestLanguage.g:83:5: otherlv_1= '#1' ( (lv_element_2_0= rulePRFNamed ) )
                     {
                     otherlv_1=(Token)match(input,11,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -246,11 +243,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                       					newLeafNode(otherlv_1, grammarAccess.getParserRuleFragmentsAccess().getNumberSignDigitOneKeyword_1_0_0());
                       				
                     }
-                    // InternalFragmentTestLanguage.g:92:5: ( (lv_element_2_0= rulePRFNamed ) )
-                    // InternalFragmentTestLanguage.g:93:6: (lv_element_2_0= rulePRFNamed )
+                    // InternalFragmentTestLanguage.g:87:5: ( (lv_element_2_0= rulePRFNamed ) )
+                    // InternalFragmentTestLanguage.g:88:6: (lv_element_2_0= rulePRFNamed )
                     {
-                    // InternalFragmentTestLanguage.g:93:6: (lv_element_2_0= rulePRFNamed )
-                    // InternalFragmentTestLanguage.g:94:7: lv_element_2_0= rulePRFNamed
+                    // InternalFragmentTestLanguage.g:88:6: (lv_element_2_0= rulePRFNamed )
+                    // InternalFragmentTestLanguage.g:89:7: lv_element_2_0= rulePRFNamed
                     {
                     if ( state.backtracking==0 ) {
 
@@ -288,10 +285,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 2 :
-                    // InternalFragmentTestLanguage.g:113:4: (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) )
+                    // InternalFragmentTestLanguage.g:108:4: (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) )
                     {
-                    // InternalFragmentTestLanguage.g:113:4: (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) )
-                    // InternalFragmentTestLanguage.g:114:5: otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) )
+                    // InternalFragmentTestLanguage.g:108:4: (otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) ) )
+                    // InternalFragmentTestLanguage.g:109:5: otherlv_3= '#2' ( (lv_element_4_0= rulePRFNamed ) ) otherlv_5= '->' ( (otherlv_6= RULE_ID ) )
                     {
                     otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -299,11 +296,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                       					newLeafNode(otherlv_3, grammarAccess.getParserRuleFragmentsAccess().getNumberSignDigitTwoKeyword_1_1_0());
                       				
                     }
-                    // InternalFragmentTestLanguage.g:118:5: ( (lv_element_4_0= rulePRFNamed ) )
-                    // InternalFragmentTestLanguage.g:119:6: (lv_element_4_0= rulePRFNamed )
+                    // InternalFragmentTestLanguage.g:113:5: ( (lv_element_4_0= rulePRFNamed ) )
+                    // InternalFragmentTestLanguage.g:114:6: (lv_element_4_0= rulePRFNamed )
                     {
-                    // InternalFragmentTestLanguage.g:119:6: (lv_element_4_0= rulePRFNamed )
-                    // InternalFragmentTestLanguage.g:120:7: lv_element_4_0= rulePRFNamed
+                    // InternalFragmentTestLanguage.g:114:6: (lv_element_4_0= rulePRFNamed )
+                    // InternalFragmentTestLanguage.g:115:7: lv_element_4_0= rulePRFNamed
                     {
                     if ( state.backtracking==0 ) {
 
@@ -340,11 +337,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                       					newLeafNode(otherlv_5, grammarAccess.getParserRuleFragmentsAccess().getHyphenMinusGreaterThanSignKeyword_1_1_2());
                       				
                     }
-                    // InternalFragmentTestLanguage.g:141:5: ( (otherlv_6= RULE_ID ) )
-                    // InternalFragmentTestLanguage.g:142:6: (otherlv_6= RULE_ID )
+                    // InternalFragmentTestLanguage.g:136:5: ( (otherlv_6= RULE_ID ) )
+                    // InternalFragmentTestLanguage.g:137:6: (otherlv_6= RULE_ID )
                     {
-                    // InternalFragmentTestLanguage.g:142:6: (otherlv_6= RULE_ID )
-                    // InternalFragmentTestLanguage.g:143:7: otherlv_6= RULE_ID
+                    // InternalFragmentTestLanguage.g:137:6: (otherlv_6= RULE_ID )
+                    // InternalFragmentTestLanguage.g:138:7: otherlv_6= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -372,10 +369,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 3 :
-                    // InternalFragmentTestLanguage.g:156:4: (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) )
+                    // InternalFragmentTestLanguage.g:151:4: (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) )
                     {
-                    // InternalFragmentTestLanguage.g:156:4: (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) )
-                    // InternalFragmentTestLanguage.g:157:5: otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) )
+                    // InternalFragmentTestLanguage.g:151:4: (otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) ) )
+                    // InternalFragmentTestLanguage.g:152:5: otherlv_7= '#3' ( (lv_element_8_0= rulePRFNamedRefFirst ) )
                     {
                     otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -383,11 +380,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                       					newLeafNode(otherlv_7, grammarAccess.getParserRuleFragmentsAccess().getNumberSignDigitThreeKeyword_1_2_0());
                       				
                     }
-                    // InternalFragmentTestLanguage.g:161:5: ( (lv_element_8_0= rulePRFNamedRefFirst ) )
-                    // InternalFragmentTestLanguage.g:162:6: (lv_element_8_0= rulePRFNamedRefFirst )
+                    // InternalFragmentTestLanguage.g:156:5: ( (lv_element_8_0= rulePRFNamedRefFirst ) )
+                    // InternalFragmentTestLanguage.g:157:6: (lv_element_8_0= rulePRFNamedRefFirst )
                     {
-                    // InternalFragmentTestLanguage.g:162:6: (lv_element_8_0= rulePRFNamedRefFirst )
-                    // InternalFragmentTestLanguage.g:163:7: lv_element_8_0= rulePRFNamedRefFirst
+                    // InternalFragmentTestLanguage.g:157:6: (lv_element_8_0= rulePRFNamedRefFirst )
+                    // InternalFragmentTestLanguage.g:158:7: lv_element_8_0= rulePRFNamedRefFirst
                     {
                     if ( state.backtracking==0 ) {
 
@@ -425,10 +422,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 4 :
-                    // InternalFragmentTestLanguage.g:182:4: (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) )
+                    // InternalFragmentTestLanguage.g:177:4: (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) )
                     {
-                    // InternalFragmentTestLanguage.g:182:4: (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) )
-                    // InternalFragmentTestLanguage.g:183:5: otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) )
+                    // InternalFragmentTestLanguage.g:177:4: (otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) ) )
+                    // InternalFragmentTestLanguage.g:178:5: otherlv_9= '#4' ( (lv_element_10_0= rulePRFNamedWithAction ) )
                     {
                     otherlv_9=(Token)match(input,15,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -436,11 +433,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                       					newLeafNode(otherlv_9, grammarAccess.getParserRuleFragmentsAccess().getNumberSignDigitFourKeyword_1_3_0());
                       				
                     }
-                    // InternalFragmentTestLanguage.g:187:5: ( (lv_element_10_0= rulePRFNamedWithAction ) )
-                    // InternalFragmentTestLanguage.g:188:6: (lv_element_10_0= rulePRFNamedWithAction )
+                    // InternalFragmentTestLanguage.g:182:5: ( (lv_element_10_0= rulePRFNamedWithAction ) )
+                    // InternalFragmentTestLanguage.g:183:6: (lv_element_10_0= rulePRFNamedWithAction )
                     {
-                    // InternalFragmentTestLanguage.g:188:6: (lv_element_10_0= rulePRFNamedWithAction )
-                    // InternalFragmentTestLanguage.g:189:7: lv_element_10_0= rulePRFNamedWithAction
+                    // InternalFragmentTestLanguage.g:183:6: (lv_element_10_0= rulePRFNamedWithAction )
+                    // InternalFragmentTestLanguage.g:184:7: lv_element_10_0= rulePRFNamedWithAction
                     {
                     if ( state.backtracking==0 ) {
 
@@ -478,10 +475,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 5 :
-                    // InternalFragmentTestLanguage.g:208:4: (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) )
+                    // InternalFragmentTestLanguage.g:203:4: (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) )
                     {
-                    // InternalFragmentTestLanguage.g:208:4: (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) )
-                    // InternalFragmentTestLanguage.g:209:5: otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) )
+                    // InternalFragmentTestLanguage.g:203:4: (otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) ) )
+                    // InternalFragmentTestLanguage.g:204:5: otherlv_11= '#8' ( (lv_element_12_0= rulePRFNamedWithFQN ) )
                     {
                     otherlv_11=(Token)match(input,16,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -489,11 +486,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                       					newLeafNode(otherlv_11, grammarAccess.getParserRuleFragmentsAccess().getNumberSignDigitEightKeyword_1_4_0());
                       				
                     }
-                    // InternalFragmentTestLanguage.g:213:5: ( (lv_element_12_0= rulePRFNamedWithFQN ) )
-                    // InternalFragmentTestLanguage.g:214:6: (lv_element_12_0= rulePRFNamedWithFQN )
+                    // InternalFragmentTestLanguage.g:208:5: ( (lv_element_12_0= rulePRFNamedWithFQN ) )
+                    // InternalFragmentTestLanguage.g:209:6: (lv_element_12_0= rulePRFNamedWithFQN )
                     {
-                    // InternalFragmentTestLanguage.g:214:6: (lv_element_12_0= rulePRFNamedWithFQN )
-                    // InternalFragmentTestLanguage.g:215:7: lv_element_12_0= rulePRFNamedWithFQN
+                    // InternalFragmentTestLanguage.g:209:6: (lv_element_12_0= rulePRFNamedWithFQN )
+                    // InternalFragmentTestLanguage.g:210:7: lv_element_12_0= rulePRFNamedWithFQN
                     {
                     if ( state.backtracking==0 ) {
 
@@ -531,10 +528,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 6 :
-                    // InternalFragmentTestLanguage.g:234:4: (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) )
+                    // InternalFragmentTestLanguage.g:229:4: (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) )
                     {
-                    // InternalFragmentTestLanguage.g:234:4: (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) )
-                    // InternalFragmentTestLanguage.g:235:5: otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) )
+                    // InternalFragmentTestLanguage.g:229:4: (otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) ) )
+                    // InternalFragmentTestLanguage.g:230:5: otherlv_13= '#9' ( (lv_element_14_0= rulePRFWithPredicate ) )
                     {
                     otherlv_13=(Token)match(input,17,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -542,11 +539,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                       					newLeafNode(otherlv_13, grammarAccess.getParserRuleFragmentsAccess().getNumberSignDigitNineKeyword_1_5_0());
                       				
                     }
-                    // InternalFragmentTestLanguage.g:239:5: ( (lv_element_14_0= rulePRFWithPredicate ) )
-                    // InternalFragmentTestLanguage.g:240:6: (lv_element_14_0= rulePRFWithPredicate )
+                    // InternalFragmentTestLanguage.g:234:5: ( (lv_element_14_0= rulePRFWithPredicate ) )
+                    // InternalFragmentTestLanguage.g:235:6: (lv_element_14_0= rulePRFWithPredicate )
                     {
-                    // InternalFragmentTestLanguage.g:240:6: (lv_element_14_0= rulePRFWithPredicate )
-                    // InternalFragmentTestLanguage.g:241:7: lv_element_14_0= rulePRFWithPredicate
+                    // InternalFragmentTestLanguage.g:235:6: (lv_element_14_0= rulePRFWithPredicate )
+                    // InternalFragmentTestLanguage.g:236:7: lv_element_14_0= rulePRFWithPredicate
                     {
                     if ( state.backtracking==0 ) {
 
@@ -584,10 +581,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 7 :
-                    // InternalFragmentTestLanguage.g:260:4: (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) )
+                    // InternalFragmentTestLanguage.g:255:4: (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) )
                     {
-                    // InternalFragmentTestLanguage.g:260:4: (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) )
-                    // InternalFragmentTestLanguage.g:261:5: otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) )
+                    // InternalFragmentTestLanguage.g:255:4: (otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) ) )
+                    // InternalFragmentTestLanguage.g:256:5: otherlv_15= '#10' ( (lv_element_16_0= rulePRFNamedRecursive ) )
                     {
                     otherlv_15=(Token)match(input,18,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -595,11 +592,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                       					newLeafNode(otherlv_15, grammarAccess.getParserRuleFragmentsAccess().getNumberSignDigitOneDigitZeroKeyword_1_6_0());
                       				
                     }
-                    // InternalFragmentTestLanguage.g:265:5: ( (lv_element_16_0= rulePRFNamedRecursive ) )
-                    // InternalFragmentTestLanguage.g:266:6: (lv_element_16_0= rulePRFNamedRecursive )
+                    // InternalFragmentTestLanguage.g:260:5: ( (lv_element_16_0= rulePRFNamedRecursive ) )
+                    // InternalFragmentTestLanguage.g:261:6: (lv_element_16_0= rulePRFNamedRecursive )
                     {
-                    // InternalFragmentTestLanguage.g:266:6: (lv_element_16_0= rulePRFNamedRecursive )
-                    // InternalFragmentTestLanguage.g:267:7: lv_element_16_0= rulePRFNamedRecursive
+                    // InternalFragmentTestLanguage.g:261:6: (lv_element_16_0= rulePRFNamedRecursive )
+                    // InternalFragmentTestLanguage.g:262:7: lv_element_16_0= rulePRFNamedRecursive
                     {
                     if ( state.backtracking==0 ) {
 
@@ -637,10 +634,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 8 :
-                    // InternalFragmentTestLanguage.g:286:4: (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) )
+                    // InternalFragmentTestLanguage.g:281:4: (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) )
                     {
-                    // InternalFragmentTestLanguage.g:286:4: (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) )
-                    // InternalFragmentTestLanguage.g:287:5: otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) )
+                    // InternalFragmentTestLanguage.g:281:4: (otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) ) )
+                    // InternalFragmentTestLanguage.g:282:5: otherlv_17= '#11' ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) )
                     {
                     otherlv_17=(Token)match(input,19,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -648,11 +645,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                       					newLeafNode(otherlv_17, grammarAccess.getParserRuleFragmentsAccess().getNumberSignDigitOneDigitOneKeyword_1_7_0());
                       				
                     }
-                    // InternalFragmentTestLanguage.g:291:5: ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) )
-                    // InternalFragmentTestLanguage.g:292:6: (lv_element_18_0= rulePRFNamedRecursiveFragment )
+                    // InternalFragmentTestLanguage.g:286:5: ( (lv_element_18_0= rulePRFNamedRecursiveFragment ) )
+                    // InternalFragmentTestLanguage.g:287:6: (lv_element_18_0= rulePRFNamedRecursiveFragment )
                     {
-                    // InternalFragmentTestLanguage.g:292:6: (lv_element_18_0= rulePRFNamedRecursiveFragment )
-                    // InternalFragmentTestLanguage.g:293:7: lv_element_18_0= rulePRFNamedRecursiveFragment
+                    // InternalFragmentTestLanguage.g:287:6: (lv_element_18_0= rulePRFNamedRecursiveFragment )
+                    // InternalFragmentTestLanguage.g:288:7: lv_element_18_0= rulePRFNamedRecursiveFragment
                     {
                     if ( state.backtracking==0 ) {
 
@@ -698,11 +695,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -717,7 +709,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRulePRFNamed"
-    // InternalFragmentTestLanguage.g:316:1: entryRulePRFNamed returns [EObject current=null] : iv_rulePRFNamed= rulePRFNamed EOF ;
+    // InternalFragmentTestLanguage.g:311:1: entryRulePRFNamed returns [EObject current=null] : iv_rulePRFNamed= rulePRFNamed EOF ;
     public final EObject entryRulePRFNamed() throws RecognitionException {
         EObject current = null;
 
@@ -725,8 +717,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalFragmentTestLanguage.g:316:49: (iv_rulePRFNamed= rulePRFNamed EOF )
-            // InternalFragmentTestLanguage.g:317:2: iv_rulePRFNamed= rulePRFNamed EOF
+            // InternalFragmentTestLanguage.g:311:49: (iv_rulePRFNamed= rulePRFNamed EOF )
+            // InternalFragmentTestLanguage.g:312:2: iv_rulePRFNamed= rulePRFNamed EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPRFNamedRule()); 
@@ -757,7 +749,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "rulePRFNamed"
-    // InternalFragmentTestLanguage.g:323:1: rulePRFNamed returns [EObject current=null] : (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )? ) ;
+    // InternalFragmentTestLanguage.g:318:1: rulePRFNamed returns [EObject current=null] : (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )? ) ;
     public final EObject rulePRFNamed() throws RecognitionException {
         EObject current = null;
 
@@ -769,15 +761,12 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         EObject this_PRFNamedRef_4 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:329:2: ( (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )? ) )
-            // InternalFragmentTestLanguage.g:330:2: (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )? )
+            // InternalFragmentTestLanguage.g:319:1: ( (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )? ) )
+            // InternalFragmentTestLanguage.g:320:2: (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )? )
             {
-            // InternalFragmentTestLanguage.g:330:2: (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )? )
-            // InternalFragmentTestLanguage.g:331:3: this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )?
+            // InternalFragmentTestLanguage.g:320:2: (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )? )
+            // InternalFragmentTestLanguage.g:321:3: this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )?
             {
             if ( state.backtracking==0 ) {
 
@@ -798,7 +787,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalFragmentTestLanguage.g:342:3: ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )?
+            // InternalFragmentTestLanguage.g:332:3: ( (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) | (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] ) )?
             int alt2=3;
             int LA2_0 = input.LA(1);
 
@@ -810,10 +799,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
             }
             switch (alt2) {
                 case 1 :
-                    // InternalFragmentTestLanguage.g:343:4: (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+                    // InternalFragmentTestLanguage.g:333:4: (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
                     {
-                    // InternalFragmentTestLanguage.g:343:4: (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
-                    // InternalFragmentTestLanguage.g:344:5: otherlv_1= ':' ( (otherlv_2= RULE_ID ) )
+                    // InternalFragmentTestLanguage.g:333:4: (otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+                    // InternalFragmentTestLanguage.g:334:5: otherlv_1= ':' ( (otherlv_2= RULE_ID ) )
                     {
                     otherlv_1=(Token)match(input,20,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -821,11 +810,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                       					newLeafNode(otherlv_1, grammarAccess.getPRFNamedAccess().getColonKeyword_1_0_0());
                       				
                     }
-                    // InternalFragmentTestLanguage.g:348:5: ( (otherlv_2= RULE_ID ) )
-                    // InternalFragmentTestLanguage.g:349:6: (otherlv_2= RULE_ID )
+                    // InternalFragmentTestLanguage.g:338:5: ( (otherlv_2= RULE_ID ) )
+                    // InternalFragmentTestLanguage.g:339:6: (otherlv_2= RULE_ID )
                     {
-                    // InternalFragmentTestLanguage.g:349:6: (otherlv_2= RULE_ID )
-                    // InternalFragmentTestLanguage.g:350:7: otherlv_2= RULE_ID
+                    // InternalFragmentTestLanguage.g:339:6: (otherlv_2= RULE_ID )
+                    // InternalFragmentTestLanguage.g:340:7: otherlv_2= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -853,10 +842,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 2 :
-                    // InternalFragmentTestLanguage.g:363:4: (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] )
+                    // InternalFragmentTestLanguage.g:353:4: (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] )
                     {
-                    // InternalFragmentTestLanguage.g:363:4: (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] )
-                    // InternalFragmentTestLanguage.g:364:5: otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current]
+                    // InternalFragmentTestLanguage.g:353:4: (otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current] )
+                    // InternalFragmentTestLanguage.g:354:5: otherlv_3= '-' this_PRFNamedRef_4= rulePRFNamedRef[$current]
                     {
                     otherlv_3=(Token)match(input,21,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -898,11 +887,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -917,7 +901,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRulePRFNamedRecursive"
-    // InternalFragmentTestLanguage.g:385:1: entryRulePRFNamedRecursive returns [EObject current=null] : iv_rulePRFNamedRecursive= rulePRFNamedRecursive EOF ;
+    // InternalFragmentTestLanguage.g:375:1: entryRulePRFNamedRecursive returns [EObject current=null] : iv_rulePRFNamedRecursive= rulePRFNamedRecursive EOF ;
     public final EObject entryRulePRFNamedRecursive() throws RecognitionException {
         EObject current = null;
 
@@ -925,8 +909,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalFragmentTestLanguage.g:385:58: (iv_rulePRFNamedRecursive= rulePRFNamedRecursive EOF )
-            // InternalFragmentTestLanguage.g:386:2: iv_rulePRFNamedRecursive= rulePRFNamedRecursive EOF
+            // InternalFragmentTestLanguage.g:375:58: (iv_rulePRFNamedRecursive= rulePRFNamedRecursive EOF )
+            // InternalFragmentTestLanguage.g:376:2: iv_rulePRFNamedRecursive= rulePRFNamedRecursive EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPRFNamedRecursiveRule()); 
@@ -957,7 +941,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "rulePRFNamedRecursive"
-    // InternalFragmentTestLanguage.g:392:1: rulePRFNamedRecursive returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFromFragment_1= ruleRecursiveFromFragment[$current] ) ;
+    // InternalFragmentTestLanguage.g:382:1: rulePRFNamedRecursive returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFromFragment_1= ruleRecursiveFromFragment[$current] ) ;
     public final EObject rulePRFNamedRecursive() throws RecognitionException {
         EObject current = null;
 
@@ -965,21 +949,18 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         EObject this_RecursiveFromFragment_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:398:2: ( ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFromFragment_1= ruleRecursiveFromFragment[$current] ) )
-            // InternalFragmentTestLanguage.g:399:2: ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFromFragment_1= ruleRecursiveFromFragment[$current] )
+            // InternalFragmentTestLanguage.g:383:1: ( ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFromFragment_1= ruleRecursiveFromFragment[$current] ) )
+            // InternalFragmentTestLanguage.g:384:2: ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFromFragment_1= ruleRecursiveFromFragment[$current] )
             {
-            // InternalFragmentTestLanguage.g:399:2: ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFromFragment_1= ruleRecursiveFromFragment[$current] )
-            // InternalFragmentTestLanguage.g:400:3: ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFromFragment_1= ruleRecursiveFromFragment[$current]
+            // InternalFragmentTestLanguage.g:384:2: ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFromFragment_1= ruleRecursiveFromFragment[$current] )
+            // InternalFragmentTestLanguage.g:385:3: ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFromFragment_1= ruleRecursiveFromFragment[$current]
             {
-            // InternalFragmentTestLanguage.g:400:3: ( (lv_name_0_0= RULE_ID ) )
-            // InternalFragmentTestLanguage.g:401:4: (lv_name_0_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:385:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalFragmentTestLanguage.g:386:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalFragmentTestLanguage.g:401:4: (lv_name_0_0= RULE_ID )
-            // InternalFragmentTestLanguage.g:402:5: lv_name_0_0= RULE_ID
+            // InternalFragmentTestLanguage.g:386:4: (lv_name_0_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:387:5: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1030,11 +1011,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1049,7 +1025,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRulePRFNamedRecursiveFragment"
-    // InternalFragmentTestLanguage.g:433:1: entryRulePRFNamedRecursiveFragment returns [EObject current=null] : iv_rulePRFNamedRecursiveFragment= rulePRFNamedRecursiveFragment EOF ;
+    // InternalFragmentTestLanguage.g:418:1: entryRulePRFNamedRecursiveFragment returns [EObject current=null] : iv_rulePRFNamedRecursiveFragment= rulePRFNamedRecursiveFragment EOF ;
     public final EObject entryRulePRFNamedRecursiveFragment() throws RecognitionException {
         EObject current = null;
 
@@ -1057,8 +1033,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalFragmentTestLanguage.g:433:66: (iv_rulePRFNamedRecursiveFragment= rulePRFNamedRecursiveFragment EOF )
-            // InternalFragmentTestLanguage.g:434:2: iv_rulePRFNamedRecursiveFragment= rulePRFNamedRecursiveFragment EOF
+            // InternalFragmentTestLanguage.g:418:66: (iv_rulePRFNamedRecursiveFragment= rulePRFNamedRecursiveFragment EOF )
+            // InternalFragmentTestLanguage.g:419:2: iv_rulePRFNamedRecursiveFragment= rulePRFNamedRecursiveFragment EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPRFNamedRecursiveFragmentRule()); 
@@ -1089,7 +1065,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "rulePRFNamedRecursiveFragment"
-    // InternalFragmentTestLanguage.g:440:1: rulePRFNamedRecursiveFragment returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFragment_1= ruleRecursiveFragment[$current] ) ;
+    // InternalFragmentTestLanguage.g:425:1: rulePRFNamedRecursiveFragment returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFragment_1= ruleRecursiveFragment[$current] ) ;
     public final EObject rulePRFNamedRecursiveFragment() throws RecognitionException {
         EObject current = null;
 
@@ -1097,21 +1073,18 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         EObject this_RecursiveFragment_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:446:2: ( ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFragment_1= ruleRecursiveFragment[$current] ) )
-            // InternalFragmentTestLanguage.g:447:2: ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFragment_1= ruleRecursiveFragment[$current] )
+            // InternalFragmentTestLanguage.g:426:1: ( ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFragment_1= ruleRecursiveFragment[$current] ) )
+            // InternalFragmentTestLanguage.g:427:2: ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFragment_1= ruleRecursiveFragment[$current] )
             {
-            // InternalFragmentTestLanguage.g:447:2: ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFragment_1= ruleRecursiveFragment[$current] )
-            // InternalFragmentTestLanguage.g:448:3: ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFragment_1= ruleRecursiveFragment[$current]
+            // InternalFragmentTestLanguage.g:427:2: ( ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFragment_1= ruleRecursiveFragment[$current] )
+            // InternalFragmentTestLanguage.g:428:3: ( (lv_name_0_0= RULE_ID ) ) this_RecursiveFragment_1= ruleRecursiveFragment[$current]
             {
-            // InternalFragmentTestLanguage.g:448:3: ( (lv_name_0_0= RULE_ID ) )
-            // InternalFragmentTestLanguage.g:449:4: (lv_name_0_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:428:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalFragmentTestLanguage.g:429:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalFragmentTestLanguage.g:449:4: (lv_name_0_0= RULE_ID )
-            // InternalFragmentTestLanguage.g:450:5: lv_name_0_0= RULE_ID
+            // InternalFragmentTestLanguage.g:429:4: (lv_name_0_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:430:5: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1162,11 +1135,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1181,7 +1149,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRulePRFNamedRefFirst"
-    // InternalFragmentTestLanguage.g:481:1: entryRulePRFNamedRefFirst returns [EObject current=null] : iv_rulePRFNamedRefFirst= rulePRFNamedRefFirst EOF ;
+    // InternalFragmentTestLanguage.g:461:1: entryRulePRFNamedRefFirst returns [EObject current=null] : iv_rulePRFNamedRefFirst= rulePRFNamedRefFirst EOF ;
     public final EObject entryRulePRFNamedRefFirst() throws RecognitionException {
         EObject current = null;
 
@@ -1189,8 +1157,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalFragmentTestLanguage.g:481:57: (iv_rulePRFNamedRefFirst= rulePRFNamedRefFirst EOF )
-            // InternalFragmentTestLanguage.g:482:2: iv_rulePRFNamedRefFirst= rulePRFNamedRefFirst EOF
+            // InternalFragmentTestLanguage.g:461:57: (iv_rulePRFNamedRefFirst= rulePRFNamedRefFirst EOF )
+            // InternalFragmentTestLanguage.g:462:2: iv_rulePRFNamedRefFirst= rulePRFNamedRefFirst EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPRFNamedRefFirstRule()); 
@@ -1221,7 +1189,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "rulePRFNamedRefFirst"
-    // InternalFragmentTestLanguage.g:488:1: rulePRFNamedRefFirst returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '<-' this_PRFNamedFragment_2= rulePRFNamedFragment[$current] ) ;
+    // InternalFragmentTestLanguage.g:468:1: rulePRFNamedRefFirst returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '<-' this_PRFNamedFragment_2= rulePRFNamedFragment[$current] ) ;
     public final EObject rulePRFNamedRefFirst() throws RecognitionException {
         EObject current = null;
 
@@ -1230,21 +1198,18 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         EObject this_PRFNamedFragment_2 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:494:2: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '<-' this_PRFNamedFragment_2= rulePRFNamedFragment[$current] ) )
-            // InternalFragmentTestLanguage.g:495:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '<-' this_PRFNamedFragment_2= rulePRFNamedFragment[$current] )
+            // InternalFragmentTestLanguage.g:469:1: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '<-' this_PRFNamedFragment_2= rulePRFNamedFragment[$current] ) )
+            // InternalFragmentTestLanguage.g:470:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '<-' this_PRFNamedFragment_2= rulePRFNamedFragment[$current] )
             {
-            // InternalFragmentTestLanguage.g:495:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '<-' this_PRFNamedFragment_2= rulePRFNamedFragment[$current] )
-            // InternalFragmentTestLanguage.g:496:3: ( (otherlv_0= RULE_ID ) ) otherlv_1= '<-' this_PRFNamedFragment_2= rulePRFNamedFragment[$current]
+            // InternalFragmentTestLanguage.g:470:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '<-' this_PRFNamedFragment_2= rulePRFNamedFragment[$current] )
+            // InternalFragmentTestLanguage.g:471:3: ( (otherlv_0= RULE_ID ) ) otherlv_1= '<-' this_PRFNamedFragment_2= rulePRFNamedFragment[$current]
             {
-            // InternalFragmentTestLanguage.g:496:3: ( (otherlv_0= RULE_ID ) )
-            // InternalFragmentTestLanguage.g:497:4: (otherlv_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:471:3: ( (otherlv_0= RULE_ID ) )
+            // InternalFragmentTestLanguage.g:472:4: (otherlv_0= RULE_ID )
             {
-            // InternalFragmentTestLanguage.g:497:4: (otherlv_0= RULE_ID )
-            // InternalFragmentTestLanguage.g:498:5: otherlv_0= RULE_ID
+            // InternalFragmentTestLanguage.g:472:4: (otherlv_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:473:5: otherlv_0= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -1296,11 +1261,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1315,7 +1275,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRulePRFNamedWithAction"
-    // InternalFragmentTestLanguage.g:528:1: entryRulePRFNamedWithAction returns [EObject current=null] : iv_rulePRFNamedWithAction= rulePRFNamedWithAction EOF ;
+    // InternalFragmentTestLanguage.g:503:1: entryRulePRFNamedWithAction returns [EObject current=null] : iv_rulePRFNamedWithAction= rulePRFNamedWithAction EOF ;
     public final EObject entryRulePRFNamedWithAction() throws RecognitionException {
         EObject current = null;
 
@@ -1323,8 +1283,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalFragmentTestLanguage.g:528:59: (iv_rulePRFNamedWithAction= rulePRFNamedWithAction EOF )
-            // InternalFragmentTestLanguage.g:529:2: iv_rulePRFNamedWithAction= rulePRFNamedWithAction EOF
+            // InternalFragmentTestLanguage.g:503:59: (iv_rulePRFNamedWithAction= rulePRFNamedWithAction EOF )
+            // InternalFragmentTestLanguage.g:504:2: iv_rulePRFNamedWithAction= rulePRFNamedWithAction EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPRFNamedWithActionRule()); 
@@ -1355,7 +1315,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "rulePRFNamedWithAction"
-    // InternalFragmentTestLanguage.g:535:1: rulePRFNamedWithAction returns [EObject current=null] : (this_PRFNamed_0= rulePRFNamed () ( (lv_name_2_0= RULE_ID ) ) ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )? ) ;
+    // InternalFragmentTestLanguage.g:510:1: rulePRFNamedWithAction returns [EObject current=null] : (this_PRFNamed_0= rulePRFNamed () ( (lv_name_2_0= RULE_ID ) ) ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )? ) ;
     public final EObject rulePRFNamedWithAction() throws RecognitionException {
         EObject current = null;
 
@@ -1365,15 +1325,12 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         EObject this_PRFNamed_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:541:2: ( (this_PRFNamed_0= rulePRFNamed () ( (lv_name_2_0= RULE_ID ) ) ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )? ) )
-            // InternalFragmentTestLanguage.g:542:2: (this_PRFNamed_0= rulePRFNamed () ( (lv_name_2_0= RULE_ID ) ) ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )? )
+            // InternalFragmentTestLanguage.g:511:1: ( (this_PRFNamed_0= rulePRFNamed () ( (lv_name_2_0= RULE_ID ) ) ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )? ) )
+            // InternalFragmentTestLanguage.g:512:2: (this_PRFNamed_0= rulePRFNamed () ( (lv_name_2_0= RULE_ID ) ) ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )? )
             {
-            // InternalFragmentTestLanguage.g:542:2: (this_PRFNamed_0= rulePRFNamed () ( (lv_name_2_0= RULE_ID ) ) ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )? )
-            // InternalFragmentTestLanguage.g:543:3: this_PRFNamed_0= rulePRFNamed () ( (lv_name_2_0= RULE_ID ) ) ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )?
+            // InternalFragmentTestLanguage.g:512:2: (this_PRFNamed_0= rulePRFNamed () ( (lv_name_2_0= RULE_ID ) ) ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )? )
+            // InternalFragmentTestLanguage.g:513:3: this_PRFNamed_0= rulePRFNamed () ( (lv_name_2_0= RULE_ID ) ) ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )?
             {
             if ( state.backtracking==0 ) {
 
@@ -1391,8 +1348,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalFragmentTestLanguage.g:551:3: ()
-            // InternalFragmentTestLanguage.g:552:4: 
+            // InternalFragmentTestLanguage.g:521:3: ()
+            // InternalFragmentTestLanguage.g:522:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -1404,11 +1361,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalFragmentTestLanguage.g:558:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalFragmentTestLanguage.g:559:4: (lv_name_2_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:528:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalFragmentTestLanguage.g:529:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalFragmentTestLanguage.g:559:4: (lv_name_2_0= RULE_ID )
-            // InternalFragmentTestLanguage.g:560:5: lv_name_2_0= RULE_ID
+            // InternalFragmentTestLanguage.g:529:4: (lv_name_2_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:530:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1434,7 +1391,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalFragmentTestLanguage.g:576:3: ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )?
+            // InternalFragmentTestLanguage.g:546:3: ( ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1443,13 +1400,13 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
             }
             switch (alt3) {
                 case 1 :
-                    // InternalFragmentTestLanguage.g:577:4: ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) )
+                    // InternalFragmentTestLanguage.g:547:4: ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= RULE_ID ) )
                     {
-                    // InternalFragmentTestLanguage.g:577:4: ( (otherlv_3= RULE_ID ) )
-                    // InternalFragmentTestLanguage.g:578:5: (otherlv_3= RULE_ID )
+                    // InternalFragmentTestLanguage.g:547:4: ( (otherlv_3= RULE_ID ) )
+                    // InternalFragmentTestLanguage.g:548:5: (otherlv_3= RULE_ID )
                     {
-                    // InternalFragmentTestLanguage.g:578:5: (otherlv_3= RULE_ID )
-                    // InternalFragmentTestLanguage.g:579:6: otherlv_3= RULE_ID
+                    // InternalFragmentTestLanguage.g:548:5: (otherlv_3= RULE_ID )
+                    // InternalFragmentTestLanguage.g:549:6: otherlv_3= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -1470,11 +1427,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
                     }
 
-                    // InternalFragmentTestLanguage.g:590:4: ( (otherlv_4= RULE_ID ) )
-                    // InternalFragmentTestLanguage.g:591:5: (otherlv_4= RULE_ID )
+                    // InternalFragmentTestLanguage.g:560:4: ( (otherlv_4= RULE_ID ) )
+                    // InternalFragmentTestLanguage.g:561:5: (otherlv_4= RULE_ID )
                     {
-                    // InternalFragmentTestLanguage.g:591:5: (otherlv_4= RULE_ID )
-                    // InternalFragmentTestLanguage.g:592:6: otherlv_4= RULE_ID
+                    // InternalFragmentTestLanguage.g:561:5: (otherlv_4= RULE_ID )
+                    // InternalFragmentTestLanguage.g:562:6: otherlv_4= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -1507,11 +1464,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1526,7 +1478,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRulePRFNamedWithFQN"
-    // InternalFragmentTestLanguage.g:608:1: entryRulePRFNamedWithFQN returns [EObject current=null] : iv_rulePRFNamedWithFQN= rulePRFNamedWithFQN EOF ;
+    // InternalFragmentTestLanguage.g:578:1: entryRulePRFNamedWithFQN returns [EObject current=null] : iv_rulePRFNamedWithFQN= rulePRFNamedWithFQN EOF ;
     public final EObject entryRulePRFNamedWithFQN() throws RecognitionException {
         EObject current = null;
 
@@ -1534,8 +1486,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalFragmentTestLanguage.g:608:56: (iv_rulePRFNamedWithFQN= rulePRFNamedWithFQN EOF )
-            // InternalFragmentTestLanguage.g:609:2: iv_rulePRFNamedWithFQN= rulePRFNamedWithFQN EOF
+            // InternalFragmentTestLanguage.g:578:56: (iv_rulePRFNamedWithFQN= rulePRFNamedWithFQN EOF )
+            // InternalFragmentTestLanguage.g:579:2: iv_rulePRFNamedWithFQN= rulePRFNamedWithFQN EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPRFNamedWithFQNRule()); 
@@ -1566,7 +1518,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "rulePRFNamedWithFQN"
-    // InternalFragmentTestLanguage.g:615:1: rulePRFNamedWithFQN returns [EObject current=null] : ( ( (lv_name_0_0= ruleFQN ) ) (otherlv_1= '-' ( ( ruleFQN2 ) ) )? ) ;
+    // InternalFragmentTestLanguage.g:585:1: rulePRFNamedWithFQN returns [EObject current=null] : ( ( (lv_name_0_0= ruleFQN ) ) (otherlv_1= '-' ( ( ruleFQN2 ) ) )? ) ;
     public final EObject rulePRFNamedWithFQN() throws RecognitionException {
         EObject current = null;
 
@@ -1574,21 +1526,18 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         AntlrDatatypeRuleToken lv_name_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:621:2: ( ( ( (lv_name_0_0= ruleFQN ) ) (otherlv_1= '-' ( ( ruleFQN2 ) ) )? ) )
-            // InternalFragmentTestLanguage.g:622:2: ( ( (lv_name_0_0= ruleFQN ) ) (otherlv_1= '-' ( ( ruleFQN2 ) ) )? )
+            // InternalFragmentTestLanguage.g:586:1: ( ( ( (lv_name_0_0= ruleFQN ) ) (otherlv_1= '-' ( ( ruleFQN2 ) ) )? ) )
+            // InternalFragmentTestLanguage.g:587:2: ( ( (lv_name_0_0= ruleFQN ) ) (otherlv_1= '-' ( ( ruleFQN2 ) ) )? )
             {
-            // InternalFragmentTestLanguage.g:622:2: ( ( (lv_name_0_0= ruleFQN ) ) (otherlv_1= '-' ( ( ruleFQN2 ) ) )? )
-            // InternalFragmentTestLanguage.g:623:3: ( (lv_name_0_0= ruleFQN ) ) (otherlv_1= '-' ( ( ruleFQN2 ) ) )?
+            // InternalFragmentTestLanguage.g:587:2: ( ( (lv_name_0_0= ruleFQN ) ) (otherlv_1= '-' ( ( ruleFQN2 ) ) )? )
+            // InternalFragmentTestLanguage.g:588:3: ( (lv_name_0_0= ruleFQN ) ) (otherlv_1= '-' ( ( ruleFQN2 ) ) )?
             {
-            // InternalFragmentTestLanguage.g:623:3: ( (lv_name_0_0= ruleFQN ) )
-            // InternalFragmentTestLanguage.g:624:4: (lv_name_0_0= ruleFQN )
+            // InternalFragmentTestLanguage.g:588:3: ( (lv_name_0_0= ruleFQN ) )
+            // InternalFragmentTestLanguage.g:589:4: (lv_name_0_0= ruleFQN )
             {
-            // InternalFragmentTestLanguage.g:624:4: (lv_name_0_0= ruleFQN )
-            // InternalFragmentTestLanguage.g:625:5: lv_name_0_0= ruleFQN
+            // InternalFragmentTestLanguage.g:589:4: (lv_name_0_0= ruleFQN )
+            // InternalFragmentTestLanguage.g:590:5: lv_name_0_0= ruleFQN
             {
             if ( state.backtracking==0 ) {
 
@@ -1619,7 +1568,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalFragmentTestLanguage.g:642:3: (otherlv_1= '-' ( ( ruleFQN2 ) ) )?
+            // InternalFragmentTestLanguage.g:607:3: (otherlv_1= '-' ( ( ruleFQN2 ) ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1628,7 +1577,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
             }
             switch (alt4) {
                 case 1 :
-                    // InternalFragmentTestLanguage.g:643:4: otherlv_1= '-' ( ( ruleFQN2 ) )
+                    // InternalFragmentTestLanguage.g:608:4: otherlv_1= '-' ( ( ruleFQN2 ) )
                     {
                     otherlv_1=(Token)match(input,21,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1636,11 +1585,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                       				newLeafNode(otherlv_1, grammarAccess.getPRFNamedWithFQNAccess().getHyphenMinusKeyword_1_0());
                       			
                     }
-                    // InternalFragmentTestLanguage.g:647:4: ( ( ruleFQN2 ) )
-                    // InternalFragmentTestLanguage.g:648:5: ( ruleFQN2 )
+                    // InternalFragmentTestLanguage.g:612:4: ( ( ruleFQN2 ) )
+                    // InternalFragmentTestLanguage.g:613:5: ( ruleFQN2 )
                     {
-                    // InternalFragmentTestLanguage.g:648:5: ( ruleFQN2 )
-                    // InternalFragmentTestLanguage.g:649:6: ruleFQN2
+                    // InternalFragmentTestLanguage.g:613:5: ( ruleFQN2 )
+                    // InternalFragmentTestLanguage.g:614:6: ruleFQN2
                     {
                     if ( state.backtracking==0 ) {
 
@@ -1682,11 +1631,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1701,7 +1645,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRulePRFWithPredicate"
-    // InternalFragmentTestLanguage.g:668:1: entryRulePRFWithPredicate returns [EObject current=null] : iv_rulePRFWithPredicate= rulePRFWithPredicate EOF ;
+    // InternalFragmentTestLanguage.g:633:1: entryRulePRFWithPredicate returns [EObject current=null] : iv_rulePRFWithPredicate= rulePRFWithPredicate EOF ;
     public final EObject entryRulePRFWithPredicate() throws RecognitionException {
         EObject current = null;
 
@@ -1709,8 +1653,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalFragmentTestLanguage.g:668:57: (iv_rulePRFWithPredicate= rulePRFWithPredicate EOF )
-            // InternalFragmentTestLanguage.g:669:2: iv_rulePRFWithPredicate= rulePRFWithPredicate EOF
+            // InternalFragmentTestLanguage.g:633:57: (iv_rulePRFWithPredicate= rulePRFWithPredicate EOF )
+            // InternalFragmentTestLanguage.g:634:2: iv_rulePRFWithPredicate= rulePRFWithPredicate EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPRFWithPredicateRule()); 
@@ -1741,7 +1685,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "rulePRFWithPredicate"
-    // InternalFragmentTestLanguage.g:675:1: rulePRFWithPredicate returns [EObject current=null] : (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )? ) ;
+    // InternalFragmentTestLanguage.g:640:1: rulePRFWithPredicate returns [EObject current=null] : (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )? ) ;
     public final EObject rulePRFWithPredicate() throws RecognitionException {
         EObject current = null;
 
@@ -1751,15 +1695,12 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         EObject this_PRFNamedRef_2 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:681:2: ( (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )? ) )
-            // InternalFragmentTestLanguage.g:682:2: (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )? )
+            // InternalFragmentTestLanguage.g:641:1: ( (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )? ) )
+            // InternalFragmentTestLanguage.g:642:2: (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )? )
             {
-            // InternalFragmentTestLanguage.g:682:2: (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )? )
-            // InternalFragmentTestLanguage.g:683:3: this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )?
+            // InternalFragmentTestLanguage.g:642:2: (this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )? )
+            // InternalFragmentTestLanguage.g:643:3: this_PRFNamedFragment_0= rulePRFNamedFragment[$current] ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )?
             {
             if ( state.backtracking==0 ) {
 
@@ -1780,7 +1721,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalFragmentTestLanguage.g:694:3: ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )?
+            // InternalFragmentTestLanguage.g:654:3: ( ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1789,10 +1730,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
             }
             switch (alt5) {
                 case 1 :
-                    // InternalFragmentTestLanguage.g:695:4: ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] )
+                    // InternalFragmentTestLanguage.g:655:4: ( ( '-' rulePRFNamedRef[null] ) )=> (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] )
                     {
-                    // InternalFragmentTestLanguage.g:700:4: (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] )
-                    // InternalFragmentTestLanguage.g:701:5: otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current]
+                    // InternalFragmentTestLanguage.g:660:4: (otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current] )
+                    // InternalFragmentTestLanguage.g:661:5: otherlv_1= '-' this_PRFNamedRef_2= rulePRFNamedRef[$current]
                     {
                     otherlv_1=(Token)match(input,21,FollowSets000.FOLLOW_3); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1834,11 +1775,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1853,7 +1789,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRuleFQN"
-    // InternalFragmentTestLanguage.g:722:1: entryRuleFQN returns [String current=null] : iv_ruleFQN= ruleFQN EOF ;
+    // InternalFragmentTestLanguage.g:682:1: entryRuleFQN returns [String current=null] : iv_ruleFQN= ruleFQN EOF ;
     public final String entryRuleFQN() throws RecognitionException {
         String current = null;
 
@@ -1861,8 +1797,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalFragmentTestLanguage.g:722:43: (iv_ruleFQN= ruleFQN EOF )
-            // InternalFragmentTestLanguage.g:723:2: iv_ruleFQN= ruleFQN EOF
+            // InternalFragmentTestLanguage.g:682:43: (iv_ruleFQN= ruleFQN EOF )
+            // InternalFragmentTestLanguage.g:683:2: iv_ruleFQN= ruleFQN EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFQNRule()); 
@@ -1893,7 +1829,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleFQN"
-    // InternalFragmentTestLanguage.g:729:1: ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (this_Suffix_1= ruleSuffix )? ) ;
+    // InternalFragmentTestLanguage.g:689:1: ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (this_Suffix_1= ruleSuffix )? ) ;
     public final AntlrDatatypeRuleToken ruleFQN() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1901,15 +1837,12 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         AntlrDatatypeRuleToken this_Suffix_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:735:2: ( (this_ID_0= RULE_ID (this_Suffix_1= ruleSuffix )? ) )
-            // InternalFragmentTestLanguage.g:736:2: (this_ID_0= RULE_ID (this_Suffix_1= ruleSuffix )? )
+            // InternalFragmentTestLanguage.g:690:1: ( (this_ID_0= RULE_ID (this_Suffix_1= ruleSuffix )? ) )
+            // InternalFragmentTestLanguage.g:691:2: (this_ID_0= RULE_ID (this_Suffix_1= ruleSuffix )? )
             {
-            // InternalFragmentTestLanguage.g:736:2: (this_ID_0= RULE_ID (this_Suffix_1= ruleSuffix )? )
-            // InternalFragmentTestLanguage.g:737:3: this_ID_0= RULE_ID (this_Suffix_1= ruleSuffix )?
+            // InternalFragmentTestLanguage.g:691:2: (this_ID_0= RULE_ID (this_Suffix_1= ruleSuffix )? )
+            // InternalFragmentTestLanguage.g:692:3: this_ID_0= RULE_ID (this_Suffix_1= ruleSuffix )?
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1922,7 +1855,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
               			newLeafNode(this_ID_0, grammarAccess.getFQNAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalFragmentTestLanguage.g:744:3: (this_Suffix_1= ruleSuffix )?
+            // InternalFragmentTestLanguage.g:699:3: (this_Suffix_1= ruleSuffix )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1931,7 +1864,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
             }
             switch (alt6) {
                 case 1 :
-                    // InternalFragmentTestLanguage.g:745:4: this_Suffix_1= ruleSuffix
+                    // InternalFragmentTestLanguage.g:700:4: this_Suffix_1= ruleSuffix
                     {
                     if ( state.backtracking==0 ) {
 
@@ -1965,11 +1898,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -1984,7 +1912,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRuleFQN2"
-    // InternalFragmentTestLanguage.g:760:1: entryRuleFQN2 returns [String current=null] : iv_ruleFQN2= ruleFQN2 EOF ;
+    // InternalFragmentTestLanguage.g:715:1: entryRuleFQN2 returns [String current=null] : iv_ruleFQN2= ruleFQN2 EOF ;
     public final String entryRuleFQN2() throws RecognitionException {
         String current = null;
 
@@ -1992,8 +1920,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalFragmentTestLanguage.g:760:44: (iv_ruleFQN2= ruleFQN2 EOF )
-            // InternalFragmentTestLanguage.g:761:2: iv_ruleFQN2= ruleFQN2 EOF
+            // InternalFragmentTestLanguage.g:715:44: (iv_ruleFQN2= ruleFQN2 EOF )
+            // InternalFragmentTestLanguage.g:716:2: iv_ruleFQN2= ruleFQN2 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFQN2Rule()); 
@@ -2024,7 +1952,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleFQN2"
-    // InternalFragmentTestLanguage.g:767:1: ruleFQN2 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (this_Suffix2_1= ruleSuffix2 )* ) ;
+    // InternalFragmentTestLanguage.g:722:1: ruleFQN2 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (this_Suffix2_1= ruleSuffix2 )* ) ;
     public final AntlrDatatypeRuleToken ruleFQN2() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2032,15 +1960,12 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         AntlrDatatypeRuleToken this_Suffix2_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:773:2: ( (this_ID_0= RULE_ID (this_Suffix2_1= ruleSuffix2 )* ) )
-            // InternalFragmentTestLanguage.g:774:2: (this_ID_0= RULE_ID (this_Suffix2_1= ruleSuffix2 )* )
+            // InternalFragmentTestLanguage.g:723:1: ( (this_ID_0= RULE_ID (this_Suffix2_1= ruleSuffix2 )* ) )
+            // InternalFragmentTestLanguage.g:724:2: (this_ID_0= RULE_ID (this_Suffix2_1= ruleSuffix2 )* )
             {
-            // InternalFragmentTestLanguage.g:774:2: (this_ID_0= RULE_ID (this_Suffix2_1= ruleSuffix2 )* )
-            // InternalFragmentTestLanguage.g:775:3: this_ID_0= RULE_ID (this_Suffix2_1= ruleSuffix2 )*
+            // InternalFragmentTestLanguage.g:724:2: (this_ID_0= RULE_ID (this_Suffix2_1= ruleSuffix2 )* )
+            // InternalFragmentTestLanguage.g:725:3: this_ID_0= RULE_ID (this_Suffix2_1= ruleSuffix2 )*
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2053,7 +1978,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
               			newLeafNode(this_ID_0, grammarAccess.getFQN2Access().getIDTerminalRuleCall_0());
               		
             }
-            // InternalFragmentTestLanguage.g:782:3: (this_Suffix2_1= ruleSuffix2 )*
+            // InternalFragmentTestLanguage.g:732:3: (this_Suffix2_1= ruleSuffix2 )*
             loop7:
             do {
                 int alt7=2;
@@ -2066,7 +1991,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalFragmentTestLanguage.g:783:4: this_Suffix2_1= ruleSuffix2
+            	    // InternalFragmentTestLanguage.g:733:4: this_Suffix2_1= ruleSuffix2
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -2103,11 +2028,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2122,7 +2042,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleSuffix"
-    // InternalFragmentTestLanguage.g:799:1: ruleSuffix returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '.' this_ID_1= RULE_ID (this_Suffix_2= ruleSuffix )? ) ;
+    // InternalFragmentTestLanguage.g:749:1: ruleSuffix returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '.' this_ID_1= RULE_ID (this_Suffix_2= ruleSuffix )? ) ;
     public final AntlrDatatypeRuleToken ruleSuffix() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2131,15 +2051,12 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         AntlrDatatypeRuleToken this_Suffix_2 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:805:2: ( (kw= '.' this_ID_1= RULE_ID (this_Suffix_2= ruleSuffix )? ) )
-            // InternalFragmentTestLanguage.g:806:2: (kw= '.' this_ID_1= RULE_ID (this_Suffix_2= ruleSuffix )? )
+            // InternalFragmentTestLanguage.g:750:1: ( (kw= '.' this_ID_1= RULE_ID (this_Suffix_2= ruleSuffix )? ) )
+            // InternalFragmentTestLanguage.g:751:2: (kw= '.' this_ID_1= RULE_ID (this_Suffix_2= ruleSuffix )? )
             {
-            // InternalFragmentTestLanguage.g:806:2: (kw= '.' this_ID_1= RULE_ID (this_Suffix_2= ruleSuffix )? )
-            // InternalFragmentTestLanguage.g:807:3: kw= '.' this_ID_1= RULE_ID (this_Suffix_2= ruleSuffix )?
+            // InternalFragmentTestLanguage.g:751:2: (kw= '.' this_ID_1= RULE_ID (this_Suffix_2= ruleSuffix )? )
+            // InternalFragmentTestLanguage.g:752:3: kw= '.' this_ID_1= RULE_ID (this_Suffix_2= ruleSuffix )?
             {
             kw=(Token)match(input,23,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2159,7 +2076,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
               			newLeafNode(this_ID_1, grammarAccess.getSuffixAccess().getIDTerminalRuleCall_1());
               		
             }
-            // InternalFragmentTestLanguage.g:819:3: (this_Suffix_2= ruleSuffix )?
+            // InternalFragmentTestLanguage.g:764:3: (this_Suffix_2= ruleSuffix )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -2168,7 +2085,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
             }
             switch (alt8) {
                 case 1 :
-                    // InternalFragmentTestLanguage.g:820:4: this_Suffix_2= ruleSuffix
+                    // InternalFragmentTestLanguage.g:765:4: this_Suffix_2= ruleSuffix
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2202,11 +2119,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2221,22 +2133,19 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleSuffix2"
-    // InternalFragmentTestLanguage.g:836:1: ruleSuffix2 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '.' this_ID_1= RULE_ID ) ;
+    // InternalFragmentTestLanguage.g:781:1: ruleSuffix2 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '.' this_ID_1= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleSuffix2() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token kw=null;
         Token this_ID_1=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:842:2: ( (kw= '.' this_ID_1= RULE_ID ) )
-            // InternalFragmentTestLanguage.g:843:2: (kw= '.' this_ID_1= RULE_ID )
+            // InternalFragmentTestLanguage.g:782:1: ( (kw= '.' this_ID_1= RULE_ID ) )
+            // InternalFragmentTestLanguage.g:783:2: (kw= '.' this_ID_1= RULE_ID )
             {
-            // InternalFragmentTestLanguage.g:843:2: (kw= '.' this_ID_1= RULE_ID )
-            // InternalFragmentTestLanguage.g:844:3: kw= '.' this_ID_1= RULE_ID
+            // InternalFragmentTestLanguage.g:783:2: (kw= '.' this_ID_1= RULE_ID )
+            // InternalFragmentTestLanguage.g:784:3: kw= '.' this_ID_1= RULE_ID
             {
             kw=(Token)match(input,23,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2262,11 +2171,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2281,24 +2185,21 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "rulePRFNamedFragment"
-    // InternalFragmentTestLanguage.g:861:1: rulePRFNamedFragment[EObject in_current] returns [EObject current=in_current] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // InternalFragmentTestLanguage.g:801:1: rulePRFNamedFragment[EObject in_current] returns [EObject current=in_current] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject rulePRFNamedFragment(EObject in_current) throws RecognitionException {
         EObject current = in_current;
 
         Token lv_name_0_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:867:2: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // InternalFragmentTestLanguage.g:868:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalFragmentTestLanguage.g:802:1: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // InternalFragmentTestLanguage.g:803:2: ( (lv_name_0_0= RULE_ID ) )
             {
-            // InternalFragmentTestLanguage.g:868:2: ( (lv_name_0_0= RULE_ID ) )
-            // InternalFragmentTestLanguage.g:869:3: (lv_name_0_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:803:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalFragmentTestLanguage.g:804:3: (lv_name_0_0= RULE_ID )
             {
-            // InternalFragmentTestLanguage.g:869:3: (lv_name_0_0= RULE_ID )
-            // InternalFragmentTestLanguage.g:870:4: lv_name_0_0= RULE_ID
+            // InternalFragmentTestLanguage.g:804:3: (lv_name_0_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:805:4: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2327,11 +2228,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2346,24 +2242,21 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "rulePRFNamedRef"
-    // InternalFragmentTestLanguage.g:890:1: rulePRFNamedRef[EObject in_current] returns [EObject current=in_current] : ( (otherlv_0= RULE_ID ) ) ;
+    // InternalFragmentTestLanguage.g:825:1: rulePRFNamedRef[EObject in_current] returns [EObject current=in_current] : ( (otherlv_0= RULE_ID ) ) ;
     public final EObject rulePRFNamedRef(EObject in_current) throws RecognitionException {
         EObject current = in_current;
 
         Token otherlv_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:896:2: ( ( (otherlv_0= RULE_ID ) ) )
-            // InternalFragmentTestLanguage.g:897:2: ( (otherlv_0= RULE_ID ) )
+            // InternalFragmentTestLanguage.g:826:1: ( ( (otherlv_0= RULE_ID ) ) )
+            // InternalFragmentTestLanguage.g:827:2: ( (otherlv_0= RULE_ID ) )
             {
-            // InternalFragmentTestLanguage.g:897:2: ( (otherlv_0= RULE_ID ) )
-            // InternalFragmentTestLanguage.g:898:3: (otherlv_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:827:2: ( (otherlv_0= RULE_ID ) )
+            // InternalFragmentTestLanguage.g:828:3: (otherlv_0= RULE_ID )
             {
-            // InternalFragmentTestLanguage.g:898:3: (otherlv_0= RULE_ID )
-            // InternalFragmentTestLanguage.g:899:4: otherlv_0= RULE_ID
+            // InternalFragmentTestLanguage.g:828:3: (otherlv_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:829:4: otherlv_0= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -2387,11 +2280,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2406,25 +2294,22 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleRecursiveFromFragment"
-    // InternalFragmentTestLanguage.g:914:1: ruleRecursiveFromFragment[EObject in_current] returns [EObject current=in_current] : ( (lv_prev_0_0= ruleNamedInParentheses ) ) ;
+    // InternalFragmentTestLanguage.g:844:1: ruleRecursiveFromFragment[EObject in_current] returns [EObject current=in_current] : ( (lv_prev_0_0= ruleNamedInParentheses ) ) ;
     public final EObject ruleRecursiveFromFragment(EObject in_current) throws RecognitionException {
         EObject current = in_current;
 
         EObject lv_prev_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:920:2: ( ( (lv_prev_0_0= ruleNamedInParentheses ) ) )
-            // InternalFragmentTestLanguage.g:921:2: ( (lv_prev_0_0= ruleNamedInParentheses ) )
+            // InternalFragmentTestLanguage.g:845:1: ( ( (lv_prev_0_0= ruleNamedInParentheses ) ) )
+            // InternalFragmentTestLanguage.g:846:2: ( (lv_prev_0_0= ruleNamedInParentheses ) )
             {
-            // InternalFragmentTestLanguage.g:921:2: ( (lv_prev_0_0= ruleNamedInParentheses ) )
-            // InternalFragmentTestLanguage.g:922:3: (lv_prev_0_0= ruleNamedInParentheses )
+            // InternalFragmentTestLanguage.g:846:2: ( (lv_prev_0_0= ruleNamedInParentheses ) )
+            // InternalFragmentTestLanguage.g:847:3: (lv_prev_0_0= ruleNamedInParentheses )
             {
-            // InternalFragmentTestLanguage.g:922:3: (lv_prev_0_0= ruleNamedInParentheses )
-            // InternalFragmentTestLanguage.g:923:4: lv_prev_0_0= ruleNamedInParentheses
+            // InternalFragmentTestLanguage.g:847:3: (lv_prev_0_0= ruleNamedInParentheses )
+            // InternalFragmentTestLanguage.g:848:4: lv_prev_0_0= ruleNamedInParentheses
             {
             if ( state.backtracking==0 ) {
 
@@ -2458,11 +2343,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2477,7 +2357,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRuleNamedInParentheses"
-    // InternalFragmentTestLanguage.g:943:1: entryRuleNamedInParentheses returns [EObject current=null] : iv_ruleNamedInParentheses= ruleNamedInParentheses EOF ;
+    // InternalFragmentTestLanguage.g:868:1: entryRuleNamedInParentheses returns [EObject current=null] : iv_ruleNamedInParentheses= ruleNamedInParentheses EOF ;
     public final EObject entryRuleNamedInParentheses() throws RecognitionException {
         EObject current = null;
 
@@ -2485,8 +2365,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalFragmentTestLanguage.g:943:59: (iv_ruleNamedInParentheses= ruleNamedInParentheses EOF )
-            // InternalFragmentTestLanguage.g:944:2: iv_ruleNamedInParentheses= ruleNamedInParentheses EOF
+            // InternalFragmentTestLanguage.g:868:59: (iv_ruleNamedInParentheses= ruleNamedInParentheses EOF )
+            // InternalFragmentTestLanguage.g:869:2: iv_ruleNamedInParentheses= ruleNamedInParentheses EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNamedInParenthesesRule()); 
@@ -2517,7 +2397,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleNamedInParentheses"
-    // InternalFragmentTestLanguage.g:950:1: ruleNamedInParentheses returns [EObject current=null] : ( (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' ) | ( () ( (lv_name_4_0= RULE_ID ) ) ) ) ;
+    // InternalFragmentTestLanguage.g:875:1: ruleNamedInParentheses returns [EObject current=null] : ( (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' ) | ( () ( (lv_name_4_0= RULE_ID ) ) ) ) ;
     public final EObject ruleNamedInParentheses() throws RecognitionException {
         EObject current = null;
 
@@ -2527,14 +2407,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         EObject this_NamedInParentheses_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:956:2: ( ( (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' ) | ( () ( (lv_name_4_0= RULE_ID ) ) ) ) )
-            // InternalFragmentTestLanguage.g:957:2: ( (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' ) | ( () ( (lv_name_4_0= RULE_ID ) ) ) )
+            // InternalFragmentTestLanguage.g:876:1: ( ( (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' ) | ( () ( (lv_name_4_0= RULE_ID ) ) ) ) )
+            // InternalFragmentTestLanguage.g:877:2: ( (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' ) | ( () ( (lv_name_4_0= RULE_ID ) ) ) )
             {
-            // InternalFragmentTestLanguage.g:957:2: ( (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' ) | ( () ( (lv_name_4_0= RULE_ID ) ) ) )
+            // InternalFragmentTestLanguage.g:877:2: ( (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' ) | ( () ( (lv_name_4_0= RULE_ID ) ) ) )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -2553,10 +2430,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
             }
             switch (alt9) {
                 case 1 :
-                    // InternalFragmentTestLanguage.g:958:3: (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' )
+                    // InternalFragmentTestLanguage.g:878:3: (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' )
                     {
-                    // InternalFragmentTestLanguage.g:958:3: (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' )
-                    // InternalFragmentTestLanguage.g:959:4: otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')'
+                    // InternalFragmentTestLanguage.g:878:3: (otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')' )
+                    // InternalFragmentTestLanguage.g:879:4: otherlv_0= '(' this_NamedInParentheses_1= ruleNamedInParentheses otherlv_2= ')'
                     {
                     otherlv_0=(Token)match(input,24,FollowSets000.FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2593,13 +2470,13 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 2 :
-                    // InternalFragmentTestLanguage.g:977:3: ( () ( (lv_name_4_0= RULE_ID ) ) )
+                    // InternalFragmentTestLanguage.g:897:3: ( () ( (lv_name_4_0= RULE_ID ) ) )
                     {
-                    // InternalFragmentTestLanguage.g:977:3: ( () ( (lv_name_4_0= RULE_ID ) ) )
-                    // InternalFragmentTestLanguage.g:978:4: () ( (lv_name_4_0= RULE_ID ) )
+                    // InternalFragmentTestLanguage.g:897:3: ( () ( (lv_name_4_0= RULE_ID ) ) )
+                    // InternalFragmentTestLanguage.g:898:4: () ( (lv_name_4_0= RULE_ID ) )
                     {
-                    // InternalFragmentTestLanguage.g:978:4: ()
-                    // InternalFragmentTestLanguage.g:979:5: 
+                    // InternalFragmentTestLanguage.g:898:4: ()
+                    // InternalFragmentTestLanguage.g:899:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2611,11 +2488,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
                     }
 
-                    // InternalFragmentTestLanguage.g:985:4: ( (lv_name_4_0= RULE_ID ) )
-                    // InternalFragmentTestLanguage.g:986:5: (lv_name_4_0= RULE_ID )
+                    // InternalFragmentTestLanguage.g:905:4: ( (lv_name_4_0= RULE_ID ) )
+                    // InternalFragmentTestLanguage.g:906:5: (lv_name_4_0= RULE_ID )
                     {
-                    // InternalFragmentTestLanguage.g:986:5: (lv_name_4_0= RULE_ID )
-                    // InternalFragmentTestLanguage.g:987:6: lv_name_4_0= RULE_ID
+                    // InternalFragmentTestLanguage.g:906:5: (lv_name_4_0= RULE_ID )
+                    // InternalFragmentTestLanguage.g:907:6: lv_name_4_0= RULE_ID
                     {
                     lv_name_4_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2653,11 +2530,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2672,7 +2544,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleRecursiveFragment"
-    // InternalFragmentTestLanguage.g:1009:1: ruleRecursiveFragment[EObject in_current] returns [EObject current=in_current] : ( (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' ) | ( (lv_prev_3_0= ruleNamedByAction ) ) ) ;
+    // InternalFragmentTestLanguage.g:929:1: ruleRecursiveFragment[EObject in_current] returns [EObject current=in_current] : ( (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' ) | ( (lv_prev_3_0= ruleNamedByAction ) ) ) ;
     public final EObject ruleRecursiveFragment(EObject in_current) throws RecognitionException {
         EObject current = in_current;
 
@@ -2683,14 +2555,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
         EObject lv_prev_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:1015:2: ( ( (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' ) | ( (lv_prev_3_0= ruleNamedByAction ) ) ) )
-            // InternalFragmentTestLanguage.g:1016:2: ( (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' ) | ( (lv_prev_3_0= ruleNamedByAction ) ) )
+            // InternalFragmentTestLanguage.g:930:1: ( ( (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' ) | ( (lv_prev_3_0= ruleNamedByAction ) ) ) )
+            // InternalFragmentTestLanguage.g:931:2: ( (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' ) | ( (lv_prev_3_0= ruleNamedByAction ) ) )
             {
-            // InternalFragmentTestLanguage.g:1016:2: ( (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' ) | ( (lv_prev_3_0= ruleNamedByAction ) ) )
+            // InternalFragmentTestLanguage.g:931:2: ( (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' ) | ( (lv_prev_3_0= ruleNamedByAction ) ) )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -2709,10 +2578,10 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
             }
             switch (alt10) {
                 case 1 :
-                    // InternalFragmentTestLanguage.g:1017:3: (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' )
+                    // InternalFragmentTestLanguage.g:932:3: (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' )
                     {
-                    // InternalFragmentTestLanguage.g:1017:3: (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' )
-                    // InternalFragmentTestLanguage.g:1018:4: otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')'
+                    // InternalFragmentTestLanguage.g:932:3: (otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')' )
+                    // InternalFragmentTestLanguage.g:933:4: otherlv_0= '(' this_RecursiveFragment_1= ruleRecursiveFragment[$current] otherlv_2= ')'
                     {
                     otherlv_0=(Token)match(input,24,FollowSets000.FOLLOW_6); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2752,13 +2621,13 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
                     }
                     break;
                 case 2 :
-                    // InternalFragmentTestLanguage.g:1039:3: ( (lv_prev_3_0= ruleNamedByAction ) )
+                    // InternalFragmentTestLanguage.g:954:3: ( (lv_prev_3_0= ruleNamedByAction ) )
                     {
-                    // InternalFragmentTestLanguage.g:1039:3: ( (lv_prev_3_0= ruleNamedByAction ) )
-                    // InternalFragmentTestLanguage.g:1040:4: (lv_prev_3_0= ruleNamedByAction )
+                    // InternalFragmentTestLanguage.g:954:3: ( (lv_prev_3_0= ruleNamedByAction ) )
+                    // InternalFragmentTestLanguage.g:955:4: (lv_prev_3_0= ruleNamedByAction )
                     {
-                    // InternalFragmentTestLanguage.g:1040:4: (lv_prev_3_0= ruleNamedByAction )
-                    // InternalFragmentTestLanguage.g:1041:5: lv_prev_3_0= ruleNamedByAction
+                    // InternalFragmentTestLanguage.g:955:4: (lv_prev_3_0= ruleNamedByAction )
+                    // InternalFragmentTestLanguage.g:956:5: lv_prev_3_0= ruleNamedByAction
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2798,11 +2667,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2817,7 +2681,7 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "entryRuleNamedByAction"
-    // InternalFragmentTestLanguage.g:1062:1: entryRuleNamedByAction returns [EObject current=null] : iv_ruleNamedByAction= ruleNamedByAction EOF ;
+    // InternalFragmentTestLanguage.g:977:1: entryRuleNamedByAction returns [EObject current=null] : iv_ruleNamedByAction= ruleNamedByAction EOF ;
     public final EObject entryRuleNamedByAction() throws RecognitionException {
         EObject current = null;
 
@@ -2825,8 +2689,8 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
         try {
-            // InternalFragmentTestLanguage.g:1062:54: (iv_ruleNamedByAction= ruleNamedByAction EOF )
-            // InternalFragmentTestLanguage.g:1063:2: iv_ruleNamedByAction= ruleNamedByAction EOF
+            // InternalFragmentTestLanguage.g:977:54: (iv_ruleNamedByAction= ruleNamedByAction EOF )
+            // InternalFragmentTestLanguage.g:978:2: iv_ruleNamedByAction= ruleNamedByAction EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNamedByActionRule()); 
@@ -2857,24 +2721,21 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
 
     // $ANTLR start "ruleNamedByAction"
-    // InternalFragmentTestLanguage.g:1069:1: ruleNamedByAction returns [EObject current=null] : ( () ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalFragmentTestLanguage.g:984:1: ruleNamedByAction returns [EObject current=null] : ( () ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleNamedByAction() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_1_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFragmentTestLanguage.g:1075:2: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalFragmentTestLanguage.g:1076:2: ( () ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalFragmentTestLanguage.g:985:1: ( ( () ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalFragmentTestLanguage.g:986:2: ( () ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalFragmentTestLanguage.g:1076:2: ( () ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalFragmentTestLanguage.g:1077:3: () ( (lv_name_1_0= RULE_ID ) )
+            // InternalFragmentTestLanguage.g:986:2: ( () ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalFragmentTestLanguage.g:987:3: () ( (lv_name_1_0= RULE_ID ) )
             {
-            // InternalFragmentTestLanguage.g:1077:3: ()
-            // InternalFragmentTestLanguage.g:1078:4: 
+            // InternalFragmentTestLanguage.g:987:3: ()
+            // InternalFragmentTestLanguage.g:988:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -2886,11 +2747,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            // InternalFragmentTestLanguage.g:1084:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalFragmentTestLanguage.g:1085:4: (lv_name_1_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:994:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalFragmentTestLanguage.g:995:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalFragmentTestLanguage.g:1085:4: (lv_name_1_0= RULE_ID )
-            // InternalFragmentTestLanguage.g:1086:5: lv_name_1_0= RULE_ID
+            // InternalFragmentTestLanguage.g:995:4: (lv_name_1_0= RULE_ID )
+            // InternalFragmentTestLanguage.g:996:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2922,11 +2783,6 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
             }
 
-            if ( state.backtracking==0 ) {
-
-              	leaveRule();
-
-            }
         }
 
             catch (RecognitionException re) {
@@ -2941,11 +2797,11 @@ public class InternalFragmentTestLanguageParser extends AbstractInternalAntlrPar
 
     // $ANTLR start synpred1_InternalFragmentTestLanguage
     public final void synpred1_InternalFragmentTestLanguage_fragment() throws RecognitionException {   
-        // InternalFragmentTestLanguage.g:695:4: ( ( '-' rulePRFNamedRef[null] ) )
-        // InternalFragmentTestLanguage.g:695:5: ( '-' rulePRFNamedRef[null] )
+        // InternalFragmentTestLanguage.g:655:4: ( ( '-' rulePRFNamedRef[null] ) )
+        // InternalFragmentTestLanguage.g:655:5: ( '-' rulePRFNamedRef[null] )
         {
-        // InternalFragmentTestLanguage.g:695:5: ( '-' rulePRFNamedRef[null] )
-        // InternalFragmentTestLanguage.g:696:5: '-' rulePRFNamedRef[null]
+        // InternalFragmentTestLanguage.g:655:5: ( '-' rulePRFNamedRef[null] )
+        // InternalFragmentTestLanguage.g:656:5: '-' rulePRFNamedRef[null]
         {
         match(input,21,FollowSets000.FOLLOW_3); if (state.failed) return ;
         pushFollow(FollowSets000.FOLLOW_2);

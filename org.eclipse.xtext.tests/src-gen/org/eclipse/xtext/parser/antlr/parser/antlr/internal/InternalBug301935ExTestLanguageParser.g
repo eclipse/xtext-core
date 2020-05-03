@@ -62,12 +62,7 @@ entryRuleDelegateModel returns [EObject current=null]:
 
 // Rule DelegateModel
 ruleDelegateModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	{
 		newCompositeNode(grammarAccess.getDelegateModelAccess().getModelParserRuleCall());
 	}
@@ -87,12 +82,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -175,12 +165,7 @@ entryRuleNL returns [String current=null]:
 
 // Rule NL
 ruleNL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			this_WS_0=RULE_WS

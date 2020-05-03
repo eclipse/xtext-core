@@ -117,21 +117,18 @@ public class InternalEcoreFragmentTestLanguageParser extends AbstractInternalAnt
         Token otherlv_1=null;
         Token otherlv_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalEcoreFragmentTestLanguage.g:77:2: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= 'first' ( (otherlv_2= RULE_ID ) ) ) )
-            // InternalEcoreFragmentTestLanguage.g:78:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= 'first' ( (otherlv_2= RULE_ID ) ) )
+            // InternalEcoreFragmentTestLanguage.g:72:1: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= 'first' ( (otherlv_2= RULE_ID ) ) ) )
+            // InternalEcoreFragmentTestLanguage.g:73:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= 'first' ( (otherlv_2= RULE_ID ) ) )
             {
-            // InternalEcoreFragmentTestLanguage.g:78:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= 'first' ( (otherlv_2= RULE_ID ) ) )
-            // InternalEcoreFragmentTestLanguage.g:79:3: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= 'first' ( (otherlv_2= RULE_ID ) )
+            // InternalEcoreFragmentTestLanguage.g:73:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= 'first' ( (otherlv_2= RULE_ID ) ) )
+            // InternalEcoreFragmentTestLanguage.g:74:3: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= 'first' ( (otherlv_2= RULE_ID ) )
             {
-            // InternalEcoreFragmentTestLanguage.g:79:3: ( (lv_name_0_0= RULE_ID ) )
-            // InternalEcoreFragmentTestLanguage.g:80:4: (lv_name_0_0= RULE_ID )
+            // InternalEcoreFragmentTestLanguage.g:74:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalEcoreFragmentTestLanguage.g:75:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalEcoreFragmentTestLanguage.g:80:4: (lv_name_0_0= RULE_ID )
-            // InternalEcoreFragmentTestLanguage.g:81:5: lv_name_0_0= RULE_ID
+            // InternalEcoreFragmentTestLanguage.g:75:4: (lv_name_0_0= RULE_ID )
+            // InternalEcoreFragmentTestLanguage.g:76:5: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_3); 
 
@@ -157,11 +154,11 @@ public class InternalEcoreFragmentTestLanguageParser extends AbstractInternalAnt
 
             			newLeafNode(otherlv_1, grammarAccess.getSecondAccess().getFirstKeyword_1());
             		
-            // InternalEcoreFragmentTestLanguage.g:101:3: ( (otherlv_2= RULE_ID ) )
-            // InternalEcoreFragmentTestLanguage.g:102:4: (otherlv_2= RULE_ID )
+            // InternalEcoreFragmentTestLanguage.g:96:3: ( (otherlv_2= RULE_ID ) )
+            // InternalEcoreFragmentTestLanguage.g:97:4: (otherlv_2= RULE_ID )
             {
-            // InternalEcoreFragmentTestLanguage.g:102:4: (otherlv_2= RULE_ID )
-            // InternalEcoreFragmentTestLanguage.g:103:5: otherlv_2= RULE_ID
+            // InternalEcoreFragmentTestLanguage.g:97:4: (otherlv_2= RULE_ID )
+            // InternalEcoreFragmentTestLanguage.g:98:5: otherlv_2= RULE_ID
             {
 
             					if (current==null) {
@@ -183,9 +180,6 @@ public class InternalEcoreFragmentTestLanguageParser extends AbstractInternalAnt
 
 
             }
-
-
-            	leaveRule();
 
         }
 

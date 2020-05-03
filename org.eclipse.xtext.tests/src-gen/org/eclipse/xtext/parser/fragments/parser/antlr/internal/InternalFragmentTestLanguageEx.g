@@ -69,12 +69,7 @@ entryRuleParserRuleFragmentsEx returns [EObject current=null]:
 
 // Rule ParserRuleFragmentsEx
 ruleParserRuleFragmentsEx returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	{
 		newCompositeNode(grammarAccess.getParserRuleFragmentsExAccess().getParserRuleFragmentsParserRuleCall());
 	}
@@ -94,12 +89,7 @@ entryRuleParserRuleFragments returns [EObject current=null]:
 
 // Rule ParserRuleFragments
 ruleParserRuleFragments returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -346,12 +336,7 @@ entryRulePRFNamed returns [EObject current=null]:
 
 // Rule PRFNamed
 rulePRFNamed returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			if ($current==null) {
@@ -415,12 +400,7 @@ entryRulePRFNamedRecursive returns [EObject current=null]:
 
 // Rule PRFNamedRecursive
 rulePRFNamedRecursive returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -463,12 +443,7 @@ entryRulePRFNamedRecursiveFragment returns [EObject current=null]:
 
 // Rule PRFNamedRecursiveFragment
 rulePRFNamedRecursiveFragment returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -511,12 +486,7 @@ entryRulePRFNamedRefFirst returns [EObject current=null]:
 
 // Rule PRFNamedRefFirst
 rulePRFNamedRefFirst returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -558,12 +528,7 @@ entryRulePRFNamedWithAction returns [EObject current=null]:
 
 // Rule PRFNamedWithAction
 rulePRFNamedWithAction returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getPRFNamedWithActionAccess().getPRFNamedParserRuleCall_0());
@@ -638,12 +603,7 @@ entryRulePRFNamedWithFQN returns [EObject current=null]:
 
 // Rule PRFNamedWithFQN
 rulePRFNamedWithFQN returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -698,12 +658,7 @@ entryRulePRFWithPredicate returns [EObject current=null]:
 
 // Rule PRFWithPredicate
 rulePRFWithPredicate returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			if ($current==null) {
@@ -752,12 +707,7 @@ entryRuleFQN returns [String current=null]:
 
 // Rule FQN
 ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{
@@ -790,12 +740,7 @@ entryRuleFQN2 returns [String current=null]:
 
 // Rule FQN2
 ruleFQN2 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{
@@ -822,12 +767,7 @@ ruleFQN2 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 
 // Rule Suffix
 ruleSuffix returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='.'
 		{
@@ -859,12 +799,7 @@ ruleSuffix returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 
 // Rule Suffix2
 ruleSuffix2 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='.'
 		{
@@ -884,12 +819,7 @@ ruleSuffix2 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 
 // Rule PRFNamedFragment
 rulePRFNamedFragment[EObject in_current]  returns [EObject current=in_current]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID
@@ -913,12 +843,7 @@ rulePRFNamedFragment[EObject in_current]  returns [EObject current=in_current]
 
 // Rule PRFNamedRef
 rulePRFNamedRef[EObject in_current]  returns [EObject current=in_current]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -937,12 +862,7 @@ rulePRFNamedRef[EObject in_current]  returns [EObject current=in_current]
 
 // Rule RecursiveFromFragment
 ruleRecursiveFromFragment[EObject in_current]  returns [EObject current=in_current]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -973,12 +893,7 @@ entryRuleNamedInParentheses returns [EObject current=null]:
 
 // Rule NamedInParentheses
 ruleNamedInParentheses returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='('
@@ -1032,12 +947,7 @@ ruleNamedInParentheses returns [EObject current=null]
 
 // Rule RecursiveFragment
 ruleRecursiveFragment[EObject in_current]  returns [EObject current=in_current]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='('
@@ -1092,12 +1002,7 @@ entryRuleNamedByAction returns [EObject current=null]:
 
 // Rule NamedByAction
 ruleNamedByAction returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{

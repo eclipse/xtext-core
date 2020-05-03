@@ -70,12 +70,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='#00'
@@ -348,12 +343,7 @@ entryRuleKeywordVal returns [EObject current=null]:
 
 // Rule KeywordVal
 ruleKeywordVal returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -396,12 +386,7 @@ entryRuleTerminalVal returns [EObject current=null]:
 
 // Rule TerminalVal
 ruleTerminalVal returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -467,12 +452,7 @@ entryRuleEnumVal returns [EObject current=null]:
 
 // Rule EnumVal
 ruleEnumVal returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -525,12 +505,7 @@ entryRuleKeywordBool returns [EObject current=null]:
 
 // Rule KeywordBool
 ruleKeywordBool returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -573,12 +548,7 @@ entryRuleTerminalBool returns [EObject current=null]:
 
 // Rule TerminalBool
 ruleTerminalBool returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -644,12 +614,7 @@ entryRuleEnumBool returns [EObject current=null]:
 
 // Rule EnumBool
 ruleEnumBool returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -702,12 +667,7 @@ entryRuleMixedBool returns [EObject current=null]:
 
 // Rule MixedBool
 ruleMixedBool returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -755,12 +715,7 @@ entryRuleBoolean returns [String current=null]:
 
 // Rule Boolean
 ruleBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='true'
 		{
@@ -785,12 +740,7 @@ entryRuleMixedValue returns [EObject current=null]:
 
 // Rule MixedValue
 ruleMixedValue returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -843,12 +793,7 @@ entryRuleDatEnum returns [String current=null]:
 
 // Rule DatEnum
 ruleDatEnum returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	kw='lit3'
 	{
 		$current.merge(kw);
@@ -865,12 +810,7 @@ entryRuleContainmentRef returns [EObject current=null]:
 
 // Rule ContainmentRef
 ruleContainmentRef returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -923,12 +863,7 @@ entryRuleContainmentRef1 returns [EObject current=null]:
 
 // Rule ContainmentRef1
 ruleContainmentRef1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='kw1'
 		{
@@ -964,12 +899,7 @@ entryRuleContainmentRef2 returns [EObject current=null]:
 
 // Rule ContainmentRef2
 ruleContainmentRef2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='kw2'
 		{
@@ -1005,12 +935,7 @@ entryRuleCrossRef returns [EObject current=null]:
 
 // Rule CrossRef
 ruleCrossRef returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1081,12 +1006,7 @@ ruleCrossRef returns [EObject current=null]
 
 // Rule Enum1
 ruleEnum1 returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		enumLiteral_0='lit1'
 		{
@@ -1098,12 +1018,7 @@ ruleEnum1 returns [Enumerator current=null]
 
 // Rule Enum2
 ruleEnum2 returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		enumLiteral_0='lit2'
 		{

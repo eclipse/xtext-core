@@ -116,25 +116,22 @@ public class InternalSuperTestLanguageParser extends AbstractInternalAntlrParser
         Token otherlv_0=null;
         Token lv_name_1_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSuperTestLanguage.g:77:2: ( (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalSuperTestLanguage.g:78:2: (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalSuperTestLanguage.g:72:1: ( (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalSuperTestLanguage.g:73:2: (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalSuperTestLanguage.g:78:2: (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalSuperTestLanguage.g:79:3: otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) )
+            // InternalSuperTestLanguage.g:73:2: (otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalSuperTestLanguage.g:74:3: otherlv_0= 'super' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getSuperMainAccess().getSuperKeyword_0());
             		
-            // InternalSuperTestLanguage.g:83:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalSuperTestLanguage.g:84:4: (lv_name_1_0= RULE_ID )
+            // InternalSuperTestLanguage.g:78:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalSuperTestLanguage.g:79:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalSuperTestLanguage.g:84:4: (lv_name_1_0= RULE_ID )
-            // InternalSuperTestLanguage.g:85:5: lv_name_1_0= RULE_ID
+            // InternalSuperTestLanguage.g:79:4: (lv_name_1_0= RULE_ID )
+            // InternalSuperTestLanguage.g:80:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -161,9 +158,6 @@ public class InternalSuperTestLanguageParser extends AbstractInternalAntlrParser
 
 
             }
-
-
-            	leaveRule();
 
         }
 

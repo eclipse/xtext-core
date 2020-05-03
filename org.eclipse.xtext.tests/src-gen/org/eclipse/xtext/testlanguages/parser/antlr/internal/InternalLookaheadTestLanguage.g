@@ -69,12 +69,7 @@ entryRuleEntry returns [EObject current=null]:
 
 // Rule Entry
 ruleEntry returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -105,12 +100,7 @@ entryRuleAlts returns [EObject current=null]:
 
 // Rule Alts
 ruleAlts returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getAltsAccess().getLookAhead0ParserRuleCall_0());
@@ -178,12 +168,7 @@ entryRuleLookAhead0 returns [EObject current=null]:
 
 // Rule LookAhead0
 ruleLookAhead0 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='bar'
 		{
@@ -215,12 +200,7 @@ entryRuleLookAhead1 returns [EObject current=null]:
 
 // Rule LookAhead1
 ruleLookAhead1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='foo'
 		{
@@ -285,12 +265,7 @@ entryRuleLookAhead2 returns [EObject current=null]:
 
 // Rule LookAhead2
 ruleLookAhead2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -339,12 +314,7 @@ entryRuleLookAhead3 returns [EObject current=null]:
 
 // Rule LookAhead3
 ruleLookAhead3 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='foo'
 		{
@@ -399,12 +369,7 @@ entryRuleLookAhead4 returns [EObject current=null]:
 
 // Rule LookAhead4
 ruleLookAhead4 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -447,12 +412,7 @@ entryRuleLookAheadPredicate returns [EObject current=null]:
 
 // Rule LookAheadPredicate
 ruleLookAheadPredicate returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			((
@@ -501,12 +461,7 @@ entryRuleLookBeyond returns [EObject current=null]:
 
 // Rule LookBeyond
 ruleLookBeyond returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -558,12 +513,7 @@ entryRuleLookAheadStrings returns [EObject current=null]:
 
 // Rule LookAheadStrings
 ruleLookAheadStrings returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_values_0_0=RULE_STRING
@@ -593,12 +543,7 @@ entryRuleFewerLookAheadStrings returns [EObject current=null]:
 
 // Rule FewerLookAheadStrings
 ruleFewerLookAheadStrings returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(

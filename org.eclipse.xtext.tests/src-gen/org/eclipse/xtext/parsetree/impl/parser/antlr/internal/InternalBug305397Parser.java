@@ -118,14 +118,11 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
         EObject lv_elements_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalBug305397.g:77:2: ( ( (lv_elements_0_0= ruleElement ) )* )
-            // InternalBug305397.g:78:2: ( (lv_elements_0_0= ruleElement ) )*
+            // InternalBug305397.g:72:1: ( ( (lv_elements_0_0= ruleElement ) )* )
+            // InternalBug305397.g:73:2: ( (lv_elements_0_0= ruleElement ) )*
             {
-            // InternalBug305397.g:78:2: ( (lv_elements_0_0= ruleElement ) )*
+            // InternalBug305397.g:73:2: ( (lv_elements_0_0= ruleElement ) )*
             loop1:
             do {
                 int alt1=2;
@@ -138,10 +135,10 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalBug305397.g:79:3: (lv_elements_0_0= ruleElement )
+            	    // InternalBug305397.g:74:3: (lv_elements_0_0= ruleElement )
             	    {
-            	    // InternalBug305397.g:79:3: (lv_elements_0_0= ruleElement )
-            	    // InternalBug305397.g:80:4: lv_elements_0_0= ruleElement
+            	    // InternalBug305397.g:74:3: (lv_elements_0_0= ruleElement )
+            	    // InternalBug305397.g:75:4: lv_elements_0_0= ruleElement
             	    {
 
             	    				newCompositeNode(grammarAccess.getModelAccess().getElementsElementParserRuleCall_0());
@@ -177,9 +174,6 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -194,7 +188,7 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleElement"
-    // InternalBug305397.g:100:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
+    // InternalBug305397.g:95:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
     public final EObject entryRuleElement() throws RecognitionException {
         EObject current = null;
 
@@ -202,8 +196,8 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBug305397.g:100:48: (iv_ruleElement= ruleElement EOF )
-            // InternalBug305397.g:101:2: iv_ruleElement= ruleElement EOF
+            // InternalBug305397.g:95:48: (iv_ruleElement= ruleElement EOF )
+            // InternalBug305397.g:96:2: iv_ruleElement= ruleElement EOF
             {
              newCompositeNode(grammarAccess.getElementRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -230,7 +224,7 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleElement"
-    // InternalBug305397.g:107:1: ruleElement returns [EObject current=null] : ( () ( (lv_a_1_0= 'a' ) )? otherlv_2= 'element' ( (lv_name_3_0= RULE_ID ) )? ( (lv_elements_4_0= ruleElement ) )* otherlv_5= 'end' ) ;
+    // InternalBug305397.g:102:1: ruleElement returns [EObject current=null] : ( () ( (lv_a_1_0= 'a' ) )? otherlv_2= 'element' ( (lv_name_3_0= RULE_ID ) )? ( (lv_elements_4_0= ruleElement ) )* otherlv_5= 'end' ) ;
     public final EObject ruleElement() throws RecognitionException {
         EObject current = null;
 
@@ -241,18 +235,15 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
         EObject lv_elements_4_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalBug305397.g:113:2: ( ( () ( (lv_a_1_0= 'a' ) )? otherlv_2= 'element' ( (lv_name_3_0= RULE_ID ) )? ( (lv_elements_4_0= ruleElement ) )* otherlv_5= 'end' ) )
-            // InternalBug305397.g:114:2: ( () ( (lv_a_1_0= 'a' ) )? otherlv_2= 'element' ( (lv_name_3_0= RULE_ID ) )? ( (lv_elements_4_0= ruleElement ) )* otherlv_5= 'end' )
+            // InternalBug305397.g:103:1: ( ( () ( (lv_a_1_0= 'a' ) )? otherlv_2= 'element' ( (lv_name_3_0= RULE_ID ) )? ( (lv_elements_4_0= ruleElement ) )* otherlv_5= 'end' ) )
+            // InternalBug305397.g:104:2: ( () ( (lv_a_1_0= 'a' ) )? otherlv_2= 'element' ( (lv_name_3_0= RULE_ID ) )? ( (lv_elements_4_0= ruleElement ) )* otherlv_5= 'end' )
             {
-            // InternalBug305397.g:114:2: ( () ( (lv_a_1_0= 'a' ) )? otherlv_2= 'element' ( (lv_name_3_0= RULE_ID ) )? ( (lv_elements_4_0= ruleElement ) )* otherlv_5= 'end' )
-            // InternalBug305397.g:115:3: () ( (lv_a_1_0= 'a' ) )? otherlv_2= 'element' ( (lv_name_3_0= RULE_ID ) )? ( (lv_elements_4_0= ruleElement ) )* otherlv_5= 'end'
+            // InternalBug305397.g:104:2: ( () ( (lv_a_1_0= 'a' ) )? otherlv_2= 'element' ( (lv_name_3_0= RULE_ID ) )? ( (lv_elements_4_0= ruleElement ) )* otherlv_5= 'end' )
+            // InternalBug305397.g:105:3: () ( (lv_a_1_0= 'a' ) )? otherlv_2= 'element' ( (lv_name_3_0= RULE_ID ) )? ( (lv_elements_4_0= ruleElement ) )* otherlv_5= 'end'
             {
-            // InternalBug305397.g:115:3: ()
-            // InternalBug305397.g:116:4: 
+            // InternalBug305397.g:105:3: ()
+            // InternalBug305397.g:106:4: 
             {
 
             				current = forceCreateModelElement(
@@ -262,7 +253,7 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBug305397.g:122:3: ( (lv_a_1_0= 'a' ) )?
+            // InternalBug305397.g:112:3: ( (lv_a_1_0= 'a' ) )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -271,10 +262,10 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalBug305397.g:123:4: (lv_a_1_0= 'a' )
+                    // InternalBug305397.g:113:4: (lv_a_1_0= 'a' )
                     {
-                    // InternalBug305397.g:123:4: (lv_a_1_0= 'a' )
-                    // InternalBug305397.g:124:5: lv_a_1_0= 'a'
+                    // InternalBug305397.g:113:4: (lv_a_1_0= 'a' )
+                    // InternalBug305397.g:114:5: lv_a_1_0= 'a'
                     {
                     lv_a_1_0=(Token)match(input,11,FollowSets000.FOLLOW_4); 
 
@@ -299,7 +290,7 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getElementAccess().getElementKeyword_2());
             		
-            // InternalBug305397.g:140:3: ( (lv_name_3_0= RULE_ID ) )?
+            // InternalBug305397.g:130:3: ( (lv_name_3_0= RULE_ID ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -308,10 +299,10 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalBug305397.g:141:4: (lv_name_3_0= RULE_ID )
+                    // InternalBug305397.g:131:4: (lv_name_3_0= RULE_ID )
                     {
-                    // InternalBug305397.g:141:4: (lv_name_3_0= RULE_ID )
-                    // InternalBug305397.g:142:5: lv_name_3_0= RULE_ID
+                    // InternalBug305397.g:131:4: (lv_name_3_0= RULE_ID )
+                    // InternalBug305397.g:132:5: lv_name_3_0= RULE_ID
                     {
                     lv_name_3_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_6); 
 
@@ -336,7 +327,7 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalBug305397.g:158:3: ( (lv_elements_4_0= ruleElement ) )*
+            // InternalBug305397.g:148:3: ( (lv_elements_4_0= ruleElement ) )*
             loop4:
             do {
                 int alt4=2;
@@ -349,10 +340,10 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalBug305397.g:159:4: (lv_elements_4_0= ruleElement )
+            	    // InternalBug305397.g:149:4: (lv_elements_4_0= ruleElement )
             	    {
-            	    // InternalBug305397.g:159:4: (lv_elements_4_0= ruleElement )
-            	    // InternalBug305397.g:160:5: lv_elements_4_0= ruleElement
+            	    // InternalBug305397.g:149:4: (lv_elements_4_0= ruleElement )
+            	    // InternalBug305397.g:150:5: lv_elements_4_0= ruleElement
             	    {
 
             	    					newCompositeNode(grammarAccess.getElementAccess().getElementsElementParserRuleCall_4_0());
@@ -394,9 +385,6 @@ public class InternalBug305397Parser extends AbstractInternalAntlrParser {
 
 
             }
-
-
-            	leaveRule();
 
         }
 

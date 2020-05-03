@@ -69,12 +69,7 @@ entryRuleFoo returns [EObject current=null]:
 
 // Rule Foo
 ruleFoo returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -160,12 +155,7 @@ entryRuleBar returns [EObject current=null]:
 
 // Rule Bar
 ruleBar returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -204,12 +194,7 @@ entryRuleBaz returns [EObject current=null]:
 
 // Rule Baz
 ruleBaz returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='baz'
 		{

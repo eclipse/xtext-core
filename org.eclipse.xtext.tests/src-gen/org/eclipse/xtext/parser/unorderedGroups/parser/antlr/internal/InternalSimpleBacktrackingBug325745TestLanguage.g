@@ -76,12 +76,7 @@ entryRuleDelegateModel returns [EObject current=null]:
 
 // Rule DelegateModel
 ruleDelegateModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	{
 		/* */
 	}
@@ -104,12 +99,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -152,12 +142,7 @@ entryRuleElement returns [EObject current=null]:
 
 // Rule Element
 ruleElement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -231,12 +216,7 @@ entryRuleDataType returns [EObject current=null]:
 
 // Rule DataType
 ruleDataType returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -301,15 +281,12 @@ finally {
 // Rule Expression
 ruleExpression returns [EObject current=null]
 @init {
-	enterRule();
 	UnorderedGroupState myUnorderedGroupState = getUnorderedGroupHelper().snapShot(
 	grammarAccess.getExpressionAccess().getUnorderedGroup_1(), 
 	grammarAccess.getExpressionAccess().getUnorderedGroup_3()
 	);
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -481,12 +458,7 @@ entryRuleSimpleTerm returns [EObject current=null]:
 
 // Rule SimpleTerm
 ruleSimpleTerm returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(

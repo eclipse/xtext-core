@@ -74,12 +74,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -110,12 +105,7 @@ entryRulePackageDeclaration returns [EObject current=null]:
 
 // Rule PackageDeclaration
 rulePackageDeclaration returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='package'
 		{
@@ -179,12 +169,7 @@ entryRuleAbstractElement returns [EObject current=null]:
 
 // Rule AbstractElement
 ruleAbstractElement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getAbstractElementAccess().getPackageDeclarationParserRuleCall_0());
@@ -215,12 +200,7 @@ entryRuleTypeDeclaration returns [EObject current=null]:
 
 // Rule TypeDeclaration
 ruleTypeDeclaration returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='type'
 		{
@@ -305,12 +285,7 @@ entryRuleMember returns [EObject current=null]:
 
 // Rule Member
 ruleMember returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getMemberAccess().getPropertyParserRuleCall_0());
@@ -341,12 +316,7 @@ entryRuleProperty returns [EObject current=null]:
 
 // Rule Property
 ruleProperty returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -397,12 +367,7 @@ entryRuleType returns [EObject current=null]:
 
 // Rule Type
 ruleType returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -455,12 +420,7 @@ entryRuleOperation returns [EObject current=null]:
 
 // Rule Operation
 ruleOperation returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -609,12 +569,7 @@ entryRuleOperationCall returns [EObject current=null]:
 
 // Rule OperationCall
 ruleOperationCall returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -693,12 +648,7 @@ entryRuleParameter returns [EObject current=null]:
 
 // Rule Parameter
 ruleParameter returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -760,12 +710,7 @@ entryRuleTypeReference returns [EObject current=null]:
 
 // Rule TypeReference
 ruleTypeReference returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -793,12 +738,7 @@ entryRulePrimitiveType returns [EObject current=null]:
 
 // Rule PrimitiveType
 rulePrimitiveType returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -859,12 +799,7 @@ entryRuleQualifiedName returns [String current=null]:
 
 // Rule QualifiedName
 ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{

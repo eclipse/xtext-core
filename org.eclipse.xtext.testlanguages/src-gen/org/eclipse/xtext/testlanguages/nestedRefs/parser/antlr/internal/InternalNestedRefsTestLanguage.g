@@ -69,12 +69,7 @@ entryRuleDoc returns [EObject current=null]:
 
 // Rule Doc
 ruleDoc returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -105,12 +100,7 @@ entryRuleSelfReferingDecl returns [EObject current=null]:
 
 // Rule SelfReferingDecl
 ruleSelfReferingDecl returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='decl'
 		{
@@ -171,12 +161,7 @@ entryRuleQualifiedName returns [String current=null]:
 
 // Rule QualifiedName
 ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{

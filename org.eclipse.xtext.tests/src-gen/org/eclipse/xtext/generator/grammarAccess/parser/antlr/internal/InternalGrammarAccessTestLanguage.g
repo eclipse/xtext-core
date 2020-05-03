@@ -69,12 +69,7 @@ entryRuleRoot returns [EObject current=null]:
 
 // Rule Root
 ruleRoot returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -105,12 +100,7 @@ entryRuleType returns [EObject current=null]:
 
 // Rule Type
 ruleType returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getTypeAccess().getATypeParserRuleCall_0());
@@ -141,12 +131,7 @@ entryRuleAType returns [EObject current=null]:
 
 // Rule AType
 ruleAType returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='foo'
 		{
@@ -171,12 +156,7 @@ entryRuleAnotherType returns [EObject current=null]:
 
 // Rule AnotherType
 ruleAnotherType returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='bar'
 		{

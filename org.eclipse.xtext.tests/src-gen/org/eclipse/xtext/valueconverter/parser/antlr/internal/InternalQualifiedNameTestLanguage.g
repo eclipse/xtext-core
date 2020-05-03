@@ -69,12 +69,7 @@ entryRuleElement returns [EObject current=null]:
 
 // Rule Element
 ruleElement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='keyword'
 		{
@@ -111,12 +106,7 @@ entryRuleQualifiedName returns [String current=null]:
 
 // Rule QualifiedName
 ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{

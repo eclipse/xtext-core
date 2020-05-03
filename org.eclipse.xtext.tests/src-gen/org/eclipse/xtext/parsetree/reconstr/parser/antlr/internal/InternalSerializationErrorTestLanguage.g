@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -127,12 +122,7 @@ entryRuleParenthesis returns [EObject current=null]:
 
 // Rule Parenthesis
 ruleParenthesis returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='('
 		{
@@ -162,12 +152,7 @@ entryRuleTest returns [EObject current=null]:
 
 // Rule Test
 ruleTest returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getTestAccess().getTwoRequiredParserRuleCall_0());
@@ -207,12 +192,7 @@ entryRuleTwoRequired returns [EObject current=null]:
 
 // Rule TwoRequired
 ruleTwoRequired returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='tworequired'
 		{
@@ -266,12 +246,7 @@ entryRuleTwoOptions returns [EObject current=null]:
 
 // Rule TwoOptions
 ruleTwoOptions returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='twooptions'
 		{
@@ -340,12 +315,7 @@ entryRuleIndent returns [EObject current=null]:
 
 // Rule Indent
 ruleIndent returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='{'
 		{

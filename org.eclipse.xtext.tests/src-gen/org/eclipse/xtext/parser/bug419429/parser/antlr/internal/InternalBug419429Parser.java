@@ -114,18 +114,15 @@ public class InternalBug419429Parser extends AbstractInternalAntlrParser {
 
         Token otherlv_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalBug419429.g:77:2: ( ( (otherlv_0= RULE_ID ) ) )
-            // InternalBug419429.g:78:2: ( (otherlv_0= RULE_ID ) )
+            // InternalBug419429.g:72:1: ( ( (otherlv_0= RULE_ID ) ) )
+            // InternalBug419429.g:73:2: ( (otherlv_0= RULE_ID ) )
             {
-            // InternalBug419429.g:78:2: ( (otherlv_0= RULE_ID ) )
-            // InternalBug419429.g:79:3: (otherlv_0= RULE_ID )
+            // InternalBug419429.g:73:2: ( (otherlv_0= RULE_ID ) )
+            // InternalBug419429.g:74:3: (otherlv_0= RULE_ID )
             {
-            // InternalBug419429.g:79:3: (otherlv_0= RULE_ID )
-            // InternalBug419429.g:80:4: otherlv_0= RULE_ID
+            // InternalBug419429.g:74:3: (otherlv_0= RULE_ID )
+            // InternalBug419429.g:75:4: otherlv_0= RULE_ID
             {
 
             				if (current==null) {
@@ -144,9 +141,6 @@ public class InternalBug419429Parser extends AbstractInternalAntlrParser {
 
 
             }
-
-
-            	leaveRule();
 
         }
 

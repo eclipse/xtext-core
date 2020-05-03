@@ -122,21 +122,18 @@ public class InternalEnumAndReferenceTestLanguageParser extends AbstractInternal
         Enumerator lv_type_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalEnumAndReferenceTestLanguage.g:78:2: ( ( ( (lv_type_0_0= ruleKindOfKeyword ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'reference' ( (otherlv_3= RULE_ID ) ) ) )
-            // InternalEnumAndReferenceTestLanguage.g:79:2: ( ( (lv_type_0_0= ruleKindOfKeyword ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'reference' ( (otherlv_3= RULE_ID ) ) )
+            // InternalEnumAndReferenceTestLanguage.g:73:1: ( ( ( (lv_type_0_0= ruleKindOfKeyword ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'reference' ( (otherlv_3= RULE_ID ) ) ) )
+            // InternalEnumAndReferenceTestLanguage.g:74:2: ( ( (lv_type_0_0= ruleKindOfKeyword ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'reference' ( (otherlv_3= RULE_ID ) ) )
             {
-            // InternalEnumAndReferenceTestLanguage.g:79:2: ( ( (lv_type_0_0= ruleKindOfKeyword ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'reference' ( (otherlv_3= RULE_ID ) ) )
-            // InternalEnumAndReferenceTestLanguage.g:80:3: ( (lv_type_0_0= ruleKindOfKeyword ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'reference' ( (otherlv_3= RULE_ID ) )
+            // InternalEnumAndReferenceTestLanguage.g:74:2: ( ( (lv_type_0_0= ruleKindOfKeyword ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'reference' ( (otherlv_3= RULE_ID ) ) )
+            // InternalEnumAndReferenceTestLanguage.g:75:3: ( (lv_type_0_0= ruleKindOfKeyword ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'reference' ( (otherlv_3= RULE_ID ) )
             {
-            // InternalEnumAndReferenceTestLanguage.g:80:3: ( (lv_type_0_0= ruleKindOfKeyword ) )
-            // InternalEnumAndReferenceTestLanguage.g:81:4: (lv_type_0_0= ruleKindOfKeyword )
+            // InternalEnumAndReferenceTestLanguage.g:75:3: ( (lv_type_0_0= ruleKindOfKeyword ) )
+            // InternalEnumAndReferenceTestLanguage.g:76:4: (lv_type_0_0= ruleKindOfKeyword )
             {
-            // InternalEnumAndReferenceTestLanguage.g:81:4: (lv_type_0_0= ruleKindOfKeyword )
-            // InternalEnumAndReferenceTestLanguage.g:82:5: lv_type_0_0= ruleKindOfKeyword
+            // InternalEnumAndReferenceTestLanguage.g:76:4: (lv_type_0_0= ruleKindOfKeyword )
+            // InternalEnumAndReferenceTestLanguage.g:77:5: lv_type_0_0= ruleKindOfKeyword
             {
 
             					newCompositeNode(grammarAccess.getEntityWithEnumAndReferenceAccess().getTypeKindOfKeywordEnumRuleCall_0_0());
@@ -163,11 +160,11 @@ public class InternalEnumAndReferenceTestLanguageParser extends AbstractInternal
 
             }
 
-            // InternalEnumAndReferenceTestLanguage.g:99:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalEnumAndReferenceTestLanguage.g:100:4: (lv_name_1_0= RULE_ID )
+            // InternalEnumAndReferenceTestLanguage.g:94:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalEnumAndReferenceTestLanguage.g:95:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalEnumAndReferenceTestLanguage.g:100:4: (lv_name_1_0= RULE_ID )
-            // InternalEnumAndReferenceTestLanguage.g:101:5: lv_name_1_0= RULE_ID
+            // InternalEnumAndReferenceTestLanguage.g:95:4: (lv_name_1_0= RULE_ID )
+            // InternalEnumAndReferenceTestLanguage.g:96:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_4); 
 
@@ -193,11 +190,11 @@ public class InternalEnumAndReferenceTestLanguageParser extends AbstractInternal
 
             			newLeafNode(otherlv_2, grammarAccess.getEntityWithEnumAndReferenceAccess().getReferenceKeyword_2());
             		
-            // InternalEnumAndReferenceTestLanguage.g:121:3: ( (otherlv_3= RULE_ID ) )
-            // InternalEnumAndReferenceTestLanguage.g:122:4: (otherlv_3= RULE_ID )
+            // InternalEnumAndReferenceTestLanguage.g:116:3: ( (otherlv_3= RULE_ID ) )
+            // InternalEnumAndReferenceTestLanguage.g:117:4: (otherlv_3= RULE_ID )
             {
-            // InternalEnumAndReferenceTestLanguage.g:122:4: (otherlv_3= RULE_ID )
-            // InternalEnumAndReferenceTestLanguage.g:123:5: otherlv_3= RULE_ID
+            // InternalEnumAndReferenceTestLanguage.g:117:4: (otherlv_3= RULE_ID )
+            // InternalEnumAndReferenceTestLanguage.g:118:5: otherlv_3= RULE_ID
             {
 
             					if (current==null) {
@@ -220,9 +217,6 @@ public class InternalEnumAndReferenceTestLanguageParser extends AbstractInternal
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -237,21 +231,18 @@ public class InternalEnumAndReferenceTestLanguageParser extends AbstractInternal
 
 
     // $ANTLR start "ruleKindOfKeyword"
-    // InternalEnumAndReferenceTestLanguage.g:138:1: ruleKindOfKeyword returns [Enumerator current=null] : ( (enumLiteral_0= 'kindOfKeyword' ) | (enumLiteral_1= 'anotherEnumLiteral' ) ) ;
+    // InternalEnumAndReferenceTestLanguage.g:133:1: ruleKindOfKeyword returns [Enumerator current=null] : ( (enumLiteral_0= 'kindOfKeyword' ) | (enumLiteral_1= 'anotherEnumLiteral' ) ) ;
     public final Enumerator ruleKindOfKeyword() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
         Token enumLiteral_1=null;
 
-
-        	enterRule();
-
         try {
-            // InternalEnumAndReferenceTestLanguage.g:144:2: ( ( (enumLiteral_0= 'kindOfKeyword' ) | (enumLiteral_1= 'anotherEnumLiteral' ) ) )
-            // InternalEnumAndReferenceTestLanguage.g:145:2: ( (enumLiteral_0= 'kindOfKeyword' ) | (enumLiteral_1= 'anotherEnumLiteral' ) )
+            // InternalEnumAndReferenceTestLanguage.g:134:1: ( ( (enumLiteral_0= 'kindOfKeyword' ) | (enumLiteral_1= 'anotherEnumLiteral' ) ) )
+            // InternalEnumAndReferenceTestLanguage.g:135:2: ( (enumLiteral_0= 'kindOfKeyword' ) | (enumLiteral_1= 'anotherEnumLiteral' ) )
             {
-            // InternalEnumAndReferenceTestLanguage.g:145:2: ( (enumLiteral_0= 'kindOfKeyword' ) | (enumLiteral_1= 'anotherEnumLiteral' ) )
+            // InternalEnumAndReferenceTestLanguage.g:135:2: ( (enumLiteral_0= 'kindOfKeyword' ) | (enumLiteral_1= 'anotherEnumLiteral' ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -269,10 +260,10 @@ public class InternalEnumAndReferenceTestLanguageParser extends AbstractInternal
             }
             switch (alt1) {
                 case 1 :
-                    // InternalEnumAndReferenceTestLanguage.g:146:3: (enumLiteral_0= 'kindOfKeyword' )
+                    // InternalEnumAndReferenceTestLanguage.g:136:3: (enumLiteral_0= 'kindOfKeyword' )
                     {
-                    // InternalEnumAndReferenceTestLanguage.g:146:3: (enumLiteral_0= 'kindOfKeyword' )
-                    // InternalEnumAndReferenceTestLanguage.g:147:4: enumLiteral_0= 'kindOfKeyword'
+                    // InternalEnumAndReferenceTestLanguage.g:136:3: (enumLiteral_0= 'kindOfKeyword' )
+                    // InternalEnumAndReferenceTestLanguage.g:137:4: enumLiteral_0= 'kindOfKeyword'
                     {
                     enumLiteral_0=(Token)match(input,12,FollowSets000.FOLLOW_2); 
 
@@ -286,10 +277,10 @@ public class InternalEnumAndReferenceTestLanguageParser extends AbstractInternal
                     }
                     break;
                 case 2 :
-                    // InternalEnumAndReferenceTestLanguage.g:154:3: (enumLiteral_1= 'anotherEnumLiteral' )
+                    // InternalEnumAndReferenceTestLanguage.g:144:3: (enumLiteral_1= 'anotherEnumLiteral' )
                     {
-                    // InternalEnumAndReferenceTestLanguage.g:154:3: (enumLiteral_1= 'anotherEnumLiteral' )
-                    // InternalEnumAndReferenceTestLanguage.g:155:4: enumLiteral_1= 'anotherEnumLiteral'
+                    // InternalEnumAndReferenceTestLanguage.g:144:3: (enumLiteral_1= 'anotherEnumLiteral' )
+                    // InternalEnumAndReferenceTestLanguage.g:145:4: enumLiteral_1= 'anotherEnumLiteral'
                     {
                     enumLiteral_1=(Token)match(input,13,FollowSets000.FOLLOW_2); 
 
@@ -307,9 +298,6 @@ public class InternalEnumAndReferenceTestLanguageParser extends AbstractInternal
 
 
             }
-
-
-            	leaveRule();
 
         }
 

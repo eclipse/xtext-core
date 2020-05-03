@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -439,12 +434,7 @@ entryRuleDatatype returns [String current=null]:
 
 // Rule Datatype
 ruleDatatype returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{
@@ -477,12 +467,7 @@ entryRuleNestedDatatype returns [String current=null]:
 
 // Rule NestedDatatype
 ruleNestedDatatype returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{
@@ -520,12 +505,7 @@ entryRuleChild returns [EObject current=null]:
 
 // Rule Child
 ruleChild returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getChildAccess().getChild1ParserRuleCall_0());
@@ -556,12 +536,7 @@ entryRuleChild1 returns [EObject current=null]:
 
 // Rule Child1
 ruleChild1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID
@@ -591,12 +566,7 @@ entryRuleChild2 returns [EObject current=null]:
 
 // Rule Child2
 ruleChild2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_STRING

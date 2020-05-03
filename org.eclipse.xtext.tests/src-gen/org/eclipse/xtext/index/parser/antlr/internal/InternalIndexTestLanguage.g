@@ -69,12 +69,7 @@ entryRuleFile returns [EObject current=null]:
 
 // Rule File
 ruleFile returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -105,12 +100,7 @@ entryRuleImport returns [EObject current=null]:
 
 // Rule Import
 ruleImport returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='import'
 		{
@@ -147,12 +137,7 @@ entryRuleQualifiedNameWithWildCard returns [String current=null]:
 
 // Rule QualifiedNameWithWildCard
 ruleQualifiedNameWithWildCard returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getQualifiedNameWithWildCardAccess().getQualifiedNameParserRuleCall_0());
@@ -183,12 +168,7 @@ entryRuleQualifiedName returns [String current=null]:
 
 // Rule QualifiedName
 ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{
@@ -223,12 +203,7 @@ entryRuleNamespace returns [EObject current=null]:
 
 // Rule Namespace
 ruleNamespace returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -288,12 +263,7 @@ entryRuleElement returns [EObject current=null]:
 
 // Rule Element
 ruleElement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getElementAccess().getNamespaceParserRuleCall_0());
@@ -333,12 +303,7 @@ entryRuleType returns [EObject current=null]:
 
 // Rule Type
 ruleType returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getTypeAccess().getEntityParserRuleCall_0());
@@ -369,12 +334,7 @@ entryRuleEntity returns [EObject current=null]:
 
 // Rule Entity
 ruleEntity returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='entity'
 		{
@@ -437,12 +397,7 @@ entryRuleDatatype returns [EObject current=null]:
 
 // Rule Datatype
 ruleDatatype returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='datatype'
 		{
@@ -478,12 +433,7 @@ entryRuleProperty returns [EObject current=null]:
 
 // Rule Property
 ruleProperty returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(

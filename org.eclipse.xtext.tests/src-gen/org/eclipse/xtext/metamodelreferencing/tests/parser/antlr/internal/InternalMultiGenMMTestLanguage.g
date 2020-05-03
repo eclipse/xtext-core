@@ -69,12 +69,7 @@ entryRuleFoo returns [EObject current=null]:
 
 // Rule Foo
 ruleFoo returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -125,12 +120,7 @@ entryRuleNameRef returns [EObject current=null]:
 
 // Rule NameRef
 ruleNameRef returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_STRING

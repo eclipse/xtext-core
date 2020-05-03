@@ -121,14 +121,11 @@ public class InternalSerializationBug269362TestLanguageParser extends AbstractIn
         Token otherlv_4=null;
         Token lv_bar_5_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSerializationBug269362TestLanguage.g:77:2: ( ( (otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )? ) | (otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) ) ) ) )
-            // InternalSerializationBug269362TestLanguage.g:78:2: ( (otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )? ) | (otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) ) ) )
+            // InternalSerializationBug269362TestLanguage.g:72:1: ( ( (otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )? ) | (otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) ) ) ) )
+            // InternalSerializationBug269362TestLanguage.g:73:2: ( (otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )? ) | (otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) ) ) )
             {
-            // InternalSerializationBug269362TestLanguage.g:78:2: ( (otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )? ) | (otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) ) ) )
+            // InternalSerializationBug269362TestLanguage.g:73:2: ( (otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )? ) | (otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) ) ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -146,20 +143,20 @@ public class InternalSerializationBug269362TestLanguageParser extends AbstractIn
             }
             switch (alt2) {
                 case 1 :
-                    // InternalSerializationBug269362TestLanguage.g:79:3: (otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )? )
+                    // InternalSerializationBug269362TestLanguage.g:74:3: (otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )? )
                     {
-                    // InternalSerializationBug269362TestLanguage.g:79:3: (otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )? )
-                    // InternalSerializationBug269362TestLanguage.g:80:4: otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )?
+                    // InternalSerializationBug269362TestLanguage.g:74:3: (otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )? )
+                    // InternalSerializationBug269362TestLanguage.g:75:4: otherlv_0= 'foo' ( (lv_foo_1_0= RULE_ID ) ) (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )?
                     {
                     otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_3); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getModelAccess().getFooKeyword_0_0());
                     			
-                    // InternalSerializationBug269362TestLanguage.g:84:4: ( (lv_foo_1_0= RULE_ID ) )
-                    // InternalSerializationBug269362TestLanguage.g:85:5: (lv_foo_1_0= RULE_ID )
+                    // InternalSerializationBug269362TestLanguage.g:79:4: ( (lv_foo_1_0= RULE_ID ) )
+                    // InternalSerializationBug269362TestLanguage.g:80:5: (lv_foo_1_0= RULE_ID )
                     {
-                    // InternalSerializationBug269362TestLanguage.g:85:5: (lv_foo_1_0= RULE_ID )
-                    // InternalSerializationBug269362TestLanguage.g:86:6: lv_foo_1_0= RULE_ID
+                    // InternalSerializationBug269362TestLanguage.g:80:5: (lv_foo_1_0= RULE_ID )
+                    // InternalSerializationBug269362TestLanguage.g:81:6: lv_foo_1_0= RULE_ID
                     {
                     lv_foo_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_4); 
 
@@ -181,7 +178,7 @@ public class InternalSerializationBug269362TestLanguageParser extends AbstractIn
 
                     }
 
-                    // InternalSerializationBug269362TestLanguage.g:102:4: (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )?
+                    // InternalSerializationBug269362TestLanguage.g:97:4: (otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) ) )?
                     int alt1=2;
                     int LA1_0 = input.LA(1);
 
@@ -190,17 +187,17 @@ public class InternalSerializationBug269362TestLanguageParser extends AbstractIn
                     }
                     switch (alt1) {
                         case 1 :
-                            // InternalSerializationBug269362TestLanguage.g:103:5: otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) )
+                            // InternalSerializationBug269362TestLanguage.g:98:5: otherlv_2= 'bar' ( (lv_bar_3_0= RULE_ID ) )
                             {
                             otherlv_2=(Token)match(input,12,FollowSets000.FOLLOW_3); 
 
                             					newLeafNode(otherlv_2, grammarAccess.getModelAccess().getBarKeyword_0_2_0());
                             				
-                            // InternalSerializationBug269362TestLanguage.g:107:5: ( (lv_bar_3_0= RULE_ID ) )
-                            // InternalSerializationBug269362TestLanguage.g:108:6: (lv_bar_3_0= RULE_ID )
+                            // InternalSerializationBug269362TestLanguage.g:102:5: ( (lv_bar_3_0= RULE_ID ) )
+                            // InternalSerializationBug269362TestLanguage.g:103:6: (lv_bar_3_0= RULE_ID )
                             {
-                            // InternalSerializationBug269362TestLanguage.g:108:6: (lv_bar_3_0= RULE_ID )
-                            // InternalSerializationBug269362TestLanguage.g:109:7: lv_bar_3_0= RULE_ID
+                            // InternalSerializationBug269362TestLanguage.g:103:6: (lv_bar_3_0= RULE_ID )
+                            // InternalSerializationBug269362TestLanguage.g:104:7: lv_bar_3_0= RULE_ID
                             {
                             lv_bar_3_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -235,20 +232,20 @@ public class InternalSerializationBug269362TestLanguageParser extends AbstractIn
                     }
                     break;
                 case 2 :
-                    // InternalSerializationBug269362TestLanguage.g:128:3: (otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) ) )
+                    // InternalSerializationBug269362TestLanguage.g:123:3: (otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) ) )
                     {
-                    // InternalSerializationBug269362TestLanguage.g:128:3: (otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) ) )
-                    // InternalSerializationBug269362TestLanguage.g:129:4: otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) )
+                    // InternalSerializationBug269362TestLanguage.g:123:3: (otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) ) )
+                    // InternalSerializationBug269362TestLanguage.g:124:4: otherlv_4= 'bar' ( (lv_bar_5_0= RULE_ID ) )
                     {
                     otherlv_4=(Token)match(input,12,FollowSets000.FOLLOW_3); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getModelAccess().getBarKeyword_1_0());
                     			
-                    // InternalSerializationBug269362TestLanguage.g:133:4: ( (lv_bar_5_0= RULE_ID ) )
-                    // InternalSerializationBug269362TestLanguage.g:134:5: (lv_bar_5_0= RULE_ID )
+                    // InternalSerializationBug269362TestLanguage.g:128:4: ( (lv_bar_5_0= RULE_ID ) )
+                    // InternalSerializationBug269362TestLanguage.g:129:5: (lv_bar_5_0= RULE_ID )
                     {
-                    // InternalSerializationBug269362TestLanguage.g:134:5: (lv_bar_5_0= RULE_ID )
-                    // InternalSerializationBug269362TestLanguage.g:135:6: lv_bar_5_0= RULE_ID
+                    // InternalSerializationBug269362TestLanguage.g:129:5: (lv_bar_5_0= RULE_ID )
+                    // InternalSerializationBug269362TestLanguage.g:130:6: lv_bar_5_0= RULE_ID
                     {
                     lv_bar_5_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -281,9 +278,6 @@ public class InternalSerializationBug269362TestLanguageParser extends AbstractIn
 
 
             }
-
-
-            	leaveRule();
 
         }
 

@@ -69,12 +69,7 @@ entryRuleRootRule returns [EObject current=null]:
 
 // Rule RootRule
 ruleRootRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getRootRuleAccess().getConcreteParserRuleParserRuleCall_0());
@@ -123,12 +118,7 @@ entryRuleConcreteParserRule returns [EObject current=null]:
 
 // Rule ConcreteParserRule
 ruleConcreteParserRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='model'
 		{
@@ -187,12 +177,7 @@ entryRuleOverridableParserRule returns [EObject current=null]:
 
 // Rule OverridableParserRule
 ruleOverridableParserRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='overriddenelement'
 		{
@@ -228,12 +213,7 @@ entryRuleCallOverridenParserRule returns [EObject current=null]:
 
 // Rule CallOverridenParserRule
 ruleCallOverridenParserRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -264,12 +244,7 @@ entryRuleOverridableParserRule2 returns [EObject current=null]:
 
 // Rule OverridableParserRule2
 ruleOverridableParserRule2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='overridden other element'
 		{
@@ -327,12 +302,7 @@ entryRuleExtendableParserRule returns [EObject current=null]:
 
 // Rule ExtendableParserRule
 ruleExtendableParserRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getExtendableParserRuleAccess().getSubrule1ParserRuleCall_0());
@@ -372,12 +342,7 @@ entryRuleSubrule1 returns [EObject current=null]:
 
 // Rule Subrule1
 ruleSubrule1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='subrule1'
 		{
@@ -431,12 +396,7 @@ entryRuleSubrule2 returns [EObject current=null]:
 
 // Rule Subrule2
 ruleSubrule2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='subrule3'
 		{
@@ -490,12 +450,7 @@ entryRuleSubrule3 returns [EObject current=null]:
 
 // Rule Subrule3
 ruleSubrule3 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='subrule3'
 		{
@@ -549,12 +504,7 @@ entryRuleCallExtendedParserRule returns [EObject current=null]:
 
 // Rule CallExtendedParserRule
 ruleCallExtendedParserRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -585,12 +535,7 @@ entryRuleInheritedParserRule returns [EObject current=null]:
 
 // Rule InheritedParserRule
 ruleInheritedParserRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='element'
 		{
@@ -626,12 +571,7 @@ entryRuleAbstractCallOverridenParserRule returns [EObject current=null]:
 
 // Rule AbstractCallOverridenParserRule
 ruleAbstractCallOverridenParserRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='overridemodel'
 		{
@@ -668,12 +608,7 @@ entryRuleAbstractCallExtendedParserRule returns [EObject current=null]:
 
 // Rule AbstractCallExtendedParserRule
 ruleAbstractCallExtendedParserRule returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='extendedmodel'
 		{

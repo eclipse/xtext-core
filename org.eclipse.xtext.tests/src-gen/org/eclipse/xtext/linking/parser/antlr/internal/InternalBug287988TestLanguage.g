@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='actions'
@@ -243,12 +238,7 @@ entryRuleBaseAttribute returns [EObject current=null]:
 
 // Rule BaseAttribute
 ruleBaseAttribute returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -343,12 +333,7 @@ entryRuleAttribute returns [EObject current=null]:
 
 // Rule Attribute
 ruleAttribute returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -373,12 +358,7 @@ entryRuleMaster returns [EObject current=null]:
 
 // Rule Master
 ruleMaster returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -403,12 +383,7 @@ entryRuleActionAttribute returns [EObject current=null]:
 
 // Rule ActionAttribute
 ruleActionAttribute returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -513,12 +488,7 @@ entryRuleSimpleAttribute returns [EObject current=null]:
 
 // Rule SimpleAttribute
 ruleSimpleAttribute returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -594,12 +564,7 @@ entryRuleRuleCallAttribute returns [EObject current=null]:
 
 // Rule RuleCallAttribute
 ruleRuleCallAttribute returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getRuleCallAttributeAccess().getCallMeParserRuleCall_0());
@@ -643,12 +608,7 @@ entryRuleCallMe returns [EObject current=null]:
 
 // Rule CallMe
 ruleCallMe returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='ref'
@@ -700,12 +660,7 @@ entryRuleRuleCallAttribute2 returns [EObject current=null]:
 
 // Rule RuleCallAttribute2
 ruleRuleCallAttribute2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getRuleCallAttribute2Access().getCallMe2ParserRuleCall_0());
@@ -771,12 +726,7 @@ entryRuleCallMe2 returns [EObject current=null]:
 
 // Rule CallMe2
 ruleCallMe2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID
@@ -806,12 +756,7 @@ entryRuleRuleCallAttribute3 returns [EObject current=null]:
 
 // Rule RuleCallAttribute3
 ruleRuleCallAttribute3 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getRuleCallAttribute3Access().getCallMe3ParserRuleCall_0());
@@ -877,12 +822,7 @@ entryRuleCallMe3 returns [EObject current=null]:
 
 // Rule CallMe3
 ruleCallMe3 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='call'
 		{
@@ -912,12 +852,7 @@ entryRuleCallMe4 returns [EObject current=null]:
 
 // Rule CallMe4
 ruleCallMe4 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_name_0_0=RULE_ID

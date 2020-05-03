@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -127,12 +122,7 @@ entryRuleAbstractBar returns [EObject current=null]:
 
 // Rule AbstractBar
 ruleAbstractBar returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='zonk'
@@ -211,12 +201,7 @@ entryRuleBar returns [EObject current=null]:
 
 // Rule Bar
 ruleBar returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='bar'
 		{
@@ -290,12 +275,7 @@ entryRuleFoo returns [EObject current=null]:
 
 // Rule Foo
 ruleFoo returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='foo'
 		{
@@ -332,12 +312,7 @@ entryRuleQualifiedNameWithOtherDelim returns [String current=null]:
 
 // Rule QualifiedNameWithOtherDelim
 ruleQualifiedNameWithOtherDelim returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getQualifiedNameWithOtherDelimAccess().getQualifiedNameParserRuleCall_0());
@@ -378,12 +353,7 @@ entryRuleQualifiedName returns [String current=null]:
 
 // Rule QualifiedName
 ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{

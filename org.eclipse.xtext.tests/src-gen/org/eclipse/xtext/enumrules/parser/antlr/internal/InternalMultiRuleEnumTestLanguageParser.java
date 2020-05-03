@@ -127,25 +127,22 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
         Enumerator lv_c_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalMultiRuleEnumTestLanguage.g:78:2: ( (otherlv_0= 'someEnum' ( (lv_a_1_0= ruleEnumRuleA ) ) ( (lv_b_2_0= ruleEnumRuleB ) ) ( (lv_c_3_0= ruleEnumRuleC ) ) ) )
-            // InternalMultiRuleEnumTestLanguage.g:79:2: (otherlv_0= 'someEnum' ( (lv_a_1_0= ruleEnumRuleA ) ) ( (lv_b_2_0= ruleEnumRuleB ) ) ( (lv_c_3_0= ruleEnumRuleC ) ) )
+            // InternalMultiRuleEnumTestLanguage.g:73:1: ( (otherlv_0= 'someEnum' ( (lv_a_1_0= ruleEnumRuleA ) ) ( (lv_b_2_0= ruleEnumRuleB ) ) ( (lv_c_3_0= ruleEnumRuleC ) ) ) )
+            // InternalMultiRuleEnumTestLanguage.g:74:2: (otherlv_0= 'someEnum' ( (lv_a_1_0= ruleEnumRuleA ) ) ( (lv_b_2_0= ruleEnumRuleB ) ) ( (lv_c_3_0= ruleEnumRuleC ) ) )
             {
-            // InternalMultiRuleEnumTestLanguage.g:79:2: (otherlv_0= 'someEnum' ( (lv_a_1_0= ruleEnumRuleA ) ) ( (lv_b_2_0= ruleEnumRuleB ) ) ( (lv_c_3_0= ruleEnumRuleC ) ) )
-            // InternalMultiRuleEnumTestLanguage.g:80:3: otherlv_0= 'someEnum' ( (lv_a_1_0= ruleEnumRuleA ) ) ( (lv_b_2_0= ruleEnumRuleB ) ) ( (lv_c_3_0= ruleEnumRuleC ) )
+            // InternalMultiRuleEnumTestLanguage.g:74:2: (otherlv_0= 'someEnum' ( (lv_a_1_0= ruleEnumRuleA ) ) ( (lv_b_2_0= ruleEnumRuleB ) ) ( (lv_c_3_0= ruleEnumRuleC ) ) )
+            // InternalMultiRuleEnumTestLanguage.g:75:3: otherlv_0= 'someEnum' ( (lv_a_1_0= ruleEnumRuleA ) ) ( (lv_b_2_0= ruleEnumRuleB ) ) ( (lv_c_3_0= ruleEnumRuleC ) )
             {
             otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getModelAccess().getSomeEnumKeyword_0());
             		
-            // InternalMultiRuleEnumTestLanguage.g:84:3: ( (lv_a_1_0= ruleEnumRuleA ) )
-            // InternalMultiRuleEnumTestLanguage.g:85:4: (lv_a_1_0= ruleEnumRuleA )
+            // InternalMultiRuleEnumTestLanguage.g:79:3: ( (lv_a_1_0= ruleEnumRuleA ) )
+            // InternalMultiRuleEnumTestLanguage.g:80:4: (lv_a_1_0= ruleEnumRuleA )
             {
-            // InternalMultiRuleEnumTestLanguage.g:85:4: (lv_a_1_0= ruleEnumRuleA )
-            // InternalMultiRuleEnumTestLanguage.g:86:5: lv_a_1_0= ruleEnumRuleA
+            // InternalMultiRuleEnumTestLanguage.g:80:4: (lv_a_1_0= ruleEnumRuleA )
+            // InternalMultiRuleEnumTestLanguage.g:81:5: lv_a_1_0= ruleEnumRuleA
             {
 
             					newCompositeNode(grammarAccess.getModelAccess().getAEnumRuleAEnumRuleCall_1_0());
@@ -172,11 +169,11 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
             }
 
-            // InternalMultiRuleEnumTestLanguage.g:103:3: ( (lv_b_2_0= ruleEnumRuleB ) )
-            // InternalMultiRuleEnumTestLanguage.g:104:4: (lv_b_2_0= ruleEnumRuleB )
+            // InternalMultiRuleEnumTestLanguage.g:98:3: ( (lv_b_2_0= ruleEnumRuleB ) )
+            // InternalMultiRuleEnumTestLanguage.g:99:4: (lv_b_2_0= ruleEnumRuleB )
             {
-            // InternalMultiRuleEnumTestLanguage.g:104:4: (lv_b_2_0= ruleEnumRuleB )
-            // InternalMultiRuleEnumTestLanguage.g:105:5: lv_b_2_0= ruleEnumRuleB
+            // InternalMultiRuleEnumTestLanguage.g:99:4: (lv_b_2_0= ruleEnumRuleB )
+            // InternalMultiRuleEnumTestLanguage.g:100:5: lv_b_2_0= ruleEnumRuleB
             {
 
             					newCompositeNode(grammarAccess.getModelAccess().getBEnumRuleBEnumRuleCall_2_0());
@@ -203,11 +200,11 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
             }
 
-            // InternalMultiRuleEnumTestLanguage.g:122:3: ( (lv_c_3_0= ruleEnumRuleC ) )
-            // InternalMultiRuleEnumTestLanguage.g:123:4: (lv_c_3_0= ruleEnumRuleC )
+            // InternalMultiRuleEnumTestLanguage.g:117:3: ( (lv_c_3_0= ruleEnumRuleC ) )
+            // InternalMultiRuleEnumTestLanguage.g:118:4: (lv_c_3_0= ruleEnumRuleC )
             {
-            // InternalMultiRuleEnumTestLanguage.g:123:4: (lv_c_3_0= ruleEnumRuleC )
-            // InternalMultiRuleEnumTestLanguage.g:124:5: lv_c_3_0= ruleEnumRuleC
+            // InternalMultiRuleEnumTestLanguage.g:118:4: (lv_c_3_0= ruleEnumRuleC )
+            // InternalMultiRuleEnumTestLanguage.g:119:5: lv_c_3_0= ruleEnumRuleC
             {
 
             					newCompositeNode(grammarAccess.getModelAccess().getCEnumRuleCEnumRuleCall_3_0());
@@ -240,9 +237,6 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -257,7 +251,7 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
 
     // $ANTLR start "ruleEnumRuleA"
-    // InternalMultiRuleEnumTestLanguage.g:145:1: ruleEnumRuleA returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'B' ) | (enumLiteral_2= 'C' ) ) ;
+    // InternalMultiRuleEnumTestLanguage.g:140:1: ruleEnumRuleA returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'B' ) | (enumLiteral_2= 'C' ) ) ;
     public final Enumerator ruleEnumRuleA() throws RecognitionException {
         Enumerator current = null;
 
@@ -265,14 +259,11 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
         Token enumLiteral_1=null;
         Token enumLiteral_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalMultiRuleEnumTestLanguage.g:151:2: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'B' ) | (enumLiteral_2= 'C' ) ) )
-            // InternalMultiRuleEnumTestLanguage.g:152:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'B' ) | (enumLiteral_2= 'C' ) )
+            // InternalMultiRuleEnumTestLanguage.g:141:1: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'B' ) | (enumLiteral_2= 'C' ) ) )
+            // InternalMultiRuleEnumTestLanguage.g:142:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'B' ) | (enumLiteral_2= 'C' ) )
             {
-            // InternalMultiRuleEnumTestLanguage.g:152:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'B' ) | (enumLiteral_2= 'C' ) )
+            // InternalMultiRuleEnumTestLanguage.g:142:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'B' ) | (enumLiteral_2= 'C' ) )
             int alt1=3;
             switch ( input.LA(1) ) {
             case 12:
@@ -299,10 +290,10 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
             switch (alt1) {
                 case 1 :
-                    // InternalMultiRuleEnumTestLanguage.g:153:3: (enumLiteral_0= 'A' )
+                    // InternalMultiRuleEnumTestLanguage.g:143:3: (enumLiteral_0= 'A' )
                     {
-                    // InternalMultiRuleEnumTestLanguage.g:153:3: (enumLiteral_0= 'A' )
-                    // InternalMultiRuleEnumTestLanguage.g:154:4: enumLiteral_0= 'A'
+                    // InternalMultiRuleEnumTestLanguage.g:143:3: (enumLiteral_0= 'A' )
+                    // InternalMultiRuleEnumTestLanguage.g:144:4: enumLiteral_0= 'A'
                     {
                     enumLiteral_0=(Token)match(input,12,FollowSets000.FOLLOW_2); 
 
@@ -316,10 +307,10 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
                     }
                     break;
                 case 2 :
-                    // InternalMultiRuleEnumTestLanguage.g:161:3: (enumLiteral_1= 'B' )
+                    // InternalMultiRuleEnumTestLanguage.g:151:3: (enumLiteral_1= 'B' )
                     {
-                    // InternalMultiRuleEnumTestLanguage.g:161:3: (enumLiteral_1= 'B' )
-                    // InternalMultiRuleEnumTestLanguage.g:162:4: enumLiteral_1= 'B'
+                    // InternalMultiRuleEnumTestLanguage.g:151:3: (enumLiteral_1= 'B' )
+                    // InternalMultiRuleEnumTestLanguage.g:152:4: enumLiteral_1= 'B'
                     {
                     enumLiteral_1=(Token)match(input,13,FollowSets000.FOLLOW_2); 
 
@@ -333,10 +324,10 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
                     }
                     break;
                 case 3 :
-                    // InternalMultiRuleEnumTestLanguage.g:169:3: (enumLiteral_2= 'C' )
+                    // InternalMultiRuleEnumTestLanguage.g:159:3: (enumLiteral_2= 'C' )
                     {
-                    // InternalMultiRuleEnumTestLanguage.g:169:3: (enumLiteral_2= 'C' )
-                    // InternalMultiRuleEnumTestLanguage.g:170:4: enumLiteral_2= 'C'
+                    // InternalMultiRuleEnumTestLanguage.g:159:3: (enumLiteral_2= 'C' )
+                    // InternalMultiRuleEnumTestLanguage.g:160:4: enumLiteral_2= 'C'
                     {
                     enumLiteral_2=(Token)match(input,14,FollowSets000.FOLLOW_2); 
 
@@ -355,9 +346,6 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -372,7 +360,7 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
 
     // $ANTLR start "ruleEnumRuleB"
-    // InternalMultiRuleEnumTestLanguage.g:180:1: ruleEnumRuleB returns [Enumerator current=null] : ( (enumLiteral_0= 'C' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'E' ) ) ;
+    // InternalMultiRuleEnumTestLanguage.g:170:1: ruleEnumRuleB returns [Enumerator current=null] : ( (enumLiteral_0= 'C' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'E' ) ) ;
     public final Enumerator ruleEnumRuleB() throws RecognitionException {
         Enumerator current = null;
 
@@ -380,14 +368,11 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
         Token enumLiteral_1=null;
         Token enumLiteral_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalMultiRuleEnumTestLanguage.g:186:2: ( ( (enumLiteral_0= 'C' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'E' ) ) )
-            // InternalMultiRuleEnumTestLanguage.g:187:2: ( (enumLiteral_0= 'C' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'E' ) )
+            // InternalMultiRuleEnumTestLanguage.g:171:1: ( ( (enumLiteral_0= 'C' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'E' ) ) )
+            // InternalMultiRuleEnumTestLanguage.g:172:2: ( (enumLiteral_0= 'C' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'E' ) )
             {
-            // InternalMultiRuleEnumTestLanguage.g:187:2: ( (enumLiteral_0= 'C' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'E' ) )
+            // InternalMultiRuleEnumTestLanguage.g:172:2: ( (enumLiteral_0= 'C' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'E' ) )
             int alt2=3;
             switch ( input.LA(1) ) {
             case 14:
@@ -414,10 +399,10 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
             switch (alt2) {
                 case 1 :
-                    // InternalMultiRuleEnumTestLanguage.g:188:3: (enumLiteral_0= 'C' )
+                    // InternalMultiRuleEnumTestLanguage.g:173:3: (enumLiteral_0= 'C' )
                     {
-                    // InternalMultiRuleEnumTestLanguage.g:188:3: (enumLiteral_0= 'C' )
-                    // InternalMultiRuleEnumTestLanguage.g:189:4: enumLiteral_0= 'C'
+                    // InternalMultiRuleEnumTestLanguage.g:173:3: (enumLiteral_0= 'C' )
+                    // InternalMultiRuleEnumTestLanguage.g:174:4: enumLiteral_0= 'C'
                     {
                     enumLiteral_0=(Token)match(input,14,FollowSets000.FOLLOW_2); 
 
@@ -431,10 +416,10 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
                     }
                     break;
                 case 2 :
-                    // InternalMultiRuleEnumTestLanguage.g:196:3: (enumLiteral_1= 'D' )
+                    // InternalMultiRuleEnumTestLanguage.g:181:3: (enumLiteral_1= 'D' )
                     {
-                    // InternalMultiRuleEnumTestLanguage.g:196:3: (enumLiteral_1= 'D' )
-                    // InternalMultiRuleEnumTestLanguage.g:197:4: enumLiteral_1= 'D'
+                    // InternalMultiRuleEnumTestLanguage.g:181:3: (enumLiteral_1= 'D' )
+                    // InternalMultiRuleEnumTestLanguage.g:182:4: enumLiteral_1= 'D'
                     {
                     enumLiteral_1=(Token)match(input,15,FollowSets000.FOLLOW_2); 
 
@@ -448,10 +433,10 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
                     }
                     break;
                 case 3 :
-                    // InternalMultiRuleEnumTestLanguage.g:204:3: (enumLiteral_2= 'E' )
+                    // InternalMultiRuleEnumTestLanguage.g:189:3: (enumLiteral_2= 'E' )
                     {
-                    // InternalMultiRuleEnumTestLanguage.g:204:3: (enumLiteral_2= 'E' )
-                    // InternalMultiRuleEnumTestLanguage.g:205:4: enumLiteral_2= 'E'
+                    // InternalMultiRuleEnumTestLanguage.g:189:3: (enumLiteral_2= 'E' )
+                    // InternalMultiRuleEnumTestLanguage.g:190:4: enumLiteral_2= 'E'
                     {
                     enumLiteral_2=(Token)match(input,16,FollowSets000.FOLLOW_2); 
 
@@ -470,9 +455,6 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -487,7 +469,7 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
 
     // $ANTLR start "ruleEnumRuleC"
-    // InternalMultiRuleEnumTestLanguage.g:215:1: ruleEnumRuleC returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'B' ) ) ;
+    // InternalMultiRuleEnumTestLanguage.g:200:1: ruleEnumRuleC returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'B' ) ) ;
     public final Enumerator ruleEnumRuleC() throws RecognitionException {
         Enumerator current = null;
 
@@ -495,14 +477,11 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
         Token enumLiteral_1=null;
         Token enumLiteral_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalMultiRuleEnumTestLanguage.g:221:2: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'B' ) ) )
-            // InternalMultiRuleEnumTestLanguage.g:222:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'B' ) )
+            // InternalMultiRuleEnumTestLanguage.g:201:1: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'B' ) ) )
+            // InternalMultiRuleEnumTestLanguage.g:202:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'B' ) )
             {
-            // InternalMultiRuleEnumTestLanguage.g:222:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'B' ) )
+            // InternalMultiRuleEnumTestLanguage.g:202:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'D' ) | (enumLiteral_2= 'B' ) )
             int alt3=3;
             switch ( input.LA(1) ) {
             case 12:
@@ -529,10 +508,10 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
             switch (alt3) {
                 case 1 :
-                    // InternalMultiRuleEnumTestLanguage.g:223:3: (enumLiteral_0= 'A' )
+                    // InternalMultiRuleEnumTestLanguage.g:203:3: (enumLiteral_0= 'A' )
                     {
-                    // InternalMultiRuleEnumTestLanguage.g:223:3: (enumLiteral_0= 'A' )
-                    // InternalMultiRuleEnumTestLanguage.g:224:4: enumLiteral_0= 'A'
+                    // InternalMultiRuleEnumTestLanguage.g:203:3: (enumLiteral_0= 'A' )
+                    // InternalMultiRuleEnumTestLanguage.g:204:4: enumLiteral_0= 'A'
                     {
                     enumLiteral_0=(Token)match(input,12,FollowSets000.FOLLOW_2); 
 
@@ -546,10 +525,10 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
                     }
                     break;
                 case 2 :
-                    // InternalMultiRuleEnumTestLanguage.g:231:3: (enumLiteral_1= 'D' )
+                    // InternalMultiRuleEnumTestLanguage.g:211:3: (enumLiteral_1= 'D' )
                     {
-                    // InternalMultiRuleEnumTestLanguage.g:231:3: (enumLiteral_1= 'D' )
-                    // InternalMultiRuleEnumTestLanguage.g:232:4: enumLiteral_1= 'D'
+                    // InternalMultiRuleEnumTestLanguage.g:211:3: (enumLiteral_1= 'D' )
+                    // InternalMultiRuleEnumTestLanguage.g:212:4: enumLiteral_1= 'D'
                     {
                     enumLiteral_1=(Token)match(input,15,FollowSets000.FOLLOW_2); 
 
@@ -563,10 +542,10 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
                     }
                     break;
                 case 3 :
-                    // InternalMultiRuleEnumTestLanguage.g:239:3: (enumLiteral_2= 'B' )
+                    // InternalMultiRuleEnumTestLanguage.g:219:3: (enumLiteral_2= 'B' )
                     {
-                    // InternalMultiRuleEnumTestLanguage.g:239:3: (enumLiteral_2= 'B' )
-                    // InternalMultiRuleEnumTestLanguage.g:240:4: enumLiteral_2= 'B'
+                    // InternalMultiRuleEnumTestLanguage.g:219:3: (enumLiteral_2= 'B' )
+                    // InternalMultiRuleEnumTestLanguage.g:220:4: enumLiteral_2= 'B'
                     {
                     enumLiteral_2=(Token)match(input,13,FollowSets000.FOLLOW_2); 
 
@@ -584,9 +563,6 @@ public class InternalMultiRuleEnumTestLanguageParser extends AbstractInternalAnt
 
 
             }
-
-
-            	leaveRule();
 
         }
 

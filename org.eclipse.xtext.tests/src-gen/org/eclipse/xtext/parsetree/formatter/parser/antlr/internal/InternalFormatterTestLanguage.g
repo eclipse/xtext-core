@@ -70,12 +70,7 @@ entryRuleRoot returns [EObject current=null]:
 
 // Rule Root
 ruleRoot returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='test'
 		{
@@ -130,12 +125,7 @@ entryRuleLine returns [EObject current=null]:
 
 // Rule Line
 ruleLine returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -241,12 +231,7 @@ entryRuleDecl returns [EObject current=null]:
 
 // Rule Decl
 ruleDecl returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -296,12 +281,7 @@ entryRuleAssign returns [EObject current=null]:
 
 // Rule Assign
 ruleAssign returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -412,12 +392,7 @@ entryRuleMeth returns [EObject current=null]:
 
 // Rule Meth
 ruleMeth returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='void'
 		{
@@ -507,12 +482,7 @@ entryRuleParam returns [EObject current=null]:
 
 // Rule Param
 ruleParam returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -566,12 +536,7 @@ entryRuleSpace returns [EObject current=null]:
 
 // Rule Space
 ruleSpace returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='space'
 		{
@@ -607,12 +572,7 @@ entryRuleTestLinewrap returns [EObject current=null]:
 
 // Rule TestLinewrap
 ruleTestLinewrap returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -656,12 +616,7 @@ entryRuleTestLinewrapMinMax returns [EObject current=null]:
 
 // Rule TestLinewrapMinMax
 ruleTestLinewrapMinMax returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -705,12 +660,7 @@ entryRuleTestIndentation returns [EObject current=null]:
 
 // Rule TestIndentation
 ruleTestIndentation returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -794,12 +744,7 @@ entryRuleFqnObj returns [EObject current=null]:
 
 // Rule FqnObj
 ruleFqnObj returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='fqn'
 		{
@@ -836,12 +781,7 @@ entryRuleFQN returns [String current=null]:
 
 // Rule FQN
 ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{
@@ -876,12 +816,7 @@ entryRuleFqnRef returns [EObject current=null]:
 
 // Rule FqnRef
 ruleFqnRef returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='fqnref'
 		{
@@ -915,12 +850,7 @@ entryRuleEnumeration returns [EObject current=null]:
 
 // Rule Enumeration
 ruleEnumeration returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='enum'
 		{
@@ -988,12 +918,9 @@ finally {
 // Rule SuppressedHidden
 ruleSuppressedHidden returns [EObject current=null]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1071,12 +998,7 @@ entryRuleSuppressedHiddenSub returns [EObject current=null]:
 
 // Rule SuppressedHiddenSub
 ruleSuppressedHiddenSub returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getSuppressedHiddenSubAccess().getSuppressedHiddenSubSubParserRuleCall_0());
@@ -1113,12 +1035,9 @@ finally {
 // Rule SuppressedHiddenSubSub
 ruleSuppressedHiddenSubSub returns [EObject current=null]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='<'
 		{
@@ -1161,12 +1080,7 @@ entryRuleSuppressedHiddenSubID returns [EObject current=null]:
 
 // Rule SuppressedHiddenSubID
 ruleSuppressedHiddenSubID returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_idval_0_0=RULE_ID
@@ -1196,12 +1110,7 @@ entryRuleDatatype1 returns [String current=null]:
 
 // Rule Datatype1
 ruleDatatype1 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	{
 		newCompositeNode(grammarAccess.getDatatype1Access().getFQNParserRuleCall());
 	}
@@ -1223,12 +1132,7 @@ entryRuleDatatype2 returns [String current=null]:
 
 // Rule Datatype2
 ruleDatatype2 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	{
 		newCompositeNode(grammarAccess.getDatatype2Access().getFQNParserRuleCall());
 	}
@@ -1250,12 +1154,7 @@ entryRuleDatatype3 returns [String current=null]:
 
 // Rule Datatype3
 ruleDatatype3 returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	{
 		newCompositeNode(grammarAccess.getDatatype3Access().getFQNParserRuleCall());
 	}
@@ -1277,12 +1176,7 @@ entryRuleDatatypes returns [EObject current=null]:
 
 // Rule Datatypes
 ruleDatatypes returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='datatypes'
 		{
@@ -1365,12 +1259,7 @@ entryRuleWrappingDataTypeTest returns [EObject current=null]:
 
 // Rule WrappingDataTypeTest
 ruleWrappingDataTypeTest returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='wrappingdt'
 		{
@@ -1411,12 +1300,7 @@ entryRuleWrappingDataType returns [String current=null]:
 
 // Rule WrappingDataType
 ruleWrappingDataType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_ID_0=RULE_ID
 		{
@@ -1430,12 +1314,7 @@ ruleWrappingDataType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRu
 
 // Rule Enum1
 ruleEnum1 returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			enumLiteral_0='lit1'

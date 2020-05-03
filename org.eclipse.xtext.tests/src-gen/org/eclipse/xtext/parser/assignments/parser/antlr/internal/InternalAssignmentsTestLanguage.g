@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='simple'
@@ -251,12 +246,7 @@ entryRuleSingleValue returns [EObject current=null]:
 
 // Rule SingleValue
 ruleSingleValue returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='id'
@@ -361,12 +351,7 @@ entryRuleMultiValue returns [EObject current=null]:
 
 // Rule MultiValue
 ruleMultiValue returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='ids'
@@ -471,12 +456,7 @@ entryRuleSingleDatatype returns [EObject current=null]:
 
 // Rule SingleDatatype
 ruleSingleDatatype returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='datatypeid'
@@ -585,12 +565,7 @@ entryRuleMultiDatatype returns [EObject current=null]:
 
 // Rule MultiDatatype
 ruleMultiDatatype returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='datatypeids'
@@ -699,12 +674,7 @@ entryRuleIdDatatype returns [String current=null]:
 
 // Rule IdDatatype
 ruleIdDatatype returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_ID_0=RULE_ID
 	{
 		$current.merge(this_ID_0);
@@ -723,12 +693,7 @@ entryRuleStringDatatype returns [String current=null]:
 
 // Rule StringDatatype
 ruleStringDatatype returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_STRING_0=RULE_STRING
 	{
 		$current.merge(this_STRING_0);

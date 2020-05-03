@@ -67,12 +67,7 @@ entryRuleTree returns [EObject current=null]:
 
 // Rule Tree
 ruleTree returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -131,12 +126,7 @@ entryRuleTreeNode returns [EObject current=null]:
 
 // Rule TreeNode
 ruleTreeNode returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -197,12 +187,7 @@ entryRuleOtherTreeNode returns [EObject current=null]:
 
 // Rule OtherTreeNode
 ruleOtherTreeNode returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -253,12 +238,7 @@ entryRuleChildList returns [EObject current=null]:
 
 // Rule ChildList
 ruleChildList returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{

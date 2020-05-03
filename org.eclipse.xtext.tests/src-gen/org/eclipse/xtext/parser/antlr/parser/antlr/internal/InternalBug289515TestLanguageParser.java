@@ -134,14 +134,11 @@ public class InternalBug289515TestLanguageParser extends AbstractInternalAntlrPa
         Token otherlv_10=null;
         Token lv_value_11_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalBug289515TestLanguage.g:77:2: ( ( (otherlv_0= '1' ( (lv_value_1_0= '%' ) ) ) | (otherlv_2= '2' ( (lv_value_3_0= '%' ) ) ) | (otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) ) ) | (otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) ) ) | (otherlv_8= '5' ( (lv_value_9_0= '%%' ) ) ) | (otherlv_10= '6' ( (lv_value_11_0= '%%' ) ) ) ) )
-            // InternalBug289515TestLanguage.g:78:2: ( (otherlv_0= '1' ( (lv_value_1_0= '%' ) ) ) | (otherlv_2= '2' ( (lv_value_3_0= '%' ) ) ) | (otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) ) ) | (otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) ) ) | (otherlv_8= '5' ( (lv_value_9_0= '%%' ) ) ) | (otherlv_10= '6' ( (lv_value_11_0= '%%' ) ) ) )
+            // InternalBug289515TestLanguage.g:72:1: ( ( (otherlv_0= '1' ( (lv_value_1_0= '%' ) ) ) | (otherlv_2= '2' ( (lv_value_3_0= '%' ) ) ) | (otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) ) ) | (otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) ) ) | (otherlv_8= '5' ( (lv_value_9_0= '%%' ) ) ) | (otherlv_10= '6' ( (lv_value_11_0= '%%' ) ) ) ) )
+            // InternalBug289515TestLanguage.g:73:2: ( (otherlv_0= '1' ( (lv_value_1_0= '%' ) ) ) | (otherlv_2= '2' ( (lv_value_3_0= '%' ) ) ) | (otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) ) ) | (otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) ) ) | (otherlv_8= '5' ( (lv_value_9_0= '%%' ) ) ) | (otherlv_10= '6' ( (lv_value_11_0= '%%' ) ) ) )
             {
-            // InternalBug289515TestLanguage.g:78:2: ( (otherlv_0= '1' ( (lv_value_1_0= '%' ) ) ) | (otherlv_2= '2' ( (lv_value_3_0= '%' ) ) ) | (otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) ) ) | (otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) ) ) | (otherlv_8= '5' ( (lv_value_9_0= '%%' ) ) ) | (otherlv_10= '6' ( (lv_value_11_0= '%%' ) ) ) )
+            // InternalBug289515TestLanguage.g:73:2: ( (otherlv_0= '1' ( (lv_value_1_0= '%' ) ) ) | (otherlv_2= '2' ( (lv_value_3_0= '%' ) ) ) | (otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) ) ) | (otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) ) ) | (otherlv_8= '5' ( (lv_value_9_0= '%%' ) ) ) | (otherlv_10= '6' ( (lv_value_11_0= '%%' ) ) ) )
             int alt1=6;
             switch ( input.LA(1) ) {
             case 11:
@@ -183,20 +180,20 @@ public class InternalBug289515TestLanguageParser extends AbstractInternalAntlrPa
 
             switch (alt1) {
                 case 1 :
-                    // InternalBug289515TestLanguage.g:79:3: (otherlv_0= '1' ( (lv_value_1_0= '%' ) ) )
+                    // InternalBug289515TestLanguage.g:74:3: (otherlv_0= '1' ( (lv_value_1_0= '%' ) ) )
                     {
-                    // InternalBug289515TestLanguage.g:79:3: (otherlv_0= '1' ( (lv_value_1_0= '%' ) ) )
-                    // InternalBug289515TestLanguage.g:80:4: otherlv_0= '1' ( (lv_value_1_0= '%' ) )
+                    // InternalBug289515TestLanguage.g:74:3: (otherlv_0= '1' ( (lv_value_1_0= '%' ) ) )
+                    // InternalBug289515TestLanguage.g:75:4: otherlv_0= '1' ( (lv_value_1_0= '%' ) )
                     {
                     otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_3); 
 
                     				newLeafNode(otherlv_0, grammarAccess.getModelAccess().getDigitOneKeyword_0_0());
                     			
-                    // InternalBug289515TestLanguage.g:84:4: ( (lv_value_1_0= '%' ) )
-                    // InternalBug289515TestLanguage.g:85:5: (lv_value_1_0= '%' )
+                    // InternalBug289515TestLanguage.g:79:4: ( (lv_value_1_0= '%' ) )
+                    // InternalBug289515TestLanguage.g:80:5: (lv_value_1_0= '%' )
                     {
-                    // InternalBug289515TestLanguage.g:85:5: (lv_value_1_0= '%' )
-                    // InternalBug289515TestLanguage.g:86:6: lv_value_1_0= '%'
+                    // InternalBug289515TestLanguage.g:80:5: (lv_value_1_0= '%' )
+                    // InternalBug289515TestLanguage.g:81:6: lv_value_1_0= '%'
                     {
                     lv_value_1_0=(Token)match(input,12,FollowSets000.FOLLOW_2); 
 
@@ -221,20 +218,20 @@ public class InternalBug289515TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 2 :
-                    // InternalBug289515TestLanguage.g:100:3: (otherlv_2= '2' ( (lv_value_3_0= '%' ) ) )
+                    // InternalBug289515TestLanguage.g:95:3: (otherlv_2= '2' ( (lv_value_3_0= '%' ) ) )
                     {
-                    // InternalBug289515TestLanguage.g:100:3: (otherlv_2= '2' ( (lv_value_3_0= '%' ) ) )
-                    // InternalBug289515TestLanguage.g:101:4: otherlv_2= '2' ( (lv_value_3_0= '%' ) )
+                    // InternalBug289515TestLanguage.g:95:3: (otherlv_2= '2' ( (lv_value_3_0= '%' ) ) )
+                    // InternalBug289515TestLanguage.g:96:4: otherlv_2= '2' ( (lv_value_3_0= '%' ) )
                     {
                     otherlv_2=(Token)match(input,13,FollowSets000.FOLLOW_3); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getModelAccess().getDigitTwoKeyword_1_0());
                     			
-                    // InternalBug289515TestLanguage.g:105:4: ( (lv_value_3_0= '%' ) )
-                    // InternalBug289515TestLanguage.g:106:5: (lv_value_3_0= '%' )
+                    // InternalBug289515TestLanguage.g:100:4: ( (lv_value_3_0= '%' ) )
+                    // InternalBug289515TestLanguage.g:101:5: (lv_value_3_0= '%' )
                     {
-                    // InternalBug289515TestLanguage.g:106:5: (lv_value_3_0= '%' )
-                    // InternalBug289515TestLanguage.g:107:6: lv_value_3_0= '%'
+                    // InternalBug289515TestLanguage.g:101:5: (lv_value_3_0= '%' )
+                    // InternalBug289515TestLanguage.g:102:6: lv_value_3_0= '%'
                     {
                     lv_value_3_0=(Token)match(input,12,FollowSets000.FOLLOW_2); 
 
@@ -259,20 +256,20 @@ public class InternalBug289515TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 3 :
-                    // InternalBug289515TestLanguage.g:121:3: (otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) ) )
+                    // InternalBug289515TestLanguage.g:116:3: (otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) ) )
                     {
-                    // InternalBug289515TestLanguage.g:121:3: (otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) ) )
-                    // InternalBug289515TestLanguage.g:122:4: otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) )
+                    // InternalBug289515TestLanguage.g:116:3: (otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) ) )
+                    // InternalBug289515TestLanguage.g:117:4: otherlv_4= '3' ( (lv_value_5_0= '\\\\%' ) )
                     {
                     otherlv_4=(Token)match(input,14,FollowSets000.FOLLOW_4); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getModelAccess().getDigitThreeKeyword_2_0());
                     			
-                    // InternalBug289515TestLanguage.g:126:4: ( (lv_value_5_0= '\\\\%' ) )
-                    // InternalBug289515TestLanguage.g:127:5: (lv_value_5_0= '\\\\%' )
+                    // InternalBug289515TestLanguage.g:121:4: ( (lv_value_5_0= '\\\\%' ) )
+                    // InternalBug289515TestLanguage.g:122:5: (lv_value_5_0= '\\\\%' )
                     {
-                    // InternalBug289515TestLanguage.g:127:5: (lv_value_5_0= '\\\\%' )
-                    // InternalBug289515TestLanguage.g:128:6: lv_value_5_0= '\\\\%'
+                    // InternalBug289515TestLanguage.g:122:5: (lv_value_5_0= '\\\\%' )
+                    // InternalBug289515TestLanguage.g:123:6: lv_value_5_0= '\\\\%'
                     {
                     lv_value_5_0=(Token)match(input,15,FollowSets000.FOLLOW_2); 
 
@@ -297,20 +294,20 @@ public class InternalBug289515TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 4 :
-                    // InternalBug289515TestLanguage.g:142:3: (otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) ) )
+                    // InternalBug289515TestLanguage.g:137:3: (otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) ) )
                     {
-                    // InternalBug289515TestLanguage.g:142:3: (otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) ) )
-                    // InternalBug289515TestLanguage.g:143:4: otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) )
+                    // InternalBug289515TestLanguage.g:137:3: (otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) ) )
+                    // InternalBug289515TestLanguage.g:138:4: otherlv_6= '4' ( (lv_value_7_0= '\\\\%' ) )
                     {
                     otherlv_6=(Token)match(input,16,FollowSets000.FOLLOW_4); 
 
                     				newLeafNode(otherlv_6, grammarAccess.getModelAccess().getDigitFourKeyword_3_0());
                     			
-                    // InternalBug289515TestLanguage.g:147:4: ( (lv_value_7_0= '\\\\%' ) )
-                    // InternalBug289515TestLanguage.g:148:5: (lv_value_7_0= '\\\\%' )
+                    // InternalBug289515TestLanguage.g:142:4: ( (lv_value_7_0= '\\\\%' ) )
+                    // InternalBug289515TestLanguage.g:143:5: (lv_value_7_0= '\\\\%' )
                     {
-                    // InternalBug289515TestLanguage.g:148:5: (lv_value_7_0= '\\\\%' )
-                    // InternalBug289515TestLanguage.g:149:6: lv_value_7_0= '\\\\%'
+                    // InternalBug289515TestLanguage.g:143:5: (lv_value_7_0= '\\\\%' )
+                    // InternalBug289515TestLanguage.g:144:6: lv_value_7_0= '\\\\%'
                     {
                     lv_value_7_0=(Token)match(input,15,FollowSets000.FOLLOW_2); 
 
@@ -335,20 +332,20 @@ public class InternalBug289515TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 5 :
-                    // InternalBug289515TestLanguage.g:163:3: (otherlv_8= '5' ( (lv_value_9_0= '%%' ) ) )
+                    // InternalBug289515TestLanguage.g:158:3: (otherlv_8= '5' ( (lv_value_9_0= '%%' ) ) )
                     {
-                    // InternalBug289515TestLanguage.g:163:3: (otherlv_8= '5' ( (lv_value_9_0= '%%' ) ) )
-                    // InternalBug289515TestLanguage.g:164:4: otherlv_8= '5' ( (lv_value_9_0= '%%' ) )
+                    // InternalBug289515TestLanguage.g:158:3: (otherlv_8= '5' ( (lv_value_9_0= '%%' ) ) )
+                    // InternalBug289515TestLanguage.g:159:4: otherlv_8= '5' ( (lv_value_9_0= '%%' ) )
                     {
                     otherlv_8=(Token)match(input,17,FollowSets000.FOLLOW_5); 
 
                     				newLeafNode(otherlv_8, grammarAccess.getModelAccess().getDigitFiveKeyword_4_0());
                     			
-                    // InternalBug289515TestLanguage.g:168:4: ( (lv_value_9_0= '%%' ) )
-                    // InternalBug289515TestLanguage.g:169:5: (lv_value_9_0= '%%' )
+                    // InternalBug289515TestLanguage.g:163:4: ( (lv_value_9_0= '%%' ) )
+                    // InternalBug289515TestLanguage.g:164:5: (lv_value_9_0= '%%' )
                     {
-                    // InternalBug289515TestLanguage.g:169:5: (lv_value_9_0= '%%' )
-                    // InternalBug289515TestLanguage.g:170:6: lv_value_9_0= '%%'
+                    // InternalBug289515TestLanguage.g:164:5: (lv_value_9_0= '%%' )
+                    // InternalBug289515TestLanguage.g:165:6: lv_value_9_0= '%%'
                     {
                     lv_value_9_0=(Token)match(input,18,FollowSets000.FOLLOW_2); 
 
@@ -373,20 +370,20 @@ public class InternalBug289515TestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 6 :
-                    // InternalBug289515TestLanguage.g:184:3: (otherlv_10= '6' ( (lv_value_11_0= '%%' ) ) )
+                    // InternalBug289515TestLanguage.g:179:3: (otherlv_10= '6' ( (lv_value_11_0= '%%' ) ) )
                     {
-                    // InternalBug289515TestLanguage.g:184:3: (otherlv_10= '6' ( (lv_value_11_0= '%%' ) ) )
-                    // InternalBug289515TestLanguage.g:185:4: otherlv_10= '6' ( (lv_value_11_0= '%%' ) )
+                    // InternalBug289515TestLanguage.g:179:3: (otherlv_10= '6' ( (lv_value_11_0= '%%' ) ) )
+                    // InternalBug289515TestLanguage.g:180:4: otherlv_10= '6' ( (lv_value_11_0= '%%' ) )
                     {
                     otherlv_10=(Token)match(input,19,FollowSets000.FOLLOW_5); 
 
                     				newLeafNode(otherlv_10, grammarAccess.getModelAccess().getDigitSixKeyword_5_0());
                     			
-                    // InternalBug289515TestLanguage.g:189:4: ( (lv_value_11_0= '%%' ) )
-                    // InternalBug289515TestLanguage.g:190:5: (lv_value_11_0= '%%' )
+                    // InternalBug289515TestLanguage.g:184:4: ( (lv_value_11_0= '%%' ) )
+                    // InternalBug289515TestLanguage.g:185:5: (lv_value_11_0= '%%' )
                     {
-                    // InternalBug289515TestLanguage.g:190:5: (lv_value_11_0= '%%' )
-                    // InternalBug289515TestLanguage.g:191:6: lv_value_11_0= '%%'
+                    // InternalBug289515TestLanguage.g:185:5: (lv_value_11_0= '%%' )
+                    // InternalBug289515TestLanguage.g:186:6: lv_value_11_0= '%%'
                     {
                     lv_value_11_0=(Token)match(input,18,FollowSets000.FOLLOW_2); 
 
@@ -415,9 +412,6 @@ public class InternalBug289515TestLanguageParser extends AbstractInternalAntlrPa
 
 
             }
-
-
-            	leaveRule();
 
         }
 

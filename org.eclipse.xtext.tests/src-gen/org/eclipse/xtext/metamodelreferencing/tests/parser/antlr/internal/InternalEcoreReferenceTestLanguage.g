@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -145,12 +140,7 @@ entryRuleExtendsNsURIEObject returns [EObject current=null]:
 
 // Rule ExtendsNsURIEObject
 ruleExtendsNsURIEObject returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='ExtendsNsURIEObject'
 		{
@@ -440,12 +430,7 @@ entryRuleMyEAttribute returns [EObject current=null]:
 
 // Rule MyEAttribute
 ruleMyEAttribute returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -470,12 +455,7 @@ entryRuleEAttribute returns [EObject current=null]:
 
 // Rule EAttribute
 ruleEAttribute returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -500,12 +480,7 @@ entryRuleExtendsPluginEObject returns [EObject current=null]:
 
 // Rule ExtendsPluginEObject
 ruleExtendsPluginEObject returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='ExtendsPluginEObject'
 		{
@@ -782,12 +757,7 @@ entryRuleExtendsResourceEObject returns [EObject current=null]:
 
 // Rule ExtendsResourceEObject
 ruleExtendsResourceEObject returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='ExtendsResourceEObject'
 		{
@@ -1064,12 +1034,7 @@ entryRuleEObject returns [EObject current=null]:
 
 // Rule EObject
 ruleEObject returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -1094,12 +1059,7 @@ entryRuleValidID returns [String current=null]:
 
 // Rule ValidID
 ruleValidID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_ID_0=RULE_ID
 	{
 		$current.merge(this_ID_0);

@@ -70,12 +70,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='existing'
@@ -158,12 +153,7 @@ ruleModel returns [EObject current=null]
 
 // Rule ExistingEnum
 ruleExistingEnum returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			enumLiteral_0='SameName'
@@ -193,12 +183,7 @@ ruleExistingEnum returns [Enumerator current=null]
 
 // Rule GeneratedEnum
 ruleGeneratedEnum returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			enumLiteral_0='SameName'

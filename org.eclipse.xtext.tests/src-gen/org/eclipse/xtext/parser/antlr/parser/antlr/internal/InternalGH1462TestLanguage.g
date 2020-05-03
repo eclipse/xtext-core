@@ -69,12 +69,7 @@ entryRuleRoot returns [EObject current=null]:
 
 // Rule Root
 ruleRoot returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='#1'
@@ -399,12 +394,7 @@ entryRuleRule1 returns [EObject current=null]:
 
 // Rule Rule1
 ruleRule1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -468,12 +458,7 @@ entryRuleRule2 returns [EObject current=null]:
 
 // Rule Rule2
 ruleRule2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_INT_0=RULE_INT
 		{
@@ -523,12 +508,7 @@ entryRuleRule3 returns [EObject current=null]:
 
 // Rule Rule3
 ruleRule3 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -592,12 +572,7 @@ entryRuleRule4 returns [EObject current=null]:
 
 // Rule Rule4
 ruleRule4 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -661,12 +636,7 @@ entryRuleRule5 returns [EObject current=null]:
 
 // Rule Rule5
 ruleRule5 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -731,12 +701,7 @@ entryRuleRule6 returns [EObject current=null]:
 
 // Rule Rule6
 ruleRule6 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -801,12 +766,7 @@ entryRuleRule7 returns [EObject current=null]:
 
 // Rule Rule7
 ruleRule7 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -870,12 +830,7 @@ entryRuleRule8 returns [EObject current=null]:
 
 // Rule Rule8
 ruleRule8 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -935,12 +890,7 @@ entryRuleRule9 returns [EObject current=null]:
 
 // Rule Rule9
 ruleRule9 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1005,12 +955,7 @@ entryRuleRule10 returns [EObject current=null]:
 
 // Rule Rule10
 ruleRule10 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1075,12 +1020,7 @@ entryRuleRule11 returns [EObject current=null]:
 
 // Rule Rule11
 ruleRule11 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1145,12 +1085,7 @@ entryRuleRule12 returns [EObject current=null]:
 
 // Rule Rule12
 ruleRule12 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -1215,12 +1150,7 @@ entryRuleInteger returns [String current=null]:
 
 // Rule Integer
 ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_INT_0=RULE_INT
 	{
 		$current.merge(this_INT_0);
@@ -1239,12 +1169,7 @@ entryRuleMaybeEmpty returns [String current=null]:
 
 // Rule MaybeEmpty
 ruleMaybeEmpty returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_INT_0=RULE_INT
 		{
@@ -1265,12 +1190,7 @@ entryRuleWrapper returns [EObject current=null]:
 
 // Rule Wrapper
 ruleWrapper returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			lv_value_0_0=RULE_INT

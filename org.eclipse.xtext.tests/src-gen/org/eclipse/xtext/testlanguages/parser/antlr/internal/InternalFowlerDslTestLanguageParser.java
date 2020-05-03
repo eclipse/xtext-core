@@ -132,21 +132,18 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
         EObject lv_states_6_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFowlerDslTestLanguage.g:77:2: ( (otherlv_0= 'events' ( (lv_events_1_0= ruleEvent ) )* otherlv_2= 'end' otherlv_3= 'commands' ( (lv_commands_4_0= ruleCommand ) )* otherlv_5= 'end' ( (lv_states_6_0= ruleState ) )* ) )
-            // InternalFowlerDslTestLanguage.g:78:2: (otherlv_0= 'events' ( (lv_events_1_0= ruleEvent ) )* otherlv_2= 'end' otherlv_3= 'commands' ( (lv_commands_4_0= ruleCommand ) )* otherlv_5= 'end' ( (lv_states_6_0= ruleState ) )* )
+            // InternalFowlerDslTestLanguage.g:72:1: ( (otherlv_0= 'events' ( (lv_events_1_0= ruleEvent ) )* otherlv_2= 'end' otherlv_3= 'commands' ( (lv_commands_4_0= ruleCommand ) )* otherlv_5= 'end' ( (lv_states_6_0= ruleState ) )* ) )
+            // InternalFowlerDslTestLanguage.g:73:2: (otherlv_0= 'events' ( (lv_events_1_0= ruleEvent ) )* otherlv_2= 'end' otherlv_3= 'commands' ( (lv_commands_4_0= ruleCommand ) )* otherlv_5= 'end' ( (lv_states_6_0= ruleState ) )* )
             {
-            // InternalFowlerDslTestLanguage.g:78:2: (otherlv_0= 'events' ( (lv_events_1_0= ruleEvent ) )* otherlv_2= 'end' otherlv_3= 'commands' ( (lv_commands_4_0= ruleCommand ) )* otherlv_5= 'end' ( (lv_states_6_0= ruleState ) )* )
-            // InternalFowlerDslTestLanguage.g:79:3: otherlv_0= 'events' ( (lv_events_1_0= ruleEvent ) )* otherlv_2= 'end' otherlv_3= 'commands' ( (lv_commands_4_0= ruleCommand ) )* otherlv_5= 'end' ( (lv_states_6_0= ruleState ) )*
+            // InternalFowlerDslTestLanguage.g:73:2: (otherlv_0= 'events' ( (lv_events_1_0= ruleEvent ) )* otherlv_2= 'end' otherlv_3= 'commands' ( (lv_commands_4_0= ruleCommand ) )* otherlv_5= 'end' ( (lv_states_6_0= ruleState ) )* )
+            // InternalFowlerDslTestLanguage.g:74:3: otherlv_0= 'events' ( (lv_events_1_0= ruleEvent ) )* otherlv_2= 'end' otherlv_3= 'commands' ( (lv_commands_4_0= ruleCommand ) )* otherlv_5= 'end' ( (lv_states_6_0= ruleState ) )*
             {
             otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getStatemachineAccess().getEventsKeyword_0());
             		
-            // InternalFowlerDslTestLanguage.g:83:3: ( (lv_events_1_0= ruleEvent ) )*
+            // InternalFowlerDslTestLanguage.g:78:3: ( (lv_events_1_0= ruleEvent ) )*
             loop1:
             do {
                 int alt1=2;
@@ -159,10 +156,10 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalFowlerDslTestLanguage.g:84:4: (lv_events_1_0= ruleEvent )
+            	    // InternalFowlerDslTestLanguage.g:79:4: (lv_events_1_0= ruleEvent )
             	    {
-            	    // InternalFowlerDslTestLanguage.g:84:4: (lv_events_1_0= ruleEvent )
-            	    // InternalFowlerDslTestLanguage.g:85:5: lv_events_1_0= ruleEvent
+            	    // InternalFowlerDslTestLanguage.g:79:4: (lv_events_1_0= ruleEvent )
+            	    // InternalFowlerDslTestLanguage.g:80:5: lv_events_1_0= ruleEvent
             	    {
 
             	    					newCompositeNode(grammarAccess.getStatemachineAccess().getEventsEventParserRuleCall_1_0());
@@ -203,7 +200,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             			newLeafNode(otherlv_3, grammarAccess.getStatemachineAccess().getCommandsKeyword_3());
             		
-            // InternalFowlerDslTestLanguage.g:110:3: ( (lv_commands_4_0= ruleCommand ) )*
+            // InternalFowlerDslTestLanguage.g:105:3: ( (lv_commands_4_0= ruleCommand ) )*
             loop2:
             do {
                 int alt2=2;
@@ -216,10 +213,10 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalFowlerDslTestLanguage.g:111:4: (lv_commands_4_0= ruleCommand )
+            	    // InternalFowlerDslTestLanguage.g:106:4: (lv_commands_4_0= ruleCommand )
             	    {
-            	    // InternalFowlerDslTestLanguage.g:111:4: (lv_commands_4_0= ruleCommand )
-            	    // InternalFowlerDslTestLanguage.g:112:5: lv_commands_4_0= ruleCommand
+            	    // InternalFowlerDslTestLanguage.g:106:4: (lv_commands_4_0= ruleCommand )
+            	    // InternalFowlerDslTestLanguage.g:107:5: lv_commands_4_0= ruleCommand
             	    {
 
             	    					newCompositeNode(grammarAccess.getStatemachineAccess().getCommandsCommandParserRuleCall_4_0());
@@ -256,7 +253,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             			newLeafNode(otherlv_5, grammarAccess.getStatemachineAccess().getEndKeyword_5());
             		
-            // InternalFowlerDslTestLanguage.g:133:3: ( (lv_states_6_0= ruleState ) )*
+            // InternalFowlerDslTestLanguage.g:128:3: ( (lv_states_6_0= ruleState ) )*
             loop3:
             do {
                 int alt3=2;
@@ -269,10 +266,10 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalFowlerDslTestLanguage.g:134:4: (lv_states_6_0= ruleState )
+            	    // InternalFowlerDslTestLanguage.g:129:4: (lv_states_6_0= ruleState )
             	    {
-            	    // InternalFowlerDslTestLanguage.g:134:4: (lv_states_6_0= ruleState )
-            	    // InternalFowlerDslTestLanguage.g:135:5: lv_states_6_0= ruleState
+            	    // InternalFowlerDslTestLanguage.g:129:4: (lv_states_6_0= ruleState )
+            	    // InternalFowlerDslTestLanguage.g:130:5: lv_states_6_0= ruleState
             	    {
 
             	    					newCompositeNode(grammarAccess.getStatemachineAccess().getStatesStateParserRuleCall_6_0());
@@ -311,9 +308,6 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -328,7 +322,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleEvent"
-    // InternalFowlerDslTestLanguage.g:156:1: entryRuleEvent returns [EObject current=null] : iv_ruleEvent= ruleEvent EOF ;
+    // InternalFowlerDslTestLanguage.g:151:1: entryRuleEvent returns [EObject current=null] : iv_ruleEvent= ruleEvent EOF ;
     public final EObject entryRuleEvent() throws RecognitionException {
         EObject current = null;
 
@@ -336,8 +330,8 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalFowlerDslTestLanguage.g:156:46: (iv_ruleEvent= ruleEvent EOF )
-            // InternalFowlerDslTestLanguage.g:157:2: iv_ruleEvent= ruleEvent EOF
+            // InternalFowlerDslTestLanguage.g:151:46: (iv_ruleEvent= ruleEvent EOF )
+            // InternalFowlerDslTestLanguage.g:152:2: iv_ruleEvent= ruleEvent EOF
             {
              newCompositeNode(grammarAccess.getEventRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -364,7 +358,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleEvent"
-    // InternalFowlerDslTestLanguage.g:163:1: ruleEvent returns [EObject current=null] : ( ( (lv_resetting_0_0= 'resetting' ) )? ( (lv_name_1_0= RULE_ID ) ) ( (lv_code_2_0= RULE_ID ) ) ) ;
+    // InternalFowlerDslTestLanguage.g:158:1: ruleEvent returns [EObject current=null] : ( ( (lv_resetting_0_0= 'resetting' ) )? ( (lv_name_1_0= RULE_ID ) ) ( (lv_code_2_0= RULE_ID ) ) ) ;
     public final EObject ruleEvent() throws RecognitionException {
         EObject current = null;
 
@@ -372,17 +366,14 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
         Token lv_name_1_0=null;
         Token lv_code_2_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFowlerDslTestLanguage.g:169:2: ( ( ( (lv_resetting_0_0= 'resetting' ) )? ( (lv_name_1_0= RULE_ID ) ) ( (lv_code_2_0= RULE_ID ) ) ) )
-            // InternalFowlerDslTestLanguage.g:170:2: ( ( (lv_resetting_0_0= 'resetting' ) )? ( (lv_name_1_0= RULE_ID ) ) ( (lv_code_2_0= RULE_ID ) ) )
+            // InternalFowlerDslTestLanguage.g:159:1: ( ( ( (lv_resetting_0_0= 'resetting' ) )? ( (lv_name_1_0= RULE_ID ) ) ( (lv_code_2_0= RULE_ID ) ) ) )
+            // InternalFowlerDslTestLanguage.g:160:2: ( ( (lv_resetting_0_0= 'resetting' ) )? ( (lv_name_1_0= RULE_ID ) ) ( (lv_code_2_0= RULE_ID ) ) )
             {
-            // InternalFowlerDslTestLanguage.g:170:2: ( ( (lv_resetting_0_0= 'resetting' ) )? ( (lv_name_1_0= RULE_ID ) ) ( (lv_code_2_0= RULE_ID ) ) )
-            // InternalFowlerDslTestLanguage.g:171:3: ( (lv_resetting_0_0= 'resetting' ) )? ( (lv_name_1_0= RULE_ID ) ) ( (lv_code_2_0= RULE_ID ) )
+            // InternalFowlerDslTestLanguage.g:160:2: ( ( (lv_resetting_0_0= 'resetting' ) )? ( (lv_name_1_0= RULE_ID ) ) ( (lv_code_2_0= RULE_ID ) ) )
+            // InternalFowlerDslTestLanguage.g:161:3: ( (lv_resetting_0_0= 'resetting' ) )? ( (lv_name_1_0= RULE_ID ) ) ( (lv_code_2_0= RULE_ID ) )
             {
-            // InternalFowlerDslTestLanguage.g:171:3: ( (lv_resetting_0_0= 'resetting' ) )?
+            // InternalFowlerDslTestLanguage.g:161:3: ( (lv_resetting_0_0= 'resetting' ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -391,10 +382,10 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
             }
             switch (alt4) {
                 case 1 :
-                    // InternalFowlerDslTestLanguage.g:172:4: (lv_resetting_0_0= 'resetting' )
+                    // InternalFowlerDslTestLanguage.g:162:4: (lv_resetting_0_0= 'resetting' )
                     {
-                    // InternalFowlerDslTestLanguage.g:172:4: (lv_resetting_0_0= 'resetting' )
-                    // InternalFowlerDslTestLanguage.g:173:5: lv_resetting_0_0= 'resetting'
+                    // InternalFowlerDslTestLanguage.g:162:4: (lv_resetting_0_0= 'resetting' )
+                    // InternalFowlerDslTestLanguage.g:163:5: lv_resetting_0_0= 'resetting'
                     {
                     lv_resetting_0_0=(Token)match(input,14,FollowSets000.FOLLOW_7); 
 
@@ -415,11 +406,11 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            // InternalFowlerDslTestLanguage.g:185:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalFowlerDslTestLanguage.g:186:4: (lv_name_1_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:175:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalFowlerDslTestLanguage.g:176:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalFowlerDslTestLanguage.g:186:4: (lv_name_1_0= RULE_ID )
-            // InternalFowlerDslTestLanguage.g:187:5: lv_name_1_0= RULE_ID
+            // InternalFowlerDslTestLanguage.g:176:4: (lv_name_1_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:177:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_7); 
 
@@ -441,11 +432,11 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            // InternalFowlerDslTestLanguage.g:203:3: ( (lv_code_2_0= RULE_ID ) )
-            // InternalFowlerDslTestLanguage.g:204:4: (lv_code_2_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:193:3: ( (lv_code_2_0= RULE_ID ) )
+            // InternalFowlerDslTestLanguage.g:194:4: (lv_code_2_0= RULE_ID )
             {
-            // InternalFowlerDslTestLanguage.g:204:4: (lv_code_2_0= RULE_ID )
-            // InternalFowlerDslTestLanguage.g:205:5: lv_code_2_0= RULE_ID
+            // InternalFowlerDslTestLanguage.g:194:4: (lv_code_2_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:195:5: lv_code_2_0= RULE_ID
             {
             lv_code_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -473,9 +464,6 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -490,7 +478,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleCommand"
-    // InternalFowlerDslTestLanguage.g:225:1: entryRuleCommand returns [EObject current=null] : iv_ruleCommand= ruleCommand EOF ;
+    // InternalFowlerDslTestLanguage.g:215:1: entryRuleCommand returns [EObject current=null] : iv_ruleCommand= ruleCommand EOF ;
     public final EObject entryRuleCommand() throws RecognitionException {
         EObject current = null;
 
@@ -498,8 +486,8 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalFowlerDslTestLanguage.g:225:48: (iv_ruleCommand= ruleCommand EOF )
-            // InternalFowlerDslTestLanguage.g:226:2: iv_ruleCommand= ruleCommand EOF
+            // InternalFowlerDslTestLanguage.g:215:48: (iv_ruleCommand= ruleCommand EOF )
+            // InternalFowlerDslTestLanguage.g:216:2: iv_ruleCommand= ruleCommand EOF
             {
              newCompositeNode(grammarAccess.getCommandRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -526,28 +514,25 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleCommand"
-    // InternalFowlerDslTestLanguage.g:232:1: ruleCommand returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_code_1_0= RULE_ID ) ) ) ;
+    // InternalFowlerDslTestLanguage.g:222:1: ruleCommand returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_code_1_0= RULE_ID ) ) ) ;
     public final EObject ruleCommand() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
         Token lv_code_1_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFowlerDslTestLanguage.g:238:2: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_code_1_0= RULE_ID ) ) ) )
-            // InternalFowlerDslTestLanguage.g:239:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_code_1_0= RULE_ID ) ) )
+            // InternalFowlerDslTestLanguage.g:223:1: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_code_1_0= RULE_ID ) ) ) )
+            // InternalFowlerDslTestLanguage.g:224:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_code_1_0= RULE_ID ) ) )
             {
-            // InternalFowlerDslTestLanguage.g:239:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_code_1_0= RULE_ID ) ) )
-            // InternalFowlerDslTestLanguage.g:240:3: ( (lv_name_0_0= RULE_ID ) ) ( (lv_code_1_0= RULE_ID ) )
+            // InternalFowlerDslTestLanguage.g:224:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_code_1_0= RULE_ID ) ) )
+            // InternalFowlerDslTestLanguage.g:225:3: ( (lv_name_0_0= RULE_ID ) ) ( (lv_code_1_0= RULE_ID ) )
             {
-            // InternalFowlerDslTestLanguage.g:240:3: ( (lv_name_0_0= RULE_ID ) )
-            // InternalFowlerDslTestLanguage.g:241:4: (lv_name_0_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:225:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalFowlerDslTestLanguage.g:226:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalFowlerDslTestLanguage.g:241:4: (lv_name_0_0= RULE_ID )
-            // InternalFowlerDslTestLanguage.g:242:5: lv_name_0_0= RULE_ID
+            // InternalFowlerDslTestLanguage.g:226:4: (lv_name_0_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:227:5: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_7); 
 
@@ -569,11 +554,11 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            // InternalFowlerDslTestLanguage.g:258:3: ( (lv_code_1_0= RULE_ID ) )
-            // InternalFowlerDslTestLanguage.g:259:4: (lv_code_1_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:243:3: ( (lv_code_1_0= RULE_ID ) )
+            // InternalFowlerDslTestLanguage.g:244:4: (lv_code_1_0= RULE_ID )
             {
-            // InternalFowlerDslTestLanguage.g:259:4: (lv_code_1_0= RULE_ID )
-            // InternalFowlerDslTestLanguage.g:260:5: lv_code_1_0= RULE_ID
+            // InternalFowlerDslTestLanguage.g:244:4: (lv_code_1_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:245:5: lv_code_1_0= RULE_ID
             {
             lv_code_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -601,9 +586,6 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -618,7 +600,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleState"
-    // InternalFowlerDslTestLanguage.g:280:1: entryRuleState returns [EObject current=null] : iv_ruleState= ruleState EOF ;
+    // InternalFowlerDslTestLanguage.g:265:1: entryRuleState returns [EObject current=null] : iv_ruleState= ruleState EOF ;
     public final EObject entryRuleState() throws RecognitionException {
         EObject current = null;
 
@@ -626,8 +608,8 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalFowlerDslTestLanguage.g:280:46: (iv_ruleState= ruleState EOF )
-            // InternalFowlerDslTestLanguage.g:281:2: iv_ruleState= ruleState EOF
+            // InternalFowlerDslTestLanguage.g:265:46: (iv_ruleState= ruleState EOF )
+            // InternalFowlerDslTestLanguage.g:266:2: iv_ruleState= ruleState EOF
             {
              newCompositeNode(grammarAccess.getStateRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -654,7 +636,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleState"
-    // InternalFowlerDslTestLanguage.g:287:1: ruleState returns [EObject current=null] : (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )? ( (lv_transitions_6_0= ruleTransition ) )* otherlv_7= 'end' ) ;
+    // InternalFowlerDslTestLanguage.g:272:1: ruleState returns [EObject current=null] : (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )? ( (lv_transitions_6_0= ruleTransition ) )* otherlv_7= 'end' ) ;
     public final EObject ruleState() throws RecognitionException {
         EObject current = null;
 
@@ -668,25 +650,22 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
         EObject lv_transitions_6_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFowlerDslTestLanguage.g:293:2: ( (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )? ( (lv_transitions_6_0= ruleTransition ) )* otherlv_7= 'end' ) )
-            // InternalFowlerDslTestLanguage.g:294:2: (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )? ( (lv_transitions_6_0= ruleTransition ) )* otherlv_7= 'end' )
+            // InternalFowlerDslTestLanguage.g:273:1: ( (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )? ( (lv_transitions_6_0= ruleTransition ) )* otherlv_7= 'end' ) )
+            // InternalFowlerDslTestLanguage.g:274:2: (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )? ( (lv_transitions_6_0= ruleTransition ) )* otherlv_7= 'end' )
             {
-            // InternalFowlerDslTestLanguage.g:294:2: (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )? ( (lv_transitions_6_0= ruleTransition ) )* otherlv_7= 'end' )
-            // InternalFowlerDslTestLanguage.g:295:3: otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )? ( (lv_transitions_6_0= ruleTransition ) )* otherlv_7= 'end'
+            // InternalFowlerDslTestLanguage.g:274:2: (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )? ( (lv_transitions_6_0= ruleTransition ) )* otherlv_7= 'end' )
+            // InternalFowlerDslTestLanguage.g:275:3: otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )? ( (lv_transitions_6_0= ruleTransition ) )* otherlv_7= 'end'
             {
             otherlv_0=(Token)match(input,15,FollowSets000.FOLLOW_7); 
 
             			newLeafNode(otherlv_0, grammarAccess.getStateAccess().getStateKeyword_0());
             		
-            // InternalFowlerDslTestLanguage.g:299:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalFowlerDslTestLanguage.g:300:4: (lv_name_1_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:279:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalFowlerDslTestLanguage.g:280:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalFowlerDslTestLanguage.g:300:4: (lv_name_1_0= RULE_ID )
-            // InternalFowlerDslTestLanguage.g:301:5: lv_name_1_0= RULE_ID
+            // InternalFowlerDslTestLanguage.g:280:4: (lv_name_1_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:281:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_8); 
 
@@ -708,7 +687,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            // InternalFowlerDslTestLanguage.g:317:3: (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )?
+            // InternalFowlerDslTestLanguage.g:297:3: (otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -717,7 +696,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
             }
             switch (alt6) {
                 case 1 :
-                    // InternalFowlerDslTestLanguage.g:318:4: otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}'
+                    // InternalFowlerDslTestLanguage.g:298:4: otherlv_2= 'actions' otherlv_3= '{' ( (otherlv_4= RULE_ID ) )+ otherlv_5= '}'
                     {
                     otherlv_2=(Token)match(input,16,FollowSets000.FOLLOW_9); 
 
@@ -727,7 +706,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
                     				newLeafNode(otherlv_3, grammarAccess.getStateAccess().getLeftCurlyBracketKeyword_2_1());
                     			
-                    // InternalFowlerDslTestLanguage.g:326:4: ( (otherlv_4= RULE_ID ) )+
+                    // InternalFowlerDslTestLanguage.g:306:4: ( (otherlv_4= RULE_ID ) )+
                     int cnt5=0;
                     loop5:
                     do {
@@ -741,10 +720,10 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalFowlerDslTestLanguage.g:327:5: (otherlv_4= RULE_ID )
+                    	    // InternalFowlerDslTestLanguage.g:307:5: (otherlv_4= RULE_ID )
                     	    {
-                    	    // InternalFowlerDslTestLanguage.g:327:5: (otherlv_4= RULE_ID )
-                    	    // InternalFowlerDslTestLanguage.g:328:6: otherlv_4= RULE_ID
+                    	    // InternalFowlerDslTestLanguage.g:307:5: (otherlv_4= RULE_ID )
+                    	    // InternalFowlerDslTestLanguage.g:308:6: otherlv_4= RULE_ID
                     	    {
 
                     	    						if (current==null) {
@@ -781,7 +760,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            // InternalFowlerDslTestLanguage.g:344:3: ( (lv_transitions_6_0= ruleTransition ) )*
+            // InternalFowlerDslTestLanguage.g:324:3: ( (lv_transitions_6_0= ruleTransition ) )*
             loop7:
             do {
                 int alt7=2;
@@ -794,10 +773,10 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalFowlerDslTestLanguage.g:345:4: (lv_transitions_6_0= ruleTransition )
+            	    // InternalFowlerDslTestLanguage.g:325:4: (lv_transitions_6_0= ruleTransition )
             	    {
-            	    // InternalFowlerDslTestLanguage.g:345:4: (lv_transitions_6_0= ruleTransition )
-            	    // InternalFowlerDslTestLanguage.g:346:5: lv_transitions_6_0= ruleTransition
+            	    // InternalFowlerDslTestLanguage.g:325:4: (lv_transitions_6_0= ruleTransition )
+            	    // InternalFowlerDslTestLanguage.g:326:5: lv_transitions_6_0= ruleTransition
             	    {
 
             	    					newCompositeNode(grammarAccess.getStateAccess().getTransitionsTransitionParserRuleCall_3_0());
@@ -840,9 +819,6 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -857,7 +833,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleTransition"
-    // InternalFowlerDslTestLanguage.g:371:1: entryRuleTransition returns [EObject current=null] : iv_ruleTransition= ruleTransition EOF ;
+    // InternalFowlerDslTestLanguage.g:351:1: entryRuleTransition returns [EObject current=null] : iv_ruleTransition= ruleTransition EOF ;
     public final EObject entryRuleTransition() throws RecognitionException {
         EObject current = null;
 
@@ -865,8 +841,8 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalFowlerDslTestLanguage.g:371:51: (iv_ruleTransition= ruleTransition EOF )
-            // InternalFowlerDslTestLanguage.g:372:2: iv_ruleTransition= ruleTransition EOF
+            // InternalFowlerDslTestLanguage.g:351:51: (iv_ruleTransition= ruleTransition EOF )
+            // InternalFowlerDslTestLanguage.g:352:2: iv_ruleTransition= ruleTransition EOF
             {
              newCompositeNode(grammarAccess.getTransitionRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -893,7 +869,7 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleTransition"
-    // InternalFowlerDslTestLanguage.g:378:1: ruleTransition returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '=>' ( (otherlv_2= RULE_ID ) ) ) ;
+    // InternalFowlerDslTestLanguage.g:358:1: ruleTransition returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '=>' ( (otherlv_2= RULE_ID ) ) ) ;
     public final EObject ruleTransition() throws RecognitionException {
         EObject current = null;
 
@@ -901,21 +877,18 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
         Token otherlv_1=null;
         Token otherlv_2=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFowlerDslTestLanguage.g:384:2: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '=>' ( (otherlv_2= RULE_ID ) ) ) )
-            // InternalFowlerDslTestLanguage.g:385:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '=>' ( (otherlv_2= RULE_ID ) ) )
+            // InternalFowlerDslTestLanguage.g:359:1: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '=>' ( (otherlv_2= RULE_ID ) ) ) )
+            // InternalFowlerDslTestLanguage.g:360:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '=>' ( (otherlv_2= RULE_ID ) ) )
             {
-            // InternalFowlerDslTestLanguage.g:385:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '=>' ( (otherlv_2= RULE_ID ) ) )
-            // InternalFowlerDslTestLanguage.g:386:3: ( (otherlv_0= RULE_ID ) ) otherlv_1= '=>' ( (otherlv_2= RULE_ID ) )
+            // InternalFowlerDslTestLanguage.g:360:2: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '=>' ( (otherlv_2= RULE_ID ) ) )
+            // InternalFowlerDslTestLanguage.g:361:3: ( (otherlv_0= RULE_ID ) ) otherlv_1= '=>' ( (otherlv_2= RULE_ID ) )
             {
-            // InternalFowlerDslTestLanguage.g:386:3: ( (otherlv_0= RULE_ID ) )
-            // InternalFowlerDslTestLanguage.g:387:4: (otherlv_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:361:3: ( (otherlv_0= RULE_ID ) )
+            // InternalFowlerDslTestLanguage.g:362:4: (otherlv_0= RULE_ID )
             {
-            // InternalFowlerDslTestLanguage.g:387:4: (otherlv_0= RULE_ID )
-            // InternalFowlerDslTestLanguage.g:388:5: otherlv_0= RULE_ID
+            // InternalFowlerDslTestLanguage.g:362:4: (otherlv_0= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:363:5: otherlv_0= RULE_ID
             {
 
             					if (current==null) {
@@ -936,11 +909,11 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
             			newLeafNode(otherlv_1, grammarAccess.getTransitionAccess().getEqualsSignGreaterThanSignKeyword_1());
             		
-            // InternalFowlerDslTestLanguage.g:403:3: ( (otherlv_2= RULE_ID ) )
-            // InternalFowlerDslTestLanguage.g:404:4: (otherlv_2= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:378:3: ( (otherlv_2= RULE_ID ) )
+            // InternalFowlerDslTestLanguage.g:379:4: (otherlv_2= RULE_ID )
             {
-            // InternalFowlerDslTestLanguage.g:404:4: (otherlv_2= RULE_ID )
-            // InternalFowlerDslTestLanguage.g:405:5: otherlv_2= RULE_ID
+            // InternalFowlerDslTestLanguage.g:379:4: (otherlv_2= RULE_ID )
+            // InternalFowlerDslTestLanguage.g:380:5: otherlv_2= RULE_ID
             {
 
             					if (current==null) {
@@ -962,9 +935,6 @@ public class InternalFowlerDslTestLanguageParser extends AbstractInternalAntlrPa
 
 
             }
-
-
-            	leaveRule();
 
         }
 

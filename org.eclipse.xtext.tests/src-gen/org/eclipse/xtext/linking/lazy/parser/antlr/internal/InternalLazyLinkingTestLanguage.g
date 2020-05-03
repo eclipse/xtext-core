@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -105,12 +100,7 @@ entryRuleType returns [EObject current=null]:
 
 // Rule Type
 ruleType returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='type'
 		{
@@ -264,12 +254,7 @@ entryRuleProperty returns [EObject current=null]:
 
 // Rule Property
 ruleProperty returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -318,12 +303,7 @@ entryRuleUnresolvedProxyProperty returns [EObject current=null]:
 
 // Rule UnresolvedProxyProperty
 ruleUnresolvedProxyProperty returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='unresolved'
 		{

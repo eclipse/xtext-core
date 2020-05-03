@@ -125,14 +125,11 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
         EObject lv_test_1_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSerializationErrorTestLanguage.g:77:2: ( ( ( (lv_test_0_0= ruleTest ) ) | ( (lv_test_1_0= ruleParenthesis ) ) ) )
-            // InternalSerializationErrorTestLanguage.g:78:2: ( ( (lv_test_0_0= ruleTest ) ) | ( (lv_test_1_0= ruleParenthesis ) ) )
+            // InternalSerializationErrorTestLanguage.g:72:1: ( ( ( (lv_test_0_0= ruleTest ) ) | ( (lv_test_1_0= ruleParenthesis ) ) ) )
+            // InternalSerializationErrorTestLanguage.g:73:2: ( ( (lv_test_0_0= ruleTest ) ) | ( (lv_test_1_0= ruleParenthesis ) ) )
             {
-            // InternalSerializationErrorTestLanguage.g:78:2: ( ( (lv_test_0_0= ruleTest ) ) | ( (lv_test_1_0= ruleParenthesis ) ) )
+            // InternalSerializationErrorTestLanguage.g:73:2: ( ( (lv_test_0_0= ruleTest ) ) | ( (lv_test_1_0= ruleParenthesis ) ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -150,13 +147,13 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
             }
             switch (alt1) {
                 case 1 :
-                    // InternalSerializationErrorTestLanguage.g:79:3: ( (lv_test_0_0= ruleTest ) )
+                    // InternalSerializationErrorTestLanguage.g:74:3: ( (lv_test_0_0= ruleTest ) )
                     {
-                    // InternalSerializationErrorTestLanguage.g:79:3: ( (lv_test_0_0= ruleTest ) )
-                    // InternalSerializationErrorTestLanguage.g:80:4: (lv_test_0_0= ruleTest )
+                    // InternalSerializationErrorTestLanguage.g:74:3: ( (lv_test_0_0= ruleTest ) )
+                    // InternalSerializationErrorTestLanguage.g:75:4: (lv_test_0_0= ruleTest )
                     {
-                    // InternalSerializationErrorTestLanguage.g:80:4: (lv_test_0_0= ruleTest )
-                    // InternalSerializationErrorTestLanguage.g:81:5: lv_test_0_0= ruleTest
+                    // InternalSerializationErrorTestLanguage.g:75:4: (lv_test_0_0= ruleTest )
+                    // InternalSerializationErrorTestLanguage.g:76:5: lv_test_0_0= ruleTest
                     {
 
                     					newCompositeNode(grammarAccess.getModelAccess().getTestTestParserRuleCall_0_0());
@@ -187,13 +184,13 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 2 :
-                    // InternalSerializationErrorTestLanguage.g:99:3: ( (lv_test_1_0= ruleParenthesis ) )
+                    // InternalSerializationErrorTestLanguage.g:94:3: ( (lv_test_1_0= ruleParenthesis ) )
                     {
-                    // InternalSerializationErrorTestLanguage.g:99:3: ( (lv_test_1_0= ruleParenthesis ) )
-                    // InternalSerializationErrorTestLanguage.g:100:4: (lv_test_1_0= ruleParenthesis )
+                    // InternalSerializationErrorTestLanguage.g:94:3: ( (lv_test_1_0= ruleParenthesis ) )
+                    // InternalSerializationErrorTestLanguage.g:95:4: (lv_test_1_0= ruleParenthesis )
                     {
-                    // InternalSerializationErrorTestLanguage.g:100:4: (lv_test_1_0= ruleParenthesis )
-                    // InternalSerializationErrorTestLanguage.g:101:5: lv_test_1_0= ruleParenthesis
+                    // InternalSerializationErrorTestLanguage.g:95:4: (lv_test_1_0= ruleParenthesis )
+                    // InternalSerializationErrorTestLanguage.g:96:5: lv_test_1_0= ruleParenthesis
                     {
 
                     					newCompositeNode(grammarAccess.getModelAccess().getTestParenthesisParserRuleCall_1_0());
@@ -229,9 +226,6 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -246,7 +240,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleParenthesis"
-    // InternalSerializationErrorTestLanguage.g:122:1: entryRuleParenthesis returns [EObject current=null] : iv_ruleParenthesis= ruleParenthesis EOF ;
+    // InternalSerializationErrorTestLanguage.g:117:1: entryRuleParenthesis returns [EObject current=null] : iv_ruleParenthesis= ruleParenthesis EOF ;
     public final EObject entryRuleParenthesis() throws RecognitionException {
         EObject current = null;
 
@@ -254,8 +248,8 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSerializationErrorTestLanguage.g:122:52: (iv_ruleParenthesis= ruleParenthesis EOF )
-            // InternalSerializationErrorTestLanguage.g:123:2: iv_ruleParenthesis= ruleParenthesis EOF
+            // InternalSerializationErrorTestLanguage.g:117:52: (iv_ruleParenthesis= ruleParenthesis EOF )
+            // InternalSerializationErrorTestLanguage.g:118:2: iv_ruleParenthesis= ruleParenthesis EOF
             {
              newCompositeNode(grammarAccess.getParenthesisRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -282,7 +276,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleParenthesis"
-    // InternalSerializationErrorTestLanguage.g:129:1: ruleParenthesis returns [EObject current=null] : (otherlv_0= '(' this_Test_1= ruleTest otherlv_2= ')' ) ;
+    // InternalSerializationErrorTestLanguage.g:124:1: ruleParenthesis returns [EObject current=null] : (otherlv_0= '(' this_Test_1= ruleTest otherlv_2= ')' ) ;
     public final EObject ruleParenthesis() throws RecognitionException {
         EObject current = null;
 
@@ -291,15 +285,12 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
         EObject this_Test_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSerializationErrorTestLanguage.g:135:2: ( (otherlv_0= '(' this_Test_1= ruleTest otherlv_2= ')' ) )
-            // InternalSerializationErrorTestLanguage.g:136:2: (otherlv_0= '(' this_Test_1= ruleTest otherlv_2= ')' )
+            // InternalSerializationErrorTestLanguage.g:125:1: ( (otherlv_0= '(' this_Test_1= ruleTest otherlv_2= ')' ) )
+            // InternalSerializationErrorTestLanguage.g:126:2: (otherlv_0= '(' this_Test_1= ruleTest otherlv_2= ')' )
             {
-            // InternalSerializationErrorTestLanguage.g:136:2: (otherlv_0= '(' this_Test_1= ruleTest otherlv_2= ')' )
-            // InternalSerializationErrorTestLanguage.g:137:3: otherlv_0= '(' this_Test_1= ruleTest otherlv_2= ')'
+            // InternalSerializationErrorTestLanguage.g:126:2: (otherlv_0= '(' this_Test_1= ruleTest otherlv_2= ')' )
+            // InternalSerializationErrorTestLanguage.g:127:3: otherlv_0= '(' this_Test_1= ruleTest otherlv_2= ')'
             {
             otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_3); 
 
@@ -327,9 +318,6 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -344,7 +332,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleTest"
-    // InternalSerializationErrorTestLanguage.g:157:1: entryRuleTest returns [EObject current=null] : iv_ruleTest= ruleTest EOF ;
+    // InternalSerializationErrorTestLanguage.g:147:1: entryRuleTest returns [EObject current=null] : iv_ruleTest= ruleTest EOF ;
     public final EObject entryRuleTest() throws RecognitionException {
         EObject current = null;
 
@@ -352,8 +340,8 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSerializationErrorTestLanguage.g:157:45: (iv_ruleTest= ruleTest EOF )
-            // InternalSerializationErrorTestLanguage.g:158:2: iv_ruleTest= ruleTest EOF
+            // InternalSerializationErrorTestLanguage.g:147:45: (iv_ruleTest= ruleTest EOF )
+            // InternalSerializationErrorTestLanguage.g:148:2: iv_ruleTest= ruleTest EOF
             {
              newCompositeNode(grammarAccess.getTestRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -380,7 +368,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleTest"
-    // InternalSerializationErrorTestLanguage.g:164:1: ruleTest returns [EObject current=null] : (this_TwoRequired_0= ruleTwoRequired | this_TwoOptions_1= ruleTwoOptions | this_Indent_2= ruleIndent ) ;
+    // InternalSerializationErrorTestLanguage.g:154:1: ruleTest returns [EObject current=null] : (this_TwoRequired_0= ruleTwoRequired | this_TwoOptions_1= ruleTwoOptions | this_Indent_2= ruleIndent ) ;
     public final EObject ruleTest() throws RecognitionException {
         EObject current = null;
 
@@ -391,14 +379,11 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
         EObject this_Indent_2 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSerializationErrorTestLanguage.g:170:2: ( (this_TwoRequired_0= ruleTwoRequired | this_TwoOptions_1= ruleTwoOptions | this_Indent_2= ruleIndent ) )
-            // InternalSerializationErrorTestLanguage.g:171:2: (this_TwoRequired_0= ruleTwoRequired | this_TwoOptions_1= ruleTwoOptions | this_Indent_2= ruleIndent )
+            // InternalSerializationErrorTestLanguage.g:155:1: ( (this_TwoRequired_0= ruleTwoRequired | this_TwoOptions_1= ruleTwoOptions | this_Indent_2= ruleIndent ) )
+            // InternalSerializationErrorTestLanguage.g:156:2: (this_TwoRequired_0= ruleTwoRequired | this_TwoOptions_1= ruleTwoOptions | this_Indent_2= ruleIndent )
             {
-            // InternalSerializationErrorTestLanguage.g:171:2: (this_TwoRequired_0= ruleTwoRequired | this_TwoOptions_1= ruleTwoOptions | this_Indent_2= ruleIndent )
+            // InternalSerializationErrorTestLanguage.g:156:2: (this_TwoRequired_0= ruleTwoRequired | this_TwoOptions_1= ruleTwoOptions | this_Indent_2= ruleIndent )
             int alt2=3;
             switch ( input.LA(1) ) {
             case 13:
@@ -425,7 +410,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
             switch (alt2) {
                 case 1 :
-                    // InternalSerializationErrorTestLanguage.g:172:3: this_TwoRequired_0= ruleTwoRequired
+                    // InternalSerializationErrorTestLanguage.g:157:3: this_TwoRequired_0= ruleTwoRequired
                     {
 
                     			newCompositeNode(grammarAccess.getTestAccess().getTwoRequiredParserRuleCall_0());
@@ -443,7 +428,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 2 :
-                    // InternalSerializationErrorTestLanguage.g:181:3: this_TwoOptions_1= ruleTwoOptions
+                    // InternalSerializationErrorTestLanguage.g:166:3: this_TwoOptions_1= ruleTwoOptions
                     {
 
                     			newCompositeNode(grammarAccess.getTestAccess().getTwoOptionsParserRuleCall_1());
@@ -461,7 +446,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 3 :
-                    // InternalSerializationErrorTestLanguage.g:190:3: this_Indent_2= ruleIndent
+                    // InternalSerializationErrorTestLanguage.g:175:3: this_Indent_2= ruleIndent
                     {
 
                     			newCompositeNode(grammarAccess.getTestAccess().getIndentParserRuleCall_2());
@@ -484,9 +469,6 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -501,7 +483,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleTwoRequired"
-    // InternalSerializationErrorTestLanguage.g:202:1: entryRuleTwoRequired returns [EObject current=null] : iv_ruleTwoRequired= ruleTwoRequired EOF ;
+    // InternalSerializationErrorTestLanguage.g:187:1: entryRuleTwoRequired returns [EObject current=null] : iv_ruleTwoRequired= ruleTwoRequired EOF ;
     public final EObject entryRuleTwoRequired() throws RecognitionException {
         EObject current = null;
 
@@ -509,8 +491,8 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSerializationErrorTestLanguage.g:202:52: (iv_ruleTwoRequired= ruleTwoRequired EOF )
-            // InternalSerializationErrorTestLanguage.g:203:2: iv_ruleTwoRequired= ruleTwoRequired EOF
+            // InternalSerializationErrorTestLanguage.g:187:52: (iv_ruleTwoRequired= ruleTwoRequired EOF )
+            // InternalSerializationErrorTestLanguage.g:188:2: iv_ruleTwoRequired= ruleTwoRequired EOF
             {
              newCompositeNode(grammarAccess.getTwoRequiredRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -537,7 +519,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleTwoRequired"
-    // InternalSerializationErrorTestLanguage.g:209:1: ruleTwoRequired returns [EObject current=null] : (otherlv_0= 'tworequired' ( (lv_one_1_0= RULE_ID ) ) ( (lv_two_2_0= RULE_ID ) ) ) ;
+    // InternalSerializationErrorTestLanguage.g:194:1: ruleTwoRequired returns [EObject current=null] : (otherlv_0= 'tworequired' ( (lv_one_1_0= RULE_ID ) ) ( (lv_two_2_0= RULE_ID ) ) ) ;
     public final EObject ruleTwoRequired() throws RecognitionException {
         EObject current = null;
 
@@ -545,25 +527,22 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
         Token lv_one_1_0=null;
         Token lv_two_2_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSerializationErrorTestLanguage.g:215:2: ( (otherlv_0= 'tworequired' ( (lv_one_1_0= RULE_ID ) ) ( (lv_two_2_0= RULE_ID ) ) ) )
-            // InternalSerializationErrorTestLanguage.g:216:2: (otherlv_0= 'tworequired' ( (lv_one_1_0= RULE_ID ) ) ( (lv_two_2_0= RULE_ID ) ) )
+            // InternalSerializationErrorTestLanguage.g:195:1: ( (otherlv_0= 'tworequired' ( (lv_one_1_0= RULE_ID ) ) ( (lv_two_2_0= RULE_ID ) ) ) )
+            // InternalSerializationErrorTestLanguage.g:196:2: (otherlv_0= 'tworequired' ( (lv_one_1_0= RULE_ID ) ) ( (lv_two_2_0= RULE_ID ) ) )
             {
-            // InternalSerializationErrorTestLanguage.g:216:2: (otherlv_0= 'tworequired' ( (lv_one_1_0= RULE_ID ) ) ( (lv_two_2_0= RULE_ID ) ) )
-            // InternalSerializationErrorTestLanguage.g:217:3: otherlv_0= 'tworequired' ( (lv_one_1_0= RULE_ID ) ) ( (lv_two_2_0= RULE_ID ) )
+            // InternalSerializationErrorTestLanguage.g:196:2: (otherlv_0= 'tworequired' ( (lv_one_1_0= RULE_ID ) ) ( (lv_two_2_0= RULE_ID ) ) )
+            // InternalSerializationErrorTestLanguage.g:197:3: otherlv_0= 'tworequired' ( (lv_one_1_0= RULE_ID ) ) ( (lv_two_2_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,13,FollowSets000.FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTwoRequiredAccess().getTworequiredKeyword_0());
             		
-            // InternalSerializationErrorTestLanguage.g:221:3: ( (lv_one_1_0= RULE_ID ) )
-            // InternalSerializationErrorTestLanguage.g:222:4: (lv_one_1_0= RULE_ID )
+            // InternalSerializationErrorTestLanguage.g:201:3: ( (lv_one_1_0= RULE_ID ) )
+            // InternalSerializationErrorTestLanguage.g:202:4: (lv_one_1_0= RULE_ID )
             {
-            // InternalSerializationErrorTestLanguage.g:222:4: (lv_one_1_0= RULE_ID )
-            // InternalSerializationErrorTestLanguage.g:223:5: lv_one_1_0= RULE_ID
+            // InternalSerializationErrorTestLanguage.g:202:4: (lv_one_1_0= RULE_ID )
+            // InternalSerializationErrorTestLanguage.g:203:5: lv_one_1_0= RULE_ID
             {
             lv_one_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); 
 
@@ -585,11 +564,11 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSerializationErrorTestLanguage.g:239:3: ( (lv_two_2_0= RULE_ID ) )
-            // InternalSerializationErrorTestLanguage.g:240:4: (lv_two_2_0= RULE_ID )
+            // InternalSerializationErrorTestLanguage.g:219:3: ( (lv_two_2_0= RULE_ID ) )
+            // InternalSerializationErrorTestLanguage.g:220:4: (lv_two_2_0= RULE_ID )
             {
-            // InternalSerializationErrorTestLanguage.g:240:4: (lv_two_2_0= RULE_ID )
-            // InternalSerializationErrorTestLanguage.g:241:5: lv_two_2_0= RULE_ID
+            // InternalSerializationErrorTestLanguage.g:220:4: (lv_two_2_0= RULE_ID )
+            // InternalSerializationErrorTestLanguage.g:221:5: lv_two_2_0= RULE_ID
             {
             lv_two_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -617,9 +596,6 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -634,7 +610,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleTwoOptions"
-    // InternalSerializationErrorTestLanguage.g:261:1: entryRuleTwoOptions returns [EObject current=null] : iv_ruleTwoOptions= ruleTwoOptions EOF ;
+    // InternalSerializationErrorTestLanguage.g:241:1: entryRuleTwoOptions returns [EObject current=null] : iv_ruleTwoOptions= ruleTwoOptions EOF ;
     public final EObject entryRuleTwoOptions() throws RecognitionException {
         EObject current = null;
 
@@ -642,8 +618,8 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSerializationErrorTestLanguage.g:261:51: (iv_ruleTwoOptions= ruleTwoOptions EOF )
-            // InternalSerializationErrorTestLanguage.g:262:2: iv_ruleTwoOptions= ruleTwoOptions EOF
+            // InternalSerializationErrorTestLanguage.g:241:51: (iv_ruleTwoOptions= ruleTwoOptions EOF )
+            // InternalSerializationErrorTestLanguage.g:242:2: iv_ruleTwoOptions= ruleTwoOptions EOF
             {
              newCompositeNode(grammarAccess.getTwoOptionsRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -670,7 +646,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleTwoOptions"
-    // InternalSerializationErrorTestLanguage.g:268:1: ruleTwoOptions returns [EObject current=null] : (otherlv_0= 'twooptions' ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) ) ) ;
+    // InternalSerializationErrorTestLanguage.g:248:1: ruleTwoOptions returns [EObject current=null] : (otherlv_0= 'twooptions' ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) ) ) ;
     public final EObject ruleTwoOptions() throws RecognitionException {
         EObject current = null;
 
@@ -680,21 +656,18 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
         Token otherlv_3=null;
         Token lv_two_4_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalSerializationErrorTestLanguage.g:274:2: ( (otherlv_0= 'twooptions' ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) ) ) )
-            // InternalSerializationErrorTestLanguage.g:275:2: (otherlv_0= 'twooptions' ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) ) )
+            // InternalSerializationErrorTestLanguage.g:249:1: ( (otherlv_0= 'twooptions' ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) ) ) )
+            // InternalSerializationErrorTestLanguage.g:250:2: (otherlv_0= 'twooptions' ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) ) )
             {
-            // InternalSerializationErrorTestLanguage.g:275:2: (otherlv_0= 'twooptions' ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) ) )
-            // InternalSerializationErrorTestLanguage.g:276:3: otherlv_0= 'twooptions' ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) )
+            // InternalSerializationErrorTestLanguage.g:250:2: (otherlv_0= 'twooptions' ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) ) )
+            // InternalSerializationErrorTestLanguage.g:251:3: otherlv_0= 'twooptions' ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) )
             {
             otherlv_0=(Token)match(input,14,FollowSets000.FOLLOW_6); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTwoOptionsAccess().getTwooptionsKeyword_0());
             		
-            // InternalSerializationErrorTestLanguage.g:280:3: ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) )
+            // InternalSerializationErrorTestLanguage.g:255:3: ( (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) ) | (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -712,20 +685,20 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
             }
             switch (alt3) {
                 case 1 :
-                    // InternalSerializationErrorTestLanguage.g:281:4: (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) )
+                    // InternalSerializationErrorTestLanguage.g:256:4: (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) )
                     {
-                    // InternalSerializationErrorTestLanguage.g:281:4: (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) )
-                    // InternalSerializationErrorTestLanguage.g:282:5: otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) )
+                    // InternalSerializationErrorTestLanguage.g:256:4: (otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) ) )
+                    // InternalSerializationErrorTestLanguage.g:257:5: otherlv_1= 'one' ( (lv_one_2_0= RULE_ID ) )
                     {
                     otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_1, grammarAccess.getTwoOptionsAccess().getOneKeyword_1_0_0());
                     				
-                    // InternalSerializationErrorTestLanguage.g:286:5: ( (lv_one_2_0= RULE_ID ) )
-                    // InternalSerializationErrorTestLanguage.g:287:6: (lv_one_2_0= RULE_ID )
+                    // InternalSerializationErrorTestLanguage.g:261:5: ( (lv_one_2_0= RULE_ID ) )
+                    // InternalSerializationErrorTestLanguage.g:262:6: (lv_one_2_0= RULE_ID )
                     {
-                    // InternalSerializationErrorTestLanguage.g:287:6: (lv_one_2_0= RULE_ID )
-                    // InternalSerializationErrorTestLanguage.g:288:7: lv_one_2_0= RULE_ID
+                    // InternalSerializationErrorTestLanguage.g:262:6: (lv_one_2_0= RULE_ID )
+                    // InternalSerializationErrorTestLanguage.g:263:7: lv_one_2_0= RULE_ID
                     {
                     lv_one_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -754,20 +727,20 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
                     }
                     break;
                 case 2 :
-                    // InternalSerializationErrorTestLanguage.g:306:4: (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) )
+                    // InternalSerializationErrorTestLanguage.g:281:4: (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) )
                     {
-                    // InternalSerializationErrorTestLanguage.g:306:4: (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) )
-                    // InternalSerializationErrorTestLanguage.g:307:5: otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) )
+                    // InternalSerializationErrorTestLanguage.g:281:4: (otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) ) )
+                    // InternalSerializationErrorTestLanguage.g:282:5: otherlv_3= 'two' ( (lv_two_4_0= RULE_ID ) )
                     {
                     otherlv_3=(Token)match(input,16,FollowSets000.FOLLOW_5); 
 
                     					newLeafNode(otherlv_3, grammarAccess.getTwoOptionsAccess().getTwoKeyword_1_1_0());
                     				
-                    // InternalSerializationErrorTestLanguage.g:311:5: ( (lv_two_4_0= RULE_ID ) )
-                    // InternalSerializationErrorTestLanguage.g:312:6: (lv_two_4_0= RULE_ID )
+                    // InternalSerializationErrorTestLanguage.g:286:5: ( (lv_two_4_0= RULE_ID ) )
+                    // InternalSerializationErrorTestLanguage.g:287:6: (lv_two_4_0= RULE_ID )
                     {
-                    // InternalSerializationErrorTestLanguage.g:312:6: (lv_two_4_0= RULE_ID )
-                    // InternalSerializationErrorTestLanguage.g:313:7: lv_two_4_0= RULE_ID
+                    // InternalSerializationErrorTestLanguage.g:287:6: (lv_two_4_0= RULE_ID )
+                    // InternalSerializationErrorTestLanguage.g:288:7: lv_two_4_0= RULE_ID
                     {
                     lv_two_4_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_2); 
 
@@ -804,9 +777,6 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -821,7 +791,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "entryRuleIndent"
-    // InternalSerializationErrorTestLanguage.g:335:1: entryRuleIndent returns [EObject current=null] : iv_ruleIndent= ruleIndent EOF ;
+    // InternalSerializationErrorTestLanguage.g:310:1: entryRuleIndent returns [EObject current=null] : iv_ruleIndent= ruleIndent EOF ;
     public final EObject entryRuleIndent() throws RecognitionException {
         EObject current = null;
 
@@ -829,8 +799,8 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
         try {
-            // InternalSerializationErrorTestLanguage.g:335:47: (iv_ruleIndent= ruleIndent EOF )
-            // InternalSerializationErrorTestLanguage.g:336:2: iv_ruleIndent= ruleIndent EOF
+            // InternalSerializationErrorTestLanguage.g:310:47: (iv_ruleIndent= ruleIndent EOF )
+            // InternalSerializationErrorTestLanguage.g:311:2: iv_ruleIndent= ruleIndent EOF
             {
              newCompositeNode(grammarAccess.getIndentRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -857,7 +827,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
     // $ANTLR start "ruleIndent"
-    // InternalSerializationErrorTestLanguage.g:342:1: ruleIndent returns [EObject current=null] : (otherlv_0= '{' ( (lv_req_1_0= ruleTwoRequired ) )? ( (lv_opt_2_0= ruleTwoOptions ) )? ( (lv_indent_3_0= ruleIndent ) )* otherlv_4= '}' ) ;
+    // InternalSerializationErrorTestLanguage.g:317:1: ruleIndent returns [EObject current=null] : (otherlv_0= '{' ( (lv_req_1_0= ruleTwoRequired ) )? ( (lv_opt_2_0= ruleTwoOptions ) )? ( (lv_indent_3_0= ruleIndent ) )* otherlv_4= '}' ) ;
     public final EObject ruleIndent() throws RecognitionException {
         EObject current = null;
 
@@ -870,21 +840,18 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
         EObject lv_indent_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalSerializationErrorTestLanguage.g:348:2: ( (otherlv_0= '{' ( (lv_req_1_0= ruleTwoRequired ) )? ( (lv_opt_2_0= ruleTwoOptions ) )? ( (lv_indent_3_0= ruleIndent ) )* otherlv_4= '}' ) )
-            // InternalSerializationErrorTestLanguage.g:349:2: (otherlv_0= '{' ( (lv_req_1_0= ruleTwoRequired ) )? ( (lv_opt_2_0= ruleTwoOptions ) )? ( (lv_indent_3_0= ruleIndent ) )* otherlv_4= '}' )
+            // InternalSerializationErrorTestLanguage.g:318:1: ( (otherlv_0= '{' ( (lv_req_1_0= ruleTwoRequired ) )? ( (lv_opt_2_0= ruleTwoOptions ) )? ( (lv_indent_3_0= ruleIndent ) )* otherlv_4= '}' ) )
+            // InternalSerializationErrorTestLanguage.g:319:2: (otherlv_0= '{' ( (lv_req_1_0= ruleTwoRequired ) )? ( (lv_opt_2_0= ruleTwoOptions ) )? ( (lv_indent_3_0= ruleIndent ) )* otherlv_4= '}' )
             {
-            // InternalSerializationErrorTestLanguage.g:349:2: (otherlv_0= '{' ( (lv_req_1_0= ruleTwoRequired ) )? ( (lv_opt_2_0= ruleTwoOptions ) )? ( (lv_indent_3_0= ruleIndent ) )* otherlv_4= '}' )
-            // InternalSerializationErrorTestLanguage.g:350:3: otherlv_0= '{' ( (lv_req_1_0= ruleTwoRequired ) )? ( (lv_opt_2_0= ruleTwoOptions ) )? ( (lv_indent_3_0= ruleIndent ) )* otherlv_4= '}'
+            // InternalSerializationErrorTestLanguage.g:319:2: (otherlv_0= '{' ( (lv_req_1_0= ruleTwoRequired ) )? ( (lv_opt_2_0= ruleTwoOptions ) )? ( (lv_indent_3_0= ruleIndent ) )* otherlv_4= '}' )
+            // InternalSerializationErrorTestLanguage.g:320:3: otherlv_0= '{' ( (lv_req_1_0= ruleTwoRequired ) )? ( (lv_opt_2_0= ruleTwoOptions ) )? ( (lv_indent_3_0= ruleIndent ) )* otherlv_4= '}'
             {
             otherlv_0=(Token)match(input,17,FollowSets000.FOLLOW_7); 
 
             			newLeafNode(otherlv_0, grammarAccess.getIndentAccess().getLeftCurlyBracketKeyword_0());
             		
-            // InternalSerializationErrorTestLanguage.g:354:3: ( (lv_req_1_0= ruleTwoRequired ) )?
+            // InternalSerializationErrorTestLanguage.g:324:3: ( (lv_req_1_0= ruleTwoRequired ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -893,10 +860,10 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
             }
             switch (alt4) {
                 case 1 :
-                    // InternalSerializationErrorTestLanguage.g:355:4: (lv_req_1_0= ruleTwoRequired )
+                    // InternalSerializationErrorTestLanguage.g:325:4: (lv_req_1_0= ruleTwoRequired )
                     {
-                    // InternalSerializationErrorTestLanguage.g:355:4: (lv_req_1_0= ruleTwoRequired )
-                    // InternalSerializationErrorTestLanguage.g:356:5: lv_req_1_0= ruleTwoRequired
+                    // InternalSerializationErrorTestLanguage.g:325:4: (lv_req_1_0= ruleTwoRequired )
+                    // InternalSerializationErrorTestLanguage.g:326:5: lv_req_1_0= ruleTwoRequired
                     {
 
                     					newCompositeNode(grammarAccess.getIndentAccess().getReqTwoRequiredParserRuleCall_1_0());
@@ -926,7 +893,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSerializationErrorTestLanguage.g:373:3: ( (lv_opt_2_0= ruleTwoOptions ) )?
+            // InternalSerializationErrorTestLanguage.g:343:3: ( (lv_opt_2_0= ruleTwoOptions ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -935,10 +902,10 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
             }
             switch (alt5) {
                 case 1 :
-                    // InternalSerializationErrorTestLanguage.g:374:4: (lv_opt_2_0= ruleTwoOptions )
+                    // InternalSerializationErrorTestLanguage.g:344:4: (lv_opt_2_0= ruleTwoOptions )
                     {
-                    // InternalSerializationErrorTestLanguage.g:374:4: (lv_opt_2_0= ruleTwoOptions )
-                    // InternalSerializationErrorTestLanguage.g:375:5: lv_opt_2_0= ruleTwoOptions
+                    // InternalSerializationErrorTestLanguage.g:344:4: (lv_opt_2_0= ruleTwoOptions )
+                    // InternalSerializationErrorTestLanguage.g:345:5: lv_opt_2_0= ruleTwoOptions
                     {
 
                     					newCompositeNode(grammarAccess.getIndentAccess().getOptTwoOptionsParserRuleCall_2_0());
@@ -968,7 +935,7 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
             }
 
-            // InternalSerializationErrorTestLanguage.g:392:3: ( (lv_indent_3_0= ruleIndent ) )*
+            // InternalSerializationErrorTestLanguage.g:362:3: ( (lv_indent_3_0= ruleIndent ) )*
             loop6:
             do {
                 int alt6=2;
@@ -981,10 +948,10 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalSerializationErrorTestLanguage.g:393:4: (lv_indent_3_0= ruleIndent )
+            	    // InternalSerializationErrorTestLanguage.g:363:4: (lv_indent_3_0= ruleIndent )
             	    {
-            	    // InternalSerializationErrorTestLanguage.g:393:4: (lv_indent_3_0= ruleIndent )
-            	    // InternalSerializationErrorTestLanguage.g:394:5: lv_indent_3_0= ruleIndent
+            	    // InternalSerializationErrorTestLanguage.g:363:4: (lv_indent_3_0= ruleIndent )
+            	    // InternalSerializationErrorTestLanguage.g:364:5: lv_indent_3_0= ruleIndent
             	    {
 
             	    					newCompositeNode(grammarAccess.getIndentAccess().getIndentIndentParserRuleCall_3_0());
@@ -1026,9 +993,6 @@ public class InternalSerializationErrorTestLanguageParser extends AbstractIntern
 
 
             }
-
-
-            	leaveRule();
 
         }
 

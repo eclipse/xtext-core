@@ -70,12 +70,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='someEnum'
 		{
@@ -143,12 +138,7 @@ ruleModel returns [EObject current=null]
 
 // Rule EnumRuleA
 ruleEnumRuleA returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			enumLiteral_0='A'
@@ -178,12 +168,7 @@ ruleEnumRuleA returns [Enumerator current=null]
 
 // Rule EnumRuleB
 ruleEnumRuleB returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			enumLiteral_0='C'
@@ -213,12 +198,7 @@ ruleEnumRuleB returns [Enumerator current=null]
 
 // Rule EnumRuleC
 ruleEnumRuleC returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			enumLiteral_0='A'

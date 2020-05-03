@@ -124,14 +124,11 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
         EObject this_KWList_1 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalFormatterTestLanguage.g:77:2: ( (this_IDList_0= ruleIDList | this_KWList_1= ruleKWList ) )
-            // InternalFormatterTestLanguage.g:78:2: (this_IDList_0= ruleIDList | this_KWList_1= ruleKWList )
+            // InternalFormatterTestLanguage.g:72:1: ( (this_IDList_0= ruleIDList | this_KWList_1= ruleKWList ) )
+            // InternalFormatterTestLanguage.g:73:2: (this_IDList_0= ruleIDList | this_KWList_1= ruleKWList )
             {
-            // InternalFormatterTestLanguage.g:78:2: (this_IDList_0= ruleIDList | this_KWList_1= ruleKWList )
+            // InternalFormatterTestLanguage.g:73:2: (this_IDList_0= ruleIDList | this_KWList_1= ruleKWList )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -149,7 +146,7 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
             }
             switch (alt1) {
                 case 1 :
-                    // InternalFormatterTestLanguage.g:79:3: this_IDList_0= ruleIDList
+                    // InternalFormatterTestLanguage.g:74:3: this_IDList_0= ruleIDList
                     {
 
                     			newCompositeNode(grammarAccess.getRootAccess().getIDListParserRuleCall_0());
@@ -167,7 +164,7 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
                     }
                     break;
                 case 2 :
-                    // InternalFormatterTestLanguage.g:88:3: this_KWList_1= ruleKWList
+                    // InternalFormatterTestLanguage.g:83:3: this_KWList_1= ruleKWList
                     {
 
                     			newCompositeNode(grammarAccess.getRootAccess().getKWListParserRuleCall_1());
@@ -190,9 +187,6 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -207,7 +201,7 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleIDList"
-    // InternalFormatterTestLanguage.g:100:1: entryRuleIDList returns [EObject current=null] : iv_ruleIDList= ruleIDList EOF ;
+    // InternalFormatterTestLanguage.g:95:1: entryRuleIDList returns [EObject current=null] : iv_ruleIDList= ruleIDList EOF ;
     public final EObject entryRuleIDList() throws RecognitionException {
         EObject current = null;
 
@@ -215,8 +209,8 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalFormatterTestLanguage.g:100:47: (iv_ruleIDList= ruleIDList EOF )
-            // InternalFormatterTestLanguage.g:101:2: iv_ruleIDList= ruleIDList EOF
+            // InternalFormatterTestLanguage.g:95:47: (iv_ruleIDList= ruleIDList EOF )
+            // InternalFormatterTestLanguage.g:96:2: iv_ruleIDList= ruleIDList EOF
             {
              newCompositeNode(grammarAccess.getIDListRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -243,25 +237,22 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleIDList"
-    // InternalFormatterTestLanguage.g:107:1: ruleIDList returns [EObject current=null] : ( () otherlv_1= 'idlist' ( (lv_ids_2_0= RULE_ID ) )* ) ;
+    // InternalFormatterTestLanguage.g:102:1: ruleIDList returns [EObject current=null] : ( () otherlv_1= 'idlist' ( (lv_ids_2_0= RULE_ID ) )* ) ;
     public final EObject ruleIDList() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token lv_ids_2_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFormatterTestLanguage.g:113:2: ( ( () otherlv_1= 'idlist' ( (lv_ids_2_0= RULE_ID ) )* ) )
-            // InternalFormatterTestLanguage.g:114:2: ( () otherlv_1= 'idlist' ( (lv_ids_2_0= RULE_ID ) )* )
+            // InternalFormatterTestLanguage.g:103:1: ( ( () otherlv_1= 'idlist' ( (lv_ids_2_0= RULE_ID ) )* ) )
+            // InternalFormatterTestLanguage.g:104:2: ( () otherlv_1= 'idlist' ( (lv_ids_2_0= RULE_ID ) )* )
             {
-            // InternalFormatterTestLanguage.g:114:2: ( () otherlv_1= 'idlist' ( (lv_ids_2_0= RULE_ID ) )* )
-            // InternalFormatterTestLanguage.g:115:3: () otherlv_1= 'idlist' ( (lv_ids_2_0= RULE_ID ) )*
+            // InternalFormatterTestLanguage.g:104:2: ( () otherlv_1= 'idlist' ( (lv_ids_2_0= RULE_ID ) )* )
+            // InternalFormatterTestLanguage.g:105:3: () otherlv_1= 'idlist' ( (lv_ids_2_0= RULE_ID ) )*
             {
-            // InternalFormatterTestLanguage.g:115:3: ()
-            // InternalFormatterTestLanguage.g:116:4: 
+            // InternalFormatterTestLanguage.g:105:3: ()
+            // InternalFormatterTestLanguage.g:106:4: 
             {
 
             				current = forceCreateModelElement(
@@ -275,7 +266,7 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
             			newLeafNode(otherlv_1, grammarAccess.getIDListAccess().getIdlistKeyword_1());
             		
-            // InternalFormatterTestLanguage.g:126:3: ( (lv_ids_2_0= RULE_ID ) )*
+            // InternalFormatterTestLanguage.g:116:3: ( (lv_ids_2_0= RULE_ID ) )*
             loop2:
             do {
                 int alt2=2;
@@ -288,10 +279,10 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalFormatterTestLanguage.g:127:4: (lv_ids_2_0= RULE_ID )
+            	    // InternalFormatterTestLanguage.g:117:4: (lv_ids_2_0= RULE_ID )
             	    {
-            	    // InternalFormatterTestLanguage.g:127:4: (lv_ids_2_0= RULE_ID )
-            	    // InternalFormatterTestLanguage.g:128:5: lv_ids_2_0= RULE_ID
+            	    // InternalFormatterTestLanguage.g:117:4: (lv_ids_2_0= RULE_ID )
+            	    // InternalFormatterTestLanguage.g:118:5: lv_ids_2_0= RULE_ID
             	    {
             	    lv_ids_2_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_3); 
 
@@ -325,9 +316,6 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -342,7 +330,7 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "entryRuleKWList"
-    // InternalFormatterTestLanguage.g:148:1: entryRuleKWList returns [EObject current=null] : iv_ruleKWList= ruleKWList EOF ;
+    // InternalFormatterTestLanguage.g:138:1: entryRuleKWList returns [EObject current=null] : iv_ruleKWList= ruleKWList EOF ;
     public final EObject entryRuleKWList() throws RecognitionException {
         EObject current = null;
 
@@ -350,8 +338,8 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
 
         try {
-            // InternalFormatterTestLanguage.g:148:47: (iv_ruleKWList= ruleKWList EOF )
-            // InternalFormatterTestLanguage.g:149:2: iv_ruleKWList= ruleKWList EOF
+            // InternalFormatterTestLanguage.g:138:47: (iv_ruleKWList= ruleKWList EOF )
+            // InternalFormatterTestLanguage.g:139:2: iv_ruleKWList= ruleKWList EOF
             {
              newCompositeNode(grammarAccess.getKWListRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -378,7 +366,7 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
 
     // $ANTLR start "ruleKWList"
-    // InternalFormatterTestLanguage.g:155:1: ruleKWList returns [EObject current=null] : ( () otherlv_1= 'kwlist' ( (lv_kw1_2_0= 'kw1' ) )? ( (lv_kw2_3_0= 'kw2' ) )? ( (lv_kw3_4_0= 'kw3' ) )? ( (lv_kw4_5_0= 'kw4' ) )? ( (lv_kw5_6_0= 'kw5' ) )? ) ;
+    // InternalFormatterTestLanguage.g:145:1: ruleKWList returns [EObject current=null] : ( () otherlv_1= 'kwlist' ( (lv_kw1_2_0= 'kw1' ) )? ( (lv_kw2_3_0= 'kw2' ) )? ( (lv_kw3_4_0= 'kw3' ) )? ( (lv_kw4_5_0= 'kw4' ) )? ( (lv_kw5_6_0= 'kw5' ) )? ) ;
     public final EObject ruleKWList() throws RecognitionException {
         EObject current = null;
 
@@ -389,18 +377,15 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
         Token lv_kw4_5_0=null;
         Token lv_kw5_6_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalFormatterTestLanguage.g:161:2: ( ( () otherlv_1= 'kwlist' ( (lv_kw1_2_0= 'kw1' ) )? ( (lv_kw2_3_0= 'kw2' ) )? ( (lv_kw3_4_0= 'kw3' ) )? ( (lv_kw4_5_0= 'kw4' ) )? ( (lv_kw5_6_0= 'kw5' ) )? ) )
-            // InternalFormatterTestLanguage.g:162:2: ( () otherlv_1= 'kwlist' ( (lv_kw1_2_0= 'kw1' ) )? ( (lv_kw2_3_0= 'kw2' ) )? ( (lv_kw3_4_0= 'kw3' ) )? ( (lv_kw4_5_0= 'kw4' ) )? ( (lv_kw5_6_0= 'kw5' ) )? )
+            // InternalFormatterTestLanguage.g:146:1: ( ( () otherlv_1= 'kwlist' ( (lv_kw1_2_0= 'kw1' ) )? ( (lv_kw2_3_0= 'kw2' ) )? ( (lv_kw3_4_0= 'kw3' ) )? ( (lv_kw4_5_0= 'kw4' ) )? ( (lv_kw5_6_0= 'kw5' ) )? ) )
+            // InternalFormatterTestLanguage.g:147:2: ( () otherlv_1= 'kwlist' ( (lv_kw1_2_0= 'kw1' ) )? ( (lv_kw2_3_0= 'kw2' ) )? ( (lv_kw3_4_0= 'kw3' ) )? ( (lv_kw4_5_0= 'kw4' ) )? ( (lv_kw5_6_0= 'kw5' ) )? )
             {
-            // InternalFormatterTestLanguage.g:162:2: ( () otherlv_1= 'kwlist' ( (lv_kw1_2_0= 'kw1' ) )? ( (lv_kw2_3_0= 'kw2' ) )? ( (lv_kw3_4_0= 'kw3' ) )? ( (lv_kw4_5_0= 'kw4' ) )? ( (lv_kw5_6_0= 'kw5' ) )? )
-            // InternalFormatterTestLanguage.g:163:3: () otherlv_1= 'kwlist' ( (lv_kw1_2_0= 'kw1' ) )? ( (lv_kw2_3_0= 'kw2' ) )? ( (lv_kw3_4_0= 'kw3' ) )? ( (lv_kw4_5_0= 'kw4' ) )? ( (lv_kw5_6_0= 'kw5' ) )?
+            // InternalFormatterTestLanguage.g:147:2: ( () otherlv_1= 'kwlist' ( (lv_kw1_2_0= 'kw1' ) )? ( (lv_kw2_3_0= 'kw2' ) )? ( (lv_kw3_4_0= 'kw3' ) )? ( (lv_kw4_5_0= 'kw4' ) )? ( (lv_kw5_6_0= 'kw5' ) )? )
+            // InternalFormatterTestLanguage.g:148:3: () otherlv_1= 'kwlist' ( (lv_kw1_2_0= 'kw1' ) )? ( (lv_kw2_3_0= 'kw2' ) )? ( (lv_kw3_4_0= 'kw3' ) )? ( (lv_kw4_5_0= 'kw4' ) )? ( (lv_kw5_6_0= 'kw5' ) )?
             {
-            // InternalFormatterTestLanguage.g:163:3: ()
-            // InternalFormatterTestLanguage.g:164:4: 
+            // InternalFormatterTestLanguage.g:148:3: ()
+            // InternalFormatterTestLanguage.g:149:4: 
             {
 
             				current = forceCreateModelElement(
@@ -414,7 +399,7 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
             			newLeafNode(otherlv_1, grammarAccess.getKWListAccess().getKwlistKeyword_1());
             		
-            // InternalFormatterTestLanguage.g:174:3: ( (lv_kw1_2_0= 'kw1' ) )?
+            // InternalFormatterTestLanguage.g:159:3: ( (lv_kw1_2_0= 'kw1' ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -423,10 +408,10 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
             }
             switch (alt3) {
                 case 1 :
-                    // InternalFormatterTestLanguage.g:175:4: (lv_kw1_2_0= 'kw1' )
+                    // InternalFormatterTestLanguage.g:160:4: (lv_kw1_2_0= 'kw1' )
                     {
-                    // InternalFormatterTestLanguage.g:175:4: (lv_kw1_2_0= 'kw1' )
-                    // InternalFormatterTestLanguage.g:176:5: lv_kw1_2_0= 'kw1'
+                    // InternalFormatterTestLanguage.g:160:4: (lv_kw1_2_0= 'kw1' )
+                    // InternalFormatterTestLanguage.g:161:5: lv_kw1_2_0= 'kw1'
                     {
                     lv_kw1_2_0=(Token)match(input,13,FollowSets000.FOLLOW_5); 
 
@@ -447,7 +432,7 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            // InternalFormatterTestLanguage.g:188:3: ( (lv_kw2_3_0= 'kw2' ) )?
+            // InternalFormatterTestLanguage.g:173:3: ( (lv_kw2_3_0= 'kw2' ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -456,10 +441,10 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
             }
             switch (alt4) {
                 case 1 :
-                    // InternalFormatterTestLanguage.g:189:4: (lv_kw2_3_0= 'kw2' )
+                    // InternalFormatterTestLanguage.g:174:4: (lv_kw2_3_0= 'kw2' )
                     {
-                    // InternalFormatterTestLanguage.g:189:4: (lv_kw2_3_0= 'kw2' )
-                    // InternalFormatterTestLanguage.g:190:5: lv_kw2_3_0= 'kw2'
+                    // InternalFormatterTestLanguage.g:174:4: (lv_kw2_3_0= 'kw2' )
+                    // InternalFormatterTestLanguage.g:175:5: lv_kw2_3_0= 'kw2'
                     {
                     lv_kw2_3_0=(Token)match(input,14,FollowSets000.FOLLOW_6); 
 
@@ -480,7 +465,7 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            // InternalFormatterTestLanguage.g:202:3: ( (lv_kw3_4_0= 'kw3' ) )?
+            // InternalFormatterTestLanguage.g:187:3: ( (lv_kw3_4_0= 'kw3' ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -489,10 +474,10 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
             }
             switch (alt5) {
                 case 1 :
-                    // InternalFormatterTestLanguage.g:203:4: (lv_kw3_4_0= 'kw3' )
+                    // InternalFormatterTestLanguage.g:188:4: (lv_kw3_4_0= 'kw3' )
                     {
-                    // InternalFormatterTestLanguage.g:203:4: (lv_kw3_4_0= 'kw3' )
-                    // InternalFormatterTestLanguage.g:204:5: lv_kw3_4_0= 'kw3'
+                    // InternalFormatterTestLanguage.g:188:4: (lv_kw3_4_0= 'kw3' )
+                    // InternalFormatterTestLanguage.g:189:5: lv_kw3_4_0= 'kw3'
                     {
                     lv_kw3_4_0=(Token)match(input,15,FollowSets000.FOLLOW_7); 
 
@@ -513,7 +498,7 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            // InternalFormatterTestLanguage.g:216:3: ( (lv_kw4_5_0= 'kw4' ) )?
+            // InternalFormatterTestLanguage.g:201:3: ( (lv_kw4_5_0= 'kw4' ) )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -522,10 +507,10 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
             }
             switch (alt6) {
                 case 1 :
-                    // InternalFormatterTestLanguage.g:217:4: (lv_kw4_5_0= 'kw4' )
+                    // InternalFormatterTestLanguage.g:202:4: (lv_kw4_5_0= 'kw4' )
                     {
-                    // InternalFormatterTestLanguage.g:217:4: (lv_kw4_5_0= 'kw4' )
-                    // InternalFormatterTestLanguage.g:218:5: lv_kw4_5_0= 'kw4'
+                    // InternalFormatterTestLanguage.g:202:4: (lv_kw4_5_0= 'kw4' )
+                    // InternalFormatterTestLanguage.g:203:5: lv_kw4_5_0= 'kw4'
                     {
                     lv_kw4_5_0=(Token)match(input,16,FollowSets000.FOLLOW_8); 
 
@@ -546,7 +531,7 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
             }
 
-            // InternalFormatterTestLanguage.g:230:3: ( (lv_kw5_6_0= 'kw5' ) )?
+            // InternalFormatterTestLanguage.g:215:3: ( (lv_kw5_6_0= 'kw5' ) )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -555,10 +540,10 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
             }
             switch (alt7) {
                 case 1 :
-                    // InternalFormatterTestLanguage.g:231:4: (lv_kw5_6_0= 'kw5' )
+                    // InternalFormatterTestLanguage.g:216:4: (lv_kw5_6_0= 'kw5' )
                     {
-                    // InternalFormatterTestLanguage.g:231:4: (lv_kw5_6_0= 'kw5' )
-                    // InternalFormatterTestLanguage.g:232:5: lv_kw5_6_0= 'kw5'
+                    // InternalFormatterTestLanguage.g:216:4: (lv_kw5_6_0= 'kw5' )
+                    // InternalFormatterTestLanguage.g:217:5: lv_kw5_6_0= 'kw5'
                     {
                     lv_kw5_6_0=(Token)match(input,17,FollowSets000.FOLLOW_2); 
 
@@ -584,9 +569,6 @@ public class InternalFormatterTestLanguageParser extends AbstractInternalAntlrPa
 
 
             }
-
-
-            	leaveRule();
 
         }
 

@@ -69,12 +69,7 @@ entryRuleStatemachine returns [EObject current=null]:
 
 // Rule Statemachine
 ruleStatemachine returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='events'
 		{
@@ -161,12 +156,7 @@ entryRuleEvent returns [EObject current=null]:
 
 // Rule Event
 ruleEvent returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -230,12 +220,7 @@ entryRuleCommand returns [EObject current=null]:
 
 // Rule Command
 ruleCommand returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -285,12 +270,7 @@ entryRuleState returns [EObject current=null]:
 
 // Rule State
 ruleState returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='state'
 		{
@@ -376,12 +356,7 @@ entryRuleTransition returns [EObject current=null]:
 
 // Rule Transition
 ruleTransition returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(

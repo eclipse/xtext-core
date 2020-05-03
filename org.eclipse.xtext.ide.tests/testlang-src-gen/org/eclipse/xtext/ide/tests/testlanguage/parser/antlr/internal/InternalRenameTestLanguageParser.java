@@ -119,14 +119,11 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
         EObject lv_types_0_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalRenameTestLanguage.g:82:2: ( ( (lv_types_0_0= ruleTypeDeclaration ) )* )
-            // InternalRenameTestLanguage.g:83:2: ( (lv_types_0_0= ruleTypeDeclaration ) )*
+            // InternalRenameTestLanguage.g:77:1: ( ( (lv_types_0_0= ruleTypeDeclaration ) )* )
+            // InternalRenameTestLanguage.g:78:2: ( (lv_types_0_0= ruleTypeDeclaration ) )*
             {
-            // InternalRenameTestLanguage.g:83:2: ( (lv_types_0_0= ruleTypeDeclaration ) )*
+            // InternalRenameTestLanguage.g:78:2: ( (lv_types_0_0= ruleTypeDeclaration ) )*
             loop1:
             do {
                 int alt1=2;
@@ -139,10 +136,10 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalRenameTestLanguage.g:84:3: (lv_types_0_0= ruleTypeDeclaration )
+            	    // InternalRenameTestLanguage.g:79:3: (lv_types_0_0= ruleTypeDeclaration )
             	    {
-            	    // InternalRenameTestLanguage.g:84:3: (lv_types_0_0= ruleTypeDeclaration )
-            	    // InternalRenameTestLanguage.g:85:4: lv_types_0_0= ruleTypeDeclaration
+            	    // InternalRenameTestLanguage.g:79:3: (lv_types_0_0= ruleTypeDeclaration )
+            	    // InternalRenameTestLanguage.g:80:4: lv_types_0_0= ruleTypeDeclaration
             	    {
 
             	    				newCompositeNode(grammarAccess.getModelAccess().getTypesTypeDeclarationParserRuleCall_0());
@@ -178,9 +175,6 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -195,7 +189,7 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
 
 
     // $ANTLR start "entryRuleTypeDeclaration"
-    // InternalRenameTestLanguage.g:105:1: entryRuleTypeDeclaration returns [EObject current=null] : iv_ruleTypeDeclaration= ruleTypeDeclaration EOF ;
+    // InternalRenameTestLanguage.g:100:1: entryRuleTypeDeclaration returns [EObject current=null] : iv_ruleTypeDeclaration= ruleTypeDeclaration EOF ;
     public final EObject entryRuleTypeDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -203,8 +197,8 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
 
 
         try {
-            // InternalRenameTestLanguage.g:105:56: (iv_ruleTypeDeclaration= ruleTypeDeclaration EOF )
-            // InternalRenameTestLanguage.g:106:2: iv_ruleTypeDeclaration= ruleTypeDeclaration EOF
+            // InternalRenameTestLanguage.g:100:56: (iv_ruleTypeDeclaration= ruleTypeDeclaration EOF )
+            // InternalRenameTestLanguage.g:101:2: iv_ruleTypeDeclaration= ruleTypeDeclaration EOF
             {
              newCompositeNode(grammarAccess.getTypeDeclarationRule()); 
             pushFollow(FOLLOW_1);
@@ -231,7 +225,7 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
 
 
     // $ANTLR start "ruleTypeDeclaration"
-    // InternalRenameTestLanguage.g:112:1: ruleTypeDeclaration returns [EObject current=null] : (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (otherlv_4= '{' otherlv_5= '}' )? ) ;
+    // InternalRenameTestLanguage.g:107:1: ruleTypeDeclaration returns [EObject current=null] : (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (otherlv_4= '{' otherlv_5= '}' )? ) ;
     public final EObject ruleTypeDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -242,25 +236,22 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
         Token otherlv_4=null;
         Token otherlv_5=null;
 
-
-        	enterRule();
-
         try {
-            // InternalRenameTestLanguage.g:118:2: ( (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (otherlv_4= '{' otherlv_5= '}' )? ) )
-            // InternalRenameTestLanguage.g:119:2: (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (otherlv_4= '{' otherlv_5= '}' )? )
+            // InternalRenameTestLanguage.g:108:1: ( (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (otherlv_4= '{' otherlv_5= '}' )? ) )
+            // InternalRenameTestLanguage.g:109:2: (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (otherlv_4= '{' otherlv_5= '}' )? )
             {
-            // InternalRenameTestLanguage.g:119:2: (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (otherlv_4= '{' otherlv_5= '}' )? )
-            // InternalRenameTestLanguage.g:120:3: otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (otherlv_4= '{' otherlv_5= '}' )?
+            // InternalRenameTestLanguage.g:109:2: (otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (otherlv_4= '{' otherlv_5= '}' )? )
+            // InternalRenameTestLanguage.g:110:3: otherlv_0= 'type' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )? (otherlv_4= '{' otherlv_5= '}' )?
             {
             otherlv_0=(Token)match(input,11,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTypeDeclarationAccess().getTypeKeyword_0());
             		
-            // InternalRenameTestLanguage.g:124:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalRenameTestLanguage.g:125:4: (lv_name_1_0= RULE_ID )
+            // InternalRenameTestLanguage.g:114:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalRenameTestLanguage.g:115:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalRenameTestLanguage.g:125:4: (lv_name_1_0= RULE_ID )
-            // InternalRenameTestLanguage.g:126:5: lv_name_1_0= RULE_ID
+            // InternalRenameTestLanguage.g:115:4: (lv_name_1_0= RULE_ID )
+            // InternalRenameTestLanguage.g:116:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_5); 
 
@@ -282,7 +273,7 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
 
             }
 
-            // InternalRenameTestLanguage.g:142:3: (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )?
+            // InternalRenameTestLanguage.g:132:3: (otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) ) )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -291,17 +282,17 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
             }
             switch (alt2) {
                 case 1 :
-                    // InternalRenameTestLanguage.g:143:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
+                    // InternalRenameTestLanguage.g:133:4: otherlv_2= 'extends' ( (otherlv_3= RULE_ID ) )
                     {
                     otherlv_2=(Token)match(input,12,FOLLOW_4); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getTypeDeclarationAccess().getExtendsKeyword_2_0());
                     			
-                    // InternalRenameTestLanguage.g:147:4: ( (otherlv_3= RULE_ID ) )
-                    // InternalRenameTestLanguage.g:148:5: (otherlv_3= RULE_ID )
+                    // InternalRenameTestLanguage.g:137:4: ( (otherlv_3= RULE_ID ) )
+                    // InternalRenameTestLanguage.g:138:5: (otherlv_3= RULE_ID )
                     {
-                    // InternalRenameTestLanguage.g:148:5: (otherlv_3= RULE_ID )
-                    // InternalRenameTestLanguage.g:149:6: otherlv_3= RULE_ID
+                    // InternalRenameTestLanguage.g:138:5: (otherlv_3= RULE_ID )
+                    // InternalRenameTestLanguage.g:139:6: otherlv_3= RULE_ID
                     {
 
                     						if (current==null) {
@@ -324,7 +315,7 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
 
             }
 
-            // InternalRenameTestLanguage.g:161:3: (otherlv_4= '{' otherlv_5= '}' )?
+            // InternalRenameTestLanguage.g:151:3: (otherlv_4= '{' otherlv_5= '}' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -333,7 +324,7 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
             }
             switch (alt3) {
                 case 1 :
-                    // InternalRenameTestLanguage.g:162:4: otherlv_4= '{' otherlv_5= '}'
+                    // InternalRenameTestLanguage.g:152:4: otherlv_4= '{' otherlv_5= '}'
                     {
                     otherlv_4=(Token)match(input,13,FOLLOW_7); 
 
@@ -354,9 +345,6 @@ public class InternalRenameTestLanguageParser extends AbstractInternalAntlrParse
 
 
             }
-
-
-            	leaveRule();
 
         }
 

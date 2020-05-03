@@ -75,12 +75,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -111,12 +106,7 @@ entryRuleExpression returns [EObject current=null]:
 
 // Rule Expression
 ruleExpression returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -172,12 +162,7 @@ entryRuleLiteral returns [EObject current=null]:
 
 // Rule Literal
 ruleLiteral returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			/* */
@@ -214,12 +199,7 @@ entryRuleIntLiteral returns [EObject current=null]:
 
 // Rule IntLiteral
 ruleIntLiteral returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -250,12 +230,7 @@ entryRuleRealLiteral returns [EObject current=null]:
 
 // Rule RealLiteral
 ruleRealLiteral returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -286,12 +261,7 @@ entryRuleIntValue returns [String current=null]:
 
 // Rule IntValue
 ruleIntValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_INT_0=RULE_INT
 	{
 		$current.merge(this_INT_0);
@@ -310,12 +280,7 @@ entryRuleRealValue returns [String current=null]:
 
 // Rule RealValue
 ruleRealValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	{
 		newCompositeNode(grammarAccess.getRealValueAccess().getRealParserRuleCall());
 	}
@@ -343,12 +308,9 @@ finally {
 // Rule Real
 ruleReal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			this_INT_0=RULE_INT

@@ -119,17 +119,14 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
         EObject lv_elements_1_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:77:2: ( ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_elements_1_0= ruleElement ) )+ ) )
-            // InternalIgnoreCaseNamespacesTestLanguage.g:78:2: ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_elements_1_0= ruleElement ) )+ )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:72:1: ( ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_elements_1_0= ruleElement ) )+ ) )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:73:2: ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_elements_1_0= ruleElement ) )+ )
             {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:78:2: ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_elements_1_0= ruleElement ) )+ )
-            // InternalIgnoreCaseNamespacesTestLanguage.g:79:3: ( (lv_imports_0_0= ruleImport ) )* ( (lv_elements_1_0= ruleElement ) )+
+            // InternalIgnoreCaseNamespacesTestLanguage.g:73:2: ( ( (lv_imports_0_0= ruleImport ) )* ( (lv_elements_1_0= ruleElement ) )+ )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:74:3: ( (lv_imports_0_0= ruleImport ) )* ( (lv_elements_1_0= ruleElement ) )+
             {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:79:3: ( (lv_imports_0_0= ruleImport ) )*
+            // InternalIgnoreCaseNamespacesTestLanguage.g:74:3: ( (lv_imports_0_0= ruleImport ) )*
             loop1:
             do {
                 int alt1=2;
@@ -142,10 +139,10 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalIgnoreCaseNamespacesTestLanguage.g:80:4: (lv_imports_0_0= ruleImport )
+            	    // InternalIgnoreCaseNamespacesTestLanguage.g:75:4: (lv_imports_0_0= ruleImport )
             	    {
-            	    // InternalIgnoreCaseNamespacesTestLanguage.g:80:4: (lv_imports_0_0= ruleImport )
-            	    // InternalIgnoreCaseNamespacesTestLanguage.g:81:5: lv_imports_0_0= ruleImport
+            	    // InternalIgnoreCaseNamespacesTestLanguage.g:75:4: (lv_imports_0_0= ruleImport )
+            	    // InternalIgnoreCaseNamespacesTestLanguage.g:76:5: lv_imports_0_0= ruleImport
             	    {
 
             	    					newCompositeNode(grammarAccess.getModelAccess().getImportsImportParserRuleCall_0_0());
@@ -178,7 +175,7 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
                 }
             } while (true);
 
-            // InternalIgnoreCaseNamespacesTestLanguage.g:98:3: ( (lv_elements_1_0= ruleElement ) )+
+            // InternalIgnoreCaseNamespacesTestLanguage.g:93:3: ( (lv_elements_1_0= ruleElement ) )+
             int cnt2=0;
             loop2:
             do {
@@ -192,10 +189,10 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalIgnoreCaseNamespacesTestLanguage.g:99:4: (lv_elements_1_0= ruleElement )
+            	    // InternalIgnoreCaseNamespacesTestLanguage.g:94:4: (lv_elements_1_0= ruleElement )
             	    {
-            	    // InternalIgnoreCaseNamespacesTestLanguage.g:99:4: (lv_elements_1_0= ruleElement )
-            	    // InternalIgnoreCaseNamespacesTestLanguage.g:100:5: lv_elements_1_0= ruleElement
+            	    // InternalIgnoreCaseNamespacesTestLanguage.g:94:4: (lv_elements_1_0= ruleElement )
+            	    // InternalIgnoreCaseNamespacesTestLanguage.g:95:5: lv_elements_1_0= ruleElement
             	    {
 
             	    					newCompositeNode(grammarAccess.getModelAccess().getElementsElementParserRuleCall_1_0());
@@ -238,9 +235,6 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -255,7 +249,7 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
 
     // $ANTLR start "entryRuleImport"
-    // InternalIgnoreCaseNamespacesTestLanguage.g:121:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
+    // InternalIgnoreCaseNamespacesTestLanguage.g:116:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
     public final EObject entryRuleImport() throws RecognitionException {
         EObject current = null;
 
@@ -263,8 +257,8 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
 
         try {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:121:47: (iv_ruleImport= ruleImport EOF )
-            // InternalIgnoreCaseNamespacesTestLanguage.g:122:2: iv_ruleImport= ruleImport EOF
+            // InternalIgnoreCaseNamespacesTestLanguage.g:116:47: (iv_ruleImport= ruleImport EOF )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:117:2: iv_ruleImport= ruleImport EOF
             {
              newCompositeNode(grammarAccess.getImportRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -291,24 +285,21 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
 
     // $ANTLR start "ruleImport"
-    // InternalIgnoreCaseNamespacesTestLanguage.g:128:1: ruleImport returns [EObject current=null] : ( (lv_importedNamespace_0_0= RULE_STRING ) ) ;
+    // InternalIgnoreCaseNamespacesTestLanguage.g:123:1: ruleImport returns [EObject current=null] : ( (lv_importedNamespace_0_0= RULE_STRING ) ) ;
     public final EObject ruleImport() throws RecognitionException {
         EObject current = null;
 
         Token lv_importedNamespace_0_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:134:2: ( ( (lv_importedNamespace_0_0= RULE_STRING ) ) )
-            // InternalIgnoreCaseNamespacesTestLanguage.g:135:2: ( (lv_importedNamespace_0_0= RULE_STRING ) )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:124:1: ( ( (lv_importedNamespace_0_0= RULE_STRING ) ) )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:125:2: ( (lv_importedNamespace_0_0= RULE_STRING ) )
             {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:135:2: ( (lv_importedNamespace_0_0= RULE_STRING ) )
-            // InternalIgnoreCaseNamespacesTestLanguage.g:136:3: (lv_importedNamespace_0_0= RULE_STRING )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:125:2: ( (lv_importedNamespace_0_0= RULE_STRING ) )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:126:3: (lv_importedNamespace_0_0= RULE_STRING )
             {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:136:3: (lv_importedNamespace_0_0= RULE_STRING )
-            // InternalIgnoreCaseNamespacesTestLanguage.g:137:4: lv_importedNamespace_0_0= RULE_STRING
+            // InternalIgnoreCaseNamespacesTestLanguage.g:126:3: (lv_importedNamespace_0_0= RULE_STRING )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:127:4: lv_importedNamespace_0_0= RULE_STRING
             {
             lv_importedNamespace_0_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_2); 
 
@@ -333,9 +324,6 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
             }
 
-
-            	leaveRule();
-
         }
 
             catch (RecognitionException re) {
@@ -350,7 +338,7 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
 
     // $ANTLR start "entryRuleElement"
-    // InternalIgnoreCaseNamespacesTestLanguage.g:156:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
+    // InternalIgnoreCaseNamespacesTestLanguage.g:146:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
     public final EObject entryRuleElement() throws RecognitionException {
         EObject current = null;
 
@@ -358,8 +346,8 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
 
         try {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:156:48: (iv_ruleElement= ruleElement EOF )
-            // InternalIgnoreCaseNamespacesTestLanguage.g:157:2: iv_ruleElement= ruleElement EOF
+            // InternalIgnoreCaseNamespacesTestLanguage.g:146:48: (iv_ruleElement= ruleElement EOF )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:147:2: iv_ruleElement= ruleElement EOF
             {
              newCompositeNode(grammarAccess.getElementRule()); 
             pushFollow(FollowSets000.FOLLOW_1);
@@ -386,7 +374,7 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
 
     // $ANTLR start "ruleElement"
-    // InternalIgnoreCaseNamespacesTestLanguage.g:163:1: ruleElement returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) )? otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' ) ;
+    // InternalIgnoreCaseNamespacesTestLanguage.g:153:1: ruleElement returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) )? otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' ) ;
     public final EObject ruleElement() throws RecognitionException {
         EObject current = null;
 
@@ -397,21 +385,18 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
         EObject lv_elements_3_0 = null;
 
 
-
-        	enterRule();
-
         try {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:169:2: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) )? otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' ) )
-            // InternalIgnoreCaseNamespacesTestLanguage.g:170:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) )? otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:154:1: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) )? otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' ) )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:155:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) )? otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' )
             {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:170:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) )? otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' )
-            // InternalIgnoreCaseNamespacesTestLanguage.g:171:3: ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) )? otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}'
+            // InternalIgnoreCaseNamespacesTestLanguage.g:155:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) )? otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}' )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:156:3: ( (lv_name_0_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) )? otherlv_2= '{' ( (lv_elements_3_0= ruleElement ) )* otherlv_4= '}'
             {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:171:3: ( (lv_name_0_0= RULE_ID ) )
-            // InternalIgnoreCaseNamespacesTestLanguage.g:172:4: (lv_name_0_0= RULE_ID )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:156:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:157:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalIgnoreCaseNamespacesTestLanguage.g:172:4: (lv_name_0_0= RULE_ID )
-            // InternalIgnoreCaseNamespacesTestLanguage.g:173:5: lv_name_0_0= RULE_ID
+            // InternalIgnoreCaseNamespacesTestLanguage.g:157:4: (lv_name_0_0= RULE_ID )
+            // InternalIgnoreCaseNamespacesTestLanguage.g:158:5: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_5); 
 
@@ -433,7 +418,7 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
             }
 
-            // InternalIgnoreCaseNamespacesTestLanguage.g:189:3: ( (otherlv_1= RULE_ID ) )?
+            // InternalIgnoreCaseNamespacesTestLanguage.g:174:3: ( (otherlv_1= RULE_ID ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -442,10 +427,10 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
             }
             switch (alt3) {
                 case 1 :
-                    // InternalIgnoreCaseNamespacesTestLanguage.g:190:4: (otherlv_1= RULE_ID )
+                    // InternalIgnoreCaseNamespacesTestLanguage.g:175:4: (otherlv_1= RULE_ID )
                     {
-                    // InternalIgnoreCaseNamespacesTestLanguage.g:190:4: (otherlv_1= RULE_ID )
-                    // InternalIgnoreCaseNamespacesTestLanguage.g:191:5: otherlv_1= RULE_ID
+                    // InternalIgnoreCaseNamespacesTestLanguage.g:175:4: (otherlv_1= RULE_ID )
+                    // InternalIgnoreCaseNamespacesTestLanguage.g:176:5: otherlv_1= RULE_ID
                     {
 
                     					if (current==null) {
@@ -469,7 +454,7 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
             			newLeafNode(otherlv_2, grammarAccess.getElementAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalIgnoreCaseNamespacesTestLanguage.g:206:3: ( (lv_elements_3_0= ruleElement ) )*
+            // InternalIgnoreCaseNamespacesTestLanguage.g:191:3: ( (lv_elements_3_0= ruleElement ) )*
             loop4:
             do {
                 int alt4=2;
@@ -482,10 +467,10 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalIgnoreCaseNamespacesTestLanguage.g:207:4: (lv_elements_3_0= ruleElement )
+            	    // InternalIgnoreCaseNamespacesTestLanguage.g:192:4: (lv_elements_3_0= ruleElement )
             	    {
-            	    // InternalIgnoreCaseNamespacesTestLanguage.g:207:4: (lv_elements_3_0= ruleElement )
-            	    // InternalIgnoreCaseNamespacesTestLanguage.g:208:5: lv_elements_3_0= ruleElement
+            	    // InternalIgnoreCaseNamespacesTestLanguage.g:192:4: (lv_elements_3_0= ruleElement )
+            	    // InternalIgnoreCaseNamespacesTestLanguage.g:193:5: lv_elements_3_0= ruleElement
             	    {
 
             	    					newCompositeNode(grammarAccess.getElementAccess().getElementsElementParserRuleCall_3_0());
@@ -527,9 +512,6 @@ public class InternalIgnoreCaseNamespacesTestLanguageParser extends AbstractInte
 
 
             }
-
-
-            	leaveRule();
 
         }
 

@@ -75,12 +75,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			otherlv_0='Model'
@@ -145,12 +140,7 @@ entryRuleExpression returns [EObject current=null]:
 
 // Rule Expression
 ruleExpression returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			/* */
@@ -187,12 +177,7 @@ entryRulePreop returns [EObject current=null]:
 
 // Rule Preop
 rulePreop returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -249,12 +234,7 @@ entryRulePostop returns [EObject current=null]:
 
 // Rule Postop
 rulePostop returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			/* */
@@ -305,12 +285,7 @@ entryRuleVariable returns [EObject current=null]:
 
 // Rule Variable
 ruleVariable returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -352,12 +327,7 @@ entryRuleDataTypeExpression returns [String current=null]:
 
 // Rule DataTypeExpression
 ruleDataTypeExpression returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getDataTypeExpressionAccess().getDataTypePostopParserRuleCall_0());
@@ -392,12 +362,7 @@ entryRuleDataTypePreop returns [String current=null]:
 
 // Rule DataTypePreop
 ruleDataTypePreop returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='--'
 		{
@@ -426,12 +391,7 @@ entryRuleDataTypePostop returns [String current=null]:
 
 // Rule DataTypePostop
 ruleDataTypePostop returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getDataTypePostopAccess().getDataTypeVariableParserRuleCall_0());
@@ -462,12 +422,7 @@ entryRuleDataTypeVariable returns [String current=null]:
 
 // Rule DataTypeVariable
 ruleDataTypeVariable returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	this_ID_0=RULE_ID
 	{
 		$current.merge(this_ID_0);

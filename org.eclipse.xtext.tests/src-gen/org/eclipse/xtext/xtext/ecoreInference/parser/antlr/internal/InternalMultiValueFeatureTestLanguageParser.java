@@ -114,14 +114,11 @@ public class InternalMultiValueFeatureTestLanguageParser extends AbstractInterna
 
         Token lv_featureA_0_0=null;
 
-
-        	enterRule();
-
         try {
-            // InternalMultiValueFeatureTestLanguage.g:77:2: ( ( (lv_featureA_0_0= RULE_ID ) )+ )
-            // InternalMultiValueFeatureTestLanguage.g:78:2: ( (lv_featureA_0_0= RULE_ID ) )+
+            // InternalMultiValueFeatureTestLanguage.g:72:1: ( ( (lv_featureA_0_0= RULE_ID ) )+ )
+            // InternalMultiValueFeatureTestLanguage.g:73:2: ( (lv_featureA_0_0= RULE_ID ) )+
             {
-            // InternalMultiValueFeatureTestLanguage.g:78:2: ( (lv_featureA_0_0= RULE_ID ) )+
+            // InternalMultiValueFeatureTestLanguage.g:73:2: ( (lv_featureA_0_0= RULE_ID ) )+
             int cnt1=0;
             loop1:
             do {
@@ -135,10 +132,10 @@ public class InternalMultiValueFeatureTestLanguageParser extends AbstractInterna
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalMultiValueFeatureTestLanguage.g:79:3: (lv_featureA_0_0= RULE_ID )
+            	    // InternalMultiValueFeatureTestLanguage.g:74:3: (lv_featureA_0_0= RULE_ID )
             	    {
-            	    // InternalMultiValueFeatureTestLanguage.g:79:3: (lv_featureA_0_0= RULE_ID )
-            	    // InternalMultiValueFeatureTestLanguage.g:80:4: lv_featureA_0_0= RULE_ID
+            	    // InternalMultiValueFeatureTestLanguage.g:74:3: (lv_featureA_0_0= RULE_ID )
+            	    // InternalMultiValueFeatureTestLanguage.g:75:4: lv_featureA_0_0= RULE_ID
             	    {
             	    lv_featureA_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_3); 
 
@@ -172,9 +169,6 @@ public class InternalMultiValueFeatureTestLanguageParser extends AbstractInterna
 
 
             }
-
-
-            	leaveRule();
 
         }
 

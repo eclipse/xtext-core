@@ -75,12 +75,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -127,12 +122,7 @@ entryRuleModelElement returns [EObject current=null]:
 
 // Rule ModelElement
 ruleModelElement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -222,12 +212,7 @@ entryRuleContained returns [EObject current=null]:
 
 // Rule Contained
 ruleContained returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='containment'
 		{

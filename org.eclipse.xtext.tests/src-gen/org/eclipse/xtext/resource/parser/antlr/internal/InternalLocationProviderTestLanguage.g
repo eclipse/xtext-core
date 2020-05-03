@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -126,12 +121,7 @@ entryRuleElement returns [EObject current=null]:
 
 // Rule Element
 ruleElement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='element'
 		{
@@ -205,12 +195,7 @@ entryRuleComponent returns [EObject current=null]:
 
 // Rule Component
 ruleComponent returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -298,12 +283,7 @@ entryRuleBus returns [EObject current=null]:
 
 // Rule Bus
 ruleBus returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='bus'
 		{
@@ -358,12 +338,7 @@ entryRuleProcessor returns [EObject current=null]:
 
 // Rule Processor
 ruleProcessor returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='processor'
 		{
@@ -418,12 +393,7 @@ entryRuleMode returns [EObject current=null]:
 
 // Rule Mode
 ruleMode returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='mode'
 		{
@@ -463,12 +433,7 @@ entryRuleTransition returns [EObject current=null]:
 
 // Rule Transition
 ruleTransition returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			(
@@ -538,12 +503,7 @@ entryRulePort returns [EObject current=null]:
 
 // Rule Port
 rulePort returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='port'
 		{
@@ -583,12 +543,7 @@ entryRuleData returns [EObject current=null]:
 
 // Rule Data
 ruleData returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='data'
 		{

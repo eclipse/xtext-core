@@ -69,12 +69,7 @@ entryRuleProductionRules returns [EObject current=null]:
 
 // Rule ProductionRules
 ruleProductionRules returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getProductionRulesAccess().getProductionRule1ParserRuleCall_0());
@@ -105,12 +100,7 @@ entryRuleProductionRule1 returns [EObject current=null]:
 
 // Rule ProductionRule1
 ruleProductionRule1 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		(
 			{
@@ -199,12 +189,7 @@ entryRuleProductionRule2 returns [EObject current=null]:
 
 // Rule ProductionRule2
 ruleProductionRule2 returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		this_STRING_0=RULE_STRING
 		{

@@ -69,12 +69,7 @@ entryRuleModel returns [EObject current=null]:
 
 // Rule Model
 ruleModel returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		{
 			newCompositeNode(grammarAccess.getModelAccess().getWithoutHiddensParserRuleCall_0());
@@ -132,12 +127,7 @@ entryRuleWithoutHiddens returns [EObject current=null]:
 
 // Rule WithoutHiddens
 ruleWithoutHiddens returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='without'
 		{
@@ -215,12 +205,9 @@ finally {
 // Rule WithHiddens
 ruleWithHiddens returns [EObject current=null]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT");
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='with'
 		{
@@ -265,12 +252,9 @@ finally {
 // Rule OverridingHiddens
 ruleOverridingHiddens returns [EObject current=null]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT");
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='overriding'
 		{
@@ -342,12 +326,9 @@ finally {
 // Rule OverridingHiddensCall
 ruleOverridingHiddensCall returns [EObject current=null]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='call'
 		{
@@ -406,12 +387,9 @@ finally {
 // Rule InheritingHiddens
 ruleInheritingHiddens returns [EObject current=null]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT");
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='inheriting'
 		{
@@ -499,12 +477,7 @@ entryRuleDatatypeHiddens returns [EObject current=null]:
 
 // Rule DatatypeHiddens
 ruleDatatypeHiddens returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='datatype'
 		{
@@ -547,12 +520,9 @@ finally {
 // Rule DatatypeRule
 ruleDatatypeRule returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		kw='rule'
 		{
@@ -585,12 +555,9 @@ finally {
 // Rule HidingHiddens
 ruleHidingHiddens returns [EObject current=null]
 @init {
-	enterRule();
 	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
 }
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='hiding'
 		{
@@ -648,12 +615,7 @@ entryRuleInheritingHiddensCall returns [EObject current=null]:
 
 // Rule InheritingHiddensCall
 ruleInheritingHiddensCall returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
+:
 	(
 		otherlv_0='call'
 		{
