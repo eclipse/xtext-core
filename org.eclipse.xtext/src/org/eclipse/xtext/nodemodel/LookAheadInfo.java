@@ -12,13 +12,17 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.eclipse.xtext.Action;
 
+import com.google.common.annotations.Beta;
 import com.google.common.base.Preconditions;
 
 /**
  * Utility to work with the lookAhead information in the node model.
  * 
  * @author Sebastian Zarnekow - Initial contribution and API
+ * 
+ * @since 2.22
  */
+@Beta
 public class LookAheadInfo {
 
 	/* TODO 

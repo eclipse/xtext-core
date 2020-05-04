@@ -52,10 +52,12 @@ public class ParseHelper<T extends EObject> {
 			IParseResult parseResult = ((XtextResource) resource).getParseResult();
 			if (parseResult != null) {
 				ICompositeNode rootNode = parseResult.getRootNode();
-				checkNodeModel(rootNode);
+				if (rootNode != null) {
+					checkNodeModel(rootNode);
+				}
 			}
 		}
-		final T root = (T) (resource.getContents().isEmpty() ? null : resource.getContents().get(0));
+		T root = (T) (resource.getContents().isEmpty() ? null : resource.getContents().get(0));
 		return root;
 	}
 
