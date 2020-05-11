@@ -25,6 +25,7 @@ import org.eclipse.xtext.resource.IResourceDescription.Delta;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.util.IResourceScopeCache;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Sets;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -52,6 +53,9 @@ public class DefaultResourceDescriptionManager implements IResourceDescription.M
 	
 	@Inject
 	private DescriptionUtils descriptionUtils;
+	
+	@Inject(optional = true)
+	private ImmutableList<IsAffectedExtension> isAffectedExtensions = ImmutableList.of(); 
 	
 	private static final String CACHE_KEY = DefaultResourceDescriptionManager.class.getName() + "#getResourceDescription";
 	
@@ -141,15 +145,30 @@ public class DefaultResourceDescriptionManager implements IResourceDescription.M
 					for(int i = 0; i < containers.size() && !descriptionIsContained; i++) {
 						descriptionIsContained = containers.get(i).hasResourceDescription(uri);
 					}
-					if (!descriptionIsContained)
-						return false;
+					if (!descriptionIsContained) {
+						return isAffectedDueToExtension(deltas, candidate, context);
+					}
 				}
 				if (isAffected(importedNames, delta.getNew()) || isAffected(importedNames, delta.getOld())) {
 					return true;
 				}
 			}
         }
-        return false;
+        return isAffectedDueToExtension(deltas, candidate, context);
+    }
+    
+    /**
+     * Query all registered extensions.
+     * 
+     * @since 2.22
+     */
+    protected boolean isAffectedDueToExtension(Collection<Delta> deltas, IResourceDescription candidate, IResourceDescriptions context) {
+    	for(int i = 0; i < isAffectedExtensions.size(); i++) {
+    		if (isAffectedExtensions.get(i).isAffected(deltas, candidate, context)) {
+    			return true;
+    		}
+    	}
+    	return false;
     }
 
 	/**

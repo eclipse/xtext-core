@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.xtext.diagnostics.Severity;
+import org.eclipse.xtext.util.CancelIndicator;
 import org.eclipse.xtext.util.Exceptions;
 import org.eclipse.xtext.util.SimpleCache;
 
@@ -293,6 +294,23 @@ public abstract class AbstractDeclarativeValidator extends AbstractInjectableVal
 
 	protected Map<Object, Object> getContext() {
 		return state.get().context;
+	}
+	
+	/**
+	 * Obtain a cancel indicator that is valid for the current validation run. 
+	 * 
+	 * @since 2.22
+	 */
+	protected CancelIndicator getCancelIndicator() {
+		Map<Object, Object> context = getContext();
+		if (context == null) {
+			return CancelIndicator.NullImpl;
+		}
+		CancelIndicator result = (CancelIndicator) context.get(CancelableDiagnostician.CANCEL_INDICATOR);
+		if (result == null) {
+			return CancelIndicator.NullImpl;
+		}
+		return result;
 	}
 
 	@Override

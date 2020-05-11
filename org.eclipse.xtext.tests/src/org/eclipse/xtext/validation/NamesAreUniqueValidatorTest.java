@@ -46,6 +46,7 @@ public class NamesAreUniqueValidatorTest extends AbstractXtextTests implements I
 	private Map<Object, Object> context;
 	private Resource resource;
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void setUp() throws Exception {
 		super.setUp();
