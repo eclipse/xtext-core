@@ -47,7 +47,7 @@ public interface INamesAreUniqueValidationHelper {
 		/**
 		 * Obtain the context of the unique name validation for the given resource.
 		 * 
-		 * May be return null.
+		 * May return null.
 		 */
 		Context tryGetContext(Resource resource, CancelIndicator cancelIndicator);
 		
@@ -59,35 +59,46 @@ public interface INamesAreUniqueValidationHelper {
 	}
 	
 	/**
-	 * Provides context information to the validation that allows to introspect the scope in which
-	 * the validation for unique names is supposed to happen.
-	 * 
-	 * The term <code>clusterType</code> is used to denote a EClass (super-)type of the current object
-	 * under validation. When checking the name for uniqueness, the objects that fulfil the given cluster
-	 * type are considered. This can be used to define different namespaces. For example, a language that
-	 * has the concepts of <code>Fields</code>, <code>Procedures</code> and 
-	 * <code>Functions</code> may provide two different cluster types. All fields must have a unique name
-	 * and the executable <code>Procedures</code> and <code>Functions</code> use the same namespace and may
-	 * not have duplicate names. 
+	 * <p>
+	 * Provides context information to the validation that allows to introspect the scope in which the validation for
+	 * unique names is supposed to happen.
+	 * </p>
+	 * <p>
+	 * The term <code>clusterType</code> is used to denote a {@link EClass (super-)type} of the current object under
+	 * validation. When checking the name for uniqueness, all objects that are instances of the given cluster type are
+	 * considered. This can be used to define different namespaces. For example, a language that has the concepts of
+	 * <code>Fields</code>, <code>Procedures</code> and <code>Functions</code> may provide 2 different cluster types.
+	 * <ol>
+	 * <li>All fields must have a unique name.</li>
+	 * <li>The executable procedure and functions use the same namespace and may not have duplicate names.</li>
+	 * </ol>
+	 * This would allow a field to use the same name as a procedure but flag a duplication if a procedure has the same
+	 * name as a function.
+	 * </p>
 	 * 
 	 * @since 2.22
 	 */
 	interface Context {
 		/**
-		 * Return a {@link ISelectable} that can be queried for elements with a given name to find duplicates.
-		 * Depending on the type of objects that have to have unique names, different selectables must be returned.
+		 * <p>
+		 * Returns a {@link ISelectable} that can be queried for elements with a given name to find duplicates.
+		 * </p>
+		 * <p>
+		 * Depending on the type of objects that have to have unique names, different selectables may be returned. Some
+		 * objects must be unique per project, others must be globally unique or only unique per file. This API allows
+		 * to fine tune the scope of the validation.
+		 * </p>
 		 * 
-		 * Some objects must be unique per project, others must be globally unique or only unique per file.
-		 * This API allows to fine tune the scope of the validation. 
-		 * 
-		 * @param description the description of the validated object.
-		 * @param clusterType the root type of the validated type hierarchy.
-		 * @return the validation scope. 
+		 * @param description
+		 *            the description of the validated object.
+		 * @param clusterType
+		 *            the root type of the validated type hierarchy.
+		 * @return the validation scope.
 		 */
 		ISelectable getValidationScope(IEObjectDescription description, EClass clusterType);
 		
 		/**
-		 * Return the objects that should be checked for uniqueness in the context of their {@link #getValidationScope(EClass)}.
+		 * Returns the objects that should be checked for uniqueness in the context of their {@link #getValidationScope(EClass)}.
 		 */
 		Iterable<IEObjectDescription> getObjectsToValidate();
 		
@@ -117,7 +128,7 @@ public interface INamesAreUniqueValidationHelper {
 	}
 	
 	/**
-	 * Create errors for objects that have the same name. Objects, that do not belong to
+	 * Create errors for objects that have the same name. Objects that do not belong to
 	 * the same cluster will not get any errors.
 	 * @see INamesAreUniqueValidationHelper#checkUniqueNames(Iterable, CancelIndicator, ValidationMessageAcceptor)
 	 * 
@@ -129,8 +140,8 @@ public interface INamesAreUniqueValidationHelper {
 	}
 	
 	/**
-	 * Create errors for objects that have the same name. Objects, that do not belong to
-	 * the same cluster will not get any errors. The cancel indicator may be used to interrupt 
+	 * Create errors for objects that have the same name. Objects that do not belong to
+	 * the same cluster will not get any errors. The cancel indicator may be used to abort 
 	 * the validation.
 	 * 
 	 * @deprecated Implementations should adhere to the context provided via {@link #checkUniqueNames(Iterable, Context, ValidationMessageAcceptor)}
@@ -139,9 +150,7 @@ public interface INamesAreUniqueValidationHelper {
 	void checkUniqueNames(Iterable<IEObjectDescription> descriptions, CancelIndicator cancelIndicator, ValidationMessageAcceptor acceptor);
 	
 	/**
-	 * Create errors for objects that have the same name. Objects, that do not belong to
-	 * the same cluster will not get any errors. The cancel indicator may be used to interrupt 
-	 * the validation.
+	 * Create errors for objects that have the same name according to the given context.
 	 * 
 	 * @since 2.22
 	 */

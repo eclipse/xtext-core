@@ -13,9 +13,12 @@ import org.eclipse.xtext.scoping.impl.CaseInsensitivityHelper;
 import org.eclipse.xtext.util.CancelIndicator;
 
 /**
+ * <p>
  * Legacy case-sensitive, unique name validation context that ensures the exported names to be unique per resource.
- * 
+ * </p>
+ * <p>
  * This is used to detect specializations that require fallback to the behavior prior to Xtext 2.22.
+ * </p>
  * 
  * @author Sebastian Zarnekow - Initial contribution and API
  * @deprecated Can be replaced by direct usage of the {@link DefaultUniqueNameContext}.
