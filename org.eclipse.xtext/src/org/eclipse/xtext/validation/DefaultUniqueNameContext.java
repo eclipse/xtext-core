@@ -123,7 +123,7 @@ public class DefaultUniqueNameContext implements INamesAreUniqueValidationHelper
 	/**
 	 * <p>
 	 * Provide a context for the entire index.
-	 * </p></p>
+	 * </p><p>
 	 * Drawback: If a resoure in a project A introduces a duplication with a resource in project B, an incremental build
 	 * of A may fail to notify B, if B is a dependency of A. Triggering a clean build in B will subsequently create the
 	 * validation problem / fix the validation problem there, too but in Eclipse, the incremental build will not provide
