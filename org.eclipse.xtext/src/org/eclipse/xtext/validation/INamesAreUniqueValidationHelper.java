@@ -23,6 +23,7 @@ import org.eclipse.xtext.scoping.ICaseInsensitivityHelper;
 import org.eclipse.xtext.util.CancelIndicator;
 
 import com.google.inject.ImplementedBy;
+import com.google.inject.name.Named;
 
 /**
  * The helper can be used to validate unique names locally or across resource boundaries.
@@ -35,6 +36,8 @@ public interface INamesAreUniqueValidationHelper {
 
 	/**
 	 * Provide the context information for the unique name validation.
+	 * 
+	 * Registered by default as a {@link IsAffectedExtension} as {@link Named @Named("IsAffectedExtension.UniqueNames")}.
 	 * 
 	 * @since 2.22
 	 */

@@ -249,9 +249,10 @@ public abstract class DefaultRuntimeModule extends AbstractGenericModule {
 	}
 	
 	/**
+	 * @see IsAffectedExtension
 	 * @since 2.22
 	 */
-	public void configureIsAffectdExtensions(Binder binder) {
+	public void configureIsAffectedExtensions(Binder binder) {
 		binder.bind(new TypeLiteral<ImmutableList<IsAffectedExtension>>() {}).toProvider(AllIsAffectedExtensions.class);
 		binder.bind(Key.get(IsAffectedExtension.class, Names.named("IsAffectedExtension.UniqueNames"))).to(INamesAreUniqueValidationHelper.ContextProvider.class);
 	}
