@@ -25,7 +25,9 @@ import com.google.inject.TypeLiteral;
 /**
  * An extension that can be bound to compute resources as being affected
  * by a change beyond the default linking semantics, e.g. some validations
- * may be necessary to be retriggered after changes to other resources. 
+ * may be necessary to be retriggered after changes to other resources.
+ * 
+ * Multiple such extensions can be bound by means of unique Guice binding annotations.
  * 
  * @since 2.22
  */
@@ -53,8 +55,9 @@ public interface IsAffectedExtension {
 	}
 	
 	/**
-	 * Answers true the given candidate is impacted by the given delta beyond the default
-	 * linking semantics. 
+	 * Answers true if the given candidate is impacted by the given delta beyond the default
+	 * linking semantics. If the default answered true, an extension is never asked, e.g. it cannot
+	 * contradict the default implementation or other extensions by turning their yes into a no.
 	 */
 	boolean isAffected(Collection<Delta> deltas, IResourceDescription candidate, IResourceDescriptions context);
 }
