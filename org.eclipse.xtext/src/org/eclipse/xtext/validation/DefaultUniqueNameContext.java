@@ -121,12 +121,14 @@ public class DefaultUniqueNameContext implements INamesAreUniqueValidationHelper
 	}
 
 	/**
+	 * <p>
 	 * Provide a context for the entire index.
-	 * 
+	 * </p></p>
 	 * Drawback: If a resoure in a project A introduces a duplication with a resource in project B, an incremental build
 	 * of A may fail to notify B, if B is a dependency of A. Triggering a clean build in B will subsequently create the
 	 * validation problem / fix the validation problem there, too but in Eclipse, the incremental build will not provide
 	 * the same level of consistency.
+	 * </p>
 	 */
 	@Singleton
 	public static class Global extends BaseGlobalContextProvider {
@@ -189,11 +191,9 @@ public class DefaultUniqueNameContext implements INamesAreUniqueValidationHelper
 					if (intersects(delta.getOld(), candidate, true)) {
 						return true;
 					}
-				} else {
-					if (container.getResourceDescription(delta.getUri()) != null) {
-						if (isAffected(delta, candidate, true)) {
-							return true;
-						}
+				} else if (container.getResourceDescription(delta.getUri()) != null) {
+					if (isAffected(delta, candidate, true)) {
+						return true;
 					}
 				}
 			}
@@ -251,11 +251,12 @@ public class DefaultUniqueNameContext implements INamesAreUniqueValidationHelper
 						return true;
 					}
 				} else {
-					for (IContainer container : containers) {
+					containers: for (IContainer container : containers) {
 						if (container.getResourceDescription(delta.getUri()) != null) {
 							if (isAffected(delta, candidate, true)) {
 								return true;
 							}
+							break containers;
 						}
 					}
 				}
