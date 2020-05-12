@@ -157,19 +157,20 @@ public class DefaultResourceDescriptionManager implements IResourceDescription.M
         return isAffectedDueToExtension(deltas, candidate, context);
     }
     
-    /**
-     * Query all registered extensions.
-     * 
-     * @since 2.22
-     */
-    protected boolean isAffectedDueToExtension(Collection<Delta> deltas, IResourceDescription candidate, IResourceDescriptions context) {
-    	for(int i = 0; i < isAffectedExtensions.size(); i++) {
-    		if (isAffectedExtensions.get(i).isAffected(deltas, candidate, context)) {
-    			return true;
-    		}
-    	}
-    	return false;
-    }
+	/**
+	 * Query all registered extensions.
+	 * 
+	 * @since 2.22
+	 */
+	protected boolean isAffectedDueToExtension(Collection<Delta> deltas, IResourceDescription candidate,
+			IResourceDescriptions context) {
+		for (int i = 0; i < isAffectedExtensions.size(); i++) {
+			if (isAffectedExtensions.get(i).isAffected(deltas, candidate, context)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	/**
 	 * Whether the given delta is considered to have changed from the candidate's perspective. By default this will just call

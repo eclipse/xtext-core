@@ -33,13 +33,15 @@ public interface IsAffectedExtension {
 	
 	static class AllIsAffectedExtensions implements Provider<ImmutableList<IsAffectedExtension>> {
 
-		@Inject	Injector injector;
-		
+		@Inject
+		protected Injector injector;
+
 		@Override
 		public ImmutableList<IsAffectedExtension> get() {
 			ImmutableList.Builder<IsAffectedExtension> result = ImmutableList.builder();
-			List<Binding<IsAffectedExtension>> bindings = injector.findBindingsByType(TypeLiteral.get(IsAffectedExtension.class));
-			for(Binding<IsAffectedExtension> binding: bindings) {
+			List<Binding<IsAffectedExtension>> bindings = injector
+					.findBindingsByType(TypeLiteral.get(IsAffectedExtension.class));
+			for (Binding<IsAffectedExtension> binding : bindings) {
 				IsAffectedExtension extension = binding.getProvider().get();
 				if (extension != null) {
 					result.add(extension);
@@ -47,7 +49,7 @@ public interface IsAffectedExtension {
 			}
 			return result.build();
 		}
-		
+
 	}
 	
 	/**
