@@ -39,11 +39,11 @@ import com.google.common.collect.FluentIterable;
  * <pre>
  * class MyDslValidator extends AbstractDeclarativeValidator {
  * 	&#64;Inject
- * 	INamesAreUniqueValidationHelper helper;
+ * 	private INamesAreUniqueValidationHelper helper;
  * 
  * 	&#64;Check
  * 	public void checkUniqueNames(Model model) {
- * 		helper.checkUniqueNames(new LocalUniqueNameContext(model), this);
+ * 		helper.checkUniqueNames(new LocalUniqueNameContext(model, getCancelIndicator()), this);
  * 	}
  * }
  * </pre>
