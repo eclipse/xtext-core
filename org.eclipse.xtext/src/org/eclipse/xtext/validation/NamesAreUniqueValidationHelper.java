@@ -56,8 +56,8 @@ public class NamesAreUniqueValidationHelper implements INamesAreUniqueValidation
 	}
 
 	/**
-	 * @deprecated Implementations should adhere to the context provided via
-	 *             {@link #checkUniqueNames(Iterable, Context, ValidationMessageAcceptor)} since 2.22
+	 * @deprecated Since Xtext 2.22 implementations should adhere to the context provided via
+	 *             {@link #checkUniqueNames(Iterable, Context, ValidationMessageAcceptor)}.
 	 */
 	@Deprecated
 	@Override
@@ -72,8 +72,8 @@ public class NamesAreUniqueValidationHelper implements INamesAreUniqueValidation
 	 * The cancel indicator will be queried everytime a description has been processed. It should provide a fast answer
 	 * about its canceled state.
 	 * 
-	 * @deprecated Implementations should adhere to the context provided via
-	 *             {@link #checkUniqueNames(Iterable, Context, ValidationMessageAcceptor)} since 2.22
+	 * @deprecated Since Xtext 2.22 implementations should adhere to the context provided via
+	 *             {@link #checkUniqueNames(Iterable, Context, ValidationMessageAcceptor)}.
 	 */
 	@Deprecated
 	@Override
@@ -151,7 +151,7 @@ public class NamesAreUniqueValidationHelper implements INamesAreUniqueValidation
 	}
 
 	/**
-	 * Called with two descriptions that have the same name. May be specialized to consider futher information from the
+	 * Called with two descriptions that have the same name. May be specialized to consider further information from the
 	 * user data.
 	 * 
 	 * @since 2.22
@@ -216,7 +216,7 @@ public class NamesAreUniqueValidationHelper implements INamesAreUniqueValidation
 	 * <li>Duplicate Property 'Sample' in Entity 'EntityName'</li>
 	 * </ul>
 	 * If the container information will be helpful to locate the error or to understand the error it will be used,
-	 * otherwise only the simple format will be build. Clients may override different methods that influence the error
+	 * otherwise only the simple format will be built. Clients may override different methods that influence the error
 	 * message.
 	 * 
 	 * @see #getNameFeature(EObject)

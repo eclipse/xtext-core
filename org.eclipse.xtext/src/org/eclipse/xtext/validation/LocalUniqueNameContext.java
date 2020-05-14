@@ -34,7 +34,7 @@ import com.google.common.collect.FluentIterable;
  * <p>A case-sensitive, local validation context to check unique names in the contents of 
  * a container {@link EObject} or within a list.
  * </p>
- * Sample usage in a validation:
+ * Sample usage in a validator:
  * 
  * <pre>
  * class MyDslValidator extends AbstractDeclarativeValidator {
@@ -173,8 +173,12 @@ public class LocalUniqueNameContext implements INamesAreUniqueValidationHelper.C
 	}
 
 	/**
-	 * Read the value of an EAttribute 'name', if present. Returns null if the given object is null or does not have a
-	 * name.
+	 * Read the value of an EAttribute 'name', if present. Returns null if 
+	 * <ul>
+	 * <li>the given object is null,<li> 
+	 * <li>does not have an attribute 'name' of type String, or</li>
+	 * <li>the value of the attribute 'name' itself is null.</li>
+	 * </ul>
 	 */
 	private static String tryGetName(EObject obj) {
 		if (obj == null) {

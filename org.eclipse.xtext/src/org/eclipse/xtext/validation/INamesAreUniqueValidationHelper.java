@@ -72,7 +72,7 @@ public interface INamesAreUniqueValidationHelper {
 	 * <li>All fields must have a unique name.</li>
 	 * <li>The executable procedure and functions use the same namespace and may not have duplicate names.</li>
 	 * </ol>
-	 * This would allow a field to use the same name as a procedure but flag a duplication if a procedure has the same
+	 * This would allow a field to use the same name as a procedure or function but raise an issue if a procedure has the same
 	 * name as a function.
 	 * </p>
 	 * 
@@ -81,7 +81,7 @@ public interface INamesAreUniqueValidationHelper {
 	interface Context {
 		/**
 		 * <p>
-		 * Returns a {@link ISelectable} that can be queried for elements with a given name to find duplicates.
+		 * Returns an {@link ISelectable} that can be queried for elements with a given name to find duplicates.
 		 * </p>
 		 * <p>
 		 * Depending on the type of objects that have to have unique names, different selectables may be returned. Some

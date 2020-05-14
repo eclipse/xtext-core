@@ -64,8 +64,9 @@ public class DefaultUniqueNameContext implements INamesAreUniqueValidationHelper
 
 		protected IResourceDescription.Manager getResourceDescriptionManager(Resource resource) {
 			IResourceServiceProvider resourceServiceProvider = getResourceServiceProvider(resource);
-			if (resourceServiceProvider == null)
+			if (resourceServiceProvider == null) {
 				return null;
+			}
 			return resourceServiceProvider.getResourceDescriptionManager();
 		}
 
@@ -286,15 +287,15 @@ public class DefaultUniqueNameContext implements INamesAreUniqueValidationHelper
 
 	private final IResourceDescription resourceDescription;
 	private final ISelectable validationScope;
-	private final CancelIndicator ci;
+	private final CancelIndicator cancelIndicator;
 	private final ICaseInsensitivityHelper caseInsensitivityHelper;
 
 	public DefaultUniqueNameContext(IResourceDescription resourceDescription, ISelectable validationScope,
-			ICaseInsensitivityHelper caseInsensitivityHelper, CancelIndicator ci) {
+			ICaseInsensitivityHelper caseInsensitivityHelper, CancelIndicator cancelIndicator) {
 		this.resourceDescription = resourceDescription;
 		this.validationScope = validationScope;
 		this.caseInsensitivityHelper = caseInsensitivityHelper;
-		this.ci = ci;
+		this.cancelIndicator = cancelIndicator;
 	}
 
 	@Override
@@ -314,7 +315,7 @@ public class DefaultUniqueNameContext implements INamesAreUniqueValidationHelper
 
 	@Override
 	public CancelIndicator cancelIndicator() {
-		return ci;
+		return cancelIndicator;
 	}
 
 }

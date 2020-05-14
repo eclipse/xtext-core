@@ -147,7 +147,7 @@ public class DefaultResourceDescriptionManager implements IResourceDescription.M
 							descriptionIsContained = containers.get(i).hasResourceDescription(uri);
 						}
 						if (!descriptionIsContained) {
-							return isAffectedDueToExtension(deltas, candidate, context);
+							return isAffectedByExtensions(deltas, candidate, context);
 						}
 					}
 					if (isAffected(importedNames, delta.getNew()) || isAffected(importedNames, delta.getOld())) {
@@ -156,7 +156,7 @@ public class DefaultResourceDescriptionManager implements IResourceDescription.M
 				}
 			}
 		}
-		return isAffectedDueToExtension(deltas, candidate, context);
+		return isAffectedByExtensions(deltas, candidate, context);
 	}
 
 	/**
@@ -164,7 +164,7 @@ public class DefaultResourceDescriptionManager implements IResourceDescription.M
 	 * 
 	 * @since 2.22
 	 */
-	protected boolean isAffectedDueToExtension(Collection<Delta> deltas, IResourceDescription candidate,
+	protected boolean isAffectedByExtensions(Collection<Delta> deltas, IResourceDescription candidate,
 			IResourceDescriptions context) {
 		for (int i = 0; i < isAffectedExtensions.size(); i++) {
 			if (isAffectedExtensions.get(i).isAffected(deltas, candidate, context)) {

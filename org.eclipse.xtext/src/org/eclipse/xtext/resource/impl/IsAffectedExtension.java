@@ -23,9 +23,9 @@ import com.google.inject.Provider;
 import com.google.inject.TypeLiteral;
 
 /**
- * An extension that can be bound to compute resources as being affected
- * by a change beyond the default linking semantics, e.g. some validations
- * may be necessary to be retriggered after changes to other resources.
+ * An extension that can be bound to mark resources as affected
+ * by a change. For example, if a validation depends on resources that are not
+ * directly linked but which need to be considered when they have been changed.
  * 
  * Multiple such extensions can be bound by means of unique Guice binding annotations.
  * 
