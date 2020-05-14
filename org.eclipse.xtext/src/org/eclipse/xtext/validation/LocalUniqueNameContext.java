@@ -31,7 +31,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.FluentIterable;
 
 /**
- * <p>A case-sensitive, local validation context to check unique names in in the contents of 
+ * <p>A case-sensitive, local validation context to check unique names in the contents of 
  * a container {@link EObject} or within a list.
  * </p>
  * Sample usage in a validation:
@@ -173,10 +173,10 @@ public class LocalUniqueNameContext implements INamesAreUniqueValidationHelper.C
 	}
 
 	/**
-	 * Read the value of an EAttribute 'name', if present. Returns null of the given object is null or does not have a
+	 * Read the value of an EAttribute 'name', if present. Returns null if the given object is null or does not have a
 	 * name.
 	 */
-	public static String tryGetName(EObject obj) {
+	private static String tryGetName(EObject obj) {
 		if (obj == null) {
 			return null;
 		}
