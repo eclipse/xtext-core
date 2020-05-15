@@ -15,6 +15,7 @@ import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.resource.IResourceDescription.Delta;
 
+import com.google.common.annotations.Beta;
 import com.google.common.collect.ImmutableList;
 import com.google.inject.Binding;
 import com.google.inject.Inject;
@@ -31,6 +32,7 @@ import com.google.inject.TypeLiteral;
  * 
  * @since 2.22
  */
+@Beta
 public interface IsAffectedExtension {
 	
 	static class AllIsAffectedExtensions implements Provider<ImmutableList<IsAffectedExtension>> {

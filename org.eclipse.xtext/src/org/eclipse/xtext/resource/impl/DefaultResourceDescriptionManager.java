@@ -25,6 +25,7 @@ import org.eclipse.xtext.resource.IResourceDescription.Delta;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.util.IResourceScopeCache;
 
+import com.google.common.annotations.Beta;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Sets;
 import com.google.inject.Inject;
@@ -164,6 +165,7 @@ public class DefaultResourceDescriptionManager implements IResourceDescription.M
 	 * 
 	 * @since 2.22
 	 */
+	@Beta
 	protected boolean isAffectedByExtensions(Collection<Delta> deltas, IResourceDescription candidate,
 			IResourceDescriptions context) {
 		for (int i = 0; i < isAffectedExtensions.size(); i++) {
