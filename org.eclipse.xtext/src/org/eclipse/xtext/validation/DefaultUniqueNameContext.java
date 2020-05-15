@@ -29,6 +29,7 @@ import org.eclipse.xtext.scoping.impl.CaseInsensitivityHelper;
 import org.eclipse.xtext.util.CancelIndicator;
 import org.eclipse.xtext.validation.INamesAreUniqueValidationHelper.Context;
 
+import com.google.common.annotations.Beta;
 import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
@@ -39,6 +40,7 @@ import com.google.inject.Singleton;
  * @author Sebastian Zarnekow - Initial contribution and API
  * @since 2.22
  */
+@Beta
 public class DefaultUniqueNameContext implements INamesAreUniqueValidationHelper.Context {
 
 	/**

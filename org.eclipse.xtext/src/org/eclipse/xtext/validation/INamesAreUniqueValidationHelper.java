@@ -22,6 +22,7 @@ import org.eclipse.xtext.resource.impl.IsAffectedExtension;
 import org.eclipse.xtext.scoping.ICaseInsensitivityHelper;
 import org.eclipse.xtext.util.CancelIndicator;
 
+import com.google.common.annotations.Beta;
 import com.google.inject.ImplementedBy;
 import com.google.inject.name.Named;
 
@@ -41,6 +42,7 @@ public interface INamesAreUniqueValidationHelper {
 	 * 
 	 * @since 2.22
 	 */
+	@Beta
 	@ImplementedBy(DefaultUniqueNameContext.ExportedFromResource.class)
 	interface ContextProvider extends IsAffectedExtension {
 		
@@ -78,6 +80,7 @@ public interface INamesAreUniqueValidationHelper {
 	 * 
 	 * @since 2.22
 	 */
+	@Beta
 	interface Context {
 		/**
 		 * <p>

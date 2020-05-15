@@ -27,6 +27,7 @@ import org.eclipse.xtext.resource.ISelectable;
 import org.eclipse.xtext.util.CancelIndicator;
 import org.eclipse.xtext.validation.INamesAreUniqueValidationHelper.Context;
 
+import com.google.common.annotations.Beta;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.FluentIterable;
 
@@ -53,6 +54,7 @@ import com.google.common.collect.FluentIterable;
  * @since 2.22
  * @author Sebastian Zarnekow - Initial contribution and API
  */
+@Beta
 public class LocalUniqueNameContext implements INamesAreUniqueValidationHelper.Context, ISelectable {
 
 	private final List<IEObjectDescription> objectsToValidate;
