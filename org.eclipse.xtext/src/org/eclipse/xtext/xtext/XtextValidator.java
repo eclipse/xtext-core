@@ -810,7 +810,7 @@ public class XtextValidator extends AbstractDeclarativeValidator {
 							call, 
 							XtextPackage.Literals.RULE_CALL__RULE,
 							ValidationMessageAcceptor.INSIGNIFICANT_INDEX,
-							null);
+							ILLEGAL_RULE_REFERENCE);
 				}
 			}
 		}
