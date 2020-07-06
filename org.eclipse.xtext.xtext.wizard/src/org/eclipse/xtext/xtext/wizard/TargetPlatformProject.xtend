@@ -60,7 +60,7 @@ class TargetPlatformProject extends ProjectDescriptor {
 					<unit id="org.eclipse.pde.feature.group" version="0.0.0"/>
 					<unit id="org.eclipse.draw2d.feature.group" version="0.0.0"/>
 					<unit id="org.eclipse.emf.sdk.feature.group" version="0.0.0"/>
-					<repository location="https://download.eclipse.org/releases/2020-06"/>
+					<repository location="https://download.eclipse.org/releases/2020-09"/>
 				</location>
 				<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 					<unit id="org.eclipse.emf.mwe2.launcher.feature.group" version="0.0.0"/>
@@ -92,7 +92,7 @@ class TargetPlatformProject extends ProjectDescriptor {
 					<unit id="org.objectweb.asm" version="8.0.1.v20200420-1007"/>
 					<unit id="org.objectweb.asm.tree" version="8.0.1.v20200420-1007"/>
 					<unit id="io.github.classgraph" version="4.8.35.v20190528-1517"/>
-					<repository location="https://download.eclipse.org/tools/orbit/downloads/2020-06"/>
+					<repository location="https://download.eclipse.org/tools/orbit/downloads/2020-09"/>
 				</location>
 			</locations>
 		</target>
