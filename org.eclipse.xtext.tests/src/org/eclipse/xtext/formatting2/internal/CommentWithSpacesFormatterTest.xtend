@@ -30,120 +30,304 @@ class CommentWithSpacesFormatterTest {
 
 	@Inject extension GenericFormatterTester
 
-	static class TabsAndSpacesSupportingFormatter extends GenericFormatter<IDList> {
+	static class CustomFormatter extends GenericFormatter<IDList> {
 		override format(IDList model, ITextRegionExtensions regionAccess, extension IFormattableDocument document) {
 			model.regionFor.keyword("idlist").append[oneSpace].append[newLines = 0 highPriority]
+			model.regionFor.keyword("idlist").nextSemanticRegion.append[setNewLines(0,1,2)]
 		}
+	}
 
+	static class TabsAndSpacesSupportingFormatter extends CustomFormatter {
 		override ITextReplacer createWhitespaceReplacer(ITextSegment hiddens, IHiddenRegionFormatting formatting) {
 			return new TabAndSpacesSupportingWhiteSpaceReplacer(hiddens, formatting);
 		}
 	}
 
-	@Test def void SL_inline() {
+	@Test
+	def void SL_inline() {
+		val input = '''
+			idlist  //x
+			a
+		'''
+
+		val output = '''
+			idlist //x
+			a
+		'''
+
 		assertFormatted[
-			toBeFormatted = '''
-				idlist  //x
-				a
-			'''
+			toBeFormatted = input
 			formatter = new TabsAndSpacesSupportingFormatter()
-			// space before a because we replace by newline + indentation + space
-			// in the TabAndSpacesSupportingWhiteSpaceReplacer
-			expectation = '''
-				idlist //x
-				 a
-			'''
+			// Space before comment because of `oneSpace` no space after because `addSpace` is false because there is a
+			// trailing new lines
+			expectation = output
+		]
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new CustomFormatter()
+			expectation = output
 		]
 	}
 
-	@Test def void SL_multiline() {
+	@Test
+	def void SL_multiline() {
+		val input = '''
+			idlist
+
+			//x
+
+
+			a
+		'''
+
+		val output = '''
+			idlist //x
+			a
+		'''
+
 		assertFormatted[
-			toBeFormatted = '''
-				idlist  
-				
-				//x
-				
-				
-				a
-			'''
+			toBeFormatted = input
 			formatter = new TabsAndSpacesSupportingFormatter()
-			expectation = '''
-				idlist //x
-				a
-			'''
+			// Space before comment because of `oneSpace` and `addSpace` is false because `space == null`
+			expectation = output
+		]
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new CustomFormatter()
+			expectation = output
 		]
 	}
 
-	@Test def void MLSL_inline() {
+	@Test
+	def void MLSL_inline() {
+		val input = '''
+			idlist  /*x*/  a
+		'''
+
+		val output = '''
+			idlist /*x*/ a
+		'''
+
 		assertFormatted[
-			toBeFormatted = '''
-				idlist  /*x*/  a
-			'''
+			toBeFormatted = input
 			formatter = new TabsAndSpacesSupportingFormatter()
-			expectation = '''
-				idlist /*x*/ a
-			'''
+			// The spaces around here are from the `oneSpace` being propagated
+			// in MultilineCommentReplacer.configureWhitespace()
+			expectation = output
+		]
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new CustomFormatter()
+			expectation = output
 		]
 	}
 
-	@Test def void MLSL_paragraph() {
+	@Test
+	def void MLSLOnSecondLine() {
+		val input = '''
+			idlist a
+			/*x*/
+		'''
+
+		val output = '''
+			idlist a
+			/*x*/
+		'''
+
 		assertFormatted[
-			toBeFormatted = '''
+			toBeFormatted = input
+			formatter = new TabsAndSpacesSupportingFormatter()
+			expectation = output
+		]
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new CustomFormatter()
+			expectation = output
+		]
+	}
+
+	@Test
+	def void MLSL_paragraph() {
+		val input = '''
+			idlist
+
+
+			/*x*/
+
+
+			a
+		'''
+
+		val output = '''
+			idlist /*x*/
+			a
+		'''
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new TabsAndSpacesSupportingFormatter()
+			// Space before comment because of `oneSpace` and `addSpace` is false because `space == null`
+			expectation = output
+		]
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new CustomFormatter()
+			expectation = output
+		]
+	}
+
+	@Test
+	def void MLML_inline() {
+		val input = '''
+			idlist  /*
+			x
+			*/  a
+		'''
+
+		val output = '''
+			idlist
+			/*
+			 * x
+			 */ a
+		'''
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new TabsAndSpacesSupportingFormatter()
+			// Follows the regular path
+			expectation = output
+		]
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new CustomFormatter()
+			expectation = output
+		]
+	}
+
+	@Test
+	def void MLML_paragraph() {
+		val input = '''
+			idlist
+
+
+			/*
+			x
+			*/
+
+
+			a
+			b
+		'''
+
+		val output = '''
+			idlist /*
+			 * x
+			 */
+			a
+			b
+		'''
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new TabsAndSpacesSupportingFormatter()
+			// Follows the regular path
+			expectation = output
+		]
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new CustomFormatter()
+			expectation = output
+		]
+	}
+
+	@Test
+	def void MLOverOneLineSLML() {
+		val input = '''
+			idlist  /* i
+			j *//*y*/  a
+		'''
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new TabsAndSpacesSupportingFormatter()
+			expectation = '''
 				idlist
-				
-				
-				/*x*/
-				
-				
-				a
+				/* i
+				 j */
+				 /*y*/ a
 			'''
-			formatter = new TabsAndSpacesSupportingFormatter()
+		]
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new CustomFormatter()
 			expectation = '''
-				idlist /*x*/
-				a
+				idlist
+				/* i
+				 j */
+				/*y*/ a
 			'''
 		]
 	}
 
-	@Test def void MLML_inline() {
+	@Test
+	def void MLOverOneLineMLOverOneLine() {
+		val input = '''
+			idlist  /* i
+			j *//*x
+			               y*/  a
+		'''
+
+		val output = '''
+			idlist
+			/* i
+			 j */
+			/*x
+			 y*/ a
+		'''
+
 		assertFormatted[
-			toBeFormatted = '''
-				idlist  /*
-				x
-				*/  a
-			'''
+			toBeFormatted = input
 			formatter = new TabsAndSpacesSupportingFormatter()
-			expectation = '''
-				idlist
-				/*
-				 * x
-				 */ a
-			'''
+			expectation = output
+		]
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new CustomFormatter()
+			expectation = output
 		]
 	}
 
-	@Test def void MLML_paragraph() {
+	@Test
+	def void SLMLMLOverOneLine() {
+		val input = '''
+			idlist  /* n *//*x
+			               y*/  a
+		'''
 		assertFormatted[
-			toBeFormatted = '''
-				idlist
-				
-				
-				/*
-				x
-				*/
-				
-				
-				a
-				b
-			'''
+			toBeFormatted = input
 			formatter = new TabsAndSpacesSupportingFormatter()
-
 			expectation = '''
-				idlist /*
-				 * x
-				 */
-				a
-				b
+				idlist /* n */
+				 /*x
+				 y*/ a
+			'''
+		]
+
+		assertFormatted[
+			toBeFormatted = input
+			formatter = new CustomFormatter()
+			expectation = '''
+				idlist /* n */
+				/*x
+				 y*/ a
 			'''
 		]
 	}
@@ -182,8 +366,9 @@ class CommentWithSpacesFormatterTest {
 				val indentation = if(noIndentation) "" else context.getIndentationString(indentationCount);
 				// START CHANGE
 				// Added "+ space" on the next line
-				context.addReplacement(region.replaceWith(newLines + indentation + (space ?: "")));
-			// END CHANGE
+				val addSpace = trailingNewLinesOfPreviousRegion == 0 && space !== null
+				context.addReplacement(region.replaceWith(newLines + indentation + (addSpace ? space : "")));
+				// END CHANGE
 			}
 			return context.withIndentation(indentationCount)
 		}

@@ -38,7 +38,7 @@ import org.junit.runner.RunWith;
 @InjectWith(FormatterTestLanguageInjectorProvider.class)
 @SuppressWarnings("all")
 public class CommentWithSpacesFormatterTest {
-  public static class TabsAndSpacesSupportingFormatter extends GenericFormatter<IDList> {
+  public static class CustomFormatter extends GenericFormatter<IDList> {
     @Override
     public void format(final IDList model, final ITextRegionExtensions regionAccess, @Extension final IFormattableDocument document) {
       final Procedure1<IHiddenRegionFormatter> _function = (IHiddenRegionFormatter it) -> {
@@ -49,8 +49,14 @@ public class CommentWithSpacesFormatterTest {
         it.highPriority();
       };
       document.append(document.append(this.textRegionExtensions.regionFor(model).keyword("idlist"), _function), _function_1);
+      final Procedure1<IHiddenRegionFormatter> _function_2 = (IHiddenRegionFormatter it) -> {
+        it.setNewLines(0, 1, 2);
+      };
+      document.append(this.textRegionExtensions.regionFor(model).keyword("idlist").getNextSemanticRegion(), _function_2);
     }
-    
+  }
+  
+  public static class TabsAndSpacesSupportingFormatter extends CommentWithSpacesFormatterTest.CustomFormatter {
     @Override
     public ITextReplacer createWhitespaceReplacer(final ITextSegment hiddens, final IHiddenRegionFormatting formatting) {
       return new CommentWithSpacesFormatterTest.TabAndSpacesSupportingWhiteSpaceReplacer(hiddens, formatting);
@@ -97,14 +103,15 @@ public class CommentWithSpacesFormatterTest {
           _xifexpression = context.getIndentationString(indentationCount);
         }
         final String indentation = _xifexpression;
+        final boolean addSpace = ((trailingNewLinesOfPreviousRegion == 0) && (space != null));
         ITextSegment _region = this.getRegion();
-        String _elvis = null;
-        if (space != null) {
-          _elvis = space;
+        String _xifexpression_1 = null;
+        if (addSpace) {
+          _xifexpression_1 = space;
         } else {
-          _elvis = "";
+          _xifexpression_1 = "";
         }
-        String _plus = ((newLines + indentation) + _elvis);
+        String _plus = ((newLines + indentation) + _xifexpression_1);
         context.addReplacement(_region.replaceWith(_plus));
       }
       return context.withIndentation(indentationCount);
@@ -117,163 +124,374 @@ public class CommentWithSpacesFormatterTest {
   
   @Test
   public void SL_inline() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("idlist  //x");
+    _builder.newLine();
+    _builder.append("a");
+    _builder.newLine();
+    final String input = _builder.toString();
+    StringConcatenation _builder_1 = new StringConcatenation();
+    _builder_1.append("idlist //x");
+    _builder_1.newLine();
+    _builder_1.append("a");
+    _builder_1.newLine();
+    final String output = _builder_1.toString();
     final Procedure1<GenericFormatterTestRequest> _function = (GenericFormatterTestRequest it) -> {
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("idlist  //x");
-      _builder.newLine();
-      _builder.append("a");
-      _builder.newLine();
-      it.setToBeFormatted(_builder);
+      it.setToBeFormatted(input);
       CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter _tabsAndSpacesSupportingFormatter = new CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter();
       it.setFormatter(_tabsAndSpacesSupportingFormatter);
-      StringConcatenation _builder_1 = new StringConcatenation();
-      _builder_1.append("idlist //x");
-      _builder_1.newLine();
-      _builder_1.append(" ");
-      _builder_1.append("a");
-      _builder_1.newLine();
-      it.setExpectation(_builder_1);
+      it.setExpectation(output);
     };
     this._genericFormatterTester.assertFormatted(_function);
+    final Procedure1<GenericFormatterTestRequest> _function_1 = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.CustomFormatter _customFormatter = new CommentWithSpacesFormatterTest.CustomFormatter();
+      it.setFormatter(_customFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function_1);
   }
   
   @Test
   public void SL_multiline() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("idlist");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("//x");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("a");
+    _builder.newLine();
+    final String input = _builder.toString();
+    StringConcatenation _builder_1 = new StringConcatenation();
+    _builder_1.append("idlist //x");
+    _builder_1.newLine();
+    _builder_1.append("a");
+    _builder_1.newLine();
+    final String output = _builder_1.toString();
     final Procedure1<GenericFormatterTestRequest> _function = (GenericFormatterTestRequest it) -> {
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("idlist  ");
-      _builder.newLine();
-      _builder.newLine();
-      _builder.append("//x");
-      _builder.newLine();
-      _builder.newLine();
-      _builder.newLine();
-      _builder.append("a");
-      _builder.newLine();
-      it.setToBeFormatted(_builder);
+      it.setToBeFormatted(input);
       CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter _tabsAndSpacesSupportingFormatter = new CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter();
       it.setFormatter(_tabsAndSpacesSupportingFormatter);
-      StringConcatenation _builder_1 = new StringConcatenation();
-      _builder_1.append("idlist //x");
-      _builder_1.newLine();
-      _builder_1.append("a");
-      _builder_1.newLine();
-      it.setExpectation(_builder_1);
+      it.setExpectation(output);
     };
     this._genericFormatterTester.assertFormatted(_function);
+    final Procedure1<GenericFormatterTestRequest> _function_1 = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.CustomFormatter _customFormatter = new CommentWithSpacesFormatterTest.CustomFormatter();
+      it.setFormatter(_customFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function_1);
   }
   
   @Test
   public void MLSL_inline() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("idlist  /*x*/  a");
+    _builder.newLine();
+    final String input = _builder.toString();
+    StringConcatenation _builder_1 = new StringConcatenation();
+    _builder_1.append("idlist /*x*/ a");
+    _builder_1.newLine();
+    final String output = _builder_1.toString();
     final Procedure1<GenericFormatterTestRequest> _function = (GenericFormatterTestRequest it) -> {
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("idlist  /*x*/  a");
-      _builder.newLine();
-      it.setToBeFormatted(_builder);
+      it.setToBeFormatted(input);
       CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter _tabsAndSpacesSupportingFormatter = new CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter();
       it.setFormatter(_tabsAndSpacesSupportingFormatter);
-      StringConcatenation _builder_1 = new StringConcatenation();
-      _builder_1.append("idlist /*x*/ a");
-      _builder_1.newLine();
-      it.setExpectation(_builder_1);
+      it.setExpectation(output);
     };
     this._genericFormatterTester.assertFormatted(_function);
+    final Procedure1<GenericFormatterTestRequest> _function_1 = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.CustomFormatter _customFormatter = new CommentWithSpacesFormatterTest.CustomFormatter();
+      it.setFormatter(_customFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function_1);
+  }
+  
+  @Test
+  public void MLSLOnSecondLine() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("idlist a");
+    _builder.newLine();
+    _builder.append("/*x*/");
+    _builder.newLine();
+    final String input = _builder.toString();
+    StringConcatenation _builder_1 = new StringConcatenation();
+    _builder_1.append("idlist a");
+    _builder_1.newLine();
+    _builder_1.append("/*x*/");
+    _builder_1.newLine();
+    final String output = _builder_1.toString();
+    final Procedure1<GenericFormatterTestRequest> _function = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter _tabsAndSpacesSupportingFormatter = new CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter();
+      it.setFormatter(_tabsAndSpacesSupportingFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function);
+    final Procedure1<GenericFormatterTestRequest> _function_1 = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.CustomFormatter _customFormatter = new CommentWithSpacesFormatterTest.CustomFormatter();
+      it.setFormatter(_customFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function_1);
   }
   
   @Test
   public void MLSL_paragraph() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("idlist");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("/*x*/");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("a");
+    _builder.newLine();
+    final String input = _builder.toString();
+    StringConcatenation _builder_1 = new StringConcatenation();
+    _builder_1.append("idlist /*x*/");
+    _builder_1.newLine();
+    _builder_1.append("a");
+    _builder_1.newLine();
+    final String output = _builder_1.toString();
     final Procedure1<GenericFormatterTestRequest> _function = (GenericFormatterTestRequest it) -> {
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("idlist");
-      _builder.newLine();
-      _builder.newLine();
-      _builder.newLine();
-      _builder.append("/*x*/");
-      _builder.newLine();
-      _builder.newLine();
-      _builder.newLine();
-      _builder.append("a");
-      _builder.newLine();
-      it.setToBeFormatted(_builder);
+      it.setToBeFormatted(input);
       CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter _tabsAndSpacesSupportingFormatter = new CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter();
       it.setFormatter(_tabsAndSpacesSupportingFormatter);
-      StringConcatenation _builder_1 = new StringConcatenation();
-      _builder_1.append("idlist /*x*/");
-      _builder_1.newLine();
-      _builder_1.append("a");
-      _builder_1.newLine();
-      it.setExpectation(_builder_1);
+      it.setExpectation(output);
     };
     this._genericFormatterTester.assertFormatted(_function);
+    final Procedure1<GenericFormatterTestRequest> _function_1 = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.CustomFormatter _customFormatter = new CommentWithSpacesFormatterTest.CustomFormatter();
+      it.setFormatter(_customFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function_1);
   }
   
   @Test
   public void MLML_inline() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("idlist  /*");
+    _builder.newLine();
+    _builder.append("x");
+    _builder.newLine();
+    _builder.append("*/  a");
+    _builder.newLine();
+    final String input = _builder.toString();
+    StringConcatenation _builder_1 = new StringConcatenation();
+    _builder_1.append("idlist");
+    _builder_1.newLine();
+    _builder_1.append("/*");
+    _builder_1.newLine();
+    _builder_1.append(" ");
+    _builder_1.append("* x");
+    _builder_1.newLine();
+    _builder_1.append(" ");
+    _builder_1.append("*/ a");
+    _builder_1.newLine();
+    final String output = _builder_1.toString();
     final Procedure1<GenericFormatterTestRequest> _function = (GenericFormatterTestRequest it) -> {
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("idlist  /*");
-      _builder.newLine();
-      _builder.append("x");
-      _builder.newLine();
-      _builder.append("*/  a");
-      _builder.newLine();
-      it.setToBeFormatted(_builder);
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter _tabsAndSpacesSupportingFormatter = new CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter();
+      it.setFormatter(_tabsAndSpacesSupportingFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function);
+    final Procedure1<GenericFormatterTestRequest> _function_1 = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.CustomFormatter _customFormatter = new CommentWithSpacesFormatterTest.CustomFormatter();
+      it.setFormatter(_customFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function_1);
+  }
+  
+  @Test
+  public void MLML_paragraph() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("idlist");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("/*");
+    _builder.newLine();
+    _builder.append("x");
+    _builder.newLine();
+    _builder.append("*/");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("a");
+    _builder.newLine();
+    _builder.append("b");
+    _builder.newLine();
+    final String input = _builder.toString();
+    StringConcatenation _builder_1 = new StringConcatenation();
+    _builder_1.append("idlist /*");
+    _builder_1.newLine();
+    _builder_1.append(" ");
+    _builder_1.append("* x");
+    _builder_1.newLine();
+    _builder_1.append(" ");
+    _builder_1.append("*/");
+    _builder_1.newLine();
+    _builder_1.append("a");
+    _builder_1.newLine();
+    _builder_1.append("b");
+    _builder_1.newLine();
+    final String output = _builder_1.toString();
+    final Procedure1<GenericFormatterTestRequest> _function = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter _tabsAndSpacesSupportingFormatter = new CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter();
+      it.setFormatter(_tabsAndSpacesSupportingFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function);
+    final Procedure1<GenericFormatterTestRequest> _function_1 = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.CustomFormatter _customFormatter = new CommentWithSpacesFormatterTest.CustomFormatter();
+      it.setFormatter(_customFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function_1);
+  }
+  
+  @Test
+  public void MLOverOneLineSLML() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("idlist  /* i");
+    _builder.newLine();
+    _builder.append("j *//*y*/  a");
+    _builder.newLine();
+    final String input = _builder.toString();
+    final Procedure1<GenericFormatterTestRequest> _function = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
       CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter _tabsAndSpacesSupportingFormatter = new CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter();
       it.setFormatter(_tabsAndSpacesSupportingFormatter);
       StringConcatenation _builder_1 = new StringConcatenation();
       _builder_1.append("idlist");
       _builder_1.newLine();
-      _builder_1.append("/*");
+      _builder_1.append("/* i");
       _builder_1.newLine();
       _builder_1.append(" ");
-      _builder_1.append("* x");
+      _builder_1.append("j */");
       _builder_1.newLine();
       _builder_1.append(" ");
-      _builder_1.append("*/ a");
+      _builder_1.append("/*y*/ a");
       _builder_1.newLine();
       it.setExpectation(_builder_1);
     };
     this._genericFormatterTester.assertFormatted(_function);
+    final Procedure1<GenericFormatterTestRequest> _function_1 = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.CustomFormatter _customFormatter = new CommentWithSpacesFormatterTest.CustomFormatter();
+      it.setFormatter(_customFormatter);
+      StringConcatenation _builder_1 = new StringConcatenation();
+      _builder_1.append("idlist");
+      _builder_1.newLine();
+      _builder_1.append("/* i");
+      _builder_1.newLine();
+      _builder_1.append(" ");
+      _builder_1.append("j */");
+      _builder_1.newLine();
+      _builder_1.append("/*y*/ a");
+      _builder_1.newLine();
+      it.setExpectation(_builder_1);
+    };
+    this._genericFormatterTester.assertFormatted(_function_1);
   }
   
   @Test
-  public void MLML_paragraph() {
+  public void MLOverOneLineMLOverOneLine() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("idlist  /* i");
+    _builder.newLine();
+    _builder.append("j *//*x");
+    _builder.newLine();
+    _builder.append("               ");
+    _builder.append("y*/  a");
+    _builder.newLine();
+    final String input = _builder.toString();
+    StringConcatenation _builder_1 = new StringConcatenation();
+    _builder_1.append("idlist");
+    _builder_1.newLine();
+    _builder_1.append("/* i");
+    _builder_1.newLine();
+    _builder_1.append(" ");
+    _builder_1.append("j */");
+    _builder_1.newLine();
+    _builder_1.append("/*x");
+    _builder_1.newLine();
+    _builder_1.append(" ");
+    _builder_1.append("y*/ a");
+    _builder_1.newLine();
+    final String output = _builder_1.toString();
     final Procedure1<GenericFormatterTestRequest> _function = (GenericFormatterTestRequest it) -> {
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("idlist");
-      _builder.newLine();
-      _builder.newLine();
-      _builder.newLine();
-      _builder.append("/*");
-      _builder.newLine();
-      _builder.append("x");
-      _builder.newLine();
-      _builder.append("*/");
-      _builder.newLine();
-      _builder.newLine();
-      _builder.newLine();
-      _builder.append("a");
-      _builder.newLine();
-      _builder.append("b");
-      _builder.newLine();
-      it.setToBeFormatted(_builder);
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter _tabsAndSpacesSupportingFormatter = new CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter();
+      it.setFormatter(_tabsAndSpacesSupportingFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function);
+    final Procedure1<GenericFormatterTestRequest> _function_1 = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.CustomFormatter _customFormatter = new CommentWithSpacesFormatterTest.CustomFormatter();
+      it.setFormatter(_customFormatter);
+      it.setExpectation(output);
+    };
+    this._genericFormatterTester.assertFormatted(_function_1);
+  }
+  
+  @Test
+  public void SLMLMLOverOneLine() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("idlist  /* n *//*x");
+    _builder.newLine();
+    _builder.append("               ");
+    _builder.append("y*/  a");
+    _builder.newLine();
+    final String input = _builder.toString();
+    final Procedure1<GenericFormatterTestRequest> _function = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
       CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter _tabsAndSpacesSupportingFormatter = new CommentWithSpacesFormatterTest.TabsAndSpacesSupportingFormatter();
       it.setFormatter(_tabsAndSpacesSupportingFormatter);
       StringConcatenation _builder_1 = new StringConcatenation();
-      _builder_1.append("idlist /*");
+      _builder_1.append("idlist /* n */");
       _builder_1.newLine();
       _builder_1.append(" ");
-      _builder_1.append("* x");
+      _builder_1.append("/*x");
       _builder_1.newLine();
       _builder_1.append(" ");
-      _builder_1.append("*/");
-      _builder_1.newLine();
-      _builder_1.append("a");
-      _builder_1.newLine();
-      _builder_1.append("b");
+      _builder_1.append("y*/ a");
       _builder_1.newLine();
       it.setExpectation(_builder_1);
     };
     this._genericFormatterTester.assertFormatted(_function);
+    final Procedure1<GenericFormatterTestRequest> _function_1 = (GenericFormatterTestRequest it) -> {
+      it.setToBeFormatted(input);
+      CommentWithSpacesFormatterTest.CustomFormatter _customFormatter = new CommentWithSpacesFormatterTest.CustomFormatter();
+      it.setFormatter(_customFormatter);
+      StringConcatenation _builder_1 = new StringConcatenation();
+      _builder_1.append("idlist /* n */");
+      _builder_1.newLine();
+      _builder_1.append("/*x");
+      _builder_1.newLine();
+      _builder_1.append(" ");
+      _builder_1.append("y*/ a");
+      _builder_1.newLine();
+      it.setExpectation(_builder_1);
+    };
+    this._genericFormatterTester.assertFormatted(_function_1);
   }
 }

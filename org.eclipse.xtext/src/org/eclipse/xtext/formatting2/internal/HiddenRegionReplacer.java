@@ -38,9 +38,9 @@ public class HiddenRegionReplacer implements ITextReplacer {
 	}
 
 	/**
-	 * This method is when we have multiple TextReplacers for this HiddenRegion because the HiddenRegion contains
+	 * This method is called when we have multiple TextReplacers for this HiddenRegion because the HiddenRegion contains
 	 * comments. It applies the formatting configuration from {@link #formatting} to the {@link WhitespaceReplacer} that
-	 * surround the comment.
+	 * surrounds the comment.
 	 */
 	protected void applyHiddenRegionFormatting(List<ITextReplacer> replacers) {
 		IHiddenRegionFormatting separator = findWhitespaceThatSeparatesSemanticRegions(replacers).getFormatting();
@@ -55,7 +55,7 @@ public class HiddenRegionReplacer implements ITextReplacer {
 	}
 
 	/**
-	 * @since 2.15
+	 * @since 2.23
 	 */
 	protected void applyIndentation(List<ITextReplacer> replacers, IHiddenRegionFormatting separator) {
 		Integer inc = formatting.getIndentationIncrease();
@@ -71,8 +71,8 @@ public class HiddenRegionReplacer implements ITextReplacer {
 	}
 
 	/**
-	 * Apply NewLine and space configuration to the first whitespace region that follows or contains a linewrap.
-	 * @since 2.15 
+	 * Apply newline and space configuration to the first whitespace region that follows or contains a linewrap.
+	 * @since 2.23
 	 */
 	protected void applySeparatorConfiguration(IHiddenRegionFormatting separator) {
 		separator.setNewLinesDefault(formatting.getNewLineDefault());
@@ -82,7 +82,7 @@ public class HiddenRegionReplacer implements ITextReplacer {
 	}
 
 	/**
-	 * @since 2.15
+	 * @since 2.23
 	 */
 	protected void applyPriorityAndDefaultFormatting(List<ITextReplacer> replacers, IHiddenRegionFormatting separator) {
 		for (int i = 0; i < replacers.size(); i++) {
@@ -111,7 +111,7 @@ public class HiddenRegionReplacer implements ITextReplacer {
 	}
 
 	/**
-	 * @since 2.15
+	 * @since 2.23
 	 */
 	protected void introduceNewlinesAroundMLComments(List<ITextReplacer> replacers) {
 		for (int i = 0; i < replacers.size(); i++) {
