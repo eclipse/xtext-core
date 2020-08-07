@@ -312,7 +312,7 @@ public abstract class EClassifierInfo {
 			}
 			boolean result = isFeatureSemanticallyEqualApartFromType(f1, f2);
 			if (f1 instanceof EReference && f2 instanceof EReference) {
-				EClass f1Type = (EClass) f1.getEType();
+				EClass f1Type = ((EReference)f1).getEReferenceType();
 				result &= ((EReference) f1).isContainment() == ((EReference) f2).isContainment();
 				result &= ((EReference) f1).isContainer() == ((EReference) f2).isContainer();
 				if (result) {
@@ -321,6 +321,8 @@ public abstract class EClassifierInfo {
 							if (!f1Type.isSuperTypeOf((EClass) f2Type)) {
 								return false;
 							}
+						} else {
+							return false;
 						}
 					}
 				}

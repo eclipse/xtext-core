@@ -14,6 +14,8 @@ import java.util.Collections;
 
 /**
  * Encapsulates the access to the type information during the static analysis of Xtext grammar rules.
+ * 
+ * @since 2.23
  */
 interface EClassifierInfoAccess {
 
