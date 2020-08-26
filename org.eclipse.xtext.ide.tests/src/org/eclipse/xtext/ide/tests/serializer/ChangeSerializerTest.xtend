@@ -504,4 +504,32 @@ class ChangeSerializerTest {
 			0 3 "#23" -> "#23 subs A A2"
 		'''
 	}
+
+	@Test
+	def void testAddElementsWithEmptyLine() {
+		val uri = "inmemory:/file-add.pstl"
+		val fs = new InMemoryURIHandler()
+		fs += uri -> '''
+		#1 {
+			N1;
+		}
+		'''
+
+		val rs = fs.createResourceSet
+		val model = rs.contents(uri, Node)
+
+		val serializer = newChangeSerializer()
+		serializer.addModification(model.eResource) [
+			model.children += createNode => [name = "N2"]
+		]
+		serializer.endRecordChangesToTextDocuments === '''
+			--------------- inmemory:/file-add.pstl (syntax: <offset|text>) ----------------
+			#1 {
+				N1;
+			<10:0|
+			N2; >}
+			--------------------------------------------------------------------------------
+			10 0 "" -> "\nN2; "
+		'''
+	}
 }
