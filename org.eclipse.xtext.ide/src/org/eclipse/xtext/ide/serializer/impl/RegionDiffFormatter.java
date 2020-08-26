@@ -108,7 +108,7 @@ public class RegionDiffFormatter {
 					local.add(re);
 				} else if (hasOverlappingWhitespacePrefix(r, re)) {
 					// change overlaps with a region boundary, trim it to the part within
-					TextReplacement newReplacement = trimReplacement(re, re.getText());
+					TextReplacement newReplacement = trimReplacement(re);
 					if (newReplacement != null)
 						local.add(newReplacement);
 				}
@@ -141,14 +141,28 @@ public class RegionDiffFormatter {
 		return false;
 	}
 
-	private TextReplacement trimReplacement(ITextReplacement re, String prefixText) {
+	private TextReplacement trimReplacement(ITextReplacement re) {
+		String prefixText = re.getText();
 		TextReplacement newReplacement = null;
 		int prefixLen = prefixText.length();
 		String newText = re.getReplacementText();
 		if (newText.length() > prefixLen) {
-			newText = newText.substring(prefixLen);
-			int newOffset = re.getOffset()+prefixLen;
-			int newLength = re.getLength()-prefixLen;
+			int prefixLenNew = 0;
+			for (int i = 0; i < prefixLen && prefixLenNew < newText.length(); i++) {
+				char pchar = prefixText.charAt(i);
+				char rchar = newText.charAt(prefixLenNew++);
+				if (pchar != rchar) {
+					if (pchar == '\n' && rchar == '\r' && prefixLenNew < newText.length() && newText.charAt(prefixLenNew) == '\n')
+						prefixLenNew++; // found '\n' -> '\r\n', cut off one more char
+					else
+						return null; // not a true prefix match
+				}
+			}
+			newText = newText.substring(prefixLenNew);
+			int newOffset = re.getOffset() + prefixLen;
+			int newLength = re.getLength() - prefixLen;
+			if (newLength < 0)
+				return null;
 			newReplacement = new TextReplacement(re.getTextRegionAccess(), newOffset, newLength, newText);
 		}
 		return newReplacement;
