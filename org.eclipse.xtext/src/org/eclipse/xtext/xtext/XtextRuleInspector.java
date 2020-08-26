@@ -28,7 +28,7 @@ public abstract class XtextRuleInspector<Result, RuleType extends AbstractRule> 
 
 	private final ValidationMessageAcceptor acceptor;
 
-	private Collection<AbstractRule> visitedRules;
+	Collection<AbstractRule> visitedRules;
 	
 	public XtextRuleInspector(ValidationMessageAcceptor acceptor) {
 		this.acceptor = acceptor;
