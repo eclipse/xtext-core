@@ -63,7 +63,7 @@ public class PredicateUsesUnorderedGroupInspector extends XtextSwitch<Boolean> i
 				validatedRules = Sets.newHashSet();
 				doSwitch(rule);
 				storedRules.addAll(validatedRules);
-				storedRules = validatedRules;
+				validatedRules = storedRules;
 			}
 		}
 	}
