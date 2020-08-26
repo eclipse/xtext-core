@@ -506,6 +506,25 @@ class ChangeSerializerTest {
 	}
 
 	@Test
+	def void testAddElementsWithEmptyLineUnix() {
+		val oldLineSeparator = System.getProperty("line.separator")
+		System.setProperty("line.separator", "\n")
+		try {
+			testAddElementsWithEmptyLine()
+		} finally {
+			System.setProperty("line.separator", oldLineSeparator)
+		}	
+	}
+	@Test
+	def void testAddElementsWithEmptyLineWindows() {
+		val oldLineSeparator = System.getProperty("line.separator")
+		System.setProperty("line.separator", "\r\n")
+		try {
+			testAddElementsWithEmptyLine()
+		} finally {
+			System.setProperty("line.separator", oldLineSeparator)
+		}
+	}
 	def void testAddElementsWithEmptyLine() {
 		val uri = "inmemory:/file-add.pstl"
 		val fs = new InMemoryURIHandler()

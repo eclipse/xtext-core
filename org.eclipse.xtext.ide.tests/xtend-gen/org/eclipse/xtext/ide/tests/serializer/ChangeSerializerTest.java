@@ -839,6 +839,27 @@ public class ChangeSerializerTest {
   }
   
   @Test
+  public void testAddElementsWithEmptyLineUnix() {
+    final String oldLineSeparator = System.getProperty("line.separator");
+    System.setProperty("line.separator", "\n");
+    try {
+      this.testAddElementsWithEmptyLine();
+    } finally {
+      System.setProperty("line.separator", oldLineSeparator);
+    }
+  }
+  
+  @Test
+  public void testAddElementsWithEmptyLineWindows() {
+    final String oldLineSeparator = System.getProperty("line.separator");
+    System.setProperty("line.separator", "\r\n");
+    try {
+      this.testAddElementsWithEmptyLine();
+    } finally {
+      System.setProperty("line.separator", oldLineSeparator);
+    }
+  }
+  
   public void testAddElementsWithEmptyLine() {
     final String uri = "inmemory:/file-add.pstl";
     final InMemoryURIHandler fs = new InMemoryURIHandler();
