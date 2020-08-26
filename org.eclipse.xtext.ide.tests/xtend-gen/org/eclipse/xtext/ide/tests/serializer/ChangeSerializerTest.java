@@ -837,4 +837,51 @@ public class ChangeSerializerTest {
     _builder_1.newLine();
     this._changeSerializerTestHelper.operator_tripleEquals(_endRecordChangesToTextDocuments, _builder_1);
   }
+  
+  @Test
+  public void testAddElementsWithEmptyLine() {
+    final String uri = "inmemory:/file-add.pstl";
+    final InMemoryURIHandler fs = new InMemoryURIHandler();
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("#1 {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("N1;");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    Pair<String, String> _mappedTo = Pair.<String, String>of(uri, _builder.toString());
+    this._changeSerializerTestHelper.operator_add(fs, _mappedTo);
+    final ResourceSet rs = this._changeSerializerTestHelper.createResourceSet(fs);
+    final Node model = this._changeSerializerTestHelper.<Node>contents(rs, uri, Node.class);
+    final IChangeSerializer serializer = this._changeSerializerTestHelper.newChangeSerializer();
+    final IChangeSerializer.IModification<Resource> _function = (Resource it) -> {
+      EList<Node> _children = model.getChildren();
+      Node _createNode = this.fac.createNode();
+      final Procedure1<Node> _function_1 = (Node it_1) -> {
+        it_1.setName("N2");
+      };
+      Node _doubleArrow = ObjectExtensions.<Node>operator_doubleArrow(_createNode, _function_1);
+      _children.add(_doubleArrow);
+    };
+    serializer.<Resource>addModification(model.eResource(), _function);
+    Collection<IEmfResourceChange> _endRecordChangesToTextDocuments = this._changeSerializerTestHelper.endRecordChangesToTextDocuments(serializer);
+    StringConcatenation _builder_1 = new StringConcatenation();
+    _builder_1.append("--------------- inmemory:/file-add.pstl (syntax: <offset|text>) ----------------");
+    _builder_1.newLine();
+    _builder_1.append("#1 {");
+    _builder_1.newLine();
+    _builder_1.append("\t");
+    _builder_1.append("N1;");
+    _builder_1.newLine();
+    _builder_1.append("<10:0|");
+    _builder_1.newLine();
+    _builder_1.append("N2; >}");
+    _builder_1.newLine();
+    _builder_1.append("--------------------------------------------------------------------------------");
+    _builder_1.newLine();
+    _builder_1.append("10 0 \"\" -> \"\\nN2; \"");
+    _builder_1.newLine();
+    this._changeSerializerTestHelper.operator_tripleEquals(_endRecordChangesToTextDocuments, _builder_1);
+  }
 }

@@ -8,6 +8,7 @@
  */
 package org.eclipse.xtext.ide.tests.testlanguage.formatting2;
 
+import com.google.common.base.Objects;
 import java.util.Arrays;
 import java.util.List;
 import org.eclipse.emf.common.util.EList;
@@ -24,15 +25,23 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 @SuppressWarnings("all")
 public class PartialSerializationTestLanguageFormatter extends AbstractFormatter2 {
   protected void _format(final Node obj, @Extension final IFormattableDocument document) {
+    String _name = obj.getName();
+    boolean _equals = Objects.equal(_name, "N2");
+    if (_equals) {
+      final Procedure1<IHiddenRegionFormatter> _function = (IHiddenRegionFormatter it) -> {
+        it.setNewLines(2);
+      };
+      document.<Node>prepend(obj, _function);
+    }
     List<ISemanticRegion> _keywords = this.textRegionExtensions.regionFor(obj).keywords(";");
     for (final ISemanticRegion r : _keywords) {
-      final Procedure1<IHiddenRegionFormatter> _function = (IHiddenRegionFormatter it) -> {
+      final Procedure1<IHiddenRegionFormatter> _function_1 = (IHiddenRegionFormatter it) -> {
         it.noSpace();
       };
-      final Procedure1<IHiddenRegionFormatter> _function_1 = (IHiddenRegionFormatter it) -> {
+      final Procedure1<IHiddenRegionFormatter> _function_2 = (IHiddenRegionFormatter it) -> {
         it.oneSpace();
       };
-      document.append(document.prepend(r, _function), _function_1);
+      document.append(document.prepend(r, _function_1), _function_2);
     }
     EList<Node> _children = obj.getChildren();
     for (final Node child : _children) {

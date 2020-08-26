@@ -16,6 +16,7 @@ import org.eclipse.xtext.formatting2.FormatterRequest;
 import org.eclipse.xtext.formatting2.IFormattableDocument;
 import org.eclipse.xtext.formatting2.IFormatter2;
 import org.eclipse.xtext.formatting2.regionaccess.ITextSegmentDiff;
+import org.eclipse.xtext.formatting2.regionaccess.internal.TextReplacement;
 import org.eclipse.xtext.formatting2.regionaccess.ITextRegionAccess;
 import org.eclipse.xtext.formatting2.regionaccess.ITextRegionAccessDiff;
 import org.eclipse.xtext.formatting2.regionaccess.ITextRegionRewriter;
@@ -105,6 +106,11 @@ public class RegionDiffFormatter {
 			for (ITextReplacement re : rep) {
 				if (modified.contains(re)) {
 					local.add(re);
+				} else if (hasOverlappingWhitespacePrefix(r, re)) {
+					// change overlaps with a region boundary, trim it to the part within
+					TextReplacement newReplacement = trimReplacement(re, re.getText());
+					if (newReplacement != null)
+						local.add(newReplacement);
 				}
 			}
 			String text;
@@ -117,6 +123,35 @@ public class RegionDiffFormatter {
 			result.add(replacement);
 		}
 		return result;
+	}
+
+	private boolean hasOverlappingWhitespacePrefix(ITextSegmentDiff diff, ITextReplacement re) {
+		String text = re.getText();
+		if (!text.isEmpty()) {
+			ITextSegment modifiedFirstRegion = diff.getModifiedFirstRegion();
+			if (modifiedFirstRegion.contains(re.getOffset())
+					&& modifiedFirstRegion.getText().startsWith(text)) {
+				for (int i=0; i<text.length(); i++) {
+					if (!Character.isWhitespace(text.charAt(i)))
+						return false;
+				}
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private TextReplacement trimReplacement(ITextReplacement re, String prefixText) {
+		TextReplacement newReplacement = null;
+		int prefixLen = prefixText.length();
+		String newText = re.getReplacementText();
+		if (newText.length() > prefixLen) {
+			newText = newText.substring(prefixLen);
+			int newOffset = re.getOffset()+prefixLen;
+			int newLength = re.getLength()-prefixLen;
+			newReplacement = new TextReplacement(re.getTextRegionAccess(), newOffset, newLength, newText);
+		}
+		return newReplacement;
 	}
 
 }
