@@ -79,7 +79,7 @@ class TargetPlatformProject extends ProjectDescriptor {
 				<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 					<unit id="com.google.gson" version="2.8.2.v20180104-1110"/>
 					<unit id="org.antlr.runtime" version="3.2.0.v201101311130"/>
-					<unit id="org.junit" version="4.12.0.v201504281640"/>
+					<unit id="org.junit" version="4.13.0.v20200204-1500"/>
 					«IF config.junitVersion == JUnitVersion.JUNIT_5»
 						<unit id="org.junit.jupiter.api" version="5.6.0.v20200203-2009"/>
 						<unit id="org.junit.jupiter.engine" version="5.6.0.v20200203-2009"/>
