@@ -16,6 +16,9 @@ class PartialSerializationTestLanguageFormatter extends AbstractFormatter2 {
 
 //	@Inject extension PartialSerializationTestLanguageGrammarAccess
 	dispatch def format(Node obj, extension IFormattableDocument document) {
+		if (obj.name == "N2") {
+			obj.prepend[newLines=2]
+		}
 		for (r : obj.regionFor.keywords(";")) {
 			r.prepend[noSpace].append[oneSpace]
 		}
