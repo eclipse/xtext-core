@@ -181,7 +181,7 @@ public class XtextSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				sequence_EnumLiteralDeclaration(context, (EnumLiteralDeclaration) semanticObject); 
 				return; 
 			case XtextPackage.ENUM_RULE:
-				sequence_EnumRule(context, (EnumRule) semanticObject); 
+				sequence_EnumRule_ReturnsCause(context, (EnumRule) semanticObject); 
 				return; 
 			case XtextPackage.GENERATED_METAMODEL:
 				sequence_GeneratedMetamodel(context, (GeneratedMetamodel) semanticObject); 
@@ -293,7 +293,7 @@ public class XtextSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				sequence_ParameterReference(context, (ParameterReference) semanticObject); 
 				return; 
 			case XtextPackage.PARSER_RULE:
-				sequence_ParserRule_RuleNameAndParams(context, (ParserRule) semanticObject); 
+				sequence_ParserRule_ReturnsCause_RuleNameAndParams(context, (ParserRule) semanticObject); 
 				return; 
 			case XtextPackage.REFERENCED_METAMODEL:
 				sequence_ReferencedMetamodel(context, (ReferencedMetamodel) semanticObject); 
@@ -342,7 +342,7 @@ public class XtextSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				}
 				else break;
 			case XtextPackage.TERMINAL_RULE:
-				sequence_TerminalRule(context, (TerminalRule) semanticObject); 
+				sequence_ReturnsCause_TerminalRule(context, (TerminalRule) semanticObject); 
 				return; 
 			case XtextPackage.TYPE_REF:
 				sequence_TypeRef(context, (TypeRef) semanticObject); 
@@ -791,7 +791,7 @@ public class XtextSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Constraint:
 	 *     (annotations+=Annotation* name=ValidID type=TypeRef? alternatives=EnumLiterals)
 	 */
-	protected void sequence_EnumRule(ISerializationContext context, EnumRule semanticObject) {
+	protected void sequence_EnumRule_ReturnsCause(ISerializationContext context, EnumRule semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1016,12 +1016,12 @@ public class XtextSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         fragment?='fragment'? 
 	 *         name=ValidID 
 	 *         (parameters+=Parameter parameters+=Parameter*)? 
-	 *         (wildcard?='*' | type=TypeRef | type=TypeRef)? 
+	 *         (wildcard?='*' | type=TypeRef)? 
 	 *         (definesHiddenTokens?='hidden' (hiddenTokens+=[AbstractRule|RuleID] hiddenTokens+=[AbstractRule|RuleID]*)?)? 
 	 *         alternatives=Alternatives
 	 *     )
 	 */
-	protected void sequence_ParserRule_RuleNameAndParams(ISerializationContext context, ParserRule semanticObject) {
+	protected void sequence_ParserRule_ReturnsCause_RuleNameAndParams(ISerializationContext context, ParserRule semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1071,6 +1071,19 @@ public class XtextSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     (ePackage=[EPackage|STRING] alias=ValidID?)
 	 */
 	protected void sequence_ReferencedMetamodel(ISerializationContext context, ReferencedMetamodel semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     AbstractRule returns TerminalRule
+	 *     TerminalRule returns TerminalRule
+	 *
+	 * Constraint:
+	 *     (annotations+=Annotation* ((fragment?='fragment' name=ValidID) | (name=ValidID type=TypeRef?)) alternatives=TerminalAlternatives)
+	 */
+	protected void sequence_ReturnsCause_TerminalRule(ISerializationContext context, TerminalRule semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1160,19 +1173,6 @@ public class XtextSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     (rule=[AbstractRule|RuleID] (cardinality='?' | cardinality='*' | cardinality='+')*)
 	 */
 	protected void sequence_TerminalRuleCall_TerminalToken(ISerializationContext context, RuleCall semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     AbstractRule returns TerminalRule
-	 *     TerminalRule returns TerminalRule
-	 *
-	 * Constraint:
-	 *     (annotations+=Annotation* ((fragment?='fragment' name=ValidID) | (name=ValidID type=TypeRef?)) alternatives=TerminalAlternatives)
-	 */
-	protected void sequence_TerminalRule(ISerializationContext context, TerminalRule semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

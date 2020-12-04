@@ -234,7 +234,6 @@ public class XtextSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('<' '>')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=ValidID (ambiguity) 'returns' type=TypeRef
 	 *     name=ValidID (ambiguity) wildcard?='*'
 	 */
 	protected void emit_RuleNameAndParams___LessThanSignKeyword_1_0_GreaterThanSignKeyword_1_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {

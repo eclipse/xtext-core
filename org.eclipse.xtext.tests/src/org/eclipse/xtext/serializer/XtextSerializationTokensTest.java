@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2019 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2019, 2020 itemis AG (http://www.itemis.eu) and others.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0.
@@ -27,10 +27,9 @@ public class XtextSerializationTokensTest extends AbstractXtextTests {
 		this.with(new XtextStandaloneSetup());
 	}
 
-	@Ignore
 	@Test
 	public void testParserRuleReturnsToken() throws Exception {
-		this.serializeAndCheckTokens(
+		serializeAndCheckTokens(
 				"grammar org.eclipse.xtext.serializer.XtextSerializationTokensTestLanguage with org.eclipse.xtext.common.Terminals\n" +
 				"\n" +
 				"import \"http://www.eclipse.org/emf/2002/Ecore\" as ecore\n" +
@@ -41,9 +40,8 @@ public class XtextSerializationTokensTest extends AbstractXtextTests {
 	}
 
 	@Ignore
-	@Test
 	public void testParserRuleGreaterSignToken() throws Exception {
-		this.serializeAndCheckTokens(
+		serializeAndCheckTokens(
 				"grammar org.eclipse.xtext.serializer.XtextSerializationTokensTestLanguage with org.eclipse.xtext.common.Terminals\n" +
 				"\n" +
 				"import \"http://www.eclipse.org/emf/2002/Ecore\" as ecore\n" +

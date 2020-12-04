@@ -71,12 +71,11 @@ public class XtextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAnnotationAccess().getGroup(), "rule__Annotation__Group__0");
 			builder.put(grammarAccess.getParserRuleAccess().getGroup(), "rule__ParserRule__Group__0");
 			builder.put(grammarAccess.getParserRuleAccess().getGroup_1_0(), "rule__ParserRule__Group_1_0__0");
-			builder.put(grammarAccess.getParserRuleAccess().getGroup_1_0_2_1(), "rule__ParserRule__Group_1_0_2_1__0");
 			builder.put(grammarAccess.getParserRuleAccess().getGroup_1_1(), "rule__ParserRule__Group_1_1__0");
-			builder.put(grammarAccess.getParserRuleAccess().getGroup_1_1_1(), "rule__ParserRule__Group_1_1_1__0");
 			builder.put(grammarAccess.getParserRuleAccess().getGroup_2(), "rule__ParserRule__Group_2__0");
 			builder.put(grammarAccess.getParserRuleAccess().getGroup_2_2(), "rule__ParserRule__Group_2_2__0");
 			builder.put(grammarAccess.getParserRuleAccess().getGroup_2_2_1(), "rule__ParserRule__Group_2_2_1__0");
+			builder.put(grammarAccess.getReturnsCauseAccess().getGroup(), "rule__ReturnsCause__Group__0");
 			builder.put(grammarAccess.getRuleNameAndParamsAccess().getGroup(), "rule__RuleNameAndParams__Group__0");
 			builder.put(grammarAccess.getRuleNameAndParamsAccess().getGroup_1(), "rule__RuleNameAndParams__Group_1__0");
 			builder.put(grammarAccess.getRuleNameAndParamsAccess().getGroup_1_1(), "rule__RuleNameAndParams__Group_1_1__0");
@@ -125,7 +124,6 @@ public class XtextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTerminalRuleAccess().getGroup(), "rule__TerminalRule__Group__0");
 			builder.put(grammarAccess.getTerminalRuleAccess().getGroup_2_0(), "rule__TerminalRule__Group_2_0__0");
 			builder.put(grammarAccess.getTerminalRuleAccess().getGroup_2_1(), "rule__TerminalRule__Group_2_1__0");
-			builder.put(grammarAccess.getTerminalRuleAccess().getGroup_2_1_1(), "rule__TerminalRule__Group_2_1_1__0");
 			builder.put(grammarAccess.getTerminalAlternativesAccess().getGroup(), "rule__TerminalAlternatives__Group__0");
 			builder.put(grammarAccess.getTerminalAlternativesAccess().getGroup_1(), "rule__TerminalAlternatives__Group_1__0");
 			builder.put(grammarAccess.getTerminalAlternativesAccess().getGroup_1_1(), "rule__TerminalAlternatives__Group_1_1__0");
@@ -140,7 +138,6 @@ public class XtextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getCharacterRangeAccess().getGroup(), "rule__CharacterRange__Group__0");
 			builder.put(grammarAccess.getCharacterRangeAccess().getGroup_1(), "rule__CharacterRange__Group_1__0");
 			builder.put(grammarAccess.getEnumRuleAccess().getGroup(), "rule__EnumRule__Group__0");
-			builder.put(grammarAccess.getEnumRuleAccess().getGroup_3(), "rule__EnumRule__Group_3__0");
 			builder.put(grammarAccess.getEnumLiteralsAccess().getGroup(), "rule__EnumLiterals__Group__0");
 			builder.put(grammarAccess.getEnumLiteralsAccess().getGroup_1(), "rule__EnumLiterals__Group_1__0");
 			builder.put(grammarAccess.getEnumLiteralsAccess().getGroup_1_1(), "rule__EnumLiterals__Group_1_1__0");
@@ -163,12 +160,11 @@ public class XtextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getParserRuleAccess().getAnnotationsAssignment_0(), "rule__ParserRule__AnnotationsAssignment_0");
 			builder.put(grammarAccess.getParserRuleAccess().getFragmentAssignment_1_0_0(), "rule__ParserRule__FragmentAssignment_1_0_0");
 			builder.put(grammarAccess.getParserRuleAccess().getWildcardAssignment_1_0_2_0(), "rule__ParserRule__WildcardAssignment_1_0_2_0");
-			builder.put(grammarAccess.getParserRuleAccess().getTypeAssignment_1_0_2_1_1(), "rule__ParserRule__TypeAssignment_1_0_2_1_1");
-			builder.put(grammarAccess.getParserRuleAccess().getTypeAssignment_1_1_1_1(), "rule__ParserRule__TypeAssignment_1_1_1_1");
 			builder.put(grammarAccess.getParserRuleAccess().getDefinesHiddenTokensAssignment_2_0(), "rule__ParserRule__DefinesHiddenTokensAssignment_2_0");
 			builder.put(grammarAccess.getParserRuleAccess().getHiddenTokensAssignment_2_2_0(), "rule__ParserRule__HiddenTokensAssignment_2_2_0");
 			builder.put(grammarAccess.getParserRuleAccess().getHiddenTokensAssignment_2_2_1_1(), "rule__ParserRule__HiddenTokensAssignment_2_2_1_1");
 			builder.put(grammarAccess.getParserRuleAccess().getAlternativesAssignment_4(), "rule__ParserRule__AlternativesAssignment_4");
+			builder.put(grammarAccess.getReturnsCauseAccess().getTypeAssignment_1(), "rule__ReturnsCause__TypeAssignment_1");
 			builder.put(grammarAccess.getRuleNameAndParamsAccess().getNameAssignment_0(), "rule__RuleNameAndParams__NameAssignment_0");
 			builder.put(grammarAccess.getRuleNameAndParamsAccess().getParametersAssignment_1_1_0(), "rule__RuleNameAndParams__ParametersAssignment_1_1_0");
 			builder.put(grammarAccess.getRuleNameAndParamsAccess().getParametersAssignment_1_1_1_1(), "rule__RuleNameAndParams__ParametersAssignment_1_1_1_1");
@@ -220,7 +216,6 @@ public class XtextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTerminalRuleAccess().getFragmentAssignment_2_0_0(), "rule__TerminalRule__FragmentAssignment_2_0_0");
 			builder.put(grammarAccess.getTerminalRuleAccess().getNameAssignment_2_0_1(), "rule__TerminalRule__NameAssignment_2_0_1");
 			builder.put(grammarAccess.getTerminalRuleAccess().getNameAssignment_2_1_0(), "rule__TerminalRule__NameAssignment_2_1_0");
-			builder.put(grammarAccess.getTerminalRuleAccess().getTypeAssignment_2_1_1_1(), "rule__TerminalRule__TypeAssignment_2_1_1_1");
 			builder.put(grammarAccess.getTerminalRuleAccess().getAlternativesAssignment_4(), "rule__TerminalRule__AlternativesAssignment_4");
 			builder.put(grammarAccess.getTerminalAlternativesAccess().getElementsAssignment_1_1_1(), "rule__TerminalAlternatives__ElementsAssignment_1_1_1");
 			builder.put(grammarAccess.getTerminalGroupAccess().getElementsAssignment_1_1(), "rule__TerminalGroup__ElementsAssignment_1_1");
@@ -230,7 +225,6 @@ public class XtextParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getCharacterRangeAccess().getRightAssignment_1_2(), "rule__CharacterRange__RightAssignment_1_2");
 			builder.put(grammarAccess.getEnumRuleAccess().getAnnotationsAssignment_0(), "rule__EnumRule__AnnotationsAssignment_0");
 			builder.put(grammarAccess.getEnumRuleAccess().getNameAssignment_2(), "rule__EnumRule__NameAssignment_2");
-			builder.put(grammarAccess.getEnumRuleAccess().getTypeAssignment_3_1(), "rule__EnumRule__TypeAssignment_3_1");
 			builder.put(grammarAccess.getEnumRuleAccess().getAlternativesAssignment_5(), "rule__EnumRule__AlternativesAssignment_5");
 			builder.put(grammarAccess.getEnumLiteralsAccess().getElementsAssignment_1_1_1(), "rule__EnumLiterals__ElementsAssignment_1_1_1");
 			builder.put(grammarAccess.getEnumLiteralDeclarationAccess().getEnumLiteralAssignment_0(), "rule__EnumLiteralDeclaration__EnumLiteralAssignment_0");

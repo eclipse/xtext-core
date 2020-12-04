@@ -47,13 +47,15 @@ Annotation returns Annotation:
 ParserRule :
 	(annotations += Annotation)*
 	(
-	  ^fragment?='fragment' RuleNameAndParams (wildcard?='*' | ('returns' type=TypeRef)?)
-	| RuleNameAndParams ('returns' type=TypeRef)?
+	  ^fragment?='fragment' RuleNameAndParams (wildcard?='*' | ReturnsCause?)
+	| RuleNameAndParams ReturnsCause?
 	)
 	(definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)? ')')? ':'
 		alternatives=Alternatives
 	';'
 ;
+
+fragment ReturnsCause*:('returns' type=TypeRef);
 
 fragment RuleNameAndParams returns ParserRule:
 	name=ValidID ('<' (parameters+=Parameter (',' parameters+=Parameter)*)? '>')?
@@ -207,7 +209,7 @@ PredicatedGroup returns Group:
 
 TerminalRule :
 	(annotations += Annotation)*
-	'terminal' (^fragment?='fragment' name=ValidID | name=ValidID ('returns' type=TypeRef)?) ':'
+	'terminal' (^fragment?='fragment' name=ValidID | name=ValidID ReturnsCause?) ':'
 		alternatives=TerminalAlternatives
 	';'
 ;
@@ -259,7 +261,7 @@ CharacterRange returns AbstractElement:
 
 EnumRule:
 	(annotations += Annotation)*
-	'enum' name=ValidID ('returns' type=TypeRef)? ':'
+	'enum' name=ValidID ReturnsCause? ':'
 		alternatives=EnumLiterals
 	';'
 ;
