@@ -393,7 +393,7 @@ public class NfaUtil {
 				name = "start:" + name;
 			else if (s == nfa.getStop())
 				name = "stop:" + name;
-			names.put(name, s);
+			names.put(name + System.identityHashCode(s), s);
 		}
 		List<String> sorted = Lists.newArrayList(names.keySet());
 		Collections.sort(sorted);

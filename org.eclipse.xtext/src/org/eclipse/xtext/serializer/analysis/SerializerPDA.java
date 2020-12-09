@@ -23,6 +23,7 @@ import org.eclipse.xtext.util.formallang.PdaFactory;
 import com.google.common.base.Function;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Predicate;
+import com.google.common.collect.FluentIterable;
 import com.google.common.collect.Lists;
 
 public class SerializerPDA implements Pda<ISerState, RuleCall> {
@@ -88,10 +89,12 @@ public class SerializerPDA implements Pda<ISerState, RuleCall> {
 
 		@Override
 		public void setFollowers(SerializerPDA nfa, ISerState owner, Iterable<ISerState> followers) {
-			((SerializerPDA.SerializerPDAState) owner).followers = Lists.newArrayList(followers);
+			List<ISerState> prevFollowers = (List<ISerState>) owner.getFollowers();
+			prevFollowers.clear();
+			FluentIterable.from(followers).copyInto(prevFollowers);
 			for (ISerState follower : followers) {
 				Preconditions.checkNotNull(follower);
-				((SerializerPDA.SerializerPDAState) follower).precedents.add(owner);
+				((List<ISerState>)follower.getPrecedents()).add(owner);
 			}
 		}
 	}
@@ -203,19 +206,17 @@ public class SerializerPDA implements Pda<ISerState, RuleCall> {
 
 	@Override
 	public Iterable<ISerState> getFollowers(ISerState state) {
-		return ((SerializerPDA.SerializerPDAState) state).followers;
+		return (Iterable<ISerState>) state.getFollowers();
 	}
 
 	@Override
 	public RuleCall getPop(ISerState state) {
-		SerializerPDA.SerializerPDAState s = (SerializerPDA.SerializerPDAState) state;
-		return s.type == SerStateType.POP ? (RuleCall) s.grammarElement : null;
+		return state.getType() == SerStateType.POP ? (RuleCall) state.getGrammarElement() : null;
 	}
 
 	@Override
 	public RuleCall getPush(ISerState state) {
-		SerializerPDA.SerializerPDAState s = (SerializerPDA.SerializerPDAState) state;
-		return s.type == SerStateType.PUSH ? (RuleCall) s.grammarElement : null;
+		return state.getType() == SerStateType.PUSH ? (RuleCall) state.getGrammarElement() : null;
 	}
 
 	@Override

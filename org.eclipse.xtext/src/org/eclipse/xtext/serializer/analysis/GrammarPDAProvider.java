@@ -8,6 +8,8 @@
  *******************************************************************************/
 package org.eclipse.xtext.serializer.analysis;
 
+import java.util.ArrayDeque;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -37,6 +39,7 @@ import org.eclipse.xtext.xtext.RuleFilter;
 import org.eclipse.xtext.xtext.RuleNames;
 import org.eclipse.xtext.xtext.RuleWithParameterValues;
 
+import com.google.common.collect.FluentIterable;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
@@ -84,10 +87,71 @@ public class GrammarPDAProvider implements IGrammarPDAProvider {
 
 	protected static class ToOriginal implements PdaFactory<SerializerPDA, ISerState, RuleCall, AbstractElement> {
 
+		private static class CompositeSerState implements ISerState {
+			final ISerState delegate;
+			final ISerState parent;
+			public CompositeSerState(ISerState delegate, ISerState parent) {
+				this.delegate = delegate;
+				this.parent = parent;
+			}
+			@Override
+			public List<? extends ISerState> getFollowers() {
+				return delegate.getFollowers();
+			}
+			@Override
+			public List<? extends ISerState> getPrecedents() {
+				return delegate.getPrecedents();
+			}
+			@Override
+			public AbstractElement getGrammarElement() {
+				return delegate.getGrammarElement();
+			}
+			@Override
+			public SerStateType getType() {
+				return delegate.getType();
+			}
+			@Override
+			public int hashCode() {
+				final int prime = 31;
+				int result = 1;
+				result = prime * result + ((delegate == null) ? 0 : delegate.hashCode());
+				result = prime * result + ((parent == null) ? 0 : parent.hashCode());
+				return result;
+			}
+			@Override
+			public boolean equals(Object obj) {
+				if (this == obj)
+					return true;
+				if (obj == null)
+					return false;
+				if (getClass() != obj.getClass())
+					return false;
+				CompositeSerState other = (CompositeSerState) obj;
+				if (delegate == null) {
+					if (other.delegate != null)
+						return false;
+				} else if (!delegate.equals(other.delegate))
+					return false;
+				if (parent == null) {
+					if (other.parent != null)
+						return false;
+				} else if (!parent.equals(other.parent))
+					return false;
+				return true;
+			}
+			@Override
+			public String toString() {
+				return delegate.toString() + " with parent: " + parent;
+			}
+		}
+		
 		private final SerializerPDAElementFactory delegate;
 		private final Map<AbstractElement, ISerState> pops = Maps.newHashMap();
 		private final Map<AbstractElement, ISerState> pushs = Maps.newHashMap();
 		private final Map<AbstractElement, ISerState> states = Maps.newHashMap();
+		
+		private final ArrayDeque<ISerState> stateStack = new ArrayDeque<>();
+		private final ArrayDeque<AbstractElement> callStack = new ArrayDeque<>();
 
 		public ToOriginal(SerializerPDAElementFactory delegate) {
 			super();
@@ -102,10 +166,19 @@ public class GrammarPDAProvider implements IGrammarPDAProvider {
 		@Override
 		public ISerState createPop(SerializerPDA pda, AbstractElement token) {
 			AbstractElement original = original(token);
+			if (GrammarUtil.isEObjectFragmentRuleCall(original)) {
+				if (callStack.peek() != original) {
+					return null;
+				}
+			}
 			ISerState state = pops.get(original);
 			if (state == null) {
 				state = delegate.createPop(pda, original);
 				pops.put(original, state);
+			}
+			if (callStack.peek() == original) {
+				stateStack.pop();
+				callStack.pop();
 			}
 			return state;
 		}
@@ -118,6 +191,10 @@ public class GrammarPDAProvider implements IGrammarPDAProvider {
 				state = delegate.createPush(pda, original);
 				pushs.put(original, state);
 			}
+			if (GrammarUtil.isEObjectFragmentRuleCall(original)) {
+				stateStack.push(state);
+				callStack.push(original);
+			}
 			return state;
 		}
 
@@ -125,8 +202,16 @@ public class GrammarPDAProvider implements IGrammarPDAProvider {
 		public ISerState createState(SerializerPDA nfa, AbstractElement token) {
 			AbstractElement original = original(token);
 			ISerState state = states.get(original);
+			if (state instanceof CompositeSerState && !stateStack.isEmpty()) {
+				if (((CompositeSerState)state).parent != stateStack.peek()) {
+					state = null;
+				}
+			}
 			if (state == null) {
 				state = delegate.createState(nfa, original);
+				if (!stateStack.isEmpty()) {
+					state = new CompositeSerState(state, stateStack.peek());
+				}
 				states.put(original, state);
 			}
 			return state;
@@ -146,9 +231,10 @@ public class GrammarPDAProvider implements IGrammarPDAProvider {
 		@Override
 		public void setFollowers(SerializerPDA nfa, ISerState owner, Iterable<ISerState> followers) {
 			Set<ISerState> all = Sets.newLinkedHashSet(owner.getFollowers());
-			Iterables.addAll(all, followers);
+			FluentIterable.from(followers).copyInto(all);
 			delegate.setFollowers(nfa, owner, all);
 		}
+
 	}
 
 	private static Logger LOG = Logger.getLogger(GrammarPDAProvider.class);

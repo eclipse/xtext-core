@@ -350,8 +350,7 @@ public class PdaUtil {
 	}
 
 	protected <S, P, E, T1, T2, D extends Pda<S, P>> void create(Cfg<E, T1> cfg, D pda, S state, E ele, Iterable<E> followerElements,
-			FollowerFunction<E> ff, Function<E, T2> tokens, PdaFactory<D, S, P, ? super T2> fact, Map<E, S> states, Map<E, S> stops,
-			Multimap<E, E> callers) {
+			FollowerFunction<E> ff, Function<E, T2> tokens, PdaFactory<D, S, P, ? super T2> fact, Set<S> allStates, Multimap<E, E> callers) {
 		List<S> followerStates = Lists.newArrayList();
 		for (E fol : followerElements) {
 			E e;
@@ -360,28 +359,24 @@ public class PdaUtil {
 				if (root == cfg.getRoot())
 					followerStates.add(pda.getStop());
 				for (E c : callers.get(root)) {
-					S s = stops.get(c);
-					if (s == null) {
-						s = fact.createPop(pda, tokens.apply(c));
-						stops.put(c, s);
-						create(cfg, pda, s, c, ff.getFollowers(c), ff, tokens, fact, states, stops, callers);
+					S s = fact.createPop(pda, tokens.apply(c));
+					if (s != null) {
+						if (allStates.add(s)) {
+							create(cfg, pda, s, c, ff.getFollowers(c), ff, tokens, fact, allStates, callers);
+						}
+						followerStates.add(s);
 					}
-					followerStates.add(s);
 				}
 			} else if ((e = cfg.getCall(fol)) != null) {
-				S s = states.get(fol);
-				if (s == null) {
-					s = fact.createPush(pda, tokens.apply(fol));
-					states.put(fol, s);
-					create(cfg, pda, s, e, ff.getStarts(e), ff, tokens, fact, states, stops, callers);
+				S s = fact.createPush(pda, tokens.apply(fol));
+				if (allStates.add(s)) {
+					create(cfg, pda, s, e, ff.getStarts(e), ff, tokens, fact, allStates, callers);
 				}
 				followerStates.add(s);
 			} else {
-				S s = states.get(fol);
-				if (s == null) {
-					s = fact.createState(pda, tokens.apply(fol));
-					states.put(fol, s);
-					create(cfg, pda, s, fol, ff.getFollowers(fol), ff, tokens, fact, states, stops, callers);
+				S s = fact.createState(pda, tokens.apply(fol));
+				if (allStates.add(s)) {
+					create(cfg, pda, s, fol, ff.getFollowers(fol), ff, tokens, fact, allStates, callers);
 				}
 				followerStates.add(s);
 			}
@@ -392,10 +387,8 @@ public class PdaUtil {
 	public <S, P, E, T1, T2, D extends Pda<S, P>> D create(Cfg<E, T1> cfg, FollowerFunction<E> ff, Function<E, T2> element2token,
 			PdaFactory<D, S, P, ? super T2> fact) {
 		D pda = fact.create(null, null);
-		Map<E, S> states = Maps.newLinkedHashMap();
-		Map<E, S> stops = Maps.newLinkedHashMap();
 		Multimap<E, E> callers = new CfgUtil().getCallers(cfg);
-		create(cfg, pda, pda.getStart(), cfg.getRoot(), ff.getStarts(cfg.getRoot()), ff, element2token, fact, states, stops, callers);
+		create(cfg, pda, pda.getStart(), cfg.getRoot(), ff.getStarts(cfg.getRoot()), ff, element2token, fact, new HashSet<>(), callers);
 		return pda;
 	}
 
