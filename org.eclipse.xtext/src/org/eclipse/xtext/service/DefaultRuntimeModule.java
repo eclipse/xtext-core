@@ -56,7 +56,9 @@ import org.eclipse.xtext.scoping.impl.ImportUriGlobalScopeProvider;
 import org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider;
 import org.eclipse.xtext.serializer.ISerializer;
 import org.eclipse.xtext.serializer.sequencer.BacktrackingSemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.ContextFinder;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
+import org.eclipse.xtext.serializer.sequencer.IContextFinder;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.tokens.SerializerScopeProviderBinding;
 import org.eclipse.xtext.validation.CancelableDiagnostician;
@@ -82,7 +84,13 @@ public abstract class DefaultRuntimeModule extends AbstractGenericModule {
 	public void configure(Binder binder) {
 		super.configure(binder);
 	}
-	
+
+//	// Move to AbstractXXXModule subclasses
+//	public void configureIContextFinder(Binder b) {
+//		b.bind(ContextFinder.class).asEagerSingleton();
+//		b.bind(IContextFinder.class).to(ContextFinder.class); // this this a singleton too?
+//	}
+
 	public EValidator.Registry bindEValidatorRegistry() {
 		return EValidator.Registry.INSTANCE;
 	}
@@ -90,11 +98,11 @@ public abstract class DefaultRuntimeModule extends AbstractGenericModule {
 	public EPackage.Registry bindEPackageRegistry() {
 		return EPackage.Registry.INSTANCE;
 	}
-	
+
 	public IResourceServiceProvider.Registry bindIResourceServiceProvider$Registry() {
 		return IResourceServiceProvider.Registry.INSTANCE;
 	}
-	
+
 	@SingletonBinding
 	public Class<? extends Diagnostician> bindDiagnostician() {
 		return CancelableDiagnostician.class;
@@ -256,4 +264,5 @@ public abstract class DefaultRuntimeModule extends AbstractGenericModule {
 		binder.bind(new TypeLiteral<ImmutableList<IsAffectedExtension>>() {}).toProvider(AllIsAffectedExtensions.class);
 		binder.bind(Key.get(IsAffectedExtension.class, Names.named("IsAffectedExtension.UniqueNames"))).to(INamesAreUniqueValidationHelper.ContextProvider.class);
 	}
+	
 }

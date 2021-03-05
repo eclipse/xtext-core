@@ -8,6 +8,8 @@
  *******************************************************************************/
 package org.eclipse.xtext.serializer.impl;
 
+import static com.google.common.base.Preconditions.*;
+
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Iterator;
@@ -48,12 +50,12 @@ import org.eclipse.xtext.validation.IConcreteSyntaxValidator;
 import com.google.common.base.CharMatcher;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-
-import static com.google.common.base.Preconditions.checkNotNull;
+import com.google.inject.Singleton;
 
 /**
  * @author Moritz Eysholdt - Initial contribution and API
  */
+@Singleton
 public class Serializer implements ISerializer {
 
 	@Override
