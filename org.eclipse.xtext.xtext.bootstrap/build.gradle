@@ -28,7 +28,7 @@ sourceSets.mwe2 {
 		java.srcDir 'xtend-gen'
 	}
 }
-configurations.mwe2Compile.extendsFrom configurations.compile
+configurations.mwe2Implementation.extendsFrom configurations.api
 jar.from sourceSets.mwe2.output
 sourcesJar.from sourceSets.mwe2.allSource
 
