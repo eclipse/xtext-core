@@ -7,8 +7,8 @@ sourceSets {
 
 	}
 }
-
-eclipse.classpath.plusConfigurations += [configurations.mwe2RuntimeOnly	]
+configurations.mwe2Implementation.canBeResolved = true
+eclipse.classpath.plusConfigurations += [configurations.mwe2Implementation	]
 
 dependencies {
 	if (!name.endsWith('bootstrap')) {
