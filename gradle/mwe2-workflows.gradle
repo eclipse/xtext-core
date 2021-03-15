@@ -7,7 +7,7 @@ sourceSets {
 
 	}
 }
-configurations.mwe2Implementation.canBeResolved = true
+configurations.mwe2Implementation.canBeResolved = true //TODO is there a better way
 eclipse.classpath.plusConfigurations += [configurations.mwe2Implementation	]
 
 dependencies {
