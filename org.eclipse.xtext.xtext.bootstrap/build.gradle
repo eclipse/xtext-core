@@ -11,8 +11,8 @@ dependencies {
 	// We cannot use the projects within the workspace, as we would have
 	// to compile them before generating the code, so we need to stick to the bootstrapping version.
 	// Buildship, however, links the workspace projects anyway if a composite build is used.
-	compile "org.eclipse.xtext:org.eclipse.xtext:$versions.xtext_bootstrap"
-	compile "org.eclipse.xtext:org.eclipse.xtext.xtext.generator:$versions.xtext_bootstrap"
+	api "org.eclipse.xtext:org.eclipse.xtext:$versions.xtext_bootstrap"
+	api "org.eclipse.xtext:org.eclipse.xtext.xtext.generator:$versions.xtext_bootstrap"
 }
 
 sourceSets.main.java.srcDirs = []

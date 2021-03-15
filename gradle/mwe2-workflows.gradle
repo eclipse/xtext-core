@@ -3,18 +3,21 @@
  */
 
 sourceSets {
-	mwe2 {}
+	mwe2 {
+
+	}
 }
 
-eclipse.classpath.plusConfigurations += [configurations.mwe2Runtime]
+eclipse.classpath.plusConfigurations += [configurations.mwe2RuntimeOnly	]
 
 dependencies {
 	if (!name.endsWith('bootstrap')) {
-		mwe2Compile project(':org.eclipse.xtext.xtext.generator')
+		mwe2RuntimeOnly project(':org.eclipse.xtext.xtext.generator')
 	}
-	mwe2Runtime 'org.eclipse.emf:org.eclipse.emf.mwe2.launch'
-	mwe2Runtime "org.eclipse.xtext:org.eclipse.xtext.common.types:$versions.xtext_bootstrap"
-	mwe2Runtime "org.eclipse.xtext:org.eclipse.xtext.ecore:$versions.xtext_bootstrap"
+	mwe2RuntimeOnly 'org.eclipse.emf:org.eclipse.emf.mwe2.launch'
+	mwe2RuntimeOnly "org.eclipse.xtext:org.eclipse.xtext.common.types:$versions.xtext_bootstrap"
+	mwe2RuntimeOnly "org.eclipse.xtext:org.eclipse.xtext.ecore:$versions.xtext_bootstrap"
+	mwe2RuntimeOnly platform("org.eclipse.xtext:xtext-dev-bom:$project.version")
 }
 
 if (findProperty('compileXtend') == 'true') {
