@@ -98,7 +98,7 @@ if (isTestProject || name.contains('testlanguage')) {
 		enabled = false
 	}
 	javadocJar.enabled = false
-	uploadArchives.enabled = false
+	// uploadArchives.enabled = false // TODO
 } else {
 	artifacts.archives javadocJar
 }
