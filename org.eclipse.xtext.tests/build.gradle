@@ -33,8 +33,10 @@ sourceSets.mwe2 {
 	runtimeClasspath += processTestResources.outputs.files
 }
 jar.from sourceSets.mwe2.output
-sourcesJar.from sourceSets.mwe2.allSource
-
+sourcesJar {
+	dependsOn(generateTestXtext)
+	from sourceSets.mwe2.allSource
+}
 task generateTestLanguages(type: XtextGeneratorTask) {
 	workflow = file('src/org/eclipse/xtext/GenerateAllTestLanguages.mwe2')
 	outputs.dir 'src-gen'

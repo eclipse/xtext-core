@@ -30,8 +30,10 @@ sourceSets.mwe2 {
 }
 configurations.mwe2Implementation.extendsFrom configurations.api
 jar.from sourceSets.mwe2.output
-sourcesJar.from sourceSets.mwe2.allSource
-
+sourcesJar {
+	dependsOn generateMwe2Xtext
+	from sourceSets.mwe2.allSource
+}
 task generateXtextLanguage(type: XtextGeneratorTask) {
 	workflow = file('src/org/eclipse/xtext/xtext/bootstrap/GenerateXtext.mwe2')
 }
