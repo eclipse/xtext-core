@@ -56,12 +56,6 @@ pipeline {
         sh './2-maven-build.sh'
       }
     }
-
-    stage('Gradle generateTestLanguages') {
-      steps {
-        sh './gradlew generateTestLanguages -PuseJenkinsSnapshots=true'
-      }
-    }
   }
 
   post {
