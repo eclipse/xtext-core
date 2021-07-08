@@ -53,16 +53,12 @@ public class StateBasedContainer extends ResourceDescriptionsBasedContainer {
 	@Override
 	protected Iterable<IEObjectDescription> filterByURI(Iterable<IEObjectDescription> unfiltered) {
 		return Iterables.filter(unfiltered, new Predicate<IEObjectDescription>() {
-			private Collection<URI> contents = null;
+			private Collection<URI> contents = getState().getContents();
 
 			@Override
 			public boolean apply(IEObjectDescription input) {
-				if(contents == null) {
-					contents = getState().getContents();
-				}
 				URI resourceURI = input.getEObjectURI().trimFragment();
-				final boolean contains = contents.contains(resourceURI);
-				return contains;
+				return contents.contains(resourceURI);
 			}
 		});
 	}
