@@ -245,7 +245,7 @@ public class ReferenceUpdater implements IReferenceUpdater {
 		}
 		IScope scope = scopeProvider.getScope(updatable.getSourceEObject(), updatable.getEReference());
 		ISemanticRegion region = updatable.getReferenceRegion();
-		QualifiedName oldName = nameConverter.toQualifiedName(region.getText());
+		QualifiedName oldName = getQualifiedName(updatable);
 		IEObjectDescription oldDesc = scope.getSingleElement(oldName);
 		if (oldDesc != null && oldDesc.getEObjectOrProxy() == updatable.getTargetEObject()) {
 			return;
