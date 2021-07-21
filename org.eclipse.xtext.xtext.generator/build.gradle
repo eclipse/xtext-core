@@ -3,11 +3,36 @@ description = 'Generator for infrastructure of Xtext languages (supersedes org.e
 
 dependencies {
 	compile project(':org.eclipse.xtext')
+	// PIN transitive dependencies versions of org.eclipse.xtext.xtext.generator
+
+	// required by org.eclipse.core.runtime
+	compile 'org.eclipse.platform:org.eclipse.equinox.common'
+	compile 'org.eclipse.platform:org.eclipse.osgi'
+	compile 'org.eclipse.platform:org.eclipse.core.jobs'
+	compile 'org.eclipse.platform:org.eclipse.equinox.registry'
+	compile 'org.eclipse.platform:org.eclipse.equinox.preferences'
+	compile 'org.eclipse.platform:org.eclipse.core.contenttype'
+	compile 'org.eclipse.platform:org.eclipse.equinox.app'
+	// required by org.eclipse.core.resources
+	compile 'org.eclipse.platform:org.eclipse.core.expressions'
+	compile 'org.eclipse.platform:org.eclipse.core.filesystem'
+	// required by org.eclipse.text
+	compile 'org.eclipse.platform:org.eclipse.core.commands'
+	// required by org.eclipse.jdt.core
+	compile 'org.eclipse.platform:org.eclipse.text'
+	// required by org.eclipse.debug.core
+	compile 'org.eclipse.platform:org.eclipse.core.variables'
+	// required by org.eclipse.jdt.launching
+	compile 'org.eclipse.jdt:org.eclipse.jdt.debug'
+	compile 'org.eclipse.platform:org.eclipse.debug.core'
+	// required by org.eclipse.emf.codegen
+	compile 'org.eclipse.platform:org.eclipse.core.runtime'
+	compile 'org.eclipse.platform:org.eclipse.core.resources'
+	compile 'org.eclipse.jdt:org.eclipse.jdt.core'
+	compile 'org.eclipse.jdt:org.eclipse.jdt.launching'
+
 	compile 'org.eclipse.emf:org.eclipse.emf.codegen'
 	compile 'org.eclipse.emf:org.eclipse.emf.codegen.ecore'
 	compile 'org.eclipse.emf:org.eclipse.emf.mwe.utils'
 	compile 'org.eclipse.emf:org.eclipse.emf.mwe2.lib'
-	compile 'org.eclipse.platform:org.eclipse.equinox.common'
-	optional 'org.eclipse.platform:org.eclipse.core.runtime'
-	optional 'org.eclipse.jdt:org.eclipse.jdt.core'
 }
