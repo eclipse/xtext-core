@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2015, 2017 itemis AG (http://www.itemis.eu) and others.
+ * Copyright (c) 2015, 2021 itemis AG (http://www.itemis.eu) and others.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0.
@@ -8,13 +8,13 @@
  *******************************************************************************/
 package org.eclipse.xtext.xtext.wizard
 
+import org.eclipse.xtend.lib.annotations.Accessors
+import org.eclipse.xtext.util.JUnitVersion
+import org.eclipse.xtext.util.JavaVersion
+import org.eclipse.xtext.util.Strings
 import org.eclipse.xtext.xtext.wizard.ecore2xtext.Ecore2XtextGrammarCreator
 
 import static org.eclipse.xtext.xtext.wizard.ExternalDependency.*
-
-import org.eclipse.xtend.lib.annotations.Accessors
-import org.eclipse.xtext.util.Strings
-import org.eclipse.xtext.util.JUnitVersion
 
 /**
  * @author Dennis Huebner - Initial contribution and API
@@ -363,26 +363,38 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 							</configuration>
 							«IF config.needsTychoBuild»
 								<dependencies>
-									<dependency>
-										<groupId>org.eclipse.emf</groupId>
-										<artifactId>org.eclipse.emf.mwe2.launch</artifactId>
-										<version>${mwe2Version}</version>
-									</dependency>
-									<dependency>
-										<groupId>org.eclipse.xtext</groupId>
-										<artifactId>org.eclipse.xtext.common.types</artifactId>
-										<version>${xtextVersion}</version>
-									</dependency>
-									<dependency>
-										<groupId>org.eclipse.xtext</groupId>
-										<artifactId>org.eclipse.xtext.xtext.generator</artifactId>
-										<version>${xtextVersion}</version>
-									</dependency>
-									<dependency>
-										<groupId>org.eclipse.xtext</groupId>
-										<artifactId>org.eclipse.xtext.xbase</artifactId>
-										<version>${xtextVersion}</version>
-									</dependency>
+									«IF !config.javaVersion.isAtLeast(JavaVersion.JAVA11)»
+										<dependency>
+											<groupId>org.eclipse.emf</groupId>
+											<artifactId>org.eclipse.emf.mwe2.launch</artifactId>
+											<version>${mwe2Version}</version>
+										</dependency>
+										<dependency>
+											<groupId>org.eclipse.xtext</groupId>
+											<artifactId>org.eclipse.xtext.common.types</artifactId>
+											<version>${xtextVersion}</version>
+										</dependency>
+										<dependency>
+											<groupId>org.eclipse.xtext</groupId>
+											<artifactId>org.eclipse.xtext.xtext.generator</artifactId>
+											<version>${xtextVersion}</version>
+											<exclusions>
+												<exclusion>
+													<groupId>org.eclipse.platform</groupId>
+													<artifactId>org.eclipse.equinox.common</artifactId>
+												</exclusion>
+												<exclusion>
+													<groupId>org.eclipse.platform</groupId>
+													<artifactId>org.eclipse.core.runtime</artifactId>
+												</exclusion>
+											</exclusions>
+										</dependency>
+										<dependency>
+											<groupId>org.eclipse.xtext</groupId>
+											<artifactId>org.eclipse.xtext.xbase</artifactId>
+											<version>${xtextVersion}</version>
+										</dependency>
+									«ENDIF»
 									<dependency>
 										<groupId>org.eclipse.xtext</groupId>
 										<artifactId>xtext-antlr-generator</artifactId>
