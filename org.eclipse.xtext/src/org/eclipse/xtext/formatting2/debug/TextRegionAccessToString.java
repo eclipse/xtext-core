@@ -275,14 +275,6 @@ public class TextRegionAccessToString {
 	}
 
 	/**
-	 * @deprecated Use {@link #highlightOrigin()} instead
-	 */
-	@Deprecated
-	public TextRegionAccessToString hightlightOrigin() {
-		return highlightOrigin();
-	}
-
-	/**
 	 * @since 2.26
 	 */
 	public TextRegionAccessToString highlightOrigin() {
@@ -302,14 +294,6 @@ public class TextRegionAccessToString {
 
 	public boolean isHideIndentation() {
 		return hideIndentation;
-	}
-
-	/**
-	 * @deprecated use {@link #isHighlightOrigin()} instead
-	 */
-	@Deprecated
-	public boolean isHightlightOrigin() {
-		return isHighlightOrigin();
 	}
 
 	/**
