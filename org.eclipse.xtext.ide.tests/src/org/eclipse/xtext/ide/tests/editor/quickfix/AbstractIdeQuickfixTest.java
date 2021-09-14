@@ -37,6 +37,7 @@ import org.eclipse.lsp4j.TextEdit;
 import org.eclipse.lsp4j.WorkspaceEdit;
 import org.eclipse.lsp4j.services.LanguageClient;
 import org.eclipse.xtext.ide.editor.quickfix.DiagnosticResolution;
+import org.eclipse.xtext.ide.editor.quickfix.DiagnosticResolutionInfo;
 import org.eclipse.xtext.ide.editor.quickfix.IQuickFixProvider;
 import org.eclipse.xtext.ide.server.Document;
 import org.eclipse.xtext.ide.server.ILanguageServerAccess;
@@ -95,31 +96,31 @@ public abstract class AbstractIdeQuickfixTest {
 	private FileExtensionProvider fileExtensionProvider;
 
 	/**
-	 * Test that the expected quickfixes are offered on a given validation issue in a given DSL text.
+	 * Test that the expected quickfixes are offered on a given validation issue
+	 * in a given DSL text.
 	 *
-	 * @param fileContents
-	 *            The initial DSL text.
-	 * @param issueCode
-	 *            The code of the validation issue the offered quickfixes to test.
-	 * @param quickfixes
-	 *            The quickfixes that are expected to be offered on the given <code>issueCode</code>. Each expected quickfix should be described by the
-	 *            following triple:
-	 *            <ol>
-	 *            <li>the quickfix label</li>
-	 *            <li>the quickfix description</li>
-	 *            <li>the DSL text after the quickfix application</li>
-	 *            </ol>
+	 * @param fileContents The initial DSL text.
+	 * @param issueCode The code of the validation issue the offered quickfixes
+	 * to test.
+	 * @param quickfixes The quickfixes that are expected to be offered on the
+	 * given <code>issueCode</code>. Each expected quickfix should be described
+	 * by the following triple:
+	 * <ol>
+	 * <li>the quickfix label</li>
+	 * <li>the quickfix description</li>
+	 * <li>the DSL text after the quickfix application</li>
+	 * </ol>
 	 */
 	protected void assertQuickfixesOn(String fileContents, String issueCode, EClass type, QuickfixExpectation... quickfixes) {
 		String normalizedContents = toUnixLineSeparator(fileContents);
 		quickfixesAreOffered(createInMemoryFile(normalizedContents, type), issueCode, normalizedContents, quickfixes);
 	}
-	
+
 	protected void assertQuickFixOn(String fileContents, String expected, String quickFixLabel, String issueCode, EClass elementType) {
 		QuickfixExpectation quickfix = new QuickfixExpectation(quickFixLabel, quickFixLabel, expected);
 		assertQuickfixesOn(fileContents.toString(), issueCode, elementType, quickfix);
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	private <T> T createInMemoryFile(CharSequence content, EClass type) {
 		InMemoryURIHandler fs = new InMemoryURIHandler();
@@ -159,8 +160,7 @@ public abstract class AbstractIdeQuickfixTest {
 
 			@Override
 			public <T extends Object> CompletableFuture<T> doRead(String uri, Function<ILanguageServerAccess.Context, T> function) {
-				ILanguageServerAccess.Context ctx = new ILanguageServerAccess.Context(options.getResource(), options.getDocument(),
-						true, CancelIndicator.NullImpl);
+				ILanguageServerAccess.Context ctx = new ILanguageServerAccess.Context(options.getResource(), options.getDocument(), true, CancelIndicator.NullImpl);
 				return CompletableFuture.completedFuture(function.apply(ctx));
 			}
 
@@ -186,7 +186,8 @@ public abstract class AbstractIdeQuickfixTest {
 
 			@Override
 			public ResourceSet newLiveScopeResourceSet(URI uri) {
-				//re-using the existing ResourceSet because it contains the URI protocol mapping for "inmemory" resources.
+				// re-using the existing ResourceSet because it contains the URI
+				// protocol mapping for "inmemory" resources.
 				ResourceSet resourceSet = options.getResource().getResourceSet();
 				return resourceSet;
 			}
@@ -201,25 +202,23 @@ public abstract class AbstractIdeQuickfixTest {
 
 		options.setCodeActionParams(codeActionParams);
 
-		List<DiagnosticResolution> actualIssueResolutions = IterableExtensions.sortBy(quickFixProvider.getResolutions(options, issue),
-				DiagnosticResolution::getLabel);
-		assertEquals("The number of quickfixes does not match!", expectedSorted.size(),
-				actualIssueResolutions.size());
+		List<DiagnosticResolutionInfo> actualIssueResolutions = IterableExtensions.sortBy(quickFixProvider.getResolutions(issue, options), DiagnosticResolutionInfo::getLabel);
+		assertEquals("The number of quickfixes does not match!", expectedSorted.size(), actualIssueResolutions.size());
 
 		for (int i = 0; i < actualIssueResolutions.size(); i++) {
-			DiagnosticResolution actualIssueResolution = actualIssueResolutions.get(i);
+			DiagnosticResolutionInfo resolutionInfo = actualIssueResolutions.get(i);
 			QuickfixExpectation expectedIssueResolution = expectedSorted.get(i);
 
-			assertEquals(expectedIssueResolution.label, actualIssueResolution.getLabel());
-			assertEquals(expectedIssueResolution.description, actualIssueResolution.getLabel());
+			assertEquals(expectedIssueResolution.label, resolutionInfo.getLabel());
+			assertEquals(expectedIssueResolution.description, resolutionInfo.getLabel());
 
-			assertIssueResolutionResult(toUnixLineSeparator(expectedIssueResolution.getExpectedResult()), actualIssueResolution, originalText,
-					options.getDocument());
+			List<DiagnosticResolution> allResolutions = quickFixProvider.resolveResolution(resolutionInfo);
+
+			assertIssueResolutionResult(toUnixLineSeparator(expectedIssueResolution.getExpectedResult()), allResolutions.get(0), originalText, options.getDocument());
 		}
 	}
 
-	private void assertIssueResolutionResult(String expectedResult, DiagnosticResolution actualIssueResolution, String originalText,
-			Document doc) {
+	private void assertIssueResolutionResult(String expectedResult, DiagnosticResolution actualIssueResolution, String originalText, Document doc) {
 		WorkspaceEdit edit = actualIssueResolution.apply();
 		List<TextEdit> edits = edit.getChanges().values().stream().flatMap(List::stream).collect(Collectors.toList());
 		Document changedDocument = doc.applyChanges(edits);

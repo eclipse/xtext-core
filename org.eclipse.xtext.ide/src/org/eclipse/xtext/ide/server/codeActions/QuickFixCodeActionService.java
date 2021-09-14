@@ -20,7 +20,7 @@ import org.eclipse.lsp4j.Command;
 import org.eclipse.lsp4j.Diagnostic;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.xtext.ide.editor.quickfix.AbstractDeclarativeIdeQuickfixProvider;
-import org.eclipse.xtext.ide.editor.quickfix.DiagnosticResolution;
+import org.eclipse.xtext.ide.editor.quickfix.DiagnosticResolutionInfo;
 import org.eclipse.xtext.ide.editor.quickfix.IQuickFixProvider;
 import org.eclipse.xtext.ide.editor.quickfix.QuickFix;
 
@@ -39,6 +39,8 @@ import com.google.common.annotations.Beta;
 @Beta
 public class QuickFixCodeActionService implements ICodeActionService2 {
 
+	private static final String QUICKFIX = "quickfix";
+	
 	@Inject
 	private IQuickFixProvider quickfixes;
 
@@ -52,23 +54,20 @@ public class QuickFixCodeActionService implements ICodeActionService2 {
 
 		if (handleQuickfixes) {
 			for (Diagnostic error : options.getCodeActionParams().getContext().getDiagnostics()) {
-				List<DiagnosticResolution> resolutions = quickfixes.getResolutions(options, error);
-				for (DiagnosticResolution resolution : resolutions) {
-					result.add(Either.forRight(createFix(resolution, error)));
+				List<DiagnosticResolutionInfo> resolutions = quickfixes.getResolutions(error, options);
+				for (DiagnosticResolutionInfo resolution : resolutions) {
+					result.add(Either.forLeft(createFix(resolution)));
 				}
 			}
 		}
+		
 		return result;
 	}
 
-	private CodeAction createFix(DiagnosticResolution resolution, Diagnostic error) {
-		CodeAction codeAction = new CodeAction();
-		codeAction.setDiagnostics(Collections.singletonList(error));
-		codeAction.setTitle(resolution.getLabel());
-		codeAction.setEdit(resolution.apply());
-		codeAction.setKind(CodeActionKind.QuickFix);
-
-		return codeAction;
+	private Command createFix(DiagnosticResolutionInfo resolution) {
+		Command command = new Command(resolution.getLabel(), QUICKFIX);
+		command.setArguments(Collections.singletonList(resolution));
+		return command;
 	}
 
 }

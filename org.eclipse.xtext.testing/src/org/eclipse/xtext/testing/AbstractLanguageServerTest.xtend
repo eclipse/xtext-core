@@ -74,6 +74,7 @@ import org.eclipse.lsp4j.services.LanguageClient
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor
 import org.eclipse.xtext.LanguageInfo
+import org.eclipse.xtext.ide.editor.quickfix.DiagnosticResolutionInfo
 import org.eclipse.xtext.ide.server.Document
 import org.eclipse.xtext.ide.server.LanguageServerImpl
 import org.eclipse.xtext.ide.server.ServerModule
@@ -431,6 +432,12 @@ abstract class AbstractLanguageServerTest implements Endpoint {
 		title : «title»
 		args : 
 			«arguments.join(',')[toExpectation]»
+	'''
+	
+	protected dispatch def String toExpectation(DiagnosticResolutionInfo it) '''
+		resolution: «label»
+		id: «id»
+		issue: «issue.code.get»
 	'''
 
 	protected dispatch def String toExpectation(WorkspaceEdit it) '''

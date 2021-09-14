@@ -17,26 +17,24 @@ public class CodeActionTest extends AbstractTestLangLanguageServerTest {
 	@Test
 	public void testCodeAction() {
 		testCodeAction((TestCodeActionConfiguration it) -> {
-			String model =
-					"type foo {\n" +
+			String model = "type foo {\n" +
 					"	\n" +
 					"}\n";
 			it.setModel(model);
 			// contains quickfix and edit command
-			String expectedCodeActions =
+			String expectedCodeActions = "command : quickfix\n" +
 					"title : Change element name to first upper\n" +
-					"kind : quickfix\n" +
-					"command : \n" +
-					"codes : invalidName\n" +
-					"edit : changes :\n" +
-					"    MyModel.testlang : Foo [[0, 5] .. [0, 8]]\n" +
-					"documentChanges : \n" +
+					"args : \n" +
+					"    resolution: Change element name to first upper\n" +
+					"    id: fixLowerCaseName\n" +
+					"    issue: invalidName\n" +
 					"command : my.textedit.command\n" +
-					"title : Make \'foo\' upper case (Command)\n" +
+					"title : Make 'foo' upper case (Command)\n" +
 					"args : \n" +
 					"    changes :\n" +
 					"        MyModel.testlang : Foo [[0, 5] .. [0, 8]]\n" +
 					"    documentChanges : \n";
+
 			it.setExpectedCodeActions(expectedCodeActions);
 		});
 	}
@@ -44,15 +42,13 @@ public class CodeActionTest extends AbstractTestLangLanguageServerTest {
 	@Test
 	public void testSemanticCodeAction() {
 		testCodeAction((TestCodeActionConfiguration it) -> {
-			String model =
-					"type Foo {\n" +
+			String model = "type Foo {\n" +
 					"	String ccc\n" +
 					"	String aaa\n" +
 					"}\n" +
 					"type String {}\n";
 			it.setModel(model);
-			String expectedCodeActions =
-					"title : Sort Members\n" +
+			String expectedCodeActions = "title : Sort Members\n" +
 					"kind : \n" +
 					"command : \n" +
 					"codes : unsorted_members\n" +

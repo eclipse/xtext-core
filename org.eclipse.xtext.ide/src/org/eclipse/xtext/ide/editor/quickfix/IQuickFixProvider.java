@@ -35,8 +35,24 @@ public interface IQuickFixProvider {
 	 *            Contextual action options
 	 * @param issue
 	 *            EMF diagnostic issue
+	 * @param options
 	 * @return 0..n resolutions for the given issue
 	 */
-	List<DiagnosticResolution> getResolutions(Options options, Diagnostic issue);
+	List<DiagnosticResolutionInfo> getResolutions(Diagnostic issue, Options options);
+
+	/**
+	 * Resolves the given handle to a concrete quickfix that manipulates local resources.
+	 * 
+	 * @param info
+	 *            Quickfix information handle
+	 * @return Quickfix that can be applied by the client
+	 */
+	List<DiagnosticResolution> resolveResolution(DiagnosticResolutionInfo info);
+
+	/**
+	 * @return an ID that identifies this provider. Used to distinguish the appropriate provider when applying
+	 *         quickfixes.
+	 */
+	String getCommandProviderId();
 
 }

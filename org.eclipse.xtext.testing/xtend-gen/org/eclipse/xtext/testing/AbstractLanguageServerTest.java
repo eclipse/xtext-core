@@ -91,6 +91,7 @@ import org.eclipse.xtend.lib.annotations.Accessors;
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.LanguageInfo;
+import org.eclipse.xtext.ide.editor.quickfix.DiagnosticResolutionInfo;
 import org.eclipse.xtext.ide.server.Document;
 import org.eclipse.xtext.ide.server.LanguageServerImpl;
 import org.eclipse.xtext.ide.server.ServerModule;
@@ -887,6 +888,23 @@ public abstract class AbstractLanguageServerTest implements Endpoint {
     return _builder.toString();
   }
   
+  protected String _toExpectation(final DiagnosticResolutionInfo it) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("resolution: ");
+    String _label = it.getLabel();
+    _builder.append(_label);
+    _builder.newLineIfNotEmpty();
+    _builder.append("id: ");
+    String _id = it.getId();
+    _builder.append(_id);
+    _builder.newLineIfNotEmpty();
+    _builder.append("issue: ");
+    Object _get = it.getIssue().getCode().get();
+    _builder.append(_get);
+    _builder.newLineIfNotEmpty();
+    return _builder.toString();
+  }
+  
   protected String _toExpectation(final WorkspaceEdit it) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("changes :");
@@ -1526,6 +1544,8 @@ public abstract class AbstractLanguageServerTest implements Endpoint {
       return _toExpectation((WorkspaceEdit)it);
     } else if (it instanceof Either) {
       return _toExpectation((Either<?, ?>)it);
+    } else if (it instanceof DiagnosticResolutionInfo) {
+      return _toExpectation((DiagnosticResolutionInfo)it);
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
         Arrays.<Object>asList(it).toString());

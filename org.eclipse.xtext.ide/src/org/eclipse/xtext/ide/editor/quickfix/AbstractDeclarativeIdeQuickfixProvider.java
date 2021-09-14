@@ -17,12 +17,14 @@ import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 import org.eclipse.lsp4j.Diagnostic;
+import org.eclipse.xtext.Constants;
 import org.eclipse.xtext.ide.server.codeActions.ICodeActionService2.Options;
 
 import com.google.common.annotations.Beta;
 import com.google.common.base.Strings;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import com.google.inject.name.Named;
 
 /**
  * @author Heinrich Weichert
@@ -30,16 +32,20 @@ import com.google.inject.Provider;
  * @since 2.24
  */
 @Beta
-public class AbstractDeclarativeIdeQuickfixProvider implements IQuickFixProvider {
-
-	private static final Logger LOG = Logger.getLogger(AbstractDeclarativeIdeQuickfixProvider.class);
+public abstract class AbstractDeclarativeIdeQuickfixProvider implements IQuickFixProvider {
 
 	@Inject
 	private Provider<DiagnosticResolutionAcceptor> issueResolutionAcceptorProvider;
 
-	private boolean getFixMethodPredicate(Method input, String issueCode) {
+	@Inject
+	@Named(Constants.LANGUAGE_NAME)
+	private String languageName;
+
+	private static final Logger LOG = Logger.getLogger(AbstractDeclarativeIdeQuickfixProvider.class);
+
+	protected boolean isQuickMethodForIssueCode(Method input, String issueCode) {
 		for (QuickFix annotation : input.getAnnotationsByType(QuickFix.class)) {
-			boolean result = annotation != null && Objects.equals(issueCode,annotation.value())
+			boolean result = annotation != null && Objects.equals(issueCode, annotation.value())
 					&& input.getParameterTypes().length == 1 && Void.TYPE == input.getReturnType()
 					&& input.getParameterTypes()[0].isAssignableFrom(DiagnosticResolutionAcceptor.class);
 			if (result) {
@@ -49,38 +55,76 @@ public class AbstractDeclarativeIdeQuickfixProvider implements IQuickFixProvider
 		return false;
 	}
 
-	private List<DiagnosticResolution> getResolutions(Options options, Iterable<Method> fixMethods) {
+	private List<DiagnosticResolution> getQuickFixes(DiagnosticResolutionInfo info) {
 		DiagnosticResolutionAcceptor issueResolutionAcceptor = issueResolutionAcceptorProvider.get();
-		for (Method fixMethod : fixMethods) {
+
+		Method method = findMethodById(info);
+		try {
+			// will throw if this is not a public method, but it should be
+			method.invoke(this, issueResolutionAcceptor);
+		} catch (Exception e) {
+			LOG.error("Error executing fix method", e);
+		}
+		return issueResolutionAcceptor.getDiagnosticResolutions(info.getOptions());
+	}
+
+	private Method findMethodById(DiagnosticResolutionInfo info) {
+		return getQuickFixMethodsForIssue(info.getIssue()).stream()
+				.filter(method -> calculateMethodId(method).equals(info.getId())).findFirst()
+				.orElseThrow(IllegalArgumentException::new);
+	}
+
+	private List<DiagnosticResolutionInfo> collectPossibleQuickFixes(Iterable<Method> methods) {
+		DiagnosticResolutionAcceptor issueResolutionAcceptor = issueResolutionAcceptorProvider.get();
+		for (Method method : methods) {
+			issueResolutionAcceptor.setCurrentId(calculateMethodId(method));
 			try {
 				// will throw if this is not a public method, but it should be
-				fixMethod.invoke(this, issueResolutionAcceptor);
+				method.invoke(this, issueResolutionAcceptor);
 			} catch (Exception e) {
 				LOG.error("Error executing fix method", e);
 			}
 		}
-		return issueResolutionAcceptor.getDiagnosticResolutions(options);
+		return issueResolutionAcceptor.getDiagnosticResolutionInfos();
 	}
 
-	private Iterable<Method> collectMethods(Class<? extends AbstractDeclarativeIdeQuickfixProvider> clazz,
-			String issueCode) {
-		return Arrays.stream(clazz.getMethods()).filter(method -> getFixMethodPredicate(method, issueCode))
+	protected String calculateMethodId(Method method) {
+		return method.getName();
+	}
+
+	private List<Method> collectQuickMethodsForIssueCode(Class<?> clazz, String issueCode) {
+		return Arrays.stream(clazz.getMethods()).filter(method -> isQuickMethodForIssueCode(method, issueCode))
 				.collect(Collectors.toList());
 	}
 
-	private Iterable<Method> getFixMethods(Diagnostic issue) {
+	private List<Method> getQuickFixMethodsForIssue(Diagnostic issue) {
 		if (Strings.isNullOrEmpty(issue.getCode().getLeft())) {
 			return Collections.emptyList();
 		}
-		return collectMethods(getClass(), issue.getCode().getLeft());
+		return collectQuickMethodsForIssueCode(getClass(), issue.getCode().getLeft());
 	}
 
 	@Override
-	public List<DiagnosticResolution> getResolutions(Options options, Diagnostic issue) {
+	public List<DiagnosticResolutionInfo> getResolutions(Diagnostic issue, Options options) {
 		if (issue == null || issue.getCode() == null || issue.getMessage() == null || issue.getSeverity() == null) {
 			return Collections.emptyList();
 		}
-		return getResolutions(options, getFixMethods(issue));
+		List<DiagnosticResolutionInfo> resolutions = collectPossibleQuickFixes(getQuickFixMethodsForIssue(issue));
+		for (DiagnosticResolutionInfo info : resolutions) {
+			info.setIssue(issue);
+			info.setOptions(options);
+		}
+		return resolutions;
+	}
+
+	@Override
+	public List<DiagnosticResolution> resolveResolution(DiagnosticResolutionInfo info) {
+		return getQuickFixes(info);
+	}
+
+	@Override
+	public String getCommandProviderId() {
+		return "quickfix:" + languageName;
 	}
 
 }

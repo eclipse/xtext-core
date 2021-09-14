@@ -25,9 +25,11 @@ import com.google.inject.Inject;
  */
 public class DiagnosticResolutionAcceptor {
 
-	private List<DiagnosticResolution> issues = new ArrayList<>();
+	private List<DiagnosticResolution> resourceIssueResolutions = new ArrayList<>();
 
 	private DiagnosticModificationContext.Factory modificationContextFactory;
+
+	private String currentId;
 
 	@Inject
 	public DiagnosticResolutionAcceptor(DiagnosticModificationContext.Factory modificationContextFactory) {
@@ -35,12 +37,28 @@ public class DiagnosticResolutionAcceptor {
 	}
 
 	public void accept(String label, IModification<EObject> modification) {
-		issues.add(new DiagnosticResolution(label, modificationContextFactory, modification));
+		resourceIssueResolutions.add(new DiagnosticResolution(label, modificationContextFactory, modification));
+	}
+
+	public List<DiagnosticResolutionInfo> getDiagnosticResolutionInfos() {
+		List<DiagnosticResolutionInfo> infos = new ArrayList<>();
+		for (DiagnosticResolution issueResolution : resourceIssueResolutions) {
+			DiagnosticResolutionInfo info = new DiagnosticResolutionInfo(issueResolution.getLabel(), currentId, issueResolution.getRelevance());
+			infos.add(info);
+		}
+		return infos;
 	}
 
 	public List<DiagnosticResolution> getDiagnosticResolutions(Options options) {
-		issues.forEach(issue -> issue.configure(options));
-		return issues;
+		resourceIssueResolutions.forEach(issue -> issue.configure(options));
+		return resourceIssueResolutions;
+	}
+
+	/**
+	 * Sets the current context ID (current QuickFix method)
+	 */
+	public void setCurrentId(String id) {
+		this.currentId=id;
 	}
 
 }
