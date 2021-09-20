@@ -7,10 +7,10 @@ import java.io.InputStream;
 import org.eclipse.xtext.parser.antlr.IAntlrTokenFileProvider;
 
 public class SimpleExpressionsAntlrTokenFileProvider implements IAntlrTokenFileProvider {
-	
+
 	@Override
 	public InputStream getAntlrTokenFile() {
 		ClassLoader classLoader = getClass().getClassLoader();
-    	return classLoader.getResourceAsStream("org/eclipse/xtext/xtext/generator/parser/antlr/splitting/parser/antlr/internal/InternalSimpleExpressions.tokens");
+		return classLoader.getResourceAsStream("org/eclipse/xtext/xtext/generator/parser/antlr/splitting/parser/antlr/internal/InternalSimpleExpressions.tokens");
 	}
 }
