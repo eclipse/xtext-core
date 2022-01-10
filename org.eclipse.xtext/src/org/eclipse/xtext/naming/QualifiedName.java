@@ -36,7 +36,7 @@ public class QualifiedName implements Comparable<QualifiedName> {
 
 	private QualifiedName lowerCase;
 
-	private static boolean USE_INTERNING = Boolean.getBoolean("xtext.qn.interning");
+	public static boolean USE_INTERNING = Boolean.getBoolean("xtext.qn.interning");
 
 	/**
 	 * The single existing empty QualifiedName.
