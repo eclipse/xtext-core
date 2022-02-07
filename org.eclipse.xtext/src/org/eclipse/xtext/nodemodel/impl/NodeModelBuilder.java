@@ -273,16 +273,17 @@ public class NodeModelBuilder {
 		}
 	}
 	
-	public void replaceAndTransferLookAhead(INode oldNode, INode newRootNode) {
+	private AbstractNode doReplaceAndTransferLookAhead(INode oldNode, INode newRootNode) {
 		AbstractNode newNode = ((CompositeNode) newRootNode).basicGetFirstChild();
 		replaceWithoutChildren((AbstractNode) oldNode, newNode);
 		if (oldNode instanceof ICompositeNode && newNode instanceof CompositeNode) {
 			CompositeNode newCompositeNode = (CompositeNode) newNode;
 			newCompositeNode.basicSetLookAhead(((ICompositeNode) oldNode).getLookAhead());
 		}
-		ICompositeNode root = newNode.getRootNode();
-		BidiTreeIterator<AbstractNode> iterator = ((AbstractNode) root).basicIterator();
-		int offset = 0;
+		return newNode;
+	}
+
+	private void setLeafNodesTotalOffset(int offset, BidiTreeIterator<AbstractNode> iterator) {
 		while(iterator.hasNext()) {
 			AbstractNode node = iterator.next();
 			if (node instanceof LeafNode) {
@@ -290,6 +291,20 @@ public class NodeModelBuilder {
 				offset += node.getTotalLength();
 			}
 		}
+	}
+
+	public void replaceAndTransferLookAhead(INode oldNode, INode newRootNode) {
+		AbstractNode newNode = doReplaceAndTransferLookAhead(oldNode, newRootNode);
+		ICompositeNode root = newNode.getRootNode();
+		setLeafNodesTotalOffset(0, ((AbstractNode) root).basicIterator());
+	}
+
+	/**
+	 * @since 2.26
+	 */
+	 public void replaceAndTransferLookAheadKeepingOffset(INode oldNode, INode newRootNode) {
+		AbstractNode newNode = doReplaceAndTransferLookAhead(oldNode, newRootNode);
+		setLeafNodesTotalOffset(oldNode.getTotalOffset(), newNode.basicIterator());
 	}
 
 	protected void replaceWithoutChildren(AbstractNode oldNode, AbstractNode newNode) {
