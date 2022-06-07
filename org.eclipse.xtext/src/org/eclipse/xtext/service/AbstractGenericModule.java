@@ -32,6 +32,7 @@ public abstract class AbstractGenericModule implements Module {
 	public void configure(Binder binder) {
 		Module compound = getBindings();
 		compound.configure(binder);
+		binder.disableCircularProxies();
 	}
 
 	public final CompoundModule getBindings() {

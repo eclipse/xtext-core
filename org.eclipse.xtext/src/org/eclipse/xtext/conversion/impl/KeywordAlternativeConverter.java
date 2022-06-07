@@ -25,6 +25,7 @@ import org.eclipse.xtext.nodemodel.INode;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.inject.Inject;
+import com.google.inject.Provider;
 
 /**
  * @author Sebastian Zarnekow - Initial contribution and API
@@ -35,7 +36,7 @@ public class KeywordAlternativeConverter extends AbstractValueConverter<String> 
 	private Set<String> keywords;
 	private AbstractRule delegateRule;
 	@Inject
-	private IValueConverterService delegateService;
+	private Provider<IValueConverterService> delegateService;
 	private IValueConverter<Object> delegateConverter;
 
 	@Override
@@ -58,20 +59,21 @@ public class KeywordAlternativeConverter extends AbstractValueConverter<String> 
 		if (delegateConverter != null) {
 			return delegateConverter;
 		}
+		IValueConverterService converterService = delegateService.get();
 		if (delegateService instanceof IValueConverterService.Introspectable) {
-			return delegateConverter = ((IValueConverterService.Introspectable) delegateService).getConverter(delegateRule.getName());
+			return delegateConverter = ((IValueConverterService.Introspectable) converterService).getConverter(delegateRule.getName());
 		} else {
 			final String ruleName = delegateRule.getName();
 			return delegateConverter = new IValueConverter<Object>() {
 
 				@Override
 				public Object toValue(String string, INode node) throws ValueConverterException {
-					return delegateService.toValue(string, ruleName, node);
+					return converterService.toValue(string, ruleName, node);
 				}
 
 				@Override
 				public String toString(Object value) throws ValueConverterException {
-					return delegateService.toString(value, ruleName);
+					return converterService.toString(value, ruleName);
 				}
 				
 			};

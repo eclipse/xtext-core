@@ -39,6 +39,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 import com.google.inject.Inject;
+import com.google.inject.Provider;
 
 /**
  * @author Moritz Eysholdt - Initial contribution and API
@@ -46,7 +47,7 @@ import com.google.inject.Inject;
 public class AssignmentFinder implements IAssignmentFinder {
 
 	@Inject
-	protected IContextFinder contextFinder;
+	protected Provider<IContextFinder> contextFinder;
 
 	@Inject
 	protected ICrossReferenceSerializer crossRefSerializer;
@@ -99,7 +100,7 @@ public class AssignmentFinder implements IAssignmentFinder {
 		}
 		if (children.size() < 2)
 			return Sets.newHashSet(children.values());
-		Set<ISerializationContext> found = contextFinder.findByContents(value, children.keySet());
+		Set<ISerializationContext> found = contextFinder.get().findByContents(value, children.keySet());
 		Set<AbstractElement> result = Sets.newLinkedHashSet();
 		for (ISerializationContext ctx : children.keySet())
 			if (found.contains(ctx))

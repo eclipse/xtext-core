@@ -36,6 +36,7 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 import com.google.inject.Inject;
+import com.google.inject.Provider;
 
 /**
  * @author Moritz Eysholdt - Initial contribution and API
@@ -121,7 +122,7 @@ public class AssignmentQuantityAllocator implements IAssignmentQuantityAllocator
 	}
 
 	@Inject
-	protected IConcreteSyntaxDiagnosticProvider diagnosticProvider;
+	protected Provider<IConcreteSyntaxDiagnosticProvider> diagnosticProvider;
 
 	@Inject
 	protected IAssignmentQuantityIntervalProvider intervalProvider;
@@ -151,7 +152,7 @@ public class AssignmentQuantityAllocator implements IAssignmentQuantityAllocator
 			EStructuralFeature f = obj.eClass().getEStructuralFeature(
 					((Assignment) ele.getGrammarElement()).getFeature());
 			if (f == null)
-				acceptor.add(diagnosticProvider.createFeatureMissingDiagnostic(rule, obj, ele, Collections
+				acceptor.add(diagnosticProvider.get().createFeatureMissingDiagnostic(rule, obj, ele, Collections
 						.<ISyntaxConstraint> emptySet()));
 			else
 				assignments.put(f, ele);
@@ -174,7 +175,7 @@ public class AssignmentQuantityAllocator implements IAssignmentQuantityAllocator
 		for (EStructuralFeature f : obj.eClass().getEAllStructuralFeatures()) {
 			int quantity = getFeatureQuantity(obj, f);
 			if (quantity > 0 && !assignments.containsKey(f))
-				acceptor.add(diagnosticProvider.createAssignmentMissingDiagnostic(rule, obj, f, Collections
+				acceptor.add(diagnosticProvider.get().createAssignmentMissingDiagnostic(rule, obj, f, Collections
 						.<ISyntaxConstraint> emptySet()));
 			else
 				quants.setFeatureQuantity(f, quantity);

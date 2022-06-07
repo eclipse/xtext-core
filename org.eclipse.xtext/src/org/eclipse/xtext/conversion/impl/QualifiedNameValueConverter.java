@@ -21,6 +21,7 @@ import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.util.Strings;
 
 import com.google.inject.Inject;
+import com.google.inject.Provider;
 import com.google.inject.Singleton;
 
 /**
@@ -33,7 +34,7 @@ import com.google.inject.Singleton;
 public class QualifiedNameValueConverter extends AbstractValueConverter<String> {
 
 	@Inject
-	protected IValueConverterService valueConverterService;
+	protected Provider<IValueConverterService> valueConverterService;
 	
 	/**
 	 * @since 2.7
@@ -123,7 +124,7 @@ public class QualifiedNameValueConverter extends AbstractValueConverter<String> 
 				if(getWildcardLiteral().equals(segment)) {
 					buffer.append(getWildcardLiteral());
 				} else {
-					buffer.append((String) valueConverterService.toValue(segment, getDelegateRuleName(), null));
+					buffer.append((String) valueConverterService.get().toValue(segment, getDelegateRuleName(), null));
 				}
 			}
 		}
@@ -154,20 +155,21 @@ public class QualifiedNameValueConverter extends AbstractValueConverter<String> 
 	}
 	
 	private IValueConverter<Object> initializeDelegateConverter() {
-		if (valueConverterService instanceof IValueConverterService.Introspectable) {
-			return delegateConverter = ((IValueConverterService.Introspectable) valueConverterService).getConverter(getDelegateRuleName());
+		IValueConverterService converterService = valueConverterService.get();
+		if (converterService instanceof IValueConverterService.Introspectable) {
+			return delegateConverter = ((IValueConverterService.Introspectable) converterService).getConverter(getDelegateRuleName());
 		} else {
 			final String ruleName = getDelegateRuleName();
 			return delegateConverter = new IValueConverter<Object>() {
 
 				@Override
 				public Object toValue(String string, INode node) throws ValueConverterException {
-					return valueConverterService.toValue(string, ruleName, node);
+					return converterService.toValue(string, ruleName, node);
 				}
 
 				@Override
 				public String toString(Object value) throws ValueConverterException {
-					return valueConverterService.toString(value, ruleName);
+					return converterService.toString(value, ruleName);
 				}
 				
 			};
