@@ -17,7 +17,9 @@ dependencies {
 	api 'org.eclipse.platform:org.eclipse.osgi'
 	api 'org.eclipse.platform:org.eclipse.core.jobs'
 	api 'org.eclipse.platform:org.eclipse.equinox.registry'
-	api 'org.eclipse.platform:org.eclipse.equinox.preferences'
+	api ('org.eclipse.platform:org.eclipse.equinox.preferences') {
+        exclude group: 'org.osgi.service', module: 'org.osgi.service.prefs'
+    }
 	api 'org.eclipse.platform:org.eclipse.core.contenttype'
 	api 'org.eclipse.platform:org.eclipse.equinox.app'
 	// required by org.eclipse.core.resources
