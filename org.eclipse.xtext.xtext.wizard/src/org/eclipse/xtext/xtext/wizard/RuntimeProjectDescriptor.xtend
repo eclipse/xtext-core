@@ -379,6 +379,12 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 											<groupId>org.eclipse.xtext</groupId>
 											<artifactId>org.eclipse.xtext.xtext.generator</artifactId>
 											<version>${xtextVersion}</version>
+											<exclusions>
+												<exclusion>
+													<groupId>org.osgi.service</groupId>
+													<artifactId>org.osgi.service.prefs</artifactId>
+												</exclusion>
+											</exclusions>
 										</dependency>
 										<dependency>
 											<groupId>org.eclipse.xtext</groupId>
