@@ -8,6 +8,7 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.server;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -180,7 +181,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	private LanguageClient client;
 
 	private volatile Map<String, JsonRpcMethod> supportedMethods;
-	
+
 	private final CompletableFuture<InitializedParams> initialized = new CompletableFuture<>();
 
 	private final Multimap<String, Endpoint> extensionProviders = LinkedListMultimap.create();
@@ -773,25 +774,26 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	protected List<Either<Command, CodeAction>> codeAction(CodeActionParams params, CancelIndicator cancelIndicator) {
 		URI uri = getURI(params.getTextDocument());
 		IResourceServiceProvider serviceProvider = getResourceServiceProvider(uri);
-		ICodeActionService2 service2 = getService(serviceProvider, ICodeActionService2.class);
-		if (service2 == null) {
+		ICodeActionService2 codeActionService = getService(serviceProvider, ICodeActionService2.class);
+		if (codeActionService == null) {
+			return Collections.emptyList();
+		}
+		List<Method> fixMethods = codeActionService.getFixMethods(params);
+		if (fixMethods == null || fixMethods.isEmpty()) {			
 			return Collections.emptyList();
 		}
 		return workspaceManager.doRead(uri, (doc, resource) -> {
-			List<Either<Command, CodeAction>> result = new ArrayList<>();
-			if (service2 != null) {
-				ICodeActionService2.Options options = new ICodeActionService2.Options();
-				options.setDocument(doc);
-				options.setResource(resource);
-				options.setLanguageServerAccess(access);
-				options.setCodeActionParams(params);
-				options.setCancelIndicator(cancelIndicator);
-				List<Either<Command, CodeAction>> actions = service2.getCodeActions(options);
-				if (actions != null) {
-					result.addAll(actions);
-				}
+			ICodeActionService2.Options options = new ICodeActionService2.Options();
+			options.setDocument(doc);
+			options.setResource(resource);
+			options.setLanguageServerAccess(access);
+			options.setCodeActionParams(params);
+			options.setCancelIndicator(cancelIndicator);
+			List<Either<Command, CodeAction>> actions = codeActionService.getCodeActions(options, fixMethods);
+			if (actions != null) {
+				return actions;
 			}
-			return result;
+			return Collections.emptyList();
 		});
 	}
 
@@ -1017,14 +1019,14 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 		options.setCancelIndicator(cancelIndicator);
 		return renameService.prepareRename(options);
 	}
-	
+
 	/**
 	 * @since 2.26
 	 */
 	public CompletableFuture<List<FoldingRange>> foldingRange(FoldingRangeRequestParams params) {
 		return requestManager.runRead(cancelIndicator -> foldingRange(params, cancelIndicator));
 	}
-	
+
 	/**
 	 * @since 2.26
 	 */
@@ -1122,7 +1124,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 		public void addBuildListener(ILanguageServerAccess.IBuildListener listener) {
 			workspaceManager.addBuildListener(listener);
 		}
-		
+
 		@Override
 		public void removeBuildListener(ILanguageServerAccess.IBuildListener listener) {
 			workspaceManager.removeBuildListener(listener);

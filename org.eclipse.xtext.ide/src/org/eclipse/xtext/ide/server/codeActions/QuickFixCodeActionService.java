@@ -8,6 +8,7 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.server.codeActions;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -18,6 +19,7 @@ import javax.inject.Inject;
 
 import org.eclipse.lsp4j.CodeAction;
 import org.eclipse.lsp4j.CodeActionKind;
+import org.eclipse.lsp4j.CodeActionParams;
 import org.eclipse.lsp4j.Command;
 import org.eclipse.lsp4j.Diagnostic;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
@@ -45,7 +47,7 @@ public class QuickFixCodeActionService implements ICodeActionService2 {
 	private IQuickFixProvider quickfixes;
 
 	@Override
-	public List<Either<Command, CodeAction>> getCodeActions(Options options) {
+	public List<Either<Command, CodeAction>> getCodeActions(Options options, List<Method> fixMethods) {
 		boolean handleQuickfixes = options.getCodeActionParams().getContext().getOnly() == null
 				|| options.getCodeActionParams().getContext().getOnly().isEmpty()
 				|| options.getCodeActionParams().getContext().getOnly().contains(CodeActionKind.QuickFix);
@@ -56,7 +58,7 @@ public class QuickFixCodeActionService implements ICodeActionService2 {
 
 		List<Either<Command, CodeAction>> result = new ArrayList<>();
 		for (Diagnostic diagnostic : options.getCodeActionParams().getContext().getDiagnostics()) {
-			List<DiagnosticResolution> resolutions = quickfixes.getResolutions(options, diagnostic).stream()
+			List<DiagnosticResolution> resolutions = quickfixes.getResolutions(options, fixMethods).stream()
 					.sorted(Comparator.nullsLast(Comparator.comparing(DiagnosticResolution::getLabel)))
 					.collect(Collectors.toList());
 			for (DiagnosticResolution resolution : resolutions) {
@@ -64,6 +66,15 @@ public class QuickFixCodeActionService implements ICodeActionService2 {
 			}
 		}
 		return result;
+	}
+
+	@Override
+	public List<Method> getFixMethods(CodeActionParams codeActionParams) {
+		List<Method> methods =  new ArrayList<>();
+		for (Diagnostic diagnostic : codeActionParams.getContext().getDiagnostics()) {
+			methods.addAll(quickfixes.getFixMethods(diagnostic));
+		}
+		return methods;
 	}
 
 	private CodeAction createFix(DiagnosticResolution resolution, Diagnostic diagnostic) {

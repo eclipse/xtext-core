@@ -8,13 +8,17 @@
  */
 package org.eclipse.xtext.ide.tests.testlanguage.ide.server;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.lsp4j.CodeAction;
+import org.eclipse.lsp4j.CodeActionParams;
 import org.eclipse.lsp4j.Command;
 import org.eclipse.lsp4j.Diagnostic;
 import org.eclipse.lsp4j.Range;
@@ -46,20 +50,47 @@ public class CodeActionService extends QuickFixCodeActionService {
 	private IChangeSerializer serializer;
 
 	@Override
-	public List<Either<Command, CodeAction>> getCodeActions(ICodeActionService2.Options options) {
-		List<Either<Command, CodeAction>> actions = super.getCodeActions(options);
+	public List<Either<Command, CodeAction>> getCodeActions(ICodeActionService2.Options options, List<Method> fixMethods) {
+		List<Either<Command, CodeAction>> actions = super.getCodeActions(options, fixMethods);
 		for (Diagnostic d : options.getCodeActionParams().getContext().getDiagnostics()) {
-			Object code = d.getCode().get();
-			if (TestLanguageValidator.INVALID_NAME.equals(code)) {
-				actions.add(Either.forLeft(fixInvalidName(d, options)));
-			} else if (TestLanguageValidator.UNSORTED_MEMBERS.equals(code)) {
-				actions.add(Either.forRight(fixUnsortedMembers(d, options)));
-			}
+			fixMethods.stream().forEach(m -> {
+				try {
+					Object returnObject = m.invoke(this, d, options);
+					if (returnObject instanceof Command) {
+						actions.add(Either.forLeft((Command) returnObject));
+					} else {
+						actions.add(Either.forRight((CodeAction) returnObject));
+					}
+				} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+					e.printStackTrace();
+				}
+			});
 		}
 		return actions;
 	}
 
-	private Command fixInvalidName(Diagnostic d, ICodeActionService2.Options options) {
+	@Override
+	public List<Method> getFixMethods(CodeActionParams codeActionParams) {
+		@SuppressWarnings("rawtypes")
+		Class[] arguments = new Class[] {Diagnostic.class, ICodeActionService2.Options.class} ;
+		for (Diagnostic d : codeActionParams.getContext().getDiagnostics()) {
+			Object code = d.getCode().get();
+			String methodName = "unmapped_method";
+			if (TestLanguageValidator.INVALID_NAME.equals(code)) {
+				methodName = "fixInvalidName";
+			} else if (TestLanguageValidator.UNSORTED_MEMBERS.equals(code)) {
+				methodName = "fixUnsortedMembers";
+			}
+			try {
+				return Collections.singletonList(CodeActionService.class.getDeclaredMethod(methodName, arguments));				
+			} catch (NoSuchMethodException | SecurityException e) {
+				e.printStackTrace();
+			}
+		}
+		return Collections.emptyList();
+	}
+
+	public Command fixInvalidName(Diagnostic d, ICodeActionService2.Options options) {
 		String string = options.getDocument().getSubstring(d.getRange());
 		Command command = new Command();
 		command.setCommand("my.textedit.command");
@@ -74,7 +105,7 @@ public class CodeActionService extends QuickFixCodeActionService {
 		return command;
 	}
 
-	private CodeAction fixUnsortedMembers(Diagnostic d, ICodeActionService2.Options options) {
+	public CodeAction fixUnsortedMembers(Diagnostic d, ICodeActionService2.Options options) {
 		WorkspaceEdit wsEdit = recordWorkspaceEdit(options, (Resource copiedResource) -> {
 			Model model = Iterables.getFirst(Iterables.filter(copiedResource.getContents(), Model.class), null);
 			if (model != null) {

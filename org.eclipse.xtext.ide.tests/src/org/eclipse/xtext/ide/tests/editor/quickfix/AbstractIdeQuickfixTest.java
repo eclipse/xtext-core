@@ -11,6 +11,7 @@ package org.eclipse.xtext.ide.tests.editor.quickfix;
 import static org.eclipse.xtext.util.Strings.*;
 import static org.junit.Assert.*;
 
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -201,8 +202,9 @@ public abstract class AbstractIdeQuickfixTest {
 		options.setCodeActionParams(codeActionParams);
 
 		for (QuickfixExpectation expectedIssueResolution: expectedSorted) {
+			List<Method> fixMethods = quickFixProvider.getFixMethods(issue);
 			List<DiagnosticResolution> actualIssueResolutions = 
-					quickFixProvider.getResolutions(options, issue).stream()
+					quickFixProvider.getResolutions(options, fixMethods).stream()
 					.filter(r -> r.getLabel().equals(expectedIssueResolution.getLabel()))
 					.collect(Collectors.toList());
 			assertEquals("More than one quickfix available!", 1, actualIssueResolutions.size());
