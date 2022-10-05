@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.FileEvent;
 import org.eclipse.lsp4j.WorkspaceFolder;
 import org.eclipse.xtext.ide.server.IMultiRootWorkspaceConfigFactory;
 import org.eclipse.xtext.ide.server.MultiRootWorkspaceConfigFactory;
-import org.eclipse.xtext.ide.server.ServerModule;
 import org.eclipse.xtext.testing.ReferenceTestConfiguration;
 import org.eclipse.xtext.util.Modules2;
 import org.eclipse.xtext.workspace.FileProjectConfig;
@@ -38,7 +37,7 @@ import com.google.inject.Module;
 public class IndexOnlyProjectTest extends AbstractTestLangLanguageServerTest {
 	@Override
 	public com.google.inject.Module getServerModule() {
-		return Modules2.mixin(new ServerModule(), new Module() {
+		return Modules2.mixin(super.getServerModule(), new Module() {
 
 			@Override
 			public void configure(Binder binder) {

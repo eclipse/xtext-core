@@ -71,7 +71,9 @@ public class WorkspaceManager {
 	@Inject 
 	private UriExtensions uriExtensions;
 
-	private BuildManager buildManager;
+	private BuildManager persistedBuildManager;
+
+	private BuildManager dirtyBuildManager;
 
 	private List<WorkspaceFolder> workspaceFolders = Collections.emptyList();
 
@@ -83,9 +85,13 @@ public class WorkspaceManager {
 	
 	private final List<ILanguageServerAccess.IBuildListener> buildListeners = new CopyOnWriteArrayList<>();
 
-	private final Map<String, ResourceDescriptionsData> fullIndex = new HashMap<>();
+	private final Map<String, ResourceDescriptionsData> fullPersistedIndex = new HashMap<>();
+
+	private final Map<String, ResourceDescriptionsData> fullDirtyIndex = new HashMap<>();
 
 	private final Map<URI, Document> openDocuments = createOpenDocuments();
+
+	private final Map<URI, Document> dirtyDocuments = createDirtyDocuments();
 
 	/**
 	 * Add the listener to this workspace.
@@ -127,16 +133,51 @@ public class WorkspaceManager {
 		}
 	};
 
+	private final IExternalContentSupport.IExternalContentProvider dirtyDocumentsContentProvider = new IExternalContentSupport.IExternalContentProvider() {
+		@Override
+		public IExternalContentSupport.IExternalContentProvider getActualContentProvider() {
+			return this;
+		}
+
+		@Override
+		public String getContent(URI uri) {
+			Document document = dirtyDocuments.get(uri);
+			if (document != null) {
+				return document.getContents();
+			}
+			return null;
+		}
+
+		@Override
+		public boolean hasContent(URI uri) {
+			return isDocumentDirty(uri);
+		}
+	};
+
 	/**
-	 * Inject the build manager and establish circular dependency.
+	 * Inject the persisted build manager and establish circular dependency.
 	 *
 	 * @param buildManager
 	 *            the build manager.
+	 * @since 2.29
 	 */
 	@Inject
-	public void setBuildManager(BuildManager buildManager) {
-		buildManager.setWorkspaceManager(this);
-		this.buildManager = buildManager;
+	public void setPersistedBuildManager(BuildManager persistedBuildManager) {
+		persistedBuildManager.setWorkspaceManager(this, false);
+		this.persistedBuildManager = persistedBuildManager;
+	}
+
+	/**
+	 * Inject the dirty build manager and establish circular dependency.
+	 *
+	 * @param dirtyBuildManager
+	 *            the build manager.
+	 * @since 2.29
+	 */
+	@Inject
+	public void setDirtyBuildManager(BuildManager dirtyBuildManager) {
+		dirtyBuildManager.setWorkspaceManager(this, true);
+		this.dirtyBuildManager = dirtyBuildManager;
 	}
 
 	/**
@@ -204,6 +245,25 @@ public class WorkspaceManager {
 	}
 
 	/**
+	 * Creates the dirty document map and returns it, never {@code null}.
+	 *
+	 * @since 2.29
+	 */
+	protected Map<URI, Document> createDirtyDocuments() {
+		return new HashMap<>();
+	}
+
+
+	/**
+	 * @return the dirty document map, never {@code null}.
+	 * 
+	 * @since 2.29
+	 */
+	protected Map<URI, Document> getDirtyDocuments() {
+		return dirtyDocuments;
+	}
+
+	/**
 	 * Updates the workspace folders and refreshes the workspace.
 	 * 
 	 * @since 2.21
@@ -241,7 +301,8 @@ public class WorkspaceManager {
 				ProjectManager projectManager = projectManagerProvider.get();
 				ProjectDescription projectDescription = projectDescriptionFactory.getProjectDescription(projectConfig);
 				projectManager.initialize(projectDescription, projectConfig, issueAcceptor,
-						openedDocumentsContentProvider, () -> fullIndex, cancelIndicator);
+						openedDocumentsContentProvider, () -> fullPersistedIndex, dirtyDocumentsContentProvider,
+						() -> fullDirtyIndex, cancelIndicator);
 				projectName2ProjectManager.put(projectDescription.getName(), projectManager);
 				newProjects.add(projectDescription);
 			}
@@ -249,9 +310,10 @@ public class WorkspaceManager {
 		for (String deletedProject : remainingProjectNames) {
 			ProjectManager projectManager = projectName2ProjectManager.remove(deletedProject);
 			projectManager.aboutToRemoveFromWorkspace();
-			fullIndex.remove(deletedProject);
+			fullPersistedIndex.remove(deletedProject);
+			fullDirtyIndex.remove(deletedProject);
 		}
-		afterBuild(buildManager.doInitialBuild(newProjects, cancelIndicator));
+		afterBuild(persistedBuildManager.doInitialBuild(newProjects, cancelIndicator));
 	}
 
 	/**
@@ -295,7 +357,7 @@ public class WorkspaceManager {
 	 * @return a build command that can be triggered
 	 */
 	public Buildable didChangeFiles(List<URI> dirtyFiles, List<URI> deletedFiles) {
-		BuildManager.Buildable buildable = buildManager.submit(dirtyFiles, deletedFiles);
+		BuildManager.Buildable buildable = persistedBuildManager.submit(dirtyFiles, deletedFiles);
 		return (cancelIndicator) -> {
 			List<IResourceDescription.Delta> deltas = buildable.build(cancelIndicator);
 			afterBuild(deltas);
@@ -320,10 +382,21 @@ public class WorkspaceManager {
 	}
 
 	/**
-	 * Returns the current index.
+	 * Returns the current dirty index.
+	 *
+	 * @since 2.29
 	 */
-	public IResourceDescriptions getIndex() {
-		return new ChunkedResourceDescriptions(fullIndex);
+	public IResourceDescriptions getDirtyIndex() {
+		return new ChunkedResourceDescriptions(fullDirtyIndex);
+	}
+
+	/**
+	 * Returns the current persisted index.
+	 *
+	 * @since 2.29
+	 */
+	public IResourceDescriptions getPersistedIndex() {
+		return new ChunkedResourceDescriptions(fullPersistedIndex);
 	}
 
 	/**
@@ -397,12 +470,55 @@ public class WorkspaceManager {
 	 */
 	public BuildManager.Buildable didChangeTextDocumentContent(URI uri, Integer version,
 			Iterable<TextDocumentContentChangeEvent> changes) {
-		Document contents = openDocuments.get(uri);
+		Document contents = dirtyDocuments.get(uri);
 		if (contents == null) {
-			LOG.error("The document " + uri + " has not been opened.");
+			contents = getOpenDocuments().get(uri);
+		}
+		if (contents == null) {
+			LOG.error("The document " + uri + " has not been opened."); //$NON-NLS-1$//$NON-NLS-2$
 			return Buildable.NO_BUILD;
 		}
-		openDocuments.put(uri, contents.applyTextDocumentChanges(changes));
+		dirtyDocuments.put(uri, contents.applyTextDocumentChanges(changes));
+		return didDirtyFiles(ImmutableList.of(uri));
+	}
+
+	/**
+	 * Announce dirty files and provide means to start a build.
+	 *
+	 * @param dirtyFiles
+	 *            the dirty files
+	 * @return a build command that can be triggered
+	 * @since 2.29
+	 */
+	public Buildable didDirtyFiles(List<URI> dirtyFiles) {
+		BuildManager.Buildable buildable = dirtyBuildManager.submit(dirtyFiles, Collections.emptyList());
+		return buildable::build;
+	}
+
+	/**
+	 * Perform a build that refreshes the markers in all dirty files.
+	 *
+	 * @return a build command to perform the refresh build.
+	 * @since 2.29
+	 */
+	public Buildable refreshDirtyFiles() {
+		return didDirtyFiles(ImmutableList.copyOf(dirtyDocuments.keySet()));
+	}
+
+	/**
+	 * Mark the given document as saved.
+	 *
+	 * @param uri
+	 *            the uri of the saved document.
+	 * @return the build command to perform on save.
+	 * @since 2.29
+	 */
+	public BuildManager.Buildable didSave(URI uri) {
+		Document contents = dirtyDocuments.remove(uri);
+		if (contents == null) {
+			return Buildable.NO_BUILD;
+		}
+		openDocuments.put(uri, contents);
 		return didChangeFiles(ImmutableList.of(uri), Collections.emptyList());
 	}
 
@@ -426,6 +542,7 @@ public class WorkspaceManager {
 	 * Mark the given document as cloded.
 	 */
 	public BuildManager.Buildable didClose(URI uri) {
+		dirtyDocuments.remove(uri);
 		openDocuments.remove(uri);
 		if (exists(uri)) {
 			return didChangeFiles(ImmutableList.of(uri), Collections.emptyList());
@@ -439,7 +556,7 @@ public class WorkspaceManager {
 	protected boolean exists(URI uri) {
 		ProjectManager projectManager = getProjectManager(uri);
 		if (projectManager != null) {
-			XtextResourceSet rs = projectManager.getResourceSet();
+			XtextResourceSet rs = projectManager.getDirtyResourceSet();
 			if (rs != null) {
 				return rs.getURIConverter().exists(uri, null);
 			}
@@ -485,7 +602,11 @@ public class WorkspaceManager {
 	 * @return the document
 	 */
 	protected Document getDocument(XtextResource resource) {
-		Document doc = openDocuments.get(resource.getURI());
+		Document doc = dirtyDocuments.get(resource.getURI());
+		if (doc != null) {
+			return doc;
+		}
+		doc = openDocuments.get(resource.getURI());
 		if (doc != null) {
 			return doc;
 		}
@@ -503,4 +624,14 @@ public class WorkspaceManager {
 		return openDocuments.containsKey(uri);
 	}
 
+	/**
+	 * Return true if there is a dirty document with the given URI.
+	 *
+	 * @param uri
+	 *            the URI
+	 * @since 2.29
+	 */
+	public boolean isDocumentDirty(URI uri) {
+		return dirtyDocuments.containsKey(uri);
+	}
 }

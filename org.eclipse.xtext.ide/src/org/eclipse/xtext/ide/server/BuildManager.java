@@ -122,6 +122,8 @@ public class BuildManager {
 
 	private WorkspaceManager workspaceManager;
 
+	private boolean doDirtyBuild;
+
 	@Inject
 	private Provider<TopologicalSorter> sorterProvider;
 
@@ -187,8 +189,9 @@ public class BuildManager {
 			ProjectManager projectManager = workspaceManager.getProjectManager(it.getName());
 			List<URI> projectDirty = new ArrayList<>(project2dirty.get(it));
 			List<URI> projectDeleted = new ArrayList<>(project2deleted.get(it));
-			IncrementalBuilder.Result partialResult = projectManager.doBuild(projectDirty, projectDeleted,
-					unreportedDeltas, cancelIndicator);
+			IncrementalBuilder.Result partialResult = doDirtyBuild
+					? projectManager.doDirtyBuild(projectDirty, projectDeleted, unreportedDeltas, cancelIndicator)
+					: projectManager.doPersistedBuild(projectDirty, projectDeleted, unreportedDeltas, cancelIndicator);
 			FluentIterable.from(partialResult.getAffectedResources()).transform(IResourceDescription.Delta::getUri)
 					.copyInto(allDirty);
 			dirtyFiles.removeAll(projectDirty);
@@ -236,7 +239,11 @@ public class BuildManager {
 		manager.reportProjectIssue("Project has cyclic dependencies", CYCLIC_PROJECT_DEPENDENCIES, Severity.ERROR);
 	}
 
-	public void setWorkspaceManager(WorkspaceManager workspaceManager) {
+	/**
+	 * @since 2.29
+	 */
+	public void setWorkspaceManager(WorkspaceManager workspaceManager, boolean doDirtyBuild) {
 		this.workspaceManager = workspaceManager;
+		this.doDirtyBuild = doDirtyBuild;
 	}
 }

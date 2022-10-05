@@ -24,6 +24,7 @@ import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceServiceProvider;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.resource.impl.ChunkedResourceDescriptions;
+import org.eclipse.xtext.resource.impl.LocalLayeredResourceDescriptionsData;
 import org.eclipse.xtext.resource.impl.ProjectDescription;
 import org.eclipse.xtext.resource.impl.ResourceDescriptionsData;
 import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
@@ -59,32 +60,49 @@ public class ProjectManager {
 	@Inject
 	protected IExternalContentSupport externalContentSupport;
 
-	private IndexState indexState = new IndexState();
+	private IndexState persistedIndexState = new IndexState();
+
+	private IndexState dirtyIndexState;
 
 	private URI baseDir;
 
 	private Procedure2<? super URI, ? super Iterable<Issue>> issueAcceptor;
 
-	private Provider<Map<String, ResourceDescriptionsData>> indexProvider;
+	private Provider<Map<String, ResourceDescriptionsData>> persistedIndexProvider;
+
+	private Provider<Map<String, ResourceDescriptionsData>> dirtyIndexProvider;
 
 	private IExternalContentSupport.IExternalContentProvider openedDocumentsContentProvider;
 
-	private XtextResourceSet resourceSet;
+	private IExternalContentSupport.IExternalContentProvider dirtyDocumentsContentProvider;
+
+	private XtextResourceSet persistedResourceSet;
+
+	private XtextResourceSet dirtyResourceSet;
 
 	private ProjectDescription projectDescription;
 
 	private IProjectConfig projectConfig;
 
+	/**
+	 * @since 2.29
+	 */
 	public void initialize(ProjectDescription description, IProjectConfig projectConfig,
 			Procedure2<? super URI, ? super Iterable<Issue>> acceptor,
 			IExternalContentSupport.IExternalContentProvider openedDocumentsContentProvider,
-			Provider<Map<String, ResourceDescriptionsData>> indexProvider, CancelIndicator cancelIndicator) {
+			Provider<Map<String, ResourceDescriptionsData>> indexProvider,
+			IExternalContentSupport.IExternalContentProvider dirtyDocumentsContentProvider,
+			Provider<Map<String, ResourceDescriptionsData>> dirtyIndexProvider, CancelIndicator cancelIndicator) {
 		this.projectDescription = description;
 		this.projectConfig = projectConfig;
 		this.baseDir = projectConfig.getPath();
 		this.issueAcceptor = acceptor;
 		this.openedDocumentsContentProvider = openedDocumentsContentProvider;
-		this.indexProvider = indexProvider;
+		this.persistedIndexProvider = indexProvider;
+		this.dirtyDocumentsContentProvider = dirtyDocumentsContentProvider;
+		this.dirtyIndexProvider = dirtyIndexProvider;
+		setDirtyIndexState(wrapPersistedIndexState(persistedIndexState));
+		createDirtyResourceSet(dirtyIndexState.getResourceDescriptions());
 	}
 
 	/**
@@ -95,53 +113,135 @@ public class ProjectManager {
 		for (ISourceFolder srcFolder : projectConfig.getSourceFolders()) {
 			allUris.addAll(srcFolder.getAllResources(fileSystemScanner));
 		}
-		return doBuild(allUris, Collections.emptyList(), Collections.emptyList(), cancelIndicator);
+		return doPersistedBuild(allUris, Collections.emptyList(), Collections.emptyList(), cancelIndicator);
 	}
 
 	/**
 	 * Build this project.
+	 *
+	 * @since 2.29
 	 */
-	public IncrementalBuilder.Result doBuild(List<URI> dirtyFiles, List<URI> deletedFiles,
+	public IncrementalBuilder.Result doPersistedBuild(List<URI> dirtyFiles, List<URI> deletedFiles,
 			List<IResourceDescription.Delta> externalDeltas, CancelIndicator cancelIndicator) {
-		BuildRequest request = newBuildRequest(dirtyFiles, deletedFiles, externalDeltas, cancelIndicator);
+		BuildRequest request = newPersistedBuildRequest(dirtyFiles, deletedFiles, externalDeltas, cancelIndicator);
 		IncrementalBuilder.Result result = incrementalBuilder.build(request,
 				languagesRegistry::getResourceServiceProvider);
-		indexState = result.getIndexState();
-		resourceSet = request.getResourceSet();
-		indexProvider.get().put(projectDescription.getName(), indexState.getResourceDescriptions());
+		persistedIndexState = result.getIndexState();
+		persistedResourceSet = request.getResourceSet();
+		persistedIndexProvider.get().put(projectDescription.getName(), persistedIndexState.getResourceDescriptions());
+		setDirtyIndexState(wrapPersistedIndexState(persistedIndexState));
+		createDirtyResourceSet(dirtyIndexState.getResourceDescriptions());
+		return result;
+	}
+
+	/**
+	 * @since 2.29
+	 */
+	protected IndexState wrapPersistedIndexState(IndexState persisted) {
+		return new IndexState(new LocalLayeredResourceDescriptionsData(persisted.getResourceDescriptions()),
+				persisted.getFileMappings());
+	}
+
+	/**
+	 * Build this project.
+	 *
+	 * @since 2.29
+	 */
+	public IncrementalBuilder.Result doDirtyBuild(List<URI> dirtyFiles, List<URI> deletedFiles,
+			List<IResourceDescription.Delta> externalDeltas, CancelIndicator cancelIndicator) {
+		BuildRequest request = newDirtyBuildRequest(dirtyFiles, deletedFiles, externalDeltas, cancelIndicator);
+		IncrementalBuilder.Result result = incrementalBuilder.build(request,
+				languagesRegistry::getResourceServiceProvider);
+		setDirtyIndexState(result.getIndexState());
+		dirtyResourceSet = request.getResourceSet();
 		return result;
 	}
 
 	/**
 	 * Creates a new build request for this project.
+	 *
+	 * @since 2.29
 	 */
-	protected BuildRequest newBuildRequest(List<URI> changedFiles, List<URI> deletedFiles,
+	protected BuildRequest newPersistedBuildRequest(List<URI> changedFiles, List<URI> deletedFiles,
 			List<IResourceDescription.Delta> externalDeltas, CancelIndicator cancelIndicator) {
 		BuildRequest result = new BuildRequest();
 		result.setBaseDir(baseDir);
-		result.setState(
-				new IndexState(indexState.getResourceDescriptions().copy(), indexState.getFileMappings().copy()));
+		result.setState(new IndexState(persistedIndexState.getResourceDescriptions().copy(),
+				persistedIndexState.getFileMappings().copy()));
 		result.setResourceSet(createFreshResourceSet(result.getState().getResourceDescriptions()));
 		result.setDirtyFiles(changedFiles);
 		result.setDeletedFiles(deletedFiles);
 		result.setExternalDeltas(externalDeltas);
-		result.setAfterValidate((URI uri, Iterable<Issue> issues) -> {
-			issueAcceptor.apply(uri, issues);
-			return true;
-		});
+		result.setAfterValidate(this::afterValidate);
 		result.setCancelIndicator(cancelIndicator);
 		result.setIndexOnly(projectConfig.isIndexOnly());
 		return result;
 	}
 
 	/**
-	 * Create and configure a new resource set for this project.
+	 * If the resource is not dirty, posts validation results via the configured {@link #getIssueAcceptor() issue
+	 * acceptor}.
+	 *
+	 * @param validated
+	 *            the uri of the resource that has just been validated.
+	 * @param issues
+	 *            the issues that have resulted from validating the resource.
+	 * @return whether the build can proceed, <code>false</code> if the build should be interrupted.
+	 * @since 2.29
 	 */
-	public XtextResourceSet createNewResourceSet(ResourceDescriptionsData newIndex) {
+	public boolean afterValidate(URI validated, Iterable<Issue> issues) {
+		if (!dirtyDocumentsContentProvider.hasContent(validated)) {
+			getIssueAcceptor().apply(validated, issues);
+		}
+		return true;
+	}
+
+	/**
+	 * Creates a new build request for this project.
+	 *
+	 * @since 2.29
+	 */
+	protected BuildRequest newDirtyBuildRequest(List<URI> changedFiles, List<URI> deletedFiles,
+			List<IResourceDescription.Delta> externalDeltas, CancelIndicator cancelIndicator) {
+		BuildRequest result = new BuildRequest();
+		result.setBaseDir(baseDir);
+		result.setState(new IndexState(dirtyIndexState.getResourceDescriptions().copy(),
+				dirtyIndexState.getFileMappings().copy()));
+		result.setResourceSet(createDirtyResourceSet(result.getState().getResourceDescriptions()));
+		result.setDirtyFiles(changedFiles);
+		result.setDeletedFiles(deletedFiles);
+		result.setExternalDeltas(externalDeltas);
+		result.setAfterValidate(this::afterDirtyValidate);
+		result.setCancelIndicator(cancelIndicator);
+		result.setIndexOnly(projectConfig.isIndexOnly());
+		return result;
+	}
+
+	/**
+	 * Posts validation results via the configured {@link #getIssueAcceptor() issue acceptor}.
+	 *
+	 * @param validated
+	 *            the uri of the resource that has just been validated.
+	 * @param issues
+	 *            the issues that have resulted from validating the resource.
+	 * @return whether the build can proceed, <code>false</code> if the build should be interrupted.
+	 * @since 2.29
+	 */
+	public boolean afterDirtyValidate(URI validated, Iterable<Issue> issues) {
+		getIssueAcceptor().apply(validated, issues);
+		return true;
+	}
+
+	/**
+	 * Create and configure a new resource set for this project.
+	 *
+	 * @since 2.29
+	 */
+	public XtextResourceSet createNewResourceSet(ResourceDescriptionsData newIndex, Map<String, ResourceDescriptionsData> globalIndex) {
 		XtextResourceSet result = resourceSetProvider.get();
 		projectDescription.attachToEmfObject(result);
 		ProjectConfigAdapter.install(result, projectConfig);
-		ChunkedResourceDescriptions index = new ChunkedResourceDescriptions(indexProvider.get(), result);
+		ChunkedResourceDescriptions index = new ChunkedResourceDescriptions(globalIndex, result);
 		index.setContainer(projectDescription.getName(), newIndex);
 		externalContentSupport.configureResourceSet(result, openedDocumentsContentProvider);
 		return result;
@@ -151,16 +251,16 @@ public class ProjectManager {
 	 * Create an empty resource set.
 	 */
 	protected XtextResourceSet createFreshResourceSet(ResourceDescriptionsData newIndex) {
-		if (resourceSet == null) {
-			resourceSet = createNewResourceSet(newIndex);
+		if (persistedResourceSet == null) {
+			persistedResourceSet = createNewResourceSet(newIndex, persistedIndexProvider.get());
 		} else {
-			ChunkedResourceDescriptions resDescs = ChunkedResourceDescriptions.findInEmfObject(resourceSet);
-			for (Map.Entry<String, ResourceDescriptionsData> entry : indexProvider.get().entrySet()) {
+			ChunkedResourceDescriptions resDescs = ChunkedResourceDescriptions.findInEmfObject(persistedResourceSet);
+			for (Map.Entry<String, ResourceDescriptionsData> entry : persistedIndexProvider.get().entrySet()) {
 				resDescs.setContainer(entry.getKey(), entry.getValue());
 			}
 			resDescs.setContainer(projectDescription.getName(), newIndex);
 		}
-		return resourceSet;
+		return persistedResourceSet;
 	}
 
 	/**
@@ -169,16 +269,35 @@ public class ProjectManager {
 	 * @since 2.27
 	 */
 	public XtextResourceSet createLiveScopeResourceSet() {
-		XtextResourceSet resourceSet = createNewResourceSet(getIndexState().getResourceDescriptions());
+		XtextResourceSet resourceSet = createNewResourceSet(getDirtyIndexState().getResourceDescriptions(), dirtyIndexProvider.get());
 		resourceSet.getLoadOptions().put(ResourceDescriptionsProvider.LIVE_SCOPE, true);
 		return resourceSet;
+	}
+
+	/**
+	 * Create an empty resource set.
+	 *
+	 * @since 2.29
+	 */
+	protected XtextResourceSet createDirtyResourceSet(ResourceDescriptionsData newIndex) {
+		if (dirtyResourceSet == null) {
+			dirtyResourceSet = createNewResourceSet(newIndex, dirtyIndexProvider.get());
+			externalContentSupport.configureResourceSet(dirtyResourceSet, dirtyDocumentsContentProvider);
+		} else {
+			ChunkedResourceDescriptions resDescs = ChunkedResourceDescriptions.findInEmfObject(dirtyResourceSet);
+			for (Map.Entry<String, ResourceDescriptionsData> entry : dirtyIndexProvider.get().entrySet()) {
+				resDescs.setContainer(entry.getKey(), entry.getValue());
+			}
+			resDescs.setContainer(projectDescription.getName(), newIndex);
+		}
+		return dirtyResourceSet;
 	}
 
 	/**
 	 * Get the resource with the given URI.
 	 */
 	public Resource getResource(URI uri) {
-		Resource resource = resourceSet.getResource(uri, true);
+		Resource resource = dirtyResourceSet.getResource(uri, true);
 		resource.getContents();
 		return resource;
 	}
@@ -192,12 +311,34 @@ public class ProjectManager {
 		issueAcceptor.apply(baseDir, ImmutableList.of(result));
 	}
 
-	public IndexState getIndexState() {
-		return indexState;
+	/**
+	 * @since 2.29
+	 */
+	public IndexState getPersistedIndexState() {
+		return persistedIndexState;
 	}
 
-	protected void setIndexState(IndexState indexState) {
-		this.indexState = indexState;
+	/**
+	 * @since 2.29
+	 */
+	protected void setPersistedIndexState(IndexState indexState) {
+		this.persistedIndexState = indexState;
+		setDirtyIndexState(wrapPersistedIndexState(indexState));
+	}
+
+	/**
+	 * @since 2.29
+	 */
+	public IndexState getDirtyIndexState() {
+		return dirtyIndexState;
+	}
+	
+	/**
+	 * @since 2.29
+	 */
+	protected void setDirtyIndexState(IndexState indexState) {
+		dirtyIndexState = indexState;
+		dirtyIndexProvider.get().put(projectDescription.getName(), dirtyIndexState.getResourceDescriptions());
 	}
 
 	public URI getBaseDir() {
@@ -208,16 +349,43 @@ public class ProjectManager {
 		return issueAcceptor;
 	}
 
-	protected Provider<Map<String, ResourceDescriptionsData>> getIndexProvider() {
-		return indexProvider;
+	/**
+	 * @since 2.29
+	 */
+	protected Provider<Map<String, ResourceDescriptionsData>> getPersistedIndexProvider() {
+		return persistedIndexProvider;
+	}
+
+	/**
+	 * @since 2.29
+	 */
+	protected Provider<Map<String, ResourceDescriptionsData>> getDirtyIndexProvider() {
+		return dirtyIndexProvider;
 	}
 
 	protected IExternalContentSupport.IExternalContentProvider getOpenedDocumentsContentProvider() {
 		return openedDocumentsContentProvider;
 	}
 
-	public XtextResourceSet getResourceSet() {
-		return resourceSet;
+	/**
+	 * @since 2.29
+	 */
+	protected IExternalContentSupport.IExternalContentProvider getDirtyDocumentsContentProvider() {
+		return dirtyDocumentsContentProvider;
+	}
+
+	/**
+	 * @since 2.29
+	 */
+	public XtextResourceSet getPersistedResourceSet() {
+		return persistedResourceSet;
+	}
+
+	/**
+	 * @since 2.29
+	 */
+	public XtextResourceSet getDirtyResourceSet() {
+		return dirtyResourceSet;
 	}
 
 	public ProjectDescription getProjectDescription() {

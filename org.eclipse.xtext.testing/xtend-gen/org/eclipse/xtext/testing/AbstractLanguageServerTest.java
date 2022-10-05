@@ -10,6 +10,7 @@ package org.eclipse.xtext.testing;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
+import com.google.common.collect.Lists;
 import com.google.inject.Binder;
 import com.google.inject.Guice;
 import com.google.inject.Inject;
@@ -40,9 +41,11 @@ import org.eclipse.lsp4j.CompletionList;
 import org.eclipse.lsp4j.CompletionParams;
 import org.eclipse.lsp4j.DefinitionParams;
 import org.eclipse.lsp4j.Diagnostic;
+import org.eclipse.lsp4j.DidChangeTextDocumentParams;
 import org.eclipse.lsp4j.DidChangeWatchedFilesParams;
 import org.eclipse.lsp4j.DidCloseTextDocumentParams;
 import org.eclipse.lsp4j.DidOpenTextDocumentParams;
+import org.eclipse.lsp4j.DidSaveTextDocumentParams;
 import org.eclipse.lsp4j.DocumentFormattingParams;
 import org.eclipse.lsp4j.DocumentHighlight;
 import org.eclipse.lsp4j.DocumentHighlightKind;
@@ -74,6 +77,7 @@ import org.eclipse.lsp4j.SignatureHelpParams;
 import org.eclipse.lsp4j.SignatureInformation;
 import org.eclipse.lsp4j.SymbolInformation;
 import org.eclipse.lsp4j.TextDocumentClientCapabilities;
+import org.eclipse.lsp4j.TextDocumentContentChangeEvent;
 import org.eclipse.lsp4j.TextDocumentEdit;
 import org.eclipse.lsp4j.TextDocumentIdentifier;
 import org.eclipse.lsp4j.TextDocumentItem;
@@ -418,6 +422,33 @@ public abstract class AbstractLanguageServerTest implements Endpoint {
     };
     DidCloseTextDocumentParams _doubleArrow = ObjectExtensions.<DidCloseTextDocumentParams>operator_doubleArrow(_didCloseTextDocumentParams, _function);
     this.languageServer.didClose(_doubleArrow);
+  }
+
+  /**
+   * @since 2.29
+   */
+  protected void edit(final String fileUri, final int version, final Position start, final Position end, final String newText) {
+    final DidChangeTextDocumentParams didChangeTextDocumentParams = new DidChangeTextDocumentParams();
+    VersionedTextDocumentIdentifier _versionedTextDocumentIdentifier = new VersionedTextDocumentIdentifier(fileUri, Integer.valueOf(version));
+    didChangeTextDocumentParams.setTextDocument(_versionedTextDocumentIdentifier);
+    final TextDocumentContentChangeEvent textDocumentContentChangeEvent = new TextDocumentContentChangeEvent(newText);
+    Range _range = new Range(start, end);
+    textDocumentContentChangeEvent.setRange(_range);
+    didChangeTextDocumentParams.setContentChanges(Lists.<TextDocumentContentChangeEvent>newArrayList(textDocumentContentChangeEvent));
+    this.languageServer.didChange(didChangeTextDocumentParams);
+  }
+
+  /**
+   * @since 2.29
+   */
+  protected void save(final String fileUri) {
+    DidSaveTextDocumentParams _didSaveTextDocumentParams = new DidSaveTextDocumentParams();
+    final Procedure1<DidSaveTextDocumentParams> _function = (DidSaveTextDocumentParams it) -> {
+      TextDocumentIdentifier _textDocumentIdentifier = new TextDocumentIdentifier(fileUri);
+      it.setTextDocument(_textDocumentIdentifier);
+    };
+    DidSaveTextDocumentParams _doubleArrow = ObjectExtensions.<DidSaveTextDocumentParams>operator_doubleArrow(_didSaveTextDocumentParams, _function);
+    this.languageServer.didSave(_doubleArrow);
   }
 
   public String writeFile(final String path, final CharSequence contents) {
@@ -1506,7 +1537,7 @@ public abstract class AbstractLanguageServerTest implements Endpoint {
         }
         return result;
       };
-      return this.languageServer.getRequestManager().<HashMap<String, List<Diagnostic>>>runRead(_function).get();
+      return this.languageServer.getDirtyStateRequestManager().<HashMap<String, List<Diagnostic>>>runRead(_function).get();
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }

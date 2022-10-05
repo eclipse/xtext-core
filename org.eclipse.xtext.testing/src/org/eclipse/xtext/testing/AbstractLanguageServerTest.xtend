@@ -93,6 +93,10 @@ import org.junit.jupiter.api.BeforeEach
 import static extension org.eclipse.lsp4j.util.Ranges.containsRange
 import static extension org.eclipse.xtext.util.Strings.*
 import org.eclipse.lsp4j.WorkspaceSymbol
+import com.google.common.collect.Lists
+import org.eclipse.lsp4j.DidChangeTextDocumentParams
+import org.eclipse.lsp4j.TextDocumentContentChangeEvent
+import org.eclipse.lsp4j.DidSaveTextDocumentParams
 
 /**
  * @author Sven Efftinge - Initial contribution and API
@@ -256,6 +260,27 @@ abstract class AbstractLanguageServerTest implements Endpoint {
 
 	protected def void close(String fileUri) {
 		languageServer.didClose(new DidCloseTextDocumentParams => [
+			textDocument = new TextDocumentIdentifier(fileUri)
+		])
+	}
+	
+	/**
+	 * @since 2.29
+	 */
+	protected def void edit(String fileUri, int version, Position start, Position end, String newText) {
+		val didChangeTextDocumentParams = new DidChangeTextDocumentParams();
+		didChangeTextDocumentParams.setTextDocument(new VersionedTextDocumentIdentifier(fileUri, version));
+		val textDocumentContentChangeEvent = new TextDocumentContentChangeEvent(newText);
+		textDocumentContentChangeEvent.setRange(new Range(start, end));
+		didChangeTextDocumentParams.setContentChanges(Lists.newArrayList(textDocumentContentChangeEvent));
+		languageServer.didChange(didChangeTextDocumentParams);
+	}
+
+	/**
+	 * @since 2.29
+	 */
+	protected def void save(String fileUri) {
+		languageServer.didSave(new DidSaveTextDocumentParams => [
 			textDocument = new TextDocumentIdentifier(fileUri)
 		])
 	}
@@ -760,7 +785,7 @@ abstract class AbstractLanguageServerTest implements Endpoint {
 	}
 
 	protected def Map<String, List<Diagnostic>> getDiagnostics() {
-		languageServer.requestManager.runRead[
+		languageServer.dirtyStateRequestManager.runRead[
 			val result = <String, List<Diagnostic>>newHashMap
 			for (diagnostic : notifications.map[value].filter(PublishDiagnosticsParams)) {
 				result.put(diagnostic.uri, diagnostic.diagnostics)

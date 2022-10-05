@@ -17,11 +17,13 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.lsp4j.ClientCapabilities;
 import org.eclipse.lsp4j.CodeAction;
@@ -159,7 +161,10 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	private static final Logger LOG = Logger.getLogger(LanguageServerImpl.class);
 
 	@Inject
-	private RequestManager requestManager;
+	private RequestManager persistedStateRequestManager;
+
+	@Inject
+	private RequestManager dirtyStateRequestManager;
 
 	@Inject
 	private WorkspaceSymbolService workspaceSymbolService;
@@ -223,16 +228,27 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 		result.setCapabilities(createServerCapabilities(params));
 		access.addBuildListener(this);
-		return requestManager.runWrite(() -> {
-			if (workspaceManager.isSupportsWorkspaceFolders()) {
-				List<WorkspaceFolder> workspaceFolders = params.getWorkspaceFolders();
-				if (workspaceFolders == null)
-					workspaceFolders = Collections.emptyList();
-				workspaceManager.initialize(workspaceFolders, this::publishDiagnostics, CancelIndicator.NullImpl);
-			} else {
-				workspaceManager.initialize(baseDir, this::publishDiagnostics, CancelIndicator.NullImpl);
+		// put initialisation job on both request queues so that all subsequent requests wait.
+		return dirtyStateRequestManager.runWrite(() -> {
+			try {
+				return persistedStateRequestManager.runWrite(() -> {
+					if (workspaceManager.isSupportsWorkspaceFolders()) {
+						List<WorkspaceFolder> workspaceFolders = params.getWorkspaceFolders();
+						if (workspaceFolders == null)
+							workspaceFolders = Collections.emptyList();
+						workspaceManager.initialize(workspaceFolders, this::publishDiagnostics,
+								CancelIndicator.NullImpl);
+					} else {
+						workspaceManager.initialize(baseDir, this::publishDiagnostics, CancelIndicator.NullImpl);
+					}
+					return result;
+				}, (cancelIndicator, it) -> it).get();
+			} catch (InterruptedException e) {
+				Thread.currentThread().interrupt();
+				throw new WrappedException("Interrupted while initialising the LanguageServer", e); //$NON-NLS-1$
+			} catch (ExecutionException e) {
+				throw new WrappedException("Could not initialise the LanguageServer", e); //$NON-NLS-1$
 			}
-			return result;
 		}, (cancelIndicator, it) -> it).thenApply(it -> initializeResult = it);
 	}
 
@@ -391,7 +407,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public void didOpen(DidOpenTextDocumentParams params) {
-		runBuildable(() -> toBuildable(params));
+		runPersistedBuildable(() -> toBuildable(params));
 	}
 
 	/**
@@ -419,7 +435,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public void didClose(DidCloseTextDocumentParams params) {
-		runBuildable(() -> toBuildable(params));
+		runPersistedBuildable(() -> toBuildable(params));
 	}
 
 	/**
@@ -431,12 +447,19 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public void didSave(DidSaveTextDocumentParams params) {
-		// nothing to do
+		runPersistedBuildable(() -> toBuildable(params));
+	}
+
+	/**
+	 * @since 2.29
+	 */
+	protected Buildable toBuildable(DidSaveTextDocumentParams params) {
+		return workspaceManager.didSave(getURI(params.getTextDocument()));
 	}
 
 	@Override
 	public void didChangeWatchedFiles(DidChangeWatchedFilesParams params) {
-		runBuildable(() -> toBuildable(params));
+		runPersistedBuildable(() -> toBuildable(params));
 	}
 
 	/**
@@ -458,19 +481,35 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	}
 
 	/**
-	 * Compute a buildable and run the build in a write action
+	 * Compute a buildable for the dirty state and run the build in a write action
 	 *
 	 * @param newBuildable
 	 *            the factory for the buildable.
 	 * @since 2.20
 	 */
 	protected void runBuildable(Supplier<? extends Buildable> newBuildable) {
-		requestManager.runWrite(newBuildable::get, (cancelIndicator, buildable) -> buildable.build(cancelIndicator));
+		dirtyStateRequestManager.runWrite(newBuildable::get,
+				(cancelIndicator, buildable) -> buildable.build(cancelIndicator));
+	}
+
+	/**
+	 * Compute a buildable for the persisted state and run the build in a write action.
+	 *
+	 * @param newBuildable
+	 *            the factory for the buildable.
+	 * @since 2.29
+	 */
+	protected void runPersistedBuildable(Supplier<? extends Buildable> newBuildable) {
+		persistedStateRequestManager
+				.runWrite(newBuildable::get, (cancelIndicator, buildable) -> buildable.build(cancelIndicator))
+				.thenRun(() -> {
+					runBuildable(() -> workspaceManager.refreshDirtyFiles());
+				});
 	}
 
 	@Override
 	public void didChangeConfiguration(DidChangeConfigurationParams params) {
-		requestManager.runWrite(() -> {
+		persistedStateRequestManager.runWrite(() -> {
 			workspaceManager.refreshWorkspaceConfig(CancelIndicator.NullImpl);
 			return null;
 		}, (a, b) -> null);
@@ -481,7 +520,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 */
 	@Override
 	public void didChangeWorkspaceFolders(DidChangeWorkspaceFoldersParams params) {
-		requestManager.runWrite(() -> {
+		persistedStateRequestManager.runWrite(() -> {
 			workspaceManager.didChangeWorkspaceFolders(params, CancelIndicator.NullImpl);
 			return null;
 		}, (a, b) -> null);
@@ -549,7 +588,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public CompletableFuture<Either<List<CompletionItem>, CompletionList>> completion(CompletionParams params) {
-		return requestManager.runRead((cancelIndicator) -> completion(cancelIndicator, params));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> completion(cancelIndicator, params));
 	}
 
 	/**
@@ -594,7 +633,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	@Override
 	public CompletableFuture<Either<List<? extends Location>, List<? extends LocationLink>>> definition(
 			DefinitionParams params) {
-		return requestManager.runRead(cancelIndicator -> definition(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead(cancelIndicator -> definition(params, cancelIndicator));
 	}
 
 	/**
@@ -621,7 +660,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public CompletableFuture<List<? extends Location>> references(ReferenceParams params) {
-		return requestManager.runRead(cancelIndicator -> references(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead(cancelIndicator -> references(params, cancelIndicator));
 	}
 
 	/**
@@ -635,13 +674,13 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 			return Collections.emptyList();
 		}
 		return workspaceManager.doRead(uri, (document, resource) -> documentSymbolService.getReferences(document,
-				resource, params, resourceAccess, workspaceManager.getIndex(), cancelIndicator));
+				resource, params, resourceAccess, workspaceManager.getDirtyIndex(), cancelIndicator));
 	}
 
 	@Override
 	public CompletableFuture<List<Either<SymbolInformation, DocumentSymbol>>> documentSymbol(
 			DocumentSymbolParams params) {
-		return requestManager.runRead((cancelIndicator) -> documentSymbol(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> documentSymbol(params, cancelIndicator));
 	}
 
 	/**
@@ -699,7 +738,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public CompletableFuture<Either<List<? extends SymbolInformation>, List<? extends WorkspaceSymbol>>> symbol(WorkspaceSymbolParams params) {
-		return requestManager.runRead((cancelIndicator) -> symbol(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> symbol(params, cancelIndicator));
 	}
 
 	/**
@@ -707,13 +746,13 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 * @since 2.20
 	 */
 	protected Either<List<? extends SymbolInformation>, List<? extends WorkspaceSymbol>> symbol(WorkspaceSymbolParams params, CancelIndicator cancelIndicator) {
-		return workspaceSymbolService.getSymbols(params.getQuery(), resourceAccess, workspaceManager.getIndex(),
+		return workspaceSymbolService.getSymbols(params.getQuery(), resourceAccess, workspaceManager.getDirtyIndex(),
 				cancelIndicator);
 	}
 
 	@Override
 	public CompletableFuture<Hover> hover(HoverParams params) {
-		return requestManager.runRead((cancelIndicator) -> hover(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> hover(params, cancelIndicator));
 	}
 
 	/**
@@ -737,7 +776,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public CompletableFuture<SignatureHelp> signatureHelp(SignatureHelpParams params) {
-		return requestManager.runRead((cancelIndicator) -> signatureHelp(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> signatureHelp(params, cancelIndicator));
 	}
 
 	/**
@@ -756,7 +795,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public CompletableFuture<List<? extends DocumentHighlight>> documentHighlight(DocumentHighlightParams params) {
-		return requestManager.runRead((cancelIndicator) -> documentHighlight(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> documentHighlight(params, cancelIndicator));
 	}
 
 	/**
@@ -776,7 +815,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public CompletableFuture<List<Either<Command, CodeAction>>> codeAction(CodeActionParams params) {
-		return requestManager.runRead((cancelIndicator) -> codeAction(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> codeAction(params, cancelIndicator));
 	}
 
 	/**
@@ -837,7 +876,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public CompletableFuture<List<? extends CodeLens>> codeLens(CodeLensParams params) {
-		return requestManager.runRead((cancelIndicator) -> codeLens(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> codeLens(params, cancelIndicator));
 	}
 
 	/**
@@ -864,7 +903,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 		if (uri == null) {
 			return CompletableFuture.completedFuture(unresolved);
 		}
-		return requestManager.runRead((cancelIndicator) -> resolveCodeLens(uri, unresolved, cancelIndicator));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> resolveCodeLens(uri, unresolved, cancelIndicator));
 	}
 
 	/**
@@ -882,7 +921,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public CompletableFuture<List<? extends TextEdit>> formatting(DocumentFormattingParams params) {
-		return requestManager.runRead((cancelIndicator) -> formatting(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> formatting(params, cancelIndicator));
 	}
 
 	/**
@@ -901,7 +940,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public CompletableFuture<List<? extends TextEdit>> rangeFormatting(DocumentRangeFormattingParams params) {
-		return requestManager.runRead((cancelIndicator) -> rangeFormatting(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> rangeFormatting(params, cancelIndicator));
 	}
 
 	/**
@@ -950,7 +989,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public CompletableFuture<Object> executeCommand(ExecuteCommandParams params) {
-		return requestManager.runRead((cancelIndicator) -> executeCommand(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead((cancelIndicator) -> executeCommand(params, cancelIndicator));
 	}
 
 	/**
@@ -968,7 +1007,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 
 	@Override
 	public CompletableFuture<WorkspaceEdit> rename(RenameParams renameParams) {
-		return requestManager.runRead(cancelIndicator -> rename(renameParams, cancelIndicator));
+		return dirtyStateRequestManager.runRead(cancelIndicator -> rename(renameParams, cancelIndicator));
 	}
 
 	/**
@@ -1004,7 +1043,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 */
 	@Override
 	public CompletableFuture<Either3<Range, PrepareRenameResult, PrepareRenameDefaultBehavior>> prepareRename(PrepareRenameParams params) {
-		return requestManager.runRead(cancelIndicator -> prepareRename(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead(cancelIndicator -> prepareRename(params, cancelIndicator));
 	}
 
 	/**
@@ -1029,7 +1068,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	 * @since 2.26
 	 */
 	public CompletableFuture<List<FoldingRange>> foldingRange(FoldingRangeRequestParams params) {
-		return requestManager.runRead(cancelIndicator -> foldingRange(params, cancelIndicator));
+		return dirtyStateRequestManager.runRead(cancelIndicator -> foldingRange(params, cancelIndicator));
 	}
 
 	/**
@@ -1120,7 +1159,7 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 	private final ILanguageServerAccess access = new ILanguageServerAccess() {
 		@Override
 		public <T> CompletableFuture<T> doRead(String uri, Function<ILanguageServerAccess.Context, T> function) {
-			return requestManager.runRead(cancelIndicator -> workspaceManager.doRead(uriExtensions.toUri(uri),
+			return dirtyStateRequestManager.runRead(cancelIndicator -> workspaceManager.doRead(uriExtensions.toUri(uri),
 					(document, resource) -> function.apply(new ILanguageServerAccess.Context(resource, document,
 							workspaceManager.isDocumentOpen(resource.getURI()), cancelIndicator))));
 		}
@@ -1154,8 +1193,8 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 		@Override
 		public <T> CompletableFuture<T> doReadIndex(
 				Function<? super ILanguageServerAccess.IndexContext, ? extends T> function) {
-			return requestManager.runRead(cancelIndicator -> function
-					.apply(new ILanguageServerAccess.IndexContext(workspaceManager.getIndex(), cancelIndicator)));
+			return dirtyStateRequestManager.runRead(cancelIndicator -> function
+					.apply(new ILanguageServerAccess.IndexContext(workspaceManager.getDirtyIndex(), cancelIndicator)));
 		}
 
 		@Override
@@ -1242,8 +1281,18 @@ public class LanguageServerImpl implements LanguageServer, WorkspaceService, Tex
 		return workspaceSymbolService;
 	}
 
-	public RequestManager getRequestManager() {
-		return requestManager;
+	/**
+	 * @since 2.29
+	 */
+	public RequestManager getDirtyStateRequestManager() {
+		return dirtyStateRequestManager;
+	}
+
+	/**
+	 * @since 2.29
+	 */
+	public RequestManager getPersistedStateRequestManager() {
+		return persistedStateRequestManager;
 	}
 
 	@Override

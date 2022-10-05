@@ -8,14 +8,10 @@
  */
 package org.eclipse.xtext.ide.tests.server;
 
-import org.eclipse.lsp4j.DidChangeTextDocumentParams;
 import org.eclipse.lsp4j.DidChangeWatchedFilesParams;
 import org.eclipse.lsp4j.FileChangeType;
 import org.eclipse.lsp4j.FileEvent;
 import org.eclipse.lsp4j.Position;
-import org.eclipse.lsp4j.Range;
-import org.eclipse.lsp4j.TextDocumentContentChangeEvent;
-import org.eclipse.lsp4j.VersionedTextDocumentIdentifier;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -63,12 +59,7 @@ public class OpenDocumentTest extends AbstractTestLangLanguageServerTest {
 		open(firstFile, model);
 		assertEquals("Couldn't resolve reference to TypeDeclaration 'NonExisting'.",
 				Iterables.getFirst(getDiagnostics().get(firstFile), null).getMessage());
-		DidChangeTextDocumentParams didChangeTextDocumentParams = new DidChangeTextDocumentParams();
-		didChangeTextDocumentParams.setTextDocument(new VersionedTextDocumentIdentifier(firstFile, 2));
-		TextDocumentContentChangeEvent textDocumentContentChangeEvent = new TextDocumentContentChangeEvent("Test");
-		textDocumentContentChangeEvent.setRange(new Range(new Position(1, 4), new Position(1, 15)));
-		didChangeTextDocumentParams.setContentChanges(Lists.newArrayList(textDocumentContentChangeEvent));
-		languageServer.didChange(didChangeTextDocumentParams);
+		edit(firstFile, 2, new Position(1, 4), new Position(1, 15), "Test");
 		Assert.assertNull(Iterables.getFirst(getDiagnostics().get(firstFile), null));
 	}
 

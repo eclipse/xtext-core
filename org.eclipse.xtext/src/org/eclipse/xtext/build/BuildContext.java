@@ -10,10 +10,14 @@ package org.eclipse.xtext.build;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceServiceProvider;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.resource.clustering.IResourceClusteringPolicy;
+import org.eclipse.xtext.resource.impl.LocalLayeredResourceDescriptionsData;
+import org.eclipse.xtext.resource.impl.ResourceDescriptionsData;
 import org.eclipse.xtext.util.CancelIndicator;
+import org.eclipse.xtext.validation.CheckMode;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 
 import com.google.common.collect.Iterables;
@@ -43,6 +47,13 @@ public class BuildContext {
 		this.oldState = oldState;
 		this.clusteringPolicy = clusteringPolicy;
 		this.cancelIndicator = cancelIndicator;
+	}
+
+	/**
+	 * @since 2.29
+	 */
+	public boolean isDirtyBuild() {
+		return getOldState().getResourceDescriptions() instanceof LocalLayeredResourceDescriptionsData;
 	}
 
 	/**
@@ -87,5 +98,32 @@ public class BuildContext {
 
 	public CancelIndicator getCancelIndicator() {
 		return cancelIndicator;
+	}
+
+	/**
+	 * Get all resource descriptions for checking if they are affected by a delta.
+	 *
+	 * @return all resources for checking if they are affected by a change.
+	 * @since 2.29
+	 */
+	public Iterable<IResourceDescription> getPossibleyAffectedResourceDescriptions() {
+		ResourceDescriptionsData resourceDescriptions = getOldState().getResourceDescriptions();
+		if (isDirtyBuild()) {
+			return ((LocalLayeredResourceDescriptionsData) resourceDescriptions).getLocalResourceDescriptions();
+		}
+		return resourceDescriptions.getAllResourceDescriptions();
+	}
+
+	/**
+	 * Get the validation mode to use for the build.
+	 *
+	 * @return the validation mode to use for the build.
+	 * @since 2.29
+	 */
+	public CheckMode getValidationMode() {
+		if (isDirtyBuild()) {
+			return CheckMode.NORMAL_AND_FAST;
+		}
+		return CheckMode.ALL;
 	}
 }

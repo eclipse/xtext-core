@@ -51,7 +51,6 @@ import org.eclipse.xtext.resource.persistence.StorageAwareResource;
 import org.eclipse.xtext.service.OperationCanceledManager;
 import org.eclipse.xtext.util.CancelIndicator;
 import org.eclipse.xtext.util.RuntimeIOException;
-import org.eclipse.xtext.validation.CheckMode;
 import org.eclipse.xtext.validation.IResourceValidator;
 import org.eclipse.xtext.validation.Issue;
 import org.eclipse.xtext.workspace.IProjectConfig;
@@ -350,7 +349,7 @@ public class IncrementalBuilder {
 			if (resourceValidator == null) {
 				return true;
 			}
-			List<Issue> validationResult = resourceValidator.validate(resource, CheckMode.ALL,
+			List<Issue> validationResult = resourceValidator.validate(resource, context.getValidationMode(),
 					request.getCancelIndicator());
 			return request.getAfterValidate().afterValidate(resource.getURI(), validationResult);
 		}
@@ -359,6 +358,9 @@ public class IncrementalBuilder {
 		 * Generate code for the given resource
 		 */
 		protected void generate(Resource resource, BuildRequest request, Source2GeneratedMapping newMappings) {
+			if (context.isDirtyBuild()) {
+				return;
+			}
 			IResourceServiceProvider serviceProvider = getResourceServiceProvider(resource);
 			Set<URI> previous = newMappings.deleteSource(resource.getURI());
 			URIBasedFileSystemAccess fileSystemAccess = createFileSystemAccess(serviceProvider, resource);

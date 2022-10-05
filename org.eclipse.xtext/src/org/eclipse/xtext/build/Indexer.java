@@ -122,7 +122,7 @@ public class Indexer {
 		Set<IResourceDescription.Delta> allDeltas = new HashSet<>(deltas);
 		allDeltas.addAll(request.getExternalDeltas());
 		Set<URI> deltaSet = FluentIterable.from(deltas).transform(Delta::getUri).toSet();
-		List<URI> allAffected = FluentIterable.from(previousIndex.getAllResourceDescriptions())
+		List<URI> allAffected = FluentIterable.from(context.getPossibleyAffectedResourceDescriptions())
 				.transform(IResourceDescription::getURI).filter(it -> !deltaSet.contains(it)).filter(it -> {
 					IResourceServiceProvider resourceServiceProvider = context.getResourceServiceProvider(it);
 					if (resourceServiceProvider != null) {
