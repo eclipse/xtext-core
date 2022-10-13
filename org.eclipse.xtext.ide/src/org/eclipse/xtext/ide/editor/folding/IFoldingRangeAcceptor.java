@@ -9,8 +9,6 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.editor.folding;
 
-import org.eclipse.xtext.util.ITextRegion;
-
 /**
  * @author Michael Clay - Initial contribution and API
  * @author Sebastian Zarnekow - Distinguish between total and identifying region
@@ -20,26 +18,5 @@ import org.eclipse.xtext.util.ITextRegion;
  */
 public interface IFoldingRangeAcceptor {
 
-	default void accept(int offset, int length) {
-		accept(offset, length, false);
-	}
-
-	default void accept(int offset, int length, FoldingRangeKind kind) {
-		accept(offset, length, kind, null);
-	}
-
-	default void accept(int offset, int length, boolean initiallyFolded) {
-		accept(offset, length, null, initiallyFolded, null);
-	}
-
-	default void accept(int offset, int length, ITextRegion visualPlaceholderRegion) {
-		accept(offset, length, null, false, visualPlaceholderRegion);
-	}
-
-	default void accept(int offset, int length, FoldingRangeKind kind, ITextRegion visualPlaceholderRegion) {
-		accept(offset, length, kind, false, visualPlaceholderRegion);
-	}
-
-	void accept(int offset, int length, FoldingRangeKind kind, boolean initiallyFolded,
-			ITextRegion visualPlaceholderRegion);
+	void accept(int offset, int length, FoldingRangeKind kind);
 }

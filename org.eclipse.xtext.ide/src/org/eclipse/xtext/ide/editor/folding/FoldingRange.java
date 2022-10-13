@@ -8,8 +8,6 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.editor.folding;
 
-import org.eclipse.xtext.util.ITextRegion;
-
 import com.google.common.base.Objects;
 
 /**
@@ -25,32 +23,15 @@ public class FoldingRange {
 	private final int offset;
 	private final int length;
 	private final FoldingRangeKind kind;
-	private final boolean initiallyFolded;
-	private final ITextRegion visualPlaceholderRegion;
 
 	public FoldingRange(int offset, int length) {
 		this(offset, length, null);
 	}
 
 	public FoldingRange(int offset, int length, FoldingRangeKind kind) {
-		this(offset, length, kind, false, null);
-	}
-
-	public FoldingRange(int offset, int length, FoldingRangeKind kind, boolean initiallyFolded,
-			ITextRegion visualPlaceholderRegion) {
 		this.offset = offset;
 		this.length = length;
 		this.kind = kind;
-		this.initiallyFolded = initiallyFolded;
-		this.visualPlaceholderRegion = visualPlaceholderRegion;
-	}
-	
-	public boolean isInitiallyFolded() {
-		return initiallyFolded;
-	}
-
-	public ITextRegion getVisualPlaceholderRegion() {
-		return visualPlaceholderRegion;
 	}
 
 	public FoldingRangeKind getKind() {
@@ -69,16 +50,15 @@ public class FoldingRange {
 	public boolean equals(Object other) {
 		if (other instanceof FoldingRange) {
 			FoldingRange range = (FoldingRange) other;
-			return offset == range.offset && length == range.length && initiallyFolded == range.initiallyFolded
-					&& Objects.equal(kind, range.kind)
-					&& Objects.equal(visualPlaceholderRegion, range.visualPlaceholderRegion);
+			return offset == range.offset && length == range.length
+					&& Objects.equal(kind, range.kind);
 		}
 		return false;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(offset, length, initiallyFolded, kind, visualPlaceholderRegion);
+		return Objects.hashCode(offset, length, kind);
 	}
 	
 	@Override
@@ -87,7 +67,6 @@ public class FoldingRange {
 		content.append("offset=").append(offset);
 		content.append(", length=").append(length);
 		content.append(", kind=").append(kind);
-		content.append(", initiallyFolded=").append(initiallyFolded);
 		return content.toString();
 	}
 }

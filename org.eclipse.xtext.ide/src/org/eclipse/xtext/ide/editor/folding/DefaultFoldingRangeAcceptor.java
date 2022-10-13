@@ -11,8 +11,6 @@ package org.eclipse.xtext.ide.editor.folding;
 
 import java.util.Collection;
 
-import org.eclipse.xtext.util.ITextRegion;
-
 /**
  * @author Michael Clay - Initial contribution and API
  * @author Sebastian Zarnekow - Introduced FoldedPosition
@@ -21,7 +19,7 @@ import org.eclipse.xtext.util.ITextRegion;
  * @since 2.26
  */
 public class DefaultFoldingRangeAcceptor implements IFoldingRangeAcceptor {
-	private Collection<FoldingRange> result;
+	private final Collection<FoldingRange> result;
 
 	public DefaultFoldingRangeAcceptor(Collection<FoldingRange> result) {
 		this.result = result;
@@ -31,14 +29,12 @@ public class DefaultFoldingRangeAcceptor implements IFoldingRangeAcceptor {
 		return result;
 	}
 
-	@Override
-	public void accept(int offset, int length, FoldingRangeKind kind, boolean initiallyFolded,
-			ITextRegion visualPlaceholderRegion) {
-		result.add(createFoldingRange(offset, length, kind, initiallyFolded, visualPlaceholderRegion));
+	protected FoldingRange createFoldingRange(int offset, int length, FoldingRangeKind kind) {
+		return new FoldingRange(offset, length, kind);
 	}
-
-	protected FoldingRange createFoldingRange(int offset, int length, FoldingRangeKind kind, boolean initiallyFolded,
-			ITextRegion visualPlaceholderRegion) {
-		return new FoldingRange(offset, length, kind, initiallyFolded, visualPlaceholderRegion);
+	
+	@Override
+	public void accept(int offset, int length, FoldingRangeKind kind) {
+		result.add(createFoldingRange(offset, length, kind));
 	}
 }
