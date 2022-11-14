@@ -8,11 +8,15 @@
  */
 package org.eclipse.xtext.ide.server;
 
+import java.io.IOException;
+
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.lsp4j.DidChangeTextDocumentParams;
 import org.eclipse.lsp4j.Position;
 import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.TextDocumentContentChangeEvent;
 import org.eclipse.lsp4j.TextEdit;
+import org.eclipse.xtext.ide.util.PositionReader;
 import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
@@ -25,6 +29,8 @@ public class Document {
 	private final String contents;
 
 	private final boolean printSourceOnError;
+	
+	private PositionReader positionReader = null;
 
 	public Document(Integer version, String contents) {
 		this(version, contents, true);
@@ -67,22 +73,17 @@ public class Document {
 		if (offset < 0 || offset > l) {
 			throw new IndexOutOfBoundsException(offset + getSourceOnError());
 		}
-		char NL = '\n';
-		int line = 0;
-		int column = 0;
-		for (int i = 0; i < l; i++) {
-			char ch = contents.charAt(i);
-			if (i == offset) {
-				return new Position(line, column);
-			}
-			if (ch == NL) {
-				line++;
-				column = 0;
-			} else {
-				column++;
-			}
+		
+		if (positionReader == null || positionReader.getOffset() > offset) {
+			positionReader = new PositionReader(contents);
 		}
-		return new Position(line, column);
+		try {
+			positionReader.skip(offset - positionReader.getOffset());
+		} catch (IOException e) {
+			throw new WrappedException(e);
+		}
+
+		return positionReader.getPosition();
 	}
 
 	/**

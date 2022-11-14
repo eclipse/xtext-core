@@ -8,14 +8,12 @@
  *******************************************************************************/
 package org.eclipse.xtext.ide.server.semantictokens;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.lsp4j.Position;
 import org.eclipse.lsp4j.SemanticTokenModifiers;
 import org.eclipse.lsp4j.SemanticTokens;
@@ -25,7 +23,6 @@ import org.eclipse.xtext.ide.editor.syntaxcoloring.ISemanticHighlightingCalculat
 import org.eclipse.xtext.ide.editor.syntaxcoloring.LightweightPosition;
 import org.eclipse.xtext.ide.editor.syntaxcoloring.MergingHighlightedPositionAcceptor;
 import org.eclipse.xtext.ide.server.Document;
-import org.eclipse.xtext.ide.util.PositionReader;
 import org.eclipse.xtext.resource.IResourceServiceProvider;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.util.CancelIndicator;
@@ -98,31 +95,27 @@ public class SemanticTokensService {
 		List<Integer> data = new ArrayList<>();
 		int lastOffset = 0;
 		int lastLine = 0;
-		try (PositionReader reader = new PositionReader(document.getContents())) {
-			List<LightweightPosition> positions = getPositions(resource, cancelIndicator);
-			positions.sort(Comparator.comparing(LightweightPosition::getOffset));
-			for (LightweightPosition lightweightPosition : positions) {
-				Integer positionTokenType = getTokenType(lightweightPosition.getIds());
-				Integer positionTokenModifiers = getTokenModifiers(lightweightPosition.getIds());
+		List<LightweightPosition> positions = getPositions(resource, cancelIndicator);
+		positions.sort(Comparator.comparing(LightweightPosition::getOffset));
+		for (LightweightPosition lightweightPosition : positions) {
+			Integer positionTokenType = getTokenType(lightweightPosition.getIds());
+			Integer positionTokenModifiers = getTokenModifiers(lightweightPosition.getIds());
 
-				if (positionTokenType != 0 || positionTokenModifiers != 0) {
-					int deltaOffset = lightweightPosition.getOffset() - lastOffset;
-					reader.skip(deltaOffset);
-					Position position = reader.getPosition();
-					int deltaLine = position.getLine() - lastLine;
-					data.add(deltaLine); // delta line
-					lastLine = position.getLine();
-					// delta start relative to previous token if on the same line or to 0
-					data.add(deltaLine == 0 ? deltaOffset : position.getCharacter());
-					lastOffset = lightweightPosition.getOffset();
-					data.add(lightweightPosition.getLength()); // length
-					data.add(positionTokenType); // token type
-					data.add(positionTokenModifiers); // token modifiers
-				}
+			if (positionTokenType != 0 || positionTokenModifiers != 0) {
+				int deltaOffset = lightweightPosition.getOffset() - lastOffset;
+				Position position = document.getPosition(lightweightPosition.getOffset());
+				int deltaLine = position.getLine() - lastLine;
+				data.add(deltaLine); // delta line
+				lastLine = position.getLine();
+				// delta start relative to previous token if on the same line or to 0
+				data.add(deltaLine == 0 ? deltaOffset : position.getCharacter());
+				lastOffset = lightweightPosition.getOffset();
+				data.add(lightweightPosition.getLength()); // length
+				data.add(positionTokenType); // token type
+				data.add(positionTokenModifiers); // token modifiers
 			}
-		} catch (IOException e) {
-			throw new WrappedException(e);
 		}
+		
 		return new SemanticTokens(data); // resultId not set, no delta support
 	}
 

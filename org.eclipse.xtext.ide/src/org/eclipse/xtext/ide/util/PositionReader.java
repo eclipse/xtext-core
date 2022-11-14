@@ -24,9 +24,15 @@ import com.google.common.annotations.Beta;
 @Beta
 public class PositionReader extends LineNumberReader {
 
+	/** The current offset. */
+	private int offset;
+
 	/** The current column. */
 	private int column;
 
+	/** The marked column, if any. */
+	private int markedOffset;
+	
 	/** The marked column, if any. */
 	private int markedColumn;
 
@@ -44,11 +50,16 @@ public class PositionReader extends LineNumberReader {
 		return new Position(getLineNumber(), column);
 	}
 
+	public int getOffset() {
+		return offset;
+	}
+
 	@Override
 	public int read() throws IOException {
 		synchronized (lock) {
 			int currentLineNumber = getLineNumber();
 			int c = super.read();
+			offset++;
 			if (currentLineNumber != getLineNumber()) {
 				column = 0;
 			} else {
@@ -81,6 +92,7 @@ public class PositionReader extends LineNumberReader {
 		synchronized (lock) {
 			super.mark(readAheadLimit);
 			markedColumn = column;
+			markedOffset = offset;
 		}
 	}
 
@@ -89,6 +101,7 @@ public class PositionReader extends LineNumberReader {
 		synchronized (lock) {
 			super.reset();
 			column = markedColumn;
+			offset = markedOffset;
 		}
 	}
 }
