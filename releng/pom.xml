@@ -12,7 +12,7 @@
 		<tycho-version>1.7.0</tycho-version>
 		<root-dir>${basedir}/..</root-dir>
 		<JENKINS_URL>https://ci.eclipse.org/xtext</JENKINS_URL>
-		<upstreamBranch>release_2.28.0</upstreamBranch>
+		<upstreamBranch>maintenance_2.28</upstreamBranch>
 	</properties>
 
 	<repositories>
