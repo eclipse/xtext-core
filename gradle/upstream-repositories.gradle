@@ -64,7 +64,7 @@ def upstream_branch (jobName, branch) {
   def selectedBranch = branch_candidates.find { candidate -> url_exists(new URL("$JENKINS_URL/job/$jobName/job/$candidate/$MVN_REPOPATH")) }
   if (selectedBranch == null) {
     // fallback
-    selectedBranch = 'master'
+    selectedBranch = 'maintenance_2.28'
   }
   logger.info "[$project.name $jobName] Using upstream branch $selectedBranch (autodetect)"
   return selectedBranch
