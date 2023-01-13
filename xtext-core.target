@@ -30,6 +30,18 @@
 			<unit id="org.apache.log4j" version="1.2.24.v20221221-2012"/>
 			<unit id="org.junit" version="4.13.2.v20211018-1956"/>
 			<unit id="com.google.guava" version="30.1.0.v20221112-0806"/>
+			<unit id="org.apiguardian" version="0.0.0"/>
+			<unit id="org.junit.jupiter.api" version="0.0.0"/>
+			<unit id="org.junit.jupiter.engine" version="0.0.0"/>
+			<unit id="org.junit.jupiter.migrationsupport" version="0.0.0"/>
+			<unit id="org.junit.jupiter.params" version="0.0.0"/>
+			<unit id="org.junit.platform.commons" version="0.0.0"/>
+			<unit id="org.junit.platform.engine" version="0.0.0"/>
+			<unit id="org.junit.platform.launcher" version="0.0.0"/>
+			<unit id="org.junit.platform.runner" version="0.0.0"/>
+			<unit id="org.junit.platform.suite.api" version="0.0.0"/>
+			<unit id="org.junit.platform.suite.commons" version="0.0.0"/>
+			<unit id="org.junit.vintage.engine" version="0.0.0"/>
 		</location>
 	</locations>
 </target>
