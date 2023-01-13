@@ -3,7 +3,7 @@
 <target name="xtext-core" sequenceNumber="0">
 	<locations>
 		<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-			<repository location="https://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.29.0/"/>
+			<repository location="https://download.eclipse.org/modeling/tmf/xtext/updates/milestones/"/>
 			<unit id="org.eclipse.xtend.sdk.feature.group" version="0.0.0"/>
 			<unit id="org.eclipse.xtend" version="0.0.0"/>
 			<unit id="org.eclipse.xtend.typesystem.emf" version="0.0.0"/>
