@@ -130,6 +130,13 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 
+		<!--
+		This is the version of the currently released latest version that we
+		use during the Maven builds for artifacts that are not in this Git repository
+		(and thus, not in this Maven reactor).
+		-->
+		<xtext-current-release-version>2.30.0.M1</xtext-current-release-version>
+
 		<root-dir>${basedir}/..</root-dir>
 		<JENKINS_URL>https://ci.eclipse.org/xtext</JENKINS_URL>
 		<upstreamBranch>master</upstreamBranch>
@@ -158,7 +165,7 @@
 				<groupId>org.eclipse.xtext</groupId>
 				<artifactId>xtext-dev-bom</artifactId>
 				<!-- TODO: update it -->
-				<version>2.30.0.M1</version>
+				<version>${xtext-current-release-version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
