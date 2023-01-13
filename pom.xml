@@ -166,6 +166,7 @@
 	</dependencyManagement>
 
 	<modules>
+		<module>org.eclipse.xtext</module>
 		<module>org.eclipse.xtext.util</module>
 	</modules>
 
