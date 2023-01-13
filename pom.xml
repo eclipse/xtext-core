@@ -229,7 +229,6 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<pomDependencies>consider</pomDependencies>
 					<target>
 						<file>
 							${project.basedir}/../xtext-core.target
