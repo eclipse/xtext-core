@@ -170,6 +170,7 @@
 		<module>org.eclipse.xtext.util</module>
 		<module>org.eclipse.xtext.ide</module>
 		<module>org.eclipse.xtext.testing</module>
+		<module>org.eclipse.xtext.xtext.generator</module>
 	</modules>
 
 	<build>
