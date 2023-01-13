@@ -8,6 +8,9 @@
 	<artifactId>org.eclipse.xtext.util</artifactId>
 	<packaging>eclipse-plugin</packaging>
 
+	<name>Xtext Utilities</name>
+	<description>Utility classes used throughout Xtext.</description>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.eclipse.xtend</groupId>
