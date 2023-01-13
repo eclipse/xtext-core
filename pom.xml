@@ -168,6 +168,7 @@
 	<modules>
 		<module>org.eclipse.xtext</module>
 		<module>org.eclipse.xtext.util</module>
+		<module>org.eclipse.xtext.ide</module>
 	</modules>
 
 	<build>
