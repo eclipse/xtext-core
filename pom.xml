@@ -1,0 +1,253 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.eclipse.xtext</groupId>
+	<artifactId>xtext-core</artifactId>
+	<version>2.30.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<url>https://www.eclipse.org/Xtext/</url>
+	<licenses>
+		<license>
+			<name>Eclipse Public License, Version 2.0</name>
+			<url>http://www.eclipse.org/legal/epl-2.0</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Sven Efftinge</name>
+			<email>sven.efftinge@typefox.io</email>
+			<organization>TypeFox</organization>
+			<organizationUrl>http://typefox.io</organizationUrl>
+		</developer>
+		<developer>
+			<name>Sebastian Benz</name>
+		</developer>
+		<developer>
+			<name>Lorenzo Bettini</name>
+			<email>lorenzo.bettini@gmail.com</email>
+			<organization>DISIA, University Firenze</organization>
+		</developer>
+		<developer>
+			<name>Michael Clay</name>
+		</developer>
+		<developer>
+			<name>Arne Deutsch</name>
+			<email>arne.deutsch@itemis.de</email>
+			<organization>itemis</organization>
+			<organizationUrl>http://www.itemis.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Christian Dietrich</name>
+			<email>christian.dietrich@itemis.de</email>
+			<organization>itemis</organization>
+			<organizationUrl>http://www.itemis.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Moritz Eysholdt</name>
+			<email>moritz.eysholdt@typefox.io</email>
+			<organization>TypeFox</organization>
+			<organizationUrl>http://typefox.io</organizationUrl>
+		</developer>
+		<developer>
+			<name>Dennis Hübner</name>
+			<email>dennis.huebner@typefox.io</email>
+			<organization>TypeFox</organization>
+			<organizationUrl>http://typefox.io</organizationUrl>
+		</developer>
+		<developer>
+			<name>Jan Köhnlein</name>
+			<email>jan.koehnlein@typefox.io</email>
+			<organization>TypeFox</organization>
+			<organizationUrl>http://typefox.io</organizationUrl>
+		</developer>
+		<developer>
+			<name>Anton Kosyakov</name>
+			<email>anton.kosyakov@typefox.io</email>
+			<organization>TypeFox</organization>
+			<organizationUrl>http://typefox.io</organizationUrl>
+		</developer>
+		<developer>
+			<name>Tamas Miklossy</name>
+			<email>miklossy@itemis.de</email>
+			<organization>itemis</organization>
+			<organizationUrl>http://www.itemis.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Stefan Oehme</name>
+		</developer>
+		<developer>
+			<name>Holger Schill</name>
+			<email>holger.schill@itemis.de</email>
+			<organization>itemis</organization>
+			<organizationUrl>http://www.itemis.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Christian Schneider</name>
+			<email>christian.schneider@typefox.io</email>
+			<organization>TypeFox</organization>
+			<organizationUrl>http://typefox.io</organizationUrl>
+		</developer>
+		<developer>
+			<name>Miro Spönemann</name>
+			<email>miro.spoenemann@typefox.io</email>
+			<organization>TypeFox</organization>
+			<organizationUrl>http://typefox.io</organizationUrl>
+		</developer>
+		<developer>
+			<name>Karsten Thoms</name>
+			<email>karsten.thoms@itemis.de</email>
+			<organization>itemis</organization>
+			<organizationUrl>http://www.itemis.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Knut Wannheden</name>
+		</developer>
+		<developer>
+			<name>Sebastian Zarnekow</name>
+			<email>sebastian.zarnekow@gmail.com</email>
+			<organization>itemis</organization>
+			<organizationUrl>http://www.itemis.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Titouan Vervack</name>
+			<email>titouan.vervack@sigasi.com</email>
+			<organization>Sigasi</organization>
+			<organizationUrl>https://www.sigasi.com</organizationUrl>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:https://github.com/eclipse/xtext-core.git</connection>
+		<developerConnection>scm:git:https://github.com/eclipse/xtext-core.git</developerConnection>
+		<url>git@github.com:eclipse/xtext-core.git</url>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>	
+		<tycho-version>2.7.5</tycho-version>
+
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+
+		<root-dir>${basedir}/..</root-dir>
+		<JENKINS_URL>https://ci.eclipse.org/xtext</JENKINS_URL>
+		<upstreamBranch>master</upstreamBranch>
+	</properties>
+
+	<!--
+	<repositories>
+		<repository>
+			<id>local-gradle-result</id>
+			<url>file:${root-dir}/build/maven-repository</url>
+		</repository>
+		<repository>
+			<id>lsp4j</id>
+			<url>${JENKINS_URL}/job/lsp4j/lastStableBuild/artifact/build/maven-repository</url>
+		</repository>
+		<repository>
+			<id>lib</id>
+			<url>${JENKINS_URL}/job/xtext-lib/job/${upstreamBranch}/lastStableBuild/artifact/build/maven-repository</url>
+		</repository>
+	</repositories>
+	-->
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.eclipse.xtext</groupId>
+				<artifactId>xtext-dev-bom</artifactId>
+				<version>${project.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<modules>
+		<module>org.eclipse.xtext.util</module>
+	</modules>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-compiler-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<useProjectSettings>true</useProjectSettings>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-source-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions>
+					<execution>
+						<id>plugin-source</id>
+						<goals>
+							<goal>plugin-source</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>feature-source</id>
+						<goals>
+							<goal>feature-source</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<pomDependencies>consider</pomDependencies>
+					<target>
+						<file>
+							${project.basedir}/../xtext-core.target
+						</file>
+					</target>
+					<environments>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<format>'v'yyyyMMdd-HHmm</format>
+					<!-- required to have valid consumable Maven artifacts
+						https://github.com/eclipse/tycho/issues/781 -->
+					<skipPomGeneration>true</skipPomGeneration>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
