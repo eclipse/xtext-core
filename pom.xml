@@ -157,7 +157,8 @@
 			<dependency>
 				<groupId>org.eclipse.xtext</groupId>
 				<artifactId>xtext-dev-bom</artifactId>
-				<version>${project.version}</version>
+				<!-- TODO: update it -->
+				<version>2.30.0.M1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
