@@ -190,6 +190,14 @@
 					<version>${tycho-version}</version>
 					<configuration>
 						<useProjectSettings>true</useProjectSettings>
+							<excludeResources>
+							<excludeResource>**/*.xtend</excludeResource>
+							<excludeResource>**/*.xtendbin</excludeResource>
+							<excludeResource>**/*._trace</excludeResource>
+						</excludeResources>
+						<compilerArgs>
+							<arg>-parameters</arg>
+						</compilerArgs>
 					</configuration>
 				</plugin>
 				<plugin>
