@@ -16,7 +16,7 @@
 			<groupId>org.eclipse.xtend</groupId>
 			<artifactId>org.eclipse.xtend.lib</artifactId>
 			<!-- TODO: update it -->
-			<version>2.30.0.M1</version>
+			<version>${xtext-current-release-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
