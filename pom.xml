@@ -169,7 +169,10 @@
 			<dependency>
 				<groupId>org.eclipse.xtext</groupId>
 				<artifactId>xtext-dev-bom</artifactId>
-				<!-- TODO: update it -->
+				<!--
+				TODO: update it
+				The dev BOM should be in the same Git repository of this one
+				-->
 				<version>${xtext-current-release-version}</version>
 				<type>pom</type>
 				<scope>import</scope>
@@ -216,6 +219,43 @@
 							<version>5.9.1</version>
 						</dependency>
 					</dependencies>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.2.0</version>
+					<configuration>
+						<filesets>
+							<fileset>
+								<directory>${project.basedir}/target</directory>
+							</fileset>
+							<fileset>
+								<directory>${project.basedir}/xtend-gen</directory>
+								<includes>
+									<include>**/*</include>
+								</includes>
+								<excludes>
+									<exclude>.gitignore</exclude>
+								</excludes>
+							</fileset>
+						</filesets>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.xtend</groupId>
+					<artifactId>xtend-maven-plugin</artifactId>
+					<version>${xtext-current-release-version}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>compile</goal>
+								<goal>xtend-install-debug-info</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<outputDirectory>${basedir}/xtend-gen</outputDirectory>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
