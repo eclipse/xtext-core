@@ -8,7 +8,7 @@
 	<artifactId>org.eclipse.xtext.testlanguages</artifactId>
 	<packaging>eclipse-plugin</packaging>
 
-	<name>Common Xtext Testlanguages for UI and Runtime - Runtime</name>
+	<name>Common Xtext Testlanguages - Runtime</name>
 	<description>Common Xtext Testlanguages for UI and Runtime - Runtime</description>
 
 </project>
