@@ -193,6 +193,7 @@
 		<module>org.eclipse.xtext.xtext.bootstrap</module>
 		<module>org.eclipse.xtext.xtext.generator</module>
 		<module>org.eclipse.xtext.xtext.wizard</module>
+		<module>org.eclipse.xtext.core.p2repository</module>
 	</modules>
 
 	<build>
@@ -262,6 +263,16 @@
 					<configuration>
 						<outputDirectory>${basedir}/xtend-gen</outputDirectory>
 					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-p2-repository-plugin</artifactId>
+					<version>${tycho-version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>3.1.0</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
