@@ -304,20 +304,6 @@
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-p2-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<executions>
-					<execution>
-						<id>attach-p2-metadata</id>
-					</execution>
-				</executions>
-				<configuration>
-					<defaultP2Metadata>false</defaultP2Metadata>
-					<attachP2Metadata>false</attachP2Metadata>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
