@@ -188,6 +188,7 @@
 		<module>org.eclipse.xtext.testing</module>
 		<module>org.eclipse.xtext.testlanguages</module>
 		<module>org.eclipse.xtext.testlanguages.ide</module>
+		<module>org.eclipse.xtext.xtext.ide</module>
 		<module>org.eclipse.xtext.xtext.bootstrap</module>
 		<module>org.eclipse.xtext.xtext.generator</module>
 		<module>org.eclipse.xtext.xtext.wizard</module>
