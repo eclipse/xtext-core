@@ -183,6 +183,7 @@
 	<modules>
 		<module>org.eclipse.xtext</module>
 		<module>org.eclipse.xtext.util</module>
+		<module>org.eclipse.xtext.tests</module>
 		<module>org.eclipse.xtext.ide</module>
 		<module>org.eclipse.xtext.ide.tests</module>
 		<module>org.eclipse.xtext.testing</module>
