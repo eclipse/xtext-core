@@ -26,7 +26,7 @@ import com.google.inject.Inject;
  */
 @ExtendWith(InjectionExtension.class)
 @InjectWith(FileAwareTestLanguageInjectorProvider.class)
-public class FileAwareTestLanguageValidationTest {
+public class FileAwareTestLanguageValidationJunit5Test {
 
 	@Inject
 	private ParseHelper<PackageDeclaration> parseHelper;
