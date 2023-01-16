@@ -221,9 +221,9 @@
 					<version>3.0.0-M8</version>
 					<dependencies>
 						<dependency>
-							<groupId>org.junit.jupiter</groupId>
-							<artifactId>junit-jupiter-engine</artifactId>
-							<version>5.9.1</version>
+							<groupId>org.apache.maven.surefire</groupId>
+							<artifactId>surefire-junit-platform</artifactId>
+							<version>3.0.0-M8</version>
 						</dependency>
 					</dependencies>
 					<configuration>
