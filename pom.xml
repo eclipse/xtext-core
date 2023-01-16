@@ -226,6 +226,15 @@
 							<version>5.9.1</version>
 						</dependency>
 					</dependencies>
+					<configuration>
+						<!--
+						The Surefire Plugin excludes nested classes by default: http://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#excludes
+						By removing all default exclusions the nested classes get executed too, JUnit 4 and JUnit 5.
+						-->
+						<excludes>
+							<exclude />
+						</excludes>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
