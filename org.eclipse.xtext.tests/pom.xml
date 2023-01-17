@@ -16,6 +16,7 @@
 	(configured in the parent POM).
 	In Tycho 2.7.5, no further configuration is needed besides marking the
 	folders containing tests as test source folders.
+	(you can still force JUnit5 as done below)
 	Moreover, the packaging type must be "eclipse-plugin".
 	-->
 
@@ -24,6 +25,18 @@
 			<plugin>
 				<groupId>org.eclipse.xtend</groupId>
 				<artifactId>xtend-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<dependencies>
+					<!-- force to run with JUnit5 -->
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit-platform</artifactId>
+						<version>3.0.0-M8</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>

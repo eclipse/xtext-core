@@ -252,13 +252,6 @@
 						</execution>
 					</executions>
 					-->
-					<dependencies>
-						<dependency>
-							<groupId>org.apache.maven.surefire</groupId>
-							<artifactId>surefire-junit-platform</artifactId>
-							<version>3.0.0-M8</version>
-						</dependency>
-					</dependencies>
 					<configuration>
 						<!--
 						The Surefire Plugin excludes nested classes by default: http://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#excludes
