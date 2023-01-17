@@ -15,7 +15,10 @@
 		<dependency>
 			<groupId>org.eclipse.xtend</groupId>
 			<artifactId>org.eclipse.xtend.lib</artifactId>
-			<!-- TODO: update it -->
+			<!--
+			TODO: update it
+			The dev BOM should be in the same Git repository of this one
+			-->
 			<version>${xtext-current-release-version}</version>
 		</dependency>
 		<dependency>
