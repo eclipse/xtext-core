@@ -134,8 +134,16 @@
 		This is the version of the currently released latest version that we
 		use during the Maven builds for artifacts that are not in this Git repository
 		(and thus, not in this Maven reactor).
+		It is redefined in the profile "useJenkinsSnapshots" to take the same version
+		of this project.
 		-->
 		<xtext-current-release-version>2.30.0.M1</xtext-current-release-version>
+
+		<!--
+		This is the version of the currently released latest version of the xtend-maven-plugin that we
+		use during the Maven builds for processing Xtend files.
+		-->
+		<xtend-maven-plugin-version>2.30.0.M1</xtend-maven-plugin-version>
 
 		<!--
 		TODO: if we switch to a single Git repository, this should be changed
@@ -146,23 +154,6 @@
 		<JENKINS_URL>https://ci.eclipse.org/xtext</JENKINS_URL>
 		<upstreamBranch>master</upstreamBranch>
 	</properties>
-
-	<!--
-	<repositories>
-		<repository>
-			<id>local-gradle-result</id>
-			<url>file:${root-dir}/build/maven-repository</url>
-		</repository>
-		<repository>
-			<id>lsp4j</id>
-			<url>${JENKINS_URL}/job/lsp4j/lastStableBuild/artifact/build/maven-repository</url>
-		</repository>
-		<repository>
-			<id>lib</id>
-			<url>${JENKINS_URL}/job/xtext-lib/job/${upstreamBranch}/lastStableBuild/artifact/build/maven-repository</url>
-		</repository>
-	</repositories>
-	-->
 
 	<dependencyManagement>
 		<dependencies>
@@ -195,6 +186,31 @@
 		<module>org.eclipse.xtext.xtext.wizard</module>
 		<module>org.eclipse.xtext.core.p2repository</module>
 	</modules>
+
+	<profiles>
+		<profile>
+			<id>useJenkinsSnapshots</id>
+			<properties>
+				<!-- redefines the property for versions of artifacts not in this Git repository,
+					so that it takes the same snapshot version of this project. -->
+				<xtext-current-release-version>${project.version}</xtext-current-release-version>
+			</properties>
+			<repositories>
+				<repository>
+					<id>lsp4j-from-jenkins</id>
+					<url>${JENKINS_URL}/job/lsp4j/lastStableBuild/artifact/build/maven-repository</url>
+				</repository>
+				<repository>
+					<id>xtext-lib-from-jenkins</id>
+					<url>${JENKINS_URL}/job/xtext-lib/job/${upstreamBranch}/lastStableBuild/artifact/build/maven-repository/</url>
+				</repository>
+				<repository>
+					<id>xtext-extras-from-jenkins</id>
+					<url>${JENKINS_URL}/job/xtext-extras/job/${upstreamBranch}/lastStableBuild/artifact/build/maven-repository/</url>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
 
 	<build>
 		<pluginManagement>
@@ -265,7 +281,7 @@
 				<plugin>
 					<groupId>org.eclipse.xtend</groupId>
 					<artifactId>xtend-maven-plugin</artifactId>
-					<version>${xtext-current-release-version}</version>
+					<version>${xtend-maven-plugin-version}</version>
 					<executions>
 						<execution>
 							<goals>

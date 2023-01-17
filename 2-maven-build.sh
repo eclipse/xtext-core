@@ -6,6 +6,7 @@ fi
 
 mvn \
   deploy \
+  -PuseJenkinsSnapshots \
   --batch-mode \
   --update-snapshots \
   -Dmaven.repo.local=.m2/repository \
