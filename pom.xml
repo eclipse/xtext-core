@@ -130,6 +130,8 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 
+		<maven-surefire-version>3.0.0-M8</maven-surefire-version>
+
 		<!--
 		This is the version of the currently released latest version that we
 		use during the Maven builds for artifacts that are not in this Git repository
@@ -239,7 +241,7 @@
 					-->
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M8</version>
+					<version>${maven-surefire-version}</version>
 					<!--
 					This is not needed now, but will be needed when switching to Tycho 4.0.0
 					see https://github.com/eclipse-tycho/tycho/blob/master/RELEASE_NOTES.md#using-integrationplugin-tests-with-eclipse-plugin-packaging
