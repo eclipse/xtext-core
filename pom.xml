@@ -221,7 +221,7 @@
 					<version>${tycho-version}</version>
 					<configuration>
 						<useProjectSettings>true</useProjectSettings>
-							<excludeResources>
+						<excludeResources>
 							<excludeResource>**/*.xtend</excludeResource>
 							<excludeResource>**/*.xtendbin</excludeResource>
 							<excludeResource>**/*._trace</excludeResource>
