@@ -5,7 +5,7 @@ if [ -z "$JENKINS_URL" ]; then
 fi
 
 mvn \
-  deploy \
+  clean deploy \
   -PuseJenkinsSnapshots \
   --batch-mode \
   --update-snapshots \
