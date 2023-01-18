@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" output="target/classes" path="src">
+	<classpathentry kind="src" output="target/test-classes" path="src">
 		<attributes>
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" output="target/classes" path="testlang-src">
 		<attributes>
-			<attribute name="test" value="true"/>
+			<attribute name="ignore_optional_problems" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" output="target/classes" path="testlang-src-gen">
 		<attributes>
-			<attribute name="test" value="true"/>
 			<attribute name="ignore_optional_problems" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry including="**/*.java|**/*.xtend" kind="src" output="target/classes" path="suites">
+	<classpathentry including="**/*.java|**/*.xtend" kind="src" output="target/test-classes" path="suites">
 		<attributes>
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" output="target/classes" path="src-gen">
 		<attributes>
-			<attribute name="test" value="true"/>
 			<attribute name="ignore_optional_problems" value="true"/>
 		</attributes>
 	</classpathentry>
