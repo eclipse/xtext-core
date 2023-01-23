@@ -37,4 +37,11 @@
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 		<nature>org.eclipse.pde.PluginNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>model/org</name>
+			<type>2</type>
+			<locationURI>PROJECT_LOC/org</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
