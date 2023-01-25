@@ -1,9 +1,0 @@
-This source folder only contains a link to the "org" directory, which contains
-Xtext.ecore and Xtext.genmodel.
-
-This way, the two files will be copied in the output folder, and the tests
-in org.eclipse.xtext.extras will find Xtext.ecore with the URI
-"classpath:/org/eclipse/xtext/Xtext.ecore".
-
-This is required to run the tests from Eclipse, in particular when "org.eclipse.xtext"
-is imported as a project in the workbench.

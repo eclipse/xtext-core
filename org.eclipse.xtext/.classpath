@@ -10,6 +10,5 @@
 	</classpathentry>
 	<classpathentry kind="src" path="packrat"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="model"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
