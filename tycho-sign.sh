@@ -8,7 +8,6 @@ fi
 mvn \
   -f org.eclipse.xtext.p2.releng \
   clean package \
-  -DskipTests \
   -P eclipse-sign \
   --batch-mode \
   --update-snapshots \

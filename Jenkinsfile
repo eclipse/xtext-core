@@ -45,21 +45,15 @@ pipeline {
       }
     }
 
+    stage('Maven Build') {
+      steps {
+        sh './maven-build.sh'
+      }
+    }
+
     stage('Maven Tycho Build and Test') {
       steps {
-        sh './1-tycho-build.sh'
-      }
-    }
-
-    stage('Maven Tycho Build and Sign') {
-      steps {
-        sh './2-tycho-build.sh'
-      }
-    }
-
-    stage('Maven Deploy') {
-      steps {
-        sh './3-maven-build.sh'
+        sh './tycho-test.sh'
       }
     }
   }

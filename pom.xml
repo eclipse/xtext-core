@@ -210,6 +210,11 @@
 		</profile>
 		<profile>
 			<id>eclipse-sign</id>
+			<properties>
+				<!-- don't run tests while signing, to avoid failures of the shape:
+					"signer information does not match signer information of other classes in the same package" -->
+				<skipTests>true</skipTests>
+			</properties>
 			<build>
 				<plugins>
 					<plugin>
