@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
-<target name="xtext-core" sequenceNumber="0">
+<target name="xtext-latest" sequenceNumber="0">
 	<locations>
 		<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 			<repository location="https://ci.eclipse.org/xtext/job/xtext-lib/job/lb_2052_maven_tycho/lastSuccessfulBuild/artifact/build/p2-repository/"/>
