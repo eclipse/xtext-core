@@ -56,6 +56,12 @@ pipeline {
         sh './tycho-test.sh'
       }
     }
+
+    stage('Maven Tycho P2 Repo and Sign') {
+      steps {
+        sh './tycho-sign.sh'
+      }
+    }
   }
 
   post {

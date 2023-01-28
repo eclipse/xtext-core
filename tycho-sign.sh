@@ -7,8 +7,8 @@ fi
 
 mvn \
   -f org.eclipse.xtext.p2.releng \
-  clean package \
-  -P eclipse-sign \
+  package \
+  -P eclipse-sign,buildP2Repository \
   --batch-mode \
   --update-snapshots \
   -Dmaven.repo.local=.m2/repository \
