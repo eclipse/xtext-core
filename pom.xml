@@ -135,6 +135,14 @@
 		<maven-surefire-version>3.0.0-M8</maven-surefire-version>
 
 		<!--
+		This assumes that the child project has the same version as the parent.
+		This is not the case only for some special cases like org.eclipse.xtext.logging
+		and org.eclipse.emf.mwe2.language.sdk.dummy: in those projects we can redefine
+		this property with ${project.parent.version}.
+		-->
+		<xtext-dev-bom-version>${project.version}</xtext-dev-bom-version>
+
+		<!--
 		This is the version of the currently released latest version that we
 		use during the Maven builds for artifacts that are not in this Git repository
 		(and thus, not in this Maven reactor).
@@ -170,7 +178,7 @@
 				TODO: update it
 				The dev BOM should be in the same Git repository of this one
 				-->
-				<version>${xtext-current-release-version}</version>
+				<version>${xtext-dev-bom-version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
