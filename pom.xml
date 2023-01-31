@@ -176,6 +176,23 @@
 		</dependencies>
 	</dependencyManagement>
 
+	<repositories>
+		<!-- Sonatype snapshots are the default for Xtext dependencies
+			of other Git repositories. Sonatype snapshots are disabled
+			when using the "useJenkinsSnapshots" profile. -->
+		<repository>
+			<id>sonatype-snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+
 	<profiles>
 		<profile>
 			<id>useJenkinsSnapshots</id>
@@ -199,6 +216,17 @@
 				<repository>
 					<id>xtext-xtend-from-jenkins</id>
 					<url>${JENKINS_URL}/job/xtext-xtend/job/${upstreamBranch}/lastStableBuild/artifact/build/maven-repository/</url>
+				</repository>
+				<!-- Disable sonatype snapshots -->
+				<repository>
+					<id>sonatype-snapshots</id>
+					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
 				</repository>
 			</repositories>
 		</profile>
