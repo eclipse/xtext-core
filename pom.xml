@@ -143,15 +143,6 @@
 		<xtext-dev-bom-version>${project.version}</xtext-dev-bom-version>
 
 		<!--
-		This is the version of the currently released latest version that we
-		use during the Maven builds for artifacts that are not in this Git repository
-		(and thus, not in this Maven reactor).
-		It is redefined in the profile "useJenkinsSnapshots" to take the same version
-		of this project.
-		-->
-		<xtext-current-release-version>2.30.0.M1</xtext-current-release-version>
-
-		<!--
 		This is the version of the currently released latest version of the xtend-maven-plugin that we
 		use during the Maven builds for processing Xtend files.
 		-->
@@ -188,11 +179,6 @@
 	<profiles>
 		<profile>
 			<id>useJenkinsSnapshots</id>
-			<properties>
-				<!-- redefines the property for versions of artifacts not in this Git repository,
-					so that it takes the same snapshot version of this project. -->
-				<xtext-current-release-version>${project.version}</xtext-current-release-version>
-			</properties>
 			<repositories>
 				<repository>
 					<id>lsp4j-from-jenkins</id>
