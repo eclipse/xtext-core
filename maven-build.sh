@@ -7,6 +7,7 @@ mvn \
   -f org.eclipse.xtext.maven.releng \
   -DskipTests=true \
   clean deploy \
+  -P useJenkinsSnapshots \
   -P eclipse-sign \
   --batch-mode \
   --update-snapshots \

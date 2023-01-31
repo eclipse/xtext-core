@@ -11,7 +11,7 @@ pipeline {
                     sh 'gpg --batch --import "${KEYRING}"'
                     sh 'for fpr in $(gpg --list-keys --with-colons  | awk -F: \'/fpr:/ {print $10}\' | sort -u); do echo -e "5\ny\n" |  gpg --batch --command-fd 0 --expert --edit-key ${fpr} trust; done'
                 }
-                sh "mvn -B -f org.eclipse.xtext.maven.releng/pom.xml -Peclipse-sign,sonatype-oss-release clean deploy"
+                sh "mvn -B -f org.eclipse.xtext.maven.releng/pom.xml -PuseJenkinsSnapshots -Peclipse-sign,sonatype-oss-release clean deploy"
             }
         }
     }

@@ -8,6 +8,7 @@ fi
 mvn \
   -f org.eclipse.xtext.p2.releng \
   clean verify \
+  -P useJenkinsSnapshots \
   --batch-mode \
   --update-snapshots \
   -Dmaven.repo.local=.m2/repository \
