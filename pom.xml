@@ -107,8 +107,6 @@
 		<developer>
 			<name>Sebastian Zarnekow</name>
 			<email>sebastian.zarnekow@gmail.com</email>
-			<organization>itemis</organization>
-			<organizationUrl>http://www.itemis.com</organizationUrl>
 		</developer>
 		<developer>
 			<name>Titouan Vervack</name>
@@ -146,7 +144,7 @@
 		This is the version of the currently released latest version of the xtend-maven-plugin that we
 		use during the Maven builds for processing Xtend files.
 		-->
-		<xtend-maven-plugin-version>2.30.0.M1</xtend-maven-plugin-version>
+		<xtend-maven-plugin-version>2.30.0.M2</xtend-maven-plugin-version>
 
 		<root-dir>${basedir}/..</root-dir>
 		<JENKINS_URL>https://ci.eclipse.org/xtext</JENKINS_URL>
@@ -194,6 +192,21 @@
 	</repositories>
 
 	<profiles>
+		<profile>
+			<!-- This is used only for updating versions in test children projects
+				versions:set will scan automatically also these modules
+				even if this profile is not active.
+
+				Don't run a build with this profile explicitly -->
+			<id>update-versions</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>org.eclipse.xtext.p2.releng</module>
+				<module>org.eclipse.xtext.maven.releng</module>
+			</modules>
+		</profile>
 		<profile>
 			<id>useJenkinsSnapshots</id>
 			<repositories>
@@ -352,6 +365,11 @@
 					<version>${build-helper-maven-plugin-version}</version>
 				</plugin>
 				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>versions-maven-plugin</artifactId>
+					<version>2.14.2</version>
+				</plugin>
+				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>target-platform-configuration</artifactId>
 					<version>${tycho-version}</version>
@@ -423,6 +441,11 @@
 							</fileset>
 						</filesets>
 					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.3.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -498,6 +521,25 @@
 				<artifactId>tycho-maven-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<!-- Explicitly bind it to "prepare-package" (instead of the default "package")
+					and before tycho-source-plugin: for pure Maven projects this will generate
+					the JAR with sources, while tycho-source-plugin will no nothing; for
+					bundles, tycho-source-plugin will overwrite the JAR with sources generated
+					by maven-source-plugin. -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+						<phase>prepare-package</phase>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
