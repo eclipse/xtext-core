@@ -70,10 +70,10 @@ public class NodeModelUtils extends InternalNodeModelUtils {
 	public static ILeafNode findLeafNodeAtOffset(/* @NonNull */ INode node, int leafNodeOffset) {
 		INode localNode = node;
 		while(!(localNode instanceof AbstractNode)) {
+			localNode = localNode.getParent();
 			if (localNode == null) {
 				return null;
 			}
-			localNode = localNode.getParent();
 		}
 		int offset = localNode.getTotalOffset();
 		int length = localNode.getTotalLength();
