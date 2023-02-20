@@ -20,7 +20,7 @@ dependencies {
 }
 
 if (findProperty('compileXtend') == 'true') {
-	generateMwe2Xtext.xtextClasspath = rootProject.configurations.getByName('xtendCompiler')
+	generateMwe2Xtext.xtextClasspath.setFrom(rootProject.configurations.getByName('xtendCompiler'))
 }
 
 class XtextGeneratorTask extends JavaExec {

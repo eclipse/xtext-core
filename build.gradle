@@ -8,6 +8,7 @@ import java.time.LocalDateTime
 buildscript {
 	apply from: "${rootDir}/gradle/versions.gradle"
 	repositories.mavenCentral()
+	repositories.mavenLocal()
 	dependencies {
 		classpath "org.xtext:xtext-gradle-plugin:$versions.xtext_gradle_plugin"
 	}
