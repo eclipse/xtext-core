@@ -5,18 +5,17 @@
 if (findProperty('compileXtend') == 'true') {
 	[generateXtext, generateTestXtext].each { gen ->
 		gen.xtextClasspath.setFrom(rootProject.configurations.getByName('xtendCompiler'))
-		gen.classpath.from(project.configurations.getByName('optional'))
 	}
 	
 	// Defer the sources jar configuration to later when the source sets are set up completely
 	afterEvaluate {
 		sourcesJar {
 			dependsOn generateTestXtext
-			from (sourceSets.main.xtendOutputDir) {
+			from (sourceSets.main.xtend.outputDir) {
 				include '**/*._trace'
 			}
 			if (name.endsWith('tests')) {
-				from (sourceSets.test.xtendOutputDir) {
+				from (sourceSets.test.xtend.outputDir) {
 					include '**/*._trace'
 				}
 			}
