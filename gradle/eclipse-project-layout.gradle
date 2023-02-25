@@ -20,7 +20,7 @@ sourceSets {
 			exclude '**/*.java', '**/*.xtend'
 		}
 		if (findProperty('compileXtend') == 'true') {
-			xtendOutputDir = 'xtend-gen'
+			xtend.outputDir = 'xtend-gen'
 		}
 	}
 	configure(isTestProject? main : test) {

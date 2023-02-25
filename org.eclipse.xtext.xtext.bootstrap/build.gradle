@@ -23,7 +23,7 @@ sourceSets.test.resources.srcDirs = []
 sourceSets.mwe2 {
 	java.srcDir 'src'
 	if (findProperty('compileXtend') == 'true') {
-		xtendOutputDir = 'xtend-gen'
+		xtend.outputDir = 'xtend-gen'
 	} else {
 		java.srcDir 'xtend-gen'
 	}
