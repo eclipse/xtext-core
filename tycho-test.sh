@@ -9,6 +9,7 @@ mvn \
   -f org.eclipse.xtext.p2.releng \
   clean verify \
   -P useJenkinsSnapshots \
+  -P buildP2Repository \
   --batch-mode \
   --update-snapshots \
   -Dmaven.repo.local=.m2/repository \
