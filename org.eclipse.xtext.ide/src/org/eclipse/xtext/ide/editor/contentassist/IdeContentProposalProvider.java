@@ -140,7 +140,7 @@ public class IdeContentProposalProvider {
 			EReference eReference = GrammarUtil.getReference(reference, ((EClass) type));
 			EObject currentModel = context.getCurrentModel();
 			if (eReference != null && currentModel != null) {
-				IScope scope = scopeProvider.getScope(currentModel, eReference);
+				IScope scope = getScopeProvider().getScope(currentModel, eReference);
 				crossrefProposalProvider.lookupCrossReference(scope, reference, context, acceptor,
 						getCrossrefFilter(reference, context));
 			}
